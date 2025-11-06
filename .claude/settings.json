@@ -1,0 +1,36 @@
+{
+  "model": "claude-sonnet-4-5-20250929",
+  "maxTokens": 8192,
+  "permissions": {
+    "allowedTools": [
+      "Read",
+      "Write",
+      "Edit",
+      "Bash",
+      "Glob",
+      "Grep",
+      "Task",
+      "WebFetch",
+      "WebSearch"
+    ],
+    "deny": [
+      "Write(.git/**)",
+      "Edit(.git/**)",
+      "Bash(rm -rf *)",
+      "Bash(git push --force)"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write(tools/*.py)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python -m py_compile $file"
+          }
+        ]
+      }
+    ]
+  }
+}
