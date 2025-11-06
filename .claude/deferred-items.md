@@ -2,50 +2,7 @@
 
 Items that need attention in future sessions but are not critical for initial implementation.
 
----
-
-## High Priority - Must Address Before Final Release
-
-### Errata and Update Packages
-
-**Issue:** How to handle `errata-UBL-2.0` (23 Apr 2008) and `os-UBL-2.0-update` (29 May 2008)
-
-**Background:**
-- Both are 8.7 MB packages (vs 32.2 MB for full os-UBL-2.0)
-- Appear to be partial updates/corrections to UBL 2.0
-- No XML specification files included
-- Contain subdirectories: `cl/`, `mod/`, `val/`, `xsd/`, `xsdrt/`
-- Have update documentation (HTML, PDF, ODT)
-
-**Questions to Answer:**
-1. Are they **full replacements** or **patches**?
-   - If patches: should merge with os-UBL-2.0 content
-   - If replacements: treat like any other release
-2. What files changed between os-UBL-2.0 and errata?
-3. Do schemas change or just documentation?
-4. Should they be separate commits or amendments to os-UBL-2.0?
-5. How to represent in git history?
-
-**Investigation Needed:**
-- Download and compare file lists
-- Read update documentation to understand scope
-- Check if schemas are modified or just documentation
-- Determine proper commit strategy
-
-**Possible Approaches:**
-- **Option A:** Import as separate releases after os-UBL-2.0
-  - Pros: Preserves historical sequence, clear timeline
-  - Cons: Might result in incomplete release if they're patches
-
-- **Option B:** Apply as patches on top of os-UBL-2.0
-  - Pros: Accurate representation if they're incremental
-  - Cons: More complex implementation
-
-- **Option C:** Skip entirely, only import major releases
-  - Pros: Simplest
-  - Cons: Loses historical accuracy
-
-**Decision:** Defer to separate session after main 32 releases are successfully imported.
+**Note:** Resolved items are moved to `session-history.md`
 
 ---
 

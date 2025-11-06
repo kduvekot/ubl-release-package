@@ -44,7 +44,7 @@ Analyze OASIS UBL releases and plan import strategy for building a git-based his
 2. **Defer errata/updates** - Need deeper analysis in separate session
 3. **No manifest file** - URLs hardcoded in catchup.py (one-time use)
 4. **Use argparse** - Stdlib, no external dependencies
-5. **Complete replacement** - Clear all files except tools/, .claude/, .git/, README.md per release
+5. **Complete replacement** - Clear all files except tools/, .claude/, .git/, .gitignore, README.md per release
 6. **Auto-extract metadata** - Parse UBL-X.X.xml files for version, date, status
 7. **Batch hash updates** - Update README.md commit hashes in single commit at end
 
@@ -67,6 +67,77 @@ Analyze OASIS UBL releases and plan import strategy for building a git-based his
 ### Next Session TODO
 
 See `.claude/next-session.md` for detailed list of remaining tasks.
+
+---
+
+## Session 2 - 2025-11-06
+
+### Goal
+Analyze errata packages and streamline documentation structure.
+
+### Completed
+
+#### Errata Package Analysis ✓
+- Downloaded both errata packages to `/tmp/errata-analysis/`
+  - `errata-UBL-2.0.zip` (Apr 23, 2008) - 8.7 MB
+  - `os-UBL-2.0-update-delta.zip` (May 29, 2008) - 8.7 MB
+- Extracted and compared both packages (289 files each)
+- Identified package type: PATCH/OVERLAY packages (not full replacements)
+- Analyzed PDF documentation (`os-UBL-2.0-update.pdf`)
+- Identified 14 changed files out of 289 total
+- Determined changes are non-substantive (typos, genericode upgrade, PortCode restructuring)
+
+**Key Findings:**
+- These are correction packages designed to overlay on os-UBL-2.0
+- Installation: extract into os-UBL-2.0 directory and overwrite
+- `errata-UBL-2.0` is draft version (prd)
+- `os-UBL-2.0-update-delta` is final approved version (os)
+- Both contain nearly identical corrections at different approval stages
+
+**Decision:** Import both as patches (revised based on user feedback)
+- Apply entry #10 (errata-UBL-2.0) as PATCH on #9
+- Apply entry #11 (os-UBL-2.0-update-delta) as PATCH on #10
+- Shows complete correction workflow from draft to final approval
+- Commit only the changed files for each patch
+- Tag #10 as `errata-UBL-2.0`, #11 as `os-UBL-2.0-update`
+
+#### Documentation Improvements ✓
+- Added `CLAUDE.md` to `.claude/` directory (73 lines, auto-loaded)
+- Added `.claude/settings.json` (project configuration)
+- Added `.gitignore` (excludes Python artifacts, temp files, local settings)
+- Updated project-rules.md with errata resolution
+- Updated next-session.md to mark errata issue as resolved
+- Updated ubl-releases-complete-inventory.md with special handling notes
+
+#### Documentation Streamlining ✓
+- Deleted `glossary.md` (442 lines) - replaced with link in CLAUDE.md
+- Merged `implementation-notes.md` (342 lines) into `project-rules.md`
+- Moved resolved errata items from `deferred-items.md` to this file
+- Simplified `next-session.md` → `next-steps.md`
+- Added documentation review reminder to CLAUDE.md
+
+**Before:** 8 files, ~1,862 lines
+**After:** 6 files, ~840 lines (54% reduction)
+
+### Decisions Made
+
+1. **Errata handling:** Import both #10 and #11 as sequential patches (revised from initial skip #10 decision)
+2. **Documentation structure:** Keep all docs in `.claude/` (not root)
+3. **Settings location:** `.claude/settings.json` (team-shared configuration)
+4. **CLAUDE.md location:** `.claude/CLAUDE.md` (user preference)
+5. **Streamline docs:** Remove redundancy, merge overlapping content
+
+### Import Tool Requirements Defined
+
+Package type detection needed:
+```python
+if "errata-UBL" in package_name or "update-delta" in package_url:
+    return "PATCH"  # Apply as overlay
+else:
+    return "FULL"   # Regular import
+```
+
+**Note:** Initial decision was to skip #10, but revised to import both #10 and #11 sequentially to show complete correction history.
 
 ---
 

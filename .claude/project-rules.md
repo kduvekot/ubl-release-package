@@ -17,8 +17,12 @@ Import all official UBL (Universal Business Language) releases from OASIS into t
 - JSON/ASN.1 format transformations
 - Supplementary documentation (governance, guidelines, etc.)
 
-### Deferred
-- `errata-UBL-2.0` and `os-UBL-2.0-update` packages (need deeper analysis)
+### Special Handling (Resolved)
+- `errata-UBL-2.0` (#10): **PATCH** - draft corrections, apply as overlay on os-UBL-2.0 (#9)
+- `os-UBL-2.0-update-delta` (#11): **PATCH** - final corrections, apply on top of #10
+- Both contain 14 changed files (non-substantive corrections)
+- Applied sequentially to show complete correction history from draft to final
+- See `.claude/session-history.md` for complete analysis
 
 ## Core Principles
 
@@ -36,6 +40,7 @@ Import all official UBL (Universal Business Language) releases from OASIS into t
 ubl-release-package/
 ├── .claude/              # Project documentation
 ├── .git/                 # Git repository data
+├── .gitignore            # Excluded files
 ├── tools/                # Import automation scripts
 ├── README.md             # Meta-README about this repo
 └── [UBL content]         # All UBL files at root level
@@ -99,7 +104,7 @@ Official standards (os-*) get additional major version tags:
 ## File Handling Per Release
 
 ### Process
-1. **Remove all files** except: `tools/`, `.claude/`, `.git/`, `README.md`
+1. **Remove all files** except: `tools/`, `.claude/`, `.git/`, `.gitignore`, `README.md`
 2. **Extract ZIP** contents to repository root
 3. **Update README.md** with release information
 4. **Stage all changes**: `git add -A`
@@ -170,3 +175,73 @@ Commit 35: Release csd01-UBL-2.5
 ```
 
 Each release commit is completely independent and contains only that release's content plus updated README.md.
+
+## Technical Implementation Details
+
+### Metadata Extraction from XML
+
+**Coverage:** 29 of 34 releases have `UBL-X.X.xml` files (90% coverage)
+
+**Releases WITHOUT XML (need fallback):**
+- `prd-UBL-2.0` (20 Jan 2006)
+- `prd2-UBL-2.0` (28 Jul 2006)
+- `prd3-UBL-2.0` (21 Sep 2006)
+
+**XML Parsing Patterns:**
+
+*Pattern 1: Entity Declarations (UBL 2.0 - early 2.3)*
+```xml
+<!ENTITY version "2.2">
+<!ENTITY pubdate "21 February 2018">
+<!ENTITY stage "csprd03">
+<!ENTITY standard "Committee Specification Public Review Draft 03">
+```
+
+*Pattern 2: ArticleInfo Elements (late 2.3 - 2.5)*
+```xml
+<article status="OASIS Standard">
+  <articleinfo>
+    <productnumber>2.4</productnumber>
+    <pubdate>20 June 2024</pubdate>
+  </articleinfo>
+</article>
+```
+
+### Python Implementation
+
+**Standard Library Dependencies:**
+- `argparse` - CLI argument parsing
+- `urllib.request` - Download ZIPs
+- `zipfile` - Extract ZIPs
+- `xml.etree.ElementTree` - Parse XML
+- `re` - Parse entity declarations
+- `tempfile`, `shutil` - File operations
+- `subprocess` - Git commands
+- `pathlib` - Path handling
+
+**Fallback Strategy for Releases Without XML:**
+1. Parse URL to extract stage and version
+2. Look up stage description from mapping
+3. Use hardcoded dates from inventory (we have them)
+4. Create commit with best-effort metadata
+
+### Import Tool Architecture
+
+**import_release.py (single release import):**
+1. Download ZIP to temp location
+2. Extract and find `UBL-X.X.xml`
+3. Parse XML to extract metadata
+4. Clear UBL content (preserve `tools/`, `.claude/`, `.git/`, `README.md`, `.gitignore`)
+5. Copy extracted contents to root
+6. Update README.md
+7. `git add -A` (stages additions, modifications, deletions)
+8. Create commit with structured message
+9. Create git tag(s)
+10. Clean up temp files
+
+**catchup.py (full historical import):**
+- Hardcoded list of 37 release URLs in chronological order
+- Loops through calling import_release.py logic for each
+- Handles special cases (3 releases without XML, #10 and #11 both as patches)
+- Progress reporting
+- Supports `--dry-run` and `--start-from` flags
