@@ -41,15 +41,20 @@ For each release: Remove all files except `tools/`, `.claude/`, `.git/`, `README
 4. Tag OASIS Standards (os-*) with version tags (v2.0, v2.1, etc.)
 5. Tag all releases with descriptive tags (prd-UBL-2.0, cs01-UBL-2.2, etc.)
 
+## Terminology
+- **prd/csprd**: Public Review Draft (Committee Specification Public Review Draft)
+- **cs/cos**: Committee Specification (OASIS Specification)
+- **os**: OASIS Standard (final approved release)
+- **csd**: Committee Specification Draft
+- Full OASIS terminology: https://www.oasis-open.org/policies-guidelines/
+
 ## Detailed Documentation
 See `.claude/` directory for comprehensive documentation:
 - `ubl-releases-complete-inventory.md` - All 37 releases with URLs, dates, sizes
-- `project-rules.md` - Detailed rules and conventions
-- `next-session.md` - Task breakdown and remaining work
-- `deferred-items.md` - Errata analysis (RESOLVED) and future enhancements
-- `implementation-notes.md` - Technical implementation details
-- `session-history.md` - What has been completed
-- `glossary.md` - UBL and OASIS terminology
+- `project-rules.md` - Detailed rules, conventions, and technical implementation
+- `next-steps.md` - Remaining work and task breakdown
+- `session-history.md` - What has been completed, decisions made
+- `deferred-items.md` - Future enhancements (nice-to-have items)
 
 ## Common Commands
 ```bash
@@ -71,3 +76,14 @@ python tools/catchup.py
 - **No manifest file:** Release URLs hardcoded in catchup.py
 - **Metadata extraction:** Auto-extract from UBL-X.X.xml files, fallback to URL parsing
 - **README updates:** Update with each release commit, add hashes in batch at end
+
+## Documentation Maintenance
+
+**After each commit, review and update documentation if needed:**
+- Is `CLAUDE.md` still accurate with current status?
+- Do `project-rules.md` decisions reflect latest changes?
+- Should `session-history.md` be updated with what was completed?
+- Are `next-steps.md` tasks still current?
+- Move resolved items from `deferred-items.md` to `session-history.md`
+
+**Keep documentation lean and current** - Remove outdated info, merge duplicates, delete unnecessary files.

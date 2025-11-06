@@ -70,6 +70,75 @@ See `.claude/next-session.md` for detailed list of remaining tasks.
 
 ---
 
+## Session 2 - 2025-11-06
+
+### Goal
+Analyze errata packages and streamline documentation structure.
+
+### Completed
+
+#### Errata Package Analysis ✓
+- Downloaded both errata packages to `/tmp/errata-analysis/`
+  - `errata-UBL-2.0.zip` (Apr 23, 2008) - 8.7 MB
+  - `os-UBL-2.0-update-delta.zip` (May 29, 2008) - 8.7 MB
+- Extracted and compared both packages (289 files each)
+- Identified package type: PATCH/OVERLAY packages (not full replacements)
+- Analyzed PDF documentation (`os-UBL-2.0-update.pdf`)
+- Identified 14 changed files out of 289 total
+- Determined changes are non-substantive (typos, genericode upgrade, PortCode restructuring)
+
+**Key Findings:**
+- These are correction packages designed to overlay on os-UBL-2.0
+- Installation: extract into os-UBL-2.0 directory and overwrite
+- `errata-UBL-2.0` is draft version (prd) - SKIP
+- `os-UBL-2.0-update-delta` is final approved version (os) - USE AS PATCH
+
+**Decision:** Use Option B (Apply as Patch)
+- Skip entry #10 (errata-UBL-2.0)
+- Apply entry #11 (os-UBL-2.0-update-delta) as overlay on #9
+- Commit only the 14 changed files
+- Tag as `os-UBL-2.0-errata01` or `v2.0-errata01`
+
+#### Documentation Improvements ✓
+- Added `CLAUDE.md` to `.claude/` directory (73 lines, auto-loaded)
+- Added `.claude/settings.json` (project configuration)
+- Added `.gitignore` (excludes Python artifacts, temp files, local settings)
+- Updated project-rules.md with errata resolution
+- Updated next-session.md to mark errata issue as resolved
+- Updated ubl-releases-complete-inventory.md with special handling notes
+
+#### Documentation Streamlining ✓
+- Deleted `glossary.md` (442 lines) - replaced with link in CLAUDE.md
+- Merged `implementation-notes.md` (342 lines) into `project-rules.md`
+- Moved resolved errata items from `deferred-items.md` to this file
+- Simplified `next-session.md` → `next-steps.md`
+- Added documentation review reminder to CLAUDE.md
+
+**Before:** 8 files, ~1,862 lines
+**After:** 6 files, ~840 lines (54% reduction)
+
+### Decisions Made
+
+1. **Errata handling:** Apply os-UBL-2.0-update-delta as PATCH on os-UBL-2.0
+2. **Documentation structure:** Keep all docs in `.claude/` (not root)
+3. **Settings location:** `.claude/settings.json` (team-shared configuration)
+4. **CLAUDE.md location:** `.claude/CLAUDE.md` (user preference)
+5. **Streamline docs:** Remove redundancy, merge overlapping content
+
+### Import Tool Requirements Defined
+
+Package type detection needed:
+```python
+if package_name == "errata-UBL-2.0":
+    return "SKIP"
+elif "update-delta" in package_url:
+    return "PATCH"  # Apply as overlay
+else:
+    return "FULL"   # Regular import
+```
+
+---
+
 ## Session Template for Future Use
 
 ### Session N - [Date]

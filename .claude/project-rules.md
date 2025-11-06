@@ -173,3 +173,73 @@ Commit 35: Release csd01-UBL-2.5
 ```
 
 Each release commit is completely independent and contains only that release's content plus updated README.md.
+
+## Technical Implementation Details
+
+### Metadata Extraction from XML
+
+**Coverage:** 29 of 34 releases have `UBL-X.X.xml` files (90% coverage)
+
+**Releases WITHOUT XML (need fallback):**
+- `prd-UBL-2.0` (20 Jan 2006)
+- `prd2-UBL-2.0` (28 Jul 2006)
+- `prd3-UBL-2.0` (21 Sep 2006)
+
+**XML Parsing Patterns:**
+
+*Pattern 1: Entity Declarations (UBL 2.0 - early 2.3)*
+```xml
+<!ENTITY version "2.2">
+<!ENTITY pubdate "21 February 2018">
+<!ENTITY stage "csprd03">
+<!ENTITY standard "Committee Specification Public Review Draft 03">
+```
+
+*Pattern 2: ArticleInfo Elements (late 2.3 - 2.5)*
+```xml
+<article status="OASIS Standard">
+  <articleinfo>
+    <productnumber>2.4</productnumber>
+    <pubdate>20 June 2024</pubdate>
+  </articleinfo>
+</article>
+```
+
+### Python Implementation
+
+**Standard Library Dependencies:**
+- `argparse` - CLI argument parsing
+- `urllib.request` - Download ZIPs
+- `zipfile` - Extract ZIPs
+- `xml.etree.ElementTree` - Parse XML
+- `re` - Parse entity declarations
+- `tempfile`, `shutil` - File operations
+- `subprocess` - Git commands
+- `pathlib` - Path handling
+
+**Fallback Strategy for Releases Without XML:**
+1. Parse URL to extract stage and version
+2. Look up stage description from mapping
+3. Use hardcoded dates from inventory (we have them)
+4. Create commit with best-effort metadata
+
+### Import Tool Architecture
+
+**import_release.py (single release import):**
+1. Download ZIP to temp location
+2. Extract and find `UBL-X.X.xml`
+3. Parse XML to extract metadata
+4. Clear UBL content (preserve `tools/`, `.claude/`, `.git/`, `README.md`, `.gitignore`)
+5. Copy extracted contents to root
+6. Update README.md
+7. `git add -A` (stages additions, modifications, deletions)
+8. Create commit with structured message
+9. Create git tag(s)
+10. Clean up temp files
+
+**catchup.py (full historical import):**
+- Hardcoded list of 34 release URLs in chronological order
+- Loops through calling import_release.py logic for each
+- Handles special cases (3 releases without XML, #10 skip, #11 patch)
+- Progress reporting
+- Supports `--dry-run` and `--start-from` flags
