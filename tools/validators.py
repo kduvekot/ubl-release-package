@@ -40,8 +40,10 @@ class Validators:
             )
 
     @staticmethod
-    def check_branch():
+    def check_branch(force: bool = False):
         """Ensure we're on the correct development branch."""
+        import sys
+
         branch = GitStateManager.get_current_branch()
         if not branch:
             raise ValidationError("ERROR: Could not determine current branch.")
@@ -49,6 +51,18 @@ class Validators:
         if not branch.startswith('claude/'):
             print(f"WARNING: You are on branch '{branch}'")
             print("         Recommended to work on a branch starting with 'claude/'")
+
+            # Skip interactive prompt if:
+            # 1. Force flag is set
+            # 2. stdin is not a TTY (non-interactive mode like pipes, tests)
+            if force:
+                print("         Continuing anyway (force mode)")
+                return
+
+            if not sys.stdin.isatty():
+                print("         Continuing anyway (non-interactive mode)")
+                return
+
             response = input("Continue anyway? [y/N]: ")
             if response.lower() != 'y':
                 raise ValidationError("Aborted by user.")
@@ -186,7 +200,7 @@ class Validators:
         Validators.check_git_clean()
 
         # Important checks (can be overridden with --force)
-        Validators.check_branch()
+        Validators.check_branch(force)
         Validators.check_sequential_order(release.num, force)
         Validators.check_duplicate_import(release, force)
 
