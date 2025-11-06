@@ -90,14 +90,16 @@ Analyze errata packages and streamline documentation structure.
 **Key Findings:**
 - These are correction packages designed to overlay on os-UBL-2.0
 - Installation: extract into os-UBL-2.0 directory and overwrite
-- `errata-UBL-2.0` is draft version (prd) - SKIP
-- `os-UBL-2.0-update-delta` is final approved version (os) - USE AS PATCH
+- `errata-UBL-2.0` is draft version (prd)
+- `os-UBL-2.0-update-delta` is final approved version (os)
+- Both contain nearly identical corrections at different approval stages
 
-**Decision:** Use Option B (Apply as Patch)
-- Skip entry #10 (errata-UBL-2.0)
-- Apply entry #11 (os-UBL-2.0-update-delta) as overlay on #9
-- Commit only the 14 changed files
-- Tag as `os-UBL-2.0-errata01` or `v2.0-errata01`
+**Decision:** Import both as patches (revised based on user feedback)
+- Apply entry #10 (errata-UBL-2.0) as PATCH on #9
+- Apply entry #11 (os-UBL-2.0-update-delta) as PATCH on #10
+- Shows complete correction workflow from draft to final approval
+- Commit only the changed files for each patch
+- Tag #10 as `errata-UBL-2.0`, #11 as `os-UBL-2.0-update`
 
 #### Documentation Improvements ✓
 - Added `CLAUDE.md` to `.claude/` directory (73 lines, auto-loaded)
@@ -119,7 +121,7 @@ Analyze errata packages and streamline documentation structure.
 
 ### Decisions Made
 
-1. **Errata handling:** Apply os-UBL-2.0-update-delta as PATCH on os-UBL-2.0
+1. **Errata handling:** Import both #10 and #11 as sequential patches (revised from initial skip #10 decision)
 2. **Documentation structure:** Keep all docs in `.claude/` (not root)
 3. **Settings location:** `.claude/settings.json` (team-shared configuration)
 4. **CLAUDE.md location:** `.claude/CLAUDE.md` (user preference)
@@ -129,13 +131,13 @@ Analyze errata packages and streamline documentation structure.
 
 Package type detection needed:
 ```python
-if package_name == "errata-UBL-2.0":
-    return "SKIP"
-elif "update-delta" in package_url:
+if "errata-UBL" in package_name or "update-delta" in package_url:
     return "PATCH"  # Apply as overlay
 else:
     return "FULL"   # Regular import
 ```
+
+**Note:** Initial decision was to skip #10, but revised to import both #10 and #11 sequentially to show complete correction history.
 
 ---
 

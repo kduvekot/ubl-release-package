@@ -27,19 +27,21 @@ ubl-release-package/
 - ❌ Release + tool changes: NEVER in same commit
 
 ### 2. Special Package Handling
-- **Entry #10 (errata-UBL-2.0)**: SKIP - draft version
-- **Entry #11 (os-UBL-2.0-update-delta)**: PATCH - apply as overlay on #9 (os-UBL-2.0)
+- **Entry #10 (errata-UBL-2.0)**: PATCH - draft corrections, apply as overlay on #9 (os-UBL-2.0)
+- **Entry #11 (os-UBL-2.0-update-delta)**: PATCH - final approved corrections, apply on top of #10
 - All others: FULL release import
+
+**Important:** #10 and #11 are applied sequentially to show the complete correction history from draft to final approval.
 
 ### 3. File Handling Per Release
 For each release: Remove all files except `tools/`, `.claude/`, `.git/`, `README.md`, then extract ZIP to root.
 
 ## Import Strategy
-1. Import 36 releases total (#1-9, #12-37)
-2. Skip #10 (errata draft)
-3. Apply #11 as PATCH on #9
-4. Tag OASIS Standards (os-*) with version tags (v2.0, v2.1, etc.)
-5. Tag all releases with descriptive tags (prd-UBL-2.0, cs01-UBL-2.2, etc.)
+1. Import all 37 releases (#1-37)
+2. Apply #10 (errata-UBL-2.0) as PATCH on #9, then #11 (os-UBL-2.0-update-delta) as PATCH on #10
+3. Tag OASIS Standards (os-*) with version tags (v2.0, v2.1, etc.)
+4. Tag all releases with descriptive tags (prd-UBL-2.0, errata-UBL-2.0, os-UBL-2.0-update, etc.)
+5. Tag both errata packages appropriately (e.g., errata-UBL-2.0, os-UBL-2.0-errata01)
 
 ## Terminology
 - **prd/csprd**: Public Review Draft (Committee Specification Public Review Draft)

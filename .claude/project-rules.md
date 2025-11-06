@@ -18,10 +18,11 @@ Import all official UBL (Universal Business Language) releases from OASIS into t
 - Supplementary documentation (governance, guidelines, etc.)
 
 ### Special Handling (Resolved)
-- `errata-UBL-2.0` (#10): **SKIP** - draft corrections package (superseded by #11)
-- `os-UBL-2.0-update-delta` (#11): **PATCH** - apply as overlay on os-UBL-2.0 (#9)
-  - Contains 14 changed files (non-substantive corrections)
-  - See `.claude/deferred-items.md` for complete analysis
+- `errata-UBL-2.0` (#10): **PATCH** - draft corrections, apply as overlay on os-UBL-2.0 (#9)
+- `os-UBL-2.0-update-delta` (#11): **PATCH** - final corrections, apply on top of #10
+- Both contain 14 changed files (non-substantive corrections)
+- Applied sequentially to show complete correction history from draft to final
+- See `.claude/session-history.md` for complete analysis
 
 ## Core Principles
 
@@ -238,8 +239,8 @@ Each release commit is completely independent and contains only that release's c
 10. Clean up temp files
 
 **catchup.py (full historical import):**
-- Hardcoded list of 34 release URLs in chronological order
+- Hardcoded list of 37 release URLs in chronological order
 - Loops through calling import_release.py logic for each
-- Handles special cases (3 releases without XML, #10 skip, #11 patch)
+- Handles special cases (3 releases without XML, #10 and #11 both as patches)
 - Progress reporting
 - Supports `--dry-run` and `--start-from` flags

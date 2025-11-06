@@ -25,14 +25,14 @@ Single release import script with:
 - Create git tag(s)
 - Handle special cases:
   - Releases without XML (fallback to URL parsing)
-  - PATCH type packages (#11: os-UBL-2.0-update-delta)
-  - SKIP packages (#10: errata-UBL-2.0)
+  - PATCH type packages (#10: errata-UBL-2.0, #11: os-UBL-2.0-update-delta)
+  - Sequential patch application (#10 on #9, then #11 on #10)
 
 ### 2.3 Write `tools/catchup.py`
 Batch import script with:
 - Hardcoded list of 37 release URLs (in chronological order)
 - Loop through releases calling import_release logic
-- Handle package type detection (FULL, PATCH, SKIP)
+- Handle package type detection (FULL, PATCH)
 - Progress reporting
 - Support `--dry-run` flag
 - Support `--start-from N` flag for resuming
@@ -58,13 +58,14 @@ Batch import script with:
 - Monitor for errors
 - Handle failures (resume with `--start-from`)
 - Import sequence:
-  - Releases #1-9 (UBL 2.0 series, skip #10, apply #11 as PATCH)
+  - Releases #1-9 (UBL 2.0 series)
+  - Apply #10 as PATCH on #9, then #11 as PATCH on #10
   - Releases #12-37 (UBL 2.1-2.5)
 
 ### 3.3 Post-Import Validation
-- Verify 36 release commits created (skipped #10)
+- Verify 37 release commits created (all releases imported)
 - Verify commit messages formatted correctly
-- Verify all tags exist (36 descriptive + 5 version tags)
+- Verify all tags exist (37 descriptive + 5 version tags)
 - Review git log for consistency
 - Check final repository structure
 
@@ -90,8 +91,9 @@ Batch import script with:
 - **Solution:** Robust date parser or manual conversion to ISO 8601
 
 ### Issue 3: Package Type Detection
-- Need to detect FULL vs PATCH vs SKIP
-- **Solution:** Check package name/URL patterns (see project-rules.md)
+- Need to detect FULL vs PATCH
+- **Solution:** Check for "errata-UBL" or "update-delta" in name/URL (see project-rules.md)
+- Both #10 and #11 are PATCH type, applied sequentially
 
 ---
 
