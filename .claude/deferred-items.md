@@ -6,46 +6,91 @@ Items that need attention in future sessions but are not critical for initial im
 
 ## High Priority - Must Address Before Final Release
 
-### Errata and Update Packages
+### Errata and Update Packages ✓ RESOLVED
 
 **Issue:** How to handle `errata-UBL-2.0` (23 Apr 2008) and `os-UBL-2.0-update` (29 May 2008)
 
-**Background:**
-- Both are 8.7 MB packages (vs 32.2 MB for full os-UBL-2.0)
-- Appear to be partial updates/corrections to UBL 2.0
-- No XML specification files included
-- Contain subdirectories: `cl/`, `mod/`, `val/`, `xsd/`, `xsdrt/`
-- Have update documentation (HTML, PDF, ODT)
+**Analysis Complete (2025-11-06):**
+Downloaded and analyzed both packages from `/tmp/errata-analysis/`. Full findings documented below.
 
-**Questions to Answer:**
-1. Are they **full replacements** or **patches**?
-   - If patches: should merge with os-UBL-2.0 content
-   - If replacements: treat like any other release
-2. What files changed between os-UBL-2.0 and errata?
-3. Do schemas change or just documentation?
-4. Should they be separate commits or amendments to os-UBL-2.0?
-5. How to represent in git history?
+**Key Findings:**
 
-**Investigation Needed:**
-- Download and compare file lists
-- Read update documentation to understand scope
-- Check if schemas are modified or just documentation
-- Determine proper commit strategy
+1. **Package Type:** These are **PATCH/OVERLAY packages**, NOT full replacements
+   - Designed to be extracted directly into `os-UBL-2.0/` directory
+   - Official installation instructions: "Unzip the Update Package using the appropriate flag or parameter to overwrite files without prompting"
 
-**Possible Approaches:**
-- **Option A:** Import as separate releases after os-UBL-2.0
-  - Pros: Preserves historical sequence, clear timeline
-  - Cons: Might result in incomplete release if they're patches
+2. **Package Differences:**
+   - `errata-UBL-2.0.zip`: Draft version (prd - Public Review Draft, Apr 23 2008)
+   - `os-UBL-2.0-update-delta.zip`: Final approved version (os - OASIS Standard, May 29 2008)
+   - Both contain identical structure (289 files each)
+   - Only 14 files differ between them (mostly just PDF filenames: prd vs os)
 
-- **Option B:** Apply as patches on top of os-UBL-2.0
-  - Pros: Accurate representation if they're incremental
-  - Cons: More complex implementation
+3. **What Changed (from os-UBL-2.0-update.pdf):**
+   - Fixed typos and editorial errors in schemas/models
+   - Fixed broken BOSNIA AND HERZEGOVINA entry in CountryIdentificationCode
+   - Upgraded code lists from genericode 0.4 to 1.0 format
+   - Restructured PortCode files (added columns, broke into smaller files)
+   - Updated validation XSL stylesheet
+   - **Important:** "None of these changes is considered substantive in the sense that any of them would require modifications to existing software"
 
-- **Option C:** Skip entirely, only import major releases
-  - Pros: Simplest
-  - Cons: Loses historical accuracy
+4. **Files Changed (14 files total):**
+   - 9 PortCode files in `cl/gc/special-purpose/`
+   - 2 Model spreadsheets (`mod/common/UBL-CommonLibrary-2.0.ods` and `.xls`)
+   - 1 Schema file (`xsd/common/UBL-CommonAggregateComponents-2.0.xsd`)
+   - 2 PDF documentation files
 
-**Decision:** Defer to separate session after main 32 releases are successfully imported.
+**DECISION - Use Option B (Apply as Patch):**
+
+**Rationale:**
+- These are explicitly designed as overlay/patch packages
+- Historically accurate representation
+- Maintains integrity of the correction as part of UBL 2.0 release line
+- Only 14 changed files need to be committed
+
+**Implementation Requirements for Import Tool:**
+
+1. **Special handling rules:**
+   ```
+   IF package_name matches "errata-*" OR "*-update-delta":
+       - Mark as PATCH_TYPE package
+       - Apply on top of previous OASIS Standard release
+       - Only commit changed files (not all 289 files)
+       - Use special commit message format
+   ```
+
+2. **Import sequence:**
+   ```
+   Step 1: Import os-UBL-2.0 (Dec 18, 2006) - tag as 'v2.0' or 'os-UBL-2.0'
+   Step 2: Apply os-UBL-2.0-update-delta as patch commit (May 29, 2008)
+           - Tag as 'os-UBL-2.0-errata01' or 'v2.0-errata01'
+           - Commit message should indicate patch/correction nature
+   ```
+
+3. **Which package to use:**
+   - Use `os-UBL-2.0-update-delta.zip` (final approved version)
+   - Skip `errata-UBL-2.0.zip` (draft version)
+
+4. **Commit message format:**
+   ```
+   Apply UBL 2.0 Errata 01 corrections
+
+   Non-substantive corrections to os-UBL-2.0 (December 2006):
+   - Fix typos and editorial errors in schemas/models
+   - Fix BOSNIA AND HERZEGOVINA entry in CountryIdentificationCode
+   - Upgrade code lists from genericode 0.4 to 1.0
+   - Restructure PortCode files (add columns, split into smaller files)
+   - Update validation XSL stylesheet
+
+   Source: os-UBL-2.0-update-delta.zip
+   Date: 29 May 2008
+   Type: Errata/Correction Package
+   Files changed: 14
+   ```
+
+**Reference Documentation:**
+- Analysis files: `/tmp/errata-analysis/` (local)
+- Official doc: `os-UBL-2.0-update.pdf` in package
+- Complete change list: Pages 7-22 of PDF
 
 ---
 
