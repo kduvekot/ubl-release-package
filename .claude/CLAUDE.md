@@ -11,10 +11,14 @@ Import all official UBL (Universal Business Language) releases from OASIS into t
 ## Repository Structure
 ```
 ubl-release-package/
-├── CLAUDE.md              # This file - project memory
-├── .claude/               # Detailed documentation (see below)
+├── .claude/
+│   ├── CLAUDE.md          # This file - project memory (auto-loaded)
+│   ├── settings.json      # Project configuration
+│   └── *.md               # Detailed documentation
+├── .git/                  # Git repository
+├── .gitignore             # Excluded files
 ├── tools/                 # Import automation scripts (to be created)
-├── README.md              # Meta-README about this repo
+├── README.md              # Public-facing README
 └── [UBL content]          # All UBL files at root level (after import)
 ```
 
@@ -34,7 +38,7 @@ ubl-release-package/
 **Important:** #10 and #11 are applied sequentially to show the complete correction history from draft to final approval.
 
 ### 3. File Handling Per Release
-For each release: Remove all files except `tools/`, `.claude/`, `.git/`, `README.md`, then extract ZIP to root.
+For each release: Remove all files except `tools/`, `.claude/`, `.git/`, `.gitignore`, `README.md`, then extract ZIP to root.
 
 ## Import Strategy
 1. Import all 37 releases (#1-37)

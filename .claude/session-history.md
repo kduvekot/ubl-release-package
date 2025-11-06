@@ -44,7 +44,7 @@ Analyze OASIS UBL releases and plan import strategy for building a git-based his
 2. **Defer errata/updates** - Need deeper analysis in separate session
 3. **No manifest file** - URLs hardcoded in catchup.py (one-time use)
 4. **Use argparse** - Stdlib, no external dependencies
-5. **Complete replacement** - Clear all files except tools/, .claude/, .git/, README.md per release
+5. **Complete replacement** - Clear all files except tools/, .claude/, .git/, .gitignore, README.md per release
 6. **Auto-extract metadata** - Parse UBL-X.X.xml files for version, date, status
 7. **Batch hash updates** - Update README.md commit hashes in single commit at end
 

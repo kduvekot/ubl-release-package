@@ -40,6 +40,7 @@ Import all official UBL (Universal Business Language) releases from OASIS into t
 ubl-release-package/
 ├── .claude/              # Project documentation
 ├── .git/                 # Git repository data
+├── .gitignore            # Excluded files
 ├── tools/                # Import automation scripts
 ├── README.md             # Meta-README about this repo
 └── [UBL content]         # All UBL files at root level
@@ -103,7 +104,7 @@ Official standards (os-*) get additional major version tags:
 ## File Handling Per Release
 
 ### Process
-1. **Remove all files** except: `tools/`, `.claude/`, `.git/`, `README.md`
+1. **Remove all files** except: `tools/`, `.claude/`, `.git/`, `.gitignore`, `README.md`
 2. **Extract ZIP** contents to repository root
 3. **Update README.md** with release information
 4. **Stage all changes**: `git add -A`
