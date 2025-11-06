@@ -181,12 +181,12 @@ This document lists all remaining work to complete the UBL release history impor
 - Test with all 29 XML files
 
 ### Issue 3: Errata/Update Packages
-**Status:** DEFERRED (see deferred-items.md)
+**Status:** ✓ RESOLVED (see deferred-items.md)
 
-**Next Steps:**
-- Investigate after main 32 releases done
-- Determine if patches or replacements
-- Design import strategy
+**Decision:**
+- Skip #10 (errata-UBL-2.0) - draft version
+- Apply #11 (os-UBL-2.0-update-delta) as PATCH on #9
+- Import tool must detect package type and handle accordingly
 
 ---
 

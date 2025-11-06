@@ -17,8 +17,11 @@ Import all official UBL (Universal Business Language) releases from OASIS into t
 - JSON/ASN.1 format transformations
 - Supplementary documentation (governance, guidelines, etc.)
 
-### Deferred
-- `errata-UBL-2.0` and `os-UBL-2.0-update` packages (need deeper analysis)
+### Special Handling (Resolved)
+- `errata-UBL-2.0` (#10): **SKIP** - draft corrections package (superseded by #11)
+- `os-UBL-2.0-update-delta` (#11): **PATCH** - apply as overlay on os-UBL-2.0 (#9)
+  - Contains 14 changed files (non-substantive corrections)
+  - See `.claude/deferred-items.md` for complete analysis
 
 ## Core Principles
 
