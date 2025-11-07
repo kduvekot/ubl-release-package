@@ -120,8 +120,18 @@ class ReleaseImporter:
         # Download
         zip_path = self.temp_dir / "release.zip"
         try:
-            urllib.request.urlretrieve(self.release.url, zip_path)
+            # Use curl for faster, more reliable downloads
+            # -L follows redirects, -f fails on HTTP errors, -s silent, -S show errors
+            # --max-time 300 = 5 minute timeout
+            result = subprocess.run(
+                ['curl', '-L', '-f', '-s', '-S', '--max-time', '300', '-o', str(zip_path), self.release.url],
+                capture_output=True,
+                text=True,
+                check=True
+            )
             print(f"  Downloaded {zip_path.stat().st_size / 1024 / 1024:.1f} MB")
+        except subprocess.CalledProcessError as e:
+            raise ImportError(f"Download failed: {e.stderr}")
         except Exception as e:
             raise ImportError(f"Download failed: {e}")
 
