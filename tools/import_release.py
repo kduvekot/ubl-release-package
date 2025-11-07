@@ -122,9 +122,9 @@ class ReleaseImporter:
         try:
             # Use curl for faster, more reliable downloads
             # -L follows redirects, -f fails on HTTP errors, -s silent, -S show errors
-            # --max-time 300 = 5 minute timeout
+            # --max-time 1800 = 30 minute timeout (OASIS servers can be very slow)
             result = subprocess.run(
-                ['curl', '-L', '-f', '-s', '-S', '--max-time', '300', '-o', str(zip_path), self.release.url],
+                ['curl', '-L', '-f', '-s', '-S', '--max-time', '1800', '-o', str(zip_path), self.release.url],
                 capture_output=True,
                 text=True,
                 check=True
