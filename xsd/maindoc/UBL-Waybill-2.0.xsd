@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     Waybill
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="Waybill" type="WaybillType">
@@ -28,8 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Waybill. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>The Waybill is issued by the party, who acts as an agent for the carrier or other agents, to the party who gives instructions for the transportation services (shipper, consignor, etc.) stating the details of the transportation, charges and terms and conditions under which the transportation service is provided. The party issuing this document could be a party other than that providing the physical transportation. It corresponds to the information on the Forwarding Instruction. It is used for all modes of transport.
-It can serve as a contractual document between the parties for the transportation service. The document made out by the carrier or on behalf of the carrier evidencing the contract for the transport of cargo.</ccts:Definition>
+          <ccts:Definition>The Waybill is issued by the party who acts as an agent for the carrier or other agents, to the party who gives instructions for the transportation services (shipper, consignor, etc.) stating the details of the transportation, charges, and terms and conditions under which the transportation service is provided. The party issuing this document could be a party other than that providing the physical transportation. It corresponds to the information on the Forwarding Instruction. It is used for all modes of transport. It can serve as a contractual document between the parties for the transportation service. The document made out by the carrier or on behalf of the carrier evidencing the contract for the transport of cargo.</ccts:Definition>
           <ccts:ObjectClass>Waybill</ccts:ObjectClass>
           <ccts:AlternativeBusinessTerms>Consignment Note</ccts:AlternativeBusinessTerms>
         </ccts:Component>
@@ -38,9 +44,7 @@ It can serve as a contractual document between the parties for the transportatio
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -49,7 +53,7 @@ It can serve as a contractual document between the parties for the transportatio
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Waybill. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -60,16 +64,16 @@ It can serve as a contractual document between the parties for the transportatio
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Waybill. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Waybill. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -83,7 +87,7 @@ It can serve as a contractual document between the parties for the transportatio
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Waybill. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -281,7 +285,7 @@ It can serve as a contractual document between the parties for the transportatio
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Waybill. Other_ Instruction. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Contains other free text based instructions related to the shipment to the forwarders or carriers. This should only be used where such information cannot be represented in other structured information entities within the document.</ccts:Definition>
+              <ccts:Definition>Contains other free-text based instructions related to the shipment to the forwarders or carriers. This should only be used where such information cannot be represented in other structured information entities within the document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Other</ccts:PropertyTermQualifier>
@@ -298,7 +302,7 @@ It can serve as a contractual document between the parties for the transportatio
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Waybill. Consignor_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>the party consigning goods as stipulated in the transport contract by the party ordering transport.</ccts:Definition>
+              <ccts:Definition>The party consigning goods as stipulated in the transport contract by the party ordering transport.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Consignor</ccts:PropertyTermQualifier>
@@ -314,7 +318,7 @@ It can serve as a contractual document between the parties for the transportatio
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Waybill. Carrier_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>the party providing the transport of goods between named points.</ccts:Definition>
+              <ccts:Definition>The party providing the transport of goods between named points.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Carrier</ccts:PropertyTermQualifier>
@@ -330,7 +334,7 @@ It can serve as a contractual document between the parties for the transportatio
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Waybill. Freight Forwarder_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>the party combining individual smaller consignments into a single larger shipment (so called consolidated consignment ) that is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
+              <ccts:Definition>The party combining individual smaller consignments into a single larger shipment (so-called consolidated consignment ) that is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Freight Forwarder</ccts:PropertyTermQualifier>
@@ -391,7 +395,7 @@ It can serve as a contractual document between the parties for the transportatio
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Waybill. Document Distribution</ccts:DictionaryEntryName>
-              <ccts:Definition>The distribution of the Waybill to interested parties</ccts:Definition>
+              <ccts:Definition>The distribution of the Waybill to interested parties.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
               <ccts:PropertyTerm>Document Distribution</ccts:PropertyTerm>
@@ -406,7 +410,7 @@ It can serve as a contractual document between the parties for the transportatio
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Waybill. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>One or more signatures applied to the document instance</ccts:Definition>
+              <ccts:Definition>One or more signatures applied to the document instance.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Waybill</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>

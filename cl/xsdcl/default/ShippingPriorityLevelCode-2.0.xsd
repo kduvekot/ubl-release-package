@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:codelist:gc:ShippingPriorityLevelCode-2.0" targetNamespace="urn:oasis:names:specification:ubl:codelist:gc:ShippingPriorityLevelCode-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xsd:simpleType name="ShippingPriorityLevelCodeCodeContentType">
+      <xsd:restriction base="xsd:normalizedString"/>
+   </xsd:simpleType>
+   <xsd:complexType name="ShippingPriorityLevelCodeCodeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>DT</ccts:ComponentType>
+               <ccts:DictionaryEntryName>ShippingPriorityLevelCode_ Code. Type</ccts:DictionaryEntryName>
+               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+               <ccts:DataTypeQualifier>ShippingPriorityLevelCode</ccts:DataTypeQualifier>
+               <ccts:DataType>Code. Type</ccts:DataType>
+            </ccts:Component>
+            <ccts:Instance>
+               <ccts:CodeListID>ShippingPriorityLevelCode</ccts:CodeListID>
+               <ccts:CodeListAgencyID>UBL</ccts:CodeListAgencyID>
+               <ccts:CodeListAgencyName>OASIS Universal Business Language</ccts:CodeListAgencyName>
+               <ccts:CodeListName>ShippingPriorityLevelCode</ccts:CodeListName>
+               <ccts:CodeListVersionID>2.0</ccts:CodeListVersionID>
+               <ccts:CodeListURI>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ShippingPriorityLevelCode-2.0</ccts:CodeListURI>
+               <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:codelist:gc:ShippingPriorityLevelCode-2.0</ccts:CodeListSchemeURI>
+               <ccts:LanguageID>en</ccts:LanguageID>
+            </ccts:Instance>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="ShippingPriorityLevelCodeCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="ShippingPriorityLevelCode" use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="ShippingPriorityLevelCode" use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ShippingPriorityLevelCode-2.0" use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:ShippingPriorityLevelCode-2.0" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     Quotation
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Quotation-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Quotation-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Quotation-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:Quotation-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="Quotation" type="QuotationType">
@@ -28,7 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Quotation. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>The document used to quote for the provision of goods and services</ccts:Definition>
+          <ccts:Definition>The document used to quote for the provision of goods and services.</ccts:Definition>
           <ccts:ObjectClass>Quotation</ccts:ObjectClass>
           <ccts:AlternativeBusinessTerms>Purchase Order</ccts:AlternativeBusinessTerms>
         </ccts:Component>
@@ -37,9 +44,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -48,7 +53,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -59,16 +64,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Quotation. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Quotation. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -82,7 +87,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the subset of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -99,7 +104,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Quotation assigned by the Seller</ccts:Definition>
+              <ccts:Definition>An identifier for the Quotation assigned by the Seller.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -115,7 +120,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>Indicates whether the Quotation is a copy (true) or not (false)</ccts:Definition>
+              <ccts:Definition>Indicates whether the Quotation is a copy (true) or not (false).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -132,7 +137,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Quotation instance</ccts:Definition>
+              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Quotation instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -148,7 +153,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date assigned by the Seller on which the Quotation was issued</ccts:Definition>
+              <ccts:Definition>The date assigned by the Seller on which the Quotation was issued.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -164,7 +169,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Seller on which the Quotation was issued</ccts:Definition>
+              <ccts:Definition>The time assigned by the Seller on which the Quotation was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -180,7 +185,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free form text applying to the Quotation. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Free-form text applying to the Quotation. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -196,7 +201,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Pricing_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency that is used for all prices in the Quotation</ccts:Definition>
+              <ccts:Definition>The currency that is used for all prices in the Quotation.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Pricing</ccts:PropertyTermQualifier>
@@ -213,7 +218,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Line Count. Numeric</ccts:DictionaryEntryName>
-              <ccts:Definition>The number of lines in the document</ccts:Definition>
+              <ccts:Definition>The number of lines in the document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Line Count</ccts:PropertyTerm>
@@ -229,7 +234,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Validity_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>The period for which the Quotation is valid</ccts:Definition>
+              <ccts:Definition>The period for which the Quotation is valid.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Validity</ccts:PropertyTermQualifier>
@@ -245,7 +250,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Request For Quotation_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Request For Quotation</ccts:Definition>
+              <ccts:Definition>An association to a Request For Quotation.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Request For Quotation</ccts:PropertyTermQualifier>
@@ -261,7 +266,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents</ccts:Definition>
+              <ccts:Definition>An association to other documents.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -277,7 +282,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Contract</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a framework agreement or contract</ccts:Definition>
+              <ccts:Definition>An association to a framework agreement or contract.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Contract</ccts:PropertyTerm>
@@ -307,7 +312,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Seller_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Seller</ccts:Definition>
+              <ccts:Definition>An association to the Seller.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
@@ -323,7 +328,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Originator_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Originator</ccts:Definition>
+              <ccts:Definition>An association to the Originator.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -339,7 +344,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Delivery</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Delivery</ccts:Definition>
+              <ccts:Definition>An association to Delivery.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Delivery</ccts:PropertyTerm>
@@ -354,7 +359,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Delivery Terms</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Delivery Terms</ccts:Definition>
+              <ccts:Definition>An association to Delivery Terms.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Delivery Terms</ccts:PropertyTerm>
@@ -369,7 +374,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Payment Means</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to potential Payment Means for Orders related to this Quotation</ccts:Definition>
+              <ccts:Definition>An association to potential Payment Means for Orders related to this Quotation.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Payment Means</ccts:PropertyTerm>
@@ -399,7 +404,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Allowance Charge</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Allowances and Charges that apply to the Quotation as a whole</ccts:Definition>
+              <ccts:Definition>An association to Allowances and Charges that apply to the Quotation as a whole.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm>
@@ -414,7 +419,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Destination_ Country. Country</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the country of destination (for customs purposes for potential orders)</ccts:Definition>
+              <ccts:Definition>An association to the country of destination (for customs purposes for potential orders).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Destination</ccts:PropertyTermQualifier>
@@ -430,7 +435,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Tax Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the total tax amount of the Order (as estimated by the Seller)</ccts:Definition>
+              <ccts:Definition>An association to the total tax amount of the Order (as estimated by the Seller).</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Tax Total</ccts:PropertyTerm>
@@ -439,17 +444,18 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cac:LegalTotal" minOccurs="1" maxOccurs="1">
+      <xsd:element ref="cac:QuotedMonetaryTotal" minOccurs="1" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Quotation. Legal Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An assocation to the total amounts for the Order net of allowances and taxes (as quoted by the Seller)</ccts:Definition>
+              <ccts:DictionaryEntryName>Quotation. Quoted_ Monetary Total. Monetary Total</ccts:DictionaryEntryName>
+              <ccts:Definition>An assocation to the total amounts for the Order net of allowances and taxes (as quoted by the Seller).</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
-              <ccts:PropertyTerm>Legal Total</ccts:PropertyTerm>
-              <ccts:AssociatedObjectClass>Legal Total</ccts:AssociatedObjectClass>
+              <ccts:PropertyTermQualifier>Quoted</ccts:PropertyTermQualifier>
+              <ccts:PropertyTerm>Monetary Total</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Monetary Total</ccts:AssociatedObjectClass>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -460,7 +466,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation. Quotation Line</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to one or more Quotation Lines</ccts:Definition>
+              <ccts:Definition>An association to one or more Quotation Lines.</ccts:Definition>
               <ccts:Cardinality>1..n</ccts:Cardinality>
               <ccts:ObjectClass>Quotation</ccts:ObjectClass>
               <ccts:PropertyTerm>Quotation Line</ccts:PropertyTerm>

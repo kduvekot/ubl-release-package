@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode-2.0" targetNamespace="urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xsd:simpleType name="TransportModeCodeCodeContentType">
+      <xsd:restriction base="xsd:normalizedString">
+         <xsd:enumeration value="0">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Transport mode not specified</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Maritime transport</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="2">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Rail transport</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="3">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Road transport</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="4">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Air transport</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="5">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Mail</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="6">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Multimodal transport</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="7">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Fixed transport installation</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="8">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Inland water transport</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="9">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Transport mode not applicable</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="TransportModeCodeCodeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>DT</ccts:ComponentType>
+               <ccts:DictionaryEntryName>TransportModeCode_ Code. Type</ccts:DictionaryEntryName>
+               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+               <ccts:DataTypeQualifier>TransportModeCode</ccts:DataTypeQualifier>
+               <ccts:DataType>Code. Type</ccts:DataType>
+            </ccts:Component>
+            <ccts:Instance>
+               <ccts:CodeListID>TransportModeCode</ccts:CodeListID>
+               <ccts:CodeListAgencyID>6</ccts:CodeListAgencyID>
+               <ccts:CodeListAgencyName>United Nations Economic Commission for Europe</ccts:CodeListAgencyName>
+               <ccts:CodeListName>TransportModeCode</ccts:CodeListName>
+               <ccts:CodeListVersionID>Presented by the CDWG</ccts:CodeListVersionID>
+               <ccts:CodeListURI>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportModeCode-2.0.gc</ccts:CodeListURI>
+               <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode-2.0</ccts:CodeListSchemeURI>
+               <ccts:LanguageID>en</ccts:LanguageID>
+            </ccts:Instance>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="TransportModeCodeCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="TransportModeCode" use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="TransportModeCode" use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="Presented by the CDWG" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportModeCode-2.0.gc" use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode-2.0" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>

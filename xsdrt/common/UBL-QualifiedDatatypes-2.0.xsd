@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     QualifiedDatatypes
-  Generated On:      Fri Jul 14 3:50:21 P4 2006
+  Generated On:      Tue Sep 19 6:12:46 P9 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:53.37-04:00 to 
-  address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
 <!-- ===== Type Definitions ===== -->
   <xsd:complexType name="AllowanceChargeReasonCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE 4465" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -23,14 +26,14 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="D03A" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/AllowanceChargeReasonCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:AllowanceChargeReasonCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="ChannelCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE 3155" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -38,29 +41,29 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="D03A" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ChannelCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:ChannelCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="ChipCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Chip" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
         <xsd:attribute name="listName" type="xsd:string" default="Chip" use="optional"/>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ChipCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:ChipCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="ContainerSizeTypeCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="ISO 668" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="5" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="ISO" use="optional"/>
@@ -68,14 +71,14 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1995" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/special-purpose/ContainerSizeTypeCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:ContainerSizeTypeCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="CountryIdentificationCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="ISO3166-1" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -83,14 +86,14 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="0.3" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:CountryIdentificationCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="CurrencyCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="ISO 4217 Alpha" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -98,89 +101,89 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2001" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/CurrencyCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:un:unece:uncefact:codelist:specification:54217:2001" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="DocumentStatusCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Document Status" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
         <xsd:attribute name="listName" type="xsd:string" default="Document Status" use="optional"/>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/DocumentStatusCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:DocumentStatusCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="LatitudeDirectionCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Latitude Direction" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
         <xsd:attribute name="listName" type="xsd:string" default="Latitude Direction" use="optional"/>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LatitudeDirectionCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:LatitudeDirectionCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="LineStatusCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Line Status" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
         <xsd:attribute name="listName" type="xsd:string" default="Line Status" use="optional"/>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LineStatusCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:LineStatusCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="LongitudeDirectionCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Longitude Direction" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
         <xsd:attribute name="listName" type="xsd:string" default="Longitude Direction" use="optional"/>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LongitudeDirectionCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:LongitudeDirectionCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="OperatorCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Operator" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
         <xsd:attribute name="listName" type="xsd:string" default="Operator" use="optional"/>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/OperatorCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:OperatorCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PackagingTypeCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 21" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -188,14 +191,14 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="Revision 5" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PackagingTypeCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PaymentMeansCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE 4461" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -203,14 +206,14 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="D03A" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PaymentMeansCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:PaymentMeansCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PortCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 16" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -218,29 +221,29 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="Third Edition" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/special-purpose/PortCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:PortCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="SubstitutionStatusCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Substitution Status" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
         <xsd:attribute name="listName" type="xsd:string" default="Substitution Status" use="optional"/>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/SubstitutionStatusCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:SubstitutionStatusCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="TransportationStatusCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 24" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -248,14 +251,30 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="Third Revision" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportationStatusCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:TransportationStatusCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
+
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="TransportEquipmentTypeCodeType">
+    <xsd:simpleContent>
+      <xsd:restriction base="udt:CodeType">
+        <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE 8053" use="optional"/>
+        <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
+        <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
+        <xsd:attribute name="listName" type="xsd:string" default="Equipment type code qualifier" use="optional"/>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="D.05B" use="optional"/>
+        <xsd:attribute name="name" type="xsd:string" use="optional"/>
+        <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportEquipmentTypeCode-2.0.gc" use="optional"/>
+        <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:TransportEquipmentTypeCode-2.0" use="optional"/>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="TransportModeCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 16" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -263,14 +282,14 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="Presented by the CDWG" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportModeCode-2.0.gc" use="optional"/>
         <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:TransportModeCode-2.0" use="optional"/>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="UnitOfMeasureCodeType">
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 20" use="optional"/>
         <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
         <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
@@ -278,9 +297,9 @@
         <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="Revision 4" use="optional"/>
         <xsd:attribute name="name" type="xsd:string" use="optional"/>
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
-        <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:UnitOfMeasureCode-2.0" use="optional"/>
-      </xsd:extension>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/UnitOfMeasureCode-2.0.gc" use="optional"/>
+        <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:un:unece:uncefact:codelist:specification:66411:2001" use="optional"/>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
 </xsd:schema>
@@ -306,7 +325,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

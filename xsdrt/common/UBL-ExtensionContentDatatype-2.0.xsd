@@ -4,7 +4,7 @@
   Generated On:      2006-07-14 16:00z
 -->
 <!--
-  Modified 2006-07-19 11:21:53.37-04:00 to 
+  Modified 2006-07-19 11:21:29.64-04:00 to 
   address schema locations.
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -12,9 +12,7 @@
   <!-- ===== Type Declaration ===== -->
   <xsd:complexType name="ExtensionContentType">
     <xsd:sequence>
-      <xsd:any namespace="##any" minOccurs="0" maxOccurs="1" processContents="skip">
-        
-      </xsd:any>
+      <xsd:any namespace="##any" minOccurs="0" maxOccurs="1" processContents="skip"/>
     </xsd:sequence>
   </xsd:complexType>
 </xsd:schema>

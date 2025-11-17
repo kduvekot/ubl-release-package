@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     AttachedDocument
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="AttachedDocument" type="AttachedDocumentType">
@@ -28,7 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Attached Document. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>A ’wrapper’ UBL document that can contain anything. This allows a referenced document to be included in the package of documents being exchanged.</ccts:Definition>
+          <ccts:Definition>A 'wrapper' UBL document that can contain anything. This allows a referenced document to be included in the package of documents being exchanged.</ccts:Definition>
           <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -36,9 +43,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -47,7 +52,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -58,16 +63,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Attached Document. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Attached Document. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -81,7 +86,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -98,7 +103,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Attached Document. Used as a reference for a business document (the parent)</ccts:Definition>
+              <ccts:Definition>An identifier for the Attached Document. Used as a reference for a business document (the parent).</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -130,7 +135,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>a date denoting when the Attached Document was issued.</ccts:Definition>
+              <ccts:Definition>A date denoting when the Attached Document was issued.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -146,7 +151,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>a time denoting when the Attached Document was issued.</ccts:Definition>
+              <ccts:Definition>A time denoting when the Attached Document was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -162,7 +167,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>contains any free form text pertinent to the entire document or to the document message itself. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Contains any free-form text pertinent to the entire document or to the document message itself. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -194,7 +199,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. Document Type. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Qualifies types of document as text</ccts:Definition>
+              <ccts:Definition>Qualifies types of document as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>Document Type</ccts:PropertyTerm>
@@ -244,7 +249,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>associates the Attached Document with zero or more signatures.</ccts:Definition>
+              <ccts:Definition>Associates the Attached Document with zero or more signatures.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
@@ -291,7 +296,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Attached Document. Attachment</ccts:DictionaryEntryName>
-              <ccts:Definition>An attachement containing the document content</ccts:Definition>
+              <ccts:Definition>An attachement containing the document content.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
               <ccts:PropertyTerm>Attachment</ccts:PropertyTerm>

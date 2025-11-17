@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     ForwardingInstructions
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:ForwardingInstructions-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ForwardingInstructions-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ForwardingInstructions-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:ForwardingInstructions-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="ForwardingInstructions" type="ForwardingInstructionsType">
@@ -28,7 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Forwarding Instructions. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>The document issued to a forwarder, giving instructions regarding the action to be taken for the forwarding of goods described therein.  The Forwarding Instructions is used by any party who gives instructions for the transportation services required for a consignment of goods to any party who is contracted to provide the transportation services. The parties who issue this document are commonly referred to as the shipper or consignor while the parties who receive this document are forwarders, carriers, shipping agents, etc. Note that this document may also be issued by a forwarder or shipping agent in their capacity as a "shipper". This document can be used to arrange for the transportation (1) of different types of goods or cargoes; (2) whether containerized or non-containerized; (3) through different modes of transport including multi-modal and (4) from any origin to any destination.</ccts:Definition>
+          <ccts:Definition>The document issued to a forwarder, giving instructions regarding the action to be taken for the forwarding of goods described therein.  Forwarding Instructions is used by any party who gives instructions for the transportation services required for a consignment of goods to any party who is contracted to provide the transportation services. The parties who issue this document are commonly referred to as the shipper or consignor, while the parties who receive this document are forwarders, carriers, shipping agents, etc. Note that this document may also be issued by a forwarder or shipping agent in their capacity as a "shipper". This document can be used to arrange for the transportation (1) of different types of goods or cargoes; (2) whether containerized or non-containerized; (3) through different modes of transport including multi-modal; and (4) from any origin to any destination.</ccts:Definition>
           <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
           <ccts:AlternativeBusinessTerms>Forwarding Instruction</ccts:AlternativeBusinessTerms>
         </ccts:Component>
@@ -37,9 +44,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -48,7 +53,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -59,16 +64,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Forwarding Instructions. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Forwarding Instructions. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined Customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -82,7 +87,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -223,18 +228,18 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:StatusCode" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:DocumentStatusCode" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Forwarding Instructions. Status. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the status of the Forwarding Instruction with respect to its original state. This may be used if the document precedes the event and is subsequently found to be incorrect and in need of cancelling or revising</ccts:Definition>
+              <ccts:DictionaryEntryName>Forwarding Instructions. Document Status Code. Code</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies the status of the Forwarding Instructions with respect to its original state. This may be used if the document precedes the event and is subsequently found to be incorrect and in need of cancelling or revising.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
-              <ccts:PropertyTerm>Status</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Document Status Code</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-              <ccts:DataType>Code. Type</ccts:DataType>
+              <ccts:DataType>Document Status_ Code. Type</ccts:DataType>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -312,7 +317,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Other_ Instruction. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Contains other free text based instructions related to the shipment to the forwarders or carriers. This should only be used where such information cannot be represented in other structured information entities within the document.</ccts:Definition>
+              <ccts:Definition>Contains other free-text based instructions related to the shipment to the forwarders or carriers. This should only be used where such information cannot be represented in other structured information entities within the document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Other</ccts:PropertyTermQualifier>
@@ -329,7 +334,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Consignor_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>the party consigning goods as stipulated in the transport contract by the party ordering transport.</ccts:Definition>
+              <ccts:Definition>The party consigning goods, as stipulated in the transport contract by the party ordering transport.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Consignor</ccts:PropertyTermQualifier>
@@ -345,7 +350,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Carrier_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>the party providing the transport of goods between named points.</ccts:Definition>
+              <ccts:Definition>The party providing the transport of goods between named points.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Carrier</ccts:PropertyTermQualifier>
@@ -361,7 +366,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Freight Forwarder_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>the party combining individual smaller consignments into a single larger consignment (so called consolidated consignment) that is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
+              <ccts:Definition>The party combining individual smaller consignments into a single larger consignment (so-called consolidated consignment) that is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Freight Forwarder</ccts:PropertyTermQualifier>
@@ -422,7 +427,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>One or more signatures applied to the document instance</ccts:Definition>
+              <ccts:Definition>One or more signatures applied to the document instance.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>

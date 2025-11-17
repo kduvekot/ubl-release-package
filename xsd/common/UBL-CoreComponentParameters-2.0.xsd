@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     CoreComponentParameters
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:15 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:29.64-04:00 to 
-  address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:un:unece:uncefact:documentation:2" targetNamespace="urn:un:unece:uncefact:documentation:2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:un:unece:uncefact:documentation:2"
+    xmlns="urn:un:unece:uncefact:documentation:2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
 </xsd:schema>
 <!-- ===== Copyright Notice ===== -->

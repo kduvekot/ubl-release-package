@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     TransportationStatus
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="TransportationStatus" type="TransportationStatusType">
@@ -28,7 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Transportation Status. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>A message to report the transport status and/or change in the transport status (i.e. event) between agreed parties</ccts:Definition>
+          <ccts:Definition>A message to report the transport status and/or change in the transport status (i.e. event) between agreed parties.</ccts:Definition>
           <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -36,9 +43,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -47,7 +52,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>status and/or change in the transport status (i.e. event) between agreed</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -58,16 +63,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Transportation Status. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>parties</ccts:Definition>
+              <ccts:DictionaryEntryName>Transportation Status. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -81,7 +86,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -98,7 +103,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Unique identifier of the Status message</ccts:Definition>
+              <ccts:Definition>Unique identifier of the Status message.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -115,7 +120,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Carrier Assigned_ Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Reference number assigned by a carrier or its agent to identify a specific shipment such as a booking reference number when cargo space is reserved prior to loading.</ccts:Definition>
+              <ccts:Definition>Reference number assigned by a carrier or its agent to identify a specific shipment, such as a booking reference number when cargo space is reserved prior to loading.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Carrier Assigned</ccts:PropertyTermQualifier>
@@ -244,7 +249,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Other_ Instruction. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Instruction about this message</ccts:Definition>
+              <ccts:Definition>Instruction about this message.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Other</ccts:PropertyTermQualifier>
@@ -261,7 +266,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Consignment</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Consignment covered by the status message</ccts:Definition>
+              <ccts:Definition>An association to Consignment covered by the status message.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTerm>Consignment</ccts:PropertyTerm>
@@ -276,7 +281,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Transport Event</ccts:DictionaryEntryName>
-              <ccts:Definition>Events that relate to this status report</ccts:Definition>
+              <ccts:Definition>Events that relate to this status report.</ccts:Definition>
               <ccts:Cardinality>1..n</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTerm>Transport Event</ccts:PropertyTerm>
@@ -306,7 +311,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>One or more signatures applied to the document instance</ccts:Definition>
+              <ccts:Definition>One or more signatures applied to the document instance.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>

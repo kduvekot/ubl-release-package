@@ -1,7 +1,7 @@
-<?xml version="1.0"?>
-<Invoice xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:stat="urn:oasis:names:specification:ubl:schema:xsd:DocumentStatusCode-1.0" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
-	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
-	<cbc:SubsetID>urn:oasis:names:specification:ubl:xpath:Invoice-2.0:sbs-1.0-draft</cbc:SubsetID>
+<?xml version="1.0" encoding="UTF-8"?>
+<Invoice xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:stat="urn:oasis:names:specification:ubl:schema:xsd:DocumentStatusCode-1.0" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2">
+	<cbc:UBLVersionID>2.0-prd3</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:oasis:names:specification:ubl:xpath:Invoice-2.0:sbs-1.0-draft</cbc:CustomizationID>
 	<cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-invoice-notification-draft</cbc:ProfileID>
 	<cbc:ID>A00095678</cbc:ID>
 	<cbc:CopyIndicator>false</cbc:CopyIndicator>
@@ -171,7 +171,7 @@
 	<cac:TaxTotal>
 		<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
 		<cbc:TaxEvidenceIndicator>true</cbc:TaxEvidenceIndicator>
-		<cac:TaxSubTotal>
+		<cac:TaxSubtotal>
 			<cbc:TaxableAmount currencyID="GBP">100.00</cbc:TaxableAmount>
 			<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
 			<cac:TaxCategory>
@@ -181,13 +181,14 @@
 					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
 				</cac:TaxScheme>
 			</cac:TaxCategory>
-		</cac:TaxSubTotal>
+		</cac:TaxSubtotal>
 	</cac:TaxTotal>
-	<cac:LegalTotal>
+	<cac:LegalMonetaryTotal>
 		<cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
 		<cbc:TaxExclusiveAmount currencyID="GBP">90.00</cbc:TaxExclusiveAmount>
+		<cbc:AllowanceTotalAmount currencyID="GBP">10.00</cbc:AllowanceTotalAmount>
 		<cbc:PayableAmount currencyID="GBP">107.50</cbc:PayableAmount>
-	</cac:LegalTotal>
+	</cac:LegalMonetaryTotal>
 	<cac:InvoiceLine>
 		<cbc:ID>A</cbc:ID>
 		<cbc:InvoicedQuantity unitCode="KG">100</cbc:InvoicedQuantity>
@@ -206,7 +207,7 @@
 		<cac:TaxTotal>
 			<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
 			<cbc:TaxEvidenceIndicator>true</cbc:TaxEvidenceIndicator>
-			<cac:TaxSubTotal>
+			<cac:TaxSubtotal>
 				<cbc:TaxableAmount currencyID="GBP">100.00</cbc:TaxableAmount>
 				<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
 				<cac:TaxCategory>
@@ -217,7 +218,7 @@
 						<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
 					</cac:TaxScheme>
 				</cac:TaxCategory>
-			</cac:TaxSubTotal>
+			</cac:TaxSubtotal>
 		</cac:TaxTotal>
 		<cac:Item>
 			<cbc:Description>Acme beeswax</cbc:Description>
@@ -228,10 +229,12 @@
 			<cac:SellersItemIdentification>
 				<cbc:ID>17589683</cbc:ID>
 			</cac:SellersItemIdentification>
-			<cac:LotIdentification>
-				<cbc:LotNumberID>546378239</cbc:LotNumberID>
-				<cbc:ExpiryDate>2010-01-01</cbc:ExpiryDate>
-			</cac:LotIdentification>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:LotNumberID>546378239</cbc:LotNumberID>
+					<cbc:ExpiryDate>2010-01-01</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
 		</cac:Item>
 		<cac:Price>
 			<cbc:PriceAmount currencyID="GBP">1.00</cbc:PriceAmount>

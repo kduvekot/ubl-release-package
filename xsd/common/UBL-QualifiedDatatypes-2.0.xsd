@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     QualifiedDatatypes
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 19 5:53:20 P9 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:29.64-04:00 to 
-  address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
 <!-- ===== Type Definitions ===== -->
@@ -18,21 +21,22 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Allowance Charge Reason_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of possible reasons for an allowance or charge.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Allowance Charge Reason</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
+          <ccts:UsageRule>Used under the terms of the UNECE  policy stated at http://www.unece.org/ece_legal.htm.</ccts:UsageRule>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE 4465" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Allowance Charge Reason_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -50,7 +54,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Allowance Charge Reason_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -59,7 +63,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Allowance Charge Reason_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -77,25 +81,26 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Allowance Charge Reason_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
+
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Allowance Charge Reason_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/AllowanceChargeReasonCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Allowance Charge Reason_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -104,12 +109,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Allowance Charge Reason_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="ChannelCodeType">
@@ -117,21 +122,22 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Channel_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of possible ways in which communication can be made (eg. Phone, email, etc).</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Channel</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
+          <ccts:UsageRule>Used under the terms of the UNECE  policy stated at http://www.unece.org/ece_legal.htm.</ccts:UsageRule>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE 3155" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Channel_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -149,7 +155,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Channel_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -158,7 +164,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Channel_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -176,7 +182,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Channel_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -185,16 +191,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Channel_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ChannelCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Channel_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -203,12 +209,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Channel_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="ChipCodeType">
@@ -216,22 +222,23 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Chip_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>Distinction between CHIP and MAG STRIPE cards</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Chip</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Chip" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
+
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
@@ -239,7 +246,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -248,7 +255,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -257,16 +264,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional">
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -275,7 +282,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -284,16 +291,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ChipCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -302,12 +309,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="ContainerSizeTypeCodeType">
@@ -315,21 +322,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Container Size Type_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of code values for classifying series 1 freight containers based on external dimensions and specifies the assoziated ratings and, where appropriate, the minimum internal and door opening dimensions for certain types of containers.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Container Size Type</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="ISO 668" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -338,7 +345,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -347,7 +354,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -356,7 +363,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -365,7 +372,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -374,7 +381,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -383,16 +390,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/special-purpose/ContainerSizeTypeCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -401,12 +408,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="CountryIdentificationCodeType">
@@ -414,21 +421,22 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Country Identification_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of countries of the world.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Country Identification</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
+          <ccts:UsageRule>Derived from the ISO 3166-1-alpha-2 code elements used under the terms of the ISO policy stated at http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html.</ccts:UsageRule>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="ISO3166-1" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -446,7 +454,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -455,7 +463,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -464,7 +472,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -473,7 +481,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -482,16 +490,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -500,12 +508,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="CurrencyCodeType">
@@ -513,21 +521,23 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Currency_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of world currencies.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Currency</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
+          <ccts:UsageRule>Derived from the ISO 4217 currency code list and used under the terms of the ISO policy stated at 
+http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageRule>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="ISO 4217 Alpha" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -545,7 +555,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -554,7 +564,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -563,7 +573,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -572,7 +582,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -581,16 +591,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/CurrencyCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -599,12 +609,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="DocumentStatusCodeType">
@@ -612,21 +622,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Document Status_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of possible statuses of a document with regard to its original state.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Document Status</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Document Status" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -635,7 +645,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -644,7 +654,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -653,16 +663,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional">
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -671,7 +681,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -680,16 +690,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/DocumentStatusCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -698,12 +708,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="LatitudeDirectionCodeType">
@@ -711,21 +721,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Latitude Direction_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The possible directions of latitude</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Latitude Direction</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Latitude Direction" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -734,7 +744,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -743,7 +753,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -752,16 +762,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional">
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -770,7 +780,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -779,16 +789,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LatitudeDirectionCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -797,12 +807,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="LineStatusCodeType">
@@ -810,21 +820,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Line Status_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of possible statuses of a line in a transaction with regard to its original state.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Line Status</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Line Status" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -833,7 +843,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -842,7 +852,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -851,16 +861,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional">
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -869,7 +879,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -878,16 +888,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LineStatusCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -896,12 +906,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="LongitudeDirectionCodeType">
@@ -909,21 +919,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Longitude Direction_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The possible directions of longitude</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Longitude Direction</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Longitude Direction" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -932,7 +942,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -941,7 +951,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -950,16 +960,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional">
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -968,7 +978,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -977,16 +987,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LongitudeDirectionCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -995,12 +1005,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="OperatorCodeType">
@@ -1008,21 +1018,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Operator_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of valid arithmetic operators</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Operator</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Operator" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1031,7 +1041,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1040,7 +1050,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1049,16 +1059,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional">
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1067,7 +1077,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1076,16 +1086,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/OperatorCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1094,12 +1104,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PackagingTypeCodeType">
@@ -1107,21 +1117,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Packaging Type_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of code values for Passengers, Types of Cargo, Packages and Packaging Materials (with Complementary Codes for Package Names)</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Packaging Type</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 21" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1130,7 +1140,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1139,7 +1149,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1148,7 +1158,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1157,7 +1167,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1166,7 +1176,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1175,16 +1185,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PackagingTypeCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1193,12 +1203,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PaymentMeansCodeType">
@@ -1206,21 +1216,22 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Payment Means_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of valid means of paying the debt incurred.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Payment Means</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
+          <ccts:UsageRule>Used under the terms of the UNECE  policy stated at http://www.unece.org/ece_legal.htm.</ccts:UsageRule>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE 4461" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Payment Means_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1238,7 +1249,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Payment Means_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1247,7 +1258,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Payment Means_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1265,7 +1276,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Payment Means_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1274,16 +1285,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Payment Means_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PaymentMeansCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Payment Means_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1292,12 +1303,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Payment Means_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="PortCodeType">
@@ -1305,21 +1316,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Port_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of code values for Trade and Transport Locations</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Port</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 16" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1328,7 +1339,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1337,7 +1348,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1346,7 +1357,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1355,7 +1366,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1364,7 +1375,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1373,16 +1384,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/special-purpose/PortCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1391,12 +1402,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="SubstitutionStatusCodeType">
@@ -1404,21 +1415,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Substitution Status_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of values that indicate the status of an OrderItem in relation to substitution, denoting an acceptable substitute in the Order, an original for which an alternative is offered in the Order Confirmation, or an original for which an actual replacement is advised in the Despatch Advice.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Substitution Status</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="Substitution Status" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1427,7 +1438,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1436,7 +1447,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1445,16 +1456,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="1.0" use="optional">
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="2.0" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1463,7 +1474,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1472,16 +1483,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/SubstitutionStatusCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1490,12 +1501,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="TransportationStatusCodeType">
@@ -1503,21 +1514,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Transportation Status_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of code values for Trade and Transport Status</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Transportation Status</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 24" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1526,7 +1537,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1535,7 +1546,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1544,7 +1555,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1553,7 +1564,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1562,7 +1573,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1571,16 +1582,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportationStatusCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1589,12 +1600,111 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  <xsd:complexType name="TransportEquipmentTypeCodeType">
+    <xsd:annotation>
+      <xsd:documentation>
+        <ccts:Component>
+          <ccts:DictionaryEntryName>Transport Equipment Type_ Code. Type</ccts:DictionaryEntryName>
+          <ccts:Version>2.0</ccts:Version>
+          <ccts:Definition>The set of code values for qualifying a type of equipment used in the transportation of goods.</ccts:Definition>
+          <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+          <ccts:QualifierTerm>Transport Equipment Type</ccts:QualifierTerm>
+          <ccts:UniqueID></ccts:UniqueID>
+        </ccts:Component>
+      </xsd:documentation>
+    </xsd:annotation>
+    <xsd:simpleContent>
+      <xsd:restriction base="udt:CodeType">
+        <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE 8053" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Code List. Identifier</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="listAgencyID" type="xsd:normalizedString" default="6" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Code List. Agency. Identifier</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="listAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Code List. Agency Name. Text</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="listName" type="xsd:string" default="Equipment type code qualifier" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Code List. Name. Text</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="listVersionID" type="xsd:normalizedString" default="D.05B" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Code List. Version. Identifier</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="name" type="xsd:string" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Code. Name. Text</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Language. Identifier</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportEquipmentTypeCode-2.0.gc" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Code List. Uniform Resource. Identifier</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:TransportEquipmentTypeCode-2.0" use="optional">
+          <xsd:annotation>
+            <xsd:documentation>
+              <ccts:Name>Transport Equipment Type_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
+              <ccts:Definition></ccts:Definition>
+              <ccts:PrimitiveType>String</ccts:PrimitiveType>
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="TransportModeCodeType">
@@ -1602,21 +1712,21 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Transport Mode_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of code values for modes of transport</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Transport Mode</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 16" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1625,7 +1735,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1634,7 +1744,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1643,7 +1753,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1652,7 +1762,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1661,7 +1771,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1670,16 +1780,16 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportModeCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1688,12 +1798,12 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
   <xsd:complexType name="UnitOfMeasureCodeType">
@@ -1701,21 +1811,22 @@
       <xsd:documentation>
         <ccts:Component>
           <ccts:DictionaryEntryName>Unit Of Measure_ Code. Type</ccts:DictionaryEntryName>
-          <ccts:Version>2</ccts:Version>
+          <ccts:Version>2.0</ccts:Version>
           <ccts:Definition>The set of code values for Units of Measure Used in International Trade</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Unit Of Measure</ccts:QualifierTerm>
-          <ccts:UniqueID/>
+          <ccts:UniqueID></ccts:UniqueID>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
     <xsd:simpleContent>
-      <xsd:extension base="xsd:normalizedString">
+      <xsd:restriction base="udt:CodeType">
         <xsd:attribute name="listID" type="xsd:normalizedString" default="UN/ECE rec 20" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
+
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1724,8 +1835,9 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List. Agency. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
+
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
@@ -1733,7 +1845,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List. Agency Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1742,7 +1854,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1751,7 +1863,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List. Version. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1760,7 +1872,7 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code. Name. Text</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1769,30 +1881,30 @@
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Language. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/UnitOfMeasureCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:UnitOfMeasureCode-2.0" use="optional">
+        <xsd:attribute name="listSchemeURI" type="xsd:anyURI" default="urn:un:unece:uncefact:codelist:specification:66411:2001" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List Scheme. Uniform Resource. Identifier</ccts:Name>
-              <ccts:Definition/>
+              <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-      </xsd:extension>
+      </xsd:restriction>
     </xsd:simpleContent>
   </xsd:complexType>
 </xsd:schema>

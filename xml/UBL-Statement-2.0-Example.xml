@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Statement xmlns="urn:oasis:names:specification:ubl:schema:xsd:Statement-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
-	<cbc:SubsetID>urn:oasis:names:specification:ubl:xpath:Statement-2.0:sbs-1.0-draft</cbc:SubsetID>
+<Statement xmlns="urn:oasis:names:specification:ubl:schema:xsd:Statement-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2">
+	<cbc:UBLVersionID>2.0-prd3</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:oasis:names:specification:ubl:xpath:Statement-2.0:sbs-1.0-draft</cbc:CustomizationID>
 	<cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-statement-notification-draft</cbc:ProfileID>
 	<cbc:ID>JUL2005-07758990</cbc:ID>
 	<cbc:CopyIndicator>false</cbc:CopyIndicator>

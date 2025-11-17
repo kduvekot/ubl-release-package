@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Quotation xmlns="urn:oasis:names:specification:ubl:schema:xsd:Quotation-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
-	<cbc:SubsetID>urn:oasis:names:specification:ubl:schema:xsd:Quotation-2-draft</cbc:SubsetID>
+<Quotation xmlns="urn:oasis:names:specification:ubl:schema:xsd:Quotation-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2">
+	<cbc:UBLVersionID>2.0-prd3</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:oasis:names:specification:ubl:schema:xsd:Quotation-2-draft</cbc:CustomizationID>
 	<cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-request-for-quotation-draft</cbc:ProfileID>
 	<cbc:ID>QIY7655</cbc:ID>
 	<cbc:CopyIndicator>false</cbc:CopyIndicator>
@@ -180,7 +180,7 @@
 	<cac:TaxTotal>
 		<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
 		<cbc:TaxEvidenceIndicator>false</cbc:TaxEvidenceIndicator>
-		<cac:TaxSubTotal>
+		<cac:TaxSubtotal>
 			<cbc:TaxableAmount currencyID="GBP">100.00</cbc:TaxableAmount>
 			<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
 			<cac:TaxCategory>
@@ -190,13 +190,13 @@
 					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
 				</cac:TaxScheme>
 			</cac:TaxCategory>
-		</cac:TaxSubTotal>
+		</cac:TaxSubtotal>
 	</cac:TaxTotal>
-	<cac:LegalTotal>
+	<cac:QuotedMonetaryTotal>
 		<cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
 		<cbc:TaxExclusiveAmount currencyID="GBP">90.00</cbc:TaxExclusiveAmount>
 		<cbc:PayableAmount currencyID="GBP">107.50</cbc:PayableAmount>
-	</cac:LegalTotal>
+	</cac:QuotedMonetaryTotal>
 	<cac:QuotationLine>
 		<cbc:ID>1</cbc:ID>
 		<cbc:Note>sample</cbc:Note>

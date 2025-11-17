@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Order xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Order-2">
  <cbc:UBLVersionID>2.0-prd2</cbc:UBLVersionID>
- <cbc:SubsetID>urn:oasis:names:specification:ubl:xpath:Order-2.0:sbs-1.0-draft</cbc:SubsetID>
+ <cbc:CustomizationID>urn:oasis:names:specification:ubl:xpath:Order-2.0:sbs-1.0-draft</cbc:CustomizationID>
  <cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-order-with-simple-response-draft</cbc:ProfileID>
  <cbc:ID>AEG012345</cbc:ID>
  <cbc:SalesOrderID>CON0095678</cbc:SalesOrderID>
@@ -152,10 +152,10 @@
  <cac:TransactionConditions>
   <cbc:Description>order response required; payment is by BACS or by cheque</cbc:Description>
  </cac:TransactionConditions>
- <cac:LegalTotal>
+ <cac:AnticipatedMonetaryTotal>
   <cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
   <cbc:PayableAmount currencyID="GBP">100.00</cbc:PayableAmount>
- </cac:LegalTotal>
+ </cac:AnticipatedMonetaryTotal>
  <cac:OrderLine>
   <cbc:Note>this is an illustrative order line</cbc:Note>
   <cac:LineItem>

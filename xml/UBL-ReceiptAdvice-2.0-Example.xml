@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ReceiptAdvice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
-	<cbc:SubsetID>urn:oasis:names:specification:ubl:xpath:ReceiptAdvice-2.0:sbs-1.0-draft</cbc:SubsetID>
+<ReceiptAdvice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:udt="urn:un:unece:uncefact:data:draft:UnqualifiedDataTypesSchemaModule:2">
+	<cbc:UBLVersionID>2.0-prd3</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:oasis:names:specification:ubl:xpath:ReceiptAdvice-2.0:sbs-1.0-draft</cbc:CustomizationID>
 	<cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-receipt-advice-notification-draft</cbc:ProfileID>
 	<cbc:ID>658398</cbc:ID>
 	<cbc:CopyIndicator>false</cbc:CopyIndicator>
@@ -108,10 +108,12 @@
 			<cac:SellersItemIdentification>
 				<cbc:ID>17589683</cbc:ID>
 			</cac:SellersItemIdentification>
-			<cac:LotIdentification>
-				<cbc:LotNumberID>546378239</cbc:LotNumberID>
-				<cbc:ExpiryDate>2010-01-01</cbc:ExpiryDate>
-			</cac:LotIdentification>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:LotNumberID>546378239</cbc:LotNumberID>
+					<cbc:ExpiryDate>2010-01-01</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
 		</cac:Item>
 	</cac:ReceiptLine>
 	<cac:Shipment>

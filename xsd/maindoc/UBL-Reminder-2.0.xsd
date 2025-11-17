@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     Reminder
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="Reminder" type="ReminderType">
@@ -28,7 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Reminder. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>The document used to remind the customer of payments overdue</ccts:Definition>
+          <ccts:Definition>The document used to remind the customer of payments overdue.</ccts:Definition>
           <ccts:ObjectClass>Reminder</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -36,9 +43,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -47,7 +52,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -58,16 +63,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Reminder. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Reminder. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -81,7 +86,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -98,7 +103,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Invoice assigned by the Creditor</ccts:Definition>
+              <ccts:Definition>An identifier for the Invoice assigned by the Creditor.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -115,7 +120,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>Indicates whether a document is a copy (true) or not (false)</ccts:Definition>
+              <ccts:Definition>Indicates whether a document is a copy (true) or not (false).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -132,7 +137,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Invoice instance</ccts:Definition>
+              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Invoice instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -148,7 +153,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date assigned by the Creditor on which the Invoice was issued</ccts:Definition>
+              <ccts:Definition>The date assigned by the Creditor on which the Invoice was issued.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -165,7 +170,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Creditor on which the Invoice was issued</ccts:Definition>
+              <ccts:Definition>The time assigned by the Creditor on which the Invoice was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -197,7 +202,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Reminder Sequence. Numeric</ccts:DictionaryEntryName>
-              <ccts:Definition>The sequence number of the current reminder. Specifies the number of reminders previous send plus one.</ccts:Definition>
+              <ccts:Definition>The sequence number of the current reminder. Specifies the number of reminders previously sent plus one.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Reminder Sequence</ccts:PropertyTerm>
@@ -213,7 +218,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free form text applying to the Reminder. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Free-form text applying to the Reminder. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -262,7 +267,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Tax_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency used for tax amounts in the Invoice</ccts:Definition>
+              <ccts:Definition>The currency used for tax amounts in the Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Tax</ccts:PropertyTermQualifier>
@@ -279,7 +284,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Pricing_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency used for prices in the Invoice</ccts:Definition>
+              <ccts:Definition>The currency used for prices in the Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Pricing</ccts:PropertyTermQualifier>
@@ -296,7 +301,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Payment_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency used for payment in the Invoice</ccts:Definition>
+              <ccts:Definition>The currency used for payment in the Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payment</ccts:PropertyTermQualifier>
@@ -313,7 +318,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Payment Alternative_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The alternative currency used for payment in the Invoice</ccts:Definition>
+              <ccts:Definition>The alternative currency used for payment in the Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payment Alternative</ccts:PropertyTermQualifier>
@@ -330,7 +335,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Accounting Cost Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The Buyer's accounting code applied to the Invoice as a whole</ccts:Definition>
+              <ccts:Definition>The Buyer's accounting code applied to the Invoice as a whole.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost Code</ccts:PropertyTerm>
@@ -346,7 +351,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The Buyer's accounting code applied to the Invoice as a whole</ccts:Definition>
+              <ccts:Definition>The Buyer's accounting code applied to the Invoice as a whole, expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -362,7 +367,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Line Count. Numeric</ccts:DictionaryEntryName>
-              <ccts:Definition>The number of lines in the document</ccts:Definition>
+              <ccts:Definition>The number of lines in the document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Line Count</ccts:PropertyTerm>
@@ -378,7 +383,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Reminder_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to period(s) to which the Invoice applies</ccts:Definition>
+              <ccts:Definition>An association to period(s) to which the Invoice applies.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Reminder</ccts:PropertyTermQualifier>
@@ -394,7 +399,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents</ccts:Definition>
+              <ccts:Definition>An association to other documents.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -410,7 +415,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>One or more signatures applied to the Invoice</ccts:Definition>
+              <ccts:Definition>One or more signatures applied to the Invoice.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
@@ -425,7 +430,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Accounting_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Accounting Supplier Party</ccts:Definition>
+              <ccts:Definition>An association to the Accounting Supplier Party.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Accounting</ccts:PropertyTermQualifier>
@@ -441,7 +446,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Accounting_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Accounting Customer Party</ccts:Definition>
+              <ccts:Definition>An association to the Accounting Customer Party.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Accounting</ccts:PropertyTermQualifier>
@@ -457,7 +462,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Payee_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Payee</ccts:Definition>
+              <ccts:Definition>An association to the Payee.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payee</ccts:PropertyTermQualifier>
@@ -473,7 +478,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Tax Representative_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Tax Representative</ccts:Definition>
+              <ccts:Definition>An association to the Tax Representative.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Tax Representative</ccts:PropertyTermQualifier>
@@ -489,7 +494,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Payment Means</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Payment Means</ccts:Definition>
+              <ccts:Definition>An association to Payment Means.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Payment Means</ccts:PropertyTerm>
@@ -504,7 +509,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Payment Terms</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Payment Terms</ccts:Definition>
+              <ccts:Definition>An association to Payment Terms.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Payment Terms</ccts:PropertyTerm>
@@ -519,7 +524,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Prepaid_ Payment. Payment</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to prepaid payment(s)</ccts:Definition>
+              <ccts:Definition>An association to prepaid payment(s).</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Prepaid</ccts:PropertyTermQualifier>
@@ -535,7 +540,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Allowance Charge</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Allowances and Charges that apply to the Invoice as a whole</ccts:Definition>
+              <ccts:Definition>An association to Allowances and Charges that apply to the Invoice as a whole.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm>
@@ -550,7 +555,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Tax_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Exchange Rate between the Document Currency and the Tax Currency</ccts:Definition>
+              <ccts:Definition>An association to Exchange Rate between the Document Currency and the Tax Currency.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Tax</ccts:PropertyTermQualifier>
@@ -566,7 +571,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Pricing_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Exchange Rate between the Document Currency and the Pricing Currency</ccts:Definition>
+              <ccts:Definition>An association to Exchange Rate between the Document Currency and the Pricing Currency.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Pricing</ccts:PropertyTermQualifier>
@@ -582,7 +587,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Payment_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Exchange Rate between the Document Currency and the Payment Currency</ccts:Definition>
+              <ccts:Definition>An association to Exchange Rate between the Document Currency and the Payment Currency.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payment</ccts:PropertyTermQualifier>
@@ -598,7 +603,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Payment Alternative_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Exchange Rate between the Document Currency and the Payment Alternative Currency</ccts:Definition>
+              <ccts:Definition>An association to Exchange Rate between the Document Currency and the Payment Alternative Currency.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payment Alternative</ccts:PropertyTermQualifier>
@@ -614,7 +619,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Tax Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to tax total for specific tax types/rates</ccts:Definition>
+              <ccts:Definition>An association to Tax Total for specific tax types/rates.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Tax Total</ccts:PropertyTerm>
@@ -623,17 +628,18 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cac:LegalTotal" minOccurs="1" maxOccurs="1">
+      <xsd:element ref="cac:LegalMonetaryTotal" minOccurs="1" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Reminder. Legal Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the total amount payable on the Invoice including Allowances, Charges and Taxes</ccts:Definition>
+              <ccts:DictionaryEntryName>Reminder. Legal_ Monetary Total. Monetary Total</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to the total amount payable on the Invoice, including Allowances, Charges, and Taxes.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
-              <ccts:PropertyTerm>Legal Total</ccts:PropertyTerm>
-              <ccts:AssociatedObjectClass>Legal Total</ccts:AssociatedObjectClass>
+              <ccts:PropertyTermQualifier>Legal</ccts:PropertyTermQualifier>
+              <ccts:PropertyTerm>Monetary Total</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Monetary Total</ccts:AssociatedObjectClass>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -644,7 +650,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder. Reminder Line</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to one or more Invoice Lines</ccts:Definition>
+              <ccts:Definition>An association to one or more Invoice Lines.</ccts:Definition>
               <ccts:Cardinality>1..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder</ccts:ObjectClass>
               <ccts:PropertyTerm>Reminder Line</ccts:PropertyTerm>

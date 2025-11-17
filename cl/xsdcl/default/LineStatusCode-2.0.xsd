@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:codelist:gc:LineStatusCode-2.0" targetNamespace="urn:oasis:names:specification:ubl:codelist:gc:LineStatusCode-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xsd:simpleType name="LineStatusCodeCodeContentType">
+      <xsd:restriction base="xsd:normalizedString">
+         <xsd:enumeration value="Added">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Line has been added.</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Cancelled">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Line has been cancelled.</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Disputed">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Line is disputed.</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NoStatus">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Line has no status.</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="Revised">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Line has been revised.</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="LineStatusCodeCodeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>DT</ccts:ComponentType>
+               <ccts:DictionaryEntryName>LineStatusCode_ Code. Type</ccts:DictionaryEntryName>
+               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+               <ccts:DataTypeQualifier>LineStatusCode</ccts:DataTypeQualifier>
+               <ccts:DataType>Code. Type</ccts:DataType>
+            </ccts:Component>
+            <ccts:Instance>
+               <ccts:CodeListID>LineStatusCode</ccts:CodeListID>
+               <ccts:CodeListAgencyID>UBL</ccts:CodeListAgencyID>
+               <ccts:CodeListAgencyName>OASIS Universal Business Language</ccts:CodeListAgencyName>
+               <ccts:CodeListName>LineStatusCode</ccts:CodeListName>
+               <ccts:CodeListVersionID>2.0</ccts:CodeListVersionID>
+               <ccts:CodeListURI>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LineStatusCode-2.0.gc</ccts:CodeListURI>
+               <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:codelist:gc:LineStatusCode-2.0</ccts:CodeListSchemeURI>
+               <ccts:LanguageID>en</ccts:LanguageID>
+            </ccts:Instance>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="LineStatusCodeCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="LineStatusCode" use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="LineStatusCode" use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LineStatusCode-2.0.gc" use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:LineStatusCode-2.0" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>

@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     ApplicationResponse
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="ApplicationResponse" type="ApplicationResponseType">
@@ -28,7 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Application Response. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>a document to indicate the application’s response to a transaction. This may be a business reposnse and/or a technical response, sent automatically by an application or initiated by a user.</ccts:Definition>
+          <ccts:Definition>A document to indicate the application's response to a transaction. This may be a business response and/or a technical response, sent automatically by an application or initiated by a user.</ccts:Definition>
           <ccts:ObjectClass>Application Response</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -36,9 +43,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -47,7 +52,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -58,16 +63,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Application Response. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Application Response. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -81,7 +86,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -98,7 +103,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Application Response assigned by the sender</ccts:Definition>
+              <ccts:Definition>An identifier for the Application Response assigned by the sender.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -130,7 +135,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date assigned by the sender's application at which the Application Response was created</ccts:Definition>
+              <ccts:Definition>The date assigned by the sender's application at which the Application Response was created.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -146,7 +151,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the sender's application at which the Application Response was created</ccts:Definition>
+              <ccts:Definition>The time assigned by the sender's application at which the Application Response was created.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -162,7 +167,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Response Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date at which the information in the response was created</ccts:Definition>
+              <ccts:Definition>The date at which the information in the response was created.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Response Date</ccts:PropertyTerm>
@@ -178,7 +183,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Response Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time at which the information in the response was created</ccts:Definition>
+              <ccts:Definition>The time at which the information in the response was created.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Response Time</ccts:PropertyTerm>
@@ -194,7 +199,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free form text applying to the Application Response.  This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Free-form text applying to the Application Response.  This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -210,7 +215,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the current version of this document</ccts:Definition>
+              <ccts:Definition>Identifies the current version of this document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Version Identifier</ccts:PropertyTerm>
@@ -227,7 +232,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>One or more signatures applied to the document</ccts:Definition>
+              <ccts:Definition>One or more signatures applied to the document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
@@ -274,7 +279,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Application Response. Document Response</ccts:DictionaryEntryName>
-              <ccts:Definition>A response to one or more documents</ccts:Definition>
+              <ccts:Definition>A response to one or more documents.</ccts:Definition>
               <ccts:Cardinality>1..n</ccts:Cardinality>
               <ccts:ObjectClass>Application Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Document Response</ccts:PropertyTerm>

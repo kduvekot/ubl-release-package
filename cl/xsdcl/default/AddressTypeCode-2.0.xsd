@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:codelist:gc:AddressTypeCode-2.0" targetNamespace="urn:oasis:names:specification:ubl:codelist:gc:AddressTypeCode-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xsd:simpleType name="AddressTypeCodeCodeContentType">
+      <xsd:restriction base="xsd:normalizedString"/>
+   </xsd:simpleType>
+   <xsd:complexType name="AddressTypeCodeCodeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>DT</ccts:ComponentType>
+               <ccts:DictionaryEntryName>AddressTypeCode_ Code. Type</ccts:DictionaryEntryName>
+               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+               <ccts:DataTypeQualifier>AddressTypeCode</ccts:DataTypeQualifier>
+               <ccts:DataType>Code. Type</ccts:DataType>
+            </ccts:Component>
+            <ccts:Instance>
+               <ccts:CodeListID>AddressTypeCode</ccts:CodeListID>
+               <ccts:CodeListAgencyID>UBL</ccts:CodeListAgencyID>
+               <ccts:CodeListAgencyName>OASIS Universal Business Language</ccts:CodeListAgencyName>
+               <ccts:CodeListName>AddressTypeCode</ccts:CodeListName>
+               <ccts:CodeListVersionID>2.0</ccts:CodeListVersionID>
+               <ccts:CodeListURI>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/AddressTypeCode-2.0</ccts:CodeListURI>
+               <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:codelist:gc:AddressTypeCode-2.0</ccts:CodeListSchemeURI>
+               <ccts:LanguageID>en</ccts:LanguageID>
+            </ccts:Instance>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="AddressTypeCodeCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="AddressTypeCode" use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="AddressTypeCode" use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/AddressTypeCode-2.0" use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:AddressTypeCode-2.0" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>

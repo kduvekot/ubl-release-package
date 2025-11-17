@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     OrderCancellation
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="OrderCancellation" type="OrderCancellationType">
@@ -28,7 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Order Cancellation. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>The document used to cancel an entire Order</ccts:Definition>
+          <ccts:Definition>The document used to cancel an entire Order.</ccts:Definition>
           <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -36,9 +43,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -47,7 +52,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -58,16 +63,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Order Cancellation. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Order Cancellation. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -81,7 +86,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -98,7 +103,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Order Cancellation assigned by the Buyer</ccts:Definition>
+              <ccts:Definition>An identifier for the Order Cancellation assigned by the Buyer.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -114,7 +119,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>Indicates whether the Order Cancellation is a copy (true) or not (false)</ccts:Definition>
+              <ccts:Definition>Indicates whether the Order Cancellation is a copy (true) or not (false).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -131,7 +136,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Order Cancellation instance</ccts:Definition>
+              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Order Cancellation instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -147,7 +152,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date assigned by the Buyer on which the Order was cancelled</ccts:Definition>
+              <ccts:Definition>The date assigned by the Buyer on which the Order was cancelled.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -163,7 +168,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Buyer on which the Order was cancelled</ccts:Definition>
+              <ccts:Definition>The time assigned by the Buyer on which the Order was cancelled.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -179,7 +184,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free form text applying to the Order Cancellation.  This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Free-form text applying to the Order Cancellation.  This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -227,7 +232,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Originator_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to an Originator document</ccts:Definition>
+              <ccts:Definition>An association to an Originator document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -243,7 +248,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents</ccts:Definition>
+              <ccts:Definition>An association to other documents.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -259,7 +264,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Contract</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a framework agreement or contract</ccts:Definition>
+              <ccts:Definition>An association to a framework agreement or contract.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTerm>Contract</ccts:PropertyTerm>
@@ -289,7 +294,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Buyer_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Buyer</ccts:Definition>
+              <ccts:Definition>An association to the Buyer.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Buyer</ccts:PropertyTermQualifier>
@@ -305,7 +310,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Seller_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Seller</ccts:Definition>
+              <ccts:Definition>An association to the Seller.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
@@ -321,7 +326,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Cancellation. Originator_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Originator</ccts:Definition>
+              <ccts:Definition>An association to the Originator.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Cancellation</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>

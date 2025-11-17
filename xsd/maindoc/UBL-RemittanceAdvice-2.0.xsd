@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     RemittanceAdvice
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="RemittanceAdvice" type="RemittanceAdviceType">
@@ -28,7 +35,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Remittance Advice. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>The document used to specify details of an actual payment</ccts:Definition>
+          <ccts:Definition>The document used to specify details of an actual payment.</ccts:Definition>
           <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -36,9 +43,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -47,7 +52,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -58,16 +63,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Remittance Advice. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Remittance Advice. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -81,7 +86,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -98,7 +103,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Remittance Advice assigned by the Debtor</ccts:Definition>
+              <ccts:Definition>An identifier for the Remittance Advice assigned by the Debtor.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -114,7 +119,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>Indicates whether the Remittance Advice is a copy (true) or not (false)</ccts:Definition>
+              <ccts:Definition>Indicates whether the Remittance Advice is a copy (true) or not (false).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -131,7 +136,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Remittance Advice instance</ccts:Definition>
+              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Remittance Advice instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -147,7 +152,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date assigned by the Debtor on which the Remittance Advice was issued</ccts:Definition>
+              <ccts:Definition>The date assigned by the Debtor on which the Remittance Advice was issued.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -163,7 +168,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Debtor on which the Remittance Advice was issued</ccts:Definition>
+              <ccts:Definition>The time assigned by the Debtor on which the Remittance Advice was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -179,7 +184,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free form text applying to the Remittance Advice. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Free-form text applying to the Remittance Advice. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -195,7 +200,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Document_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The default currency for the Remittance Advice</ccts:Definition>
+              <ccts:Definition>The default currency for the Remittance Advice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Document</ccts:PropertyTermQualifier>
@@ -212,7 +217,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Total_ Debit Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The totals of all debit amounts for the Remittance Advice</ccts:Definition>
+              <ccts:Definition>The totals of all debit amounts for the Remittance Advice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Total</ccts:PropertyTermQualifier>
@@ -229,7 +234,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Total_ Credit Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The totals of all credit amounts for the Remittance Advice</ccts:Definition>
+              <ccts:Definition>The totals of all credit amounts for the Remittance Advice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Total</ccts:PropertyTermQualifier>
@@ -246,7 +251,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Total_ Payment Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The total payable amount for the Remittance Advice (positive)</ccts:Definition>
+              <ccts:Definition>The total payable amount for the Remittance Advice (positive).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Total</ccts:PropertyTermQualifier>
@@ -314,7 +319,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Line Count. Numeric</ccts:DictionaryEntryName>
-              <ccts:Definition>The number of lines in the document</ccts:Definition>
+              <ccts:Definition>The number of lines in the document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Line Count</ccts:PropertyTerm>
@@ -330,7 +335,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Invoice_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to period(s) to which the Invoices related to the Remittance apply</ccts:Definition>
+              <ccts:Definition>An association to period(s) to which the Invoices related to the Remittance apply.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Invoice</ccts:PropertyTermQualifier>
@@ -392,7 +397,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Accounting_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Accounting Customer Party</ccts:Definition>
+              <ccts:Definition>An association to the Accounting Customer Party.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Accounting</ccts:PropertyTermQualifier>
@@ -408,7 +413,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Accounting_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Accounting Supplier Party</ccts:Definition>
+              <ccts:Definition>An association to the Accounting Supplier Party.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Accounting</ccts:PropertyTermQualifier>
@@ -424,7 +429,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Payee_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Payee</ccts:Definition>
+              <ccts:Definition>An association to the Payee.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payee</ccts:PropertyTermQualifier>
@@ -440,7 +445,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Payment Means</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Payment Means</ccts:Definition>
+              <ccts:Definition>An association to Payment Means.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Payment Means</ccts:PropertyTerm>
@@ -470,7 +475,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Remittance Advice Line</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to one or more Remittance Advice Lines</ccts:Definition>
+              <ccts:Definition>An association to one or more Remittance Advice Lines.</ccts:Definition>
               <ccts:Cardinality>1..n</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Remittance Advice Line</ccts:PropertyTerm>

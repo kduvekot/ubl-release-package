@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     OrderResponse
-  Generated On:      Fri Jul 14 3:48:26 P4 2006
+  Generated On:      Tue Sep 12 3:50:16 P2 2006
 
 -->
-<!--
-  Modified 2006-07-19 11:21:33.68  to include references
-  to extension constructs and address schema locations.
--->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" xmlns:ccts="urn:oasis:names:specification:ubl:schema:xsd:CoreComponentParameters-2" xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2" elementFormDefault="qualified" attributeFormDefault="unqualified" version="2.0">
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2"
+    xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2"
+    xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+    xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+    xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+    xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+    xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2"
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    version="2.0">
 <!-- ===== Imports ===== -->
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" schemaLocation="../common/UBL-CommonAggregateComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" schemaLocation="../common/UBL-CommonBasicComponents-2.0.xsd"/>
-  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" schemaLocation="../common/UnqualifiedDataTypeSchemaModule-2.0.xsd"/>
+  <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" schemaLocation="../common/UBL-CommonExtensionComponents-2.0.xsd"/>
   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDatatypes-2" schemaLocation="../common/UBL-QualifiedDatatypes-2.0.xsd"/>
 <!-- ===== Root Element ===== -->
   <xsd:element name="OrderResponse" type="OrderResponseType">
@@ -37,9 +44,7 @@
     <xsd:sequence>
       <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
-          <xsd:documentation>
-            A container for all extensions present in the document.
-          </xsd:documentation>
+          <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
       <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
@@ -48,7 +53,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+              <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -59,16 +64,16 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cbc:SubsetID" minOccurs="0" maxOccurs="1">
+      <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Order Response. Subset Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+              <ccts:DictionaryEntryName>Order Response. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+              <ccts:Definition>Identifies a user-defined customization of UBL.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
-              <ccts:PropertyTerm>Subset Identifier</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
               <ccts:Examples>NES</ccts:Examples>
@@ -82,7 +87,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -99,7 +104,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Order Response assigned by the Seller</ccts:Definition>
+              <ccts:Definition>An identifier for the Order Response assigned by the Seller.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -116,7 +121,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Sales Order Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Order issued by the Seller</ccts:Definition>
+              <ccts:Definition>An identifier for the Order issued by the Seller.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Sales Order Identifier</ccts:PropertyTerm>
@@ -132,7 +137,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>Indicates whether the Order Response is a copy (true) or not (false)</ccts:Definition>
+              <ccts:Definition>Indicates whether the Order Response is a copy (true) or not (false).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -149,7 +154,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Order Response instance</ccts:Definition>
+              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Order Response instance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -165,7 +170,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date assigned by the Seller on which the Order was responded to</ccts:Definition>
+              <ccts:Definition>The date assigned by the Seller on which the Order was responded to.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -181,7 +186,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Seller on which the Order was responded to</ccts:Definition>
+              <ccts:Definition>The time assigned by the Seller on which the Order was responded to.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -197,7 +202,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free form text applying to the Order Response. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Free-form text applying to the Order Response. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -213,7 +218,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Document_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The default currency for the Order Response</ccts:Definition>
+              <ccts:Definition>The default currency for the Order Response.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Document</ccts:PropertyTermQualifier>
@@ -230,7 +235,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Pricing_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency that is used for all prices in the Order Response</ccts:Definition>
+              <ccts:Definition>The currency that is used for all prices in the Order Response.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Pricing</ccts:PropertyTermQualifier>
@@ -247,7 +252,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Tax_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency that is used for all tax amounts in the Order Response</ccts:Definition>
+              <ccts:Definition>The currency that is used for all tax amounts in the Order Response.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Tax</ccts:PropertyTermQualifier>
@@ -264,7 +269,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Total_ Packages Quantity. Quantity</ccts:DictionaryEntryName>
-              <ccts:Definition>The total number of packages contained in the Order Response</ccts:Definition>
+              <ccts:Definition>The total number of packages contained in the Order Response.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Total</ccts:PropertyTermQualifier>
@@ -281,7 +286,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Gross_ Weight. Measure</ccts:DictionaryEntryName>
-              <ccts:Definition>The total gross weight for the Order Response (goods + packaging + transport equipment)</ccts:Definition>
+              <ccts:Definition>The total gross weight for the Order Response (goods + packaging + transport equipment).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Gross</ccts:PropertyTermQualifier>
@@ -298,7 +303,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Net_ Weight. Measure</ccts:DictionaryEntryName>
-              <ccts:Definition>The total net weight for the Order Response (goods + packaging)</ccts:Definition>
+              <ccts:Definition>The total net weight for the Order Response (goods + packaging).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Net</ccts:PropertyTermQualifier>
@@ -315,7 +320,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Net Net_ Weight. Measure</ccts:DictionaryEntryName>
-              <ccts:Definition>The total net weight of the goods in the Order Response excluding packaging</ccts:Definition>
+              <ccts:Definition>The total net weight of the goods in the Order Response excluding packaging.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Net Net</ccts:PropertyTermQualifier>
@@ -332,7 +337,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Gross_ Volume. Measure</ccts:DictionaryEntryName>
-              <ccts:Definition>The total volume of the goods in the Order Response including packaging</ccts:Definition>
+              <ccts:Definition>The total volume of the goods in the Order Response including packaging.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Gross</ccts:PropertyTermQualifier>
@@ -349,7 +354,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Net_ Volume. Measure</ccts:DictionaryEntryName>
-              <ccts:Definition>The total volume of the goods in the Order Response excluding packaging</ccts:Definition>
+              <ccts:Definition>The total volume of the goods in the Order Response excluding packaging.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Net</ccts:PropertyTermQualifier>
@@ -366,7 +371,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Customer Reference. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>A supplementary reference assigned by the Buyer e.g. the CRI in a puchasing card transaction</ccts:Definition>
+              <ccts:Definition>A supplementary reference assigned by the Buyer, e.g. the CRI in a purchasing card transaction.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Customer Reference</ccts:PropertyTerm>
@@ -382,7 +387,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Accounting Cost Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>An accounting cost code applied to the order as a whole</ccts:Definition>
+              <ccts:Definition>An accounting cost code applied to the order as a whole.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost Code</ccts:PropertyTerm>
@@ -398,7 +403,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>An accounting cost code applied to the order as a whole</ccts:Definition>
+              <ccts:Definition>An accounting cost code applied to the order as a whole, expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -414,7 +419,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Line Count. Numeric</ccts:DictionaryEntryName>
-              <ccts:Definition>The number of lines in the document</ccts:Definition>
+              <ccts:Definition>The number of lines in the document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Line Count</ccts:PropertyTerm>
@@ -430,7 +435,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Validity_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>The period for which the Order Response is valid</ccts:Definition>
+              <ccts:Definition>The period for which the Order Response is valid.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Validity</ccts:PropertyTermQualifier>
@@ -446,7 +451,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Order Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to an Order</ccts:Definition>
+              <ccts:Definition>An association to an Order.</ccts:Definition>
               <ccts:Cardinality>1..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Order Reference</ccts:PropertyTerm>
@@ -461,7 +466,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Order_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other Orders</ccts:Definition>
+              <ccts:Definition>An association to other Orders.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Order</ccts:PropertyTermQualifier>
@@ -477,7 +482,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Originator_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to an Originator document</ccts:Definition>
+              <ccts:Definition>An association to an Originator document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -493,7 +498,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents</ccts:Definition>
+              <ccts:Definition>An association to other documents.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -509,7 +514,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Contract</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a framework agreement or contract</ccts:Definition>
+              <ccts:Definition>An association to a framework agreement or contract.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Contract</ccts:PropertyTerm>
@@ -539,7 +544,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Seller_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Seller</ccts:Definition>
+              <ccts:Definition>An association to the Seller.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
@@ -555,7 +560,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Buyer_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Buyer</ccts:Definition>
+              <ccts:Definition>An association to the Buyer.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Buyer</ccts:PropertyTermQualifier>
@@ -571,7 +576,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Originator_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the Originator</ccts:Definition>
+              <ccts:Definition>An association to the Originator.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -587,12 +592,44 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Freight Forwarder_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Freight Forwarder or Carrier</ccts:Definition>
+              <ccts:Definition>An association to a Freight Forwarder or Carrier.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Freight Forwarder</ccts:PropertyTermQualifier>
               <ccts:PropertyTerm>Party</ccts:PropertyTerm>
               <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cac:AccountingSupplierParty" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Response. Accounting_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to the Accounting Supplier Party. The party from who the receiver can expect to receive the invoice if not the seller party.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Response</ccts:ObjectClass>
+              <ccts:PropertyTermQualifier>Accounting</ccts:PropertyTermQualifier>
+              <ccts:PropertyTerm>Supplier Party</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Supplier Party</ccts:AssociatedObjectClass>
+            </ccts:Component>
+          </xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element ref="cac:AccountingCustomerParty" minOccurs="0" maxOccurs="1">
+        <xsd:annotation>
+          <xsd:documentation>
+            <ccts:Component>
+              <ccts:ComponentType>ASBIE</ccts:ComponentType>
+              <ccts:DictionaryEntryName>Order Response. Accounting_ Customer Party. Customer Party</ccts:DictionaryEntryName>
+              <ccts:Definition>An association to the Accounting Customer Party. The party that Invoice is expected to be sent to if not the buyer party. This is either copied from the order or bilateral agreed.</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
+              <ccts:ObjectClass>Order Response</ccts:ObjectClass>
+              <ccts:PropertyTermQualifier>Accounting</ccts:PropertyTermQualifier>
+              <ccts:PropertyTerm>Customer Party</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Customer Party</ccts:AssociatedObjectClass>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -603,7 +640,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Delivery</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Delivery</ccts:Definition>
+              <ccts:Definition>An association to Delivery.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Delivery</ccts:PropertyTerm>
@@ -618,7 +655,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Delivery Terms</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Delivery Terms</ccts:Definition>
+              <ccts:Definition>An association to Delivery Terms.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Delivery Terms</ccts:PropertyTerm>
@@ -633,7 +670,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Payment Means</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Payment Means</ccts:Definition>
+              <ccts:Definition>An association to Payment Means.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Payment Means</ccts:PropertyTerm>
@@ -648,7 +685,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Allowance Charge</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Allowances and Charges that apply to the Order Response as a whole</ccts:Definition>
+              <ccts:Definition>An association to Allowances and Charges that apply to the Order Response as a whole.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm>
@@ -678,7 +715,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Destination_ Country. Country</ccts:DictionaryEntryName>
-              <ccts:Definition>associates the order response with the country to which it is destined, for Customs purposes.</ccts:Definition>
+              <ccts:Definition>Associates the order response with the country to which it is destined, for Customs purposes.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Destination</ccts:PropertyTermQualifier>
@@ -694,7 +731,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Tax Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the total tax amount of the Order (as calculated by the Seller)</ccts:Definition>
+              <ccts:Definition>An association to the total tax amount of the Order (as calculated by the Seller).</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Tax Total</ccts:PropertyTerm>
@@ -703,17 +740,18 @@
           </xsd:documentation>
         </xsd:annotation>
       </xsd:element>
-      <xsd:element ref="cac:LegalTotal" minOccurs="1" maxOccurs="1">
+      <xsd:element ref="cac:LegalMonetaryTotal" minOccurs="0" maxOccurs="1">
         <xsd:annotation>
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Order Response. Legal Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An assocation to the total amounts for the Order net of allowances and taxes (as projected by the Seller)</ccts:Definition>
-              <ccts:Cardinality>1</ccts:Cardinality>
+              <ccts:DictionaryEntryName>Order Response. Legal_ Monetary Total. Monetary Total</ccts:DictionaryEntryName>
+              <ccts:Definition>An assocation to the total amounts for the Order net of allowances and taxes (as projected by the Seller).</ccts:Definition>
+              <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
-              <ccts:PropertyTerm>Legal Total</ccts:PropertyTerm>
-              <ccts:AssociatedObjectClass>Legal Total</ccts:AssociatedObjectClass>
+              <ccts:PropertyTermQualifier>Legal</ccts:PropertyTermQualifier>
+              <ccts:PropertyTerm>Monetary Total</ccts:PropertyTerm>
+              <ccts:AssociatedObjectClass>Monetary Total</ccts:AssociatedObjectClass>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -724,7 +762,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Response. Order Line</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to one or more Order Lines</ccts:Definition>
+              <ccts:Definition>An association to one or more Order Lines.</ccts:Definition>
               <ccts:Cardinality>1..n</ccts:Cardinality>
               <ccts:ObjectClass>Order Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Order Line</ccts:PropertyTerm>

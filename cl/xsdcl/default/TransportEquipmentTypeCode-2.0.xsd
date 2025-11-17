@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:codelist:gc:TransportEquipmentTypeCode-2.0" targetNamespace="urn:oasis:names:specification:ubl:codelist:gc:TransportEquipmentTypeCode-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xsd:simpleType name="TransportEquipmentTypeCodeCodeContentType">
+      <xsd:restriction base="xsd:normalizedString">
+         <xsd:enumeration value="AA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Ground equipment</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Chain</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Temperature recorder</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Body trailer</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Slipsheet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">No special equipment needed</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Vessel hold</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Flat rack</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Aircraft</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Medical device</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Refrigerated container</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Synthetic pallet 80*120cm</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Synthetic pallet 100*120cm</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Clothing hanger rack</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Road/rail trailer</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Overhang wagon</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Blocks</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box pallet non-exchangeable</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Truck being transported</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Truck and trailer combination being transported</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tractor and trailer being transported</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Postal bag</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Letter Tray</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Roller Cage</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Flats Tray</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Out of bag parcel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Wheeled Platform</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Container non-compliant with the Customs Convention on Containers</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BPY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box pallet EUR Y non exchangeable</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Barge</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Boxcar</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Chassis</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Container</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DPA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Deadlight (panel)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EFP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Exchangeable EUR flat pallet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EYP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Exchangeable EUR Y box pallet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FPN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Flat pallet EUR non exchangeable</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FPR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Flat pallet (railway property) non-exchangeable</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Lidded stackable rigid tray (CEN TS 14482:2002)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LAR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Lashing rope</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Load/unload device on equipment</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MPA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Movable panel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pallet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PBP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Identified private box pallet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PFP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Identified private flat pallet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Platform</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PPA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Protecting panel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PST">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Portable stove</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Flat car</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Reefer generator</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RGF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Ground facility</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Rope</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Rail car</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SPP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Identified special pallet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="STR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Strap</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Swap body</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Trailer</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tarpaulin</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tackles</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TSU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tarpaulin support</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="UL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">ULD (Unit load device)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="TransportEquipmentTypeCodeCodeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>DT</ccts:ComponentType>
+               <ccts:DictionaryEntryName>TransportEquipmentTypeCode_ Code. Type</ccts:DictionaryEntryName>
+               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+               <ccts:DataTypeQualifier>TransportEquipmentTypeCode</ccts:DataTypeQualifier>
+               <ccts:DataType>Code. Type</ccts:DataType>
+            </ccts:Component>
+            <ccts:Instance>
+               <ccts:CodeListID>TransportEquipmentTypeCode</ccts:CodeListID>
+               <ccts:CodeListAgencyID>6</ccts:CodeListAgencyID>
+               <ccts:CodeListAgencyName>United Nations Economic Commission for Europe</ccts:CodeListAgencyName>
+               <ccts:CodeListName>TransportEquipmentTypeCode</ccts:CodeListName>
+               <ccts:CodeListVersionID>D.05B</ccts:CodeListVersionID>
+               <ccts:CodeListURI>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportEquipmentTypeCode-2.0.gc</ccts:CodeListURI>
+               <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:codelist:gc:TransportEquipmentTypeCode-2.0</ccts:CodeListSchemeURI>
+               <ccts:LanguageID>en</ccts:LanguageID>
+            </ccts:Instance>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="TransportEquipmentTypeCodeCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="TransportEquipmentTypeCode" use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="TransportEquipmentTypeCode" use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="D.05B" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportEquipmentTypeCode-2.0.gc" use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:TransportEquipmentTypeCode-2.0" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>

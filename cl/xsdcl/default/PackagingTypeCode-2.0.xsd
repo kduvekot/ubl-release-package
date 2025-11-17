@@ -1,0 +1,2437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode-2.0" targetNamespace="urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xsd:simpleType name="PackagingTypeCodeCodeContentType">
+      <xsd:restriction base="xsd:normalizedString">
+         <xsd:enumeration value="1A">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, steel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1B">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, aluminium</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1D">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, plywood</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1G">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, fibre</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="1W">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, wooden</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="2C">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Barrel, wooden</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="3A">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jerrican, steel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="3H">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jerrican, plastic</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="43">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, super bulk</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="4A">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, steel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="4B">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, aluminium</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="4C">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, natural wood</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="4D">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, plywood</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="4F">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, reconstituted wood</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="4G">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, fibreboard</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="4H">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, plastic</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="5H">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, woven plastic</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="5L">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, textile </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="5M">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, paper </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="6H">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="6P">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, rigid plastic</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Receptacle, fibre </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Receptacle, paper </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Receptacle, wooden </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Aerosol</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pallet, modular, collars 80cms * 60cms </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pallet, shrinkwrapped </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pallet, 100cms * 110cms </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Clamshell</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cone</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Ampoule, non-protected </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Ampoule, protected </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Atomizer </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Capsule</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Barrel </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bobbin </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottlecrate / bottlerack </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Board</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bundle </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Balloon, non-protected </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bunch</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bin</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bucket </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Basket </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bale, compressed </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Basin</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bale, non-compressed </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottle, non-protected, cylindrical </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottle, non-protected, cylindrical </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Balloon, protected </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottle, protected cylindrical</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottle, protected cylindrical</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bar</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottle, non-protected, bulbous </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bolt </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Butt </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottle, protected bulbous</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottle, protected bulbous</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, for liquids</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Board, in bundle/bunch/truss </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="BZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bars, in bundle/bunch/truss</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Can, rectangular </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, beer</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Churn</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Can, with handle and spout </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Creel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Coffer </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cage </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Chest</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Canister </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Coffin </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cask </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Coil </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Card</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Container, not otherwise specified as transport equipment</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Carboy, non-protected</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Carboy, protected</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cartridge</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Carton </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cup</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cover</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cage, roll </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Can, cylindrical </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cylinder </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Canvas </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, multiple layer, plastic </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, multiple layer, wooden</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, multiple layer, cardboard </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cage, Commonwealth Handling Equipment Pool  (CHEP)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, Commonwealth Handling Equipment Pool (CHEP), Eurobox</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, iron </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Demijohn, non-protected</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, bulk, cardboard </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, bulk, plastic </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, bulk, wooden</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Dispenser</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Demijohn, protected</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, one layer no cover, plastic</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, one layer no cover, wooden </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, one layer no cover, polystyrene</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, one layer no cover, cardboard</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, two layers no cover, plastic tray</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, two layers no cover, wooden</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="DY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, two layers no cover, cardboard </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, plastic </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ED">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case, with pallet base </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case, with pallet base, wooden </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case, with pallet base, cardboard</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case, with pallet base, plastic</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case, with pallet base, metal</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case, isothermic </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Envelope </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, fruit </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, framed</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Firkin </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Flask</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Footlocker </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Filmpack </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Frame</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Foodtainer</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cart, flatbed</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, flexible container</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bottle, gas</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Girder </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Receptacle, glass </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, containing horizontally stacked flat items</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Girders, in bundle/bunch/truss </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Basket, with handle, plastic </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Basket, with handle, wooden</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Basket, with handle, cardboard </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Hogshead </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="HR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Hamper </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package, display, wooden </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package, display, cardboard</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package, display, plastic</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ID">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package, display, metal</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package, show</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package, flow </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package, paper wrapped</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, plastic</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package, cardboard, with bottle grip-holes </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray, rigid, lidded stackable (CEN TS 14482:2002)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Ingot</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Ingots, in bundle/bunch/truss</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="JC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jerrican, rectangular</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="JG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jug</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="JR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jar</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="JT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jutebag</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="JY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jerrican, cylindrical</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="KG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Keg</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Log</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Lot</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Liftvan</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="LZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Logs, in bundle/bunch/truss</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, multiply</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, milk</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Receptacle, metal </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sack, multi-wall </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Mat</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Receptacle, plastic wrapped </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Matchbox </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Not available</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Unpacked or unpackaged </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Unpacked or unpackaged, single unit</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Unpacked or unpackaged, multiple units</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Nest </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Net</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Net, tube, plastic </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="NV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Net, tube, textile </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Packet </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pallet, box Combined open-ended box and pallet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Parcel </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pallet, modular, collars 80cms * 100cms </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pallet, modular, collars 80cms * 120cms </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pen </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Plate</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pitcher</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pipe </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Punnet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Package</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pail </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Plank</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pouch</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Receptacle, plastic </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pot</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tray </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pipes, in bundle/bunch/truss </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pallet </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Plates, in bundle/bunch/truss</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Planks, in bundle/bunch/truss</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, steel, non-removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, steel, removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, aluminium, non-removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, aluminium, removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, plastic, non-removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Drum, plastic, removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Barrel, wooden, bung type</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Barrel, wooden, removable head </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jerrican, steel, non-removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jerrican, steel, removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jerrican, plastic, non-removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Jerrican, plastic, removable head</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, wooden, natural wood, ordinary</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, wooden, natural wood, with sift proof walls</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, plastic, expanded </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="QS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Box, plastic, solid</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Rod</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Ring </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Rack, clothing hanger</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Rack </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Reel </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Roll </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Rednet </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="RZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Rods, in bundle/bunch/truss</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sack </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Slab</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Crate, shallow </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Spindle</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sea-chest</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sachet </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Skid </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case, skeleton </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Slipsheet </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sheetmetal </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Spool </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sheet, plastic wrapping</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Case, steel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ST">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sheet</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Suitcase </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Envelope, steel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Shrinkwrapped  </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Set</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sleeve</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Sheets, in bundle/bunch/truss</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tub</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tea-chest</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tube, collapsible</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tierce</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tank, rectangular</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tub, with lid</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tin</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tun</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Trunk</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Truss</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tube </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tube, with nozzle </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tank, cylindrical</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Tubes, in bundle/bunch/truss </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="UC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Uncaged </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Vat</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bulk, gas (at 1031 mbar and 15øC)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Vial </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Vanpack </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bulk, liquid </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bulk, solid, large particles (nodules) </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Vacuum-packed</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bulk, liquefied gas (at abnormal temperature/pressure) </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bulk, solid, granular particles (grains) </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="VY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bulk, solid, fine particles (powders)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Wickerbottle </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, steel </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, aluminium </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, metal </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, steel, pressurised &gt; 10 kpa</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, aluminium, pressurised &gt; 10 kpa</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, metal, pressure 10 kpa </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, steel, liquid </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, aluminium, liquid </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, metal, liquid </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, woven plastic, without coat/liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, woven plastic, coated </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, woven plastic, with liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, woven plastic, coated and liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, plastic film</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, textile with out coat/liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, natural wood, with inner liner</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, textile, coated </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, textile, with liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, textile, coated and liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, plywood, with inner liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="WZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, reconstituted wood, with inner liner</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, woven plastic, without inner coat/liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, woven plastic, sift proof </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, woven plastic, water resistant</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, plastics film </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, textile, without inner coat/liner </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, textile, sift proof </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, textile, water resistant</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, paper, multi-wall </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, paper, multi-wall, water resistant</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in steel drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in steel crate box</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in aluminium drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in aluminium crate</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in wooden box</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in plywood drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in plywood box </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in fibre drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in fibreboard box</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in plastic drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, plastic receptacle in solid plastic box</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in steel drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in steel crate box</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in aluminium drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in aluminium crate</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in wooden box</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in plywood drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in wickerwork hamper</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in fibre drum</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in fibreboard box </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in expandable plastic pack</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="YZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Composite packaging, glass receptacle in solid plastic pack</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, paper, multi-wall </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Bag, large </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, paper, multi-wall, water resistant</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, rigid plastic, with structural equipment, solids</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, rigid plastic, freestanding, solids</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, rigid plastic, with structural equipment, pressurised</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, rigid plastic, freestanding, pressurised</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, rigid plastic, with structural equipment, liquids </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, rigid plastic, freestanding, liquids</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, composite, rigid plastic, solids</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, composite, flexible plastic, solids</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, composite, rigid plastic, pressurised </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, composite, flexible plastic, pressurised</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZQ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, composite, rigid plastic, liquids</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZR">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, composite, flexible plastic, liquids </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, composite</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, fibreboard</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZU">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, flexible</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZV">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, metal, other than steel</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, natural wood</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, plywood</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZY">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Intermediate bulk container, reconstituted wood</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="ZZ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Mutually defined </CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="PackagingTypeCodeCodeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>DT</ccts:ComponentType>
+               <ccts:DictionaryEntryName>PackagingTypeCode_ Code. Type</ccts:DictionaryEntryName>
+               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+               <ccts:DataTypeQualifier>PackagingTypeCode</ccts:DataTypeQualifier>
+               <ccts:DataType>Code. Type</ccts:DataType>
+            </ccts:Component>
+            <ccts:Instance>
+               <ccts:CodeListID>PackagingTypeCode</ccts:CodeListID>
+               <ccts:CodeListAgencyID>6</ccts:CodeListAgencyID>
+               <ccts:CodeListAgencyName>United Nations Economic Commission for Europe</ccts:CodeListAgencyName>
+               <ccts:CodeListName>PackagingTypeCode</ccts:CodeListName>
+               <ccts:CodeListVersionID>Revision 5</ccts:CodeListVersionID>
+               <ccts:CodeListURI>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PackagingTypeCode-2.0.gc</ccts:CodeListURI>
+               <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode-2.0</ccts:CodeListSchemeURI>
+               <ccts:LanguageID>en</ccts:LanguageID>
+            </ccts:Instance>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="PackagingTypeCodeCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="PackagingTypeCode" use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="PackagingTypeCode" use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="Revision 5" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PackagingTypeCode-2.0.gc" use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode-2.0" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>
