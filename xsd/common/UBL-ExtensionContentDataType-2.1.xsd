@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 COS1
+                     http://docs.oasis-open.org/ubl/cos1-UBL-2.1/
+  Release Date:      15 July 2013
   Module:            UBL-ExtensionContentDataType-2.1.xsd
-     Generated on:      2013-04-20 18:40(UTC)
-     Copyright (c) OASIS Open 2013. All rights reserved.
+  Generated on:      2013-04-20 18:40(UTC)
+  Copyright (c) OASIS Open 2013. All Rights Reserved.
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns=
      "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
@@ -61,8 +62,6 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
-
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
   it or assist in its implementation may be prepared, copied, 

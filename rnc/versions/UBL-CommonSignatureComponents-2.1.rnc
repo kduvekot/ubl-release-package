@@ -156,6 +156,9 @@ CommonSignatureComponents_AuctionConstraintIndicator =
 CommonSignatureComponents_BalanceAmount =
   notAllowed
   | element BalanceAmount { CommonSignatureComponents_anonymous4 }
+CommonSignatureComponents_ResponseTime =
+  notAllowed
+  | element ResponseTime { CommonSignatureComponents_anonymous14 }
 CommonSignatureComponents_MaximumMeasure =
   notAllowed
   | element MaximumMeasure { CommonSignatureComponents_anonymous9 }
@@ -765,14 +768,23 @@ CommonSignatureComponents_Object =
         CommonSignatureComponents_any_lax___any_2*
       }
     }
+CommonSignatureComponents_ResponseDate =
+  notAllowed
+  | element ResponseDate { CommonSignatureComponents_anonymous8 }
 CommonSignatureComponents_TargetInventoryQuantity =
   notAllowed
   | element TargetInventoryQuantity {
       CommonSignatureComponents_anonymous10
     }
+CommonSignatureComponents_ResolutionCode =
+  notAllowed
+  | element ResolutionCode { CommonSignatureComponents_anonymous6 }
 CommonSignatureComponents_DebitLineAmount =
   notAllowed
   | element DebitLineAmount { CommonSignatureComponents_anonymous4 }
+CommonSignatureComponents_ResolutionTime =
+  notAllowed
+  | element ResolutionTime { CommonSignatureComponents_anonymous14 }
 CommonSignatureComponents_SourceForecastIssueTime =
   notAllowed
   | element SourceForecastIssueTime {
@@ -6627,6 +6639,9 @@ CommonSignatureComponents_KeyInfo =
 CommonSignatureComponents_CargoTypeCode =
   notAllowed
   | element CargoTypeCode { CommonSignatureComponents_anonymous6 }
+CommonSignatureComponents_ResolutionDate =
+  notAllowed
+  | element ResolutionDate { CommonSignatureComponents_anonymous8 }
 CommonSignatureComponents_WarrantyInformation =
   notAllowed
   | element WarrantyInformation { CommonSignatureComponents_anonymous0 }
@@ -6712,9 +6727,6 @@ CommonSignatureComponents_TechnicalCommitteeDescription =
   | element TechnicalCommitteeDescription {
       CommonSignatureComponents_anonymous0
     }
-CommonSignatureComponents_Resolution =
-  notAllowed
-  | element Resolution { CommonSignatureComponents_anonymous0 }
 CommonSignatureComponents_CurrentChargeType =
   notAllowed
   | element CurrentChargeType { CommonSignatureComponents_anonymous0 }
@@ -6723,9 +6735,6 @@ CommonSignatureComponents_TotalConsumedQuantity =
   | element TotalConsumedQuantity {
       CommonSignatureComponents_anonymous10
     }
-CommonSignatureComponents_ResolutionCode =
-  notAllowed
-  | element ResolutionCode { CommonSignatureComponents_anonymous6 }
 CommonSignatureComponents_BusinessClassificationEvidenceID =
   notAllowed
   | element BusinessClassificationEvidenceID {
@@ -6780,9 +6789,6 @@ CommonSignatureComponents_AwardingMethodTypeCode =
 CommonSignatureComponents_Floor =
   notAllowed
   | element Floor { CommonSignatureComponents_anonymous0 }
-CommonSignatureComponents_ResponseCode =
-  notAllowed
-  | element ResponseCode { CommonSignatureComponents_anonymous6 }
 CommonSignatureComponents_URI =
   notAllowed
   | element URI { CommonSignatureComponents_anonymous2 }
@@ -8648,12 +8654,12 @@ CommonSignatureComponents_Signature =
       CommonSignatureComponents_KeyInfo?,
       CommonSignatureComponents_Object*
     }
-CommonSignatureComponents_ResponseDate =
-  notAllowed
-  | element ResponseDate { CommonSignatureComponents_anonymous8 }
 CommonSignatureComponents_AwardTime =
   notAllowed
   | element AwardTime { CommonSignatureComponents_anonymous14 }
+CommonSignatureComponents_Resolution =
+  notAllowed
+  | element Resolution { CommonSignatureComponents_anonymous0 }
 CommonSignatureComponents_AircraftID =
   notAllowed
   | element AircraftID { CommonSignatureComponents_anonymous2 }
@@ -8845,6 +8851,9 @@ CommonSignatureComponents_AverageSubsequentContractAmount =
 CommonSignatureComponents_IdentificationCode =
   notAllowed
   | element IdentificationCode { CommonSignatureComponents_anonymous6 }
+CommonSignatureComponents_ResponseCode =
+  notAllowed
+  | element ResponseCode { CommonSignatureComponents_anonymous6 }
 CommonSignatureComponents_PaymentNote =
   notAllowed
   | element PaymentNote { CommonSignatureComponents_anonymous0 }
@@ -9039,9 +9048,6 @@ CommonSignatureComponents_TaxLevelCode =
 CommonSignatureComponents_DurationMeasure =
   notAllowed
   | element DurationMeasure { CommonSignatureComponents_anonymous9 }
-CommonSignatureComponents_ResolutionTime =
-  notAllowed
-  | element ResolutionTime { CommonSignatureComponents_anonymous14 }
 CommonSignatureComponents_TransportAuthorizationCode =
   notAllowed
   | element TransportAuthorizationCode {
@@ -14345,6 +14351,11 @@ CommonSignatureComponents_anyType =
      | CommonSignatureComponents_element5)*
   },
   empty
+CommonSignatureComponents_RetailEventStatusCode =
+  notAllowed
+  | element RetailEventStatusCode {
+      CommonSignatureComponents_anonymous6
+    }
 CommonSignatureComponents_LastRevisionDate =
   notAllowed
   | element LastRevisionDate { CommonSignatureComponents_anonymous8 }
@@ -18457,9 +18468,6 @@ CommonSignatureComponents_UnsignedPropertiesType =
 CommonSignatureComponents_LifeCycleStatusCode =
   notAllowed
   | element LifeCycleStatusCode { CommonSignatureComponents_anonymous6 }
-CommonSignatureComponents_ResolutionDate =
-  notAllowed
-  | element ResolutionDate { CommonSignatureComponents_anonymous8 }
 CommonSignatureComponents_SecurityClassificationCode =
   notAllowed
   | element SecurityClassificationCode {
@@ -18469,11 +18477,6 @@ CommonSignatureComponents_PaymentOrderReference =
   notAllowed
   | element PaymentOrderReference {
       CommonSignatureComponents_anonymous0
-    }
-CommonSignatureComponents_RetailEventStatusCode =
-  notAllowed
-  | element RetailEventStatusCode {
-      CommonSignatureComponents_anonymous6
     }
 CommonSignatureComponents_anonymous9 =
   attribute unitCode { xsd:normalizedString },
@@ -22730,6 +22733,9 @@ CommonSignatureComponents_BarcodeSymbologyID =
 CommonSignatureComponents_BrokerAssignedID =
   notAllowed
   | element BrokerAssignedID { CommonSignatureComponents_anonymous2 }
+CommonSignatureComponents_RetailEventName =
+  notAllowed
+  | element RetailEventName { CommonSignatureComponents_anonymous5 }
 CommonSignatureComponents_HandlingCode =
   notAllowed
   | element HandlingCode { CommonSignatureComponents_anonymous6 }
@@ -24940,9 +24946,6 @@ CommonSignatureComponents_FirstShipmentAvailibilityDate =
   | element FirstShipmentAvailibilityDate {
       CommonSignatureComponents_anonymous8
     }
-CommonSignatureComponents_RetailEventName =
-  notAllowed
-  | element RetailEventName { CommonSignatureComponents_anonymous5 }
 CommonSignatureComponents_AttributeID =
   notAllowed
   | element AttributeID { CommonSignatureComponents_anonymous2 }
@@ -25061,9 +25064,6 @@ CommonSignatureComponents_TimeStampValidationData =
       CommonSignatureComponents_CertificateValues?,
       CommonSignatureComponents_RevocationValues?
     }
-CommonSignatureComponents_ResponseTime =
-  notAllowed
-  | element ResponseTime { CommonSignatureComponents_anonymous14 }
 CommonSignatureComponents_ReferenceDate =
   notAllowed
   | element ReferenceDate { CommonSignatureComponents_anonymous8 }
@@ -25215,11 +25215,6 @@ CommonSignatureComponents_ReferencedConsignmentID =
   notAllowed
   | element ReferencedConsignmentID {
       CommonSignatureComponents_anonymous2
-    }
-CommonSignatureComponents_ReturnabilityIndicator =
-  notAllowed
-  | element ReturnabilityIndicator {
-      CommonSignatureComponents_anonymous3
     }
 CommonSignatureComponents_FreightForwarderAssignedID =
   notAllowed
@@ -27228,6 +27223,11 @@ CommonSignatureComponents_CustomerAssignedAccountID =
 CommonSignatureComponents_PaymentChannelCode =
   notAllowed
   | element PaymentChannelCode { CommonSignatureComponents_anonymous6 }
+CommonSignatureComponents_ReturnabilityIndicator =
+  notAllowed
+  | element ReturnabilityIndicator {
+      CommonSignatureComponents_anonymous3
+    }
 CommonSignatureComponents_DifferenceTemperatureReductionQuantity =
   notAllowed
   | element DifferenceTemperatureReductionQuantity {
@@ -27236,7 +27236,7 @@ CommonSignatureComponents_DifferenceTemperatureReductionQuantity =
 CommonSignatureComponents_CounterSignatureType =
   CommonSignatureComponents_Signature, empty
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-06-16 17:50:47z
+# RELAX-NG models synthesized from UBL document models on 2013-07-12 13:54:40z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

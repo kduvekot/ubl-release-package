@@ -57,9 +57,6 @@ MathematicOperatorCode =
 OpenTenderID =
   notAllowed
   | element OpenTenderID { anonymous2 }
-ExtensionAgencyID =
-  notAllowed
-  | element ns4:ExtensionAgencyID { anonymous2 }
 FrameworkAgreement =
   notAllowed
   | element ns2:FrameworkAgreement {
@@ -187,6 +184,7 @@ ForecastException =
 LineResponse =
   notAllowed
   | element ns2:LineResponse { LineReference, Response+ }
+TemperatureType = (AttributeID, Measure, Description*), empty
 ThirdPartyPayerIndicator =
   notAllowed
   | element ThirdPartyPayerIndicator { anonymous3 }
@@ -294,9 +292,6 @@ UtilityMeter =
 ActualDespatchDate =
   notAllowed
   | element ActualDespatchDate { anonymous8 }
-ExtensionVersionID =
-  notAllowed
-  | element ns4:ExtensionVersionID { anonymous2 }
 SalesOrderLineID =
   notAllowed
   | element SalesOrderLineID { anonymous2 }
@@ -370,6 +365,15 @@ AccountFormatCode =
 PerformanceValueQuantity =
   notAllowed
   | element PerformanceValueQuantity { anonymous10 }
+SupplierPartyType =
+  (CustomerAssignedAccountID?,
+   AdditionalAccountID*,
+   DataSendingCapability?,
+   Party?,
+   DespatchContact?,
+   AccountingContact?,
+   SellerContact?),
+  empty
 TelecommunicationsSupplyType =
   notAllowed
   | element TelecommunicationsSupplyType { anonymous0 }
@@ -402,7 +406,6 @@ ContractualDelivery =
 DebitedQuantity =
   notAllowed
   | element DebitedQuantity { anonymous10 }
-ServiceFrequencyType = WeekDayCode, empty
 SubInvoiceLine =
   notAllowed
   | element ns2:SubInvoiceLine { InvoiceLineType }
@@ -430,6 +433,7 @@ DimensionType =
 SubstitutionStatusCode =
   notAllowed
   | element SubstitutionStatusCode { anonymous6 }
+RegulationType = (Name, LegalReference?, OntologyURI?), empty
 InstallmentDueDate =
   notAllowed
   | element InstallmentDueDate { anonymous8 }
@@ -575,21 +579,6 @@ ConsumptionLevel =
 ConsumerIncentiveTacticTypeCode =
   notAllowed
   | element ConsumerIncentiveTacticTypeCode { anonymous6 }
-TransportMeansType =
-  (JourneyID?,
-   RegistrationNationalityID?,
-   RegistrationNationality*,
-   DirectionCode?,
-   TransportMeansTypeCode?,
-   TradeServiceCode?,
-   Stowage?,
-   AirTransport?,
-   RoadTransport?,
-   RailTransport?,
-   MaritimeTransport?,
-   OwnerParty?,
-   MeasurementDimension*),
-  empty
 ManufacturerParty =
   notAllowed
   | element ns2:ManufacturerParty { PartyType2 }
@@ -659,6 +648,9 @@ PartecipationPercent =
 RejectActionCode =
   notAllowed
   | element RejectActionCode { anonymous6 }
+ExtensionVersionID =
+  notAllowed
+  | element ns4:ExtensionVersionID { anonymous2 }
 CorporateRegistrationScheme =
   notAllowed
   | element ns2:CorporateRegistrationScheme {
@@ -694,7 +686,6 @@ TransportExecutionPlanReferenceID =
 EstimatedOverallContractQuantity =
   notAllowed
   | element EstimatedOverallContractQuantity { anonymous10 }
-RelatedItemType = (ID?, Quantity?, Description*), empty
 EarliestPickupDate =
   notAllowed
   | element EarliestPickupDate { anonymous8 }
@@ -704,69 +695,6 @@ ActualPickupDate =
 ContainedGoodsItem =
   notAllowed
   | element ns2:ContainedGoodsItem { GoodsItemType }
-TransportEquipmentType =
-  (ID?,
-   ReferencedConsignmentID*,
-   TransportEquipmentTypeCode?,
-   ProviderTypeCode?,
-   OwnerTypeCode?,
-   SizeTypeCode?,
-   DispositionCode?,
-   FullnessIndicationCode?,
-   RefrigerationOnIndicator?,
-   Information*,
-   ReturnabilityIndicator?,
-   LegalStatusIndicator?,
-   AirFlowPercent?,
-   HumidityPercent?,
-   AnimalFoodApprovedIndicator?,
-   HumanFoodApprovedIndicator?,
-   DangerousGoodsApprovedIndicator?,
-   RefrigeratedIndicator?,
-   Characteristics?,
-   DamageRemarks*,
-   Description*,
-   SpecialTransportRequirements*,
-   GrossWeightMeasure?,
-   GrossVolumeMeasure?,
-   TareWeightMeasure?,
-   TrackingDeviceCode?,
-   PowerIndicator?,
-   TraceID?,
-   MeasurementDimension*,
-   TransportEquipmentSeal*,
-   MinimumTemperature?,
-   MaximumTemperature?,
-   ProviderParty?,
-   LoadingProofParty?,
-   SupplierParty?,
-   OwnerParty?,
-   OperatingParty?,
-   LoadingLocation?,
-   UnloadingLocation?,
-   StorageLocation?,
-   PositioningTransportEvent*,
-   QuarantineTransportEvent*,
-   DeliveryTransportEvent*,
-   PickupTransportEvent*,
-   HandlingTransportEvent*,
-   LoadingTransportEvent*,
-   TransportEvent*,
-   ApplicableTransportMeans?,
-   HaulageTradingTerms*,
-   HazardousGoodsTransit*,
-   PackagedTransportHandlingUnit*,
-   ServiceAllowanceCharge*,
-   FreightAllowanceCharge*,
-   AttachedTransportEquipment*,
-   Delivery?,
-   Pickup?,
-   Despatch?,
-   ShipmentDocumentReference*,
-   ContainedInTransportEquipment*,
-   Package*,
-   GoodsItem*),
-  empty
 TaxScheme =
   notAllowed
   | element ns2:TaxScheme {
@@ -792,6 +720,13 @@ PromotionalEventTypeCode =
   | element PromotionalEventTypeCode { anonymous6 }
 ClassificationCategoryType =
   (Name?, CodeValue?, Description*, CategorizesClassificationCategory*),
+  empty
+TaxTotalType =
+  (TaxAmount,
+   RoundingAmount?,
+   TaxEvidenceIndicator?,
+   TaxIncludedIndicator?,
+   TaxSubtotal*),
   empty
 OrderTypeCode =
   notAllowed
@@ -869,9 +804,6 @@ VariantConstraintIndicator =
 DisplayTacticTypeCode =
   notAllowed
   | element DisplayTacticTypeCode { anonymous6 }
-ExtensionAgencyName =
-  notAllowed
-  | element ns4:ExtensionAgencyName { anonymous0 }
 SupplyChainActivityTypeCode =
   notAllowed
   | element SupplyChainActivityTypeCode { anonymous6 }
@@ -1018,6 +950,29 @@ ItemComparison =
 TelecommunicationsServiceCallCode =
   notAllowed
   | element TelecommunicationsServiceCallCode { anonymous6 }
+SubcontractTermsType =
+  (Rate?,
+   UnknownPriceIndicator?,
+   Description*,
+   Amount?,
+   SubcontractingConditionsCode?,
+   MaximumPercent?,
+   MinimumPercent?),
+  empty
+UBLExtension =
+  notAllowed
+  | element ns4:UBLExtension {
+      ID?,
+      Name?,
+      ExtensionAgencyID?,
+      ExtensionAgencyName?,
+      ExtensionVersionID?,
+      ExtensionAgencyURI?,
+      ExtensionURI?,
+      ExtensionReasonCode?,
+      ExtensionReason?,
+      ExtensionContent
+    }
 MinimumNumberNumeric =
   notAllowed
   | element MinimumNumberNumeric { anonymous7 }
@@ -1083,23 +1038,12 @@ MainCarriageShipmentStage =
 PerformingCarrierAssignedID =
   notAllowed
   | element PerformingCarrierAssignedID { anonymous2 }
-ResponseType =
-  (ReferenceID?,
-   ResponseCode?,
-   Description*,
-   EffectiveDate?,
-   EffectiveTime?,
-   Status*),
-  empty
 ForecastTypeCode =
   notAllowed
   | element ForecastTypeCode { anonymous6 }
 LatestProposalAcceptanceDate =
   notAllowed
   | element LatestProposalAcceptanceDate { anonymous8 }
-ExtensionReasonCode =
-  notAllowed
-  | element ns4:ExtensionReasonCode { anonymous6 }
 SpecialSecurityIndicator =
   notAllowed
   | element SpecialSecurityIndicator { anonymous3 }
@@ -1194,6 +1138,7 @@ CurrentStatus =
 PrivacyCode =
   notAllowed
   | element PrivacyCode { anonymous6 }
+RelatedItemType = (ID?, Quantity?, Description*), empty
 OperatingParty =
   notAllowed
   | element ns2:OperatingParty { PartyType2 }
@@ -1283,46 +1228,14 @@ AccountTypeCode =
 VersionID =
   notAllowed
   | element VersionID { anonymous2 }
+TenderRequirementType =
+  (Name, Description*, TemplateDocumentReference?), empty
 EvidenceIssuingParty =
   notAllowed
   | element ns2:EvidenceIssuingParty { PartyType2 }
 TestMethod =
   notAllowed
   | element TestMethod { anonymous0 }
-ShipmentType =
-  (ID,
-   ShippingPriorityLevelCode?,
-   HandlingCode?,
-   HandlingInstructions*,
-   Information*,
-   GrossWeightMeasure?,
-   NetWeightMeasure?,
-   NetNetWeightMeasure?,
-   GrossVolumeMeasure?,
-   NetVolumeMeasure?,
-   TotalGoodsItemQuantity?,
-   TotalTransportHandlingUnitQuantity?,
-   InsuranceValueAmount?,
-   DeclaredCustomsValueAmount?,
-   DeclaredForCarriageValueAmount?,
-   DeclaredStatisticsValueAmount?,
-   FreeOnBoardValueAmount?,
-   SpecialInstructions*,
-   DeliveryInstructions*,
-   SplitConsignmentIndicator?,
-   ConsignmentQuantity?,
-   Consignment*,
-   GoodsItem*,
-   ShipmentStage*,
-   Delivery?,
-   TransportHandlingUnit*,
-   ReturnAddress?,
-   OriginAddress?,
-   FirstArrivalPortLocation?,
-   LastExitPortLocation?,
-   ExportCountry?,
-   FreightAllowanceCharge*),
-  empty
 BackOrderAllowedIndicator =
   notAllowed
   | element BackOrderAllowedIndicator { anonymous3 }
@@ -1360,9 +1273,6 @@ anonymous0 = anonymous11
 CalculationExpressionCode =
   notAllowed
   | element CalculationExpressionCode { anonymous6 }
-ExtensionContent =
-  notAllowed
-  | element ns4:ExtensionContent { ExtensionContentDataType }
 StorageTransportEvent =
   notAllowed
   | element ns2:StorageTransportEvent { TransportEventType }
@@ -1598,6 +1508,8 @@ Pickup =
 MeterReadingType =
   notAllowed
   | element MeterReadingType { anonymous0 }
+ProcurementProjectLotType =
+  (ID, TenderingTerms?, ProcurementProject?), empty
 DeliveryTerms =
   notAllowed
   | element ns2:DeliveryTerms {
@@ -1612,9 +1524,6 @@ DeliveryTerms =
 AliasName =
   notAllowed
   | element AliasName { anonymous5 }
-ExtensionReason =
-  notAllowed
-  | element ns4:ExtensionReason { anonymous0 }
 OptionValidityPeriod =
   notAllowed
   | element ns2:OptionValidityPeriod { PeriodType }
@@ -1653,13 +1562,6 @@ RailCarID =
 LoadingLengthMeasure =
   notAllowed
   | element LoadingLengthMeasure { anonymous9 }
-TendererRequirementType =
-  (Name*,
-   TendererRequirementTypeCode?,
-   Description*,
-   LegalReference?,
-   SuggestedEvidence*),
-  empty
 MainPeriod =
   notAllowed
   | element ns2:MainPeriod { PeriodType }
@@ -1679,6 +1581,9 @@ AnimalFoodIndicator =
 RequestedDespatchTime =
   notAllowed
   | element RequestedDespatchTime { anonymous14 }
+ExtensionAgencyID =
+  notAllowed
+  | element ns4:ExtensionAgencyID { anonymous2 }
 PlacardEndorsement =
   notAllowed
   | element PlacardEndorsement { anonymous0 }
@@ -1750,6 +1655,21 @@ ShortQuantity =
 SubscriberParty =
   notAllowed
   | element ns2:SubscriberParty { PartyType2 }
+TransportMeansType =
+  (JourneyID?,
+   RegistrationNationalityID?,
+   RegistrationNationality*,
+   DirectionCode?,
+   TransportMeansTypeCode?,
+   TradeServiceCode?,
+   Stowage?,
+   AirTransport?,
+   RoadTransport?,
+   RailTransport?,
+   MaritimeTransport?,
+   OwnerParty?,
+   MeasurementDimension*),
+  empty
 anonymous2 =
   attribute schemeID { xsd:normalizedString }?,
   attribute schemeName { xsd:string }?,
@@ -2014,6 +1934,31 @@ CardChipCode =
   notAllowed
   | element CardChipCode { anonymous6 }
 CommunicationType = (ChannelCode?, Channel?, Value?), empty
+TransportationServiceType =
+  (TransportServiceCode,
+   TariffClassCode?,
+   Priority?,
+   FreightRateClassCode?,
+   TransportationServiceDescription*,
+   TransportationServiceDetailsURI?,
+   NominationDate?,
+   NominationTime?,
+   Name?,
+   SequenceNumeric?,
+   TransportEquipment*,
+   SupportedTransportEquipment*,
+   UnsupportedTransportEquipment*,
+   CommodityClassification*,
+   SupportedCommodityClassification*,
+   UnsupportedCommodityClassification*,
+   TotalCapacityDimension?,
+   ShipmentStage*,
+   TransportEvent*,
+   ResponsibleTransportServiceProviderParty?,
+   EnvironmentalEmission*,
+   EstimatedDurationPeriod?,
+   ScheduledServiceFrequency*),
+  empty
 ReferenceTime =
   notAllowed
   | element ReferenceTime { anonymous14 }
@@ -2026,6 +1971,20 @@ SupportingDocumentReference =
 BackorderReason =
   notAllowed
   | element BackorderReason { anonymous0 }
+StatusType =
+  (ConditionCode?,
+   ReferenceDate?,
+   ReferenceTime?,
+   Description*,
+   StatusReasonCode?,
+   StatusReason*,
+   SequenceID?,
+   Text*,
+   IndicationIndicator?,
+   Percent?,
+   ReliabilityPercent?,
+   Condition*),
+  empty
 SignatoryParty =
   notAllowed
   | element ns2:SignatoryParty { PartyType2 }
@@ -2138,18 +2097,6 @@ Date =
 LegalMonetaryTotal =
   notAllowed
   | element ns2:LegalMonetaryTotal { MonetaryTotalType }
-TaxCategoryType =
-  (ID?,
-   Name?,
-   Percent?,
-   BaseUnitMeasure?,
-   PerUnitAmount?,
-   TaxExemptionReasonCode?,
-   TaxExemptionReason*,
-   TierRange?,
-   TierRatePercent?,
-   TaxScheme),
-  empty
 ManufacturersItemIdentification =
   notAllowed
   | element ns2:ManufacturersItemIdentification {
@@ -2307,6 +2254,13 @@ Address =
 PenaltyPaymentTerms =
   notAllowed
   | element ns2:PenaltyPaymentTerms { PaymentTermsType }
+TendererRequirementType =
+  (Name*,
+   TendererRequirementTypeCode?,
+   Description*,
+   LegalReference?,
+   SuggestedEvidence*),
+  empty
 ElectronicDeviceDescription =
   notAllowed
   | element ElectronicDeviceDescription { anonymous0 }
@@ -2621,29 +2575,9 @@ EvidenceType =
    DocumentReference?,
    Language?),
   empty
-TenderLineType =
-  (ID?,
-   Note*,
-   Quantity?,
-   LineExtensionAmount?,
-   TotalTaxAmount?,
-   OrderableUnit?,
-   ContentUnitQuantity?,
-   OrderQuantityIncrementNumeric?,
-   MinimumOrderQuantity?,
-   MaximumOrderQuantity?,
-   WarrantyInformation*,
-   PackLevelCode?,
-   DocumentReference*,
-   Item?,
-   OfferedItemLocationQuantity*,
-   ReplacementRelatedItem*,
-   WarrantyParty?,
-   WarrantyValidityPeriod?,
-   SubTenderLine*,
-   CallForTendersLineReference?,
-   CallForTendersDocumentReference?),
-  empty
+UBLExtensions =
+  notAllowed
+  | element ns4:UBLExtensions { UBLExtension+ }
 anonymous3 = xsd:boolean
 PaymentReversalPeriod =
   notAllowed
@@ -2657,6 +2591,35 @@ ShipsRequirements =
 FinancingFinancialAccount =
   notAllowed
   | element ns2:FinancingFinancialAccount { FinancialAccountType }
+TransportHandlingUnitType =
+  (ID?,
+   TransportHandlingUnitTypeCode?,
+   HandlingCode?,
+   HandlingInstructions*,
+   HazardousRiskIndicator?,
+   TotalGoodsItemQuantity?,
+   TotalPackageQuantity?,
+   DamageRemarks*,
+   ShippingMarks*,
+   TraceID?,
+   HandlingUnitDespatchLine*,
+   ActualPackage*,
+   ReceivedHandlingUnitReceiptLine*,
+   TransportEquipment*,
+   TransportMeans*,
+   HazardousGoodsTransit*,
+   MeasurementDimension*,
+   MinimumTemperature?,
+   MaximumTemperature?,
+   GoodsItem*,
+   FloorSpaceMeasurementDimension?,
+   PalletSpaceMeasurementDimension?,
+   ShipmentDocumentReference*,
+   Status*,
+   CustomsDeclaration*,
+   ReferencedShipment*,
+   Package*),
+  empty
 CertificateTypeCode =
   notAllowed
   | element CertificateTypeCode { anonymous6 }
@@ -2707,9 +2670,6 @@ WarrantyValidityPeriod =
 MiddleName =
   notAllowed
   | element MiddleName { anonymous5 }
-TenderRequirementType =
-  (Name, Description*, TemplateDocumentReference?), empty
-TemperatureType = (AttributeID, Measure, Description*), empty
 LatestMeterReadingDate =
   notAllowed
   | element LatestMeterReadingDate { anonymous8 }
@@ -2821,6 +2781,9 @@ OutstandingReason =
 AccessoryRelatedItem =
   notAllowed
   | element ns2:AccessoryRelatedItem { RelatedItemType }
+ExtensionContent =
+  notAllowed
+  | element ns4:ExtensionContent { ExtensionContentDataType }
 StatementPeriod =
   notAllowed
   | element ns2:StatementPeriod { PeriodType }
@@ -3009,6 +2972,28 @@ BudgetAccountLine =
 FreeOfChargeIndicator =
   notAllowed
   | element FreeOfChargeIndicator { anonymous3 }
+ReceiptLineType =
+  (ID,
+   UUID?,
+   Note*,
+   ReceivedQuantity?,
+   ShortQuantity?,
+   ShortageActionCode?,
+   RejectedQuantity?,
+   RejectReasonCode?,
+   RejectReason*,
+   RejectActionCode?,
+   QuantityDiscrepancyCode?,
+   OversupplyQuantity?,
+   ReceivedDate?,
+   TimingComplaintCode?,
+   TimingComplaint?,
+   OrderLineReference?,
+   DespatchLineReference*,
+   DocumentReference*,
+   Item*,
+   Shipment*),
+  empty
 ExpectedOperatorQuantity =
   notAllowed
   | element ExpectedOperatorQuantity { anonymous10 }
@@ -3186,6 +3171,40 @@ AddressType =
 AllowanceTotalAmount =
   notAllowed
   | element AllowanceTotalAmount { anonymous4 }
+ShipmentType =
+  (ID,
+   ShippingPriorityLevelCode?,
+   HandlingCode?,
+   HandlingInstructions*,
+   Information*,
+   GrossWeightMeasure?,
+   NetWeightMeasure?,
+   NetNetWeightMeasure?,
+   GrossVolumeMeasure?,
+   NetVolumeMeasure?,
+   TotalGoodsItemQuantity?,
+   TotalTransportHandlingUnitQuantity?,
+   InsuranceValueAmount?,
+   DeclaredCustomsValueAmount?,
+   DeclaredForCarriageValueAmount?,
+   DeclaredStatisticsValueAmount?,
+   FreeOnBoardValueAmount?,
+   SpecialInstructions*,
+   DeliveryInstructions*,
+   SplitConsignmentIndicator?,
+   ConsignmentQuantity?,
+   Consignment*,
+   GoodsItem*,
+   ShipmentStage*,
+   Delivery?,
+   TransportHandlingUnit*,
+   ReturnAddress?,
+   OriginAddress?,
+   FirstArrivalPortLocation?,
+   LastExitPortLocation?,
+   ExportCountry?,
+   FreightAllowanceCharge*),
+  empty
 PhysicalAttribute =
   notAllowed
   | element ns2:PhysicalAttribute {
@@ -3227,31 +3246,6 @@ BarcodeSymbologyID =
 TransitCountry =
   notAllowed
   | element ns2:TransitCountry { CountryType }
-TransportationServiceType =
-  (TransportServiceCode,
-   TariffClassCode?,
-   Priority?,
-   FreightRateClassCode?,
-   TransportationServiceDescription*,
-   TransportationServiceDetailsURI?,
-   NominationDate?,
-   NominationTime?,
-   Name?,
-   SequenceNumeric?,
-   TransportEquipment*,
-   SupportedTransportEquipment*,
-   UnsupportedTransportEquipment*,
-   CommodityClassification*,
-   SupportedCommodityClassification*,
-   UnsupportedCommodityClassification*,
-   TotalCapacityDimension?,
-   ShipmentStage*,
-   TransportEvent*,
-   ResponsibleTransportServiceProviderParty?,
-   EnvironmentalEmission*,
-   EstimatedDurationPeriod?,
-   ScheduledServiceFrequency*),
-  empty
 Renewal =
   notAllowed
   | element ns2:Renewal { Amount?, Period? }
@@ -3363,9 +3357,6 @@ OrderQuantityIncrementNumeric =
 StartTime =
   notAllowed
   | element StartTime { anonymous14 }
-ExtensionAgencyURI =
-  notAllowed
-  | element ns4:ExtensionAgencyURI { anonymous2 }
 TimeAmount =
   notAllowed
   | element TimeAmount { anonymous0 }
@@ -3405,6 +3396,9 @@ PostEventNotificationDurationMeasure =
 SignatureID =
   notAllowed
   | element SignatureID { anonymous2 }
+ExtensionAgencyName =
+  notAllowed
+  | element ns4:ExtensionAgencyName { anonymous0 }
 QualityControlCode =
   notAllowed
   | element QualityControlCode { anonymous6 }
@@ -3438,9 +3432,42 @@ ValidityPeriod =
 TrainID =
   notAllowed
   | element TrainID { anonymous2 }
+ExtensionAgencyURI =
+  notAllowed
+  | element ns4:ExtensionAgencyURI { anonymous2 }
+TaxCategoryType =
+  (ID?,
+   Name?,
+   Percent?,
+   BaseUnitMeasure?,
+   PerUnitAmount?,
+   TaxExemptionReasonCode?,
+   TaxExemptionReason*,
+   TierRange?,
+   TierRatePercent?,
+   TaxScheme),
+  empty
 PackQuantity =
   notAllowed
   | element PackQuantity { anonymous10 }
+RequestForTenderLineType =
+  (ID?,
+   UUID?,
+   Note*,
+   Quantity?,
+   MinimumQuantity?,
+   MaximumQuantity?,
+   TaxIncludedIndicator?,
+   MinimumAmount?,
+   MaximumAmount?,
+   EstimatedAmount?,
+   DocumentReference*,
+   DeliveryPeriod*,
+   RequiredItemLocationQuantity*,
+   WarrantyValidityPeriod?,
+   Item,
+   SubRequestForTenderLine*),
+  empty
 DocumentDistribution =
   notAllowed
   | element ns2:DocumentDistribution {
@@ -3455,15 +3482,6 @@ BalanceBroughtForwardIndicator =
 PayeeParty =
   notAllowed
   | element ns2:PayeeParty { PartyType2 }
-SubcontractTermsType =
-  (Rate?,
-   UnknownPriceIndicator?,
-   Description*,
-   Amount?,
-   SubcontractingConditionsCode?,
-   MaximumPercent?,
-   MinimumPercent?),
-  empty
 ProcurementLegislationDocumentReference =
   notAllowed
   | element ns2:ProcurementLegislationDocumentReference {
@@ -3472,35 +3490,6 @@ ProcurementLegislationDocumentReference =
 CommodityClassification =
   notAllowed
   | element ns2:CommodityClassification { CommodityClassificationType }
-TransportHandlingUnitType =
-  (ID?,
-   TransportHandlingUnitTypeCode?,
-   HandlingCode?,
-   HandlingInstructions*,
-   HazardousRiskIndicator?,
-   TotalGoodsItemQuantity?,
-   TotalPackageQuantity?,
-   DamageRemarks*,
-   ShippingMarks*,
-   TraceID?,
-   HandlingUnitDespatchLine*,
-   ActualPackage*,
-   ReceivedHandlingUnitReceiptLine*,
-   TransportEquipment*,
-   TransportMeans*,
-   HazardousGoodsTransit*,
-   MeasurementDimension*,
-   MinimumTemperature?,
-   MaximumTemperature?,
-   GoodsItem*,
-   FloorSpaceMeasurementDimension?,
-   PalletSpaceMeasurementDimension?,
-   ShipmentDocumentReference*,
-   Status*,
-   CustomsDeclaration*,
-   ReferencedShipment*,
-   Package*),
-  empty
 MaximumAmount =
   notAllowed
   | element MaximumAmount { anonymous4 }
@@ -3723,6 +3712,69 @@ DespatchLineReference =
 EstimatedTransitPeriod =
   notAllowed
   | element ns2:EstimatedTransitPeriod { PeriodType }
+TransportEquipmentType =
+  (ID?,
+   ReferencedConsignmentID*,
+   TransportEquipmentTypeCode?,
+   ProviderTypeCode?,
+   OwnerTypeCode?,
+   SizeTypeCode?,
+   DispositionCode?,
+   FullnessIndicationCode?,
+   RefrigerationOnIndicator?,
+   Information*,
+   ReturnabilityIndicator?,
+   LegalStatusIndicator?,
+   AirFlowPercent?,
+   HumidityPercent?,
+   AnimalFoodApprovedIndicator?,
+   HumanFoodApprovedIndicator?,
+   DangerousGoodsApprovedIndicator?,
+   RefrigeratedIndicator?,
+   Characteristics?,
+   DamageRemarks*,
+   Description*,
+   SpecialTransportRequirements*,
+   GrossWeightMeasure?,
+   GrossVolumeMeasure?,
+   TareWeightMeasure?,
+   TrackingDeviceCode?,
+   PowerIndicator?,
+   TraceID?,
+   MeasurementDimension*,
+   TransportEquipmentSeal*,
+   MinimumTemperature?,
+   MaximumTemperature?,
+   ProviderParty?,
+   LoadingProofParty?,
+   SupplierParty?,
+   OwnerParty?,
+   OperatingParty?,
+   LoadingLocation?,
+   UnloadingLocation?,
+   StorageLocation?,
+   PositioningTransportEvent*,
+   QuarantineTransportEvent*,
+   DeliveryTransportEvent*,
+   PickupTransportEvent*,
+   HandlingTransportEvent*,
+   LoadingTransportEvent*,
+   TransportEvent*,
+   ApplicableTransportMeans?,
+   HaulageTradingTerms*,
+   HazardousGoodsTransit*,
+   PackagedTransportHandlingUnit*,
+   ServiceAllowanceCharge*,
+   FreightAllowanceCharge*,
+   AttachedTransportEquipment*,
+   Delivery?,
+   Pickup?,
+   Despatch?,
+   ShipmentDocumentReference*,
+   ContainedInTransportEquipment*,
+   Package*,
+   GoodsItem*),
+  empty
 TierRange =
   notAllowed
   | element TierRange { anonymous0 }
@@ -3738,20 +3790,6 @@ PreCarriageShipmentStage =
 EffectivePeriod =
   notAllowed
   | element ns2:EffectivePeriod { PeriodType }
-UBLExtension =
-  notAllowed
-  | element ns4:UBLExtension {
-      ID?,
-      Name?,
-      ExtensionAgencyID?,
-      ExtensionAgencyName?,
-      ExtensionVersionID?,
-      ExtensionAgencyURI?,
-      ExtensionURI?,
-      ExtensionReasonCode?,
-      ExtensionReason?,
-      ExtensionContent
-    }
 EconomicOperatorRegistryURI =
   notAllowed
   | element EconomicOperatorRegistryURI { anonymous2 }
@@ -3773,69 +3811,6 @@ ExemptionReasonCode =
 PayableAmount =
   notAllowed
   | element PayableAmount { anonymous4 }
-ShipmentStageType =
-  (ID?,
-   TransportModeCode?,
-   TransportMeansTypeCode?,
-   TransitDirectionCode?,
-   PreCarriageIndicator?,
-   OnCarriageIndicator?,
-   EstimatedDeliveryDate?,
-   EstimatedDeliveryTime?,
-   RequiredDeliveryDate?,
-   RequiredDeliveryTime?,
-   LoadingSequenceID?,
-   SuccessiveSequenceID?,
-   Instructions*,
-   DemurrageInstructions*,
-   CrewQuantity?,
-   PassengerQuantity?,
-   TransitPeriod?,
-   CarrierParty*,
-   TransportMeans?,
-   LoadingPortLocation?,
-   UnloadingPortLocation?,
-   TransshipPortLocation?,
-   LoadingTransportEvent?,
-   ExaminationTransportEvent?,
-   AvailabilityTransportEvent?,
-   ExportationTransportEvent?,
-   DischargeTransportEvent?,
-   WarehousingTransportEvent?,
-   TakeoverTransportEvent?,
-   OptionalTakeoverTransportEvent?,
-   DropoffTransportEvent?,
-   ActualPickupTransportEvent?,
-   DeliveryTransportEvent?,
-   ReceiptTransportEvent?,
-   StorageTransportEvent?,
-   AcceptanceTransportEvent?,
-   TerminalOperatorParty?,
-   CustomsAgentParty?,
-   EstimatedTransitPeriod?,
-   FreightAllowanceCharge*,
-   FreightChargeLocation?,
-   DetentionTransportEvent*,
-   RequestedDepartureTransportEvent?,
-   RequestedArrivalTransportEvent?,
-   RequestedWaypointTransportEvent*,
-   PlannedDepartureTransportEvent?,
-   PlannedArrivalTransportEvent?,
-   PlannedWaypointTransportEvent*,
-   ActualDepartureTransportEvent?,
-   ActualWaypointTransportEvent?,
-   ActualArrivalTransportEvent?,
-   TransportEvent*,
-   EstimatedDepartureTransportEvent?,
-   EstimatedArrivalTransportEvent?,
-   PassengerPerson*,
-   DriverPerson*,
-   ReportingPerson?,
-   CrewMemberPerson*,
-   SecurityOfficerPerson?,
-   MasterPerson?,
-   ShipsSurgeonPerson?),
-  empty
 ProcessReasonCode =
   notAllowed
   | element ProcessReasonCode { anonymous6 }
@@ -3860,19 +3835,6 @@ TenderResultCode =
 FinancialEvaluationCriterion =
   notAllowed
   | element ns2:FinancialEvaluationCriterion { EvaluationCriterionType }
-TenderedProjectType =
-  (VariantID?,
-   FeeAmount?,
-   FeeDescription*,
-   TenderEnvelopeID?,
-   TenderEnvelopeTypeCode?,
-   ProcurementProjectLot?,
-   EvidenceDocumentReference*,
-   TaxTotal*,
-   LegalMonetaryTotal?,
-   TenderLine*,
-   AwardingCriterionResponse*),
-  empty
 EstimatedDespatchTime =
   notAllowed
   | element EstimatedDespatchTime { anonymous14 }
@@ -3960,15 +3922,6 @@ OneTimeChargeTypeCode =
 InvoicedQuantity =
   notAllowed
   | element InvoicedQuantity { anonymous10 }
-SupplierPartyType =
-  (CustomerAssignedAccountID?,
-   AdditionalAccountID*,
-   DataSendingCapability?,
-   Party?,
-   DespatchContact?,
-   AccountingContact?,
-   SellerContact?),
-  empty
 PhysicalLocation =
   notAllowed
   | element ns2:PhysicalLocation { LocationType }
@@ -4189,6 +4142,9 @@ StandardItemIdentification =
 LatestMeterReadingMethodCode =
   notAllowed
   | element LatestMeterReadingMethodCode { anonymous6 }
+TaxEnergyOnAccountAmount =
+  notAllowed
+  | element TaxEnergyOnAccountAmount { anonymous4 }
 ItemInstance =
   notAllowed
   | element ns2:ItemInstance {
@@ -4213,7 +4169,6 @@ ElectronicMail =
 DocumentID =
   notAllowed
   | element DocumentID { anonymous2 }
-TradingTermsType = (Information*, Reference?, ApplicableAddress?), empty
 NegotiationDescription =
   notAllowed
   | element NegotiationDescription { anonymous0 }
@@ -4244,20 +4199,6 @@ AdjustmentReasonCode =
 PreviousPriceList =
   notAllowed
   | element ns2:PreviousPriceList { PriceListType }
-TransportEventType =
-  (IdentificationID?,
-   OccurrenceDate?,
-   OccurrenceTime?,
-   TransportEventTypeCode?,
-   Description*,
-   CompletionIndicator?,
-   ReportedShipment?,
-   CurrentStatus*,
-   Contact*,
-   Location2?,
-   Signature?,
-   Period*),
-  empty
 LogisticsOperatorParty =
   notAllowed
   | element ns2:LogisticsOperatorParty { PartyType2 }
@@ -4377,6 +4318,20 @@ ReturnableQuantity =
 Clause =
   notAllowed
   | element ns2:Clause { ClauseType }
+TransportEventType =
+  (IdentificationID?,
+   OccurrenceDate?,
+   OccurrenceTime?,
+   TransportEventTypeCode?,
+   Description*,
+   CompletionIndicator?,
+   ReportedShipment?,
+   CurrentStatus*,
+   Contact*,
+   Location2?,
+   Signature?,
+   Period*),
+  empty
 PaymentMeansCode =
   notAllowed
   | element PaymentMeansCode { anonymous6 }
@@ -4393,6 +4348,7 @@ anonymous9 =
   attribute unitCode { xsd:normalizedString },
   xsd:decimal,
   attribute unitCodeListVersionID { xsd:normalizedString }?
+ServiceFrequencyType = WeekDayCode, empty
 RoleCode =
   notAllowed
   | element RoleCode { anonymous6 }
@@ -4476,9 +4432,6 @@ TaxSubtotal =
 StatusReason =
   notAllowed
   | element StatusReason { anonymous0 }
-TaxEnergyOnAccountAmount =
-  notAllowed
-  | element TaxEnergyOnAccountAmount { anonymous4 }
 LoadingPortLocation =
   notAllowed
   | element ns2:LoadingPortLocation { LocationType }
@@ -4509,24 +4462,6 @@ SourceForecastIssueTime =
 RejectedQuantity =
   notAllowed
   | element RejectedQuantity { anonymous10 }
-RequestForTenderLineType =
-  (ID?,
-   UUID?,
-   Note*,
-   Quantity?,
-   MinimumQuantity?,
-   MaximumQuantity?,
-   TaxIncludedIndicator?,
-   MinimumAmount?,
-   MaximumAmount?,
-   EstimatedAmount?,
-   DocumentReference*,
-   DeliveryPeriod*,
-   RequiredItemLocationQuantity*,
-   WarrantyValidityPeriod?,
-   Item,
-   SubRequestForTenderLine*),
-  empty
 ConsolidatableIndicator =
   notAllowed
   | element ConsolidatableIndicator { anonymous3 }
@@ -4896,6 +4831,7 @@ anonymous11 =
   attribute languageID { xsd:language }?,
   attribute languageLocaleID { xsd:normalizedString }?,
   xsd:string
+TradingTermsType = (Information*, Reference?, ApplicableAddress?), empty
 ContractType2 =
   notAllowed
   | element ContractType { anonymous0 }
@@ -5043,15 +4979,75 @@ FirstShipmentAvailibilityDate =
 PriceChangeReason =
   notAllowed
   | element PriceChangeReason { anonymous0 }
-ProcurementProjectLotType =
-  (ID, TenderingTerms?, ProcurementProject?), empty
 PreEventNotificationDurationMeasure =
   notAllowed
   | element PreEventNotificationDurationMeasure { anonymous9 }
 ExtendedID =
   notAllowed
   | element ExtendedID { anonymous2 }
-RegulationType = (Name, LegalReference?, OntologyURI?), empty
+ShipmentStageType =
+  (ID?,
+   TransportModeCode?,
+   TransportMeansTypeCode?,
+   TransitDirectionCode?,
+   PreCarriageIndicator?,
+   OnCarriageIndicator?,
+   EstimatedDeliveryDate?,
+   EstimatedDeliveryTime?,
+   RequiredDeliveryDate?,
+   RequiredDeliveryTime?,
+   LoadingSequenceID?,
+   SuccessiveSequenceID?,
+   Instructions*,
+   DemurrageInstructions*,
+   CrewQuantity?,
+   PassengerQuantity?,
+   TransitPeriod?,
+   CarrierParty*,
+   TransportMeans?,
+   LoadingPortLocation?,
+   UnloadingPortLocation?,
+   TransshipPortLocation?,
+   LoadingTransportEvent?,
+   ExaminationTransportEvent?,
+   AvailabilityTransportEvent?,
+   ExportationTransportEvent?,
+   DischargeTransportEvent?,
+   WarehousingTransportEvent?,
+   TakeoverTransportEvent?,
+   OptionalTakeoverTransportEvent?,
+   DropoffTransportEvent?,
+   ActualPickupTransportEvent?,
+   DeliveryTransportEvent?,
+   ReceiptTransportEvent?,
+   StorageTransportEvent?,
+   AcceptanceTransportEvent?,
+   TerminalOperatorParty?,
+   CustomsAgentParty?,
+   EstimatedTransitPeriod?,
+   FreightAllowanceCharge*,
+   FreightChargeLocation?,
+   DetentionTransportEvent*,
+   RequestedDepartureTransportEvent?,
+   RequestedArrivalTransportEvent?,
+   RequestedWaypointTransportEvent*,
+   PlannedDepartureTransportEvent?,
+   PlannedArrivalTransportEvent?,
+   PlannedWaypointTransportEvent*,
+   ActualDepartureTransportEvent?,
+   ActualWaypointTransportEvent?,
+   ActualArrivalTransportEvent?,
+   TransportEvent*,
+   EstimatedDepartureTransportEvent?,
+   EstimatedArrivalTransportEvent?,
+   PassengerPerson*,
+   DriverPerson*,
+   ReportingPerson?,
+   CrewMemberPerson*,
+   SecurityOfficerPerson?,
+   MasterPerson?,
+   ShipsSurgeonPerson?),
+  empty
 RequiredFeeAmount =
   notAllowed
   | element RequiredFeeAmount { anonymous4 }
@@ -5176,28 +5172,6 @@ Characteristics =
 EvidenceDocumentReference =
   notAllowed
   | element ns2:EvidenceDocumentReference { DocumentReferenceType }
-ReceiptLineType =
-  (ID,
-   UUID?,
-   Note*,
-   ReceivedQuantity?,
-   ShortQuantity?,
-   ShortageActionCode?,
-   RejectedQuantity?,
-   RejectReasonCode?,
-   RejectReason*,
-   RejectActionCode?,
-   QuantityDiscrepancyCode?,
-   OversupplyQuantity?,
-   ReceivedDate?,
-   TimingComplaintCode?,
-   TimingComplaint?,
-   OrderLineReference?,
-   DespatchLineReference*,
-   DocumentReference*,
-   Item*,
-   Shipment*),
-  empty
 HazardousCategoryCode =
   notAllowed
   | element HazardousCategoryCode { anonymous6 }
@@ -5227,9 +5201,14 @@ ServiceProviderParty =
   | element ns2:ServiceProviderParty {
       ID?, ServiceTypeCode?, ServiceType*, Party, SellerContact?
     }
-ExtensionURI =
-  notAllowed
-  | element ns4:ExtensionURI { anonymous2 }
+ResponseType =
+  (ReferenceID?,
+   ResponseCode?,
+   Description*,
+   EffectiveDate?,
+   EffectiveTime?,
+   Status*),
+  empty
 SpecialTransportRequirements =
   notAllowed
   | element SpecialTransportRequirements { anonymous0 }
@@ -5328,6 +5307,22 @@ AwardingCriterionTypeCode =
 Attachment =
   notAllowed
   | element ns2:Attachment { AttachmentType }
+QualifyingPartyType =
+  (ParticipationPercent?,
+   PersonalSituation*,
+   OperatingYearsQuantity?,
+   EmployeeQuantity?,
+   BusinessClassificationEvidenceID?,
+   BusinessIdentityEvidenceID?,
+   TendererRoleCode?,
+   BusinessClassificationScheme?,
+   TechnicalCapability*,
+   FinancialCapability*,
+   CompletedTask*,
+   Declaration*,
+   Party?,
+   EconomicOperatorRole?),
+  empty
 EffectiveDate =
   notAllowed
   | element EffectiveDate { anonymous8 }
@@ -5401,20 +5396,6 @@ TransportationServiceDescription =
 VesselName =
   notAllowed
   | element VesselName { anonymous5 }
-StatusType =
-  (ConditionCode?,
-   ReferenceDate?,
-   ReferenceTime?,
-   Description*,
-   StatusReasonCode?,
-   StatusReason*,
-   SequenceID?,
-   Text*,
-   IndicationIndicator?,
-   Percent?,
-   ReliabilityPercent?,
-   Condition*),
-  empty
 ReturnableMaterialIndicator =
   notAllowed
   | element ReturnableMaterialIndicator { anonymous3 }
@@ -5508,12 +5489,22 @@ FinancialCapability =
 RequestedArrivalTransportEvent =
   notAllowed
   | element ns2:RequestedArrivalTransportEvent { TransportEventType }
-UBLExtensions =
-  notAllowed
-  | element ns4:UBLExtensions { UBLExtension+ }
 HeatingType =
   notAllowed
   | element HeatingType { anonymous0 }
+TenderedProjectType =
+  (VariantID?,
+   FeeAmount?,
+   FeeDescription*,
+   TenderEnvelopeID?,
+   TenderEnvelopeTypeCode?,
+   ProcurementProjectLot?,
+   EvidenceDocumentReference*,
+   TaxTotal*,
+   LegalMonetaryTotal?,
+   TenderLine*,
+   AwardingCriterionResponse*),
+  empty
 IssueTime =
   notAllowed
   | element IssueTime { anonymous14 }
@@ -5641,6 +5632,9 @@ CreditAccount =
 SettlementPeriod =
   notAllowed
   | element ns2:SettlementPeriod { PeriodType }
+ExtensionReasonCode =
+  notAllowed
+  | element ns4:ExtensionReasonCode { anonymous6 }
 PerUnitAmount =
   notAllowed
   | element PerUnitAmount { anonymous4 }
@@ -5677,13 +5671,6 @@ Consignment =
 SourceValueMeasure =
   notAllowed
   | element SourceValueMeasure { anonymous9 }
-TaxTotalType =
-  (TaxAmount,
-   RoundingAmount?,
-   TaxEvidenceIndicator?,
-   TaxIncludedIndicator?,
-   TaxSubtotal*),
-  empty
 CopyIndicator =
   notAllowed
   | element CopyIndicator { anonymous3 }
@@ -5771,6 +5758,9 @@ ConsumptionReportReference =
       TotalConsumedQuantity,
       Period
     }
+ExtensionReason =
+  notAllowed
+  | element ns4:ExtensionReason { anonymous0 }
 UtilitySupplierParty =
   notAllowed
   | element ns2:UtilitySupplierParty { PartyType2 }
@@ -5838,9 +5828,35 @@ SalesItem =
       Item
     }
 anonymous14 = xsd:time
+TenderLineType =
+  (ID?,
+   Note*,
+   Quantity?,
+   LineExtensionAmount?,
+   TotalTaxAmount?,
+   OrderableUnit?,
+   ContentUnitQuantity?,
+   OrderQuantityIncrementNumeric?,
+   MinimumOrderQuantity?,
+   MaximumOrderQuantity?,
+   WarrantyInformation*,
+   PackLevelCode?,
+   DocumentReference*,
+   Item?,
+   OfferedItemLocationQuantity*,
+   ReplacementRelatedItem*,
+   WarrantyParty?,
+   WarrantyValidityPeriod?,
+   SubTenderLine*,
+   CallForTendersLineReference?,
+   CallForTendersDocumentReference?),
+  empty
 PlannedPickupTransportEvent =
   notAllowed
   | element ns2:PlannedPickupTransportEvent { TransportEventType }
+ExtensionURI =
+  notAllowed
+  | element ns4:ExtensionURI { anonymous2 }
 Text =
   notAllowed
   | element Text { anonymous0 }
@@ -5980,22 +5996,6 @@ RoamingPartnerName =
 TransportAdvisorParty =
   notAllowed
   | element ns2:TransportAdvisorParty { PartyType2 }
-QualifyingPartyType =
-  (ParticipationPercent?,
-   PersonalSituation*,
-   OperatingYearsQuantity?,
-   EmployeeQuantity?,
-   BusinessClassificationEvidenceID?,
-   BusinessIdentityEvidenceID?,
-   TendererRoleCode?,
-   BusinessClassificationScheme?,
-   TechnicalCapability*,
-   FinancialCapability*,
-   CompletedTask*,
-   Declaration*,
-   Party?,
-   EconomicOperatorRole?),
-  empty
 AdvertisementAmount =
   notAllowed
   | element AdvertisementAmount { anonymous4 }
@@ -6077,7 +6077,7 @@ CurrentChargeType =
   notAllowed
   | element CurrentChargeType { anonymous0 }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-06-16 17:55:10z
+# RELAX-NG models synthesized from UBL document models on 2013-07-12 13:59:03z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

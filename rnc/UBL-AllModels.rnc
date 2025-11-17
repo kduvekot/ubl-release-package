@@ -1,10 +1,3 @@
-#
-#	Universal Business Language Version 2.1
-#	Committee Specification 1
-#	29 June 2013
-#	Copyright (c) OASIS Open 2013. All rights reserved.
-#	Source: http://docs.oasis-open.org/ubl/cs1-UBL-2.1/rnc/
-
 # A single document model for all OASIS Universal Business Language
 # (UBL) documents
 
@@ -76,7 +69,7 @@ UBL-Waybill = external "UBL-Waybill.rnc"
 
 start = UBL-ApplicationResponse | UBL-AttachedDocument | UBL-AwardedNotification | UBL-BillOfLading | UBL-CallForTenders | UBL-Catalogue | UBL-CatalogueDeletion | UBL-CatalogueItemSpecificationUpdate | UBL-CataloguePricingUpdate | UBL-CatalogueRequest | UBL-CertificateOfOrigin | UBL-ContractAwardNotice | UBL-ContractNotice | UBL-CreditNote | UBL-DebitNote | UBL-DespatchAdvice | UBL-DocumentStatus | UBL-DocumentStatusRequest | UBL-ExceptionCriteria | UBL-ExceptionNotification | UBL-Forecast | UBL-ForecastRevision | UBL-ForwardingInstructions | UBL-FreightInvoice | UBL-FulfilmentCancellation | UBL-GoodsItemItinerary | UBL-GuaranteeCertificate | UBL-InstructionForReturns | UBL-InventoryReport | UBL-Invoice | UBL-ItemInformationRequest | UBL-Order | UBL-OrderCancellation | UBL-OrderChange | UBL-OrderResponse | UBL-OrderResponseSimple | UBL-PackingList | UBL-PriorInformationNotice | UBL-ProductActivity | UBL-Quotation | UBL-ReceiptAdvice | UBL-Reminder | UBL-RemittanceAdvice | UBL-RequestForQuotation | UBL-RetailEvent | UBL-SelfBilledCreditNote | UBL-SelfBilledInvoice | UBL-Statement | UBL-StockAvailabilityReport | UBL-Tender | UBL-TendererQualification | UBL-TendererQualificationResponse | UBL-TenderReceipt | UBL-TradeItemLocationProfile | UBL-TransportationStatus | UBL-TransportationStatusRequest | UBL-TransportExecutionPlan | UBL-TransportExecutionPlanRequest | UBL-TransportProgressStatus | UBL-TransportProgressStatusRequest | UBL-TransportServiceDescription | UBL-TransportServiceDescriptionRequest | UBL-UnawardedNotification | UBL-UtilityStatement | UBL-Waybill
 
-# Synthesized from UBL document models 2013-06-16 17:58:18z
+# Synthesized from UBL document models 2013-07-12 14:01:50z
 #
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

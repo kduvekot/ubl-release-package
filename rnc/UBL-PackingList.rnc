@@ -2,16 +2,12 @@ PackingList-2.0 = external "versions/UBL-PackingList-2.0.rnc"
 PackingList-2.1 = external "versions/UBL-PackingList-2.1.rnc"
 start = PackingList-2.0 | PackingList-2.1
 
-# Synthesized from UBL document models 2013-06-16 17:50:44z
+# Synthesized from UBL document models 2013-07-12 13:54:36z
 #
-#	Universal Business Language Version 2.1
-#	Committee Specification 1
-#	29 June 2013
-#	Copyright (c) OASIS Open 2013. All rights reserved.
-#	Source: http://docs.oasis-open.org/ubl/cs1-UBL-2.1/rnc/
-#
-# Portions Copyright (C) - Crane Softwrights Ltd.
+# Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc
+# Portions copyright (c) OASIS Open. All Rights Reserved.
+#                   - http://www.oasis-open.org/who/intellectualproperty.php
 # 
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:

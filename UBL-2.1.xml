@@ -2,8 +2,7 @@
 <?xml-stylesheet type="text/xsl" 
                  href="db/spec-0.6/stylesheets/oasis-specification-html-offline.xsl"?>
 <!--
-  $Id: UBL-2.1.xml,v 1.59 2013/06/17 19:50:04 admin Exp $
-  (modified for cover page information 2013-07-18 13:30z)
+  $Id: UBL-2.1.xml,v 1.60 2013/07/15 00:50:11 admin Exp $
   Single quote: &#8217; Double quotes: &#8220;&#8221; 
 -->
 <!DOCTYPE article
@@ -14,12 +13,12 @@
 <!ENTITY name "UBL">
 <!ENTITY pversion "NONE">
 <!ENTITY version "2.1">
-<!ENTITY stage "cs1">
-<!ENTITY standard "Committee Specification 1">
+<!ENTITY stage "cos1">
+<!ENTITY standard "Candidate OASIS Standard 1">
 <!ENTITY this-loc     "http://docs.oasis-open.org/ubl/&stage;-UBL-2.1">
-<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/prd4-UBL-2.1">
+<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/cs1-UBL-2.1">
 <!ENTITY latest-loc   "http://docs.oasis-open.org/ubl">
-<!ENTITY pubdate "29 June 2013"><!--remove time from pub date-->
+<!ENTITY pubdate "15 July 2013"><!--remove time from pub date-->
 ]>
 <article status="&standard;">
   <articleinfo>
@@ -339,7 +338,7 @@
         <bibliomixed id="UBL"><abbrev>UBL-2.1</abbrev>
           <citetitle>Universal Business Language Version 2.1.</citetitle>
           <date>&pubdate;. </date>
-          <releaseinfo>OASIS &standard;. </releaseinfo> 
+          <releaseinfo>&standard;. </releaseinfo> 
           <bibliomisc>
           <ulink
           url="http://docs.oasis-open.org/ubl/&stage;-UBL-2.1/UBL-2.1.html"

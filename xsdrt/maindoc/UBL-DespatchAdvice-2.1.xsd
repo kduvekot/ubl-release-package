@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 CS1
-                     http://docs.oasis-open.org/ubl/cs1-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 COS1
+                     http://docs.oasis-open.org/ubl/cos1-UBL-2.1/
+  Release Date:      15 July 2013
   Module:            xsdrt/maindoc/UBL-DespatchAdvice-2.1.xsd
-  Generated on:      2013-06-16 16:39z
+  Generated on:      2013-07-12 13:29z
+  Copyright (c) OASIS Open 2013. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -73,8 +75,6 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
-
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
   it or assist in its implementation may be prepared, copied, 
