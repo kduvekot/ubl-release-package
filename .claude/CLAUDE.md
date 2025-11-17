@@ -47,6 +47,10 @@ ubl-release-package/
 ### 3. File Handling Per Release
 For each release: Remove all files except `tools/`, `.claude/`, `.git/`, `.gitignore`, `README.md`, then extract ZIP to root.
 
+### 4. Secrets and URLs
+** NEVER STORE URLs or secrets or any other sensitive information inside a file, piece of code or anything else that might get committed to git.
+only after dedicated approval and agreement that this URL can be stored and used you are allowed to commit it to a file and document that it was agreed and when.
+
 ## Import Strategy
 1. Import all 34 releases (#1-34)
 2. Apply #7 (errata-UBL-2.0) as PATCH on #6, then #8 (os-UBL-2.0-update-delta) as PATCH on #7
