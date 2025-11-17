@@ -2,9 +2,10 @@
 <?xml-stylesheet type="text/xsl" 
   href="db/spec-0.8/stylesheets/oasis-specification-html-offline.xsl"?>
 <?oasis-spec-base-uri db/spec-0.8/?>
+<?oxy_options track_changes="on"?>
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
   "db/spec-0.8/docbook/docbookx.dtd" >
-<article status="Committee Specification Draft 03" conformance="ids quotes ebuzzwords"><articleinfo><productname class="trade">UBL</productname><productnumber>2.3</productnumber><releaseinfo role="track">Standards Track Work Product</releaseinfo><releaseinfo role="OASIS-specification-this">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html</releaseinfo><releaseinfo role="OASIS-specification-this" lang="none">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.pdf</releaseinfo><releaseinfo role="OASIS-specification-this-authoritative" lang="none">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.xml</releaseinfo><releaseinfo role="OASIS-specification-previous">https://docs.oasis-open.org/ubl/csprd02-UBL-2.3/UBL-2.3.html</releaseinfo><releaseinfo role="OASIS-specification-previous">https://docs.oasis-open.org/ubl/csprd02-UBL-2.3/UBL-2.3.pdf</releaseinfo><releaseinfo role="OASIS-specification-previous-authoritative">https://docs.oasis-open.org/ubl/csprd02-UBL-2.3/UBL-2.3.xml</releaseinfo><!-- generic form of above
+<article status="Committee Specification Draft 04" conformance="ids quotes ebuzzwords"><articleinfo><productname class="trade">UBL</productname><productnumber>2.3</productnumber><releaseinfo role="track">Standards Track Work Product</releaseinfo><releaseinfo role="OASIS-specification-this">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.html</releaseinfo><releaseinfo role="OASIS-specification-this" lang="none">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.pdf</releaseinfo><releaseinfo role="OASIS-specification-this-authoritative" lang="none">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.xml</releaseinfo><releaseinfo role="OASIS-specification-previous">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html</releaseinfo><releaseinfo role="OASIS-specification-previous">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.pdf</releaseinfo><releaseinfo role="OASIS-specification-previous-authoritative">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.xml</releaseinfo><!-- generic form of above
       <releaseinfo role="OASIS-specification-previous"
          >&previous-loc;/&name;-&version;.html</releaseinfo>
       <releaseinfo role="OASIS-specification-previous"
@@ -23,22 +24,22 @@
             <ulink url="http://www.CraneSoftwrights.com/links/info-ubl21.htm" conformance="skip">Crane Softwrights Ltd.</ulink>
           </orgname></affiliation><email>gkholman@CraneSoftwrights.com</email></editor><othercredit><firstname>Kenneth</firstname><surname>Bengtsson</surname><affiliation><orgname>Individual</orgname></affiliation><email>kbengtsson@efact.pe</email></othercredit><othercredit><firstname>G. Ken</firstname><surname>Holman</surname><affiliation><orgname>
             <ulink url="http://www.CraneSoftwrights.com/links/info-ubl21.htm" conformance="skip">Crane Softwrights Ltd.</ulink>
-          </orgname></affiliation><email>gkholman@CraneSoftwrights.com</email></othercredit></authorgroup><pubdate>29 July 2020</pubdate><legalnotice role="additional"><title>Additional artefacts</title><para>This prose specification is one component of a Work Product that also includes:</para><itemizedlist><listitem><para>Code lists for constraint validation: </para><itemizedlist><listitem><para>
-                <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/cl/">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/cl/</ulink>
+          </orgname></affiliation><email>gkholman@CraneSoftwrights.com</email></othercredit></authorgroup><pubdate>25 November 2020</pubdate><legalnotice role="additional"><title>Additional artefacts</title><para>This prose specification is one component of a Work Product that also includes:</para><itemizedlist><listitem><para>Code lists for constraint validation: </para><itemizedlist><listitem><para>
+                <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/cl/">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/cl/</ulink>
               </para></listitem></itemizedlist></listitem><listitem><para>Context/value Association files for constraint validation: </para><itemizedlist><listitem><para>
-                <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/cva/">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/cva/</ulink>
+                <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/cva/">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/cva/</ulink>
               </para></listitem></itemizedlist></listitem><listitem><para>Document models of information bundles: </para><itemizedlist><listitem><para>
-                <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/mod/">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/mod/</ulink>
+                <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/mod/">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/mod/</ulink>
               </para></listitem></itemizedlist></listitem><listitem><para>Default validation test environment: </para><itemizedlist><listitem><para>
-                <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/val/">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/val/</ulink>
+                <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/val/">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/val/</ulink>
               </para></listitem></itemizedlist></listitem><listitem><para>XML examples: </para><itemizedlist><listitem><para>
-                <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/xml/">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/xml/</ulink>
+                <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/xml/">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/xml/</ulink>
               </para></listitem></itemizedlist></listitem><listitem><para>Annotated XSD schemas: </para><itemizedlist><listitem><para>
-                <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/xsd/">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/xsd/</ulink>
+                <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/xsd/">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/xsd/</ulink>
               </para></listitem></itemizedlist></listitem><listitem><para>Runtime XSD schemas: </para><itemizedlist><listitem><para>
-                <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/xsdrt/">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/xsdrt/</ulink>
+                <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/xsdrt/">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/xsdrt/</ulink>
               </para></listitem></itemizedlist></listitem></itemizedlist><para>The ZIP containing the complete files of this release is found in the directory:</para><itemizedlist><listitem><para>
-            <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.zip">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.zip</ulink>
+            <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.zip">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.zip</ulink>
           </para></listitem></itemizedlist></legalnotice><legalnotice role="related"><title>Related work</title><para>This specification supersedes: </para><bibliolist><bibliomixed conformance="skip">
           <abbrev condition="oasis">UBL-2.2</abbrev>
           <citetitle>Universal Business Language Version 2.2.</citetitle>
@@ -47,7 +48,7 @@
           <releaseinfo>OASIS Standard. </releaseinfo>
           <bibliomisc>
             <ulink url="http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.html" conformance="skip">http://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.html</ulink>. </bibliomisc>
-        </bibliomixed></bibliolist></legalnotice><!--gentext: list of namespaces created when creating schema doc summary schematabledb2.3.xml--><!--a total of 89 document types--><legalnotice role="namespaces"><title>Declared XML Namespaces</title><simplelist lang="none" type="vert"><member>
+        </bibliomixed></bibliolist></legalnotice><!--gentext: list of namespaces created when creating schema doc summary schematabledb2.3.xml--><!--a total of 91 document types--><legalnotice role="namespaces"><title>Declared XML Namespaces</title><simplelist lang="none" type="vert"><member>
         urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2 </member><member>
         urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2 </member><member>
         urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2 </member><member>
@@ -56,7 +57,7 @@
         urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2 </member><member>
         urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2 </member><member>
         urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2
-      </member></simplelist><para conformance="skip"/><simplelist lang="none" type="vert"><member>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:AwardedNotification-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:BillOfLading-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:BusinessCard-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CatalogueDeletion-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CatalogueItemSpecificationUpdate-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CataloguePricingUpdate-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CatalogueRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DebitNote-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DigitalAgreement-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DigitalCapability-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DocumentStatus-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DocumentStatusRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Enquiry-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:EnquiryResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExceptionCriteria-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExceptionNotification-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExportCustomsDeclaration-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExpressionOfInterestRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExpressionOfInterestResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Forecast-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ForwardingInstructions-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:FreightInvoice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:FulfilmentCancellation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:GoodsCertificate-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:GoodsItemPassport-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:GuaranteeCertificate-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ImportCustomsDeclaration-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ItemInformationRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Order-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:OrderResponseSimple-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:PackingList-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportationReminder-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportationRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Quotation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Reminder-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:RequestForQuotation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:SelfBilledCreditNote-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:SelfBilledInvoice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Statement-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Tender-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderContract-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderReceipt-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderStatus-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderStatusRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderWithdrawal-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TendererQualification-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TendererQualificationResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TradeItemLocationProfile-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransitCustomsDeclaration-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatusRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescriptionRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportationStatusRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:UnawardedNotification-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:UnsubscribeFromProcedureRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:UnsubscribeFromProcedureResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:UtilityStatement-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Waybill-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:WeightStatement-2</member></simplelist></legalnotice><abstract><para>This specification defines the Universal Business Language, version 2.3.</para></abstract><legalnotice role="status" id="STATUS"><title>Status</title><!--
+      </member></simplelist><para conformance="skip"/><simplelist lang="none" type="vert"><member>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:AwardedNotification-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:BillOfLading-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:BusinessCard-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Catalogue-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CatalogueDeletion-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CatalogueItemSpecificationUpdate-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CataloguePricingUpdate-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CatalogueRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CommonTransportationReport-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:CreditNote-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DebitNote-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DigitalAgreement-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DigitalCapability-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DocumentStatus-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:DocumentStatusRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Enquiry-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:EnquiryResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExceptionCriteria-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExceptionNotification-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExportCustomsDeclaration-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExpressionOfInterestRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ExpressionOfInterestResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Forecast-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ForwardingInstructions-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:FreightInvoice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:FulfilmentCancellation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:GoodsCertificate-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:GoodsItemPassport-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:GuaranteeCertificate-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ImportCustomsDeclaration-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Invoice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ItemInformationRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Manifest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Order-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:OrderResponseSimple-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:PackingList-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportationReminder-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportationRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Quotation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Reminder-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:RequestForQuotation-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:SelfBilledCreditNote-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:SelfBilledInvoice-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Statement-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Tender-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderContract-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderReceipt-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderStatus-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderStatusRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TenderWithdrawal-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TendererQualification-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TendererQualificationResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TradeItemLocationProfile-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransitCustomsDeclaration-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatusRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescriptionRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:TransportationStatusRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:UnawardedNotification-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:UnsubscribeFromProcedureRequest-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:UnsubscribeFromProcedureResponse-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:UtilityStatement-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:Waybill-2</member><member>urn:oasis:names:specification:ubl:schema:xsd:WeightStatement-2</member></simplelist></legalnotice><abstract><para>This specification defines the Universal Business Language, version 2.3.</para></abstract><legalnotice role="status" id="STATUS"><title>Status</title><!--
       <para>This <ulink conformance="skip" url="https://www.oasis-open.org/policies-guidelines/tc-process#dWorkingDraft">Working Draft</ulink> (WD) has been produced by one or more TC Members; it has not yet been voted on by the TC or <ulink conformance="skip"
           url="https://www.oasis-open.org/policies-guidelines/tc-process#committeeDraft">approved</ulink> as a Committee Specification Draft. The OASIS document <ulink conformance="skip" url="https://www.oasis-open.org/policies-guidelines/tc-process#standApprovProcess">Approval Process</ulink>
         begins officially with a TC vote to approve a WD as a Committee Draft. A TC may approve a Working Draft, revise it, and re-approve it any number of times as a Committee Draft.</para>
@@ -68,10 +69,10 @@
           <abbrev condition="oasis">UBL-2.3</abbrev>
           <citetitle>Universal Business Language Version 2.3.</citetitle>
           <bibliomisc>Edited by G. Ken Holman.</bibliomisc>
-          <date>29 July 2020. </date>
-          <releaseinfo>Committee Specification Draft 03. </releaseinfo>
+          <date>25 November 2020. </date>
+          <releaseinfo>Committee Specification Draft 04. </releaseinfo>
           <bibliomisc>
-            <ulink url="https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html">https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.html</ulink>. Latest version: <ulink url="https://docs.oasis-open.org/ubl/UBL-2.3.html">https://docs.oasis-open.org/ubl/UBL-2.3.html</ulink>. </bibliomisc>
+            <ulink url="https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.html">https://docs.oasis-open.org/ubl/csd04-UBL-2.3/UBL-2.3.html</ulink>. Latest version: <ulink url="https://docs.oasis-open.org/ubl/UBL-2.3.html">https://docs.oasis-open.org/ubl/UBL-2.3.html</ulink>. </bibliomisc>
         </bibliomixed></bibliolist></legalnotice><legalnotice role="notices"><title>Notices</title><para>Copyright © OASIS Open 2001-2020. All Rights Reserved. </para><para>All capitalized terms in the following text have the meanings assigned to them in the OASIS Intellectual Property Rights Policy (the “OASIS IPR Policy”). The full <ulink url="https://www.oasis-open.org/policies-guidelines/ipr" conformance="skip">Policy</ulink> may be found at
         the OASIS website.</para><para>This document and translations of it may be copied and furnished to others, and derivative works that comment on or otherwise explain it or assist in its implementation may be prepared, copied, published, and distributed, in whole or in part, without restriction of any kind, provided
         that the above copyright notice and this section are included on all such copies and derivative works. However, this document itself may not be modified in any way, including by removing the copyright notice or references to OASIS, except as needed for the purpose of developing any document
@@ -82,7 +83,7 @@
         available; neither does it represent that it has made any effort to identify any such rights. Information on OASIS’ procedures with respect to rights in any document or deliverable produced by an OASIS Technical Committee can be found on the OASIS website. Copies of claims of rights
         made available for publication and any assurances of licenses to be made available, or the result of an attempt made to obtain a general license or permission for the use of such proprietary rights by implementers or users of this OASIS Committee Specification or OASIS Standard, can be
         obtained from the OASIS TC Administrator. OASIS makes no representation that any information or list of intellectual property rights will at any time be complete, or that any claims in such list are, in fact, Essential Claims.</para><para>The name “OASIS” is a trademark of <ulink conformance="skip" url="https://www.oasis-open.org">OASIS</ulink>, the owner and developer of this specification, and should be used only to refer to the organization and its official outputs. OASIS welcomes reference to, and
-        implementation and use of, specifications, while reserving the right to enforce its marks against misleading uses. Please see <ulink url="https://www.oasis-open.org/policies-guidelines/trademark">https://www.oasis-open.org/policies-guidelines/trademark</ulink> for guidance.</para><para>CPFR is a registered trademark of the Voluntary Interindustry Commerce Solutions (VICS) association. The term “CPFR” is not to be used in any format without written permission from VICS. For more information on VICS and CPFR, visit <ulink conformance="skip" url="http://www.vics.org">www.vics.org</ulink>.</para></legalnotice><!--metadata for ISO/IEC 19845--><othername role="intro">Information Technology</othername><othername role="main">Universal Business Language Version 2.3 (UBL v2.3)</othername><othername role="full">Information Technology - Universal Business Language Version 2.3 (UBL v2.3)</othername><othername lang="fr" role="intro">Technologie d l’information</othername><othername lang="fr" role="main">Langage d’affaire universel version 2.3 (UBL v2.3)</othername><othername lang="fr" role="full">Technologie d l’information - Langage d’affaire universel version 2.3 (UBL v2.3)</othername><releaseinfo role="doc-sdo">ISO/IEC</releaseinfo><releaseinfo role="doc-proj-id">ISO/IEC 19845</releaseinfo><releaseinfo role="doc-language">en</releaseinfo><releaseinfo role="doc-release-version">WD</releaseinfo><releaseinfo role="std-originator">ISO/IEC</releaseinfo><releaseinfo role="std-doc-type">WD</releaseinfo><releaseinfo role="std-doc-number">19845</releaseinfo><releaseinfo role="std-version">29 July 2020</releaseinfo><releaseinfo role="std-edition">csd03</releaseinfo><releaseinfo role="std-ref-dated">ISO/IEC 19845:ccyy</releaseinfo><releaseinfo role="std-ref-undated">ISO/IEC 19845</releaseinfo><releaseinfo role="doc-ref">ISO/IEC 19845:ccyy(en)</releaseinfo><releaseinfo role="content-language">en</releaseinfo><releaseinfo role="pub-date">ccyy-mm-dd</releaseinfo><releaseinfo role="release-date">ccyy-mm</releaseinfo><releaseinfo role="comm-ref">OASIS</releaseinfo><releaseinfo role="secretariat">JTC 1</releaseinfo><releaseinfo role="page-count">x</releaseinfo><copyright condition="sts"><year>2020</year><holder>ISO/IEC</holder><holder role="copyright-statement">All rights reserved.</holder></copyright><legalnotice role="foreword" condition="sts"><title>Foreword</title><para>ISO (the International Organization for Standardization) and IEC (the International Electrotechnical Commission) form the specialized system for worldwide standardization. National bodies that are members of ISO or IEC participate in the development of International Standards through
+        implementation and use of, specifications, while reserving the right to enforce its marks against misleading uses. Please see <ulink url="https://www.oasis-open.org/policies-guidelines/trademark">https://www.oasis-open.org/policies-guidelines/trademark</ulink> for guidance.</para><para>CPFR is a registered trademark of the Voluntary Interindustry Commerce Solutions (VICS) association. The term “CPFR” is not to be used in any format without written permission from VICS. For more information on VICS and CPFR, visit <ulink conformance="skip" url="http://www.vics.org">www.vics.org</ulink>.</para></legalnotice><!--metadata for ISO/IEC 19845--><othername role="intro">Information Technology</othername><othername role="main">Universal Business Language Version 2.3 (UBL v2.3)</othername><othername role="full">Information Technology - Universal Business Language Version 2.3 (UBL v2.3)</othername><othername lang="fr" role="intro">Technologie d l’information</othername><othername lang="fr" role="main">Langage d’affaire universel version 2.3 (UBL v2.3)</othername><othername lang="fr" role="full">Technologie d l’information - Langage d’affaire universel version 2.3 (UBL v2.3)</othername><releaseinfo role="doc-sdo">ISO/IEC</releaseinfo><releaseinfo role="doc-proj-id">ISO/IEC 19845</releaseinfo><releaseinfo role="doc-language">en</releaseinfo><releaseinfo role="doc-release-version">WD</releaseinfo><releaseinfo role="std-originator">ISO/IEC</releaseinfo><releaseinfo role="std-doc-type">WD</releaseinfo><releaseinfo role="std-doc-number">19845</releaseinfo><releaseinfo role="std-version">25 November 2020</releaseinfo><releaseinfo role="std-edition">csd04</releaseinfo><releaseinfo role="std-ref-dated">ISO/IEC 19845:ccyy</releaseinfo><releaseinfo role="std-ref-undated">ISO/IEC 19845</releaseinfo><releaseinfo role="doc-ref">ISO/IEC 19845:ccyy(en)</releaseinfo><releaseinfo role="content-language">en</releaseinfo><releaseinfo role="pub-date">ccyy-mm-dd</releaseinfo><releaseinfo role="release-date">ccyy-mm</releaseinfo><releaseinfo role="comm-ref">OASIS</releaseinfo><releaseinfo role="secretariat">JTC 1</releaseinfo><releaseinfo role="page-count">x</releaseinfo><copyright condition="sts"><year>2020</year><holder>ISO/IEC</holder><holder role="copyright-statement">All rights reserved.</holder></copyright><legalnotice role="foreword" condition="sts"><title>Foreword</title><para>ISO (the International Organization for Standardization) and IEC (the International Electrotechnical Commission) form the specialized system for worldwide standardization. National bodies that are members of ISO or IEC participate in the development of International Standards through
         technical committees established by the respective organization to deal with particular fields of technical activity. ISO and IEC technical committees collaborate in fields of mutual interest. Other international organizations, governmental and non-governmental, in liaison with ISO and IEC,
         also take part in the work. In the field of information technology, ISO and IEC have established a joint technical committee, ISO/IEC JTC 1. </para><para>International Standards are drafted in accordance with the rules given in the ISO/IEC Directives, Part 2. </para><para>The main task of the joint technical committee is to prepare International Standards. Draft International Standards adopted by the joint technical committee are circulated to national bodies for voting. Publication as an International Standard requires approval by at least 75% of the
         national bodies casting a vote. </para><para>Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO and IEC shall not be held responsible for identifying any or all such patent rights. </para><para>The first version of ISO/IEC 19845 was prepared by the OASIS Universal Business Language Technical Committee [as OASIS Universal Business Language Version 2.1] and was adopted, under the PAS procedure, by Joint Technical Committee ISO/IEC JTC 1, Information technology, in parallel with
@@ -657,6 +658,12 @@
                   </para></listitem><listitem><para>
                      <xref linkend="S-WEIGHT-STATEMENT"/>
                   </para></listitem></itemizedlist></listitem><listitem><para>
+               <emphasis>
+                  <emphasis role="bold">
+                     <xref linkend="S-MANIFEST"/>
+                  </emphasis>
+               </emphasis>
+            </para></listitem><listitem><para>
                <xref linkend="S-FREIGHT-STATUS-REPORTING"/>
             </para></listitem><listitem><para>
                <xref linkend="S-CERTIFICATION-OF-ORIGIN-OF-GOODS"/>
@@ -740,6 +747,12 @@
                      <xref linkend="S-PROVIDING-AN-ITINERARY-FOR-A-TRANSPORT-SERVICE"/>
                   </para></listitem><listitem><para>
                      <xref linkend="S-REPORTING-TRANSPORT-MEANS-PROGRESS-STATUS"/>
+                  </para></listitem><listitem><para>
+                     <emphasis>
+                        <emphasis role="bold">
+                           <xref linkend="S-COMMON-TRANSPORTATION-REPORT"/>
+                        </emphasis>
+                     </emphasis>
                   </para></listitem></itemizedlist></listitem></itemizedlist></listitem><listitem><para>
          <xref linkend="S-RETURN"/>
       </para></listitem><listitem><para>
@@ -869,22 +882,7 @@
               common carrier, a contractual carrier, or as a Non Vessel Operating Common Carrier (NVOCC). In such case, when the transportation is multimodal, it can provide a multimodal Bill of Lading.</para></section><section id="S-WAYBILL"><title>Waybill</title><para>A <link linkend="S-WAYBILL-SCHEMA">Waybill</link> is a transport document issued by the party who undertakes to provide transportation services, or undertakes to arrange for their provision, to the party who gives instructions for the transportation services (shipper, consignor,
               etc.). It states the instructions for the beneficiary and may contain the details of the transportation, charges, and terms and conditions under which the transportation service is provided.</para><para>Unlike a <link linkend="S-BILL-OF-LADING-SCHEMA">Bill Of Lading</link>, a Waybill is not negotiable and cannot be assigned to a third party (endorsement). It may be issued as a cargo receipt and is not required to be surrendered at the destination in order to pick up the cargo.
               This may simplify the documentation procedures between a Transport Service Buyer and a Transport Service Provider, but using this document in combination with international payments (e.g., documentary credits) is not advisable.</para><para>A freight forwarder may decide to issue a waybill to communicate consignment, transport, and conveyance information to third parties, be they shippers, subcontractors, transport operators, or authorities.</para></section><section id="S-WEIGHT-STATEMENT"><title>Weight Statement</title><para>A <link linkend="S-WEIGHT-STATEMENT-SCHEMA">Weight Statement</link> is a transport document verifying the declared true gross mass of a packed container. Working with this knowledge avoids injury, container loss, damage to cargo, etc. Formally verifying the gross mass may be a
-              condition for transport.</para></section></section><!--<section id="S-MANIFEST">
-          <title>Manifest</title>
-          <para>Manifest is the process by which a sending Logistics Operator (such as a Carrier or Freight Forwarder) communicates the quantity an nature of a load to receiving logistics operator (Such as Customs party, a Ground handler or a terminal operator.</para>
-          <para>A <link linkend="S-MANIFEST-SCHEMA">Manifest</link> document is provided either through a <link linkend="S-MANIFEST-SCHEMA"> Manifest</link> document is often seen as the top level document for what a vessel, aeroplane, vagon or truck i carrying.</para>
-          <figure id="F-MANIFEST-PROCESS">
-            <title>Manifest Process</title>
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="art/UBL-2.3-ManifestProcess.png"/>
-              </imageobject>
-              <textobject>
-                <phrase>[Manifest Diagram]</phrase>
-              </textobject>
-            </mediaobject>
-          </figure>
-        </section>--><section id="S-FREIGHT-STATUS-REPORTING"><title>Freight Status Reporting</title><para>Freight Status Reporting is the process by which a Transport Service Provider (such as a Carrier or Freight Forwarder) communicates the status of shipments currently under their management to the Transport Users (such as a Freight Forwarder, Consignee, or Consignor).</para><para>A <link linkend="S-TRANSPORTATION-STATUS-SCHEMA">Transportation Status</link> document is provided either through a <link linkend="S-TRANSPORTATION-STATUS-REQUEST-SCHEMA"> Transportation Status Request</link> document or through an agreed status reporting procedure.</para><figure id="F-FREIGHT-STATUS-REPORTING-PROCESS" float="0"><title>Freight Status Reporting Process</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.2-FreightStatusReporting.png"/></imageobject><textobject><phrase>[Freight Status Reporting Diagram]</phrase></textobject></mediaobject></figure></section><section id="S-CERTIFICATION-OF-ORIGIN-OF-GOODS"><title>Certification of Origin of Goods</title><para>When a Consignor exports certain goods they may be required to attest to the origin of the goods. A <link linkend="S-CERTIFICATE-OF-ORIGIN-SCHEMA">Certificate Of Origin</link> is a document required by regulatory bodies declaring that goods in a particular international shipment are
+              condition for transport.</para></section></section><section id="S-MANIFEST"><title>Manifest</title><para>Manifest is the process by which a sending logistics operator (such as a carrier or freight forwarder) communicates the quantity an nature of a load to receiving logistics operator (such as customs party, a ground handler or a terminal operator.</para><para>A <link linkend="S-MANIFEST-SCHEMA">Manifest</link> document is often seen as the top level document for what a vessel, airplane, wagon or truck is carrying.</para><figure id="F-MANIFEST-PROCESS" float="0"><title>Manifest Process</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.3-ManifestProcess.png"/></imageobject><textobject><phrase>[Manifest Diagram]</phrase></textobject></mediaobject></figure></section><section id="S-FREIGHT-STATUS-REPORTING"><title>Freight Status Reporting</title><para>Freight Status Reporting is the process by which a Transport Service Provider (such as a Carrier or Freight Forwarder) communicates the status of shipments currently under their management to the Transport Users (such as a Freight Forwarder, Consignee, or Consignor).</para><para>A <link linkend="S-TRANSPORTATION-STATUS-SCHEMA">Transportation Status</link> document is provided either through a <link linkend="S-TRANSPORTATION-STATUS-REQUEST-SCHEMA"> Transportation Status Request</link> document or through an agreed status reporting procedure.</para><figure id="F-FREIGHT-STATUS-REPORTING-PROCESS" float="0"><title>Freight Status Reporting Process</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.2-FreightStatusReporting.png"/></imageobject><textobject><phrase>[Freight Status Reporting Diagram]</phrase></textobject></mediaobject></figure></section><section id="S-CERTIFICATION-OF-ORIGIN-OF-GOODS"><title>Certification of Origin of Goods</title><para>When a Consignor exports certain goods they may be required to attest to the origin of the goods. A <link linkend="S-CERTIFICATE-OF-ORIGIN-SCHEMA">Certificate Of Origin</link> is a document required by regulatory bodies declaring that goods in a particular international shipment are
             of a certain origin.</para><para>It is the responsibility of the Exporter to sign the Certificate of Origin Application document and submit it for authentication to a recognized authority (such as a local chamber of commerce or designated government agency or board). This party becomes the Endorser and will issue
             the Certificate of Origin document. To do this the Endorser must have access to other documents, such as the commercial <link linkend="S-INVOICE-SCHEMA">Invoice</link> and <link linkend="S-BILL-OF-LADING-SCHEMA">Bill Of Lading</link>, in order to verify the Exporter’s claims that
             the goods originated in that country. In effect, the Certificate of Origin document is a dossier describing a set of related documents. After it is issued, the Certificate of Origin is sent to the Importer.</para><figure id="F-CERTIFICATION-OF-ORIGIN-OF-GOODS-PROCESS" float="0"><title>Certification of Origin of Goods Process</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.0-CertificationOfOriginOfGoodsProcess.png"/></imageobject><textobject><phrase>[Certification of Origin of Goods Diagram]</phrase></textobject></mediaobject></figure></section><section id="S-CROSS-BORDER-REGULATORY-REPORTING"><title>Cross-Border Regulatory Reporting</title><section id="S-CROSS-BORDER-REGULATORY-REPORTING-INTRODUCTION"><title>Cross-Border Regulatory Reporting Introduction</title><para>When doing cross border trade some additional documents are needed to facilitate the processes. This is due to regulatory requirements such as customs and the proof of the quality of the goods. These documents are required in their own secondary processes. This section describes
@@ -940,22 +938,8 @@
               schedule occur, a new version of the Goods Item Itinerary is issued to the Transport User. A Goods Item Itinerary document thus contains information that may be used for analyzing the performance (in time) of transport services and for tracing the progress of cargo in transit if such
               analysis is required.</para><figure id="F-GOODS-ITEM-ITINERARY" float="0"><title>Goods Item Itinerary</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.2-IMFM-GoodsItemItinerary.png"/></imageobject><textobject><phrase>[GII Diagram]</phrase></textobject></mediaobject></figure></section><section id="S-REPORTING-TRANSPORT-MEANS-PROGRESS-STATUS"><title>Reporting Transport Means Progress Status</title><para>The <link linkend="S-TRANSPORT-PROGRESS-STATUS-SCHEMA">Transport Progress Status</link> collects and reports information about the status of the transport means. The Transport Service Provider issues a <link linkend="S-TRANSPORT-PROGRESS-STATUS-REQUEST-SCHEMA">Transport Progress
                 Status Request</link> to ask the Transportation Network Manager for status information related to a specific transport vehicle, using the vehicle identification number.</para><para>The Transportation Network Manager then provides information about the location and time schedule status to the Transport Service Provider. During a transport service, there might be a number of information providers taking on the Transportation Network Manager role, offering
-              Transport Progress Statuses to the Transport Service Provider.</para><para>The most typical use of Transport Progress Status is to ask assistance from the Transportation Network Manager when estimated times of arrival are established. Reporting on the status of the goods themselves is covered by the Freight Status Reporting process (see <xref linkend="S-FREIGHT-STATUS-REPORTING"/>).</para><figure id="F-TRANSPORT-PROGRESS-STATUS" float="0"><title>Transport Progress Status</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.2-IMFM-TransportProgressStatus.png"/></imageobject><textobject><phrase>[TPS Diagram]</phrase></textobject></mediaobject></figure></section><!--<section id="S-COMMON-TRANSPORTATION-REPORT">
-            <title>Common Transportation Report</title>
-            <para>The <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link> collects and reports information about events and status of a transport means. It can be used for requirements regarding boarder crossing, ship or shore or shore to ship reporting. It is
-              meant to be mapped to the numerous single window declaration and for other reporting to authories.</para>
-            <figure id="F-COMMON-TRANSPORTATION-REPORT">
-              <title>Common Transportation Report</title>
-              <mediaobject>
-                <imageobject>
-                  <imagedata fileref="art/UBL-2.3-CommonTransportationReportProcess.png"/>
-                </imageobject>
-                <textobject>
-                  <phrase>[Common Transportation Report Progress]</phrase>
-                </textobject>
-              </mediaobject>
-            </figure>
-          </section>--></section></section><section id="S-RETURN"><title>Return</title><para>Organizations may be required to handle the return of containers, packaging, or defective product. The return involves the management of business rules, return inventory, assets, transportation, and regulatory requirements.</para><para>Currently there are no specific UBL digital business documents associated with these processes. However we anticipate and welcome submissions from the industry for document types that may be utilized in these processes.</para></section><section id="S-PAY"><title>Pay</title><section id="S-BILLING"><title>Billing</title><section id="S-BILLING-INTRODUCTION"><title>Billing Introduction</title><para>In the Billing process, a request is made for payment for goods or services that have been ordered, received, or consumed. In practice, there are several ways in which goods or services may be billed.</para><para>Document types in these processes are <link linkend="S-INVOICE-SCHEMA">Invoice</link>, <link linkend="S-CREDIT-NOTE-SCHEMA">Credit Note</link>, <link linkend="S-DEBIT-NOTE-SCHEMA">Debit Note</link>, and <link linkend="S-APPLICATION-RESPONSE-SCHEMA">Application
+              Transport Progress Statuses to the Transport Service Provider.</para><para>The most typical use of Transport Progress Status is to ask assistance from the Transportation Network Manager when estimated times of arrival are established. Reporting on the status of the goods themselves is covered by the Freight Status Reporting process (see <xref linkend="S-FREIGHT-STATUS-REPORTING"/>).</para><figure id="F-TRANSPORT-PROGRESS-STATUS" float="0"><title>Transport Progress Status</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.2-IMFM-TransportProgressStatus.png"/></imageobject><textobject><phrase>[TPS Diagram]</phrase></textobject></mediaobject></figure></section><section id="S-COMMON-TRANSPORTATION-REPORT"><title>Common Transportation Report</title><para>The <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link> collects and reports information about events and status of a transport means. It can be used for requirements regarding border crossing, ship to shore, or shore to ship reporting. It is
+              meant to be mapped to numerous single window declarations and for other reporting to authorities.</para><figure id="F-COMMON-TRANSPORTATION-REPORT" float="0"><title>Common Transportation Report</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.3-CommonTransportationReportProcess.png"/></imageobject><textobject><phrase>[Common Transportation Report Progress]</phrase></textobject></mediaobject></figure></section></section></section><section id="S-RETURN"><title>Return</title><para>Organizations may be required to handle the return of containers, packaging, or defective product. The return involves the management of business rules, return inventory, assets, transportation, and regulatory requirements.</para><para>Currently there are no specific UBL digital business documents associated with these processes. However we anticipate and welcome submissions from the industry for document types that may be utilized in these processes.</para></section><section id="S-PAY"><title>Pay</title><section id="S-BILLING"><title>Billing</title><section id="S-BILLING-INTRODUCTION"><title>Billing Introduction</title><para>In the Billing process, a request is made for payment for goods or services that have been ordered, received, or consumed. In practice, there are several ways in which goods or services may be billed.</para><para>Document types in these processes are <link linkend="S-INVOICE-SCHEMA">Invoice</link>, <link linkend="S-CREDIT-NOTE-SCHEMA">Credit Note</link>, <link linkend="S-DEBIT-NOTE-SCHEMA">Debit Note</link>, and <link linkend="S-APPLICATION-RESPONSE-SCHEMA">Application
               Response</link>.</para><para>For UBL we assume the following billing methods:</para><orderedlist numeration="arabic" inheritnum="ignore" continuation="restarts"><listitem><para>Traditional Billing</para><orderedlist numeration="loweralpha" inheritnum="ignore" continuation="restarts"><listitem><para>Using Credit Note</para></listitem><listitem><para>Using Debit Note</para></listitem></orderedlist></listitem><listitem><para>Self Billing (also known as billing on receipt)</para><orderedlist numeration="loweralpha" inheritnum="ignore" continuation="restarts"><listitem><para>Using Credit Note</para></listitem><listitem><para>Using Self Billed Credit Note</para></listitem></orderedlist></listitem></orderedlist></section><section id="S-BILLING-BUSINESS-RULES"><title>Billing Business Rules</title><para>An <link linkend="S-INVOICE-SCHEMA">Invoice</link> defines the financial consequences of a business transaction. The Invoice is normally issued on the basis of one despatch event triggering one Invoice. An Invoice may also be issued for pre-payment on a whole or partial basis. The
               possibilities are:</para><itemizedlist mark="bullet"><listitem><para>Prepayment invoice (payment expected)</para></listitem><listitem><para>Proforma invoice (pre Despatch Advice, payment not expected)</para></listitem><listitem><para>Normal Invoice, on despatch for despatched items</para></listitem><listitem><para>Invoice after return of Receipt Advice</para></listitem></itemizedlist><para>The Invoice only contains the information that is necessary for invoicing purposes. It does not reiterate any information already established in the <link linkend="S-ORDER-SCHEMA">Order</link>, <link linkend="S-ORDER-CHANGE-SCHEMA">Order Change</link>, <link linkend="S-ORDER-RESPONSE-SCHEMA">Order Response</link>, <link linkend="S-DESPATCH-ADVICE-SCHEMA">Despatch Advice</link>, or <link linkend="S-RECEIPT-ADVICE-SCHEMA">Receipt Advice</link> that is not necessary when invoicing. If necessary, the Invoice refers to the Order, Despatch
               Advice, or Receipt Advice by a Reference for those documents.</para><para>The Invoice allows for compound taxes, the sequence of calculation being implied by the sequence of information repeated in the data stream (e.g., Energy tax, with VAT—Value Added Tax—superimposed).</para><para>Charges may be specified either as a lump sum or by percentage applied to the whole Invoice value prior to calculation of taxes. Such charges cover:</para><itemizedlist mark="bullet"><listitem><para>Packaging</para></listitem><listitem><para>Delivery/postage</para></listitem><listitem><para>Freight</para></listitem><listitem><para>Documentation</para></listitem></itemizedlist><para>Each Invoice Line refers to any related Order Line(s) and may also refer to the Despatch Line and/or Receipt Line.</para></section><section id="S-TRADITIONAL-BILLING"><title>Traditional Billing</title><section id="S-TRADITIONAL-BILLING-INTRODUCTION"><title>Traditional Billing Introduction</title><para>Traditional billing is where the supplier invoices the customer when the goods are delivered or the services are provided. In this case, the invoice may be created at the time of despatch or when the Delivery Party acknowledges that the goods have been received (using a Receipt
@@ -1184,8 +1168,20 @@
                <link linkend="S-TRANSIT-CUSTOMS-DECLARATION-SCHEMA">Transit Customs Declaration</link>
             </entry><entry align="left">
                <link linkend="S-APPLICATION-RESPONSE-SCHEMA">Application Response</link>
-            </entry></row><row><entry align="left">Party</entry><entry align="left">Customs</entry><entry align="left">The party who is receiving a Customs Declaration</entry><entry align="left">A Customs Party receives a <link linkend="S-EXPORT-CUSTOMS-DECLARATION-SCHEMA">Export Customs Declaration</link> from a Exporter Party</entry><entry align="left"/><entry align="left">
+            </entry></row><row><entry align="left">Party</entry><entry align="left">Receiving Logistic Operator</entry><entry align="left">The party who in the role of a logistic operator is receiving a <link linkend="S-MANIFEST-SCHEMA">Manifest</link>
+            </entry><entry align="left">A ground handling in an airport receives a <link linkend="S-MANIFEST-SCHEMA">Manifest</link> from a logistic operator.</entry><entry align="left"/><entry align="left"/><entry align="left">
+               <link linkend="S-MANIFEST-SCHEMA">Manifest</link>
+            </entry></row><row><entry align="left">Party</entry><entry align="left">Sending Logistic Operator</entry><entry align="left">The party who in the role of a logistic operator is sending a <link linkend="S-MANIFEST-SCHEMA">Manifest</link>
+            </entry><entry align="left">A logistic operator consolidates some goods in a terminal and ships it along with a <link linkend="S-MANIFEST-SCHEMA">Manifest</link> to a ground handler in an Airport</entry><entry align="left">Freight Forwarder</entry><entry align="left">
+               <link linkend="S-MANIFEST-SCHEMA">Manifest</link>
+            </entry><entry align="left"/></row><row><entry align="left">Party</entry><entry align="left">Customs</entry><entry align="left">The party who is receiving a Customs Declaration</entry><entry align="left">A Customs Party receives a <link linkend="S-EXPORT-CUSTOMS-DECLARATION-SCHEMA">Export Customs Declaration</link> from a Exporter Party</entry><entry align="left"/><entry align="left">
                <link linkend="S-EXPORT-CUSTOMS-DECLARATION-SCHEMA">Export Customs Declaration</link>
+            </entry><entry align="left"/></row><row><entry align="left">Party</entry><entry align="left">Authority</entry><entry align="left">The party who is receiving a <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link>
+            </entry><entry align="left">An Authority party receives a <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link> from a Logistics operator as reporter</entry><entry align="left"/><entry align="left"/><entry align="left">
+               <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link>
+            </entry></row><row><entry align="left">Party</entry><entry align="left">Reporter</entry><entry align="left">The party who is sending a <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link>
+            </entry><entry align="left">A Logistic operator sends a <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link> to a harbour</entry><entry align="left">Logistics Operator</entry><entry align="left">
+               <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link>
             </entry><entry align="left"/></row></tbody></tgroup></table></section></section><section id="S-UBL-2.3-SCHEMAS"><title>UBL 2.3 Schemas</title><section id="S-UBL-2.3-SCHEMAS-INTRODUCTION"><title>UBL 2.3 Schemas Introduction</title><para>The UBL XSD schemas <xref linkend="xsd1"/>
         <xref linkend="xsd2"/> are the only normative representations of the UBL document types and library components for the purposes of XML <xref linkend="xml"/> document validation and conformance.</para><para>All of the UBL XSD schemas are contained in the <literal moreinfo="none">xsd</literal> subdirectory of the UBL release package (see <xref linkend="A-RELEASE-NOTES"/> for more information regarding the structure of the release package and <xref linkend="S-SCHEMA-DEPENDENCIES"/> for information regarding
         dependencies among the schema modules). The <literal moreinfo="none">xsd</literal> directory is further subdivided into an <literal moreinfo="none">xsd/maindoc</literal> subdirectory containing the schemas for individual document types and an <literal moreinfo="none">xsd/common</literal> subdirectory containing schemas in the UBL common
@@ -1656,6 +1652,52 @@
                   <para>
                      <literal moreinfo="none">
                         <ulink url="mod/summary/reports/UBL-CertificateOfOrigin-2.3.html">mod/summary/reports/UBL-CertificateOfOrigin-2.3.html</ulink>
+                     </literal>
+                  </para>
+               </entry></row></tbody></tgroup></informaltable></section><section id="S-COMMON-TRANSPORTATION-REPORT-SCHEMA"><title>Common Transportation Report Schema</title><para>Description: A document used report transportation events to an authority.</para><informaltable><tgroup cols="2"><colspec colwidth="30*"/><colspec colwidth="70*"/><tbody><row><entry>
+                  <para>Processes involved</para>
+               </entry><entry>
+                  <para>
+                     <link linkend="S-COMMON-TRANSPORTATION-REPORT">Common Transportation Report</link>
+                  </para>
+               </entry></row><row><entry>
+                  <para>Submitter role</para>
+               </entry><entry>
+                  <para>Reporter party</para>
+               </entry></row><row><entry>
+                  <para>Receiver role</para>
+               </entry><entry>
+                  <para>Authority party</para>
+               </entry></row><row><entry>
+                  <para>Normative schema</para>
+               </entry><entry>
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="xsd/maindoc/UBL-CommonTransportationReport-2.3.xsd">xsd/maindoc/UBL-CommonTransportationReport-2.3.xsd</ulink>
+                     </literal>
+                  </para>
+               </entry></row><row><entry>
+                  <para>Runtime schema</para>
+               </entry><entry>
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="xsdrt/maindoc/UBL-CommonTransportationReport-2.3.xsd">xsdrt/maindoc/UBL-CommonTransportationReport-2.3.xsd</ulink>
+                     </literal>
+                  </para>
+               </entry></row><row><entry>
+                  <para>Summary report</para>
+               </entry><entry>
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="mod/summary/reports/UBL-CommonTransportationReport-2.3.html">mod/summary/reports/UBL-CommonTransportationReport-2.3.html</ulink>
+                     </literal>
+                  </para>
+               </entry></row><row><entry>
+                  <para>UBL 2.3 example instance</para>
+               </entry><entry role="schemaExample">
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="xml/UBL-CommonTransportationReport-2.3-Example.xml">xml/UBL-CommonTransportationReport-2.3-Example.xml</ulink>
                      </literal>
                   </para>
                </entry></row></tbody></tgroup></informaltable></section><section id="S-CONTRACT-AWARD-NOTICE-SCHEMA"><title>Contract Award Notice Schema</title><para>Description: A document published by a Contracting Party to announce the awarding of a
@@ -3005,6 +3047,60 @@
                   <para>
                      <literal moreinfo="none">
                         <ulink url="mod/summary/reports/UBL-ItemInformationRequest-2.3.html">mod/summary/reports/UBL-ItemInformationRequest-2.3.html</ulink>
+                     </literal>
+                  </para>
+               </entry></row></tbody></tgroup></informaltable></section><section id="S-MANIFEST-SCHEMA"><title>Manifest Schema</title><para>Description: A document used to specify the quantity and nature of cargo and personel for a single shipment stage often expressed as a set of consignments.</para><informaltable><tgroup cols="2"><colspec colwidth="30*"/><colspec colwidth="70*"/><tbody><row><entry>
+                  <para>Processes involved</para>
+               </entry><entry>
+                  <para>
+                     <link linkend="S-MANIFEST">Manifest</link>
+                  </para>
+               </entry></row><row><entry>
+                  <para>Submitter role</para>
+               </entry><entry>
+                  <para>Sending Logistic Operator party</para>
+               </entry></row><row><entry>
+                  <para>Receiver role</para>
+               </entry><entry>
+                  <para>Receiving Logistic Operator party</para>
+               </entry></row><row><entry>
+                  <para>Normative schema</para>
+               </entry><entry>
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="xsd/maindoc/UBL-Manifest-2.3.xsd">xsd/maindoc/UBL-Manifest-2.3.xsd</ulink>
+                     </literal>
+                  </para>
+               </entry></row><row><entry>
+                  <para>Runtime schema</para>
+               </entry><entry>
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="xsdrt/maindoc/UBL-Manifest-2.3.xsd">xsdrt/maindoc/UBL-Manifest-2.3.xsd</ulink>
+                     </literal>
+                  </para>
+               </entry></row><row><entry>
+                  <para>Summary report</para>
+               </entry><entry>
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="mod/summary/reports/UBL-Manifest-2.3.html">mod/summary/reports/UBL-Manifest-2.3.html</ulink>
+                     </literal>
+                  </para>
+               </entry></row><row><entry>
+                  <para>UBL 2.3 example instance</para>
+               </entry><entry role="schemaExample">
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="xml/UBL-Manifest-2.3-Example-Reference-Only.xml">xml/UBL-Manifest-2.3-Example-Reference-Only.xml</ulink>
+                     </literal>
+                  </para>
+               </entry></row><row><entry>
+                  <para>UBL 2.3 example instance</para>
+               </entry><entry role="schemaExample">
+                  <para>
+                     <literal moreinfo="none">
+                        <ulink url="xml/UBL-Manifest-2.3-Example-Shipment.xml">xml/UBL-Manifest-2.3-Example-Shipment.xml</ulink>
                      </literal>
                   </para>
                </entry></row></tbody></tgroup></informaltable></section><section id="S-ORDER-SCHEMA"><title>Order Schema</title><para>Description: A document used to order goods and services.</para><informaltable><tgroup cols="2"><colspec colwidth="30*"/><colspec colwidth="70*"/><tbody><row><entry>
@@ -5583,7 +5679,7 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
             <ulink conformance="skip" url="https://docs.oasis-open.org/ubl/"/>
           </para></listitem></itemizedlist><para>Online and downloadable versions of the latest ISO/IEC release of this package are available from:</para><itemizedlist><listitem><para>
             <ulink conformance="skip" url="http://standards.iso.org/ittf/PubliclyAvailableStandards/"/>
-          </para></listitem></itemizedlist></section><section id="S-PACKAGE-STRUCTURE"><title>Package Structure</title><para>The UBL 2.3 specification is published as a zip archive in the release directory. Unzipping this archive creates a directory named csd03-UBL-2.3 containing a master DocBook XML file (UBL-2.3.xml), a generated hypertext version of this file (UBL-2.3.html), a generated PDF version of
+          </para></listitem></itemizedlist></section><section id="S-PACKAGE-STRUCTURE"><title>Package Structure</title><para>The UBL 2.3 specification is published as a zip archive in the release directory. Unzipping this archive creates a directory named csd04-UBL-2.3 containing a master DocBook XML file (UBL-2.3.xml), a generated hypertext version of this file (UBL-2.3.html), a generated PDF version of
         this file (UBL-2.3.pdf), and a number of subdirectories. The files in these subdirectories, linked to from UBL-2.3.xml, UBL-2.3.html, and UBL-2.3.pdf, contain the various normative and informational pieces of the 2.3 release. A description of each subdirectory is given below. Note that while
         the UBL-2.3.xml file is the “original” of this specification, it may not be viewable in all currently available web browsers.</para><blockquote><para>
           <emphasis role="bold">
@@ -5715,12 +5811,12 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
         </para><para>
           <emphasis role="bold">Added UBL 2.2 document types for business directories and agreements:</emphasis>
           <link linkend="S-BUSINESS-CARD-SCHEMA">Business Card</link>, <link linkend="S-DIGITAL-AGREEMENT-SCHEMA">Digital Agreement</link>, <link linkend="S-DIGITAL-CAPABILITY-SCHEMA">Digital Capability</link>
-        </para></blockquote></section><section id="S-MINOR-REVISION-UBL-2.3"><title>Minor Revision: UBL 2.3</title><section id="S-NEW-DOCUMENT-TYPES-IN-UBL-2.3" role="newDocumentTypes23"><title>New Document Types in UBL 2.3</title><para>Because it preserves backward compatibility with UBL 2.2, UBL 2.1, and UBL 2.0, UBL 2.3 is technically a minor release, not a major one. However, it does add eight new document types, bringing the total number of UBL business documents to 89.</para><blockquote><!--reviewtext--><para>
+        </para></blockquote></section><section id="S-MINOR-REVISION-UBL-2.3"><title>Minor Revision: UBL 2.3</title><section id="S-NEW-DOCUMENT-TYPES-IN-UBL-2.3" role="newDocumentTypes23"><title>New Document Types in UBL 2.3</title><para>Because it preserves backward compatibility with UBL 2.2, UBL 2.1, and UBL 2.0, UBL 2.3 is technically a minor release, not a major one. However, it does add ten new document types, bringing the total number of UBL business documents to 91.</para><blockquote><!--reviewtext--><para>
             <emphasis role="bold">Added UBL 2.3 document types for transportation: </emphasis>
-            <link linkend="S-EXPORT-CUSTOMS-DECLARATION-SCHEMA">Export Customs Declaration</link>, <link linkend="S-GOODS-CERTIFICATE-SCHEMA">Goods Certificate</link> , <link linkend="S-GOODS-ITEM-PASSPORT-SCHEMA">Goods Item Passport</link>, <link linkend="S-IMPORT-CUSTOMS-DECLARATION-SCHEMA">Import
-              Customs Declaration</link>, <link linkend="S-PROOF-OF-REEXPORTATION-SCHEMA">Proof Of Reexportation</link>, <link linkend="S-PROOF-OF-REEXPORTATION-REMINDER-SCHEMA">Proof Of Reexportation Reminder</link>, <link linkend="S-PROOF-OF-REEXPORTATION-REQUEST-SCHEMA">Proof Of Reexportation
+            <link linkend="S-COMMON-TRANSPORTATION-REPORT-SCHEMA">Common Transportation Report</link>, <link linkend="S-EXPORT-CUSTOMS-DECLARATION-SCHEMA">Export Customs Declaration</link>, <link linkend="S-GOODS-CERTIFICATE-SCHEMA">Goods
+            Certificate</link><?oxy_delete author="admin" timestamp="20201118T193907-0500" content=" "?>, <link linkend="S-GOODS-ITEM-PASSPORT-SCHEMA">Goods Item Passport</link>, <link linkend="S-IMPORT-CUSTOMS-DECLARATION-SCHEMA">Import Customs Declaration</link>, <link linkend="S-MANIFEST-SCHEMA">Manifest</link>, <link linkend="S-PROOF-OF-REEXPORTATION-SCHEMA">Proof Of Reexportation</link>, <link linkend="S-PROOF-OF-REEXPORTATION-REMINDER-SCHEMA">Proof Of Reexportation Reminder</link>, <link linkend="S-PROOF-OF-REEXPORTATION-REQUEST-SCHEMA">Proof Of Reexportation
               Request</link>, <link linkend="S-TRANSIT-CUSTOMS-DECLARATION-SCHEMA">Transit Customs Declaration</link></para></blockquote></section><section id="S-SCHEMA-CHANGES-FROM-UBL-2.2-TO-UBL-2.3"><title>Schema changes from UBL 2.2 to UBL 2.3</title><section id="S-SCHEMA-CHANGES-INTRODUCTION"><title>Schema Changes Introduction</title><para>The following two tables show the differences between the XML elements in UBL 2.2 and those in UBL 2.3.</para><para>All changes in 2.3 schemas are backward-compatible with valid UBL 2.2, UBL 2.1, and UBL 2.0 instances. Changes include the addition of new elements and attributes; changes in cardinality from 1 to 0..1 (i.e., making a formerly required element optional); changes in cardinality from 1
-            to 1..n or from 0..1 to 0..n (i.e., allowing an unlimited number of occurrences instead of just one); and corrections to Dictionary Entry Names (DENs).</para></section><section id="S-CHANGES-TO-LIBRARY-ELEMENTS-UBL-2.2-TO-UBL-2.3"><title>Changes to Library Elements, UBL 2.2 to UBL 2.3</title><para>A number of changes related to pre-award semantic components further the support of notification documents:</para><itemizedlist><listitem><para>a richer set of structured information elements such as “prize” and “concession revenue” elements, and</para></listitem><listitem><para>making documents fitter for purpose to support more scenarios by relaxing some cardinalities, for example:</para><itemizedlist><listitem><para>Tendering Criterion Property is no longer mandatory to allow for the case when a Tendering Criterion is composed of sub criteria, in which case the master criterion has no property itself), and</para></listitem><listitem><para>adding ASBIEs ( e.g. “Additional Notice Language” to support multiple official languages), in particular to support the <phrase lang="none">eForms</phrase> implementing regulation (Commission Implementing Regulation (EU) 2019/1780).</para></listitem></itemizedlist></listitem></itemizedlist><para>The following table sums up the differences between the XML elements in the UBL 2.2 Common Library and those in the UBL 2.3 Common Library.</para><table conformance="skip" id="T-SUMMARY-CHANGES-TO-LIBRARY-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL-2.3-CSD03-TO-2.2"><title>Summary changes to Library Elements Universal Business Language UBL 2.3 CSD03 to 2.2</title><!--Summary changes to Library Elements UBL 2.3--><tgroup cols="3"><!--Library UBL 2.3--><colspec colwidth="35*"/><colspec colwidth="35*"/><colspec colwidth="30*"/><thead><row><entry>Aggregate BIE</entry><entry>Basic or Association BIE</entry><entry>Changes for UBL</entry></row></thead><tbody><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            to 1..n or from 0..1 to 0..n (i.e., allowing an unlimited number of occurrences instead of just one); and corrections to Dictionary Entry Names (DENs).</para></section><section id="S-CHANGES-TO-LIBRARY-ELEMENTS-UBL-2.2-TO-UBL-2.3"><title>Changes to Library Elements, UBL 2.2 to UBL 2.3</title><para>A number of changes related to pre-award semantic components further the support of notification documents:</para><itemizedlist><listitem><para>a richer set of structured information elements such as “prize” and “concession revenue” elements, and</para></listitem><listitem><para>making documents fitter for purpose to support more scenarios by relaxing some cardinalities, for example:</para><itemizedlist><listitem><para>Tendering Criterion Property is no longer mandatory to allow for the case when a Tendering Criterion is composed of sub criteria, in which case the master criterion has no property itself), and</para></listitem><listitem><para>adding ASBIEs ( e.g. “Additional Notice Language” to support multiple official languages), in particular to support the <phrase lang="none">eForms</phrase> implementing regulation (Commission Implementing Regulation (EU) 2019/1780).</para></listitem></itemizedlist></listitem></itemizedlist><para>The following table sums up the differences between the XML elements in the UBL 2.2 Common Library and those in the UBL 2.3 Common Library.</para><table conformance="skip" id="T-SUMMARY-CHANGES-TO-LIBRARY-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL-2.3-CSD04-TO-2.2"><title>Summary changes to Library Elements Universal Business Language UBL 2.3 CSD04 to 2.2</title><!--Summary changes to Library Elements UBL 2.3--><tgroup cols="3"><!--Library UBL 2.3--><colspec colwidth="35*"/><colspec colwidth="35*"/><colspec colwidth="30*"/><thead><row><entry>Aggregate BIE</entry><entry>Basic or Association BIE</entry><entry>Changes for UBL</entry></row></thead><tbody><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Address.Details">Address</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Address.Description.Text">Description</ulink>
@@ -5752,7 +5848,9 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Certificate.CertificateTypeCode.Code">CertificateTypeCode</ulink>
          </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Certificate.CertificateType.Text">CertificateType</ulink>
-         </entry><entry>Changed cardinality from 1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+         </entry><entry>Changed cardinality from 1 to 0..n</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Certificate.Issuer_Party.Party">IssuerParty</ulink>
+         </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.Details">Consignment</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.OfficeOfEntry_Location.Location">OfficeOfEntryLocation</ulink>
@@ -5877,6 +5975,10 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsProcessing.Details">GoodsProcessing</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousGoodsTransit.Details">HazardousGoodsTransit</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousGoodsTransit.TransitDescription.Text">TransitDescription</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.Details">HazardousItem</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.UNPackingGroupCode.Code">UNPackingGroupCode</ulink>
@@ -5884,6 +5986,10 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.UNPackingGroup.Text">UNPackingGroup</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.TunnelRestrictionCode.Code">TunnelRestrictionCode</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.Maritime_PollutantCode.Code">MaritimePollutantCode</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.PositionOnBoard_Stowage.Stowage">PositionOnBoardStowage</ulink>
          </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ISPSRequirements.Details">ISPSRequirements</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
@@ -5927,7 +6033,7 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.INFShip_ClassCode.Code">INFShipClassCode</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.Antenna_Location.Location">AntennaLocation</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.AntennaLocus.Text">AntennaLocus</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.VesselDynamics">VesselDynamics</ulink>
          </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
@@ -5947,8 +6053,18 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
          </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.Details">PaymentMeans</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.ChargeBearerCode.Code">ChargeBearerCode</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.ServiceLevelCode.Code">ServiceLevelCode</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.CardAccount">CardAccount</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.Remittance_DocumentDistribution.DocumentDistribution">RemittanceDocumentDistribution</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Person.Details">Person</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Person.Birthplace_Location.Location">BirthplaceLocation</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PersonnelHealthIncident.Details">PersonnelHealthIncident</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PortCall.Details">PortCall</ulink>
@@ -6003,13 +6119,31 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-SecurityClearanceTerm.Details">SecurityClearanceTerm</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-SecurityMeasure.Details">SecurityMeasure</ulink>
+         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipRequirement.Details">ShipRequirement</ulink>
+         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipStoreArticle.Details">ShipStoreArticle</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipToShipActivityRecord.Details">ShipToShipActivityRecord</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Shipment.Details">Shipment</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Shipment.Identifier">ID</ulink>
+         </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.Details">ShipmentStage</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.ShipmentStageTypeCode.Code">ShipmentStageTypeCode</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.ShipmentStageType.Text">ShipmentStageType</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.Cabotage_Indicator.Indicator">CabotageIndicator</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.HazardousRisk_Indicator.Indicator">HazardousRiskIndicator</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.Destination_PortCall.PortCall">DestinationPortCall</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.ShipStoreArticle">ShipStoreArticle</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.CrewPersonEffect">CrewPersonEffect</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
@@ -6060,6 +6194,10 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderedProject.Additional_Fee.Fee">AdditionalFee</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderedProject.ProcurementProjectLot">ProcurementProjectLot</ulink>
+         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TendererQualificationRequest.Details">TendererQualificationRequest</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TendererQualificationRequest.CompanyLegalForm.Text">CompanyLegalForm</ulink>
          </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderingCriterion.Details">TenderingCriterion</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
@@ -6122,7 +6260,9 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-VesselDynamics.Details">VesselDynamics</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-WHOAffectedAreaVisit.Details">WHOAffectedAreaVisit</ulink>
-         </entry><entry> </entry><entry>Added</entry></row></tbody></tgroup></table></section><section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-UBL-2.2-TO-UBL-2.3"><title>Changes to Document Elements, UBL 2.2 to UBL 2.3</title><para>The following table sums up the differences between the XML elements in the UBL 2.2 document schemas and those in the UBL 2.3 document schemas.</para><table conformance="skip" id="T-SUMMARY-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL-2.3-CSD03-TO-2.2"><title>Summary changes to Document Elements Universal Business Language UBL 2.3 csd03 to 2.2</title><!--Summary changes to Document Elements UBL 2.3--><tgroup cols="3"><!--Document UBL 2.3--><colspec colwidth="35*"/><colspec colwidth="35*"/><colspec colwidth="30*"/><thead><row><entry>Aggregate BIE</entry><entry>Basic or Association BIE</entry><entry>Changes for UBL</entry></row></thead><tbody><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+         </entry><entry> </entry><entry>Added</entry></row></tbody></tgroup></table></section><section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-UBL-2.2-TO-UBL-2.3"><title>Changes to Document Elements, UBL 2.2 to UBL 2.3</title><para>The following table sums up the differences between the XML elements in the UBL 2.2 document schemas and those in the UBL 2.3 document schemas.</para><table conformance="skip" id="T-SUMMARY-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL-2.3-CSD04-TO-2.2"><title>Summary changes to Document Elements Universal Business Language UBL 2.3 csd04 to 2.2</title><!--Summary changes to Document Elements UBL 2.3--><tgroup cols="3"><!--Document UBL 2.3--><colspec colwidth="35*"/><colspec colwidth="35*"/><colspec colwidth="30*"/><thead><row><entry>Aggregate BIE</entry><entry>Basic or Association BIE</entry><entry>Changes for UBL</entry></row></thead><tbody><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-CommonTransportationReport.Details">CommonTransportationReport</ulink>
+         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ContractAwardNotice.Details">ContractAwardNotice</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ContractAwardNotice.VersionIdentifier.Identifier">VersionID</ulink>
@@ -6169,6 +6309,8 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Invoice.Accounting_CustomerParty.CustomerParty">AccountingCustomerParty</ulink>
          </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Manifest.Details">Manifest</ulink>
+         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PriorInformationNotice.Details">PriorInformationNotice</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PriorInformationNotice.VersionIdentifier.Identifier">VersionID</ulink>
@@ -6188,254 +6330,104 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"&gt;
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportationRequest.Details">ProofOfReexportationRequest</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TransitCustomsDeclaration.Details">TransitCustomsDeclaration</ulink>
-         </entry><entry> </entry><entry>Added</entry></row></tbody></tgroup></table></section></section><section id="S-SCHEMA-CHANGES-FROM-UBL-2.3-CSPRD02-TO-UBL-2.3-CSPRD03"><title>Schema changes from UBL 2.3 csprd02 to UBL 2.3 csprd03</title><section id="S-SCHEMA-CHANGES-DURING-DEVELOPMENT"><title>Schema Changes During Development</title><para>The following two tables show the differences between the XML elements in UBL 2.3 csprd03 and those in UBL 2.3 csprd02.</para><para>During development such changes may not be backward compatible to a previous development version, but never will these not be backward compatible to all previously released final versions.</para><para>This is a temporary annex and will not be included in the final version of UBL 2.3.</para></section><section id="S-CHANGES-TO-LIBRARY-ELEMENTS-UBL-2.3-CSPRD02-TO-UBL-2.3-CSPRD03"><title>Changes to Library Elements, UBL 2.3 csprd02 to UBL 2.3 csprd03</title><para>The following table sums up the differences between the XML elements in the common libraries of development versions.</para><table conformance="skip" id="T-SUMMARY-CHANGES-TO-LIBRARY-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL-2.3-CSD03-TO-2.3-CSPRD02"><title>Summary changes to Library Elements Universal Business Language UBL 2.3 csd03 to 2.3 csprd02</title><!--Summary changes to Library Elements UBL 2.3--><tgroup cols="3"><!--Library UBL 2.3--><colspec colwidth="35*"/><colspec colwidth="35*"/><colspec colwidth="30*"/><thead><row><entry>Aggregate BIE</entry><entry>Basic or Association BIE</entry><entry>Changes for UBL</entry></row></thead><tbody><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+         </entry><entry> </entry><entry>Added</entry></row></tbody></tgroup></table></section></section><section id="S-SCHEMA-CHANGES-FROM-UBL-2.3-CSD03-TO-UBL-2.3-CSD04"><title>Schema changes from UBL 2.3 csd03 to UBL 2.3 csd04</title><section id="S-SCHEMA-CHANGES-DURING-DEVELOPMENT"><title>Schema Changes During Development</title><para>The following two tables show the differences between the XML elements in UBL 2.3 csd03 and those in UBL 2.3 csd04.</para><para>During development such changes may not be backward compatible to a previous development version, but never will these not be backward compatible to all previously released final versions.</para><para>This is a temporary annex and will not be included in the final version of UBL 2.3.</para></section><section id="S-CHANGES-TO-LIBRARY-ELEMENTS-UBL-2.3-CSD03-TO-UBL-2.3-CSD04"><title>Changes to Library Elements, UBL 2.3 csd03 to UBL 2.3 csd04</title><para>The following table sums up the differences between the XML elements in the common libraries of development versions.</para><table conformance="skip" id="T-SUMMARY-CHANGES-TO-LIBRARY-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL-2.3-CSD04-TO-2.3-CSD03"><title>Summary changes to Library Elements Universal Business Language UBL 2.3 csd04 to 2.3 csd03</title><!--Summary changes to Library Elements UBL 2.3--><tgroup cols="3"><!--Library UBL 2.3--><colspec colwidth="35*"/><colspec colwidth="35*"/><colspec colwidth="30*"/><thead><row><entry>Aggregate BIE</entry><entry>Basic or Association BIE</entry><entry>Changes for UBL</entry></row></thead><tbody><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Attestation.Details">Attestation</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Attestation.Name">Name</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Attestation.AcceptanceIndicator.Indicator">AcceptanceIndicator</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-AwardingTerms.Details">AwardingTerms</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-AwardingTerms.Prize">Prize</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-BallastWaterSummary.Details">BallastWaterSummary</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-BallastWaterTransaction.Details">BallastWaterTransaction</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Attestation.Issuer_Party.Party">IssuerParty</ulink>
+         </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Attestation.AttestationLine">AttestationLine</ulink>
+         </entry><entry>Changed cardinality from 1 to 1..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Certificate.Details">Certificate</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Certificate.CertificateTypeCode.Code">CertificateTypeCode</ulink>
-         </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Certificate.CertificateType.Text">CertificateType</ulink>
-         </entry><entry>Changed cardinality from 1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.Details">Consignment</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.OfficeOfEntry_Location.Location">OfficeOfEntryLocation</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.OfficeOfSubSequentiallyEntry_Location.Location">OfficeOfSubSequentiallyEntryLocation</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.OfficeOfExit_Location.Location">OfficeOfExitLocation</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.OfficeOfDeparture_Location.Location">OfficeOfDepartureLocation</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.OfficeOfDestination_Location.Location">OfficeOfDestinationLocation</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.OfficeOfImport_Location.Location">OfficeOfImportLocation</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.OfficeOfExport_Location.Location">OfficeOfExportLocation</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Consignment.DocumentReference">DocumentReference</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ContractingActivity.Details">ContractingActivity</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ContractingActivity.ActivityType.Text">ActivityType</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ContractingPartyType.Details">ContractingPartyType</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ContractingPartyType.PartyType.Text">PartyType</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ContractingRepresentationType.Details">ContractingRepresentationType</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ContractingRepresentationType.RepresentationType.Text">RepresentationType</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-CrewPersonEffect.Details">CrewPersonEffect</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DespatchLine.Details">DespatchLine</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DespatchLine.Sub_DespatchLine.DespatchLine">SubDespatchLine</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentDistribution.Details">DocumentDistribution</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentDistribution.Identifier">ID</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentDistribution.DistributionTypeCode.Code">DistributionTypeCode</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentDistribution.DistributionType.Text">DistributionType</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentDistribution.Print_Qualifier.Text">PrintQualifier</ulink>
-         </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentDistribution.Copy_Indicator.Indicator">CopyIndicator</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentDistribution.Communication">Communication</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentReference.Details">DocumentReference</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-DocumentReference.DocumentType.Text">DocumentType</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsItem.Details">GoodsItem</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsItem.CustomsProcedureCode.Code">CustomsProcedureCode</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsItem.OrderLineReference">OrderLineReference</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsItemPassportCounterfoil.Details">GoodsItemPassportCounterfoil</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsItemPassportCounterfoil.GoodsItemPassportIdentifier.Identifier">GoodsItemPassportID</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Certificate.Issuer_Party.Party">IssuerParty</ulink>
          </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousGoodsTransit.Details">HazardousGoodsTransit</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousGoodsTransit.TransitDescription.Text">TransitDescription</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.Details">HazardousItem</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.UNPackingGroupCode.Code">UNPackingGroupCode</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.Maritime_PollutantCode.Code">MaritimePollutantCode</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.UNPackingGroup.Text">UNPackingGroup</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.TunnelRestrictionCode.Code">TunnelRestrictionCode</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-HazardousItem.PositionOnBoard_Stowage.Stowage">PositionOnBoardStowage</ulink>
          </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ISPSRequirements.Details">ISPSRequirements</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Location.Details">Location</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Location.Storage">Storage</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-LotsGroup.Details">LotsGroup</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-LotsGroup.LotLotsGroup.Identifier">LotLotsGroupID</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ISPSRequirements.Additional_SecurityMeasures.Text">AdditionalSecurityMeasures</ulink>
          </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-LotsGroup.ProcurementProjectLot">ProcurementProjectLot</ulink>
-         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-LotsGroup.LotsGroup.Identifier">LotsGroupID</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-LotsGroup.ProcurementProjectLotReference">ProcurementProjectLotReference</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ISPSRequirements.Additional_SecurityMeasure.SecurityMeasure">AdditionalSecurityMeasure</ulink>
          </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeHealthDeclaration.Details">MaritimeHealthDeclaration</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.Details">MaritimeTransport</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.MMSIRegistrationIdentifier.Identifier">MMSIRegistrationID</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.SegregatedBallast.Measure">SegregatedBallastMeasure</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.Ship_ConfigurationCode.Code">ShipConfigurationCode</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.INFShip_ClassCode.Code">INFShipClassCode</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.Antenna_Location.Location">AntennaLocation</ulink>
+         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.AntennaLocus.Text">AntennaLocus</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.Details">PaymentMeans</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.ChargeBearerCode.Code">ChargeBearerCode</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeTransport.VesselDynamics">VesselDynamics</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.ServiceLevelCode.Code">ServiceLevelCode</ulink>
+         </entry><entry>Added</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PaymentMeans.Remittance_DocumentDistribution.DocumentDistribution">RemittanceDocumentDistribution</ulink>
          </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-MaritimeWaste.Details">MaritimeWaste</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Package.Details">Package</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Person.Details">Person</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Package.PackagingType.Text">PackagingType</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Person.Birthplace_Location.Location">BirthplaceLocation</ulink>
          </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PartyLegalEntity.Details">PartyLegalEntity</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PartyLegalEntity.CompanyLegalForm.Text">CompanyLegalForm</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PersonnelHealthIncident.Details">PersonnelHealthIncident</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PortCall.Details">PortCall</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PortCallPurpose.Details">PortCallPurpose</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PortCall.Ship_RequirementsDescription.Text">ShipRequirementsDescription</ulink>
+         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PortCall.ShipRequirement">ShipRequirement</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PortCallRecord.Details">PortCallRecord</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PortCallRecord.PrimaryPurposeIndicator.Indicator">PrimaryPurposeIndicator</ulink>
+         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-PortCallRecord.SecurityMeasure">SecurityMeasure</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-SecurityMeasure.Details">SecurityMeasure</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Prize.Details">Prize</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Prize.Previous_RankNumber.Numeric">PreviousRankNumberNumeric</ulink>
-         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Prize.Previous_CancellationReasonValue.Amount">PreviousCancellationReasonValueAmount</ulink>
-         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Prize.Previous_CancellationReasonDescription.Text">PreviousCancellationReasonDescription</ulink>
-         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Prize.RankCode.Code">RankCode</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Prize.Value.Amount">ValueAmount</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Prize.Description.Text">Description</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProcurementAdditionalType.Details">ProcurementAdditionalType</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProcurementAdditionalType.Procurement_Type.Text">ProcurementType</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Regulation.Details">Regulation</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Regulation.Name">Name</ulink>
-         </entry><entry>Changed cardinality from 1 to 1..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-SanitaryMeasure.Details">SanitaryMeasure</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipRequirement.Details">ShipRequirement</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipStoreArticle.Details">ShipStoreArticle</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipStoreArticle.OfficialUse.Text">OfficialUse</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipToShipActivityRecord.Details">ShipToShipActivityRecord</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipToShipActivityRecord.Applied_SecurityMeasures.Text">AppliedSecurityMeasures</ulink>
+         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipToShipActivityRecord.Applied_SecurityMeasure.SecurityMeasure">AppliedSecurityMeasure</ulink>
+         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Shipment.Details">Shipment</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Shipment.Identifier">ID</ulink>
+         </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
             <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.Details">ShipmentStage</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.Destination_PortCall.PortCall">DestinationPortCall</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.ShipmentStageTypeCode.Code">ShipmentStageTypeCode</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.CrewPersonEffect">CrewPersonEffect</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.ShipmentStageType.Text">ShipmentStageType</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.MaritimeWaste">MaritimeWaste</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.Cabotage_Indicator.Indicator">CabotageIndicator</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.BallastWaterSummary">BallastWaterSummary</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.HazardousRisk_Indicator.Indicator">HazardousRiskIndicator</ulink>
          </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.ISPSRequirements">ISPSRequirements</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.MaritimeHealthDeclaration">MaritimeHealthDeclaration</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ShipmentStage.ShipStoreArticle">ShipStoreArticle</ulink>
          </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Storage.Details">Storage</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TendererQualificationRequest.Details">TendererQualificationRequest</ulink>
+         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TendererQualificationRequest.CompanyLegalForm.Text">CompanyLegalForm</ulink>
+         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row></tbody></tgroup></table></section><section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-UBL-2.3-CSD03-TO-UBL-2.3-CSD04"><title>Changes to Document Elements, UBL 2.3 csd03 to UBL 2.3 csd04</title><para>The following table sums up the differences between the XML elements in the common libraries of development versions.</para><table conformance="skip" id="T-SUMMARY-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL-2.3-CSD04-TO-2.3-CSD03"><title>Summary changes to Document Elements Universal Business Language UBL 2.3 csd04 to 2.3 csd03</title><!--Summary changes to Document Elements UBL 2.3--><tgroup cols="3"><!--Document UBL 2.3--><colspec colwidth="35*"/><colspec colwidth="35*"/><colspec colwidth="30*"/><thead><row><entry>Aggregate BIE</entry><entry>Basic or Association BIE</entry><entry>Changes for UBL</entry></row></thead><tbody><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-CommonTransportationReport.Details">CommonTransportationReport</ulink>
          </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Temperature.Details">Temperature</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsCertificate.Details">GoodsCertificate</ulink>
          </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Temperature.AttributeIdentifier.Identifier">AttributeID</ulink>
-         </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Temperature.Measure">Measure</ulink>
-         </entry><entry>Changed cardinality from 1 to 0..1</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Temperature.MeasureCode.Code">MeasureCode</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsCertificate.Applicant_Party.Party">ApplicantParty</ulink>
          </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderRequirement.Details">TenderRequirement</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderRequirement.Name">Name</ulink>
-         </entry><entry>Changed cardinality from 1 to 1..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderingTerms.Details">TenderingTerms</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderingTerms.Prize">Prize</ulink>
-         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderingTerms.ProcurementLegislation_DocumentReference.DocumentReference">ProcurementLegislationDocumentReference</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderingTerms.FiscalLegislation_DocumentReference.DocumentReference">FiscalLegislationDocumentReference</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderingTerms.EnvironmentalLegislation_DocumentReference.DocumentReference">EnvironmentalLegislationDocumentReference</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderingTerms.EmploymentLegislation_DocumentReference.DocumentReference">EmploymentLegislationDocumentReference</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TenderingTerms.CallForTenders_DocumentReference.DocumentReference">CallForTendersDocumentReference</ulink>
-         </entry><entry>Changed cardinality from 0..1 to 0..n</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-VesselDynamics.Details">VesselDynamics</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-WHOAffectedAreaVisit.Details">WHOAffectedAreaVisit</ulink>
-         </entry><entry> </entry><entry>Added</entry></row></tbody></tgroup></table></section><section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-UBL-2.3-CSPRD02-TO-UBL-2.3-CSPRD03"><title>Changes to Document Elements, UBL 2.3 csprd02 to UBL 2.3 csprd03</title><para>The following table sums up the differences between the XML elements in the common libraries of development versions.</para><table conformance="skip" id="T-SUMMARY-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL-2.3-CSD03-TO-2.3-CSPRD02"><title>Summary changes to Document Elements Universal Business Language UBL 2.3 csd03 to 2.3 csprd02</title><!--Summary changes to Document Elements UBL 2.3--><tgroup cols="3"><!--Document UBL 2.3--><colspec colwidth="35*"/><colspec colwidth="35*"/><colspec colwidth="30*"/><thead><row><entry>Aggregate BIE</entry><entry>Basic or Association BIE</entry><entry>Changes for UBL</entry></row></thead><tbody><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsItemPassport.Details">GoodsItemPassport</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsItemPassport.Status.Code">StatusCode</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-GoodsItemPassport.Status.Text">Status</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ImportCustomsDeclaration.Details">ImportCustomsDeclaration</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportation.Details">ProofOfReexportation</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportation.Issuer_Party.Party">IssuerParty</ulink>
-         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportation.ExportingCustoms_Party.Party">ExportingCustomsParty</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportation.ImportingGuarantor_Party.Party">ImportingGuarantorParty</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportation.ExportingGuarantor_Party.Party">ExportingGuarantorParty</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportationReminder.Details">ProofOfReexportationReminder</ulink>
-         </entry><entry> </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportationRequest.Details">ProofOfReexportationRequest</ulink>
-         </entry><entry> </entry><entry> </entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportationRequest.Issuer_Party.Party">IssuerParty</ulink>
-         </entry><entry>Deleted</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportationRequest.ImportingGuarantor_Party.Party">ImportingGuarantorParty</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportationRequest.ExportingGuarantor_Party.Party">ExportingGuarantorParty</ulink>
-         </entry><entry>Added</entry></row><row><entry> </entry><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-ProofOfReexportationRequest.ImportingCustoms_Party.Party">ImportingCustomsParty</ulink>
-         </entry><entry>Added</entry></row><row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>
-            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-TransitCustomsDeclaration.Details">TransitCustomsDeclaration</ulink>
+            <ulink conformance="skip" url="mod/summary/reports/All-UBL-2.3-Documents.html#Table-Manifest.Details">Manifest</ulink>
          </entry><entry> </entry><entry>Added</entry></row></tbody></tgroup></table></section></section><section id="S-EDITORIAL-CHANGES-FROM-UBL-2.2-TO-UBL-2.3"><title>Editorial changes from UBL 2.2 to UBL 2.3</title><para>As this is a very lengthy specification, this guidance to the reader reflects where UBL 2.3 has not changed substantially or substantively from UBL 2.2. Editorial changes that are related to grammar, spelling, and turn of phrase are not enumerated.</para><para>
           <xref linkend="S-INTRODUCTION"/> is unchanged from UBL 2.2.</para><para>
           <xref linkend="S-UBL-2.3-BUSINESS-OBJECTS"/> has been augmented with the new transportation documents. No subject areas from UBL 2.2 have been removed from this section.</para><para>
@@ -6559,13 +6551,13 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         </literal> library ABIE in the model report or in the Common Library worksheet of the UBL model spreadsheet.</para><para>
         <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Period.Details" conformance="skip" role="DEN-Name" remap="Period. Details">Period</ulink>
-        </literal> will be found at line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Period.Details" conformance="skip" role="DEN-Row" remap="Period. Details">1703</ulink> and seen to contain a number of possible BBIE children, all of them optional; and the ASBIE <literal moreinfo="none">
+        </literal> will be found at line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Period.Details" conformance="skip" role="DEN-Row" remap="Period. Details">1709</ulink> and seen to contain a number of possible BBIE children, all of them optional; and the ASBIE <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Invoice.Invoice_Period.Period" conformance="skip" role="DEN-Name" remap="Invoice. Invoice_ Period. Period">InvoicePeriod</ulink>
         </literal> in <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Invoice.Details" conformance="skip" role="DEN-Name" remap="Invoice. Details">Invoice</ulink>
         </literal> therefore has this structure, too. From this one could conclude that instantiations of the <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Period.Details" conformance="skip" role="DEN-Name" remap="Period. Details">Period</ulink>
-        </literal> structure (there are more than 50 of them in UBL) need not contain any of the seven optional BBIE elements specified after line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Period.Details" conformance="skip" role="DEN-Row" remap="Period. Details">1703</ulink>, and
+        </literal> structure (there are more than 50 of them in UBL) need not contain any of the seven optional BBIE elements specified after line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Period.Details" conformance="skip" role="DEN-Row" remap="Period. Details">1709</ulink>, and
         indeed the corresponding declaration of the complex type <literal moreinfo="none">PeriodType</literal> in the CAC schema (<literal moreinfo="none">
           <ulink url="xsd/common/UBL-CommonAggregateComponents-2.3.xsd">xsd/common/UBL-CommonAggregateComponents-2.3.xsd</ulink>
         </literal>) shows that an empty <literal moreinfo="none">
@@ -6599,21 +6591,21 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-CustomerParty.Details" conformance="skip" role="DEN-Name" remap="Customer Party. Details">CustomerParty</ulink>
         </literal> ABIE. Checking in the Common Library, it is seen that both <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-SupplierParty.Details" conformance="skip" role="DEN-Name" remap="Supplier Party. Details">SupplierParty</ulink>
-        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-SupplierParty.Details" conformance="skip" role="DEN-Row" remap="Supplier Party. Details">2329</ulink> of the Common Library) and <literal moreinfo="none">
+        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-SupplierParty.Details" conformance="skip" role="DEN-Row" remap="Supplier Party. Details">2348</ulink> of the Common Library) and <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-CustomerParty.Details" conformance="skip" role="DEN-Name" remap="Customer Party. Details">CustomerParty</ulink>
-        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-CustomerParty.Details" conformance="skip" role="DEN-Row" remap="Customer Party. Details">640</ulink> of the Common Library) can contain an ASBIE named <literal moreinfo="none">Party</literal> (as shown in lines <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-SupplierParty.Party" conformance="skip" role="DEN-Row" remap="Supplier Party. Party">2333</ulink> and <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-CustomerParty.Party" conformance="skip" role="DEN-Row" remap="Customer Party. Party">644</ulink>, respectively) and that each <literal moreinfo="none">Party</literal> ASBIE is an instantiation of the <literal moreinfo="none">
+        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-CustomerParty.Details" conformance="skip" role="DEN-Row" remap="Customer Party. Details">640</ulink> of the Common Library) can contain an ASBIE named <literal moreinfo="none">Party</literal> (as shown in lines <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-SupplierParty.Party" conformance="skip" role="DEN-Row" remap="Supplier Party. Party">2352</ulink> and <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-CustomerParty.Party" conformance="skip" role="DEN-Row" remap="Customer Party. Party">644</ulink>, respectively) and that each <literal moreinfo="none">Party</literal> ASBIE is an instantiation of the <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Party.Details" conformance="skip" role="DEN-Name" remap="Party. Details">Party</ulink>
-        </literal> ABIE (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Party.Details" conformance="skip" role="DEN-Row" remap="Party. Details">1594</ulink>). Therefore both parties have the same structure (the BBIEs and ASBIEs following line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Party.Details" conformance="skip" role="DEN-Row" remap="Party. Details">1594</ulink>). Thus <literal moreinfo="none">
+        </literal> ABIE (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Party.Details" conformance="skip" role="DEN-Row" remap="Party. Details">1597</ulink>). Therefore both parties have the same structure (the BBIEs and ASBIEs following line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Party.Details" conformance="skip" role="DEN-Row" remap="Party. Details">1597</ulink>). Thus <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Invoice.Accounting_SupplierParty.SupplierParty" conformance="skip" role="DEN-Name" remap="Invoice. Accounting_ Supplier Party. Supplier Party">AccountingSupplierParty</ulink>
         </literal> and <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Invoice.Accounting_CustomerParty.CustomerParty" conformance="skip" role="DEN-Name" remap="Invoice. Accounting_ Customer Party. Customer Party">AccountingCustomerParty</ulink>
         </literal> share the information components common to parties in general and differ in the information specific to suppliers and customers. Parties commonly have a <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Party.PartyName" conformance="skip" role="DEN-Name" remap="Party. Party Name">PartyName</ulink>
-        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Party.PartyName" conformance="skip" role="DEN-Row" remap="Party. Party Name">1602</ulink>) that derives (the Associated Object Class column) from the ABIE <literal moreinfo="none">
+        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Party.PartyName" conformance="skip" role="DEN-Row" remap="Party. Party Name">1605</ulink>) that derives (the Associated Object Class column) from the ABIE <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-PartyName.Details" conformance="skip" role="DEN-Name" remap="Party Name. Details">PartyName</ulink>
-        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-PartyName.Details" conformance="skip" role="DEN-Row" remap="Party Name. Details">1634</ulink>), which is a wrapper for the BBIE <literal moreinfo="none">
+        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-PartyName.Details" conformance="skip" role="DEN-Row" remap="Party Name. Details">1637</ulink>), which is a wrapper for the BBIE <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-PartyName.Name" conformance="skip" role="DEN-Name" remap="Party Name. Name">Name</ulink>
-        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-PartyName.Name" conformance="skip" role="DEN-Row" remap="Party Name. Name">1635</ulink>). A conforming piece of the document instance might therefore look like this: </para><programlisting role="font-size-92%" format="linespecific">  &lt;cac:AccountingSupplierParty&gt;
+        </literal> (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-PartyName.Name" conformance="skip" role="DEN-Row" remap="Party Name. Name">1638</ulink>). A conforming piece of the document instance might therefore look like this: </para><programlisting role="font-size-92%" format="linespecific">  &lt;cac:AccountingSupplierParty&gt;
     &lt;cac:Party&gt;
       &lt;cac:PartyName&gt;
         &lt;cbc:Name&gt;Custom Cotter Pins&lt;/cbc:Name&gt;
@@ -6638,7 +6630,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         </literal> first, it is found in the Common Library to be derived from <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Details" conformance="skip" role="DEN-Name" remap="Monetary Total. Details">MonetaryTotal</ulink>
         </literal> (line <literal moreinfo="none">
-          <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Details" conformance="skip" role="DEN-Row" remap="Monetary Total. Details">1515</ulink>), which has a mandatory <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Payable_Amount.Amount" conformance="skip" role="DEN-Name" remap="Monetary Total. Payable_ Amount. Amount">PayableAmount</ulink>
+          <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Details" conformance="skip" role="DEN-Row" remap="Monetary Total. Details">1518</ulink>), which has a mandatory <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Payable_Amount.Amount" conformance="skip" role="DEN-Name" remap="Monetary Total. Payable_ Amount. Amount">PayableAmount</ulink>
         </literal> BBIE. A corresponding example instance fragment might be therefore be constructed as follows:</para><programlisting role="font-size-92%" format="linespecific">  &lt;cac:LegalMonetaryTotal&gt;
      &lt;cbc:PayableAmount currencyID="CAD"&gt;100.00&lt;/cbc:PayableAmount&gt;
   &lt;/cac:LegalMonetaryTotal&gt;
@@ -6648,7 +6640,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-Invoice.Legal_MonetaryTotal.MonetaryTotal" conformance="skip" role="DEN-Name" remap="Invoice. Legal_ Monetary Total. Monetary Total">LegalMonetaryTotal</ulink>
         </literal> element shown above except the <literal moreinfo="none">currencyID</literal> attribute on <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Payable_Amount.Amount" conformance="skip" role="DEN-Name" remap="Monetary Total. Payable_ Amount. Amount">PayableAmount</ulink>
-        </literal>, which does not appear explicitly in the model line for that BBIE (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Payable_Amount.Amount" conformance="skip" role="DEN-Row" remap="Monetary Total. Payable_ Amount. Amount">1524</ulink>). This is because
+        </literal>, which does not appear explicitly in the model line for that BBIE (line <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Payable_Amount.Amount" conformance="skip" role="DEN-Row" remap="Monetary Total. Payable_ Amount. Amount">1527</ulink>). This is because
         UBL does not define the primitive data types upon which the model is built; instead it uses standard data type definitions from <xref linkend="ccts"/> and <xref linkend="xsd2"/>. In the case of <literal moreinfo="none">
           <ulink url="mod/summary/reports/UBL-Invoice-2.3.html#Table-MonetaryTotal.Payable_Amount.Amount" conformance="skip" role="DEN-Name" remap="Monetary Total. Payable_ Amount. Amount">PayableAmount</ulink>
         </literal>, the CCTS data type (the Data Type column) is “Amount. Type” (the space is part of the name), and that type is defined in <xref linkend="ccts"/> itself (Table 8-1 of the CCTS 2.01 specification). There it will be seen that “Amount. Type” has two
@@ -7205,6 +7197,10 @@ No code list validation errors.</programlisting><para>From any directory in the 
          </literal>
       </member><member>
          <literal moreinfo="none">
+            <ulink url="xml/UBL-CommonTransportationReport-2.3-Example.xml">xml/UBL-CommonTransportationReport-2.3-Example.xml</ulink>
+         </literal>
+      </member><member>
+         <literal moreinfo="none">
             <ulink url="xml/UBL-CreditNote-2.0-Example.xml">xml/UBL-CreditNote-2.0-Example.xml</ulink>
          </literal>
       </member><member>
@@ -7302,6 +7298,14 @@ No code list validation errors.</programlisting><para>From any directory in the 
       </member><member>
          <literal moreinfo="none">
             <ulink url="xml/UBL-Invoice-2.1-Example-Trivial.xml">xml/UBL-Invoice-2.1-Example-Trivial.xml</ulink>
+         </literal>
+      </member><member>
+         <literal moreinfo="none">
+            <ulink url="xml/UBL-Manifest-2.3-Example-Reference-Only.xml">xml/UBL-Manifest-2.3-Example-Reference-Only.xml</ulink>
+         </literal>
+      </member><member>
+         <literal moreinfo="none">
+            <ulink url="xml/UBL-Manifest-2.3-Example-Shipment.xml">xml/UBL-Manifest-2.3-Example-Shipment.xml</ulink>
          </literal>
       </member><member>
          <literal moreinfo="none">
@@ -7474,4 +7478,4 @@ No code list validation errors.</programlisting><para>From any directory in the 
       reports.</para><para>The following persons and companies participated as members of the OASIS UBL Technical Committee during the years of its development (2017–2020).</para><simplelist lang="none" type="vert"><member>Todd Albers, Federal Reserve Bank of Minneapolis</member><member>Oriol Bausa Peris, Individual</member><member>Kenneth Bengtsson, Individual</member><member>Erlend Klakegg Bergheim, Difi-Agency for Public Management and <phrase lang="none">eGovernment</phrase>
       </member><member>Martijn van den Boogaard, Individual</member><member>Peter Borresen, ClearView Trade</member><member>Jon Bosak, Individual</member><member>Andrea Caccia, Individual</member><member>Roberto Cisternino, Individual</member><member>Ger Clancy, IBM</member><member>Kees Duvekot, RFS Holland Holding B.V.</member><member>Martin Forsberg, Swedish Association of Local Authorities &amp; Regions</member><member>Cécile Guasch, Individual</member><member>Philip Helger, Individual</member><member>G. Ken Holman, Crane Softwrights Ltd.</member><member>Yves Jordan, Publications Office of the European Union</member><member>Matt Lewis, Individual</member><member>Ole Madsen, Danish Business Authority</member><member>Andre Mitchell, Individual</member><member>Natalie Muric, Publications Office of the European Union</member><member>Levine Naidoo, Individual</member><member>Olli Pajari, Individual</member><member>Enric Staromiejski Torregrosa, everis, S.L.U.</member><member>Matt Vickers, Xero</member></simplelist></appendix><appendix id="A-TEMPORARY-ANNEX---RENDERING-PER-ISO-IEC-DIRECTIVES-PART-2" role="non-normative"><title>Temporary Annex - Rendering per ISO/IEC Directives, Part 2</title><note><para>This temporary appendix will be removed in the final version of the committee specification.</para></note><para>During the review process of UBL 2.3, the distribution includes the parallel production of the specification PDF for publishing as ISO/IEC 19845 using the page layout prescribed by “ISO/IEC Directives, Part 2”.</para><para>This rendering is found at <literal moreinfo="none">
         <ulink url="iso-iec-19845-draft.pdf">iso-iec-19845-draft.pdf</ulink>
-      </literal>. This rendering is not included in the final distribution but its content is submitted directly to ITTF for publishing.</para></appendix><appendix id="A-TEMPORARY-ANNEX---CHANGE-LOG" role="non-normative"><title>Temporary Annex - Change Log</title><note><para>This temporary appendix will be removed in the final version of the committee specification.</para></note><informaltable><tgroup cols="4"><colspec colwidth="1*"/><colspec colwidth="2*"/><colspec colwidth="1*"/><colspec colwidth="8*"/><thead><row><entry>Revision</entry><entry>Date</entry><entry>Editor</entry><entry>Changes made</entry></row></thead><tbody><row><entry>csd03</entry><entry>29 July 2020</entry><entry>GKH</entry><entry>More TSC additions; preparation of voting document.</entry></row><row><entry>csd03wd03</entry><entry>26 June 2020</entry><entry>GKH</entry><entry>Incorporate TSC additions.</entry></row><row><entry>csd03wd02</entry><entry>27 April 2020</entry><entry>GKH</entry><entry>Reflected the changes in the demonstration validation artefacts.</entry></row><row><entry>csd03wd01</entry><entry>18 April 2020</entry><entry>GKH</entry><entry>Preview draft of hub text for next public review.</entry></row><row><entry>csd02wd01</entry><entry>07 January 2020</entry><entry>GKH</entry><entry>Preview draft of hub text for next public review.</entry></row><row><entry>csprd01</entry><entry>07 August 2019</entry><entry>GKH</entry><entry>Initial version of UBL 2.3 for review</entry></row></tbody></tgroup></informaltable></appendix></article>
+      </literal>. This rendering is not included in the final distribution but its content is submitted directly to ITTF for publishing.</para></appendix><appendix id="A-TEMPORARY-ANNEX---CHANGE-LOG" role="non-normative"><title>Temporary Annex - Change Log</title><note><para>This temporary appendix will be removed in the final version of the committee specification.</para></note><informaltable><tgroup cols="4"><colspec colwidth="1*"/><colspec colwidth="2*"/><colspec colwidth="1*"/><colspec colwidth="8*"/><thead><row><entry>Revision</entry><entry>Date</entry><entry>Editor</entry><entry>Changes made</entry></row></thead><tbody><row><entry>csd04</entry><entry>25 November 2020</entry><entry>GKH</entry><entry>More TSC additions; preparation of voting document.</entry></row><row><entry>csd03</entry><entry>29 July 2020</entry><entry>GKH</entry><entry>More TSC additions; preparation of voting document.</entry></row><row><entry>csd03wd03</entry><entry>26 June 2020</entry><entry>GKH</entry><entry>Incorporate TSC additions.</entry></row><row><entry>csd03wd02</entry><entry>27 April 2020</entry><entry>GKH</entry><entry>Reflected the changes in the demonstration validation artefacts.</entry></row><row><entry>csd03wd01</entry><entry>18 April 2020</entry><entry>GKH</entry><entry>Preview draft of hub text for next public review.</entry></row><row><entry>csd02wd01</entry><entry>07 January 2020</entry><entry>GKH</entry><entry>Preview draft of hub text for next public review.</entry></row><row><entry>csprd01</entry><entry>07 August 2019</entry><entry>GKH</entry><entry>Initial version of UBL 2.3 for review</entry></row></tbody></tgroup></informaltable></appendix></article>

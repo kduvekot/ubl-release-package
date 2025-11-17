@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
    <Identification>
-      <ShortName>UBL-2.3-Sig-CSDPRD03</ShortName>
-      <LongName>UBL 2.3 CSDPRD03 Signature Entity Summary</LongName>
+      <ShortName>UBL-2.3-Sig-CSD04</ShortName>
+      <LongName>UBL 2.3 CSD04 Signature Entity Summary</LongName>
       <Version>2.3</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:signature:BIE</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:signature:BIE:2.3</CanonicalVersionUri>
-      <LocationUri>http://docs.oasis-open.org/ubl/csdprd03-UBL-2.3/mod/UBL-Signature-Entities-2.3.gc</LocationUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/csd04-UBL-2.3/mod/UBL-Signature-Entities-2.3.gc</LocationUri>
       <Agency>
          <LongName xml:lang="en">OASIS Universal Business Language</LongName>
          <Identifier>UBL</Identifier>
