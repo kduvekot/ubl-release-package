@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.4 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.4/
-  Release Date:      08 February 2023
+  Library:           OASIS Universal Business Language (UBL) 2.4 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.4/
+  Release Date:      26 July 2023
   Module:            xsd/maindoc/UBL-ReceiptAdvice-2.4.xsd
-  Generated on:      2023-02-28 16:59z
+  Generated on:      2023-07-25 10:32z
   Copyright (c) OASIS Open 2023. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ReceiptAdvice-2"
@@ -38,7 +38,7 @@
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Receipt Advice. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A document used to describe the receipt of goods and services.</ccts:Definition>
+               <ccts:Definition>A document used to describe the receipt of goods and services or as a reply to a despatch advice.</ccts:Definition>
                <ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
                <ccts:AlternativeBusinessTerms>Receipt, Delivery Acknowledgement</ccts:AlternativeBusinessTerms>
             </ccts:Component>
@@ -232,6 +232,74 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:DeliveryAcceptanceCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Receipt Advice. Delivery_ Acceptance Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code to specify the acceptance or rejection of the delivery.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Delivery</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Acceptance Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                     <ccts:Examples>Accepted in full, partially accepted, refused (not today), rejected.</ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:RejectReasonCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Receipt Advice. Reject_ Reason Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>The reason for a rejection, expressed as a code.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Reject</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Reason Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:RejectReason" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Receipt Advice. Reject Reason. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>The reason for a rejection, expressed as text.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Reject Reason</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:RejectActionCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Receipt Advice. Reject_ Action Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code signifying the action that the delivery party wishes the despatch party to take in the case of a rejection.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Reject</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Action Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -418,14 +486,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:ReceiptLine" minOccurs="1" maxOccurs="unbounded">
+         <xsd:element ref="cac:ReceiptLine" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Receipt Advice. Receipt Line</ccts:DictionaryEntryName>
                      <ccts:Definition>A line detailing a kind of item received.</ccts:Definition>
-                     <ccts:Cardinality>1..n</ccts:Cardinality>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
                      <ccts:PropertyTerm>Receipt Line</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Receipt Line</ccts:AssociatedObjectClass>

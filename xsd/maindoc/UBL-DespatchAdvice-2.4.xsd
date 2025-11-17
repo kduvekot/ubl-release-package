@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.4 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.4/
-  Release Date:      08 February 2023
+  Library:           OASIS Universal Business Language (UBL) 2.4 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.4/
+  Release Date:      26 July 2023
   Module:            xsd/maindoc/UBL-DespatchAdvice-2.4.xsd
-  Generated on:      2023-02-28 16:59z
+  Generated on:      2023-07-25 10:32z
   Copyright (c) OASIS Open 2023. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
@@ -247,6 +247,38 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:AccountingCostCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Despatch Advice. Accounting Cost Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>The accounting cost centre, applied to the Despatch Advice as a whole, expressed as a code.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Despatch Advice</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Accounting Cost Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:AccountingCost" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Despatch Advice. Accounting Cost. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>The accounting cost centre, applied to the Despatch Advice as a whole, expressed as text.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Despatch Advice</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:LineCountNumeric" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -275,6 +307,22 @@
                      <ccts:PropertyTerm>Order Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Order Reference</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Order Reference</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:ProjectReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Despatch Advice. Project Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>A reference to a project with which this Despatch Advice is associated.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Despatch Advice</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Project Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Project Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Project Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>

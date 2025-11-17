@@ -20,7 +20,7 @@
             <skos:prefLabel>SAXON/HE 9.8.0.15</skos:prefLabel>
          </dct:Agent>
       </dct:creator>
-      <dct:created>2023-02-28T17:00:57.099Z</dct:created>
+      <dct:created>2023-07-25T10:33:48.814Z</dct:created>
       <dct:source>
          <rdf:Description xmlns:dc="http://purl.org/dc/elements/1.1/">
             <dct:creator>
@@ -29,13 +29,13 @@
                   <schxslt.compile.typed-variables xmlns="https://doi.org/10.5281/zenodo.1495494#">true</schxslt.compile.typed-variables>
                </dct:Agent>
             </dct:creator>
-            <dct:created>2023-02-28T17:00:07.599Z</dct:created>
+            <dct:created>2023-07-25T10:33:10.547Z</dct:created>
          </rdf:Description>
       </dct:source>
    </svrl:metadata>
    <svrl:active-pattern name="UBL-DataTypeQualifications-2.4"
                         id="UBL-DataTypeQualifications-2.4"
-                        documents="file:/home/runner/work/ubl/ubl/target/csd01-2.4/val/order-test-bad-code.xml"/>
+                        documents="file:/home/runner/work/ubl/ubl/target/csd02-2.4/val/order-test-bad-code.xml"/>
    <svrl:fired-rule context="cbc:IdentificationCode"/>
    <svrl:fired-rule context="cbc:ChannelCode"/>
    <svrl:failed-assert location="/Q{urn:oasis:names:specification:ubl:schema:xsd:Order-2}Order[1]/Q{urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2}BuyerCustomerParty[1]/Q{urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2}Party[1]/Q{urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2}Contact[1]/Q{urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2}OtherCommunication[1]/Q{urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2}ChannelCode[1]"

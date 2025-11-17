@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.4 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.4/
-  Release Date:      08 February 2023
+  Library:           OASIS Universal Business Language (UBL) 2.4 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.4/
+  Release Date:      26 July 2023
   Module:            xsd/maindoc/UBL-BusinessInformation-2.4.xsd
-  Generated on:      2023-02-28 16:59z
+  Generated on:      2023-07-25 10:32z
   Copyright (c) OASIS Open 2023. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:BusinessInformation-2"
@@ -183,6 +183,22 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Business Information. Note. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Business Information</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Note</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:VersionID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -213,6 +229,23 @@
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
                      <ccts:Examples>1</ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:BriefDescription" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Business Information. Brief_ Description. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>Textual description of the document instance.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Business Information</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Brief</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Description</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -280,39 +313,6 @@
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
                      <ccts:DataType>Code. Type</ccts:DataType>
                      <ccts:Examples>ENG</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Business Information. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Business Information</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Note</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:BriefDescription" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Business Information. Brief_ Description. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Textual description of the document instance.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Business Information</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Brief</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Description</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
