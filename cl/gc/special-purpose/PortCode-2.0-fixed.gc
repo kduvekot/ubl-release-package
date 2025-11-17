@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
   <Identification>
-    <ShortName>PortCode</ShortName>
-    <LongName xml:lang="en">Port</LongName>
+    <ShortName>PortCode-fixed</ShortName>
+    <LongName xml:lang="en">Port - fixed</LongName>
     <LongName Identifier="listID">UN/ECE rec 16</LongName>
     <Version>2006-2</Version>
-    <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PortCode</CanonicalUri>
-    <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PortCode-2.0-update</CanonicalVersionUri>
-    <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/special-purpose/PortCode-2.0.gc</LocationUri>
+    <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PortCode-fixed</CanonicalUri>
+    <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PortCode-2.0-fixed-update</CanonicalVersionUri>
+    <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/special-purpose/PortCode-2.0-fixed.gc</LocationUri>
     <Agency>
       <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
       <Identifier>6</Identifier>
