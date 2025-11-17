@@ -1,0 +1,8 @@
+1. Value supplied 'LA' is unacceptable for constraints identified by 'Channel-2.0 Channel-2.1 Channel-2.2 Channel-2.3 Channel-2.4' in the context 'cbc:ChannelCode' /Order/cac:BuyerCustomerParty[1]/cac:Party[1]/cac:Contact[1]/cac:OtherCommunication[1]/cbc:ChannelCode[1] / (code list expression suppressed)
+Count of data errors: 1
+
+
+The following error report is simply the exit mechanism and can be ignored:
+Error in xsl:message/@terminate on line 134 column 34 of testSVRL4UBLerrors.xsl:
+  XTMM9000: Processing terminated by xsl:message at line 134 in testSVRL4UBLerrors.xsl
+Processing terminated by xsl:message at line 134 in testSVRL4UBLerrors.xsl
