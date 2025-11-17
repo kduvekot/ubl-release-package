@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     Order
-  Generated On:      Tue Sep 12 3:50:16 P2 2006
+  Generated On:      Tue Oct 03 2:26:38 P3 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -155,7 +155,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Order instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -369,7 +369,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order. Quotation_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Quotation.</ccts:Definition>
+              <ccts:Definition>An associative reference to Quotation.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Quotation</ccts:PropertyTermQualifier>
@@ -385,7 +385,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order. Order_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other Orders.</ccts:Definition>
+              <ccts:Definition>An associative reference to [another] Order.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Order</ccts:PropertyTermQualifier>
@@ -401,7 +401,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order. Originator_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to an Originator document.</ccts:Definition>
+              <ccts:Definition>An associative reference to Originator Document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -417,7 +417,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents.</ccts:Definition>
+              <ccts:Definition>An associative reference to Additional Document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -433,7 +433,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order. Contract</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a framework agreement or contract.</ccts:Definition>
+              <ccts:Definition>An association to Contract.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order</ccts:ObjectClass>
               <ccts:PropertyTerm>Contract</ccts:PropertyTerm>
@@ -448,7 +448,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>Associates the Order with zero or more signatures.</ccts:Definition>
+              <ccts:Definition>An association to Signature.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Order</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
@@ -649,7 +649,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order. Anticipated_ Monetary Total. Monetary Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An assocation to the total amounts for the Order net of allowances and taxes (as projected by the Buyer).</ccts:Definition>
+              <ccts:Definition>An association to the total amounts for the Order anticipated by the Buyer.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Anticipated</ccts:PropertyTermQualifier>
@@ -702,7 +702,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

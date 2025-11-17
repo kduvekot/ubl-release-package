@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     QualifiedDatatypes
-  Generated On:      Tue Sep 19 5:53:20 P9 2006
+  Generated On:      Wed Sep 13 09:16:50 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -86,7 +86,6 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-
         <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional">
           <xsd:annotation>
             <xsd:documentation>
@@ -238,7 +237,6 @@
               <ccts:Name>Chip_ Code List. Identifier</ccts:Name>
               <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
-
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
@@ -1826,7 +1824,6 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List. Identifier</ccts:Name>
               <ccts:Definition></ccts:Definition>
-
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
             </xsd:documentation>
           </xsd:annotation>
@@ -1837,7 +1834,6 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
               <ccts:Name>Unit Of Measure_ Code List. Agency. Identifier</ccts:Name>
               <ccts:Definition></ccts:Definition>
               <ccts:PrimitiveType>String</ccts:PrimitiveType>
-
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
@@ -1930,7 +1926,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

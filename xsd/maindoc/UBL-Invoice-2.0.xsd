@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     Invoice
-  Generated On:      Tue Sep 12 3:50:16 P2 2006
+  Generated On:      Tue Oct 03 2:26:38 P3 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -137,7 +137,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Invoice instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -170,7 +170,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Creditor on which the Invoice was issued.</ccts:Definition>
+              <ccts:Definition>The time assigned by the Creditor at which the Invoice was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -383,7 +383,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Order Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to an Order.</ccts:Definition>
+              <ccts:Definition>An association to Order Reference.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Order Reference</ccts:PropertyTerm>
@@ -398,7 +398,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Billing Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other Billing documents.</ccts:Definition>
+              <ccts:Definition>An association to Billing Reference.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Billing Reference</ccts:PropertyTerm>
@@ -413,7 +413,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Despatch_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Despatch Advice.</ccts:Definition>
+              <ccts:Definition>An associative reference to Despatch Advice.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -429,7 +429,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Receipt_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Receipt Advice.</ccts:Definition>
+              <ccts:Definition>An associative reference to Receipt Advice.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Receipt</ccts:PropertyTermQualifier>
@@ -445,7 +445,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Originator_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to an Originator Document.</ccts:Definition>
+              <ccts:Definition>An associative reference to Originator Document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -461,7 +461,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Contract_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a framework agreement or contract.</ccts:Definition>
+              <ccts:Definition>An associative reference to Contract.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Contract</ccts:PropertyTermQualifier>
@@ -477,7 +477,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents.</ccts:Definition>
+              <ccts:Definition>An associative reference to Additional Document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -493,7 +493,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>One or more signatures applied to the Invoice.</ccts:Definition>
+              <ccts:Definition>An association to Signature.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
@@ -827,7 +827,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

@@ -8,7 +8,7 @@
       <Version>2.0</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:TransportMeansTypeCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:TransportMeansTypeCode-2.0</CanonicalVersionUri>
-      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportMeansTypeCode-2.0</LocationUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportMeansTypeCode-2.0.gc</LocationUri>
       <Agency>
          <LongName xml:lang="en">OASIS Universal Business Language</LongName>
          <Identifier>UBL</Identifier>

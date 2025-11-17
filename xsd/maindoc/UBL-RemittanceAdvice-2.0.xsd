@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     RemittanceAdvice
-  Generated On:      Tue Sep 12 3:50:16 P2 2006
+  Generated On:      Tue Oct 03 2:26:39 P3 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -136,7 +136,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Remittance Advice instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -168,7 +168,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Debtor on which the Remittance Advice was issued.</ccts:Definition>
+              <ccts:Definition>The time assigned by the Debtor at which the Remittance Advice was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -268,13 +268,12 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Payment Order Reference. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>A supplementary reference for the Order.</ccts:Definition>
+              <ccts:Definition>A reference to the Payment Order (from the Payer to the Payer's bank).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Payment Order Reference</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
               <ccts:DataType>Text. Type</ccts:DataType>
-              <ccts:Examples>CRI in a purchasing card transaction</ccts:Examples>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -285,7 +284,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Payer_ Reference. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>A supplementary reference for the Payee.</ccts:Definition>
+              <ccts:Definition>The Payer;'s internal reference for the payment.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payer</ccts:PropertyTermQualifier>
@@ -302,7 +301,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Invoicing Party_ Reference. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>A supplementary reference for the InvoicingParty.</ccts:Definition>
+              <ccts:Definition>The Invoicing Party's reference to the payment, previously requested of the Payer to accompany remittance.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Invoicing Party</ccts:PropertyTermQualifier>
@@ -335,7 +334,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Invoice_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to period(s) to which the Invoices related to the Remittance apply.</ccts:Definition>
+              <ccts:Definition>Associates the Remittance Advice with an Invoicing Period rather than a specific Invoice.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Invoice</ccts:PropertyTermQualifier>
@@ -351,7 +350,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Billing Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other billing documents.</ccts:Definition>
+              <ccts:Definition>An association to Billing Reference.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Billing Reference</ccts:PropertyTerm>
@@ -366,7 +365,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents.</ccts:Definition>
+              <ccts:Definition>An associative reference to Additional Document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -382,7 +381,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>Associates the Remittance Advice with zero or more signatures.</ccts:Definition>
+              <ccts:Definition>An association to Signature.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
@@ -460,7 +459,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice. Tax Total</ccts:DictionaryEntryName>
-              <ccts:Definition>Associates the Remittance Advice with summary information for a particular tax.</ccts:Definition>
+              <ccts:Definition>An association to Tax Total.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice</ccts:ObjectClass>
               <ccts:PropertyTerm>Tax Total</ccts:PropertyTerm>
@@ -512,7 +511,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

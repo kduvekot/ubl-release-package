@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     ForwardingInstructions
-  Generated On:      Tue Sep 12 3:50:16 P2 2006
+  Generated On:      Tue Oct 03 2:26:38 P3 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -138,7 +138,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Universally Unique Identifier of an instance of the Forwarding Instructions.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -397,7 +397,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Information directly relating to the identification of a document instance.</ccts:Definition>
+              <ccts:Definition>An association to Document Reference.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
@@ -464,7 +464,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

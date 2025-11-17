@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     Statement
-  Generated On:      Tue Sep 12 3:50:16 P2 2006
+  Generated On:      Tue Oct 03 2:26:39 P3 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -103,7 +103,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Statement. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Statement assigned by the Creditor.</ccts:Definition>
+              <ccts:Definition>An identifier for the Statement.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Statement</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -136,7 +136,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Statement. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Statement instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Statement</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -168,7 +168,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Statement. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Creditor on which the Statement was issued.</ccts:Definition>
+              <ccts:Definition>The time assigned by the Creditor at which the Statement was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Statement</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -217,7 +217,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Statement. Total_ Debit Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The totals of all debit amounts for the Statement.</ccts:Definition>
+              <ccts:Definition>The total of all debit amounts for the Statement.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Statement</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Total</ccts:PropertyTermQualifier>
@@ -234,7 +234,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Statement. Total_ Credit Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The totals of all credit amounts for the Statement.</ccts:Definition>
+              <ccts:Definition>The total of all credit amounts for the Statement.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Statement</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Total</ccts:PropertyTermQualifier>
@@ -300,7 +300,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Statement. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents.</ccts:Definition>
+              <ccts:Definition>An associative reference to Additional Document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Statement</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -316,7 +316,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Statement. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>Associates the Statement with zero or more signatures.</ccts:Definition>
+              <ccts:Definition>An association to Signature.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Statement</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
@@ -524,7 +524,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

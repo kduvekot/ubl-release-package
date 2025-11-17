@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     CommonAggregateComponents
-  Generated On:      Tue Sep 12 3:50:15 P2 2006
+  Generated On:      Tue Oct 03 2:26:38 P3 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -667,7 +667,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Address. Country Subentity Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>A territorial division of a country, such as a county or state, expresssed as a code.</ccts:Definition>
+              <ccts:Definition>A territorial division of a country, such as a county or state, expressed as a code.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Address</ccts:ObjectClass>
               <ccts:PropertyTerm>Country Subentity Code</ccts:PropertyTerm>
@@ -1025,7 +1025,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Allowance Charge. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The buyer's accounting center as applied to the Allowance Charge.</ccts:Definition>
+              <ccts:Definition>The buyer's accounting code as applied to the Allowance Charge expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Allowance Charge</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -1146,7 +1146,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Billing Reference. Invoice_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Provides a means of associating a Line (optionally) with one or more Invoices which are being related.</ccts:Definition>
+              <ccts:Definition>An associative reference to Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Billing Reference</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Invoice</ccts:PropertyTermQualifier>
@@ -1162,7 +1162,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Billing Reference. Self Billed Invoice_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Provides a means of associating a Line (optionally) with one or more Self Billed Invoices which are being related.</ccts:Definition>
+              <ccts:Definition>An associative reference to Self Billed Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Billing Reference</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Self Billed Invoice</ccts:PropertyTermQualifier>
@@ -1178,7 +1178,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Billing Reference. Credit Note_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Provides a means of associating a Line (optionally) with one or more Credit Notes.</ccts:Definition>
+              <ccts:Definition>An associative reference to Credit Note.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Billing Reference</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Credit Note</ccts:PropertyTermQualifier>
@@ -1194,7 +1194,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Billing Reference. Self Billed Credit Note_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Provides a means of associating a Line (optionally) with one or more Self Billed Credit Notes.</ccts:Definition>
+              <ccts:Definition>An associative reference to Self Billed Credit Note.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Billing Reference</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Self Billed Credit Note</ccts:PropertyTermQualifier>
@@ -1210,7 +1210,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Billing Reference. Debit Note_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Provides a means of associating a Line (optionally) with one or more Debit Notes.</ccts:Definition>
+              <ccts:Definition>An associative reference to Debit Note.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Billing Reference</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Debit Note</ccts:PropertyTermQualifier>
@@ -1226,7 +1226,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Billing Reference. Reminder_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Provides a means of associating a Line (optionally) with one or more Reminders.</ccts:Definition>
+              <ccts:Definition>An associative reference to Reminder Document Reference</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Billing Reference</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Reminder</ccts:PropertyTermQualifier>
@@ -1242,7 +1242,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Billing Reference. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Provides a means of associating a Line (optionally) with one or more other documents.</ccts:Definition>
+              <ccts:Definition>An associative reference to Additional Document.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Billing Reference</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -1431,7 +1431,7 @@
               <ccts:PropertyTerm>Account Number</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
-              <ccts:Examples>4558 0167 3488 1234</ccts:Examples>
+              <ccts:Examples>4558 XXXX XXXX XXXX (a real card number)</ccts:Examples>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -1508,7 +1508,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Card Account. Issuer. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identifier for the card issuer; the Bank Identification Number (BIN).</ccts:Definition>
+              <ccts:Definition>The identifier for the card issuer.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Card Account</ccts:ObjectClass>
               <ccts:PropertyTerm>Issuer</ccts:PropertyTerm>
@@ -1885,7 +1885,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Line. Warranty_ Information. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The text of the Seller Party's warranty details.</ccts:Definition>
+              <ccts:Definition>Information regarding the warranty for the good or service.  Warranty may be provided by any Party (can be described in the assiciation to Warranty Party).</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Warranty</ccts:PropertyTermQualifier>
@@ -2235,7 +2235,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Reference. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier (issued by the Seller Party) for the Catalogue document.</ccts:Definition>
+              <ccts:Definition>An identifier for the Catalogue document.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -2251,7 +2251,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Reference. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Catalogue document instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -2299,7 +2299,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Reference. Revision Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date (assigned by the Seller Party) at which the information in the Catalogue was revised.</ccts:Definition>
+              <ccts:Definition>The date on which the information in the Catalogue was revised.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>Revision Date</ccts:PropertyTerm>
@@ -2315,7 +2315,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Reference. Revision Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time (assigned by the Seller Party) at which the information in the Catalogue was revised.</ccts:Definition>
+              <ccts:Definition>The time at which the information in the Catalogue was revised.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>Revision Time</ccts:PropertyTerm>
@@ -2463,7 +2463,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Request Line. Line Validity_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>The period for which the Catalogue Line should be valid.</ccts:Definition>
+              <ccts:Definition>The period for which the Catalogue Line is valid.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Request Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Line Validity</ccts:PropertyTermQualifier>
@@ -2715,7 +2715,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Certificate Of Origin Application. Supporting_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Information about a supporting document attached as a file by the applicant.</ccts:Definition>
+              <ccts:Definition>An associative reference to a supporting document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Certificate Of Origin Application</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Supporting</ccts:PropertyTermQualifier>
@@ -2860,7 +2860,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Classification Scheme. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the document instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Classification Scheme</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -3304,7 +3304,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Consignment. Tariff Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free-text specification of tariff applied to a consignment.</ccts:Definition>
+              <ccts:Definition>A description of the tariff applied to a consignment.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Consignment</ccts:ObjectClass>
               <ccts:PropertyTerm>Tariff Description</ccts:PropertyTerm>
@@ -4038,7 +4038,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Contract. Contract_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Contract Document Reference.</ccts:Definition>
+              <ccts:Definition>An associative reference to Contract Document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Contract</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Contract</ccts:PropertyTermQualifier>
@@ -4243,7 +4243,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Credit Note Line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -4356,7 +4356,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note Line. Discrepancy_ Response. Response</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Discrepany Response; the reason for the Credit.</ccts:Definition>
+              <ccts:Definition>An association to Discrepancy Response; the reason for the Credit.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Discrepancy</ccts:PropertyTermQualifier>
@@ -4372,7 +4372,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note Line. Despatch_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Despatch Line Reference.</ccts:Definition>
+              <ccts:Definition>An associative reference to Despatch Line.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -4388,7 +4388,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note Line. Receipt_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Receipt Line Reference.</ccts:Definition>
+              <ccts:Definition>An associative reference to Receipt Line.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Receipt</ccts:PropertyTermQualifier>
@@ -4589,7 +4589,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Customer Party. Delivery_ Contact. Contact</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Despatch.</ccts:Definition>
+              <ccts:Definition>An association to Delivery Contact.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Customer Party</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Delivery</ccts:PropertyTermQualifier>
@@ -4605,7 +4605,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Customer Party. Accounting_ Contact. Contact</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Supplier Accounting Contact.</ccts:Definition>
+              <ccts:Definition>An association to Accounting Contact (Customer).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Customer Party</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Accounting</ccts:PropertyTermQualifier>
@@ -4621,7 +4621,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Customer Party. Buyer_ Contact. Contact</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Seller.</ccts:Definition>
+              <ccts:Definition>An association to Buyer Contact.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Customer Party</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Buyer</ccts:PropertyTermQualifier>
@@ -4667,7 +4667,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Debit Note Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Debit Note Line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Debit Note Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -4780,7 +4780,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Debit Note Line. Discrepancy_ Response. Response</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Discrepany Response; the reason for the Debit.</ccts:Definition>
+              <ccts:Definition>An association to Discrepancy Response; the reason for the Debit.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Debit Note Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Discrepancy</ccts:PropertyTermQualifier>
@@ -4796,7 +4796,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Debit Note Line. Despatch_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Despatch Line Reference.</ccts:Definition>
+              <ccts:Definition>An associative reference to Despatch Line.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Debit Note Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -4812,7 +4812,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Debit Note Line. Receipt_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Receipt Line Reference.</ccts:Definition>
+              <ccts:Definition>An associative reference to Receipt Line.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Debit Note Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Receipt</ccts:PropertyTermQualifier>
@@ -5193,7 +5193,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Delivery. Despatch</ccts:DictionaryEntryName>
-              <ccts:Definition>The party who despatched the delivery.</ccts:Definition>
+              <ccts:Definition>An association to the Despatch.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Delivery</ccts:ObjectClass>
               <ccts:PropertyTerm>Despatch</ccts:PropertyTerm>
@@ -5400,7 +5400,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Despatch. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The identitfer for the Delivery.</ccts:Definition>
+              <ccts:Definition>The identifier for the Delivery.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Despatch</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -5595,7 +5595,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Despatch Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Universally unique identification of the line within the Despatch note.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Despatch Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -5807,7 +5807,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Dimension. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information about a measureable dimension of an item.</ccts:Definition>
+          <ccts:Definition>Information about a measurable dimension of an item.</ccts:Definition>
           <ccts:ObjectClass>Dimension</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -5915,7 +5915,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Document Distribution. Print_ Qualifier. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The access right to the partner for the document that is distributed.</ccts:Definition>
+              <ccts:Definition>The access right for a Party to distribute the document.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Document Distribution</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Print</ccts:PropertyTermQualifier>
@@ -5949,7 +5949,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Document Distribution. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>Details of the partner who can access the document.</ccts:Definition>
+              <ccts:Definition>Details of the Party who can access the document.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Document Distribution</ccts:ObjectClass>
               <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -6012,7 +6012,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Document Reference. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the referenced document instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Document Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -6136,7 +6136,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Document Response. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Associates the Line with a document.</ccts:Definition>
+              <ccts:Definition>An association to Document Reference.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Document Response</ccts:ObjectClass>
               <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
@@ -6532,7 +6532,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>External Reference. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information directly relating to an external referece, meaning a document stored in an other location.</ccts:Definition>
+          <ccts:Definition>Information directly relating to an external reference i.e. a document stored at a remote location.</ccts:Definition>
           <ccts:ObjectClass>External Reference</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -6544,7 +6544,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>External Reference. URI. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>The Uniform Resource Identifier (URI) that identifies where the extenal document is located.</ccts:Definition>
+              <ccts:Definition>The Uniform Resource Identifier (URI) that identifies where the external document is located.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>External Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>URI</ccts:PropertyTerm>
@@ -7649,7 +7649,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Hazardous Item. Category. Name</ccts:DictionaryEntryName>
-              <ccts:Definition>Name of a kind of hazard for a material.</ccts:Definition>
+              <ccts:Definition>The name of the category of hazard that applies to the Item.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Hazardous Item</ccts:ObjectClass>
               <ccts:PropertyTerm>Category</ccts:PropertyTerm>
@@ -7926,7 +7926,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Invoice Line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -8071,7 +8071,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice Line. Despatch_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Despatch Line Reference.</ccts:Definition>
+              <ccts:Definition>An associative reference to Despatch Line.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -8087,7 +8087,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice Line. Receipt_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Receipt Line Reference.</ccts:Definition>
+              <ccts:Definition>An associative reference to Receipt Line.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Receipt</ccts:PropertyTermQualifier>
@@ -8239,7 +8239,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice Line. Price</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to agreed Price.</ccts:Definition>
+              <ccts:Definition>An association to Price.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Price</ccts:PropertyTerm>
@@ -8546,7 +8546,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Item. Catalogue_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>Associates the item with the Catalogue from which the item was selected.</ccts:Definition>
+              <ccts:Definition>An associative reference to Catalogue.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Item</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Catalogue</ccts:PropertyTermQualifier>
@@ -8562,7 +8562,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Item. Item Specification_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to item specification.</ccts:Definition>
+              <ccts:Definition>An associative reference to a document providing Item specification.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Item</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Item Specification</ccts:PropertyTermQualifier>
@@ -8687,7 +8687,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Item. Information Content Provider_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>Associates the item with the party responsible for the its technical specifications.</ccts:Definition>
+              <ccts:Definition>Associates the item with the party responsible for the its specification.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Item</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Information Content Provider</ccts:PropertyTermQualifier>
@@ -8844,7 +8844,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Item Identification. Measurement_ Dimension. Dimension</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Measement Dimension.</ccts:Definition>
+              <ccts:Definition>An association to Measurement Dimension.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Item Identification</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Measurement</ccts:PropertyTermQualifier>
@@ -9006,7 +9006,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Item Location Quantity. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information about the properites of an item as they relate to specific quantities and/or specific locations.</ccts:Definition>
+          <ccts:Definition>Information about the properties of an item as they relate to specific quantities and/or specific locations.</ccts:Definition>
           <ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -9071,7 +9071,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Item Location Quantity. Hazardous Risk_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>Indicates whether the item as delivered is hazardous.</ccts:Definition>
+              <ccts:Definition>Indicates whether the item as delivered, in the stated quantity to the stated location, is hazardous.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Item Location Quantity</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Hazardous Risk</ccts:PropertyTermQualifier>
@@ -9404,7 +9404,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Line Item. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Line Item instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Line Item</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -9800,7 +9800,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Line Reference. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the referenced document line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Line Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -9849,7 +9849,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Line Response. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Reference to a Line on a document.</ccts:Definition>
+          <ccts:Definition>A response to a Line in a Document.</ccts:Definition>
           <ccts:ObjectClass>Line Response</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -9972,7 +9972,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Location. Country Subentity Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The territorial division of a country, such as a county or state, expresssed as a code.</ccts:Definition>
+              <ccts:Definition>The territorial division of a country, such as a county or state, expressed as a code.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Location</ccts:ObjectClass>
               <ccts:PropertyTerm>Country Subentity Code</ccts:PropertyTerm>
@@ -10275,7 +10275,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Monetary Total. Line Extension Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The total of Line Extention Amounts net of tax and settlement discounts, but inclusive of any applicable rounding amount.</ccts:Definition>
+              <ccts:Definition>The total of Line Extension Amounts net of tax and settlement discounts, but inclusive of any applicable rounding amount.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Monetary Total</ccts:ObjectClass>
               <ccts:PropertyTerm>Line Extension Amount</ccts:PropertyTerm>
@@ -10558,7 +10558,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Line. Catalogue_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Line Reference for the Catalogue.</ccts:Definition>
+              <ccts:Definition>An associative reference to Catalogue Line.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Catalogue</ccts:PropertyTermQualifier>
@@ -10574,7 +10574,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Line. Quotation_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Line Reference for the quotation.</ccts:Definition>
+              <ccts:Definition>an associative reference to Quotation Line.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Quotation</ccts:PropertyTermQualifier>
@@ -10652,7 +10652,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Line Reference. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the referenced Order Line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Line Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -10763,7 +10763,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Order Reference. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the referenced Order instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -11132,7 +11132,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Party. Party Name</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Party Name. Party Name must be used where no Party Identification is used.</ccts:Definition>
+              <ccts:Definition>An association to Party Name.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Party</ccts:ObjectClass>
               <ccts:PropertyTerm>Party Name</ccts:PropertyTerm>
@@ -11178,7 +11178,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Party. Physical_ Location. Location</ccts:DictionaryEntryName>
-              <ccts:Definition>The party's physical location - where they may visited.</ccts:Definition>
+              <ccts:Definition>The party's physical location.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Party</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Physical</ccts:PropertyTermQualifier>
@@ -12116,7 +12116,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Period. Description Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>A decription of the period, expressed as a code.</ccts:Definition>
+              <ccts:Definition>A description of the period, expressed as a code.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Period</ccts:ObjectClass>
               <ccts:PropertyTerm>Description Code</ccts:PropertyTerm>
@@ -12132,7 +12132,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Period. Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>A decription of the period.</ccts:Definition>
+              <ccts:Definition>A description of the period.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Period</ccts:ObjectClass>
               <ccts:PropertyTerm>Description</ccts:PropertyTerm>
@@ -12864,7 +12864,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Receipt Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Receipt Line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Receipt Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -13012,7 +13012,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Receipt Line. Oversupply Quantity. Quantity</ccts:DictionaryEntryName>
-              <ccts:Definition>Indicates fluctuating quantity with regard to ordered/despatched quantity. Should only be a positive number.</ccts:Definition>
+              <ccts:Definition>The quanitity over-supplied i.e. the quantity over and above that ordered.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Receipt Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Oversupply Quantity</ccts:PropertyTerm>
@@ -13092,7 +13092,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Receipt Line. Despatch_ Line Reference. Line Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Despatch Line Reference.</ccts:Definition>
+              <ccts:Definition>An associative reference to Despatch Line.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Receipt Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -13220,7 +13220,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Reminder Line. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information about a Line on a Statement of Account.</ccts:Definition>
+          <ccts:Definition>Information about a Line on a Reminder document.</ccts:Definition>
           <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -13232,7 +13232,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the Statement Line.</ccts:Definition>
+              <ccts:Definition>Identifies the Reminder Line.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -13248,7 +13248,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free-form text applying to the Statement Line. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Free-form text applying to the Reminder Line. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -13264,7 +13264,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Order instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -13280,7 +13280,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Balance Brought Forward_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>If true, indicates that the Statement Line contains a balance brought forward.</ccts:Definition>
+              <ccts:Definition>If true, indicates that the Remonder Line contains a balance brought forward.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Balance Brought Forward</ccts:PropertyTermQualifier>
@@ -13297,7 +13297,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Debit_ Line Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The amount debited on the Statement Line.</ccts:Definition>
+              <ccts:Definition>The amount debited on the Reminder Line.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Debit</ccts:PropertyTermQualifier>
@@ -13314,7 +13314,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Credit_ Line Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The amount credited on the Statement Line.</ccts:Definition>
+              <ccts:Definition>The amount credited on the Reminder Line.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Credit</ccts:PropertyTermQualifier>
@@ -13363,7 +13363,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Reminder_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Invoice Period.</ccts:Definition>
+              <ccts:Definition>An association to Period.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Reminder</ccts:PropertyTermQualifier>
@@ -13379,7 +13379,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Billing Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Accounting Document.</ccts:Definition>
+              <ccts:Definition>An association to Billing Reference</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Billing Reference</ccts:PropertyTerm>
@@ -13394,7 +13394,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Exchange Rate</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Exchange Rate (between the Statement Line Currency and the Related Document currency).</ccts:Definition>
+              <ccts:Definition>An association to Exchange Rate (between the Reminder Line Currency and the Related Document currency).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Exchange Rate</ccts:PropertyTerm>
@@ -13455,7 +13455,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Remittance Advice Line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -13633,7 +13633,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Remittance Advice Line. Billing Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Related Document.</ccts:Definition>
+              <ccts:Definition>An association to Billing Reference.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Remittance Advice Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Billing Reference</ccts:PropertyTerm>
@@ -13708,7 +13708,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Request For Quotation Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Request For Quotation Line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Request For Quotation Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -14700,7 +14700,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Signature. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies a signature that has been used to sign with.</ccts:Definition>
+              <ccts:Definition>An identifier for the Signature.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Signature</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -14716,7 +14716,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Signature. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free form text about the signature or the circumstanses where the signature has been used.</ccts:Definition>
+              <ccts:Definition>Free form text about the signature or the circumstances where the signature has been used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Signature</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -14780,7 +14780,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Signature. Canonicalization Method. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Describes the response to the transaction document.</ccts:Definition>
+              <ccts:Definition>The mathematical logic method used by the Signature.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Signature</ccts:ObjectClass>
               <ccts:PropertyTerm>Canonicalization Method</ccts:PropertyTerm>
@@ -14796,7 +14796,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Signature. Signature Method. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Describes the response to the transaction document.</ccts:Definition>
+              <ccts:Definition>The method of signature.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Signature</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature Method</ccts:PropertyTerm>
@@ -14812,7 +14812,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Signature. Signatory_ Party. Party</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the party that signed the document.</ccts:Definition>
+              <ccts:Definition>An association to the signing Party.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Signature</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Signatory</ccts:PropertyTermQualifier>
@@ -14906,7 +14906,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Statement Line. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Statement Line instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Statement Line</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -15433,7 +15433,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Supplier Party. Customer Assigned_ Account Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the supplier assigned by the customer; the customer's internal reference for the supplier.</ccts:Definition>
+              <ccts:Definition>The customer's internal identifier for the supplier.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Supplier Party</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Customer Assigned</ccts:PropertyTermQualifier>
@@ -15450,7 +15450,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Supplier Party. Additional_ Account Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the supplier assigned by a third party.</ccts:Definition>
+              <ccts:Definition>The customer's internal identifier for the supplier.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Supplier Party</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -15473,6 +15473,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
               <ccts:PropertyTerm>Data Sending Capability</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
               <ccts:DataType>Text. Type</ccts:DataType>
+              <ccts:Examples>The customer's internal identifier for the supplier.</ccts:Examples>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -15498,7 +15499,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Supplier Party. Despatch_ Contact. Contact</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Despatch.</ccts:Definition>
+              <ccts:Definition>An association to Despatch Contact.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Supplier Party</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -15787,7 +15788,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Tax Scheme. Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency in which the tax is coolected and reported, expressed as a code.</ccts:Definition>
+              <ccts:Definition>The currency in which the tax is collected and reported, expressed as a code.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Tax Scheme</ccts:ObjectClass>
               <ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
@@ -15821,7 +15822,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Tax Subtotal. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information about the subtotal for a particular tax category within a tax type such as standard rate within VAT.</ccts:Definition>
+          <ccts:Definition>Information about the subtotal for a particular tax category within a tax scheme, such as standard rate within VAT.</ccts:Definition>
           <ccts:ObjectClass>Tax Subtotal</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -16009,7 +16010,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Tax Total. Tax Amount. Amount</ccts:DictionaryEntryName>
-              <ccts:Definition>The total tax amount for a tax type; the sum of each of the tax subtotals for each tax category within the tax type.</ccts:Definition>
+              <ccts:Definition>The total tax amount for particular tax scheme e.g. VAT;  the sum of each of the tax subtotals for each tax category within the tax scheme.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Tax Total</ccts:ObjectClass>
               <ccts:PropertyTerm>Tax Amount</ccts:PropertyTerm>
@@ -16139,7 +16140,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Trading Terms. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information about the terms and conditions of a trade agreement.</ccts:Definition>
+          <ccts:Definition>Information about the terms of a trade agreement.</ccts:Definition>
           <ccts:ObjectClass>Trading Terms</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -16151,7 +16152,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Trading Terms. Information. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The terms and conditions in text.</ccts:Definition>
+              <ccts:Definition>The terms in text.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Trading Terms</ccts:ObjectClass>
               <ccts:PropertyTerm>Information</ccts:PropertyTerm>
@@ -16216,7 +16217,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transaction Conditions. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the sales or payment conditions.</ccts:Definition>
+              <ccts:Definition>Identifies conditions of the transaction, typically Purchase/Sales Conditions.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transaction Conditions</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -16232,7 +16233,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transaction Conditions. Action Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>An action relating to sales or payment conditons, expressed as a code.</ccts:Definition>
+              <ccts:Definition>An action relating to sales or payment conditions, expressed as a code.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transaction Conditions</ccts:ObjectClass>
               <ccts:PropertyTerm>Action Code</ccts:PropertyTerm>
@@ -16248,7 +16249,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transaction Conditions. Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The description of the sales or payment conditions.</ccts:Definition>
+              <ccts:Definition>The description of the transaction conditions.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Transaction Conditions</ccts:ObjectClass>
               <ccts:PropertyTerm>Description</ccts:PropertyTerm>
@@ -16326,7 +16327,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Service. Priority. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Statement indicating priority of requested transportion service.</ccts:Definition>
+              <ccts:Definition>Statement indicating priority of requested transportation service.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Service</ccts:ObjectClass>
               <ccts:PropertyTerm>Priority</ccts:PropertyTerm>
@@ -16572,7 +16573,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transport Equipment. Transport Equipment Seal</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Transport Equiment Seal.</ccts:Definition>
+              <ccts:Definition>An association to Transport Equipment Seal.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
               <ccts:PropertyTerm>Transport Equipment Seal</ccts:PropertyTerm>
@@ -16603,7 +16604,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transport Equipment. Maximum_ Temperature. Temperature</ccts:DictionaryEntryName>
-              <ccts:Definition>The maximum required operating termperature for the container (reefer).</ccts:Definition>
+              <ccts:Definition>The maximum required operating temperature for the container (reefer).</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier>
@@ -16766,7 +16767,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Transport Event. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>A significant occurrence or happening related to an object, process, or person.</ccts:Definition>
+          <ccts:Definition>A significant occurrence or happening related to the transportation of goods.</ccts:Definition>
           <ccts:ObjectClass>Transport Event</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -16778,7 +16779,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transport Event. Identification. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A unique identifier for this event.</ccts:Definition>
+              <ccts:Definition>An identifier for the event.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transport Event</ccts:ObjectClass>
               <ccts:PropertyTerm>Identification</ccts:PropertyTerm>
@@ -16794,7 +16795,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transport Event. Occurrence Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date of an occurrence of this event.</ccts:Definition>
+              <ccts:Definition>The date of an occurrence of the event.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transport Event</ccts:ObjectClass>
               <ccts:PropertyTerm>Occurrence Date</ccts:PropertyTerm>
@@ -16810,7 +16811,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transport Event. Occurrence Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time of an occurrence of this event.</ccts:Definition>
+              <ccts:Definition>The time of an occurrence of the event.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transport Event</ccts:ObjectClass>
               <ccts:PropertyTerm>Occurrence Time</ccts:PropertyTerm>
@@ -17200,7 +17201,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transport Handling Unit. Maximum_ Temperature. Temperature</ccts:DictionaryEntryName>
-              <ccts:Definition>The maximum required operating termperature.</ccts:Definition>
+              <ccts:Definition>The maximum required operating temperature.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transport Handling Unit</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier>
@@ -17414,7 +17415,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

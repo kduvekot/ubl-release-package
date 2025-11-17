@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     CreditNote
-  Generated On:      Tue Sep 12 3:50:16 P2 2006
+  Generated On:      Tue Oct 03 2:26:38 P3 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -86,7 +86,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies a user-defined profile of the customizationt of UBL being used.</ccts:Definition>
+              <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -136,7 +136,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Credit Note instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -168,7 +168,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Creditor on which the Credit Note was issued.</ccts:Definition>
+              <ccts:Definition>The time assigned by the Creditor at which the Credit Note was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -349,7 +349,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Invoice_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to period(s) to which the Invoices related to the Credit apply.</ccts:Definition>
+              <ccts:Definition>Associates the Credit Note with an Invoicing Period rather than a specific Invoice.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Invoice</ccts:PropertyTermQualifier>
@@ -381,7 +381,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Order Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to an Order.</ccts:Definition>
+              <ccts:Definition>An association to Order Reference.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTerm>Order Reference</ccts:PropertyTerm>
@@ -396,7 +396,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Billing Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other billing documents.</ccts:Definition>
+              <ccts:Definition>An association to Billing Reference.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTerm>Billing Reference</ccts:PropertyTerm>
@@ -411,7 +411,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Despatch_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Despatch Advice.</ccts:Definition>
+              <ccts:Definition>An associative reference to Despatch Advice.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -427,7 +427,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Receipt_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a Receipt Advice.</ccts:Definition>
+              <ccts:Definition>An associative reference to Receipt Advice.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Receipt</ccts:PropertyTermQualifier>
@@ -443,7 +443,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Contract_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to a framework agreement or contract.</ccts:Definition>
+              <ccts:Definition>An associative reference to Contract.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Contract</ccts:PropertyTermQualifier>
@@ -459,7 +459,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to other documents.</ccts:Definition>
+              <ccts:Definition>An associative reference to Additional Document.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
@@ -475,7 +475,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Signature</ccts:DictionaryEntryName>
-              <ccts:Definition>Associates the Credit Note with zero or more signatures.</ccts:Definition>
+              <ccts:Definition>An association to Signature.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
@@ -618,7 +618,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Allowance Charge</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Allowances and Charges that apply to the Credited billing document as a whole.</ccts:Definition>
+              <ccts:Definition>An association to Allowances and Charges that apply to the Credit Note as a whole.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm>
@@ -633,7 +633,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note. Tax Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Tax Total for specific tax types/rates.</ccts:Definition>
+              <ccts:Definition>An association to Tax Total.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note</ccts:ObjectClass>
               <ccts:PropertyTerm>Tax Total</ccts:PropertyTerm>
@@ -701,7 +701,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

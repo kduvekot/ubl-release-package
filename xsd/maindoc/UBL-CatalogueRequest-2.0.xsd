@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
   Document Type:     CatalogueRequest
-  Generated On:      Tue Sep 12 3:50:16 P2 2006
+  Generated On:      Tue Oct 03 2:26:38 P3 2006
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -119,7 +119,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Request. UUID. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>A computer-generated universally unique identifier (UUID) for the catalogue request document instance.</ccts:Definition>
+              <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Request</ccts:ObjectClass>
               <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -152,7 +152,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Request. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date assigned by the Catalogue Managing Party at which the Catalogue was requested.</ccts:Definition>
+              <ccts:Definition>The date assigned by the Catalogue Managing Party on which the Catalogue was requested.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Request</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -217,7 +217,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Request. Pricing Update Request_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>Request a pricing update.</ccts:Definition>
+              <ccts:Definition>The indicator requesting a pricing update.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Request</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Pricing Update Request</ccts:PropertyTermQualifier>
@@ -235,7 +235,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Request. Item Update Request_ Indicator. Indicator</ccts:DictionaryEntryName>
-              <ccts:Definition>Request an update of the item specifications.</ccts:Definition>
+              <ccts:Definition>The indicator requesting an update of the item specifications.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Request</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Item Update Request</ccts:PropertyTermQualifier>
@@ -317,7 +317,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Request. Seller_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
-              <ccts:Definition>The Seller Party responsible for the contract to which the Catalogue relates.</ccts:Definition>
+              <ccts:Definition>The Supplier Party responsible for the contract to which the Catalogue relates.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Request</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
@@ -411,7 +411,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Request. Applicable Territory_ Address. Address</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the terrritory (regions, country, city, etc.) to which the requested Catalogue will apply.  Expressed as an Address.</ccts:Definition>
+              <ccts:Definition>An association to the territory (regions, country, city, etc.) to which the requested Catalogue will apply.  Expressed as an Address.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Request</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Applicable Territory</ccts:PropertyTermQualifier>
@@ -496,7 +496,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2005. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
