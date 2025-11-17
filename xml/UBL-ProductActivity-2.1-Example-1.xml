@@ -106,7 +106,7 @@
 			</cac:Party>
 		</cac:SellerSupplierParty>
 		<cac:ActivityOriginLocation>
-			<cbc:ID/>
+			<cbc:ID>1234567890</cbc:ID>
 		</cac:ActivityOriginLocation>
 		<cac:SalesItem>
 			<cbc:Quantity unitCode="KGM">20</cbc:Quantity>

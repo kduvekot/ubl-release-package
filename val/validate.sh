@@ -13,7 +13,7 @@ then echo No schema validation errors.
 else cat output.txt; exit
 fi
 echo ============ Phase 2: XSLT code list validation ============
-sh xslt.sh $2 UBL-DefaultDTQ-2.2.xsl /dev/null 2>output.txt
+sh xslt.sh $2 UBL-DefaultDTQ-2.3.xsl /dev/null 2>output.txt
 if [ $? -eq 0 ]
 then echo No code list validation errors.
 else cat output.txt
