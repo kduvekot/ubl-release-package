@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportationStatus xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:CustomizationID>urn:X-demo:TransportShipments</cbc:CustomizationID>
+  <cbc:ProfileID>urn:X-demo:CoreElement</cbc:ProfileID>
+  <cbc:ID>1234</cbc:ID>
+  <cbc:IssueDate>2010-08-12</cbc:IssueDate>
+  <cbc:IssueTime>20:22:00.0Z</cbc:IssueTime>
+  <cbc:Description>En route</cbc:Description>
+  <cac:Consignment>
+    <cbc:ID>XYZ987</cbc:ID>
+    <cbc:SummaryDescription>Electronic components</cbc:SummaryDescription>
+  </cac:Consignment>
+  <cac:TransportEvent>
+    <cac:CurrentStatus>
+      <cbc:ConditionCode>31</cbc:ConditionCode>
+      <cbc:Description>En route</cbc:Description>
+    </cac:CurrentStatus>
+    <cac:Contact>
+      <cbc:Name>John Smith</cbc:Name>
+      <cbc:ElectronicMail>jsmith@example.com</cbc:ElectronicMail>
+    </cac:Contact>
+  </cac:TransportEvent>
+</TransportationStatus>

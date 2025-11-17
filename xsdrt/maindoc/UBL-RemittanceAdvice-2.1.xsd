@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Library:           OASIS Universal Business Language (UBL) 2.1
+                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Directory:         xsdrt
+  Module:            UBL-RemittanceAdvice-2.1.xsd
+  Generated on:      20100830-2010z
+-->
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+            xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+            xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+            version="2.0">
+    
+    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+               schemaLocation="../common/UBL-CommonAggregateComponents-2.1.xsd"/>
+    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+               schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
+    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+               schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
+    
+    <xsd:element name="RemittanceAdvice" type="RemittanceAdviceType"/>
+    <xsd:complexType name="RemittanceAdviceType">
+        <xsd:sequence>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="ext:UBLExtensions"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:UBLVersionID"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:CustomizationID"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ProfileID"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ProfileExecutionID"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="cbc:ID"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:CopyIndicator"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:UUID"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="cbc:IssueDate"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:IssueTime"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cbc:Note"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:DocumentCurrencyCode"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:TotalDebitAmount"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:TotalCreditAmount"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:TotalPaymentAmount"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:PaymentOrderReference"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:PayerReference"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:InvoicingPartyReference"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:LineCountNumeric"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:InvoicePeriod"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:BillingReference"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:AdditionalDocumentReference"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:Signature"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="cac:AccountingCustomerParty"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="cac:AccountingSupplierParty"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:PayeeParty"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:PaymentMeans"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:TaxTotal"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="cac:RemittanceAdviceLine"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+<!-- ===== Copyright Notice ===== -->
+<!--
+  OASIS takes no position regarding the validity or scope of any 
+  intellectual property or other rights that might be claimed to pertain 
+  to the implementation or use of the technology described in this 
+  document or the extent to which any license under such rights 
+  might or might not be available; neither does it represent that it has 
+  made any effort to identify any such rights. Information on OASIS's 
+  procedures with respect to rights in OASIS specifications can be 
+  found at the OASIS website. Copies of claims of rights made 
+  available for publication and any assurances of licenses to be made 
+  available, or the result of an attempt made to obtain a general 
+  license or permission for the use of such proprietary rights by 
+  implementors or users of this specification, can be obtained from 
+  the OASIS Executive Director.
+
+  OASIS invites any interested party to bring to its attention any 
+  copyrights, patents or patent applications, or other proprietary 
+  rights which may cover technology that may be required to 
+  implement this specification. Please address the information to the 
+  OASIS Executive Director.
+  
+  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+
+  This document and translations of it may be copied and furnished to 
+  others, and derivative works that comment on or otherwise explain 
+  it or assist in its implementation may be prepared, copied, 
+  published and distributed, in whole or in part, without restriction of 
+  any kind, provided that the above copyright notice and this 
+  paragraph are included on all such copies and derivative works. 
+  However, this document itself may not be modified in any way, 
+  such as by removing the copyright notice or references to OASIS, 
+  except as needed for the purpose of developing OASIS 
+  specifications, in which case the procedures for copyrights defined 
+  in the OASIS Intellectual Property Rights document must be 
+  followed, or as required to translate it into languages other than 
+  English. 
+
+  The limited permissions granted above are perpetual and will not be 
+  revoked by OASIS or its successors or assigns. 
+
+  This document and the information contained herein is provided on 
+  an "AS IS" basis and OASIS DISCLAIMS ALL WARRANTIES, 
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY 
+  WARRANTY THAT THE USE OF THE INFORMATION HEREIN 
+  WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
+  WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
+  PARTICULAR PURPOSE.    
+-->

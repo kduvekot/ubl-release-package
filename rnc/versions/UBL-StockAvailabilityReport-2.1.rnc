@@ -1,0 +1,5445 @@
+default namespace =
+  "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+namespace ns1 =
+  "urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2"
+namespace ns2 = "http://www.w3.org/2001/XMLSchema-instance"
+namespace ns3 =
+  "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+namespace ns4 =
+  "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+
+start =
+  element ns1:StockAvailabilityReport {
+    attribute ns2:schemaLocation { text }?,
+    UBLExtensions?,
+    UBLVersionID?,
+    CustomizationID?,
+    ProfileID?,
+    ProfileExecutionID?,
+    ID,
+    CopyIndicator?,
+    UUID?,
+    IssueDate,
+    IssueTime?,
+    Note*,
+    DocumentCurrencyCode?,
+    InventoryPeriod?,
+    DocumentReference*,
+    Signature*,
+    SellerSupplierParty,
+    RetailerCustomerParty?,
+    InventoryReportingParty,
+    StockAvailabilityReportLine+
+  }
+AccountTypeCode =
+  notAllowed
+  | element AccountTypeCode { anonymous10 }
+CurrentStatus =
+  notAllowed
+  | element ns3:CurrentStatus { StatusType }
+CardAccount =
+  notAllowed
+  | element ns3:CardAccount {
+      PrimaryAccountNumberID,
+      NetworkID,
+      CardTypeCode?,
+      ValidityStartDate?,
+      ExpiryDate?,
+      IssuerID?,
+      IssueNumberID?,
+      CV2ID?,
+      CardChipCode?,
+      ChipApplicationID?,
+      HolderName?
+    }
+TaxScheme =
+  notAllowed
+  | element ns3:TaxScheme {
+      ID?,
+      Name?,
+      TaxTypeCode?,
+      CurrencyCode?,
+      JurisdictionRegionAddress*
+    }
+DocumentProviderParty =
+  notAllowed
+  | element ns3:DocumentProviderParty { PartyType }
+ItemLocationQuantity =
+  notAllowed
+  | element ns3:ItemLocationQuantity { ItemLocationQuantityType }
+TelecommunicationsServiceCategoryCode =
+  notAllowed
+  | element TelecommunicationsServiceCategoryCode { anonymous10 }
+ChargeTotalAmount =
+  notAllowed
+  | element ChargeTotalAmount { anonymous12 }
+ReferencedConsignmentID =
+  notAllowed
+  | element ReferencedConsignmentID { anonymous13 }
+PackageType =
+  (ID?,
+   Quantity?,
+   ReturnableMaterialIndicator?,
+   PackageLevelCode?,
+   PackagingTypeCode?,
+   PackingMaterial*,
+   TraceID?,
+   ContainedPackage*,
+   GoodsItem*,
+   MeasurementDimension*,
+   DeliveryUnit*,
+   Delivery?,
+   Pickup?,
+   Despatch?),
+  empty
+PenaltyPeriod =
+  notAllowed
+  | element ns3:PenaltyPeriod { PeriodType }
+ShipmentStageType =
+  (ID?,
+   TransportModeCode?,
+   TransportMeansTypeCode?,
+   TransitDirectionCode?,
+   PreCarriageIndicator,
+   OnCarriageIndicator,
+   EstimatedDeliveryDate?,
+   EstimatedDeliveryTime?,
+   RequiredDeliveryDate?,
+   RequiredDeliveryTime?,
+   LoadingSequenceID?,
+   SuccessiveSequenceID?,
+   Instructions?,
+   DemurrageInstructions?,
+   TransitPeriod?,
+   CarrierParty*,
+   TransportMeans?,
+   LoadingPortLocation?,
+   UnloadingPortLocation?,
+   TransshipPortLocation?,
+   LoadingTransportEvent?,
+   ExaminationTransportEvent?,
+   AvailabilityTransportEvent?,
+   ExportationTransportEvent?,
+   DischargeTransportEvent?,
+   WarehousingTransportEvent?,
+   TakeoverTransportEvent?,
+   OptionalTakeoverTransportEvent?,
+   DropoffTransportEvent?,
+   ActualPickupTransportEvent?,
+   DeliveryTransportEvent?,
+   ReceiptTransportEvent?,
+   StorageTransportEvent?,
+   AcceptanceTransportEvent?,
+   TerminalOperatorParty?,
+   CustomsAgentParty?),
+  empty
+StockAvailabilityReportLine =
+  notAllowed
+  | element ns3:StockAvailabilityReportLine {
+      ID,
+      Note*,
+      Quantity,
+      ValueAmount?,
+      AvailabilityDate?,
+      AvailabilityStatusCode?,
+      Item
+    }
+EndDate =
+  notAllowed
+  | element EndDate { anonymous14 }
+Reference =
+  notAllowed
+  | element Reference { anonymous6 }
+MeterConstantCode =
+  notAllowed
+  | element MeterConstantCode { anonymous10 }
+CategorizesClassificationCategory =
+  notAllowed
+  | element ns3:CategorizesClassificationCategory {
+      ClassificationCategoryType
+    }
+PrivacyCode =
+  notAllowed
+  | element PrivacyCode { anonymous10 }
+CatalogueIndicator =
+  notAllowed
+  | element CatalogueIndicator { anonymous9 }
+RequiredCustomsID =
+  notAllowed
+  | element RequiredCustomsID { anonymous13 }
+PayerFinancialAccount =
+  notAllowed
+  | element ns3:PayerFinancialAccount { FinancialAccountType }
+SignatureID =
+  notAllowed
+  | element SignatureID { anonymous13 }
+Comment =
+  notAllowed
+  | element Comment { anonymous6 }
+SubscriberTypeCode =
+  notAllowed
+  | element SubscriberTypeCode { anonymous10 }
+EffectiveDate =
+  notAllowed
+  | element EffectiveDate { anonymous14 }
+CitySubdivisionName =
+  notAllowed
+  | element CitySubdivisionName { anonymous0 }
+TransportItemTimeDeviationIndicator =
+  notAllowed
+  | element TransportItemTimeDeviationIndicator { anonymous9 }
+CallDuty =
+  notAllowed
+  | element ns3:CallDuty { DutyType }
+TradeServiceCode =
+  notAllowed
+  | element TradeServiceCode { anonymous10 }
+ExclusionReason =
+  notAllowed
+  | element ExclusionReason { anonymous6 }
+SubCreditNoteLine =
+  notAllowed
+  | element ns3:SubCreditNoteLine { CreditNoteLineType }
+AdditionalItemProperty =
+  notAllowed
+  | element ns3:AdditionalItemProperty { ItemPropertyType }
+MedicalFirstAidGuideCode =
+  notAllowed
+  | element MedicalFirstAidGuideCode { anonymous10 }
+QualityControlCode =
+  notAllowed
+  | element QualityControlCode { anonymous10 }
+ConsumptionType =
+  notAllowed
+  | element ConsumptionType { anonymous6 }
+DeliveryInstructions =
+  notAllowed
+  | element DeliveryInstructions { anonymous6 }
+RejectActionCode =
+  notAllowed
+  | element RejectActionCode { anonymous10 }
+EmploymentLegislationDocumentReference =
+  notAllowed
+  | element ns3:EmploymentLegislationDocumentReference {
+      DocumentReferenceType
+    }
+AcceptedVariantsDescription =
+  notAllowed
+  | element AcceptedVariantsDescription { anonymous6 }
+InsurancePremiumAmount =
+  notAllowed
+  | element InsurancePremiumAmount { anonymous12 }
+FirstName =
+  notAllowed
+  | element FirstName { anonymous0 }
+ItemComparison =
+  notAllowed
+  | element ns3:ItemComparison { PriceAmount?, Quantity? }
+SourceCurrencyCode =
+  notAllowed
+  | element SourceCurrencyCode { anonymous10 }
+ResolutionTime =
+  notAllowed
+  | element ResolutionTime { anonymous2 }
+RequestForTenderLine =
+  notAllowed
+  | element ns3:RequestForTenderLine { RequestForTenderLineType }
+EstimatedConsumptedQuantity =
+  notAllowed
+  | element EstimatedConsumptedQuantity { anonymous8 }
+CapabilityType =
+  (CapabilityTypeCode?,
+   Description*,
+   ValueAmount?,
+   ValueQuantity?,
+   EvidenceSuppliedID*,
+   ValidityPeriod?),
+  empty
+RequiredFinancialGuarantee =
+  notAllowed
+  | element ns3:RequiredFinancialGuarantee { FinancialGuaranteeType }
+SourceForecastIssueTime =
+  notAllowed
+  | element SourceForecastIssueTime { anonymous2 }
+CountryType = (IdentificationCode?, Name?), empty
+VersionID =
+  notAllowed
+  | element VersionID { anonymous13 }
+RequiredBusinessClassificationScheme =
+  notAllowed
+  | element ns3:RequiredBusinessClassificationScheme {
+      ClassificationSchemeType
+    }
+PlannedPeriod =
+  notAllowed
+  | element ns3:PlannedPeriod { PeriodType }
+CorporateRegistrationScheme =
+  notAllowed
+  | element ns3:CorporateRegistrationScheme {
+      ID?,
+      Name?,
+      CorporateRegistrationTypeCode?,
+      JurisdictionRegionAddress*
+    }
+ActivityOriginLocation =
+  notAllowed
+  | element ns3:ActivityOriginLocation { LocationType }
+ComparisonForecastIssueTime =
+  notAllowed
+  | element ComparisonForecastIssueTime { anonymous2 }
+ContractingPartyTypeCode =
+  notAllowed
+  | element ContractingPartyTypeCode { anonymous10 }
+TargetCurrencyCode =
+  notAllowed
+  | element TargetCurrencyCode { anonymous10 }
+LeadTimeMeasure =
+  notAllowed
+  | element LeadTimeMeasure { anonymous5 }
+SupplyItem =
+  notAllowed
+  | element ns3:SupplyItem { ItemType }
+QuarantineTransportEvent =
+  notAllowed
+  | element ns3:QuarantineTransportEvent { TransportEventType }
+ActualDepartureDate =
+  notAllowed
+  | element ActualDepartureDate { anonymous14 }
+BatchQuantity =
+  notAllowed
+  | element BatchQuantity { anonymous8 }
+CorrectionType =
+  notAllowed
+  | element CorrectionType { anonymous6 }
+AttachmentType =
+  (EmbeddedDocumentBinaryObject?, ExternalReference?), empty
+StatusType =
+  (ConditionCode?,
+   ReferenceDate?,
+   ReferenceTime?,
+   Description*,
+   StatusReasonCode?,
+   StatusReason*,
+   SequenceID?,
+   Text*,
+   IndicationIndicator?,
+   Percent?,
+   ConditionValueMeasure*,
+   ReliabilityPercent?),
+  empty
+LowerTenderAmount =
+  notAllowed
+  | element LowerTenderAmount { anonymous12 }
+ContentUnitQuantity =
+  notAllowed
+  | element ContentUnitQuantity { anonymous8 }
+EvaluationCriteriaTypeCode =
+  notAllowed
+  | element EvaluationCriteriaTypeCode { anonymous10 }
+Instructions =
+  notAllowed
+  | element Instructions { anonymous6 }
+ResidentOccupantsNumeric =
+  notAllowed
+  | element ResidentOccupantsNumeric { anonymous3 }
+InspectionMethodCode =
+  notAllowed
+  | element InspectionMethodCode { anonymous10 }
+OriginalContractingSystemID =
+  notAllowed
+  | element OriginalContractingSystemID { anonymous13 }
+OriginalItemLocationQuantity =
+  notAllowed
+  | element ns3:OriginalItemLocationQuantity {
+      ItemLocationQuantityType
+    }
+TransportEmergencyCardCode =
+  notAllowed
+  | element TransportEmergencyCardCode { anonymous10 }
+ConsumptionLevel =
+  notAllowed
+  | element ConsumptionLevel { anonymous6 }
+ApplicableTransportMeans =
+  notAllowed
+  | element ns3:ApplicableTransportMeans { TransportMeansType }
+GasPressureQuantity =
+  notAllowed
+  | element GasPressureQuantity { anonymous8 }
+OntologyURI =
+  notAllowed
+  | element OntologyURI { anonymous13 }
+InvoiceLineType =
+  (ID,
+   UUID?,
+   Note*,
+   InvoicedQuantity?,
+   LineExtensionAmount,
+   TaxPointDate?,
+   AccountingCostCode?,
+   AccountingCost?,
+   PaymentPurposeCode?,
+   FreeOfChargeIndicator?,
+   InvoicePeriod*,
+   OrderLineReference*,
+   DespatchLineReference*,
+   ReceiptLineReference*,
+   BillingReference*,
+   DocumentReference*,
+   PricingReference?,
+   OriginatorParty?,
+   Delivery*,
+   PaymentTerms*,
+   AllowanceCharge*,
+   TaxTotal*,
+   Item,
+   Price?,
+   DeliveryTerms?,
+   SubInvoiceLine*),
+  empty
+TelecommunicationsSupplyLine =
+  notAllowed
+  | element ns3:TelecommunicationsSupplyLine {
+      ID,
+      PhoneNumber,
+      Description?,
+      LineExtensionAmount?,
+      ExchangeRate*,
+      AllowanceCharge*,
+      TaxTotal*,
+      TelecommunicationsService+
+    }
+BalanceAmount =
+  notAllowed
+  | element BalanceAmount { anonymous12 }
+ReminderPeriod =
+  notAllowed
+  | element ns3:ReminderPeriod { PeriodType }
+StorageLocation =
+  notAllowed
+  | element ns3:StorageLocation { LocationType }
+FinancingInstrumentCode =
+  notAllowed
+  | element FinancingInstrumentCode { anonymous10 }
+EffectivePeriod =
+  notAllowed
+  | element ns3:EffectivePeriod { PeriodType }
+CarrierAssignedID =
+  notAllowed
+  | element CarrierAssignedID { anonymous13 }
+OnAccountPaymentType =
+  (EstimatedConsumptedQuantity, Note?, PaymentTerms+), empty
+TaxExemptionReason =
+  notAllowed
+  | element TaxExemptionReason { anonymous6 }
+ReceivedTenderQuantity =
+  notAllowed
+  | element ReceivedTenderQuantity { anonymous8 }
+PriceAmountQuantity =
+  notAllowed
+  | element PriceAmountQuantity { anonymous8 }
+ConsumerIncentiveTacticTypeCode =
+  notAllowed
+  | element ConsumerIncentiveTacticTypeCode { anonymous10 }
+TransactionCurrencyTaxAmount =
+  notAllowed
+  | element TransactionCurrencyTaxAmount { anonymous12 }
+ComponentRelatedItem =
+  notAllowed
+  | element ns3:ComponentRelatedItem { RelatedItemType }
+MonetaryScope =
+  notAllowed
+  | element MonetaryScope { anonymous6 }
+SpecialServiceInstructions =
+  notAllowed
+  | element SpecialServiceInstructions { anonymous6 }
+TaxEvidenceIndicator =
+  notAllowed
+  | element TaxEvidenceIndicator { anonymous9 }
+PricingReference =
+  notAllowed
+  | element ns3:PricingReference {
+      OriginalItemLocationQuantity?, AlternativeConditionPrice*
+    }
+CompanyID =
+  notAllowed
+  | element CompanyID { anonymous13 }
+AllowanceChargeReasonCode =
+  notAllowed
+  | element AllowanceChargeReasonCode { anonymous10 }
+TemplateDocumentReference =
+  notAllowed
+  | element ns3:TemplateDocumentReference { DocumentReferenceType }
+LineReference =
+  notAllowed
+  | element ns3:LineReference { LineReferenceType }
+AnimalFoodApprovedIndicator =
+  notAllowed
+  | element AnimalFoodApprovedIndicator { anonymous9 }
+DischargeTransportEvent =
+  notAllowed
+  | element ns3:DischargeTransportEvent { TransportEventType }
+AllowanceCharge =
+  notAllowed
+  | element ns3:AllowanceCharge { AllowanceChargeType }
+BackorderQuantity =
+  notAllowed
+  | element BackorderQuantity { anonymous8 }
+RegistrationName =
+  notAllowed
+  | element RegistrationName { anonymous0 }
+DisplayTacticTypeCode =
+  notAllowed
+  | element DisplayTacticTypeCode { anonymous10 }
+TrainID =
+  notAllowed
+  | element TrainID { anonymous13 }
+RequiredClassificationScheme =
+  notAllowed
+  | element ns3:RequiredClassificationScheme {
+      ClassificationSchemeType
+    }
+UrgencyCode =
+  notAllowed
+  | element UrgencyCode { anonymous10 }
+PrepaidAmount =
+  notAllowed
+  | element PrepaidAmount { anonymous12 }
+MaximumPaidAmount =
+  notAllowed
+  | element MaximumPaidAmount { anonymous12 }
+RegistrationAddress =
+  notAllowed
+  | element ns3:RegistrationAddress { AddressType }
+SubordinateAwardingCriteriaResponse =
+  notAllowed
+  | element ns3:SubordinateAwardingCriteriaResponse {
+      AwardingCriteriaResponseType
+    }
+PayerParty =
+  notAllowed
+  | element ns3:PayerParty { PartyType }
+MaximumVariantQuantity =
+  notAllowed
+  | element MaximumVariantQuantity { anonymous8 }
+PrintQualifier =
+  notAllowed
+  | element PrintQualifier { anonymous6 }
+EventTacticEnumeration =
+  notAllowed
+  | element ns3:EventTacticEnumeration {
+      ConsumerIncentiveTacticTypeCode?,
+      DisplayTacticTypeCode?,
+      FeatureTacticTypeCode?,
+      TradeItemPackingLabelingTypeCode?
+    }
+ValidityStartDate =
+  notAllowed
+  | element ValidityStartDate { anonymous14 }
+DeliveryPeriod =
+  notAllowed
+  | element ns3:DeliveryPeriod { PeriodType }
+TaxTypeCode =
+  notAllowed
+  | element TaxTypeCode { anonymous10 }
+PaymentFrequencyCode =
+  notAllowed
+  | element PaymentFrequencyCode { anonymous10 }
+NetNetWeightMeasure =
+  notAllowed
+  | element NetNetWeightMeasure { anonymous5 }
+UpdatedDelivery =
+  notAllowed
+  | element ns3:UpdatedDelivery { DeliveryType }
+LastRevisionTime =
+  notAllowed
+  | element LastRevisionTime { anonymous2 }
+Text =
+  notAllowed
+  | element Text { anonymous6 }
+OccurrenceDate =
+  notAllowed
+  | element OccurrenceDate { anonymous14 }
+ManufactureDate =
+  notAllowed
+  | element ManufactureDate { anonymous14 }
+ContractAcceptancePeriod =
+  notAllowed
+  | element ns3:ContractAcceptancePeriod { PeriodType }
+OutstandingReason =
+  notAllowed
+  | element OutstandingReason { anonymous6 }
+EnvironmentalLegislationDocumentReference =
+  notAllowed
+  | element ns3:EnvironmentalLegislationDocumentReference {
+      DocumentReferenceType
+    }
+AddressLine =
+  notAllowed
+  | element ns3:AddressLine { Line }
+SpecialTerms =
+  notAllowed
+  | element SpecialTerms { anonymous6 }
+ConsumerUnitQuantity =
+  notAllowed
+  | element ConsumerUnitQuantity { anonymous8 }
+SummaryDescription =
+  notAllowed
+  | element SummaryDescription { anonymous6 }
+AcceptanceTransportEvent =
+  notAllowed
+  | element ns3:AcceptanceTransportEvent { TransportEventType }
+DeliveryTransportEvent =
+  notAllowed
+  | element ns3:DeliveryTransportEvent { TransportEventType }
+ActivityFinalLocation =
+  notAllowed
+  | element ns3:ActivityFinalLocation { LocationType }
+DropoffTransportEvent =
+  notAllowed
+  | element ns3:DropoffTransportEvent { TransportEventType }
+HandlingCode =
+  notAllowed
+  | element HandlingCode { anonymous10 }
+TechnicalEvaluationCriteria =
+  notAllowed
+  | element ns3:TechnicalEvaluationCriteria { EvaluationCriteriaType }
+PenaltySurchargePercent =
+  notAllowed
+  | element PenaltySurchargePercent { anonymous7 }
+MandateDocumentReference =
+  notAllowed
+  | element ns3:MandateDocumentReference { DocumentReferenceType }
+TelecommunicationsServiceCall =
+  notAllowed
+  | element TelecommunicationsServiceCall { anonymous6 }
+LoadingTransportEvent =
+  notAllowed
+  | element ns3:LoadingTransportEvent { TransportEventType }
+TransportationServiceDescription =
+  notAllowed
+  | element TransportationServiceDescription { anonymous6 }
+DifferenceTemperatureReductionQuantity =
+  notAllowed
+  | element DifferenceTemperatureReductionQuantity { anonymous8 }
+TargetCurrencyBaseRate =
+  notAllowed
+  | element TargetCurrencyBaseRate { anonymous1 }
+UtilitySupplierParty =
+  notAllowed
+  | element ns3:UtilitySupplierParty { PartyType }
+TaxExemptionReasonCode =
+  notAllowed
+  | element TaxExemptionReasonCode { anonymous10 }
+Login =
+  notAllowed
+  | element Login { anonymous6 }
+FeeDescription =
+  notAllowed
+  | element FeeDescription { anonymous6 }
+DebitLineAmount =
+  notAllowed
+  | element DebitLineAmount { anonymous12 }
+TariffDescription =
+  notAllowed
+  | element TariffDescription { anonymous6 }
+ExchangeRateType =
+  (SourceCurrencyCode,
+   SourceCurrencyBaseRate?,
+   TargetCurrencyCode,
+   TargetCurrencyBaseRate?,
+   ExchangeMarketID?,
+   CalculationRate?,
+   MathematicOperatorCode?,
+   Date?,
+   ForeignExchangeContract?),
+  empty
+ConsumptionPointType =
+  (ID,
+   Description?,
+   SubscriberID?,
+   SubscriberTypeIdentifier?,
+   SubscriberTypeCode?,
+   TotalDeliveredQuantity?,
+   Address?,
+   WebSiteAccess?,
+   UtilityMeter*),
+  empty
+BudgetAccountLine =
+  notAllowed
+  | element ns3:BudgetAccountLine { ID?, TotalAmount?, BudgetAccount* }
+ApprovalStatus =
+  notAllowed
+  | element ApprovalStatus { anonymous6 }
+InstructionNote =
+  notAllowed
+  | element InstructionNote { anonymous6 }
+EstimatedArrivalDate =
+  notAllowed
+  | element EstimatedArrivalDate { anonymous14 }
+AwardingCriteria =
+  notAllowed
+  | element ns3:AwardingCriteria { AwardingCriteriaType }
+ShippingPriorityLevelCode =
+  notAllowed
+  | element ShippingPriorityLevelCode { anonymous10 }
+PreviousCancellationReasonCode =
+  notAllowed
+  | element PreviousCancellationReasonCode { anonymous10 }
+PromisedDeliveryPeriod =
+  notAllowed
+  | element ns3:PromisedDeliveryPeriod { PeriodType }
+CardChipCode =
+  notAllowed
+  | element CardChipCode { anonymous10 }
+WarehousingTransportEvent =
+  notAllowed
+  | element ns3:WarehousingTransportEvent { TransportEventType }
+SubscriberID =
+  notAllowed
+  | element SubscriberID { anonymous13 }
+ForecastPeriod =
+  notAllowed
+  | element ns3:ForecastPeriod { PeriodType }
+DemurrageInstructions =
+  notAllowed
+  | element DemurrageInstructions { anonymous6 }
+ChannelCode =
+  notAllowed
+  | element ChannelCode { anonymous10 }
+NotaryParty =
+  notAllowed
+  | element ns3:NotaryParty { PartyType }
+BusinessClassificationScheme =
+  notAllowed
+  | element ns3:BusinessClassificationScheme {
+      ClassificationSchemeType
+    }
+BlockName =
+  notAllowed
+  | element BlockName { anonymous0 }
+CorrectionUnitAmount =
+  notAllowed
+  | element CorrectionUnitAmount { anonymous12 }
+StakeholderParty =
+  notAllowed
+  | element ns3:StakeholderParty { PartyType }
+PayableAlternativeAmount =
+  notAllowed
+  | element PayableAlternativeAmount { anonymous12 }
+OriginalDespatchTransportationService =
+  notAllowed
+  | element ns3:OriginalDespatchTransportationService {
+      TransportationServiceType
+    }
+Package =
+  notAllowed
+  | element ns3:Package { PackageType }
+CreditedQuantity =
+  notAllowed
+  | element CreditedQuantity { anonymous8 }
+ItemSpecificationDocumentReference =
+  notAllowed
+  | element ns3:ItemSpecificationDocumentReference {
+      DocumentReferenceType
+    }
+PersonalSituation =
+  notAllowed
+  | element PersonalSituation { anonymous6 }
+LocationTypeCode =
+  notAllowed
+  | element LocationTypeCode { anonymous10 }
+TaxCategoryType =
+  (ID?,
+   Name?,
+   Percent?,
+   BaseUnitMeasure?,
+   PerUnitAmount?,
+   TaxExemptionReasonCode?,
+   TaxExemptionReason?,
+   TierRange?,
+   TierRatePercent?,
+   TaxScheme),
+  empty
+CorrectionType2 =
+  (CorrectionType?,
+   CorrectionTypeCode?,
+   MeterNumber?,
+   GasPressureQuantity?,
+   ActualTemperatureReductionQuantity?,
+   NormalTemperatureReductionQuantity?,
+   DifferenceTemperatureReductionQuantity?,
+   Description?,
+   CorrectionUnitAmount?,
+   ConsumptionEnergyQuantity?,
+   ConsumptionWaterQuantity?,
+   CorrectionAmount?),
+  empty
+CalculationExpressionCode =
+  notAllowed
+  | element CalculationExpressionCode { anonymous10 }
+OrderQuantityIncrementNumeric =
+  notAllowed
+  | element OrderQuantityIncrementNumeric { anonymous3 }
+TendererRequirementTypeCode =
+  notAllowed
+  | element TendererRequirementTypeCode { anonymous10 }
+ExtensionReason =
+  notAllowed
+  | element ns4:ExtensionReason { anonymous6 }
+LifeCycleStatusCode =
+  notAllowed
+  | element LifeCycleStatusCode { anonymous10 }
+RailCarID =
+  notAllowed
+  | element RailCarID { anonymous13 }
+PrepaidIndicator =
+  notAllowed
+  | element PrepaidIndicator { anonymous9 }
+SubstitutionStatusCode =
+  notAllowed
+  | element SubstitutionStatusCode { anonymous10 }
+UtilityConsumptionPoint =
+  notAllowed
+  | element ns3:UtilityConsumptionPoint { ConsumptionPointType }
+FirstShipmentAvailibilityDate =
+  notAllowed
+  | element FirstShipmentAvailibilityDate { anonymous14 }
+NegotiationDescription =
+  notAllowed
+  | element NegotiationDescription { anonymous6 }
+HolderName =
+  notAllowed
+  | element HolderName { anonymous0 }
+ConsumptionReportID =
+  notAllowed
+  | element ConsumptionReportID { anonymous13 }
+PostalZone =
+  notAllowed
+  | element PostalZone { anonymous6 }
+BalanceBroughtForwardIndicator =
+  notAllowed
+  | element BalanceBroughtForwardIndicator { anonymous9 }
+Stowage =
+  notAllowed
+  | element ns3:Stowage {
+      LocationID?, Location*, MeasurementDimension*
+    }
+DisbursementPaymentTerms =
+  notAllowed
+  | element ns3:DisbursementPaymentTerms { PaymentTermsType }
+TotalTaskAmount =
+  notAllowed
+  | element TotalTaskAmount { anonymous12 }
+NameSuffix =
+  notAllowed
+  | element NameSuffix { anonymous6 }
+MaximumAmount =
+  notAllowed
+  | element MaximumAmount { anonymous12 }
+URI =
+  notAllowed
+  | element URI { anonymous13 }
+ExportCountry =
+  notAllowed
+  | element ns3:ExportCountry { CountryType }
+PurposeCode =
+  notAllowed
+  | element PurposeCode { anonymous10 }
+TechnicalCommitteePerson =
+  notAllowed
+  | element ns3:TechnicalCommitteePerson { PersonType }
+ProcurementProject =
+  notAllowed
+  | element ns3:ProcurementProject {
+      ID?,
+      Name+,
+      Description*,
+      TypeCode?,
+      SubTypeCode?,
+      QualityControlCode?,
+      RequiredFeeAmount?,
+      FeeDescription*,
+      BudgetAmount?,
+      RequiredCommodityClassification*,
+      RealizedLocation?,
+      PlannedPeriod?,
+      ContractExtension?,
+      RequestForTenderLine*
+    }
+TaxSubtotal =
+  notAllowed
+  | element ns3:TaxSubtotal {
+      TaxableAmount?,
+      TaxAmount,
+      CalculationSequenceNumeric?,
+      TransactionCurrencyTaxAmount?,
+      Percent?,
+      BaseUnitMeasure?,
+      PerUnitAmount?,
+      TierRange?,
+      TierRatePercent?,
+      TaxCategory
+    }
+SalesOrderLineID =
+  notAllowed
+  | element SalesOrderLineID { anonymous13 }
+LocationType =
+  (ID?,
+   Description?,
+   Conditions?,
+   CountrySubentity?,
+   CountrySubentityCode?,
+   LocationTypeCode?,
+   ValidityPeriod*,
+   Address?,
+   SubsidiaryLocation?,
+   LocationCoordinate?),
+  empty
+LocationID =
+  notAllowed
+  | element LocationID { anonymous13 }
+DocumentHash =
+  notAllowed
+  | element DocumentHash { anonymous6 }
+HaulageInstructions =
+  notAllowed
+  | element HaulageInstructions { anonymous6 }
+RetailerCustomerParty =
+  notAllowed
+  | element ns3:RetailerCustomerParty { CustomerPartyType }
+FrameworkAgreement =
+  notAllowed
+  | element ns3:FrameworkAgreement {
+      ExpectedOperatorQuantity?,
+      MaximumOperatorQuantity?,
+      Justification*,
+      Frequency*,
+      DurationPeriod?,
+      SubsequentProcessTenderRequirement*
+    }
+HaulageTradingTerms =
+  notAllowed
+  | element ns3:HaulageTradingTerms { TradingTermsType }
+Shipment =
+  notAllowed
+  | element ns3:Shipment { ShipmentType }
+DutyCode =
+  notAllowed
+  | element DutyCode { anonymous10 }
+InvoiceDocumentReference =
+  notAllowed
+  | element ns3:InvoiceDocumentReference { DocumentReferenceType }
+UnloadingPortLocation =
+  notAllowed
+  | element ns3:UnloadingPortLocation { LocationType }
+AdditionalDocumentReference =
+  notAllowed
+  | element ns3:AdditionalDocumentReference { DocumentReferenceType }
+PrepaidPaymentTerms =
+  notAllowed
+  | element ns3:PrepaidPaymentTerms { PaymentTermsType }
+AccountingCostCode =
+  notAllowed
+  | element AccountingCostCode { anonymous10 }
+AwardingCriteriaType =
+  (ID?,
+   AwardingCriteriaTypeCode?,
+   Description*,
+   WeightNumeric?,
+   Weight*,
+   CalculationExpression*,
+   CalculationExpressionCode?,
+   MinimumQuantity?,
+   MaximumQuantity?,
+   MinimumAmount?,
+   MaximumAmount?,
+   MinimumImprovementBid*,
+   SubordinateAwardingCriteria*),
+  empty
+HazardousRiskIndicator =
+  notAllowed
+  | element HazardousRiskIndicator { anonymous9 }
+Consignment =
+  notAllowed
+  | element ns3:Consignment {
+      ID,
+      CarrierAssignedID?,
+      ConsigneeAssignedID?,
+      ConsignorAssignedID?,
+      FreightForwarderAssignedID?,
+      BrokerAssignedID?,
+      ContractedCarrierAssignedID?,
+      PerformingCarrierAssignedID?,
+      SummaryDescription*,
+      TotalInvoiceAmount?,
+      DeclaredCustomsValueAmount?,
+      TariffDescription*,
+      TariffCode?,
+      InsurancePremiumAmount?,
+      GrossWeightMeasure?,
+      NetWeightMeasure?,
+      NetNetWeightMeasure?,
+      ChargeableWeightMeasure?,
+      GrossVolumeMeasure?,
+      NetVolumeMeasure?,
+      LoadingLengthMeasure?,
+      Remarks*,
+      HazardousRiskIndicator?,
+      AnimalFoodIndicator?,
+      HumanFoodIndicator?,
+      LivestockIndicator?,
+      BulkCargoIndicator?,
+      ContainerizedIndicator?,
+      GeneralCargoIndicator?,
+      SpecialSecurityIndicator?,
+      ThirdPartyPayerIndicator?,
+      CarrierServiceInstructions?,
+      CustomsClearanceServiceInstructions?,
+      ForwarderServiceInstructions?,
+      SpecialServiceInstructions?,
+      SequenceID?,
+      ShippingPriorityLevelCode?,
+      HandlingCode?,
+      HandlingInstructions?,
+      Information?,
+      TotalGoodsItemQuantity?,
+      TotalTransportHandlingUnitQuantity?,
+      InsuranceValueAmount?,
+      DeclaredForCarriageValueAmount?,
+      DeclaredStatisticsValueAmount?,
+      FreeOnBoardValueAmount?,
+      SpecialInstructions*,
+      SplitConsignmentIndicator?,
+      DeliveryInstructions*,
+      ConsignmentQuantity?,
+      ConsolidatableIndicator?,
+      HaulageInstructions*,
+      LoadingSequenceID?,
+      ConsigneeParty?,
+      ExporterParty?,
+      ConsignorParty?,
+      ImporterParty?,
+      CarrierParty?,
+      FreightForwarderParty?,
+      NotifyParty?,
+      OriginalDespatchParty?,
+      FinalDeliveryParty?,
+      PerformingCarrierParty?,
+      SubstituteCarrierParty?,
+      LogisticsOperatorParty?,
+      TransportAdvisorParty?,
+      HazardousItemNotificationParty?,
+      InsuranceParty?,
+      MortgageHolderParty?,
+      BillOfLadingHolderParty?,
+      OriginalDepartureCountry?,
+      FinalDestinationCountry?,
+      TransitCountry*,
+      TransportContract?,
+      OriginalDespatchTransportationService?,
+      FinalDeliveryTransportationService?,
+      DeliveryTerms?,
+      PaymentTerms?,
+      CollectPaymentTerms?,
+      DisbursementPaymentTerms?,
+      PrepaidPaymentTerms?,
+      FreightAllowanceCharge*,
+      ExtraAllowanceCharge*,
+      MainCarriageShipmentStage?,
+      PreCarriageShipmentStage*,
+      OnCarriageShipmentStage*,
+      TransportHandlingUnit*,
+      FirstArrivalPortLocation?,
+      LastExitPortLocation?,
+      ConsolidatedShipment*
+    }
+OrderLineReference =
+  notAllowed
+  | element ns3:OrderLineReference {
+      LineID, SalesOrderLineID?, UUID?, LineStatusCode?, OrderReference?
+    }
+TimeDeltaDaysQuantity =
+  notAllowed
+  | element TimeDeltaDaysQuantity { anonymous8 }
+TransportEventType =
+  (IdentificationID?,
+   OccurrenceDate?,
+   OccurrenceTime?,
+   TransportEventTypeCode?,
+   Description?,
+   CompletionIndicator?,
+   ReportedShipment?,
+   CurrentStatus+,
+   Contact*,
+   Location2?),
+  empty
+PriceTypeCode =
+  notAllowed
+  | element PriceTypeCode { anonymous10 }
+ImportanceCode =
+  notAllowed
+  | element ImportanceCode { anonymous10 }
+LocationCoordinate =
+  notAllowed
+  | element ns3:LocationCoordinate {
+      CoordinateSystemCode?,
+      LatitudeDegreesMeasure?,
+      LatitudeMinutesMeasure?,
+      LatitudeDirectionCode?,
+      LongitudeDegreesMeasure?,
+      LongitudeMinutesMeasure?,
+      LongitudeDirectionCode?,
+      AltitudeMeasure?
+    }
+HeatingType =
+  notAllowed
+  | element HeatingType { anonymous6 }
+BudgetAmount =
+  notAllowed
+  | element ns3:BudgetAmount {
+      EstimatedOverallContractAmount?,
+      TotalAmount?,
+      TaxExclusiveAmount?,
+      MinimumAmount?,
+      MonetaryScope*,
+      AverageSubsequentContractAmount?,
+      ApplicableTaxCategory*
+    }
+ShortQuantity =
+  notAllowed
+  | element ShortQuantity { anonymous8 }
+TransportMeansTypeCode =
+  notAllowed
+  | element TransportMeansTypeCode { anonymous10 }
+ValidateProcess =
+  notAllowed
+  | element ValidateProcess { anonymous6 }
+AdditionalQualifyingParty =
+  notAllowed
+  | element ns3:AdditionalQualifyingParty { QualifyingPartyType }
+FinancingFinancialAccount =
+  notAllowed
+  | element ns3:FinancingFinancialAccount { FinancialAccountType }
+Amount =
+  notAllowed
+  | element Amount { anonymous12 }
+NominationPeriod =
+  notAllowed
+  | element ns3:NominationPeriod { PeriodType }
+OnCarriageIndicator =
+  notAllowed
+  | element OnCarriageIndicator { anonymous9 }
+OfferedItemLocationQuantity =
+  notAllowed
+  | element ns3:OfferedItemLocationQuantity { ItemLocationQuantityType }
+OneTimeChargeTypeCode =
+  notAllowed
+  | element OneTimeChargeTypeCode { anonymous10 }
+DocumentTypeCode =
+  notAllowed
+  | element DocumentTypeCode { anonymous10 }
+PricingExchangeRate =
+  notAllowed
+  | element ns3:PricingExchangeRate { ExchangeRateType }
+DurationPeriod =
+  notAllowed
+  | element ns3:DurationPeriod { PeriodType }
+CurrentChargeTypeCode =
+  notAllowed
+  | element CurrentChargeTypeCode { anonymous10 }
+TenderPreparation =
+  notAllowed
+  | element ns3:TenderPreparation {
+      TenderEnvelopeID,
+      TenderEnvelopeTypeCode?,
+      Description*,
+      OpenTenderID?,
+      ProcurementProjectLotID*,
+      DocumentTenderRequirement*
+    }
+ActualDeliveryTime =
+  notAllowed
+  | element ActualDeliveryTime { anonymous2 }
+EstimatedArrivalTime =
+  notAllowed
+  | element EstimatedArrivalTime { anonymous2 }
+PickupTransportEvent =
+  notAllowed
+  | element ns3:PickupTransportEvent { TransportEventType }
+PhysicalLocation =
+  notAllowed
+  | element ns3:PhysicalLocation { LocationType }
+PackSizeNumeric =
+  notAllowed
+  | element PackSizeNumeric { anonymous3 }
+CharacterSetCode =
+  notAllowed
+  | element CharacterSetCode { anonymous10 }
+ServiceNumberCalled =
+  notAllowed
+  | element ServiceNumberCalled { anonymous6 }
+CallExtensionAmount =
+  notAllowed
+  | element CallExtensionAmount { anonymous12 }
+PickupLocation =
+  notAllowed
+  | element ns3:PickupLocation { LocationType }
+RelatedItemType = (ID?, Quantity?, Description*), empty
+CollaborationPriorityCode =
+  notAllowed
+  | element CollaborationPriorityCode { anonymous10 }
+Keyword =
+  notAllowed
+  | element Keyword { anonymous6 }
+HigherTenderAmount =
+  notAllowed
+  | element HigherTenderAmount { anonymous12 }
+PaymentReversalPeriod =
+  notAllowed
+  | element ns3:PaymentReversalPeriod { PeriodType }
+RequiredItemLocationQuantity =
+  notAllowed
+  | element ns3:RequiredItemLocationQuantity {
+      ItemLocationQuantityType
+    }
+ContractualDocumentReference =
+  notAllowed
+  | element ns3:ContractualDocumentReference { DocumentReferenceType }
+SealIssuerTypeCode =
+  notAllowed
+  | element SealIssuerTypeCode { anonymous10 }
+PackingMaterial =
+  notAllowed
+  | element PackingMaterial { anonymous6 }
+FinancialAccountType =
+  (ID?,
+   Name?,
+   AliasName?,
+   AccountTypeCode?,
+   AccountFormatCode?,
+   CurrencyCode?,
+   PaymentNote*,
+   FinancialInstitutionBranch?,
+   Country?),
+  empty
+AwardingCriteriaResponse =
+  notAllowed
+  | element ns3:AwardingCriteriaResponse {
+      AwardingCriteriaResponseType
+    }
+ValueQuantity =
+  notAllowed
+  | element ValueQuantity { anonymous8 }
+RequiredFeeAmount =
+  notAllowed
+  | element RequiredFeeAmount { anonymous12 }
+CorrectionTypeCode =
+  notAllowed
+  | element CorrectionTypeCode { anonymous10 }
+InformationURI =
+  notAllowed
+  | element InformationURI { anonymous13 }
+CustomsClearanceServiceInstructions =
+  notAllowed
+  | element CustomsClearanceServiceInstructions { anonymous6 }
+RequiredDeliveryDate =
+  notAllowed
+  | element RequiredDeliveryDate { anonymous14 }
+CommodityCode =
+  notAllowed
+  | element CommodityCode { anonymous10 }
+AwardingCriteriaResponseType =
+  (ID?,
+   AwardingCriteriaID?,
+   AwardingCriteriaDescription*,
+   Description*,
+   Quantity?,
+   Amount?,
+   SubordinateAwardingCriteriaResponse*),
+  empty
+TransactionConditions =
+  notAllowed
+  | element ns3:TransactionConditions {
+      ID?, ActionCode?, Description*, DocumentReference*
+    }
+CustomsStatusCode =
+  notAllowed
+  | element CustomsStatusCode { anonymous10 }
+ManufacturerParty =
+  notAllowed
+  | element ns3:ManufacturerParty { PartyType }
+Description =
+  notAllowed
+  | element Description { anonymous6 }
+OutstandingQuantity =
+  notAllowed
+  | element OutstandingQuantity { anonymous8 }
+PartyCapacityAmount =
+  notAllowed
+  | element PartyCapacityAmount { anonymous12 }
+TechnicalCapability =
+  notAllowed
+  | element ns3:TechnicalCapability { CapabilityType }
+GovernmentAgreementConstraintIndicator =
+  notAllowed
+  | element GovernmentAgreementConstraintIndicator { anonymous9 }
+ClauseCode =
+  notAllowed
+  | element ClauseCode { anonymous10 }
+AlternativeLineItem =
+  notAllowed
+  | element ns3:AlternativeLineItem { LineItemType }
+TelecommunicationsSupplyType =
+  (TelecommunicationsSupplyType2?,
+   TelecommunicationsSupplyTypeCode?,
+   PrivacyCode,
+   Description?,
+   TotalAmount?,
+   TelecommunicationsSupplyLine+),
+  empty
+ExpressionCode =
+  notAllowed
+  | element ExpressionCode { anonymous10 }
+ActivityCode =
+  notAllowed
+  | element ActivityCode { anonymous10 }
+Date =
+  notAllowed
+  | element Date { anonymous14 }
+TransshipPortLocation =
+  notAllowed
+  | element ns3:TransshipPortLocation { LocationType }
+TaxLevelCode =
+  notAllowed
+  | element TaxLevelCode { anonymous10 }
+SubscriberIDType =
+  notAllowed
+  | element SubscriberIDType { anonymous6 }
+PerformingCarrierParty =
+  notAllowed
+  | element ns3:PerformingCarrierParty { PartyType }
+ResponseType =
+  (ReferenceID?,
+   ResponseCode?,
+   Description*,
+   EffectiveDate?,
+   EffectiveTime?,
+   Status?),
+  empty
+ActualPickupDate =
+  notAllowed
+  | element ActualPickupDate { anonymous14 }
+SignatoryContact =
+  notAllowed
+  | element ns3:SignatoryContact { ContactType }
+Note =
+  notAllowed
+  | element Note { anonymous6 }
+DocumentCurrencyCode =
+  notAllowed
+  | element DocumentCurrencyCode { anonymous10 }
+EndorserParty =
+  notAllowed
+  | element ns3:EndorserParty {
+      RoleCode, SequenceNumeric, Party, SignatoryContact
+    }
+CustomerReference =
+  notAllowed
+  | element CustomerReference { anonymous6 }
+anonymous0 = anonymous4
+LegalStatusIndicator =
+  notAllowed
+  | element LegalStatusIndicator { anonymous9 }
+Remarks =
+  notAllowed
+  | element Remarks { anonymous6 }
+ConsolidatableIndicator =
+  notAllowed
+  | element ConsolidatableIndicator { anonymous9 }
+EvidenceTypeCode =
+  notAllowed
+  | element EvidenceTypeCode { anonymous10 }
+NetworkID =
+  notAllowed
+  | element NetworkID { anonymous13 }
+EconomicOperatorRegistryURI =
+  notAllowed
+  | element EconomicOperatorRegistryURI { anonymous13 }
+ContractedCarrierAssignedID =
+  notAllowed
+  | element ContractedCarrierAssignedID { anonymous13 }
+BillingReferenceLine =
+  notAllowed
+  | element ns3:BillingReferenceLine { ID, Amount?, AllowanceCharge* }
+LogoReferenceID =
+  notAllowed
+  | element LogoReferenceID { anonymous13 }
+BuyersItemIdentification =
+  notAllowed
+  | element ns3:BuyersItemIdentification { ItemIdentificationType }
+MaximumDeliveryUnit =
+  notAllowed
+  | element ns3:MaximumDeliveryUnit { DeliveryUnitType }
+TechnicalName =
+  notAllowed
+  | element TechnicalName { anonymous0 }
+PerUnitAmount =
+  notAllowed
+  | element PerUnitAmount { anonymous12 }
+Signature =
+  notAllowed
+  | element ns3:Signature {
+      ID,
+      Note*,
+      ValidationDate?,
+      ValidationTime?,
+      ValidatorID?,
+      CanonicalizationMethod?,
+      SignatureMethod?,
+      SignatoryParty?,
+      DigitalSignatureAttachment?,
+      OriginalDocumentReference?
+    }
+PaymentMeansCode =
+  notAllowed
+  | element PaymentMeansCode { anonymous10 }
+anonymous1 = anonymous11
+ConsumptionWaterQuantity =
+  notAllowed
+  | element ConsumptionWaterQuantity { anonymous8 }
+SubsequentProcessTenderRequirement =
+  notAllowed
+  | element ns3:SubsequentProcessTenderRequirement {
+      TenderRequirementType
+    }
+OccurenceLocation =
+  notAllowed
+  | element ns3:OccurenceLocation { LocationType }
+LowTendersDescription =
+  notAllowed
+  | element LowTendersDescription { anonymous6 }
+SellerSupplierParty =
+  notAllowed
+  | element ns3:SellerSupplierParty { SupplierPartyType }
+BrokerAssignedID =
+  notAllowed
+  | element BrokerAssignedID { anonymous13 }
+MeterReadingType =
+  notAllowed
+  | element MeterReadingType { anonymous6 }
+CurrentChargeType =
+  notAllowed
+  | element CurrentChargeType { anonymous6 }
+UBLExtension =
+  notAllowed
+  | element ns4:UBLExtension {
+      ID?,
+      Name?,
+      ExtensionAgencyID?,
+      ExtensionAgencyName?,
+      ExtensionVersionID?,
+      ExtensionAgencyURI?,
+      ExtensionURI?,
+      ExtensionReasonCode?,
+      ExtensionReason?,
+      ExtensionContent
+    }
+DeliveryTerms =
+  notAllowed
+  | element ns3:DeliveryTerms {
+      ID?,
+      SpecialTerms?,
+      LossRiskResponsibilityCode?,
+      LossRisk?,
+      Amount?,
+      DeliveryLocation?,
+      AllowanceCharge?
+    }
+CompanyTypeCode =
+  notAllowed
+  | element CompanyTypeCode { anonymous10 }
+WebsiteURI =
+  notAllowed
+  | element WebsiteURI { anonymous13 }
+CommodityClassificationType =
+  (NatureCode?,
+   CargoTypeCode?,
+   CommodityCode?,
+   ItemClassificationCode?),
+  empty
+StorageTransportEvent =
+  notAllowed
+  | element ns3:StorageTransportEvent { TransportEventType }
+DeliveryType =
+  (ID?,
+   Quantity?,
+   MinimumQuantity?,
+   MaximumQuantity?,
+   ActualDeliveryDate?,
+   ActualDeliveryTime?,
+   LatestDeliveryDate?,
+   LatestDeliveryTime?,
+   TrackingID?,
+   DeliveryAddress?,
+   DeliveryLocation?,
+   AlternativeDeliveryLocation?,
+   RequestedDeliveryPeriod?,
+   PromisedDeliveryPeriod?,
+   EstimatedDeliveryPeriod?,
+   DeliveryParty?,
+   Despatch?,
+   DeliveryTerms*,
+   MinimumDeliveryUnit?,
+   MaximumDeliveryUnit?,
+   Shipment?),
+  empty
+TransportModeCode =
+  notAllowed
+  | element TransportModeCode { anonymous10 }
+LossRisk =
+  notAllowed
+  | element LossRisk { anonymous6 }
+RefrigerationOnIndicator =
+  notAllowed
+  | element RefrigerationOnIndicator { anonymous9 }
+InsuranceValueAmount =
+  notAllowed
+  | element InsuranceValueAmount { anonymous12 }
+PerformingCarrierAssignedID =
+  notAllowed
+  | element PerformingCarrierAssignedID { anonymous13 }
+Duty =
+  notAllowed
+  | element Duty { anonymous6 }
+ValidationTime =
+  notAllowed
+  | element ValidationTime { anonymous2 }
+SubmissionMethodCode =
+  notAllowed
+  | element SubmissionMethodCode { anonymous10 }
+ReminderDocumentReference =
+  notAllowed
+  | element ns3:ReminderDocumentReference { DocumentReferenceType }
+ValueAmount =
+  notAllowed
+  | element ValueAmount { anonymous12 }
+MarkAttention =
+  notAllowed
+  | element MarkAttention { anonymous6 }
+RegistrationDate =
+  notAllowed
+  | element RegistrationDate { anonymous14 }
+RecipientCustomerParty =
+  notAllowed
+  | element ns3:RecipientCustomerParty { CustomerPartyType }
+OwnerTypeCode =
+  notAllowed
+  | element OwnerTypeCode { anonymous10 }
+Frequency =
+  notAllowed
+  | element Frequency { anonymous6 }
+ClassifiedTaxCategory =
+  notAllowed
+  | element ns3:ClassifiedTaxCategory { TaxCategoryType }
+ForecastExceptionCriteriaLine =
+  notAllowed
+  | element ns3:ForecastExceptionCriteriaLine {
+      ForecastPurposeCode,
+      ForecastTypeCode,
+      ComparisonDataSourceCode?,
+      DataSourceCode,
+      TimeDeltaDaysQuantity?
+    }
+ConstitutionPeriod =
+  notAllowed
+  | element ns3:ConstitutionPeriod { PeriodType }
+Value =
+  notAllowed
+  | element Value { anonymous6 }
+TenderEnvelopeTypeCode =
+  notAllowed
+  | element TenderEnvelopeTypeCode { anonymous10 }
+IndustryClassificationCode =
+  notAllowed
+  | element IndustryClassificationCode { anonymous10 }
+ReasonCode =
+  notAllowed
+  | element ReasonCode { anonymous10 }
+CatalogueItemIdentification =
+  notAllowed
+  | element ns3:CatalogueItemIdentification { ItemIdentificationType }
+ExternalReference =
+  notAllowed
+  | element ns3:ExternalReference {
+      URI?,
+      DocumentHash?,
+      HashAlgorithmMethod*,
+      ExpiryDate?,
+      ExpiryTime?,
+      MimeCode?,
+      FormatCode?,
+      EncodingCode?,
+      CharacterSetCode?,
+      FileName?
+    }
+IssuerID =
+  notAllowed
+  | element IssuerID { anonymous13 }
+EmployeeQuantity =
+  notAllowed
+  | element EmployeeQuantity { anonymous8 }
+RangeDimension =
+  notAllowed
+  | element ns3:RangeDimension { DimensionType }
+AdditionalStreetName =
+  notAllowed
+  | element AdditionalStreetName { anonymous0 }
+MiscellaneousEventTypeCode =
+  notAllowed
+  | element MiscellaneousEventTypeCode { anonymous10 }
+ActualDepartureTime =
+  notAllowed
+  | element ActualDepartureTime { anonymous2 }
+Pickup =
+  notAllowed
+  | element ns3:Pickup {
+      ID?,
+      ActualPickupDate?,
+      ActualPickupTime?,
+      EarliestPickupDate?,
+      EarliestPickupTime?,
+      LatestPickupDate?,
+      LatestPickupTime?,
+      PickupLocation?,
+      PickupParty?
+    }
+TimeDuty =
+  notAllowed
+  | element ns3:TimeDuty { DutyType }
+MaximumAdvertisementAmount =
+  notAllowed
+  | element MaximumAdvertisementAmount { anonymous12 }
+CreditNoteDocumentReference =
+  notAllowed
+  | element ns3:CreditNoteDocumentReference { DocumentReferenceType }
+InvoiceLine =
+  notAllowed
+  | element ns3:InvoiceLine { InvoiceLineType }
+PaymentMeansID =
+  notAllowed
+  | element PaymentMeansID { anonymous13 }
+StatusLocation =
+  notAllowed
+  | element ns3:StatusLocation { LocationType }
+TenderingTerms =
+  notAllowed
+  | element ns3:TenderingTerms {
+      AwardingMethodTypeCode?,
+      PriceEvaluationCode?,
+      MaximumVariantQuantity?,
+      VariantConstraintIndicator?,
+      AcceptedVariantsDescription*,
+      PriceRevisionFormulaDescription*,
+      FundingProgramCode?,
+      FundingProgram*,
+      MaximumAdvertisementAmount?,
+      Note*,
+      PaymentFrequencyCode?,
+      EconomicOperatorRegistryURI?,
+      PenaltyClauses*,
+      RequiredCurriculaIndicator?,
+      RequiredFinancialGuarantee*,
+      ProcurementLegislationDocumentReference?,
+      FiscalLegislationDocumentReference?,
+      EnvironmentalLegislationDocumentReference?,
+      EmploymentLegislationDocumentReference?,
+      ContractualDocumentReference*,
+      WarrantyValidityPeriod?,
+      PaymentTerms*,
+      TendererQualificationRequest?,
+      AllowedSubcontractTerms*,
+      TenderPreparation*,
+      ContractExecutionRequirement*,
+      AwardingTerms?,
+      AdditionalInformationParty?,
+      DocumentProviderParty?,
+      TenderRecipientParty?,
+      ContractResponsibleParty?,
+      TenderEvaluationParty*,
+      TenderValidityPeriod?,
+      ContractAcceptancePeriod?,
+      AppealTerms?,
+      Language*,
+      BudgetAccountLine*
+    }
+SubscriberTypeIdentifier =
+  notAllowed
+  | element SubscriberTypeIdentifier { anonymous6 }
+RoundingAmount =
+  notAllowed
+  | element RoundingAmount { anonymous12 }
+ComparisonDataSourceCode =
+  notAllowed
+  | element ComparisonDataSourceCode { anonymous10 }
+AirTransport =
+  notAllowed
+  | element ns3:AirTransport { AircraftID }
+DimensionType =
+  (AttributeID,
+   Measure?,
+   Description*,
+   MinimumMeasure?,
+   MaximumMeasure?),
+  empty
+FeatureTacticTypeCode =
+  notAllowed
+  | element FeatureTacticTypeCode { anonymous10 }
+AttachedTransportEquipment =
+  notAllowed
+  | element ns3:AttachedTransportEquipment { TransportEquipmentType }
+ItemType =
+  (Description*,
+   PackQuantity?,
+   PackSizeNumeric?,
+   CatalogueIndicator?,
+   Name?,
+   HazardousRiskIndicator?,
+   AdditionalInformation?,
+   Keyword*,
+   BrandName*,
+   ModelName*,
+   BuyersItemIdentification?,
+   SellersItemIdentification?,
+   ManufacturersItemIdentification*,
+   StandardItemIdentification?,
+   CatalogueItemIdentification?,
+   AdditionalItemIdentification*,
+   CatalogueDocumentReference?,
+   ItemSpecificationDocumentReference*,
+   OriginCountry?,
+   CommodityClassification*,
+   TransactionConditions*,
+   HazardousItem*,
+   ClassifiedTaxCategory*,
+   AdditionalItemProperty*,
+   ManufacturerParty*,
+   InformationContentProviderParty?,
+   OriginAddress*,
+   ItemInstance*,
+   Certificate*,
+   Dimension*),
+  empty
+MeasurementDimension =
+  notAllowed
+  | element ns3:MeasurementDimension { DimensionType }
+RecipientParty =
+  notAllowed
+  | element ns3:RecipientParty { PartyType }
+OrganizationDepartment =
+  notAllowed
+  | element OrganizationDepartment { anonymous6 }
+FeeAmount =
+  notAllowed
+  | element FeeAmount { anonymous12 }
+OrderTypeCode =
+  notAllowed
+  | element OrderTypeCode { anonymous10 }
+ExpiryTime =
+  notAllowed
+  | element ExpiryTime { anonymous2 }
+BuyerContact =
+  notAllowed
+  | element ns3:BuyerContact { ContactType }
+SupplierAssignedAccountID =
+  notAllowed
+  | element SupplierAssignedAccountID { anonymous13 }
+TimeAmountQuantity =
+  notAllowed
+  | element TimeAmountQuantity { anonymous8 }
+TenderLineType =
+  (ID?,
+   Note*,
+   Quantity?,
+   LineExtensionAmount?,
+   TotalTaxAmount?,
+   OrderableUnit*,
+   ContentUnitQuantity?,
+   OrderQuantityIncrementNumeric?,
+   MinimumOrderQuantity?,
+   MaximumOrderQuantity?,
+   WarrantyInformation*,
+   PackLevelCode?,
+   DocumentReference*,
+   Item?,
+   OfferedItemLocationQuantity*,
+   ReplacementRelatedItem*,
+   WarrantyParty?,
+   WarrantyValidityPeriod?,
+   SubTenderLine*),
+  empty
+Party =
+  notAllowed
+  | element ns3:Party { PartyType }
+DocumentAvailabilityPeriod =
+  notAllowed
+  | element ns3:DocumentAvailabilityPeriod { PeriodType }
+ProcurementProjectLotID =
+  notAllowed
+  | element ProcurementProjectLotID { anonymous13 }
+QualifyingPartyType =
+  (ParticipationPercent?,
+   PersonalSituation*,
+   OperatingYearsQuantity?,
+   EmployeeQuantity?,
+   BusinessClassificationEvidenceID?,
+   BusinessIdentityEvidenceID?,
+   BusinessClassificationScheme?,
+   TechnicalCapability*,
+   FinancialCapability*,
+   CompletedTask*,
+   Declaration*,
+   Party?),
+  empty
+RegulationType = (Name+, LegalReference?, OntologyURI?), empty
+IssueDate =
+  notAllowed
+  | element IssueDate { anonymous14 }
+TotalConsumptedQuantity =
+  notAllowed
+  | element TotalConsumptedQuantity { anonymous8 }
+TelecommunicationsSupplyType2 =
+  notAllowed
+  | element TelecommunicationsSupplyType { anonymous6 }
+BranchType = (ID?, Name?, FinancialInstitution?, Address?), empty
+ContractType =
+  (ID?,
+   IssueDate?,
+   IssueTime?,
+   ContractTypeCode?,
+   ContractType2?,
+   Note*,
+   ValidityPeriod?,
+   ContractDocumentReference*,
+   NominationPeriod?,
+   ContractualDelivery?),
+  empty
+anonymous2 = xsd:time
+PackingCriteriaCode =
+  notAllowed
+  | element PackingCriteriaCode { anonymous10 }
+OptionalLineItemIndicator =
+  notAllowed
+  | element OptionalLineItemIndicator { anonymous9 }
+MinimumAmount =
+  notAllowed
+  | element MinimumAmount { anonymous12 }
+ActualTemperatureReductionQuantity =
+  notAllowed
+  | element ActualTemperatureReductionQuantity { anonymous8 }
+BackOrderAllowedIndicator =
+  notAllowed
+  | element BackOrderAllowedIndicator { anonymous9 }
+ReceiptLineReference =
+  notAllowed
+  | element ns3:ReceiptLineReference { LineReferenceType }
+ReturnableMaterialIndicator =
+  notAllowed
+  | element ReturnableMaterialIndicator { anonymous9 }
+ContractExecutionRequirement =
+  notAllowed
+  | element ns3:ContractExecutionRequirement {
+      Name*, ExecutionRequirementCode?, Description*
+    }
+PartialDeliveryIndicator =
+  notAllowed
+  | element PartialDeliveryIndicator { anonymous9 }
+PreviousMeterReadingDate =
+  notAllowed
+  | element PreviousMeterReadingDate { anonymous14 }
+OwnerParty =
+  notAllowed
+  | element ns3:OwnerParty { PartyType }
+FrozenDocumentIndicator =
+  notAllowed
+  | element FrozenDocumentIndicator { anonymous9 }
+TradingTermsType = (Information*, Reference?, ApplicableAddress?), empty
+BasicConsumedQuantity =
+  notAllowed
+  | element BasicConsumedQuantity { anonymous8 }
+anonymous3 = anonymous11
+IdentificationID =
+  notAllowed
+  | element IdentificationID { anonymous13 }
+AmountRate =
+  notAllowed
+  | element AmountRate { anonymous1 }
+PhysicalAttribute =
+  notAllowed
+  | element ns3:PhysicalAttribute {
+      AttributeID, PositionCode?, DescriptionCode?, Description*
+    }
+AwardingCriteriaID =
+  notAllowed
+  | element AwardingCriteriaID { anonymous13 }
+Address =
+  notAllowed
+  | element ns3:Address { AddressType }
+TransportAdvisorParty =
+  notAllowed
+  | element ns3:TransportAdvisorParty { PartyType }
+PartyLegalEntity =
+  notAllowed
+  | element ns3:PartyLegalEntity {
+      RegistrationName?,
+      CompanyID?,
+      CompanyTypeCode?,
+      CompanyLiquidationStatusCode?,
+      RegistrationDate?,
+      RegistrationExpirationDate?,
+      CorporateStockAmount?,
+      RegistrationAddress?,
+      CorporateRegistrationScheme?,
+      StakeholderParty*,
+      CompanyDossierDocumentReference?
+    }
+RejectReason =
+  notAllowed
+  | element RejectReason { anonymous6 }
+ReturnAddress =
+  notAllowed
+  | element ns3:ReturnAddress { AddressType }
+CurrencyCode =
+  notAllowed
+  | element CurrencyCode { anonymous10 }
+TenderedProjectType =
+  (ProcurementProjectLotID?,
+   VariantID?,
+   FeeAmount?,
+   FeeDescription*,
+   TaxTotal*,
+   LegalMonetaryTotal?,
+   TenderLine*,
+   AwardingCriteriaResponse*),
+  empty
+FileName =
+  notAllowed
+  | element FileName { anonymous0 }
+ConsumersEnergyLevelCode =
+  notAllowed
+  | element ConsumersEnergyLevelCode { anonymous10 }
+ChangeConditions =
+  notAllowed
+  | element ChangeConditions { anonymous6 }
+ProductTraceID =
+  notAllowed
+  | element ProductTraceID { anonymous13 }
+RequiredRelatedItem =
+  notAllowed
+  | element ns3:RequiredRelatedItem { RelatedItemType }
+HazardousItem =
+  notAllowed
+  | element ns3:HazardousItem {
+      ID?,
+      PlacardNotation?,
+      PlacardEndorsement?,
+      AdditionalInformation?,
+      UNDGCode?,
+      EmergencyProceduresCode?,
+      MedicalFirstAidGuideCode?,
+      TechnicalName?,
+      CategoryName?,
+      HazardousCategoryCode?,
+      UpperOrangeHazardPlacardID?,
+      LowerOrangeHazardPlacardID?,
+      MarkingID?,
+      HazardClassID?,
+      NetWeightMeasure?,
+      NetVolumeMeasure?,
+      Quantity?,
+      ContactParty?,
+      SecondaryHazard*,
+      HazardousGoodsTransit*,
+      EmergencyTemperature?,
+      FlashpointTemperature?,
+      AdditionalTemperature*
+    }
+CV2ID =
+  notAllowed
+  | element CV2ID { anonymous13 }
+FrozenPeriodDaysNumeric =
+  notAllowed
+  | element FrozenPeriodDaysNumeric { anonymous3 }
+ActualArrivalDate =
+  notAllowed
+  | element ActualArrivalDate { anonymous14 }
+anonymous4 =
+  attribute languageID { xsd:language }?,
+  attribute languageLocaleID { xsd:normalizedString }?,
+  xsd:string
+EvidenceSuppliedID =
+  notAllowed
+  | element EvidenceSuppliedID { anonymous13 }
+GrossVolumeMeasure =
+  notAllowed
+  | element GrossVolumeMeasure { anonymous5 }
+CompanyLiquidationStatusCode =
+  notAllowed
+  | element CompanyLiquidationStatusCode { anonymous10 }
+ConsumptionTypeCode =
+  notAllowed
+  | element ConsumptionTypeCode { anonymous10 }
+LotIdentification =
+  notAllowed
+  | element ns3:LotIdentification {
+      LotNumberID?, ExpiryDate?, AdditionalItemProperty*
+    }
+ResponseCode =
+  notAllowed
+  | element ResponseCode { anonymous10 }
+ParentDocumentLineReferenceID =
+  notAllowed
+  | element ParentDocumentLineReferenceID { anonymous13 }
+AllowanceTotalAmount =
+  notAllowed
+  | element AllowanceTotalAmount { anonymous12 }
+FullnessIndicationCode =
+  notAllowed
+  | element FullnessIndicationCode { anonymous10 }
+EvaluationCriteriaType =
+  (EvaluationCriteriaTypeCode?,
+   Description*,
+   ThresholdAmount?,
+   ThresholdQuantity?,
+   ExpressionCode*,
+   DurationPeriod?,
+   SuggestedEvidence*),
+  empty
+ActualPackage =
+  notAllowed
+  | element ns3:ActualPackage { PackageType }
+FinancialGuaranteeType =
+  (GuaranteeTypeCode,
+   Description*,
+   LiabilityAmount?,
+   AmountRate?,
+   ConstitutionPeriod?),
+  empty
+PriceChangeReason =
+  notAllowed
+  | element PriceChangeReason { anonymous6 }
+MaximumOrderQuantity =
+  notAllowed
+  | element MaximumOrderQuantity { anonymous8 }
+OriginatorParty =
+  notAllowed
+  | element ns3:OriginatorParty { PartyType }
+OneTimeChargeType =
+  notAllowed
+  | element OneTimeChargeType { anonymous6 }
+MinimumMeasure =
+  notAllowed
+  | element MinimumMeasure { anonymous5 }
+FirstArrivalPortLocation =
+  notAllowed
+  | element ns3:FirstArrivalPortLocation { LocationType }
+Condition =
+  notAllowed
+  | element Condition { anonymous6 }
+GuaranteedDespatchDate =
+  notAllowed
+  | element GuaranteedDespatchDate { anonymous14 }
+TypeCode =
+  notAllowed
+  | element TypeCode { anonymous10 }
+TechnicalCommitteeDescription =
+  notAllowed
+  | element TechnicalCommitteeDescription { anonymous6 }
+AlternativeConditionPrice =
+  notAllowed
+  | element ns3:AlternativeConditionPrice { PriceType2 }
+ForecastException =
+  notAllowed
+  | element ns3:ForecastException {
+      PurposeCode,
+      ForecastTypeCode,
+      IssueDate,
+      IssueTime?,
+      DataSourceCode,
+      ComparisonDataCode?,
+      ComparisonForecastIssueTime?,
+      ComparisonForecastIssueDate?
+    }
+ExtraAllowanceCharge =
+  notAllowed
+  | element ns3:ExtraAllowanceCharge { AllowanceChargeType }
+Reason =
+  notAllowed
+  | element Reason { anonymous6 }
+WinningParty =
+  notAllowed
+  | element ns3:WinningParty { PartyType }
+InsuranceParty =
+  notAllowed
+  | element ns3:InsuranceParty { PartyType }
+InhouseMail =
+  notAllowed
+  | element InhouseMail { anonymous6 }
+TenderLine =
+  notAllowed
+  | element ns3:TenderLine { TenderLineType }
+TotalTransportHandlingUnitQuantity =
+  notAllowed
+  | element TotalTransportHandlingUnitQuantity { anonymous8 }
+SubordinateAwardingCriteria =
+  notAllowed
+  | element ns3:SubordinateAwardingCriteria { AwardingCriteriaType }
+ManufacturersItemIdentification =
+  notAllowed
+  | element ns3:ManufacturersItemIdentification {
+      ItemIdentificationType
+    }
+AdditionalAccountID =
+  notAllowed
+  | element AdditionalAccountID { anonymous13 }
+SubTenderLine =
+  notAllowed
+  | element ns3:SubTenderLine { TenderLineType }
+GuidanceDocumentReference =
+  notAllowed
+  | element ns3:GuidanceDocumentReference { DocumentReferenceType }
+ElectronicMail =
+  notAllowed
+  | element ElectronicMail { anonymous6 }
+BaseQuantity =
+  notAllowed
+  | element BaseQuantity { anonymous8 }
+PickupParty =
+  notAllowed
+  | element ns3:PickupParty { PartyType }
+LatestDeliveryTime =
+  notAllowed
+  | element LatestDeliveryTime { anonymous2 }
+InformationContentProviderParty =
+  notAllowed
+  | element ns3:InformationContentProviderParty { PartyType }
+ConditionValueMeasure =
+  notAllowed
+  | element ConditionValueMeasure { anonymous5 }
+AccountingCost =
+  notAllowed
+  | element AccountingCost { anonymous6 }
+TelecommunicationsServiceCategory =
+  notAllowed
+  | element TelecommunicationsServiceCategory { anonymous6 }
+AverageSubsequentContractAmount =
+  notAllowed
+  | element AverageSubsequentContractAmount { anonymous12 }
+AuctionConstraintIndicator =
+  notAllowed
+  | element AuctionConstraintIndicator { anonymous9 }
+LatitudeDegreesMeasure =
+  notAllowed
+  | element LatitudeDegreesMeasure { anonymous5 }
+PreferenceCriterionCode =
+  notAllowed
+  | element PreferenceCriterionCode { anonymous10 }
+MinimumImprovementBid =
+  notAllowed
+  | element MinimumImprovementBid { anonymous6 }
+HumidityPercent =
+  notAllowed
+  | element HumidityPercent { anonymous7 }
+PlacardNotation =
+  notAllowed
+  | element PlacardNotation { anonymous6 }
+MultipleOrderQuantity =
+  notAllowed
+  | element MultipleOrderQuantity { anonymous8 }
+EstimatedDeliveryPeriod =
+  notAllowed
+  | element ns3:EstimatedDeliveryPeriod { PeriodType }
+GuaranteeTypeCode =
+  notAllowed
+  | element GuaranteeTypeCode { anonymous10 }
+VesselID =
+  notAllowed
+  | element VesselID { anonymous13 }
+MeterReadingMethodCode =
+  notAllowed
+  | element MeterReadingMethodCode { anonymous10 }
+ValidatorID =
+  notAllowed
+  | element ValidatorID { anonymous13 }
+PaymentChannelCode =
+  notAllowed
+  | element PaymentChannelCode { anonymous10 }
+TendererQualificationRequest =
+  notAllowed
+  | element ns3:TendererQualificationRequest {
+      LegalForm*,
+      PersonalSituation*,
+      OperatingYearsQuantity?,
+      EmployeeQuantity?,
+      Description*,
+      RequiredBusinessClassificationScheme*,
+      TechnicalEvaluationCriteria*,
+      FinancialEvaluationCriteria*,
+      SpecificTendererRequirement*
+    }
+TransportUserSpecialTerms =
+  notAllowed
+  | element TransportUserSpecialTerms { anonymous6 }
+Channel =
+  notAllowed
+  | element Channel { anonymous6 }
+ContainedInTransportEquipment =
+  notAllowed
+  | element ns3:ContainedInTransportEquipment { TransportEquipmentType }
+FinancingParty =
+  notAllowed
+  | element ns3:FinancingParty { PartyType }
+TransitDirectionCode =
+  notAllowed
+  | element TransitDirectionCode { anonymous10 }
+OnAccountPayment =
+  notAllowed
+  | element ns3:OnAccountPayment { OnAccountPaymentType }
+ReceivedDate =
+  notAllowed
+  | element ReceivedDate { anonymous14 }
+ConsignorAssignedID =
+  notAllowed
+  | element ConsignorAssignedID { anonymous13 }
+Language =
+  notAllowed
+  | element ns3:Language { LanguageType }
+ActivityProperty =
+  notAllowed
+  | element ns3:ActivityProperty { Name, Value }
+PromotionalEventTypeCode =
+  notAllowed
+  | element PromotionalEventTypeCode { anonymous10 }
+EstimatedDepartureDate =
+  notAllowed
+  | element EstimatedDepartureDate { anonymous14 }
+Location =
+  notAllowed
+  | element Location { anonymous6 }
+FreightForwarderAssignedID =
+  notAllowed
+  | element FreightForwarderAssignedID { anonymous13 }
+AvailabilityDate =
+  notAllowed
+  | element AvailabilityDate { anonymous14 }
+DocumentID =
+  notAllowed
+  | element DocumentID { anonymous13 }
+anonymous5 =
+  attribute unitCode { xsd:normalizedString }?,
+  attribute unitCodeListVersionID { xsd:normalizedString }?,
+  xsd:decimal
+Weight =
+  notAllowed
+  | element Weight { anonymous6 }
+ManufactureTime =
+  notAllowed
+  | element ManufactureTime { anonymous2 }
+AircraftID =
+  notAllowed
+  | element AircraftID { anonymous13 }
+AppealReceiverParty =
+  notAllowed
+  | element ns3:AppealReceiverParty { PartyType }
+SchemeURI =
+  notAllowed
+  | element SchemeURI { anonymous13 }
+UtilityMeter =
+  notAllowed
+  | element ns3:UtilityMeter { MeterType }
+ExtensionAgencyID =
+  notAllowed
+  | element ns4:ExtensionAgencyID { anonymous13 }
+ReceiptLineType =
+  (ID,
+   UUID?,
+   Note*,
+   ReceivedQuantity?,
+   ShortQuantity?,
+   ShortageActionCode?,
+   RejectedQuantity?,
+   RejectReasonCode?,
+   RejectReason?,
+   RejectActionCode?,
+   QuantityDiscrepancyCode?,
+   OversupplyQuantity?,
+   ReceivedDate?,
+   TimingComplaintCode?,
+   TimingComplaint?,
+   OrderLineReference?,
+   DespatchLineReference*,
+   DocumentReference*,
+   Item*,
+   Shipment*),
+  empty
+FamilyName =
+  notAllowed
+  | element FamilyName { anonymous0 }
+EconomicOperatorShortList =
+  notAllowed
+  | element ns3:EconomicOperatorShortList {
+      LimitationDescription*,
+      ExpectedQuantity?,
+      MaximumQuantity?,
+      MinimumQuantity?,
+      PreSelectedParty*
+    }
+ForwarderServiceInstructions =
+  notAllowed
+  | element ForwarderServiceInstructions { anonymous6 }
+Extension =
+  notAllowed
+  | element Extension { anonymous6 }
+PaymentPurposeCode =
+  notAllowed
+  | element PaymentPurposeCode { anonymous10 }
+DocumentResponseType =
+  (Response,
+   DocumentReference,
+   IssuerParty?,
+   RecipientParty?,
+   LineResponse*),
+  empty
+HumanFoodIndicator =
+  notAllowed
+  | element HumanFoodIndicator { anonymous9 }
+TransportHandlingUnitType =
+  (ID?,
+   TransportHandlingUnitTypeCode?,
+   HandlingCode?,
+   HandlingInstructions?,
+   HazardousRiskIndicator?,
+   TotalGoodsItemQuantity?,
+   TotalPackageQuantity?,
+   DamageRemarks*,
+   ShippingMarks*,
+   HandlingUnitDespatchLine*,
+   ActualPackage*,
+   ReceivedHandlingUnitReceiptLine*,
+   TransportEquipment*,
+   HazardousGoodsTransit*,
+   MeasurementDimension*,
+   MinimumTemperature?,
+   MaximumTemperature?,
+   GoodsItem*,
+   FloorSpaceMeasurementDimension?,
+   PalletSpaceMeasurementDimension?),
+  empty
+ReferenceDate =
+  notAllowed
+  | element ReferenceDate { anonymous14 }
+TelecommunicationsService =
+  notAllowed
+  | element ns3:TelecommunicationsService {
+      CallDate,
+      CallTime,
+      ServiceNumberCalled,
+      TelecommunicationsServiceCategory?,
+      TelecommunicationsServiceCategoryCode?,
+      MovieTitle?,
+      RoarningPartnerName?,
+      PayPerView?,
+      Quantity?,
+      TelecommunicationsServiceCall?,
+      TelecommunicationsServiceCallCode?,
+      CallBaseAmount?,
+      CallExtensionAmount?,
+      Price?,
+      Country?,
+      ExchangeRate*,
+      AllowanceCharge*,
+      TaxTotal*,
+      CallDuty*,
+      TimeDuty*
+    }
+AttributeID =
+  notAllowed
+  | element AttributeID { anonymous13 }
+GoodsItem =
+  notAllowed
+  | element ns3:GoodsItem { GoodsItemType }
+DeliveryContact =
+  notAllowed
+  | element ns3:DeliveryContact { ContactType }
+LotNumberID =
+  notAllowed
+  | element LotNumberID { anonymous13 }
+TierRatePercent =
+  notAllowed
+  | element TierRatePercent { anonymous7 }
+BestBeforeDate =
+  notAllowed
+  | element BestBeforeDate { anonymous14 }
+MimeCode =
+  notAllowed
+  | element MimeCode { anonymous10 }
+VesselName =
+  notAllowed
+  | element VesselName { anonymous0 }
+NatureCode =
+  notAllowed
+  | element NatureCode { anonymous10 }
+UpperOrangeHazardPlacardID =
+  notAllowed
+  | element UpperOrangeHazardPlacardID { anonymous13 }
+RegistrationID =
+  notAllowed
+  | element RegistrationID { anonymous13 }
+ClassificationCategoryType =
+  (Name?, CodeValue?, Description*, CategorizesClassificationCategory*),
+  empty
+PrimaryAccountNumberID =
+  notAllowed
+  | element PrimaryAccountNumberID { anonymous13 }
+UtilityCustomerParty =
+  notAllowed
+  | element ns3:UtilityCustomerParty { PartyType }
+EventTactic =
+  notAllowed
+  | element ns3:EventTactic {
+      Comment?, Quantity?, EventTacticEnumeration, Period?
+    }
+TotalConsumedQuantity =
+  notAllowed
+  | element TotalConsumedQuantity { anonymous8 }
+PayeeFinancialAccount =
+  notAllowed
+  | element ns3:PayeeFinancialAccount { FinancialAccountType }
+AdditionalItemIdentification =
+  notAllowed
+  | element ns3:AdditionalItemIdentification { ItemIdentificationType }
+Status =
+  notAllowed
+  | element ns3:Status { StatusType }
+ItemClassificationCode =
+  notAllowed
+  | element ItemClassificationCode { anonymous10 }
+ItemPropertyType =
+  (Name?,
+   NameCode?,
+   Value*,
+   ValueQuantity?,
+   ValueQualifier*,
+   ImportanceCode?,
+   UsabilityPeriod?,
+   ItemPropertyGroup*,
+   RangeDimension?),
+  empty
+NameCode =
+  notAllowed
+  | element NameCode { anonymous10 }
+RegistrationExpirationDate =
+  notAllowed
+  | element RegistrationExpirationDate { anonymous14 }
+TradeFinancing =
+  notAllowed
+  | element ns3:TradeFinancing {
+      ID?,
+      FinancingInstrumentCode?,
+      ClauseCode*,
+      Clause*,
+      ContractDocumentReference?,
+      DocumentReference*,
+      FinancingParty,
+      FinancingFinancialAccount?
+    }
+ProcurementLegislationDocumentReference =
+  notAllowed
+  | element ns3:ProcurementLegislationDocumentReference {
+      DocumentReferenceType
+    }
+ClassificationCategory =
+  notAllowed
+  | element ns3:ClassificationCategory { ClassificationCategoryType }
+JustificationDescription =
+  notAllowed
+  | element JustificationDescription { anonymous6 }
+TariffClassCode =
+  notAllowed
+  | element TariffClassCode { anonymous10 }
+LatitudeDirectionCode =
+  notAllowed
+  | element LatitudeDirectionCode { anonymous10 }
+ID =
+  notAllowed
+  | element ID { anonymous13 }
+PayeeParty =
+  notAllowed
+  | element ns3:PayeeParty { PartyType }
+QuotationLineReference =
+  notAllowed
+  | element ns3:QuotationLineReference { LineReferenceType }
+SellersItemIdentification =
+  notAllowed
+  | element ns3:SellersItemIdentification { ItemIdentificationType }
+HazardClassID =
+  notAllowed
+  | element HazardClassID { anonymous13 }
+DeclaredStatisticsValueAmount =
+  notAllowed
+  | element DeclaredStatisticsValueAmount { anonymous12 }
+Floor =
+  notAllowed
+  | element Floor { anonymous6 }
+WeightNumeric =
+  notAllowed
+  | element WeightNumeric { anonymous3 }
+LocaleCode =
+  notAllowed
+  | element LocaleCode { anonymous10 }
+FinancialAccount =
+  notAllowed
+  | element ns3:FinancialAccount { FinancialAccountType }
+ContactType =
+  (ID?,
+   Name?,
+   Telephone?,
+   Telefax?,
+   ElectronicMail?,
+   Note*,
+   OtherCommunication*),
+  empty
+PartyTaxScheme =
+  notAllowed
+  | element ns3:PartyTaxScheme {
+      RegistrationName?,
+      CompanyID?,
+      TaxLevelCode?,
+      ExemptionReasonCode?,
+      ExemptionReason?,
+      RegistrationAddress?,
+      TaxScheme
+    }
+DeliveredQuantity =
+  notAllowed
+  | element DeliveredQuantity { anonymous8 }
+FundingProgram =
+  notAllowed
+  | element FundingProgram { anonymous6 }
+Despatch =
+  notAllowed
+  | element ns3:Despatch {
+      ID?,
+      RequestedDespatchDate?,
+      RequestedDespatchTime?,
+      EstimatedDespatchDate?,
+      EstimatedDespatchTime?,
+      ActualDespatchDate?,
+      ActualDespatchTime?,
+      GuaranteedDespatchDate?,
+      GuaranteedDespatchTime?,
+      Instructions?,
+      DespatchAddress?,
+      DespatchParty?,
+      Contact?
+    }
+TransitPeriod =
+  notAllowed
+  | element ns3:TransitPeriod { PeriodType }
+MaximumNumberNumeric =
+  notAllowed
+  | element MaximumNumberNumeric { anonymous3 }
+OrderableIndicator =
+  notAllowed
+  | element OrderableIndicator { anonymous9 }
+RequestedDeliveryPeriod =
+  notAllowed
+  | element ns3:RequestedDeliveryPeriod { PeriodType }
+ExtensionContent =
+  notAllowed
+  | element ns4:ExtensionContent { element14? }
+ApplicationStatusCode =
+  notAllowed
+  | element ApplicationStatusCode { anonymous10 }
+CustomsAgentParty =
+  notAllowed
+  | element ns3:CustomsAgentParty { PartyType }
+TransportAuthorizationCode =
+  notAllowed
+  | element TransportAuthorizationCode { anonymous10 }
+GuaranteedDespatchTime =
+  notAllowed
+  | element GuaranteedDespatchTime { anonymous2 }
+BusinessIdentityEvidenceID =
+  notAllowed
+  | element BusinessIdentityEvidenceID { anonymous13 }
+Renewal =
+  notAllowed
+  | element ns3:Renewal { Amount?, Period? }
+JourneyID =
+  notAllowed
+  | element JourneyID { anonymous13 }
+TariffCode =
+  notAllowed
+  | element TariffCode { anonymous10 }
+CoordinateSystemCode =
+  notAllowed
+  | element CoordinateSystemCode { anonymous10 }
+SuggestedEvidence =
+  notAllowed
+  | element ns3:SuggestedEvidence { EvidenceType }
+CallTime =
+  notAllowed
+  | element CallTime { anonymous2 }
+AirFlowPercent =
+  notAllowed
+  | element AirFlowPercent { anonymous7 }
+AwardingCriteriaTypeCode =
+  notAllowed
+  | element AwardingCriteriaTypeCode { anonymous10 }
+NetVolumeMeasure =
+  notAllowed
+  | element NetVolumeMeasure { anonymous5 }
+FinancialInstitution =
+  notAllowed
+  | element ns3:FinancialInstitution { ID?, Name?, Address? }
+PreSelectedParty =
+  notAllowed
+  | element ns3:PreSelectedParty { PartyType }
+EstimatedDespatchTime =
+  notAllowed
+  | element EstimatedDespatchTime { anonymous2 }
+OversupplyQuantity =
+  notAllowed
+  | element OversupplyQuantity { anonymous8 }
+RoarningPartnerName =
+  notAllowed
+  | element RoarningPartnerName { anonymous6 }
+CreditLineAmount =
+  notAllowed
+  | element CreditLineAmount { anonymous12 }
+Justification =
+  notAllowed
+  | element Justification { anonymous6 }
+AverageAmount =
+  notAllowed
+  | element AverageAmount { anonymous12 }
+MaritimeTransport =
+  notAllowed
+  | element ns3:MaritimeTransport { VesselID?, VesselName? }
+PartyName =
+  notAllowed
+  | element ns3:PartyName { Name }
+SettlementDiscountPercent =
+  notAllowed
+  | element SettlementDiscountPercent { anonymous7 }
+EnvironmentalDescription =
+  notAllowed
+  | element EnvironmentalDescription { anonymous6 }
+SpecialSecurityIndicator =
+  notAllowed
+  | element SpecialSecurityIndicator { anonymous9 }
+BuyerProposedSubstituteLineItem =
+  notAllowed
+  | element ns3:BuyerProposedSubstituteLineItem { LineItemType }
+SerialID =
+  notAllowed
+  | element SerialID { anonymous13 }
+TaxExclusivePrice =
+  notAllowed
+  | element ns3:TaxExclusivePrice { PriceType2 }
+RealizedLocation =
+  notAllowed
+  | element ns3:RealizedLocation { LocationType }
+PreCarriageIndicator =
+  notAllowed
+  | element PreCarriageIndicator { anonymous9 }
+MarkCareIndicator =
+  notAllowed
+  | element MarkCareIndicator { anonymous9 }
+CustomizationID =
+  notAllowed
+  | element CustomizationID { anonymous13 }
+ReceivedQuantity =
+  notAllowed
+  | element ReceivedQuantity { anonymous8 }
+PartPresentationCode =
+  notAllowed
+  | element PartPresentationCode { anonymous10 }
+MinimumQuantity =
+  notAllowed
+  | element MinimumQuantity { anonymous8 }
+AlternativeDeliveryLocation =
+  notAllowed
+  | element ns3:AlternativeDeliveryLocation { LocationType }
+Contact =
+  notAllowed
+  | element ns3:Contact { ContactType }
+TendererRequirementType =
+  (Name*,
+   TendererRequirementTypeCode?,
+   Description*,
+   SuggestedEvidence*),
+  empty
+StandardItemIdentification =
+  notAllowed
+  | element ns3:StandardItemIdentification { ItemIdentificationType }
+PaymentDueDate =
+  notAllowed
+  | element PaymentDueDate { anonymous14 }
+SubmissionDate =
+  notAllowed
+  | element SubmissionDate { anonymous14 }
+ComparedValueMeasure =
+  notAllowed
+  | element ComparedValueMeasure { anonymous5 }
+DocumentType =
+  notAllowed
+  | element DocumentType { anonymous6 }
+BuyerProfileURI =
+  notAllowed
+  | element BuyerProfileURI { anonymous13 }
+TaxIncludedIndicator =
+  notAllowed
+  | element TaxIncludedIndicator { anonymous9 }
+ForecastTypeCode =
+  notAllowed
+  | element ForecastTypeCode { anonymous10 }
+AddressType =
+  (ID?,
+   AddressTypeCode?,
+   AddressFormatCode?,
+   Postbox?,
+   Floor?,
+   Room?,
+   StreetName?,
+   AdditionalStreetName?,
+   BlockName?,
+   BuildingName?,
+   BuildingNumber?,
+   InhouseMail?,
+   Department?,
+   MarkAttention?,
+   MarkCare?,
+   PlotIdentification?,
+   CitySubdivisionName?,
+   CityName?,
+   PostalZone?,
+   CountrySubentity?,
+   CountrySubentityCode?,
+   Region?,
+   District?,
+   TimezoneOffset?,
+   AddressLine*,
+   Country?,
+   LocationCoordinate?),
+  empty
+PlotIdentification =
+  notAllowed
+  | element PlotIdentification { anonymous6 }
+EarliestPickupDate =
+  notAllowed
+  | element EarliestPickupDate { anonymous14 }
+SelfBilledCreditNoteDocumentReference =
+  notAllowed
+  | element ns3:SelfBilledCreditNoteDocumentReference {
+      DocumentReferenceType
+    }
+AltitudeMeasure =
+  notAllowed
+  | element AltitudeMeasure { anonymous5 }
+TrackingID =
+  notAllowed
+  | element TrackingID { anonymous13 }
+MainPeriod =
+  notAllowed
+  | element ns3:MainPeriod { PeriodType }
+ProviderParty =
+  notAllowed
+  | element ns3:ProviderParty { PartyType }
+FundingProgramCode =
+  notAllowed
+  | element FundingProgramCode { anonymous10 }
+IdentificationCode =
+  notAllowed
+  | element IdentificationCode { anonymous10 }
+TimingComplaint =
+  notAllowed
+  | element TimingComplaint { anonymous6 }
+LineStatusCode =
+  notAllowed
+  | element LineStatusCode { anonymous10 }
+SellerSubstitutedLineItem =
+  notAllowed
+  | element ns3:SellerSubstitutedLineItem { LineItemType }
+AnnualAverageAmount =
+  notAllowed
+  | element AnnualAverageAmount { anonymous12 }
+MaximumPaymentInstructionsNumeric =
+  notAllowed
+  | element MaximumPaymentInstructionsNumeric { anonymous3 }
+AwardTime =
+  notAllowed
+  | element AwardTime { anonymous2 }
+EvidenceIssuingParty =
+  notAllowed
+  | element ns3:EvidenceIssuingParty { PartyType }
+PaymentID =
+  notAllowed
+  | element PaymentID { anonymous13 }
+CustomsImportClassifiedIndicator =
+  notAllowed
+  | element CustomsImportClassifiedIndicator { anonymous9 }
+BulkCargoIndicator =
+  notAllowed
+  | element BulkCargoIndicator { anonymous9 }
+CorporateStockAmount =
+  notAllowed
+  | element CorporateStockAmount { anonymous12 }
+InvoicePeriod =
+  notAllowed
+  | element ns3:InvoicePeriod { PeriodType }
+HazardousCategoryCode =
+  notAllowed
+  | element HazardousCategoryCode { anonymous10 }
+BaseUnitMeasure =
+  notAllowed
+  | element BaseUnitMeasure { anonymous5 }
+EnergyWaterCorrection =
+  notAllowed
+  | element ns3:EnergyWaterCorrection { CorrectionType2 }
+MainQualifyingParty =
+  notAllowed
+  | element ns3:MainQualifyingParty { QualifyingPartyType }
+UsabilityPeriod =
+  notAllowed
+  | element ns3:UsabilityPeriod { PeriodType }
+Clause =
+  notAllowed
+  | element Clause { anonymous6 }
+RequiredCurriculaIndicator =
+  notAllowed
+  | element RequiredCurriculaIndicator { anonymous9 }
+GeneralCargoIndicator =
+  notAllowed
+  | element GeneralCargoIndicator { anonymous9 }
+LatestPickupTime =
+  notAllowed
+  | element LatestPickupTime { anonymous2 }
+ConsumptionReportReference =
+  notAllowed
+  | element ns3:ConsumptionReportReference {
+      ConsumptionReportID,
+      ConsumptionType?,
+      ConsumptionTypeCode?,
+      TotalConsumptedQuantity,
+      Period
+    }
+TransportEquipmentSeal =
+  notAllowed
+  | element ns3:TransportEquipmentSeal {
+      ID,
+      SealIssuerTypeCode?,
+      Condition?,
+      SealStatusCode?,
+      SealingPartyType?
+    }
+CountrySubentity =
+  notAllowed
+  | element CountrySubentity { anonymous6 }
+PartyType =
+  (MarkCareIndicator?,
+   MarkAttentionIndicator?,
+   WebsiteURI?,
+   LogoReferenceID?,
+   EndpointID?,
+   IndustryClassificationCode?,
+   PartyIdentification*,
+   PartyName*,
+   Language?,
+   PostalAddress?,
+   PhysicalLocation?,
+   PartyTaxScheme*,
+   PartyLegalEntity*,
+   Contact?,
+   Person*,
+   AgentParty?,
+   ServiceProviderParty*,
+   PowerOfAttorney*,
+   FinancialAccount?),
+  empty
+DispositionCode =
+  notAllowed
+  | element DispositionCode { anonymous10 }
+OriginalJobID =
+  notAllowed
+  | element OriginalJobID { anonymous13 }
+ValidateToolVersion =
+  notAllowed
+  | element ValidateToolVersion { anonymous6 }
+ReferenceTime =
+  notAllowed
+  | element ReferenceTime { anonymous2 }
+RequiredCommodityClassification =
+  notAllowed
+  | element ns3:RequiredCommodityClassification {
+      CommodityClassificationType
+    }
+TotalInvoiceAmount =
+  notAllowed
+  | element TotalInvoiceAmount { anonymous12 }
+TimingComplaintCode =
+  notAllowed
+  | element TimingComplaintCode { anonymous10 }
+InvoicedQuantity =
+  notAllowed
+  | element InvoicedQuantity { anonymous8 }
+ConsumptionLevelCode =
+  notAllowed
+  | element ConsumptionLevelCode { anonymous10 }
+LineReferenceType =
+  (LineID, UUID?, LineStatusCode?, DocumentReference?), empty
+UBLExtensions =
+  notAllowed
+  | element ns4:UBLExtensions { UBLExtension+ }
+OrderableUnitFactorRate =
+  notAllowed
+  | element OrderableUnitFactorRate { anonymous1 }
+MinimumInventoryQuantity =
+  notAllowed
+  | element MinimumInventoryQuantity { anonymous8 }
+OriginAddress =
+  notAllowed
+  | element ns3:OriginAddress { AddressType }
+TransportEquipmentType =
+  (ID?,
+   ReferencedConsignmentID?,
+   TransportEquipmentTypeCode?,
+   ProviderTypeCode?,
+   OwnerTypeCode?,
+   SizeTypeCode?,
+   DispositionCode?,
+   FullnessIndicationCode?,
+   RefrigerationOnIndicator?,
+   Information?,
+   ReturnabilityIndicator?,
+   LegalStatusIndicator?,
+   AirFlowPercent?,
+   HumidityPercent?,
+   AnimalFoodApprovedIndicator?,
+   HumanFoodApprovedIndicator?,
+   DangerousGoodsApprovedIndicator?,
+   RefrigeratedIndicator?,
+   Characteristics?,
+   DamageRemarks?,
+   Description?,
+   SpecialTransportRequirments?,
+   GrossWeightMeasure?,
+   GrossVolumeMeasure?,
+   TareWeightMeasure?,
+   TrackingDeviceCode?,
+   TraceID?,
+   MeasurementDimension*,
+   TransportEquipmentSeal*,
+   MinimumTemperature?,
+   MaximumTemperature?,
+   ProviderParty?,
+   LoadingProofParty?,
+   SupplierParty?,
+   OwnerParty?,
+   OperatingParty?,
+   LoadingLocation?,
+   UnloadingLocation?,
+   StorageLocation?,
+   PositioningTransportEvent*,
+   QuarantineTransportEvent*,
+   DeliveryTransportEvent*,
+   PickupTransportEvent*,
+   HandlingTransportEvent*,
+   LoadingTransportEvent*,
+   TransportEvent*,
+   ApplicableTransportMeans?,
+   HaulageTradingTerms*,
+   HazardousGoodsTransit*,
+   PackagedTransportHandlingUnit*,
+   ServiceAllowanceCharge*,
+   FreightAllowanceCharge*,
+   AttachedTransportEquipment*,
+   GoodsItem*,
+   Delivery?,
+   ContainedInTransportEquipment*,
+   Pickup?,
+   Despatch?),
+  empty
+CountrySubentityCode =
+  notAllowed
+  | element CountrySubentityCode { anonymous10 }
+TradingRestrictions =
+  notAllowed
+  | element TradingRestrictions { anonymous6 }
+OptionalTakeoverTransportEvent =
+  notAllowed
+  | element ns3:OptionalTakeoverTransportEvent { TransportEventType }
+BonusPaymentTerms =
+  notAllowed
+  | element ns3:BonusPaymentTerms { PaymentTermsType }
+MinimumTemperature =
+  notAllowed
+  | element ns3:MinimumTemperature { TemperatureType }
+CollectPaymentTerms =
+  notAllowed
+  | element ns3:CollectPaymentTerms { PaymentTermsType }
+PreparationParty =
+  notAllowed
+  | element ns3:PreparationParty { PartyType }
+SecondaryHazard =
+  notAllowed
+  | element ns3:SecondaryHazard {
+      ID?,
+      PlacardNotation?,
+      PlacardEndorsement?,
+      EmergencyProceduresCode?,
+      Extension?
+    }
+TransportationServiceType =
+  (TransportServiceCode,
+   TariffClassCode?,
+   Priority?,
+   FreightRateClassCode?,
+   TransportationServiceDescription?,
+   TransportationServiceDetailsURI?),
+  empty
+PenaltyPaymentTerms =
+  notAllowed
+  | element ns3:PenaltyPaymentTerms { PaymentTermsType }
+PerformanceMetricTypeCode =
+  notAllowed
+  | element PerformanceMetricTypeCode { anonymous10 }
+PriceListType =
+  (ID?, StatusCode?, ValidityPeriod*, PreviousPriceList?), empty
+OnCarriageShipmentStage =
+  notAllowed
+  | element ns3:OnCarriageShipmentStage { ShipmentStageType }
+LivestockIndicator =
+  notAllowed
+  | element LivestockIndicator { anonymous9 }
+LatestProposalAcceptanceDate =
+  notAllowed
+  | element LatestProposalAcceptanceDate { anonymous14 }
+CalculationSequenceNumeric =
+  notAllowed
+  | element CalculationSequenceNumeric { anonymous3 }
+MeterConstant =
+  notAllowed
+  | element MeterConstant { anonymous6 }
+IssuingCountry =
+  notAllowed
+  | element ns3:IssuingCountry { CountryType }
+BuildingNumber =
+  notAllowed
+  | element BuildingNumber { anonymous6 }
+OrderableUnit =
+  notAllowed
+  | element OrderableUnit { anonymous6 }
+AdditionalTemperature =
+  notAllowed
+  | element ns3:AdditionalTemperature { TemperatureType }
+Dimension =
+  notAllowed
+  | element ns3:Dimension { DimensionType }
+LastRevisionDate =
+  notAllowed
+  | element LastRevisionDate { anonymous14 }
+DebitNoteDocumentReference =
+  notAllowed
+  | element ns3:DebitNoteDocumentReference { DocumentReferenceType }
+ExportationTransportEvent =
+  notAllowed
+  | element ns3:ExportationTransportEvent { TransportEventType }
+ComplementaryRelatedItem =
+  notAllowed
+  | element ns3:ComplementaryRelatedItem { RelatedItemType }
+SubLineItem =
+  notAllowed
+  | element ns3:SubLineItem { LineItemType }
+OriginalDocumentReference =
+  notAllowed
+  | element ns3:OriginalDocumentReference { DocumentReferenceType }
+TotalPackageQuantity =
+  notAllowed
+  | element TotalPackageQuantity { anonymous8 }
+RejectedQuantity =
+  notAllowed
+  | element RejectedQuantity { anonymous8 }
+ExporterParty =
+  notAllowed
+  | element ns3:ExporterParty { PartyType }
+ValidationDate =
+  notAllowed
+  | element ValidationDate { anonymous14 }
+AvailabilityTransportEvent =
+  notAllowed
+  | element ns3:AvailabilityTransportEvent { TransportEventType }
+CertificateTypeCode =
+  notAllowed
+  | element CertificateTypeCode { anonymous10 }
+ConsumptionEnergyQuantity =
+  notAllowed
+  | element ConsumptionEnergyQuantity { anonymous8 }
+EstimatedDeliveryDate =
+  notAllowed
+  | element EstimatedDeliveryDate { anonymous14 }
+LatestMeterReadingDate =
+  notAllowed
+  | element LatestMeterReadingDate { anonymous14 }
+AuctionTerms =
+  notAllowed
+  | element ns3:AuctionTerms {
+      AuctionConstraintIndicator?,
+      JustificationDescription*,
+      Description*,
+      ProcessDescription*,
+      ConditionsDescription*,
+      ElectronicDeviceDescription*,
+      AuctionURI?
+    }
+MortgageHolderParty =
+  notAllowed
+  | element ns3:MortgageHolderParty { PartyType }
+PayableAmount =
+  notAllowed
+  | element PayableAmount { anonymous12 }
+SupplyChainActivityTypeCode =
+  notAllowed
+  | element SupplyChainActivityTypeCode { anonymous10 }
+AgentParty =
+  notAllowed
+  | element ns3:AgentParty { PartyType }
+DeclaredForCarriageValueAmount =
+  notAllowed
+  | element DeclaredForCarriageValueAmount { anonymous12 }
+EventType =
+  (IdentificationID?,
+   OccurrenceDate?,
+   OccurrenceTime?,
+   TypeCode?,
+   Description*,
+   CompletionIndicator?,
+   CurrentStatus*,
+   Contact*,
+   OccurenceLocation?),
+  empty
+EventLineItem =
+  notAllowed
+  | element ns3:EventLineItem {
+      LineNumberNumeric?,
+      ParticipatingLocationsLocation?,
+      RetailPlannedImpact*,
+      SupplyItem
+    }
+MarkAttentionIndicator =
+  notAllowed
+  | element MarkAttentionIndicator { anonymous9 }
+InventoryValueAmount =
+  notAllowed
+  | element InventoryValueAmount { anonymous12 }
+LineID =
+  notAllowed
+  | element LineID { anonymous13 }
+CallBaseAmount =
+  notAllowed
+  | element CallBaseAmount { anonymous12 }
+CapabilityTypeCode =
+  notAllowed
+  | element CapabilityTypeCode { anonymous10 }
+CatalogueLineReference =
+  notAllowed
+  | element ns3:CatalogueLineReference { LineReferenceType }
+UUID =
+  notAllowed
+  | element UUID { anonymous13 }
+TransportEquipmentTypeCode =
+  notAllowed
+  | element TransportEquipmentTypeCode { anonymous10 }
+TenderRecipientParty =
+  notAllowed
+  | element ns3:TenderRecipientParty { PartyType }
+DataSourceCode =
+  notAllowed
+  | element DataSourceCode { anonymous10 }
+DebitedQuantity =
+  notAllowed
+  | element DebitedQuantity { anonymous8 }
+MonetaryTotalType =
+  (LineExtensionAmount?,
+   TaxExclusiveAmount?,
+   TaxInclusiveAmount?,
+   AllowanceTotalAmount?,
+   ChargeTotalAmount?,
+   PrepaidAmount?,
+   PayableRoundingAmount?,
+   PayableAmount,
+   PayableAlternativeAmount?),
+  empty
+SecurityClassificationCode =
+  notAllowed
+  | element SecurityClassificationCode { anonymous10 }
+ProfileExecutionID =
+  notAllowed
+  | element ProfileExecutionID { anonymous13 }
+SupplierPartyType =
+  (CustomerAssignedAccountID?,
+   AdditionalAccountID*,
+   DataSendingCapability?,
+   Party?,
+   DespatchContact?,
+   AccountingContact?,
+   SellerContact?),
+  empty
+ExecutionRequirementCode =
+  notAllowed
+  | element ExecutionRequirementCode { anonymous10 }
+CompletionIndicator =
+  notAllowed
+  | element CompletionIndicator { anonymous9 }
+TaxAmount =
+  notAllowed
+  | element TaxAmount { anonymous12 }
+ExpenseCode =
+  notAllowed
+  | element ExpenseCode { anonymous10 }
+DeclaredCustomsValueAmount =
+  notAllowed
+  | element DeclaredCustomsValueAmount { anonymous12 }
+AppealInformationParty =
+  notAllowed
+  | element ns3:AppealInformationParty { PartyType }
+SubTypeCode =
+  notAllowed
+  | element SubTypeCode { anonymous10 }
+Title =
+  notAllowed
+  | element Title { anonymous6 }
+ExchangeRate =
+  notAllowed
+  | element ns3:ExchangeRate { ExchangeRateType }
+EstimatedDepartureTime =
+  notAllowed
+  | element EstimatedDepartureTime { anonymous2 }
+ClassificationSchemeType =
+  (ID,
+   UUID?,
+   LastRevisionDate?,
+   LastRevisionTime?,
+   Note*,
+   Name?,
+   Description*,
+   AgencyID?,
+   AgencyName?,
+   VersionID?,
+   URI?,
+   SchemeURI?,
+   LanguageID?,
+   ClassificationCategory+),
+  empty
+CustomerAssignedAccountID =
+  notAllowed
+  | element CustomerAssignedAccountID { anonymous13 }
+OptionsDescription =
+  notAllowed
+  | element OptionsDescription { anonymous6 }
+ConsigneeAssignedID =
+  notAllowed
+  | element ConsigneeAssignedID { anonymous13 }
+TelecommunicationsSupply =
+  notAllowed
+  | element ns3:TelecommunicationsSupply {
+      TelecommunicationsSupplyType
+    }
+BuildingName =
+  notAllowed
+  | element BuildingName { anonymous0 }
+CatalogueReferenceType =
+  (ID,
+   UUID?,
+   IssueDate?,
+   IssueTime?,
+   RevisionDate?,
+   RevisionTime?,
+   Note*,
+   Description*,
+   VersionID?,
+   PreviousVersionID?),
+  empty
+ExtensionAgencyName =
+  notAllowed
+  | element ns4:ExtensionAgencyName { anonymous6 }
+LanguageType = (ID?, Name?, LocaleCode?), empty
+FreightForwarderParty =
+  notAllowed
+  | element ns3:FreightForwarderParty { PartyType }
+AllowanceChargeReason =
+  notAllowed
+  | element AllowanceChargeReason { anonymous6 }
+ReferenceEventCode =
+  notAllowed
+  | element ReferenceEventCode { anonymous10 }
+Temperature =
+  notAllowed
+  | element ns3:Temperature { TemperatureType }
+SettlementPeriod =
+  notAllowed
+  | element ns3:SettlementPeriod { PeriodType }
+SubscriberIDTypeCode =
+  notAllowed
+  | element SubscriberIDTypeCode { anonymous10 }
+FinalDestinationCountry =
+  notAllowed
+  | element ns3:FinalDestinationCountry { CountryType }
+SealStatusCode =
+  notAllowed
+  | element SealStatusCode { anonymous10 }
+ResultCode =
+  notAllowed
+  | element ResultCode { anonymous10 }
+ApplicableTerritoryAddress =
+  notAllowed
+  | element ns3:ApplicableTerritoryAddress { AddressType }
+CandidateReductionConstraintIndicator =
+  notAllowed
+  | element CandidateReductionConstraintIndicator { anonymous9 }
+MaximumMeasure =
+  notAllowed
+  | element MaximumMeasure { anonymous5 }
+OriginatorCustomerParty =
+  notAllowed
+  | element ns3:OriginatorCustomerParty { CustomerPartyType }
+RequestedDespatchTime =
+  notAllowed
+  | element RequestedDespatchTime { anonymous2 }
+AccountFormatCode =
+  notAllowed
+  | element AccountFormatCode { anonymous10 }
+TotalGoodsItemQuantity =
+  notAllowed
+  | element TotalGoodsItemQuantity { anonymous8 }
+ServiceType =
+  notAllowed
+  | element ServiceType { anonymous6 }
+AdjustmentReasonCode =
+  notAllowed
+  | element AdjustmentReasonCode { anonymous10 }
+AccountingCustomerParty =
+  notAllowed
+  | element ns3:AccountingCustomerParty { CustomerPartyType }
+EndpointID =
+  notAllowed
+  | element EndpointID { anonymous13 }
+TareWeightMeasure =
+  notAllowed
+  | element TareWeightMeasure { anonymous5 }
+Rate =
+  notAllowed
+  | element Rate { anonymous1 }
+SourceValueMeasure =
+  notAllowed
+  | element SourceValueMeasure { anonymous5 }
+TransportMeans =
+  notAllowed
+  | element ns3:TransportMeans { TransportMeansType }
+DespatchLineType =
+  (ID,
+   UUID?,
+   Note*,
+   LineStatusCode?,
+   DeliveredQuantity?,
+   BackorderQuantity?,
+   BackorderReason?,
+   OutstandingQuantity?,
+   OutstandingReason?,
+   OversupplyQuantity?,
+   OrderLineReference+,
+   DocumentReference*,
+   Item,
+   Shipment*),
+  empty
+PhoneNumber =
+  notAllowed
+  | element PhoneNumber { anonymous6 }
+MaximumBackorderQuantity =
+  notAllowed
+  | element MaximumBackorderQuantity { anonymous8 }
+ShippingMarks =
+  notAllowed
+  | element ShippingMarks { anonymous6 }
+TenderValidityPeriod =
+  notAllowed
+  | element ns3:TenderValidityPeriod { PeriodType }
+RoadTransport =
+  notAllowed
+  | element ns3:RoadTransport { LicensePlateID }
+InstallmentDueDate =
+  notAllowed
+  | element InstallmentDueDate { anonymous14 }
+CorporateRegistrationTypeCode =
+  notAllowed
+  | element CorporateRegistrationTypeCode { anonymous10 }
+PaymentType =
+  (ID?,
+   PaidAmount?,
+   ReceivedDate?,
+   PaidDate?,
+   PaidTime?,
+   InstructionID?),
+  empty
+ChargeableQuantity =
+  notAllowed
+  | element ChargeableQuantity { anonymous8 }
+PackageLevelCode =
+  notAllowed
+  | element PackageLevelCode { anonymous10 }
+Department =
+  notAllowed
+  | element Department { anonymous6 }
+CustomsTariffQuantity =
+  notAllowed
+  | element CustomsTariffQuantity { anonymous8 }
+PostalAddress =
+  notAllowed
+  | element ns3:PostalAddress { AddressType }
+ExtensionReasonCode =
+  notAllowed
+  | element ns4:ExtensionReasonCode { anonymous10 }
+PackagingTypeCode =
+  notAllowed
+  | element PackagingTypeCode { anonymous10 }
+LineExtensionAmount =
+  notAllowed
+  | element LineExtensionAmount { anonymous12 }
+OperatingParty =
+  notAllowed
+  | element ns3:OperatingParty { PartyType }
+LegalMonetaryTotal =
+  notAllowed
+  | element ns3:LegalMonetaryTotal { MonetaryTotalType }
+OrderIntervalDaysNumeric =
+  notAllowed
+  | element OrderIntervalDaysNumeric { anonymous3 }
+AccountingSupplierParty =
+  notAllowed
+  | element ns3:AccountingSupplierParty { SupplierPartyType }
+ProcessDescription =
+  notAllowed
+  | element ProcessDescription { anonymous6 }
+ContractResponsibleParty =
+  notAllowed
+  | element ns3:ContractResponsibleParty { PartyType }
+CommunicationType = (ChannelCode?, Channel?, Value?), empty
+ShortageActionCode =
+  notAllowed
+  | element ShortageActionCode { anonymous10 }
+ReturnabilityIndicator =
+  notAllowed
+  | element ReturnabilityIndicator { anonymous9 }
+TransportEventTypeCode =
+  notAllowed
+  | element TransportEventTypeCode { anonymous10 }
+MaximumQuantity =
+  notAllowed
+  | element MaximumQuantity { anonymous8 }
+District =
+  notAllowed
+  | element District { anonymous6 }
+MeterType =
+  (MeterNumber?,
+   MeterName?,
+   MeterConstant?,
+   MeterConstantCode?,
+   TotalDeliveredQuantity?,
+   MeterReadingMethod?,
+   MeterReadingMethodCode?,
+   MeterReadingComments?,
+   MeterReading*),
+  empty
+LatestMeterQuantity =
+  notAllowed
+  | element LatestMeterQuantity { anonymous8 }
+TaxInclusivePrice =
+  notAllowed
+  | element ns3:TaxInclusivePrice { PriceType2 }
+VariantConstraintIndicator =
+  notAllowed
+  | element VariantConstraintIndicator { anonymous9 }
+ParticipationPercent =
+  notAllowed
+  | element ParticipationPercent { anonymous7 }
+MultiplierFactorNumeric =
+  notAllowed
+  | element MultiplierFactorNumeric { anonymous3 }
+SplitConsignmentIndicator =
+  notAllowed
+  | element SplitConsignmentIndicator { anonymous9 }
+TransportEvent =
+  notAllowed
+  | element ns3:TransportEvent { TransportEventType }
+StartDate =
+  notAllowed
+  | element StartDate { anonymous14 }
+OtherCommunication =
+  notAllowed
+  | element ns3:OtherCommunication { CommunicationType }
+TenderRequirementType =
+  (Name*, Description*, TemplateDocumentReference?), empty
+VariantID =
+  notAllowed
+  | element VariantID { anonymous13 }
+ExceptionStatusCode =
+  notAllowed
+  | element ExceptionStatusCode { anonymous10 }
+ValidityPeriod =
+  notAllowed
+  | element ns3:ValidityPeriod { PeriodType }
+MinimumNumberNumeric =
+  notAllowed
+  | element MinimumNumberNumeric { anonymous3 }
+ImmobilizationCertificateID =
+  notAllowed
+  | element ImmobilizationCertificateID { anonymous13 }
+AppealTerms =
+  notAllowed
+  | element ns3:AppealTerms {
+      Description*,
+      PresentationPeriod?,
+      AppealInformationParty?,
+      AppealReceiverParty?,
+      MediationParty?
+    }
+ConsignmentQuantity =
+  notAllowed
+  | element ConsignmentQuantity { anonymous8 }
+FreightAllowanceCharge =
+  notAllowed
+  | element ns3:FreightAllowanceCharge { AllowanceChargeType }
+ImporterParty =
+  notAllowed
+  | element ns3:ImporterParty { PartyType }
+DeliveryParty =
+  notAllowed
+  | element ns3:DeliveryParty { PartyType }
+TransportItemConditionDeviationIndicator =
+  notAllowed
+  | element TransportItemConditionDeviationIndicator { anonymous9 }
+SubstituteCarrierParty =
+  notAllowed
+  | element ns3:SubstituteCarrierParty { PartyType }
+ExemptionReasonCode =
+  notAllowed
+  | element ExemptionReasonCode { anonymous10 }
+PerformanceValueQuantity =
+  notAllowed
+  | element PerformanceValueQuantity { anonymous8 }
+BudgetAccount =
+  notAllowed
+  | element ns3:BudgetAccount {
+      ID?, BudgetYearNumeric?, RequiredClassificationScheme?
+    }
+ContainedPackage =
+  notAllowed
+  | element ns3:ContainedPackage { PackageType }
+anonymous6 = anonymous4
+PositionCode =
+  notAllowed
+  | element PositionCode { anonymous10 }
+ActualDeliveryDate =
+  notAllowed
+  | element ActualDeliveryDate { anonymous14 }
+FreightRateClassCode =
+  notAllowed
+  | element FreightRateClassCode { anonymous10 }
+LoadingLengthMeasure =
+  notAllowed
+  | element LoadingLengthMeasure { anonymous5 }
+FreeOnBoardValueAmount =
+  notAllowed
+  | element FreeOnBoardValueAmount { anonymous12 }
+LineResponse =
+  notAllowed
+  | element ns3:LineResponse { LineReference, Response+ }
+DescriptionCode =
+  notAllowed
+  | element DescriptionCode { anonymous10 }
+ForeignExchangeContract =
+  notAllowed
+  | element ns3:ForeignExchangeContract { ContractType }
+HandlingUnitDespatchLine =
+  notAllowed
+  | element ns3:HandlingUnitDespatchLine { DespatchLineType }
+PromotionalSpecification =
+  notAllowed
+  | element ns3:PromotionalSpecification {
+      SpecificationID?, PromotionalEventLineItem+, EventTactic*
+    }
+AwardedTenderedProject =
+  notAllowed
+  | element ns3:AwardedTenderedProject { TenderedProjectType }
+ExpectedQuantity =
+  notAllowed
+  | element ExpectedQuantity { anonymous8 }
+ConsumersEnergyLevel =
+  notAllowed
+  | element ConsumersEnergyLevel { anonymous6 }
+DespatchParty =
+  notAllowed
+  | element ns3:DespatchParty { PartyType }
+DocumentTenderRequirement =
+  notAllowed
+  | element ns3:DocumentTenderRequirement { TenderRequirementType }
+GoodsItemType =
+  (ID,
+   SequenceNumberID?,
+   Description*,
+   HazardousRiskIndicator?,
+   DeclaredCustomsValueAmount?,
+   DeclaredForCarriageValueAmount?,
+   DeclaredStatisticsValueAmount?,
+   FreeOnBoardValueAmount?,
+   InsuranceValueAmount?,
+   ValueAmount?,
+   GrossWeightMeasure?,
+   NetWeightMeasure?,
+   NetNetWeightMeasure?,
+   ChargeableWeightMeasure?,
+   GrossVolumeMeasure?,
+   NetVolumeMeasure?,
+   Quantity?,
+   PreferenceCriterionCode?,
+   RequiredCustomsID?,
+   CustomsStatusCode?,
+   CustomsTariffQuantity?,
+   CustomsImportClassifiedIndicator?,
+   ChargeableQuantity?,
+   ReturnableQuantity?,
+   Item*,
+   GoodsItemContainer*,
+   FreightAllowanceCharge*,
+   InvoiceLine*,
+   Temperature*,
+   ContainedGoodsItem*,
+   OriginAddress?,
+   Delivery?,
+   Pickup?,
+   Despatch?),
+  empty
+CreditNoteLineType =
+  (ID,
+   UUID?,
+   Note*,
+   CreditedQuantity?,
+   LineExtensionAmount?,
+   TaxPointDate?,
+   AccountingCostCode?,
+   AccountingCost?,
+   PaymentPurposeCode?,
+   DiscrepancyResponse*,
+   DespatchLineReference*,
+   ReceiptLineReference*,
+   BillingReference*,
+   DocumentReference*,
+   PricingReference?,
+   Delivery*,
+   TaxTotal*,
+   AllowanceCharge*,
+   Item?,
+   Price?,
+   SubCreditNoteLine*),
+  empty
+SubcontractTermsType =
+  (Rate?, UnknownPriceIndicator?, Description*, Amount?), empty
+AliasName =
+  notAllowed
+  | element AliasName { anonymous0 }
+EstimatedOverallContractAmount =
+  notAllowed
+  | element EstimatedOverallContractAmount { anonymous12 }
+Resolution =
+  notAllowed
+  | element Resolution { anonymous6 }
+ThresholdValueComparisonCode =
+  notAllowed
+  | element ThresholdValueComparisonCode { anonymous10 }
+ProfileID =
+  notAllowed
+  | element ProfileID { anonymous13 }
+IssueTime =
+  notAllowed
+  | element IssueTime { anonymous2 }
+OccurrenceTime =
+  notAllowed
+  | element OccurrenceTime { anonymous2 }
+BrandName =
+  notAllowed
+  | element BrandName { anonymous0 }
+NetWeightMeasure =
+  notAllowed
+  | element NetWeightMeasure { anonymous5 }
+ProcessJustification =
+  notAllowed
+  | element ns3:ProcessJustification {
+      PreviousCancellationReasonCode?,
+      ReasonCode?,
+      Reason*,
+      Description*
+    }
+RailTransport =
+  notAllowed
+  | element ns3:RailTransport { TrainID, RailCarID? }
+DespatchContact =
+  notAllowed
+  | element ns3:DespatchContact { ContactType }
+TaxInclusiveAmount =
+  notAllowed
+  | element TaxInclusiveAmount { anonymous12 }
+Price =
+  notAllowed
+  | element ns3:Price { PriceType2 }
+AddressTypeCode =
+  notAllowed
+  | element AddressTypeCode { anonymous10 }
+JobTitle =
+  notAllowed
+  | element JobTitle { anonymous6 }
+DocumentReferenceType =
+  (ID,
+   CopyIndicator?,
+   UUID?,
+   IssueDate?,
+   IssueTime?,
+   DocumentTypeCode?,
+   DocumentType?,
+   XPath*,
+   LanguageID?,
+   LocaleCode?,
+   Attachment?,
+   ValidityPeriod?,
+   IssuerParty?,
+   ResultOfVerification?),
+  empty
+IndicationIndicator =
+  notAllowed
+  | element IndicationIndicator { anonymous9 }
+PaymentTermsType =
+  (ID?,
+   PaymentMeansID*,
+   PrepaidPaymentReferenceID?,
+   Note*,
+   ReferenceEventCode?,
+   SettlementDiscountPercent?,
+   PenaltySurchargePercent?,
+   PaymentPercent?,
+   Amount?,
+   SettlementDiscountAmount?,
+   PenaltyAmount?,
+   PaymentDueDate?,
+   InstallmentDueDate?,
+   SettlementPeriod?,
+   PenaltyPeriod?,
+   ExchangeRate?,
+   ValidityPeriod?),
+  empty
+NoticeDocumentReference =
+  notAllowed
+  | element ns3:NoticeDocumentReference { DocumentReferenceType }
+InhalationToxicityZoneCode =
+  notAllowed
+  | element InhalationToxicityZoneCode { anonymous10 }
+anonymous7 = anonymous11
+ModelName =
+  notAllowed
+  | element ModelName { anonymous0 }
+EmergencyProceduresCode =
+  notAllowed
+  | element EmergencyProceduresCode { anonymous10 }
+PenaltyClauses =
+  notAllowed
+  | element PenaltyClauses { anonymous6 }
+GrossWeightMeasure =
+  notAllowed
+  | element GrossWeightMeasure { anonymous5 }
+RevisedForecastLineID =
+  notAllowed
+  | element RevisedForecastLineID { anonymous13 }
+SuccessiveSequenceID =
+  notAllowed
+  | element SuccessiveSequenceID { anonymous13 }
+AuctionURI =
+  notAllowed
+  | element AuctionURI { anonymous13 }
+MinimumBackorderQuantity =
+  notAllowed
+  | element MinimumBackorderQuantity { anonymous8 }
+PriceType =
+  notAllowed
+  | element PriceType { anonymous6 }
+ReportedShipment =
+  notAllowed
+  | element ns3:ReportedShipment { ShipmentType }
+LiabilityAmount =
+  notAllowed
+  | element LiabilityAmount { anonymous12 }
+ExtensionAgencyURI =
+  notAllowed
+  | element ns4:ExtensionAgencyURI { anonymous13 }
+ResolutionDate =
+  notAllowed
+  | element ResolutionDate { anonymous14 }
+LineItemType =
+  (ID,
+   SalesOrderID?,
+   UUID?,
+   Note*,
+   LineStatusCode?,
+   Quantity?,
+   LineExtensionAmount?,
+   TotalTaxAmount?,
+   MinimumQuantity?,
+   MaximumQuantity?,
+   MinimumBackorderQuantity?,
+   MaximumBackorderQuantity?,
+   InspectionMethodCode?,
+   PartialDeliveryIndicator?,
+   BackOrderAllowedIndicator?,
+   AccountingCostCode?,
+   AccountingCost?,
+   Delivery*,
+   DeliveryTerms?,
+   OriginatorParty?,
+   OrderedShipment*,
+   PricingReference?,
+   AllowanceCharge*,
+   Price?,
+   Item,
+   SubLineItem*,
+   WarrantyValidityPeriod?,
+   WarrantyParty?),
+  empty
+TransportationServiceDetailsURI =
+  notAllowed
+  | element TransportationServiceDetailsURI { anonymous13 }
+MinimumOrderQuantity =
+  notAllowed
+  | element MinimumOrderQuantity { anonymous8 }
+DirectionCode =
+  notAllowed
+  | element DirectionCode { anonymous10 }
+OperatingYearsQuantity =
+  notAllowed
+  | element OperatingYearsQuantity { anonymous8 }
+AccountID =
+  notAllowed
+  | element AccountID { anonymous13 }
+TransitCountry =
+  notAllowed
+  | element ns3:TransitCountry { CountryType }
+Certificate =
+  notAllowed
+  | element ns3:Certificate {
+      ID,
+      CertificateTypeCode,
+      CertificateType,
+      Remarks?,
+      IssuerParty,
+      DocumentReference*,
+      Signature*
+    }
+ResolutionCode =
+  notAllowed
+  | element ResolutionCode { anonymous10 }
+ReceiptTransportEvent =
+  notAllowed
+  | element ns3:ReceiptTransportEvent { TransportEventType }
+BillingReference =
+  notAllowed
+  | element ns3:BillingReference {
+      InvoiceDocumentReference?,
+      SelfBilledInvoiceDocumentReference?,
+      CreditNoteDocumentReference?,
+      SelfBilledCreditNoteDocumentReference?,
+      DebitNoteDocumentReference?,
+      ReminderDocumentReference?,
+      AdditionalDocumentReference?,
+      BillingReferenceLine*
+    }
+MeterReadingComments =
+  notAllowed
+  | element MeterReadingComments { anonymous6 }
+RequestedDespatchDate =
+  notAllowed
+  | element RequestedDespatchDate { anonymous14 }
+anonymous8 =
+  attribute unitCode { xsd:normalizedString }?,
+  attribute unitCodeListID { xsd:normalizedString }?,
+  attribute unitCodeListAgencyID { xsd:normalizedString }?,
+  attribute unitCodeListAgencyName { xsd:string }?,
+  xsd:decimal
+DeliveryAddress =
+  notAllowed
+  | element ns3:DeliveryAddress { AddressType }
+CardTypeCode =
+  notAllowed
+  | element CardTypeCode { anonymous10 }
+RetailPlannedImpact =
+  notAllowed
+  | element ns3:RetailPlannedImpact {
+      Amount, ForecastPurposeCode, ForecastTypeCode, Period?
+    }
+CalculationRate =
+  notAllowed
+  | element CalculationRate { anonymous1 }
+ApplicableTaxCategory =
+  notAllowed
+  | element ns3:ApplicableTaxCategory { TaxCategoryType }
+WebSiteAccess =
+  notAllowed
+  | element ns3:WebSiteAccess { URI?, Password, Login }
+ItemLocationQuantityType =
+  (LeadTimeMeasure?,
+   MinimumQuantity?,
+   MaximumQuantity?,
+   HazardousRiskIndicator?,
+   TradingRestrictions*,
+   ApplicableTerritoryAddress*,
+   Price?,
+   DeliveryUnit*,
+   ApplicableTaxCategory*,
+   Package?),
+  empty
+InvitationSubmissionPeriod =
+  notAllowed
+  | element ns3:InvitationSubmissionPeriod { PeriodType }
+TrackingDeviceCode =
+  notAllowed
+  | element TrackingDeviceCode { anonymous10 }
+CargoTypeCode =
+  notAllowed
+  | element CargoTypeCode { anonymous10 }
+ActualPickupTransportEvent =
+  notAllowed
+  | element ns3:ActualPickupTransportEvent { TransportEventType }
+ConditionsDescription =
+  notAllowed
+  | element ConditionsDescription { anonymous6 }
+SizeTypeCode =
+  notAllowed
+  | element SizeTypeCode { anonymous10 }
+ChargeIndicator =
+  notAllowed
+  | element ChargeIndicator { anonymous9 }
+ExceptionObservationPeriod =
+  notAllowed
+  | element ns3:ExceptionObservationPeriod { PeriodType }
+LatestPickupDate =
+  notAllowed
+  | element LatestPickupDate { anonymous14 }
+ReplacementRelatedItem =
+  notAllowed
+  | element ns3:ReplacementRelatedItem { RelatedItemType }
+ElectronicDeviceDescription =
+  notAllowed
+  | element ElectronicDeviceDescription { anonymous6 }
+ItemInstance =
+  notAllowed
+  | element ns3:ItemInstance {
+      ProductTraceID?,
+      ManufactureDate?,
+      ManufactureTime?,
+      BestBeforeDate?,
+      RegistrationID?,
+      SerialID?,
+      AdditionalItemProperty*,
+      LotIdentification?
+    }
+InstructionID =
+  notAllowed
+  | element InstructionID { anonymous13 }
+LatitudeMinutesMeasure =
+  notAllowed
+  | element LatitudeMinutesMeasure { anonymous5 }
+InterestedProcurementLotsID =
+  notAllowed
+  | element InterestedProcurementLotsID { anonymous13 }
+PaidAmount =
+  notAllowed
+  | element PaidAmount { anonymous12 }
+DeliveryLocation =
+  notAllowed
+  | element ns3:DeliveryLocation { LocationType }
+PreviousMeterQuantity =
+  notAllowed
+  | element PreviousMeterQuantity { anonymous8 }
+PromotionalEventLineItem =
+  notAllowed
+  | element ns3:PromotionalEventLineItem { Amount, EventLineItem }
+OpenTenderID =
+  notAllowed
+  | element OpenTenderID { anonymous13 }
+ContainedGoodsItem =
+  notAllowed
+  | element ns3:ContainedGoodsItem { GoodsItemType }
+OriginalDepartureCountry =
+  notAllowed
+  | element ns3:OriginalDepartureCountry { CountryType }
+SequenceNumberID =
+  notAllowed
+  | element SequenceNumberID { anonymous13 }
+BaseAmount =
+  notAllowed
+  | element BaseAmount { anonymous12 }
+RequestForTenderLineType =
+  (ID?,
+   UUID?,
+   Note*,
+   Quantity?,
+   MinimumQuantity?,
+   MaximumQuantity?,
+   MaximumTaxExclusiveAmount?,
+   MaximumTaxInclusiveAmount?,
+   DocumentReference*,
+   DeliveryPeriod*,
+   RequiredItemLocationQuantity*,
+   WarrantyValidityPeriod?,
+   Item,
+   SubRequestForTenderLine*),
+  empty
+SignatureMethod =
+  notAllowed
+  | element SignatureMethod { anonymous6 }
+ActualArrivalTime =
+  notAllowed
+  | element ActualArrivalTime { anonymous2 }
+ForecastPurposeCode =
+  notAllowed
+  | element ForecastPurposeCode { anonymous10 }
+MeterNumber =
+  notAllowed
+  | element MeterNumber { anonymous6 }
+AddressFormatCode =
+  notAllowed
+  | element AddressFormatCode { anonymous10 }
+PriceRevisionFormulaDescription =
+  notAllowed
+  | element PriceRevisionFormulaDescription { anonymous6 }
+HazardousItemNotificationParty =
+  notAllowed
+  | element ns3:HazardousItemNotificationParty { PartyType }
+SubcontractTerms =
+  notAllowed
+  | element ns3:SubcontractTerms { SubcontractTermsType }
+DiscrepancyResponse =
+  notAllowed
+  | element ns3:DiscrepancyResponse { ResponseType }
+PackLevelCode =
+  notAllowed
+  | element PackLevelCode { anonymous10 }
+AgencyName =
+  notAllowed
+  | element AgencyName { anonymous6 }
+SellerContact =
+  notAllowed
+  | element ns3:SellerContact { ContactType }
+PeriodType =
+  (StartDate?,
+   StartTime?,
+   EndDate?,
+   EndTime?,
+   DurationMeasure?,
+   DescriptionCode*,
+   Description*),
+  empty
+MaximumTaxInclusiveAmount =
+  notAllowed
+  | element MaximumTaxInclusiveAmount { anonymous12 }
+Person =
+  notAllowed
+  | element ns3:Person { PersonType }
+LineValidityPeriod =
+  notAllowed
+  | element ns3:LineValidityPeriod { PeriodType }
+Postbox =
+  notAllowed
+  | element Postbox { anonymous6 }
+SupportingDocumentReference =
+  notAllowed
+  | element ns3:SupportingDocumentReference { DocumentReferenceType }
+ExpiryDate =
+  notAllowed
+  | element ExpiryDate { anonymous14 }
+AllowanceChargeType =
+  (ID?,
+   ChargeIndicator,
+   AllowanceChargeReasonCode?,
+   AllowanceChargeReason?,
+   MultiplierFactorNumeric?,
+   PrepaidIndicator?,
+   SequenceNumeric?,
+   Amount,
+   BaseAmount?,
+   AccountingCostCode?,
+   AccountingCost?,
+   PerUnitAmount?,
+   TaxCategory*,
+   TaxTotal?,
+   PaymentMeans*),
+  empty
+CallDate =
+  notAllowed
+  | element CallDate { anonymous14 }
+CityName =
+  notAllowed
+  | element CityName { anonymous0 }
+ActualDespatchDate =
+  notAllowed
+  | element ActualDespatchDate { anonymous14 }
+PaymentMandate =
+  notAllowed
+  | element ns3:PaymentMandate {
+      ID?,
+      MandateTypeCode?,
+      Clause*,
+      ClauseCode*,
+      MaximumPaymentInstructionsNumeric?,
+      MaximumPaidAmount?,
+      SignatureID?,
+      PayerParty?,
+      PayerFinancialAccount?,
+      ValidityPeriod?,
+      PaymentReversalPeriod?
+    }
+AdditionalInformationParty =
+  notAllowed
+  | element ns3:AdditionalInformationParty { PartyType }
+TenderEvaluationParty =
+  notAllowed
+  | element ns3:TenderEvaluationParty { PartyType }
+PaymentNote =
+  notAllowed
+  | element PaymentNote { anonymous6 }
+MeterReadingMethod =
+  notAllowed
+  | element MeterReadingMethod { anonymous6 }
+FinancialInstitutionBranch =
+  notAllowed
+  | element ns3:FinancialInstitutionBranch { BranchType }
+HumanFoodApprovedIndicator =
+  notAllowed
+  | element HumanFoodApprovedIndicator { anonymous9 }
+ConsumptionAverage =
+  notAllowed
+  | element ns3:ConsumptionAverage { AverageAmount?, Description? }
+OptionValidityPeriod =
+  notAllowed
+  | element ns3:OptionValidityPeriod { PeriodType }
+WeightingAlgorithmCode =
+  notAllowed
+  | element WeightingAlgorithmCode { anonymous10 }
+PreCarriageShipmentStage =
+  notAllowed
+  | element ns3:PreCarriageShipmentStage { ShipmentStageType }
+AvailabilityStatusCode =
+  notAllowed
+  | element AvailabilityStatusCode { anonymous10 }
+Telefax =
+  notAllowed
+  | element Telefax { anonymous6 }
+CompletedTask =
+  notAllowed
+  | element ns3:CompletedTask {
+      AnnualAverageAmount?,
+      TotalTaskAmount?,
+      PartyCapacityAmount?,
+      Description*,
+      EvidenceSuppliedID?,
+      Period?,
+      RecipientCustomerParty?
+    }
+ActivityDataLineType =
+  (ID,
+   SupplyChainActivityTypeCode,
+   BuyerCustomerParty?,
+   SellerSupplierParty?,
+   ActivityPeriod?,
+   ActivityOriginLocation,
+   ActivityFinalLocation?,
+   SalesItem+),
+  empty
+TargetServicePercent =
+  notAllowed
+  | element TargetServicePercent { anonymous7 }
+SequenceNumeric =
+  notAllowed
+  | element SequenceNumeric { anonymous3 }
+IssuerParty =
+  notAllowed
+  | element ns3:IssuerParty { PartyType }
+InventoryPeriod =
+  notAllowed
+  | element ns3:InventoryPeriod { PeriodType }
+LatestDeliveryDate =
+  notAllowed
+  | element LatestDeliveryDate { anonymous14 }
+WarrantyValidityPeriod =
+  notAllowed
+  | element ns3:WarrantyValidityPeriod { PeriodType }
+RevisionDate =
+  notAllowed
+  | element RevisionDate { anonymous14 }
+EvidenceType =
+  (ID?,
+   EvidenceTypeCode?,
+   Name*,
+   EvidenceIssuingParty?,
+   DocumentReference?),
+  empty
+StatusReason =
+  notAllowed
+  | element StatusReason { anonymous6 }
+SpecificationID =
+  notAllowed
+  | element SpecificationID { anonymous13 }
+TotalAmount =
+  notAllowed
+  | element TotalAmount { anonymous12 }
+CreditAccount =
+  notAllowed
+  | element ns3:CreditAccount { AccountID }
+TransportMeansType =
+  (JourneyID?,
+   RegistrationNationalityID?,
+   RegistrationNationality*,
+   DirectionCode?,
+   TradeServiceCode?,
+   Stowage?,
+   AirTransport?,
+   RoadTransport?,
+   RailTransport?,
+   MaritimeTransport?,
+   OwnerParty?),
+  empty
+ActivityPeriod =
+  notAllowed
+  | element ns3:ActivityPeriod { PeriodType }
+BackorderReason =
+  notAllowed
+  | element BackorderReason { anonymous6 }
+StatusCode =
+  notAllowed
+  | element StatusCode { anonymous10 }
+CategoryName =
+  notAllowed
+  | element CategoryName { anonymous0 }
+ContractingSystemCode =
+  notAllowed
+  | element ContractingSystemCode { anonymous10 }
+CarrierServiceInstructions =
+  notAllowed
+  | element CarrierServiceInstructions { anonymous6 }
+SettlementDiscountAmount =
+  notAllowed
+  | element SettlementDiscountAmount { anonymous12 }
+CustomerPartyType =
+  (CustomerAssignedAccountID?,
+   SupplierAssignedAccountID?,
+   AdditionalAccountID*,
+   Party?,
+   DeliveryContact?,
+   AccountingContact?,
+   BuyerContact?),
+  empty
+LoadingLocation =
+  notAllowed
+  | element ns3:LoadingLocation { LocationType }
+FinancialCapability =
+  notAllowed
+  | element ns3:FinancialCapability { CapabilityType }
+RevisionTime =
+  notAllowed
+  | element RevisionTime { anonymous2 }
+TemperatureType = (AttributeID, Measure, Description*), empty
+AwardDate =
+  notAllowed
+  | element AwardDate { anonymous14 }
+LoadingSequenceID =
+  notAllowed
+  | element LoadingSequenceID { anonymous13 }
+AllowedSubcontractTerms =
+  notAllowed
+  | element ns3:AllowedSubcontractTerms { SubcontractTermsType }
+LoadingProofParty =
+  notAllowed
+  | element ns3:LoadingProofParty { PartyType }
+RoleCode =
+  notAllowed
+  | element RoleCode { anonymous10 }
+TotalMeteredQuantity =
+  notAllowed
+  | element TotalMeteredQuantity { anonymous8 }
+TimeFrequencyCode =
+  notAllowed
+  | element TimeFrequencyCode { anonymous10 }
+LongitudeDegreesMeasure =
+  notAllowed
+  | element LongitudeDegreesMeasure { anonymous5 }
+FlashpointTemperature =
+  notAllowed
+  | element ns3:FlashpointTemperature { TemperatureType }
+Name =
+  notAllowed
+  | element Name { anonymous0 }
+DeliveryUnitType =
+  (BatchQuantity, ConsumerUnitQuantity?, HazardousRiskIndicator?), empty
+PreviousPriceList =
+  notAllowed
+  | element ns3:PreviousPriceList { PriceListType }
+RegistrationNationality =
+  notAllowed
+  | element RegistrationNationality { anonymous6 }
+StatusReasonCode =
+  notAllowed
+  | element StatusReasonCode { anonymous10 }
+FiscalLegislationDocumentReference =
+  notAllowed
+  | element ns3:FiscalLegislationDocumentReference {
+      DocumentReferenceType
+    }
+ActualPickupTime =
+  notAllowed
+  | element ActualPickupTime { anonymous2 }
+Region =
+  notAllowed
+  | element Region { anonymous6 }
+Conditions =
+  notAllowed
+  | element Conditions { anonymous6 }
+SealingPartyType =
+  notAllowed
+  | element SealingPartyType { anonymous6 }
+DamageRemarks =
+  notAllowed
+  | element DamageRemarks { anonymous6 }
+anonymous9 = xsd:boolean
+UnloadingLocation =
+  notAllowed
+  | element ns3:UnloadingLocation { LocationType }
+Attachment =
+  notAllowed
+  | element ns3:Attachment { AttachmentType }
+FinancialEvaluationCriteria =
+  notAllowed
+  | element ns3:FinancialEvaluationCriteria { EvaluationCriteriaType }
+ComparisonDataCode =
+  notAllowed
+  | element ComparisonDataCode { anonymous10 }
+EndTime =
+  notAllowed
+  | element EndTime { anonymous2 }
+ActualDespatchTime =
+  notAllowed
+  | element ActualDespatchTime { anonymous2 }
+XPath =
+  notAllowed
+  | element XPath { anonymous6 }
+ExtensionURI =
+  notAllowed
+  | element ns4:ExtensionURI { anonymous13 }
+ThresholdQuantity =
+  notAllowed
+  | element ThresholdQuantity { anonymous8 }
+AdmissionCode =
+  notAllowed
+  | element AdmissionCode { anonymous10 }
+EnergyWaterSupply =
+  notAllowed
+  | element ns3:EnergyWaterSupply {
+      ConsumptionReport*, ConsumptionAverage*, EnergyWaterCorrection*
+    }
+MainCarriageShipmentStage =
+  notAllowed
+  | element ns3:MainCarriageShipmentStage { ShipmentStageType }
+MaximumOperatorQuantity =
+  notAllowed
+  | element MaximumOperatorQuantity { anonymous8 }
+PreviousVersionID =
+  notAllowed
+  | element PreviousVersionID { anonymous13 }
+PackQuantity =
+  notAllowed
+  | element PackQuantity { anonymous8 }
+ParticipationRequestReceptionPeriod =
+  notAllowed
+  | element ns3:ParticipationRequestReceptionPeriod { PeriodType }
+AwardingTerms =
+  notAllowed
+  | element ns3:AwardingTerms {
+      WeightingAlgorithmCode?,
+      Description*,
+      TechnicalCommitteeDescription*,
+      LowTendersDescription*,
+      AwardingCriteria*,
+      TechnicalCommitteePerson*
+    }
+TotalDeliveredQuantity =
+  notAllowed
+  | element TotalDeliveredQuantity { anonymous8 }
+ApplicableAddress =
+  notAllowed
+  | element ns3:ApplicableAddress { AddressType }
+PositioningTransportEvent =
+  notAllowed
+  | element ns3:PositioningTransportEvent { TransportEventType }
+SequenceID =
+  notAllowed
+  | element SequenceID { anonymous13 }
+SellerProposedSubstituteLineItem =
+  notAllowed
+  | element ns3:SellerProposedSubstituteLineItem { LineItemType }
+ContractType2 =
+  notAllowed
+  | element ContractType { anonymous6 }
+WarrantyInformation =
+  notAllowed
+  | element WarrantyInformation { anonymous6 }
+TerminalOperatorParty =
+  notAllowed
+  | element ns3:TerminalOperatorParty { PartyType }
+TransportHandlingUnit =
+  notAllowed
+  | element ns3:TransportHandlingUnit { TransportHandlingUnitType }
+AwardingCriteriaDescription =
+  notAllowed
+  | element AwardingCriteriaDescription { anonymous6 }
+MeterName =
+  notAllowed
+  | element MeterName { anonymous6 }
+SharesNumberQuantity =
+  notAllowed
+  | element SharesNumberQuantity { anonymous8 }
+TenderEnvelopeID =
+  notAllowed
+  | element TenderEnvelopeID { anonymous13 }
+SubRequestForTenderLine =
+  notAllowed
+  | element ns3:SubRequestForTenderLine { RequestForTenderLineType }
+CodeValue =
+  notAllowed
+  | element CodeValue { anonymous6 }
+SupplierConsumption =
+  notAllowed
+  | element ns3:SupplierConsumption {
+      Description?,
+      UtilitySupplierParty?,
+      UtilityCustomerParty?,
+      Consumption,
+      ConsumptionLine+
+    }
+ServiceProviderParty =
+  notAllowed
+  | element ns3:ServiceProviderParty {
+      ID?, ServiceTypeCode?, ServiceType*, Party, SellerContact?
+    }
+HazardousRegulationCode =
+  notAllowed
+  | element HazardousRegulationCode { anonymous10 }
+ShipmentType =
+  (ID,
+   ShippingPriorityLevelCode?,
+   HandlingCode?,
+   HandlingInstructions?,
+   Information?,
+   GrossWeightMeasure?,
+   NetWeightMeasure?,
+   NetNetWeightMeasure?,
+   GrossVolumeMeasure?,
+   NetVolumeMeasure?,
+   TotalGoodsItemQuantity?,
+   TotalTransportHandlingUnitQuantity?,
+   InsuranceValueAmount?,
+   DeclaredCustomsValueAmount?,
+   DeclaredForCarriageValueAmount?,
+   DeclaredStatisticsValueAmount?,
+   FreeOnBoardValueAmount?,
+   SpecialInstructions*,
+   DeliveryInstructions*,
+   SplitConsignmentIndicator?,
+   ConsignmentQuantity?,
+   Consignment+,
+   GoodsItem*,
+   ShipmentStage*,
+   Delivery?,
+   TransportHandlingUnit*,
+   ReturnAddress?,
+   OriginAddress?,
+   FirstArrivalPortLocation?,
+   LastExitPortLocation?,
+   ExportCountry?,
+   FreightAllowanceCharge*),
+  empty
+anonymous10 =
+  attribute listID { xsd:normalizedString }?,
+  attribute listAgencyID { xsd:normalizedString }?,
+  attribute listAgencyName { xsd:string }?,
+  attribute listName { xsd:string }?,
+  attribute listVersionID { xsd:normalizedString }?,
+  attribute name { xsd:string }?,
+  attribute languageID { xsd:language }?,
+  attribute listURI { xsd:anyURI }?,
+  attribute listSchemeURI { xsd:anyURI }?,
+  xsd:normalizedString
+CarrierParty =
+  notAllowed
+  | element ns3:CarrierParty { PartyType }
+TimezoneOffset =
+  notAllowed
+  | element TimezoneOffset { anonymous6 }
+EncodingCode =
+  notAllowed
+  | element EncodingCode { anonymous10 }
+MaximumTaxExclusiveAmount =
+  notAllowed
+  | element MaximumTaxExclusiveAmount { anonymous12 }
+CompanyDossierDocumentReference =
+  notAllowed
+  | element ns3:CompanyDossierDocumentReference {
+      DocumentReferenceType
+    }
+PenaltyAmount =
+  notAllowed
+  | element PenaltyAmount { anonymous12 }
+AwardingMethodTypeCode =
+  notAllowed
+  | element AwardingMethodTypeCode { anonymous10 }
+LegalForm =
+  notAllowed
+  | element LegalForm { anonymous6 }
+HeatingTypeCode =
+  notAllowed
+  | element HeatingTypeCode { anonymous10 }
+Response =
+  notAllowed
+  | element ns3:Response { ResponseType }
+ProcedureCode =
+  notAllowed
+  | element ProcedureCode { anonymous10 }
+MarketValueAmount =
+  notAllowed
+  | element MarketValueAmount { anonymous12 }
+ResidenceType =
+  notAllowed
+  | element ResidenceType { anonymous6 }
+anonymous11 =
+  attribute format { xsd:string }?,
+  xsd:decimal
+FloorSpaceMeasurementDimension =
+  notAllowed
+  | element ns3:FloorSpaceMeasurementDimension { DimensionType }
+LineItem =
+  notAllowed
+  | element ns3:LineItem { LineItemType }
+TotalTaxAmount =
+  notAllowed
+  | element TotalTaxAmount { anonymous12 }
+GoodsItemContainer =
+  notAllowed
+  | element ns3:GoodsItemContainer {
+      ID, Quantity?, TransportEquipment*
+    }
+OpenTenderEvent =
+  notAllowed
+  | element ns3:OpenTenderEvent { EventType }
+PrepaidPaymentReferenceID =
+  notAllowed
+  | element PrepaidPaymentReferenceID { anonymous13 }
+ExtendedID =
+  notAllowed
+  | element ExtendedID { anonymous13 }
+Consumption =
+  notAllowed
+  | element ns3:Consumption {
+      UtilityStatementTypeCode?,
+      MainPeriod?,
+      AllowanceCharge*,
+      TaxTotal*,
+      EnergyWaterSupply?,
+      TelecommunicationsSupply?,
+      LegalMonetaryTotal
+    }
+HashAlgorithmMethod =
+  notAllowed
+  | element HashAlgorithmMethod { anonymous6 }
+ReceivedHandlingUnitReceiptLine =
+  notAllowed
+  | element ns3:ReceivedHandlingUnitReceiptLine { ReceiptLineType }
+ExtensionVersionID =
+  notAllowed
+  | element ns4:ExtensionVersionID { anonymous13 }
+SourceCurrencyBaseRate =
+  notAllowed
+  | element SourceCurrencyBaseRate { anonymous1 }
+ReturnableQuantity =
+  notAllowed
+  | element ReturnableQuantity { anonymous8 }
+RejectReasonCode =
+  notAllowed
+  | element RejectReasonCode { anonymous10 }
+ConsumptionHistory =
+  notAllowed
+  | element ns3:ConsumptionHistory {
+      Quantity,
+      ConsumptionLevelCode?,
+      ConsumptionLevel?,
+      Description*,
+      Period
+    }
+LogisticsOperatorParty =
+  notAllowed
+  | element ns3:LogisticsOperatorParty { PartyType }
+PaymentMeans =
+  notAllowed
+  | element ns3:PaymentMeans {
+      ID?,
+      PaymentMeansCode,
+      PaymentDueDate?,
+      PaymentChannelCode?,
+      InstructionID?,
+      InstructionNote*,
+      PaymentID*,
+      CardAccount?,
+      PayerFinancialAccount?,
+      PayeeFinancialAccount?,
+      CreditAccount?,
+      PaymentMandate?,
+      TradeFinancing?
+    }
+PalletSpaceMeasurementDimension =
+  notAllowed
+  | element ns3:PalletSpaceMeasurementDimension { DimensionType }
+TelecommunicationsServiceCallCode =
+  notAllowed
+  | element TelecommunicationsServiceCallCode { anonymous10 }
+Telephone =
+  notAllowed
+  | element Telephone { anonymous6 }
+SpecialTransportRequirments =
+  notAllowed
+  | element SpecialTransportRequirments { anonymous6 }
+ShipmentStage =
+  notAllowed
+  | element ns3:ShipmentStage { ShipmentStageType }
+Item =
+  notAllowed
+  | element ns3:Item { ItemType }
+ChargeableWeightMeasure =
+  notAllowed
+  | element ChargeableWeightMeasure { anonymous5 }
+ConsumptionLine =
+  notAllowed
+  | element ns3:ConsumptionLine {
+      ID,
+      ParentDocumentLineReferenceID?,
+      InvoicedQuantity,
+      LineExtensionAmount,
+      Period?,
+      Delivery*,
+      AllowanceCharge*,
+      TaxTotal*,
+      UtilityItem,
+      Price?,
+      UnstructuredPrice?
+    }
+ThresholdAmount =
+  notAllowed
+  | element ThresholdAmount { anonymous12 }
+AdvertisementAmount =
+  notAllowed
+  | element AdvertisementAmount { anonymous12 }
+CommissionPaymentTerms =
+  notAllowed
+  | element ns3:CommissionPaymentTerms { PaymentTermsType }
+ConsumptionReport =
+  notAllowed
+  | element ns3:ConsumptionReport {
+      ID,
+      ConsumptionType?,
+      ConsumptionTypeCode?,
+      Description*,
+      TotalConsumedQuantity?,
+      BasicConsumedQuantity?,
+      ResidentOccupantsNumeric?,
+      ConsumersEnergyLevelCode?,
+      ConsumersEnergyLevel?,
+      ResidenceType?,
+      ResidenceTypeCode?,
+      HeatingType?,
+      HeatingTypeCode?,
+      Period?,
+      GuidanceDocumentReference?,
+      DocumentReference?,
+      ConsumptionReportReference*,
+      ConsumptionHistory*
+    }
+DangerousGoodsApprovedIndicator =
+  notAllowed
+  | element DangerousGoodsApprovedIndicator { anonymous9 }
+CanonicalizationMethod =
+  notAllowed
+  | element CanonicalizationMethod { anonymous6 }
+PreviousJobID =
+  notAllowed
+  | element PreviousJobID { anonymous13 }
+TaxTotal =
+  notAllowed
+  | element ns3:TaxTotal {
+      TaxAmount,
+      RoundingAmount?,
+      TaxEvidenceIndicator?,
+      TaxIncludedIndicator?,
+      TaxSubtotal*
+    }
+OrderReference =
+  notAllowed
+  | element ns3:OrderReference {
+      ID,
+      SalesOrderID?,
+      CopyIndicator?,
+      UUID?,
+      IssueDate?,
+      IssueTime?,
+      CustomerReference?,
+      OrderTypeCode?,
+      DocumentReference?
+    }
+MathematicOperatorCode =
+  notAllowed
+  | element MathematicOperatorCode { anonymous10 }
+anonymous12 =
+  attribute currencyID { xsd:normalizedString }?,
+  attribute currencyCodeListVersionID { xsd:normalizedString }?,
+  xsd:decimal
+ExaminationTransportEvent =
+  notAllowed
+  | element ns3:ExaminationTransportEvent { TransportEventType }
+TargetInventoryQuantity =
+  notAllowed
+  | element TargetInventoryQuantity { anonymous8 }
+Percent =
+  notAllowed
+  | element Percent { anonymous7 }
+Contract =
+  notAllowed
+  | element ns3:Contract { ContractType }
+DocumentDistribution =
+  notAllowed
+  | element ns3:DocumentDistribution {
+      PrintQualifier, MaximumCopiesNumeric, Party
+    }
+SignatoryParty =
+  notAllowed
+  | element ns3:SignatoryParty { PartyType }
+AdditionalInformation =
+  notAllowed
+  | element AdditionalInformation { anonymous6 }
+ResultOfVerification =
+  notAllowed
+  | element ns3:ResultOfVerification {
+      ValidatorID?,
+      ResultCode?,
+      ValidationDate?,
+      ValidationTime?,
+      ValidateProcess?,
+      ValidateTool?,
+      ValidateToolVersion?,
+      SignatoryParty?
+    }
+Characteristics =
+  notAllowed
+  | element Characteristics { anonymous6 }
+SubsidiaryLocation =
+  notAllowed
+  | element ns3:SubsidiaryLocation {
+      ID?, InformationURI?, Address?, LocationCoordinate?
+    }
+UNDGCode =
+  notAllowed
+  | element UNDGCode { anonymous10 }
+Country =
+  notAllowed
+  | element ns3:Country { CountryType }
+AgencyID =
+  notAllowed
+  | element AgencyID { anonymous13 }
+Password =
+  notAllowed
+  | element Password { anonymous6 }
+DutyType = (Amount, Duty?, DutyCode?, TaxCategory?), empty
+ComparisonForecastIssueDate =
+  notAllowed
+  | element ComparisonForecastIssueDate { anonymous14 }
+ItemIdentificationType =
+  (ID,
+   ExtendedID?,
+   PhysicalAttribute*,
+   MeasurementDimension*,
+   IssuerParty?),
+  empty
+LineNumberNumeric =
+  notAllowed
+  | element LineNumberNumeric { anonymous3 }
+DataSendingCapability =
+  notAllowed
+  | element DataSendingCapability { anonymous6 }
+Room =
+  notAllowed
+  | element Room { anonymous6 }
+BuyerCustomerParty =
+  notAllowed
+  | element ns3:BuyerCustomerParty { CustomerPartyType }
+EndorsementType =
+  (DocumentID, ApprovalStatus, Remarks*, EndorserParty, Signature*),
+  empty
+ItemPropertyGroup =
+  notAllowed
+  | element ns3:ItemPropertyGroup { ID, Name?, ImportanceCode? }
+PaidDate =
+  notAllowed
+  | element PaidDate { anonymous14 }
+OriginCountry =
+  notAllowed
+  | element ns3:OriginCountry { CountryType }
+MeterReading =
+  notAllowed
+  | element ns3:MeterReading {
+      MeterReadingType?,
+      MeterReadingTypeCode?,
+      PreviousMeterReadingDate,
+      PreviousMeterQuantity,
+      LatestMeterReadingDate,
+      LatestMeterQuantity,
+      DeliveredQuantity
+    }
+RefrigeratedIndicator =
+  notAllowed
+  | element RefrigeratedIndicator { anonymous9 }
+ConsigneeParty =
+  notAllowed
+  | element ns3:ConsigneeParty { PartyType }
+Period =
+  notAllowed
+  | element ns3:Period { PeriodType }
+ExpectedOperatorQuantity =
+  notAllowed
+  | element ExpectedOperatorQuantity { anonymous8 }
+MinimumDeliveryUnit =
+  notAllowed
+  | element ns3:MinimumDeliveryUnit { DeliveryUnitType }
+ServiceAllowanceCharge =
+  notAllowed
+  | element ns3:ServiceAllowanceCharge { AllowanceChargeType }
+ContactParty =
+  notAllowed
+  | element ns3:ContactParty { PartyType }
+PresentationPeriod =
+  notAllowed
+  | element ns3:PresentationPeriod { PeriodType }
+UnknownPriceIndicator =
+  notAllowed
+  | element UnknownPriceIndicator { anonymous9 }
+SpecialInstructions =
+  notAllowed
+  | element SpecialInstructions { anonymous6 }
+PartyIdentification =
+  notAllowed
+  | element ns3:PartyIdentification { ID }
+DespatchAddress =
+  notAllowed
+  | element ns3:DespatchAddress { AddressType }
+QuantityDiscrepancyCode =
+  notAllowed
+  | element QuantityDiscrepancyCode { anonymous10 }
+ProviderTypeCode =
+  notAllowed
+  | element ProviderTypeCode { anonymous10 }
+IssueNumberID =
+  notAllowed
+  | element IssueNumberID { anonymous13 }
+TraceID =
+  notAllowed
+  | element TraceID { anonymous13 }
+TakeoverTransportEvent =
+  notAllowed
+  | element ns3:TakeoverTransportEvent { TransportEventType }
+AccountingContact =
+  notAllowed
+  | element ns3:AccountingContact { ContactType }
+ExchangeMarketID =
+  notAllowed
+  | element ExchangeMarketID { anonymous13 }
+ConditionCode =
+  notAllowed
+  | element ConditionCode { anonymous10 }
+WarrantyParty =
+  notAllowed
+  | element ns3:WarrantyParty { PartyType }
+AccessoryRelatedItem =
+  notAllowed
+  | element ns3:AccessoryRelatedItem { RelatedItemType }
+MaximumCopiesNumeric =
+  notAllowed
+  | element MaximumCopiesNumeric { anonymous3 }
+PaymentTerms =
+  notAllowed
+  | element ns3:PaymentTerms { PaymentTermsType }
+ContractSubdivision =
+  notAllowed
+  | element ContractSubdivision { anonymous6 }
+Priority =
+  notAllowed
+  | element Priority { anonymous6 }
+Location2 =
+  notAllowed
+  | element ns3:Location { LocationType }
+UtilityStatementTypeCode =
+  notAllowed
+  | element UtilityStatementTypeCode { anonymous10 }
+NotifyParty =
+  notAllowed
+  | element ns3:NotifyParty { PartyType }
+MaximumTemperature =
+  notAllowed
+  | element ns3:MaximumTemperature { TemperatureType }
+BudgetYearNumeric =
+  notAllowed
+  | element BudgetYearNumeric { anonymous3 }
+ReferenceID =
+  notAllowed
+  | element ReferenceID { anonymous13 }
+AnimalFoodIndicator =
+  notAllowed
+  | element AnimalFoodIndicator { anonymous9 }
+Line =
+  notAllowed
+  | element Line { anonymous6 }
+ContractorCustomerParty =
+  notAllowed
+  | element ns3:ContractorCustomerParty { CustomerPartyType }
+MediationParty =
+  notAllowed
+  | element ns3:MediationParty { PartyType }
+DigitalSignatureAttachment =
+  notAllowed
+  | element ns3:DigitalSignatureAttachment { AttachmentType }
+UnstructuredPrice =
+  notAllowed
+  | element ns3:UnstructuredPrice {
+      PriceAmountQuantity?, TimeAmountQuantity?
+    }
+ContractExtension =
+  notAllowed
+  | element ns3:ContractExtension {
+      OptionsDescription*,
+      MinimumNumberNumeric?,
+      MaximumNumberNumeric?,
+      OptionValidityPeriod?,
+      Renewal*
+    }
+TaxableAmount =
+  notAllowed
+  | element TaxableAmount { anonymous12 }
+TransportServiceCode =
+  notAllowed
+  | element TransportServiceCode { anonymous10 }
+TenderSubmissionDeadlinePeriod =
+  notAllowed
+  | element ns3:TenderSubmissionDeadlinePeriod { PeriodType }
+Delivery =
+  notAllowed
+  | element ns3:Delivery { DeliveryType }
+LicensePlateID =
+  notAllowed
+  | element LicensePlateID { anonymous13 }
+BillOfLadingHolderParty =
+  notAllowed
+  | element ns3:BillOfLadingHolderParty { PartyType }
+PayPerView =
+  notAllowed
+  | element PayPerView { anonymous6 }
+InventoryReportingParty =
+  notAllowed
+  | element ns3:InventoryReportingParty { PartyType }
+PackagedTransportHandlingUnit =
+  notAllowed
+  | element ns3:PackagedTransportHandlingUnit {
+      TransportHandlingUnitType
+    }
+ParticipatingLocationsLocation =
+  notAllowed
+  | element ns3:ParticipatingLocationsLocation { LocationType }
+SecurityID =
+  notAllowed
+  | element SecurityID { anonymous13 }
+ValueQualifier =
+  notAllowed
+  | element ValueQualifier { anonymous6 }
+MandateTypeCode =
+  notAllowed
+  | element MandateTypeCode { anonymous10 }
+SubscriberParty =
+  notAllowed
+  | element ns3:SubscriberParty { PartyType }
+ConsignorParty =
+  notAllowed
+  | element ns3:ConsignorParty { PartyType }
+SalesOrderID =
+  notAllowed
+  | element SalesOrderID { anonymous13 }
+ExemptionReason =
+  notAllowed
+  | element ExemptionReason { anonymous6 }
+ActionCode =
+  notAllowed
+  | element ActionCode { anonymous10 }
+Measure =
+  notAllowed
+  | element Measure { anonymous5 }
+CopyIndicator =
+  notAllowed
+  | element CopyIndicator { anonymous9 }
+EstimatedDeliveryTime =
+  notAllowed
+  | element EstimatedDeliveryTime { anonymous2 }
+ValidateTool =
+  notAllowed
+  | element ValidateTool { anonymous6 }
+DeclarationTypeCode =
+  notAllowed
+  | element DeclarationTypeCode { anonymous10 }
+OrderedShipment =
+  notAllowed
+  | element ns3:OrderedShipment { Shipment, Package* }
+LongitudeMinutesMeasure =
+  notAllowed
+  | element LongitudeMinutesMeasure { anonymous5 }
+EmbeddedDocumentBinaryObject =
+  notAllowed
+  | element EmbeddedDocumentBinaryObject {
+      attribute format { xsd:string }?,
+      attribute mimeCode { xsd:normalizedString }?,
+      attribute encodingCode { xsd:normalizedString }?,
+      attribute characterSetCode { xsd:normalizedString }?,
+      attribute uri { xsd:anyURI }?,
+      attribute filename { xsd:string }?,
+      xsd:base64Binary
+    }
+StartTime =
+  notAllowed
+  | element StartTime { anonymous2 }
+TierRange =
+  notAllowed
+  | element TierRange { anonymous6 }
+PriceEvaluationCode =
+  notAllowed
+  | element PriceEvaluationCode { anonymous10 }
+FreeOfChargeIndicator =
+  notAllowed
+  | element FreeOfChargeIndicator { anonymous9 }
+VarianceQuantity =
+  notAllowed
+  | element VarianceQuantity { anonymous8 }
+DebitNoteLineType =
+  (ID,
+   UUID?,
+   Note*,
+   DebitedQuantity?,
+   LineExtensionAmount,
+   TaxPointDate?,
+   AccountingCostCode?,
+   AccountingCost?,
+   PaymentPurposeCode?,
+   DiscrepancyResponse*,
+   DespatchLineReference*,
+   ReceiptLineReference*,
+   BillingReference*,
+   DocumentReference*,
+   PricingReference?,
+   Delivery*,
+   TaxTotal*,
+   Item?,
+   Price?,
+   SubDebitNoteLine*),
+  empty
+TransportServiceProviderSpecialTerms =
+  notAllowed
+  | element TransportServiceProviderSpecialTerms { anonymous6 }
+RequestForQuotationLineID =
+  notAllowed
+  | element RequestForQuotationLineID { anonymous13 }
+FormatCode =
+  notAllowed
+  | element FormatCode { anonymous10 }
+SelfBilledInvoiceDocumentReference =
+  notAllowed
+  | element ns3:SelfBilledInvoiceDocumentReference {
+      DocumentReferenceType
+    }
+HandlingInstructions =
+  notAllowed
+  | element HandlingInstructions { anonymous6 }
+BusinessClassificationEvidenceID =
+  notAllowed
+  | element BusinessClassificationEvidenceID { anonymous13 }
+PriceList =
+  notAllowed
+  | element ns3:PriceList { PriceListType }
+PlacardEndorsement =
+  notAllowed
+  | element PlacardEndorsement { anonymous6 }
+LoadingPortLocation =
+  notAllowed
+  | element ns3:LoadingPortLocation { LocationType }
+FaceValueAmount =
+  notAllowed
+  | element FaceValueAmount { anonymous12 }
+TransportEquipment =
+  notAllowed
+  | element ns3:TransportEquipment { TransportEquipmentType }
+LegalReference =
+  notAllowed
+  | element LegalReference { anonymous6 }
+CorrectionAmount =
+  notAllowed
+  | element CorrectionAmount { anonymous12 }
+ChipApplicationID =
+  notAllowed
+  | element ChipApplicationID { anonymous13 }
+TransportHandlingUnitTypeCode =
+  notAllowed
+  | element TransportHandlingUnitTypeCode { anonymous10 }
+Information =
+  notAllowed
+  | element Information { anonymous6 }
+anonymous13 =
+  attribute schemeID { xsd:normalizedString }?,
+  attribute schemeName { xsd:string }?,
+  attribute schemeAgencyID { xsd:normalizedString }?,
+  attribute schemeAgencyName { xsd:string }?,
+  attribute schemeVersionID { xsd:normalizedString }?,
+  attribute schemeDataURI { xsd:anyURI }?,
+  attribute schemeURI { xsd:anyURI }?,
+  xsd:normalizedString
+KeywordItemProperty =
+  notAllowed
+  | element ns3:KeywordItemProperty { ItemPropertyType }
+EnergyWaterSupplyCode =
+  notAllowed
+  | element EnergyWaterSupplyCode { anonymous10 }
+CommodityClassification =
+  notAllowed
+  | element ns3:CommodityClassification { CommodityClassificationType }
+SpecificTendererRequirement =
+  notAllowed
+  | element ns3:SpecificTendererRequirement { TendererRequirementType }
+NormalTemperatureReductionQuantity =
+  notAllowed
+  | element NormalTemperatureReductionQuantity { anonymous8 }
+EmergencyTemperature =
+  notAllowed
+  | element ns3:EmergencyTemperature { TemperatureType }
+CalculationExpression =
+  notAllowed
+  | element CalculationExpression { anonymous6 }
+RequiredDeliveryTime =
+  notAllowed
+  | element RequiredDeliveryTime { anonymous2 }
+JurisdictionRegionAddress =
+  notAllowed
+  | element ns3:JurisdictionRegionAddress { AddressType }
+UtilityItem =
+  notAllowed
+  | element ns3:UtilityItem {
+      ID,
+      SubscriberID?,
+      SubscriberIDType?,
+      SubscriberIDTypeCode?,
+      Description*,
+      PackQuantity?,
+      PackSizeNumeric?,
+      ConsumptionType?,
+      ConsumptionTypeCode?,
+      CurrentChargeType?,
+      CurrentChargeTypeCode?,
+      OneTimeChargeType?,
+      OneTimeChargeTypeCode?,
+      TaxCategory?,
+      Contract?
+    }
+LongitudeDirectionCode =
+  notAllowed
+  | element LongitudeDirectionCode { anonymous10 }
+EarliestPickupTime =
+  notAllowed
+  | element EarliestPickupTime { anonymous2 }
+SubDebitNoteLine =
+  notAllowed
+  | element ns3:SubDebitNoteLine { DebitNoteLineType }
+TelecommunicationsSupplyTypeCode =
+  notAllowed
+  | element TelecommunicationsSupplyTypeCode { anonymous10 }
+EnergyWaterSupplyID =
+  notAllowed
+  | element EnergyWaterSupplyID { anonymous13 }
+OriginalDespatchParty =
+  notAllowed
+  | element ns3:OriginalDespatchParty { PartyType }
+anonymous14 = xsd:date
+CertificateType =
+  notAllowed
+  | element CertificateType { anonymous6 }
+DocumentReference =
+  notAllowed
+  | element ns3:DocumentReference { DocumentReferenceType }
+FinalDeliveryParty =
+  notAllowed
+  | element ns3:FinalDeliveryParty { PartyType }
+ThirdPartyPayerIndicator =
+  notAllowed
+  | element ThirdPartyPayerIndicator { anonymous9 }
+SourceForecastIssueDate =
+  notAllowed
+  | element SourceForecastIssueDate { anonymous14 }
+ConsolidatedShipment =
+  notAllowed
+  | element ns3:ConsolidatedShipment { ShipmentType }
+SubInvoiceLine =
+  notAllowed
+  | element ns3:SubInvoiceLine { InvoiceLineType }
+ContractualDelivery =
+  notAllowed
+  | element ns3:ContractualDelivery { DeliveryType }
+Declaration =
+  notAllowed
+  | element ns3:Declaration {
+      Name*, DeclarationTypeCode?, Description*, EvidenceSuppliedID*
+    }
+ServiceTypeCode =
+  notAllowed
+  | element ServiceTypeCode { anonymous10 }
+DespatchLineReference =
+  notAllowed
+  | element ns3:DespatchLineReference { LineReferenceType }
+ContractTypeCode =
+  notAllowed
+  | element ContractTypeCode { anonymous10 }
+HazardousGoodsTransit =
+  notAllowed
+  | element ns3:HazardousGoodsTransit {
+      TransportEmergencyCardCode?,
+      PackingCriteriaCode?,
+      HazardousRegulationCode?,
+      InhalationToxicityZoneCode?,
+      TransportAuthorizationCode?,
+      MaximumTemperature?,
+      MinimumTemperature?
+    }
+EstimatedDespatchDate =
+  notAllowed
+  | element EstimatedDespatchDate { anonymous14 }
+LanguageID =
+  notAllowed
+  | element LanguageID { anonymous13 }
+LossRiskResponsibilityCode =
+  notAllowed
+  | element LossRiskResponsibilityCode { anonymous10 }
+CatalogueDocumentReference =
+  notAllowed
+  | element ns3:CatalogueDocumentReference { DocumentReferenceType }
+StreetName =
+  notAllowed
+  | element StreetName { anonymous0 }
+SalesItem =
+  notAllowed
+  | element ns3:SalesItem {
+      Quantity,
+      ActivityProperty*,
+      TaxExclusivePrice*,
+      TaxInclusivePrice*,
+      Item
+    }
+TaxCategory =
+  notAllowed
+  | element ns3:TaxCategory { TaxCategoryType }
+TradeItemPackingLabelingTypeCode =
+  notAllowed
+  | element TradeItemPackingLabelingTypeCode { anonymous10 }
+LimitationDescription =
+  notAllowed
+  | element LimitationDescription { anonymous6 }
+UBLVersionID =
+  notAllowed
+  | element UBLVersionID { "2.1" }
+MovieTitle =
+  notAllowed
+  | element MovieTitle { anonymous6 }
+PayableRoundingAmount =
+  notAllowed
+  | element PayableRoundingAmount { anonymous12 }
+Quantity =
+  notAllowed
+  | element Quantity { anonymous8 }
+RegistrationNationalityID =
+  notAllowed
+  | element RegistrationNationalityID { anonymous13 }
+MiddleName =
+  notAllowed
+  | element MiddleName { anonymous0 }
+PersonType =
+  (ID?,
+   FirstName?,
+   FamilyName?,
+   Title?,
+   MiddleName?,
+   NameSuffix?,
+   JobTitle?,
+   OrganizationDepartment?,
+   Contact?,
+   FinancialAccount?),
+  empty
+ReliabilityPercent =
+  notAllowed
+  | element ReliabilityPercent { anonymous7 }
+MarkCare =
+  notAllowed
+  | element MarkCare { anonymous6 }
+PriceAmount =
+  notAllowed
+  | element PriceAmount { anonymous12 }
+ContainerizedIndicator =
+  notAllowed
+  | element ContainerizedIndicator { anonymous9 }
+MarkingID =
+  notAllowed
+  | element MarkingID { anonymous13 }
+FinalDeliveryTransportationService =
+  notAllowed
+  | element ns3:FinalDeliveryTransportationService {
+      TransportationServiceType
+    }
+PaidTime =
+  notAllowed
+  | element PaidTime { anonymous2 }
+element14 =
+  element * {
+    mixed {
+      (element14
+       | attribute * { text })*
+    }
+  }
+ResidenceTypeCode =
+  notAllowed
+  | element ResidenceTypeCode { anonymous10 }
+PriceType2 =
+  (PriceAmount,
+   BaseQuantity?,
+   PriceChangeReason*,
+   PriceTypeCode?,
+   PriceType?,
+   OrderableUnitFactorRate?,
+   ValidityPeriod*,
+   PriceList?,
+   AllowanceCharge*,
+   PricingExchangeRate?),
+  empty
+LowerOrangeHazardPlacardID =
+  notAllowed
+  | element LowerOrangeHazardPlacardID { anonymous13 }
+MeterReadingTypeCode =
+  notAllowed
+  | element MeterReadingTypeCode { anonymous10 }
+TaxExclusiveAmount =
+  notAllowed
+  | element TaxExclusiveAmount { anonymous12 }
+ContractDocumentReference =
+  notAllowed
+  | element ns3:ContractDocumentReference { DocumentReferenceType }
+DurationMeasure =
+  notAllowed
+  | element DurationMeasure { anonymous5 }
+ReplenishmentOwnerDescription =
+  notAllowed
+  | element ReplenishmentOwnerDescription { anonymous6 }
+TaxPointDate =
+  notAllowed
+  | element TaxPointDate { anonymous14 }
+DeliveryUnit =
+  notAllowed
+  | element ns3:DeliveryUnit { DeliveryUnitType }
+TransportContract =
+  notAllowed
+  | element ns3:TransportContract { ContractType }
+SupplierParty =
+  notAllowed
+  | element ns3:SupplierParty { SupplierPartyType }
+EffectiveTime =
+  notAllowed
+  | element EffectiveTime { anonymous2 }
+LastExitPortLocation =
+  notAllowed
+  | element ns3:LastExitPortLocation { LocationType }
+PaymentPercent =
+  notAllowed
+  | element PaymentPercent { anonymous7 }
+HandlingTransportEvent =
+  notAllowed
+  | element ns3:HandlingTransportEvent { TransportEventType }
+PowerOfAttorney =
+  notAllowed
+  | element ns3:PowerOfAttorney {
+      ID?,
+      IssueDate?,
+      IssueTime?,
+      Description*,
+      NotaryParty,
+      AgentParty,
+      MandateDocumentReference*
+    }
+# 
+# RELAX-NG models synthesized from UBL document models on 2010-08-30 20:53:51z
+# 
+# Copyright (C) - Crane Softwrights Ltd.
+#               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc
+# Portions copyright (c) OASIS Open. All Rights Reserved.
+#                   - http://www.oasis-open.org/who/intellectualproperty.php
+# 
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+# 
+# - Redistributions of source code must retain the above copyright notice,
+#   this list of conditions and the following disclaimer.
+# - Redistributions in binary form must reproduce the above copyright notice,
+#   this list of conditions and the following disclaimer in the documentation
+#   and/or other materials provided with the distribution.
+# - The name of the author may not be used to endorse or promote products
+#   derived from this software without specific prior written permission.
+# 
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR
+# IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+# OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN
+# NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+# SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+# TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+# PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+# LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+# NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+# EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+# 
+# Note: for your reference, the above is the "Modified BSD license", this text
+#       was obtained 2003-07-26 at http://www.xfree86.org/3.3.6/COPYRIGHT2.html#5
+# 
+# THE AUTHOR MAKES NO REPRESENTATION ABOUT THE SUITABILITY OF THIS CODE FOR ANY
+# PURPOSE.
+#

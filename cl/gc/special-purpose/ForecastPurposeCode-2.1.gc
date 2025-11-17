@@ -1,0 +1,46 @@
+<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+   <Identification>
+      <ShortName>ForecastPurposeCode</ShortName>
+      <LongName>Forecast Purpose Code</LongName>
+      <Version>2.1</Version>
+      <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:ForecastPurposeCode</CanonicalUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:ForecastPurposeCode-2.1</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ForecastPurposeCode-2.1.gc</LocationUri>
+      <Agency>
+         <LongName xml:lang="en">OASIS Universal Business Language</LongName>
+         <Identifier>UBL</Identifier>
+      </Agency>
+   </Identification>
+    <ColumnSet>
+      <Column Id="code" Use="required">
+         <ShortName>Code</ShortName>
+         <Data Type="normalizedString" xml:lang="en"/>
+      </Column>
+      <Column Id="name" Use="optional">
+         <ShortName>Name</ShortName>
+         <Data Type="string" xml:lang="en"/>
+      </Column>
+      <Key Id="codeKey">
+         <ShortName>CodeKey</ShortName>
+         <ColumnRef Ref="code"/>
+      </Key>
+   </ColumnSet>
+   <SimpleCodeList>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>ORDER_FORECAST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>The forecast is for future Order</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>SALES_FORECAST</SimpleValue>
+         </Value>
+         <Value ColumnRef="name">
+            <SimpleValue>The forecast is for future Sales</SimpleValue>
+         </Value>
+      </Row>
+   </SimpleCodeList>
+</gc:CodeList>

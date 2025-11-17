@@ -1,0 +1,1480 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Aggregate Business Information Entity Re-use</title>
+   </head>
+   <body>
+      <h1>Aggregate Business Information Entity Re-use</h1>
+      <table summary="ABIE Re-use" rules="all">
+         <tr>
+            <th><b>ABIE</b></th>
+            <th><b>Associates with ABIEs</b></th>
+            <th><b>Associated to from Common ABIEs</b></th>
+            <th><b>Associated to from Document ABIEs</b></th>
+         </tr>
+         <tr>
+            <td>ActivityDataLine</td>
+            <td>BuyerCustomerParty, SellerSupplierParty, ActivityPeriod, ActivityOriginLocation, ActivityFinalLocation, SalesItem</td>
+            <td>-</td>
+            <td>Product Activity</td>
+         </tr>
+         <tr>
+            <td>ActivityProperty</td>
+            <td>-</td>
+            <td>Sales Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Address</td>
+            <td>AddressLine, Country, LocationCoordinate</td>
+            <td>Branch, Consumption Point, Corporate Registration Scheme, Delivery, Despatch, Financial Institution, Goods Item, Item, Item
+               Location Quantity, Location, Party, Party Legal Entity, Party Tax Scheme, Shipment, Shipment, Subsidiary Location, Tax Scheme,
+               Trading Terms
+            </td>
+            <td>Catalogue Request</td>
+         </tr>
+         <tr>
+            <td>AddressLine</td>
+            <td>-</td>
+            <td>Address</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>AirTransport</td>
+            <td>-</td>
+            <td>Transport Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>AllowanceCharge</td>
+            <td>TaxCategory, TaxTotal, PaymentMeans</td>
+            <td>Billing Reference Line, Consignment, Consignment, Consumption, Consumption Line, Credit Note Line, Delivery Terms, Goods Item,
+               Invoice Line, Line Item, Price, Shipment, Telecommunications Service, Telecommunications Supply Line, Transport Equipment,
+               Transport Equipment
+            </td>
+            <td>Credit Note, Freight Invoice, Invoice, Order, Order Change, Order Response, Quotation, Reminder, Self Billed Credit Note,
+               Self Billed Invoice, Statement
+            </td>
+         </tr>
+         <tr>
+            <td>AppealTerms</td>
+            <td>PresentationPeriod, AppealInformationParty, AppealReceiverParty, MediationParty</td>
+            <td>Tendering Terms</td>
+            <td>Tenderer Qualification Response, Unawarded Notification</td>
+         </tr>
+         <tr>
+            <td>Attachment</td>
+            <td>ExternalReference</td>
+            <td>Document Reference, Signature</td>
+            <td>Attached Document</td>
+         </tr>
+         <tr>
+            <td>AuctionTerms</td>
+            <td>-</td>
+            <td>Tendering Process</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>AwardingCriteria</td>
+            <td>SubordinateAwardingCriteria</td>
+            <td>Awarding Criteria, Awarding Terms</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>AwardingCriteriaResponse</td>
+            <td>SubordinateAwardingCriteriaResponse</td>
+            <td>Awarding Criteria Response, Tendered Project</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>AwardingTerms</td>
+            <td>AwardingCriteria, TechnicalCommitteePerson</td>
+            <td>Tendering Terms</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>BillingReference</td>
+            <td>InvoiceDocumentReference, SelfBilledInvoiceDocumentReference, CreditNoteDocumentReference, SelfBilledCreditNoteDocumentReference,
+               DebitNoteDocumentReference, ReminderDocumentReference, AdditionalDocumentReference, BillingReferenceLine
+            </td>
+            <td>Credit Note Line, Debit Note Line, Invoice Line, Reminder Line, Remittance Advice Line, Statement Line</td>
+            <td>Credit Note, Debit Note, Freight Invoice, Invoice, Remittance Advice, Self Billed Credit Note, Self Billed Invoice</td>
+         </tr>
+         <tr>
+            <td>BillingReferenceLine</td>
+            <td>AllowanceCharge</td>
+            <td>Billing Reference</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Branch</td>
+            <td>FinancialInstitution, Address</td>
+            <td>Financial Account</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>BudgetAccount</td>
+            <td>RequiredClassificationScheme</td>
+            <td>Budget Account Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>BudgetAccountLine</td>
+            <td>BudgetAccount</td>
+            <td>Tendering Terms</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>BudgetAmount</td>
+            <td>ApplicableTaxCategory</td>
+            <td>Procurement Project</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Capability</td>
+            <td>ValidityPeriod</td>
+            <td>Qualifying Party, Qualifying Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>CardAccount</td>
+            <td>-</td>
+            <td>Payment Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>CatalogueItemSpecificationUpdateLine</td>
+            <td>ContractorCustomerParty, SellerSupplierParty, Item</td>
+            <td>-</td>
+            <td>Catalogue Item Specification Update</td>
+         </tr>
+         <tr>
+            <td>CatalogueLine</td>
+            <td>ContractorCustomerParty, SellerSupplierParty, WarrantyParty, WarrantyValidityPeriod, LineValidityPeriod, ItemComparison, ComponentRelatedItem,
+               AccessoryRelatedItem, RequiredRelatedItem, ReplacementRelatedItem, ComplementaryRelatedItem, RequiredItemLocationQuantity,
+               DocumentReference, Item, KeywordItemProperty
+            </td>
+            <td>-</td>
+            <td>Catalogue</td>
+         </tr>
+         <tr>
+            <td>CataloguePricingUpdateLine</td>
+            <td>ContractorCustomerParty, SellerSupplierParty, RequiredItemLocationQuantity</td>
+            <td>-</td>
+            <td>Catalogue Pricing Update</td>
+         </tr>
+         <tr>
+            <td>CatalogueReference</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Catalogue, Catalogue Deletion, Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue Request, Order</td>
+         </tr>
+         <tr>
+            <td>CatalogueRequestLine</td>
+            <td>LineValidityPeriod, RequiredItemLocationQuantity, Item</td>
+            <td>-</td>
+            <td>Catalogue Request</td>
+         </tr>
+         <tr>
+            <td>Certificate</td>
+            <td>IssuerParty, DocumentReference, Signature</td>
+            <td>Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>CertificateOfOriginApplication</td>
+            <td>Shipment, EndorserParty, PreparationParty, IssuerParty, ExporterParty, ImporterParty, IssuingCountry, DocumentDistribution,
+               SupportingDocumentReference, Signature
+            </td>
+            <td>-</td>
+            <td>Certificate Of Origin</td>
+         </tr>
+         <tr>
+            <td>ClassificationCategory</td>
+            <td>CategorizesClassificationCategory</td>
+            <td>Classification Category, Classification Scheme</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ClassificationScheme</td>
+            <td>ClassificationCategory</td>
+            <td>Budget Account, Qualifying Party, Tenderer Qualification Request</td>
+            <td>Catalogue Request</td>
+         </tr>
+         <tr>
+            <td>CommodityClassification</td>
+            <td>-</td>
+            <td>Item, Procurement Project</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Communication</td>
+            <td>-</td>
+            <td>Contact</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>CompletedTask</td>
+            <td>Period, RecipientCustomerParty</td>
+            <td>Qualifying Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Consignment</td>
+            <td>ConsigneeParty, ExporterParty, ConsignorParty, ImporterParty, CarrierParty, FreightForwarderParty, NotifyParty, OriginalDespatchParty,
+               FinalDeliveryParty, PerformingCarrierParty, SubstituteCarrierParty, LogisticsOperatorParty, TransportAdvisorParty, HazardousItemNotificationParty,
+               InsuranceParty, MortgageHolderParty, BillOfLadingHolderParty, OriginalDepartureCountry, FinalDestinationCountry, TransitCountry,
+               TransportContract, OriginalDespatchTransportationService, FinalDeliveryTransportationService, DeliveryTerms, PaymentTerms,
+               CollectPaymentTerms, DisbursementPaymentTerms, PrepaidPaymentTerms, FreightAllowanceCharge, ExtraAllowanceCharge, MainCarriageShipmentStage,
+               PreCarriageShipmentStage, OnCarriageShipmentStage, TransportHandlingUnit, FirstArrivalPortLocation, LastExitPortLocation,
+               ConsolidatedShipment
+            </td>
+            <td>Shipment</td>
+            <td>Transportation Status</td>
+         </tr>
+         <tr>
+            <td>Consumption</td>
+            <td>MainPeriod, AllowanceCharge, TaxTotal, EnergyWaterSupply, TelecommunicationsSupply, LegalMonetaryTotal</td>
+            <td>Subscriber Consumption, Supplier Consumption</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ConsumptionAverage</td>
+            <td>-</td>
+            <td>Energy Water Supply</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ConsumptionHistory</td>
+            <td>Period</td>
+            <td>Consumption Report</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ConsumptionLine</td>
+            <td>Period, Delivery, AllowanceCharge, TaxTotal, UtilityItem, Price, UnstructuredPrice</td>
+            <td>Supplier Consumption</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ConsumptionPoint</td>
+            <td>Address, WebSiteAccess, UtilityMeter</td>
+            <td>Subscriber Consumption</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ConsumptionReport</td>
+            <td>Period, GuidanceDocumentReference, DocumentReference, ConsumptionReportReference, ConsumptionHistory</td>
+            <td>Energy Water Supply</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ConsumptionReportReference</td>
+            <td>Period</td>
+            <td>Consumption Report</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Contact</td>
+            <td>OtherCommunication</td>
+            <td>Customer Party, Customer Party, Customer Party, Despatch, Endorser Party, Event, Party, Person, Service Provider Party, Supplier
+               Party, Supplier Party, Supplier Party, Transport Event
+            </td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Contract</td>
+            <td>ValidityPeriod, ContractDocumentReference, NominationPeriod, ContractualDelivery</td>
+            <td>Consignment, Exchange Rate, Tender Result, Utility Item</td>
+            <td>Catalogue, Catalogue Deletion, Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue Request, Order, Order
+               Cancellation, Order Change, Order Response, Quotation, Request For Quotation, Transport Execution Plan
+            </td>
+         </tr>
+         <tr>
+            <td>ContractExecutionRequirement</td>
+            <td>-</td>
+            <td>Tendering Terms</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ContractExtension</td>
+            <td>OptionValidityPeriod, Renewal</td>
+            <td>Procurement Project</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ContractingParty</td>
+            <td>Party</td>
+            <td>-</td>
+            <td>Call For Tenders, Contract Award Notice, Contract Notice, Prior Information Notice, Tender, Tenderer Qualification</td>
+         </tr>
+         <tr>
+            <td>CorporateRegistrationScheme</td>
+            <td>JurisdictionRegionAddress</td>
+            <td>Party Legal Entity</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Correction</td>
+            <td>-</td>
+            <td>Energy Water Supply</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Country</td>
+            <td>-</td>
+            <td>Address, Certificate Of Origin Application, Consignment, Consignment, Consignment, Financial Account, Item, Shipment, Telecommunications
+               Service
+            </td>
+            <td>Order, Order Change, Order Response, Quotation, Request For Quotation</td>
+         </tr>
+         <tr>
+            <td>CreditAccount</td>
+            <td>-</td>
+            <td>Payment Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>CreditNoteLine</td>
+            <td>DiscrepancyResponse, DespatchLineReference, ReceiptLineReference, BillingReference, DocumentReference, PricingReference, Delivery,
+               TaxTotal, AllowanceCharge, Item, Price, SubCreditNoteLine
+            </td>
+            <td>Credit Note Line</td>
+            <td>Credit Note, Self Billed Credit Note</td>
+         </tr>
+         <tr>
+            <td>CustomerParty</td>
+            <td>Party, DeliveryContact, AccountingContact, BuyerContact</td>
+            <td>Activity Data Line, Catalogue Item Specification Update Line, Catalogue Line, Catalogue Pricing Update Line, Completed Task,
+               Remittance Advice Line, Remittance Advice Line, Remittance Advice Line, Statement Line, Statement Line, Statement Line
+            </td>
+            <td>Call For Tenders, Catalogue, Catalogue Deletion, Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue
+               Request, Contract Award Notice, Contract Notice, Credit Note, Credit Note, Debit Note, Debit Note, Despatch Advice, Despatch
+               Advice, Despatch Advice, Exception Criteria, Exception Notification, Forecast, Forecast Revision, Freight Invoice, Instruction
+               For Returns, Inventory Report, Invoice, Invoice, Item Information Request, Order, Order, Order, Order Cancellation, Order
+               Cancellation, Order Change, Order Change, Order Change, Order Response, Order Response, Order Response, Order Response Simple,
+               Order Response Simple, Order Response Simple, Prior Information Notice, Quotation, Receipt Advice, Receipt Advice, Reminder,
+               Remittance Advice, Request For Quotation, Request For Quotation, Retail Event, Self Billed Credit Note, Self Billed Credit
+               Note, Self Billed Invoice, Self Billed Invoice, Statement, Statement, Statement, Stock Availability Report, Tender, Trade
+               Item Location Profile, Utility Statement
+            </td>
+         </tr>
+         <tr>
+            <td>DebitNoteLine</td>
+            <td>DiscrepancyResponse, DespatchLineReference, ReceiptLineReference, BillingReference, DocumentReference, PricingReference, Delivery,
+               TaxTotal, Item, Price, SubDebitNoteLine
+            </td>
+            <td>Debit Note Line</td>
+            <td>Debit Note</td>
+         </tr>
+         <tr>
+            <td>Declaration</td>
+            <td>-</td>
+            <td>Qualifying Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Delivery</td>
+            <td>DeliveryAddress, DeliveryLocation, AlternativeDeliveryLocation, RequestedDeliveryPeriod, PromisedDeliveryPeriod, EstimatedDeliveryPeriod,
+               DeliveryParty, Despatch, DeliveryTerms, MinimumDeliveryUnit, MaximumDeliveryUnit, Shipment
+            </td>
+            <td>Consumption Line, Contract, Credit Note Line, Debit Note Line, Goods Item, Invoice Line, Line Item, Package, Shipment, Transport
+               Equipment, Transport Item Status
+            </td>
+            <td>Invoice, Order, Order Change, Order Response, Quotation, Request For Quotation, Self Billed Invoice</td>
+         </tr>
+         <tr>
+            <td>DeliveryTerms</td>
+            <td>DeliveryLocation, AllowanceCharge</td>
+            <td>Consignment, Delivery, Invoice Line, Line Item</td>
+            <td>Invoice, Order, Order Change, Order Response, Quotation, Request For Quotation, Self Billed Invoice</td>
+         </tr>
+         <tr>
+            <td>DeliveryUnit</td>
+            <td>-</td>
+            <td>Delivery, Delivery, Item Location Quantity, Package</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Despatch</td>
+            <td>DespatchAddress, DespatchParty, Contact</td>
+            <td>Delivery, Goods Item, Package, Transport Equipment</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>DespatchLine</td>
+            <td>OrderLineReference, DocumentReference, Item, Shipment</td>
+            <td>Transport Handling Unit</td>
+            <td>Despatch Advice</td>
+         </tr>
+         <tr>
+            <td>Dimension</td>
+            <td>-</td>
+            <td>Item, Item Identification, Item Property, Package, Stowage, Transport Equipment, Transport Handling Unit, Transport Handling
+               Unit, Transport Handling Unit
+            </td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>DocumentDistribution</td>
+            <td>Party</td>
+            <td>Certificate Of Origin Application</td>
+            <td>Bill Of Lading, Packing List, Waybill</td>
+         </tr>
+         <tr>
+            <td>DocumentReference</td>
+            <td>Attachment, ValidityPeriod, IssuerParty, ResultOfVerification</td>
+            <td>Billing Reference, Billing Reference, Billing Reference, Billing Reference, Billing Reference, Billing Reference, Billing
+               Reference, Catalogue Line, Certificate, Certificate Of Origin Application, Consumption Report, Consumption Report, Contract,
+               Credit Note Line, Debit Note Line, Despatch Line, Document Response, Evidence, Exception Notification Line, Invoice Line,
+               Item, Item, Line Reference, Order Line, Order Reference, Party Legal Entity, Power Of Attorney, Quotation Line, Receipt Line,
+               Remittance Advice Line, Request For Quotation Line, Request For Tender Line, Signature, Statement Line, Tender Line, Tender
+               Requirement, Tendering Process, Tendering Process, Tendering Terms, Tendering Terms, Tendering Terms, Tendering Terms, Tendering
+               Terms, Trade Financing, Trade Financing, Transaction Conditions
+            </td>
+            <td>Awarded Notification, Bill Of Lading, Call For Tenders, Call For Tenders, Call For Tenders, Catalogue, Catalogue Request,
+               Contract Award Notice, Contract Award Notice, Credit Note, Credit Note, Credit Note, Credit Note, Debit Note, Debit Note,
+               Debit Note, Debit Note, Despatch Advice, Document Status Request, Exception Criteria, Exception Notification, Forecast, Forecast
+               Revision, Forwarding Instructions, Freight Invoice, Freight Invoice, Freight Invoice, Freight Invoice, Freight Invoice, Guarantee
+               Certificate, Instruction For Returns, Inventory Report, Invoice, Invoice, Invoice, Invoice, Invoice, Item Information Request,
+               Order, Order, Order, Order, Order Cancellation, Order Cancellation, Order Change, Order Change, Order Change, Order Response,
+               Order Response, Order Response, Order Response Simple, Packing List, Performance History, Prior Information Notice, Product
+               Activity, Quotation, Quotation, Receipt Advice, Receipt Advice, Reminder, Remittance Advice, Request For Quotation, Request
+               For Quotation, Retail Event, Self Billed Credit Note, Self Billed Credit Note, Self Billed Credit Note, Self Billed Credit
+               Note, Self Billed Invoice, Self Billed Invoice, Self Billed Invoice, Self Billed Invoice, Self Billed Invoice, Self Billed
+               Invoice, Statement, Stock Availability Report, Tender, Tenderer Qualification Response, Tender Receipt, Trade Item Location
+               Profile, Transportation Status, Transport Execution Plan, Transport Execution Plan, Transport Execution Status, Unawarded
+               Notification, Utility Statement, Utility Statement, Waybill
+            </td>
+         </tr>
+         <tr>
+            <td>DocumentResponse</td>
+            <td>Response, DocumentReference, IssuerParty, RecipientParty, LineResponse</td>
+            <td>-</td>
+            <td>Application Response, Document Status, Document Status</td>
+         </tr>
+         <tr>
+            <td>Duty</td>
+            <td>TaxCategory</td>
+            <td>Telecommunications Service, Telecommunications Service</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>EconomicOperatorShortList</td>
+            <td>PreSelectedParty</td>
+            <td>Tendering Process</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Endorsement</td>
+            <td>EndorserParty, Signature</td>
+            <td>-</td>
+            <td>Certificate Of Origin, Certificate Of Origin, Certificate Of Origin</td>
+         </tr>
+         <tr>
+            <td>EndorserParty</td>
+            <td>Party, SignatoryContact</td>
+            <td>Certificate Of Origin Application, Endorsement</td>
+            <td>Certificate Of Origin</td>
+         </tr>
+         <tr>
+            <td>EnergyWaterSupply</td>
+            <td>ConsumptionReport, ConsumptionAverage, EnergyWaterCorrection</td>
+            <td>Consumption</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>EvaluationCriteria</td>
+            <td>DurationPeriod, SuggestedEvidence</td>
+            <td>Tenderer Qualification Request, Tenderer Qualification Request</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Event</td>
+            <td>CurrentStatus, Contact, OccurenceLocation</td>
+            <td>Tendering Process</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>EventComment</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Retail Event</td>
+         </tr>
+         <tr>
+            <td>EventLineItem</td>
+            <td>ParticipatingLocationsLocation, RetailPlannedImpact, SupplyItem</td>
+            <td>Miscellaneous Event, Promotional Event Line Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>EventTactic</td>
+            <td>EventTacticEnumeration, Period</td>
+            <td>Promotional Specification</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>EventTacticEnumeration</td>
+            <td>-</td>
+            <td>Event Tactic</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Evidence</td>
+            <td>EvidenceIssuingParty, DocumentReference</td>
+            <td>Evaluation Criteria, Tenderer Requirement</td>
+            <td>Tenderer Qualification</td>
+         </tr>
+         <tr>
+            <td>ExceptionCriteriaLine</td>
+            <td>EffectivePeriod, SupplyItem, ForecastExceptionCriteriaLine</td>
+            <td>-</td>
+            <td>Exception Criteria</td>
+         </tr>
+         <tr>
+            <td>ExceptionNotificationLine</td>
+            <td>ExceptionObservationPeriod, DocumentReference, ForecastException, SupplyItem</td>
+            <td>-</td>
+            <td>Exception Notification</td>
+         </tr>
+         <tr>
+            <td>ExchangeRate</td>
+            <td>ForeignExchangeContract</td>
+            <td>Payment Terms, Price, Reminder Line, Remittance Advice Line, Statement Line, Telecommunications Service, Telecommunications
+               Supply Line
+            </td>
+            <td>Bill Of Lading, Credit Note, Credit Note, Credit Note, Credit Note, Debit Note, Debit Note, Debit Note, Debit Note, Forwarding
+               Instructions, Freight Invoice, Freight Invoice, Freight Invoice, Freight Invoice, Invoice, Invoice, Invoice, Invoice, Order,
+               Order, Order, Order Change, Order Change, Order Change, Order Response, Order Response, Order Response, Reminder, Reminder,
+               Reminder, Reminder, Self Billed Credit Note, Self Billed Credit Note, Self Billed Invoice, Self Billed Invoice, Self Billed
+               Invoice, Self Billed Invoice, Waybill
+            </td>
+         </tr>
+         <tr>
+            <td>ExternalReference</td>
+            <td>-</td>
+            <td>Attachment</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>FinancialAccount</td>
+            <td>FinancialInstitutionBranch, Country</td>
+            <td>Party, Payment Mandate, Payment Means, Payment Means, Person, Trade Financing</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>FinancialGuarantee</td>
+            <td>ConstitutionPeriod</td>
+            <td>Tendering Terms</td>
+            <td>Awarded Notification</td>
+         </tr>
+         <tr>
+            <td>FinancialInstitution</td>
+            <td>Address</td>
+            <td>Branch</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ForecastException</td>
+            <td>-</td>
+            <td>Exception Notification Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ForecastExceptionCriteriaLine</td>
+            <td>-</td>
+            <td>Exception Criteria Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ForecastLine</td>
+            <td>ForecastPeriod, SalesItem</td>
+            <td>-</td>
+            <td>Forecast</td>
+         </tr>
+         <tr>
+            <td>ForecastRevisionLine</td>
+            <td>ForecastPeriod, SalesItem</td>
+            <td>-</td>
+            <td>Forecast Revision</td>
+         </tr>
+         <tr>
+            <td>FrameworkAgreement</td>
+            <td>DurationPeriod, SubsequentProcessTenderRequirement</td>
+            <td>Tendering Process</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>GoodsItem</td>
+            <td>Item, GoodsItemContainer, FreightAllowanceCharge, InvoiceLine, Temperature, ContainedGoodsItem, OriginAddress, Delivery, Pickup,
+               Despatch
+            </td>
+            <td>Goods Item, Package, Shipment, Transport Equipment, Transport Handling Unit</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>GoodsItemContainer</td>
+            <td>TransportEquipment</td>
+            <td>Goods Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>HazardousGoodsTransit</td>
+            <td>MaximumTemperature, MinimumTemperature</td>
+            <td>Hazardous Item, Transport Equipment, Transport Handling Unit</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>HazardousItem</td>
+            <td>ContactParty, SecondaryHazard, HazardousGoodsTransit, EmergencyTemperature, FlashpointTemperature, AdditionalTemperature</td>
+            <td>Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ImmobilizedSecurity</td>
+            <td>IssuerParty</td>
+            <td>-</td>
+            <td>Guarantee Certificate</td>
+         </tr>
+         <tr>
+            <td>InstructionForReturnsLine</td>
+            <td>ManufacturerParty, Item</td>
+            <td>-</td>
+            <td>Instruction For Returns</td>
+         </tr>
+         <tr>
+            <td>InventoryReportLine</td>
+            <td>Item</td>
+            <td>-</td>
+            <td>Inventory Report</td>
+         </tr>
+         <tr>
+            <td>InvoiceLine</td>
+            <td>InvoicePeriod, OrderLineReference, DespatchLineReference, ReceiptLineReference, BillingReference, DocumentReference, PricingReference,
+               OriginatorParty, Delivery, PaymentTerms, AllowanceCharge, TaxTotal, Item, Price, DeliveryTerms, SubInvoiceLine
+            </td>
+            <td>Goods Item, Invoice Line</td>
+            <td>Freight Invoice, Invoice, Self Billed Invoice</td>
+         </tr>
+         <tr>
+            <td>Item</td>
+            <td>BuyersItemIdentification, SellersItemIdentification, ManufacturersItemIdentification, StandardItemIdentification, CatalogueItemIdentification,
+               AdditionalItemIdentification, CatalogueDocumentReference, ItemSpecificationDocumentReference, OriginCountry, CommodityClassification,
+               TransactionConditions, HazardousItem, ClassifiedTaxCategory, AdditionalItemProperty, ManufacturerParty, InformationContentProviderParty,
+               OriginAddress, ItemInstance, Certificate, Dimension
+            </td>
+            <td>Catalogue Item Specification Update Line, Catalogue Line, Catalogue Request Line, Credit Note Line, Debit Note Line, Despatch
+               Line, Event Line Item, Exception Criteria Line, Exception Notification Line, Goods Item, Instruction For Returns Line, Inventory
+               Report Line, Invoice Line, Item Management Profile, Line Item, Performance Data Line, Receipt Line, Request For Tender Line,
+               Sales Item, Stock Availability Report Line, Tender Line
+            </td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ItemComparison</td>
+            <td>-</td>
+            <td>Catalogue Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ItemIdentification</td>
+            <td>PhysicalAttribute, MeasurementDimension, IssuerParty</td>
+            <td>Item, Item, Item, Item, Item, Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ItemInformationRequestLine</td>
+            <td>Period, SalesItem</td>
+            <td>-</td>
+            <td>Item Information Request</td>
+         </tr>
+         <tr>
+            <td>ItemInstance</td>
+            <td>AdditionalItemProperty, LotIdentification</td>
+            <td>Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ItemLocationQuantity</td>
+            <td>ApplicableTerritoryAddress, Price, DeliveryUnit, ApplicableTaxCategory, Package</td>
+            <td>Catalogue Line, Catalogue Pricing Update Line, Catalogue Request Line, Item Management Profile, Pricing Reference, Request
+               For Tender Line, Tender Line
+            </td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ItemManagementProfile</td>
+            <td>EffectivePeriod, Item, ItemLocationQuantity</td>
+            <td>-</td>
+            <td>Trade Item Location Profile</td>
+         </tr>
+         <tr>
+            <td>ItemProperty</td>
+            <td>UsabilityPeriod, ItemPropertyGroup, RangeDimension</td>
+            <td>Catalogue Line, Item, Item Instance, Lot Identification</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ItemPropertyGroup</td>
+            <td>-</td>
+            <td>Item Property</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Language</td>
+            <td>-</td>
+            <td>Party, Tendering Terms</td>
+            <td>Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue Request</td>
+         </tr>
+         <tr>
+            <td>LineItem</td>
+            <td>Delivery, DeliveryTerms, OriginatorParty, OrderedShipment, PricingReference, AllowanceCharge, Price, Item, SubLineItem, WarrantyValidityPeriod,
+               WarrantyParty
+            </td>
+            <td>Line Item, Order Line, Order Line, Order Line, Order Line, Quotation Line, Quotation Line, Quotation Line, Request For Quotation
+               Line
+            </td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>LineReference</td>
+            <td>DocumentReference</td>
+            <td>Credit Note Line, Credit Note Line, Debit Note Line, Debit Note Line, Invoice Line, Invoice Line, Line Response, Order Line,
+               Order Line, Receipt Line
+            </td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>LineResponse</td>
+            <td>LineReference, Response</td>
+            <td>Document Response</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Location</td>
+            <td>ValidityPeriod, Address, SubsidiaryLocation, LocationCoordinate</td>
+            <td>Activity Data Line, Activity Data Line, Consignment, Consignment, Delivery, Delivery, Delivery Terms, Event, Event Line Item,
+               Party, Pickup, Procurement Project, Shipment, Shipment, Shipment Stage, Shipment Stage, Shipment Stage, Transport Equipment,
+               Transport Equipment, Transport Equipment, Transport Event, Transport Item Status, Transport Status
+            </td>
+            <td>Transport Execution Plan, Transport Execution Plan, Transport Execution Plan</td>
+         </tr>
+         <tr>
+            <td>LocationCoordinate</td>
+            <td>-</td>
+            <td>Address, Location, Subsidiary Location</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>LotIdentification</td>
+            <td>AdditionalItemProperty</td>
+            <td>Item Instance</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>MaritimeTransport</td>
+            <td>-</td>
+            <td>Transport Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Meter</td>
+            <td>MeterReading</td>
+            <td>Consumption Point</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>MeterReading</td>
+            <td>-</td>
+            <td>Meter</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>MiscellaneousEvent</td>
+            <td>EventLineItem</td>
+            <td>-</td>
+            <td>Retail Event</td>
+         </tr>
+         <tr>
+            <td>MonetaryTotal</td>
+            <td>-</td>
+            <td>Consumption, Tendered Project</td>
+            <td>Credit Note, Debit Note, Freight Invoice, Invoice, Order, Order Change, Order Response, Quotation, Reminder, Self Billed Credit
+               Note, Self Billed Invoice, Transport Execution Plan, Transport Execution Plan, Transport Execution Plan, Transport Execution
+               Plan
+            </td>
+         </tr>
+         <tr>
+            <td>OnAccountPayment</td>
+            <td>PaymentTerms</td>
+            <td>Subscriber Consumption</td>
+            <td>Utility Statement</td>
+         </tr>
+         <tr>
+            <td>OrderLine</td>
+            <td>LineItem, SellerProposedSubstituteLineItem, SellerSubstitutedLineItem, BuyerProposedSubstituteLineItem, CatalogueLineReference,
+               QuotationLineReference, DocumentReference
+            </td>
+            <td>-</td>
+            <td>Order, Order Change, Order Response</td>
+         </tr>
+         <tr>
+            <td>OrderLineReference</td>
+            <td>OrderReference</td>
+            <td>Despatch Line, Invoice Line, Receipt Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>OrderReference</td>
+            <td>DocumentReference</td>
+            <td>Order Line Reference</td>
+            <td>Credit Note, Debit Note, Despatch Advice, Freight Invoice, Invoice, Order Cancellation, Order Change, Order Response, Order
+               Response Simple, Receipt Advice, Self Billed Credit Note, Self Billed Invoice
+            </td>
+         </tr>
+         <tr>
+            <td>OrderedShipment</td>
+            <td>Shipment, Package</td>
+            <td>Line Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Package</td>
+            <td>ContainedPackage, GoodsItem, MeasurementDimension, DeliveryUnit, Delivery, Pickup, Despatch</td>
+            <td>Item Location Quantity, Ordered Shipment, Package, Transport Handling Unit</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Party</td>
+            <td>PartyIdentification, PartyName, Language, PostalAddress, PhysicalLocation, PartyTaxScheme, PartyLegalEntity, Contact, Person,
+               AgentParty, ServiceProviderParty, PowerOfAttorney, FinancialAccount
+            </td>
+            <td>Appeal Terms, Appeal Terms, Appeal Terms, Catalogue Line, Certificate, Certificate Of Origin Application, Certificate Of Origin
+               Application, Certificate Of Origin Application, Certificate Of Origin Application, Consignment, Consignment, Consignment,
+               Consignment, Consignment, Consignment, Consignment, Consignment, Consignment, Consignment, Consignment, Consignment, Consignment,
+               Consignment, Consignment, Consignment, Consignment, Contracting Party, Customer Party, Delivery, Despatch, Document Distribution,
+               Document Reference, Document Response, Document Response, Economic Operator Short List, Endorser Party, Evidence, Hazardous
+               Item, Immobilized Security, Instruction For Returns Line, Invoice Line, Item, Item, Item Identification, Line Item, Line Item,
+               Party, Party Legal Entity, Payment Mandate, Pickup, Power Of Attorney, Power Of Attorney, Qualifying Party, Remittance Advice
+               Line, Result Of Verification, Service Provider Party, Shipment Stage, Shipment Stage, Shipment Stage, Signature, Statement
+               Line, Subscriber Consumption, Supplier Consumption, Supplier Consumption, Supplier Party, Tender Line, Tender Result, Tendering
+               Terms, Tendering Terms, Tendering Terms, Tendering Terms, Tendering Terms, Trade Financing, Transport Equipment, Transport
+               Equipment, Transport Equipment, Transport Equipment, Transport Means
+            </td>
+            <td>Application Response, Application Response, Attached Document, Attached Document, Awarded Notification, Awarded Notification,
+               Bill Of Lading, Bill Of Lading, Bill Of Lading, Call For Tenders, Catalogue, Catalogue, Catalogue Deletion, Catalogue Deletion,
+               Catalogue Item Specification Update, Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue Pricing Update,
+               Catalogue Request, Catalogue Request, Certificate Of Origin, Certificate Of Origin, Contract Award Notice, Contract Notice,
+               Credit Note, Credit Note, Debit Note, Debit Note, Document Status, Document Status, Document Status Request, Document Status
+               Request, Exception Criteria, Exception Criteria, Exception Notification, Exception Notification, Forecast, Forecast, Forecast
+               Revision, Forecast Revision, Forwarding Instructions, Forwarding Instructions, Forwarding Instructions, Freight Invoice, Freight
+               Invoice, Guarantee Certificate, Guarantee Certificate, Guarantee Certificate, Instruction For Returns, Inventory Report, Invoice,
+               Invoice, Item Information Request, Item Information Request, Order, Order Change, Order Response, Packing List, Packing List,
+               Packing List, Performance History, Performance History, Prior Information Notice, Product Activity, Product Activity, Reminder,
+               Reminder, Remittance Advice, Retail Event, Retail Event, Self Billed Credit Note, Self Billed Credit Note, Self Billed Invoice,
+               Self Billed Invoice, Statement, Stock Availability Report, Tender, Tender, Tenderer Qualification Response, Tenderer Qualification
+               Response, Tender Receipt, Tender Receipt, Trade Item Location Profile, Trade Item Location Profile, Transport Execution Plan,
+               Transport Execution Plan, Transport Execution Plan, Transport Execution Plan, Transport Execution Status, Transport Execution
+               Status, Transport Operation Status, Transport Operation Status, Unawarded Notification, Unawarded Notification, Utility Statement,
+               Utility Statement, Utility Statement, Waybill, Waybill, Waybill
+            </td>
+         </tr>
+         <tr>
+            <td>PartyIdentification</td>
+            <td>-</td>
+            <td>Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PartyLegalEntity</td>
+            <td>RegistrationAddress, CorporateRegistrationScheme, StakeholderParty, CompanyDossierDocumentReference</td>
+            <td>Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PartyName</td>
+            <td>-</td>
+            <td>Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PartyTaxScheme</td>
+            <td>RegistrationAddress, TaxScheme</td>
+            <td>Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Payment</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Debit Note, Freight Invoice, Invoice, Reminder, Self Billed Invoice</td>
+         </tr>
+         <tr>
+            <td>PaymentMandate</td>
+            <td>PayerParty, PayerFinancialAccount, ValidityPeriod, PaymentReversalPeriod</td>
+            <td>Payment Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PaymentMeans</td>
+            <td>CardAccount, PayerFinancialAccount, PayeeFinancialAccount, CreditAccount, PaymentMandate, TradeFinancing</td>
+            <td>Allowance Charge, Statement Line</td>
+            <td>Freight Invoice, Invoice, Order, Order Change, Order Response, Quotation, Reminder, Remittance Advice, Self Billed Invoice,
+               Statement
+            </td>
+         </tr>
+         <tr>
+            <td>PaymentTerms</td>
+            <td>SettlementPeriod, PenaltyPeriod, ExchangeRate, ValidityPeriod</td>
+            <td>Consignment, Consignment, Consignment, Consignment, Invoice Line, On Account Payment, Statement Line, Tendering Terms, Transport
+               Execution Terms, Transport Execution Terms, Transport Execution Terms, Transport Execution Terms
+            </td>
+            <td>Freight Invoice, Invoice, Order, Order Change, Order Response, Reminder, Self Billed Invoice, Statement</td>
+         </tr>
+         <tr>
+            <td>PerformanceDataLine</td>
+            <td>Period, Item</td>
+            <td>-</td>
+            <td>Performance History</td>
+         </tr>
+         <tr>
+            <td>Period</td>
+            <td>-</td>
+            <td>Activity Data Line, Appeal Terms, Capability, Catalogue Line, Catalogue Line, Catalogue Request Line, Completed Task, Consumption,
+               Consumption History, Consumption Line, Consumption Report, Consumption Report Reference, Contract, Contract, Contract Extension,
+               Delivery, Delivery, Delivery, Document Reference, Evaluation Criteria, Event Tactic, Exception Criteria Line, Exception Notification
+               Line, Financial Guarantee, Forecast Line, Forecast Revision Line, Framework Agreement, Invoice Line, Item Information Request
+               Line, Item Management Profile, Item Property, Line Item, Location, Payment Mandate, Payment Mandate, Payment Terms, Payment
+               Terms, Payment Terms, Performance Data Line, Price, Price List, Procurement Project, Reminder Line, Remittance Advice Line,
+               Renewal, Request For Tender Line, Request For Tender Line, Retail Planned Impact, Shipment Stage, Statement Line, Tender Line,
+               Tendering Process, Tendering Process, Tendering Process, Tendering Process, Tendering Terms, Tendering Terms, Tendering Terms
+            </td>
+            <td>Catalogue, Catalogue Deletion, Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue Request, Contract
+               Notice, Credit Note, Debit Note, Exception Criteria, Exception Notification, Forecast, Forecast Revision, Freight Invoice,
+               Guarantee Certificate, Inventory Report, Invoice, Item Information Request, Order, Order Change, Order Response, Performance
+               History, Product Activity, Quotation, Reminder, Remittance Advice, Request For Quotation, Retail Event, Self Billed Credit
+               Note, Self Billed Invoice, Statement, Stock Availability Report, Tender, Trade Item Location Profile, Transport Execution
+               Plan, Transport Execution Plan, Transport Execution Plan
+            </td>
+         </tr>
+         <tr>
+            <td>Person</td>
+            <td>Contact, FinancialAccount</td>
+            <td>Awarding Terms, Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PhysicalAttribute</td>
+            <td>-</td>
+            <td>Item Identification</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Pickup</td>
+            <td>PickupLocation, PickupParty</td>
+            <td>Goods Item, Package, Transport Equipment</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PowerOfAttorney</td>
+            <td>NotaryParty, AgentParty, MandateDocumentReference</td>
+            <td>Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Price</td>
+            <td>ValidityPeriod, PriceList, AllowanceCharge, PricingExchangeRate</td>
+            <td>Consumption Line, Credit Note Line, Debit Note Line, Invoice Line, Item Location Quantity, Line Item, Pricing Reference, Sales
+               Item, Sales Item, Telecommunications Service
+            </td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PriceList</td>
+            <td>ValidityPeriod, PreviousPriceList</td>
+            <td>Price, Price List</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PricingReference</td>
+            <td>OriginalItemLocationQuantity, AlternativeConditionPrice</td>
+            <td>Credit Note Line, Debit Note Line, Invoice Line, Line Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ProcessJustification</td>
+            <td>-</td>
+            <td>Tendering Process</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ProcurementProject</td>
+            <td>BudgetAmount, RequiredCommodityClassification, RealizedLocation, PlannedPeriod, ContractExtension, RequestForTenderLine</td>
+            <td>Procurement Project Lot</td>
+            <td>Call For Tenders, Contract Award Notice, Contract Notice, Prior Information Notice</td>
+         </tr>
+         <tr>
+            <td>ProcurementProjectLot</td>
+            <td>TenderingTerms, ProcurementProject</td>
+            <td>-</td>
+            <td>Call For Tenders, Contract Award Notice, Contract Notice, Prior Information Notice</td>
+         </tr>
+         <tr>
+            <td>PromotionalEvent</td>
+            <td>PromotionalSpecification</td>
+            <td>-</td>
+            <td>Retail Event</td>
+         </tr>
+         <tr>
+            <td>PromotionalEventLineItem</td>
+            <td>EventLineItem</td>
+            <td>Promotional Specification</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>PromotionalSpecification</td>
+            <td>PromotionalEventLineItem, EventTactic</td>
+            <td>Promotional Event</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>QualificationResolution</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Tenderer Qualification Response</td>
+         </tr>
+         <tr>
+            <td>QualifyingParty</td>
+            <td>BusinessClassificationScheme, TechnicalCapability, FinancialCapability, CompletedTask, Declaration, Party</td>
+            <td>Tenderer Party Qualification, Tenderer Party Qualification</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>QuotationLine</td>
+            <td>DocumentReference, LineItem, SellerProposedSubstituteLineItem, AlternativeLineItem</td>
+            <td>-</td>
+            <td>Quotation</td>
+         </tr>
+         <tr>
+            <td>RailTransport</td>
+            <td>-</td>
+            <td>Transport Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ReceiptLine</td>
+            <td>OrderLineReference, DespatchLineReference, DocumentReference, Item, Shipment</td>
+            <td>Transport Handling Unit</td>
+            <td>Receipt Advice</td>
+         </tr>
+         <tr>
+            <td>Regulation</td>
+            <td>-</td>
+            <td>-</td>
+            <td>Guarantee Certificate</td>
+         </tr>
+         <tr>
+            <td>RelatedItem</td>
+            <td>-</td>
+            <td>Catalogue Line, Catalogue Line, Catalogue Line, Catalogue Line, Catalogue Line, Tender Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ReminderLine</td>
+            <td>ReminderPeriod, BillingReference, ExchangeRate</td>
+            <td>-</td>
+            <td>Reminder</td>
+         </tr>
+         <tr>
+            <td>RemittanceAdviceLine</td>
+            <td>AccountingSupplierParty, AccountingCustomerParty, BuyerCustomerParty, SellerSupplierParty, OriginatorCustomerParty, PayeeParty,
+               InvoicePeriod, BillingReference, DocumentReference, ExchangeRate
+            </td>
+            <td>-</td>
+            <td>Remittance Advice</td>
+         </tr>
+         <tr>
+            <td>Renewal</td>
+            <td>Period</td>
+            <td>Contract Extension</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>RequestForQuotationLine</td>
+            <td>DocumentReference, LineItem</td>
+            <td>-</td>
+            <td>Request For Quotation</td>
+         </tr>
+         <tr>
+            <td>RequestForTenderLine</td>
+            <td>DocumentReference, DeliveryPeriod, RequiredItemLocationQuantity, WarrantyValidityPeriod, Item, SubRequestForTenderLine</td>
+            <td>Procurement Project, Request For Tender Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Response</td>
+            <td>Status</td>
+            <td>Credit Note Line, Debit Note Line, Document Response, Line Response</td>
+            <td>Credit Note, Debit Note, Self Billed Credit Note</td>
+         </tr>
+         <tr>
+            <td>ResultOfVerification</td>
+            <td>SignatoryParty</td>
+            <td>Document Reference</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>RetailPlannedImpact</td>
+            <td>Period</td>
+            <td>Event Line Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>RoadTransport</td>
+            <td>-</td>
+            <td>Transport Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>SalesItem</td>
+            <td>ActivityProperty, TaxExclusivePrice, TaxInclusivePrice, Item</td>
+            <td>Activity Data Line, Forecast Line, Forecast Revision Line, Item Information Request Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>SecondaryHazard</td>
+            <td>-</td>
+            <td>Hazardous Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>ServiceProviderParty</td>
+            <td>Party, SellerContact</td>
+            <td>Party</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Shipment</td>
+            <td>Consignment, GoodsItem, ShipmentStage, Delivery, TransportHandlingUnit, ReturnAddress, OriginAddress, FirstArrivalPortLocation,
+               LastExitPortLocation, ExportCountry, FreightAllowanceCharge
+            </td>
+            <td>Certificate Of Origin Application, Consignment, Delivery, Despatch Line, Ordered Shipment, Receipt Line, Transport Event</td>
+            <td>Bill Of Lading, Despatch Advice, Forwarding Instructions, Freight Invoice, Instruction For Returns, Packing List, Receipt
+               Advice, Waybill
+            </td>
+         </tr>
+         <tr>
+            <td>ShipmentStage</td>
+            <td>TransitPeriod, CarrierParty, TransportMeans, LoadingPortLocation, UnloadingPortLocation, TransshipPortLocation, LoadingTransportEvent,
+               ExaminationTransportEvent, AvailabilityTransportEvent, ExportationTransportEvent, DischargeTransportEvent, WarehousingTransportEvent,
+               TakeoverTransportEvent, OptionalTakeoverTransportEvent, DropoffTransportEvent, ActualPickupTransportEvent, DeliveryTransportEvent,
+               ReceiptTransportEvent, StorageTransportEvent, AcceptanceTransportEvent, TerminalOperatorParty, CustomsAgentParty
+            </td>
+            <td>Consignment, Consignment, Consignment, Shipment</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Signature</td>
+            <td>SignatoryParty, DigitalSignatureAttachment, OriginalDocumentReference</td>
+            <td>Certificate, Certificate Of Origin Application, Endorsement</td>
+            <td>Application Response, Attached Document, Awarded Notification, Bill Of Lading, Catalogue, Catalogue Deletion, Catalogue Item
+               Specification Update, Catalogue Pricing Update, Credit Note, Debit Note, Despatch Advice, Document Status, Document Status
+               Request, Exception Criteria, Exception Notification, Forecast, Forecast Revision, Forwarding Instructions, Freight Invoice,
+               Guarantee Certificate, Instruction For Returns, Inventory Report, Invoice, Item Information Request, Order, Order Cancellation,
+               Order Change, Order Response, Order Response Simple, Packing List, Performance History, Product Activity, Quotation, Receipt
+               Advice, Reminder, Remittance Advice, Request For Quotation, Retail Event, Self Billed Credit Note, Self Billed Invoice, Statement,
+               Stock Availability Report, Tender, Tenderer Qualification, Tenderer Qualification Response, Tender Receipt, Trade Item Location
+               Profile, Transportation Status, Transport Execution Plan, Transport Execution Status, Transport Operation Status, Unawarded
+               Notification, Utility Statement, Waybill
+            </td>
+         </tr>
+         <tr>
+            <td>StatementLine</td>
+            <td>PaymentMeans, PaymentTerms, BuyerCustomerParty, SellerSupplierParty, OriginatorCustomerParty, AccountingCustomerParty, AccountingSupplierParty,
+               PayeeParty, InvoicePeriod, BillingReference, DocumentReference, ExchangeRate
+            </td>
+            <td>-</td>
+            <td>Statement</td>
+         </tr>
+         <tr>
+            <td>Status</td>
+            <td>-</td>
+            <td>Event, Response, Transport Event, Transport Item Status, Transport Status</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>StockAvailabilityReportLine</td>
+            <td>Item</td>
+            <td>-</td>
+            <td>Stock Availability Report</td>
+         </tr>
+         <tr>
+            <td>Stowage</td>
+            <td>MeasurementDimension</td>
+            <td>Transport Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>SubcontractTerms</td>
+            <td>-</td>
+            <td>Tender Result, Tendering Terms</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>SubscriberConsumption</td>
+            <td>SubscriberParty, UtilityConsumptionPoint, OnAccountPayment, Consumption, SupplierConsumption</td>
+            <td>-</td>
+            <td>Utility Statement</td>
+         </tr>
+         <tr>
+            <td>SubsidiaryLocation</td>
+            <td>Address, LocationCoordinate</td>
+            <td>Location</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>SupplierConsumption</td>
+            <td>UtilitySupplierParty, UtilityCustomerParty, Consumption, ConsumptionLine</td>
+            <td>Subscriber Consumption</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>SupplierParty</td>
+            <td>Party, DespatchContact, AccountingContact, SellerContact</td>
+            <td>Activity Data Line, Catalogue Item Specification Update Line, Catalogue Line, Catalogue Pricing Update Line, Remittance Advice
+               Line, Remittance Advice Line, Statement Line, Statement Line, Transport Equipment
+            </td>
+            <td>Catalogue, Catalogue Deletion, Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue Request, Credit Note,
+               Credit Note, Debit Note, Debit Note, Despatch Advice, Despatch Advice, Exception Criteria, Exception Notification, Forecast,
+               Forecast Revision, Freight Invoice, Instruction For Returns, Inventory Report, Invoice, Invoice, Item Information Request,
+               Order, Order Cancellation, Order Change, Order Change, Order Response, Order Response, Order Response Simple, Order Response
+               Simple, Quotation, Receipt Advice, Receipt Advice, Reminder, Remittance Advice, Request For Quotation, Retail Event, Self
+               Billed Credit Note, Self Billed Credit Note, Self Billed Invoice, Self Billed Invoice, Statement, Statement, Stock Availability
+               Report, Trade Item Location Profile
+            </td>
+         </tr>
+         <tr>
+            <td>TaxCategory</td>
+            <td>TaxScheme</td>
+            <td>Allowance Charge, Budget Amount, Duty, Item, Item Location Quantity, Tax Subtotal, Utility Item</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TaxScheme</td>
+            <td>JurisdictionRegionAddress</td>
+            <td>Party Tax Scheme, Tax Category</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TaxSubtotal</td>
+            <td>TaxCategory</td>
+            <td>Tax Total</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TaxTotal</td>
+            <td>TaxSubtotal</td>
+            <td>Allowance Charge, Consumption, Consumption Line, Credit Note Line, Debit Note Line, Invoice Line, Telecommunications Service,
+               Telecommunications Supply Line, Tendered Project
+            </td>
+            <td>Credit Note, Debit Note, Freight Invoice, Invoice, Order, Order Change, Order Response, Quotation, Reminder, Remittance Advice,
+               Self Billed Credit Note, Self Billed Invoice, Statement
+            </td>
+         </tr>
+         <tr>
+            <td>TelecommunicationsService</td>
+            <td>Price, Country, ExchangeRate, AllowanceCharge, TaxTotal, CallDuty, TimeDuty</td>
+            <td>Telecommunications Supply Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TelecommunicationsSupply</td>
+            <td>TelecommunicationsSupplyLine</td>
+            <td>Consumption</td>
+            <td>Utility Statement</td>
+         </tr>
+         <tr>
+            <td>TelecommunicationsSupplyLine</td>
+            <td>ExchangeRate, AllowanceCharge, TaxTotal, TelecommunicationsService</td>
+            <td>Telecommunications Supply</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>Temperature</td>
+            <td>-</td>
+            <td>Goods Item, Hazardous Goods Transit, Hazardous Goods Transit, Hazardous Item, Hazardous Item, Hazardous Item, Transport Equipment,
+               Transport Equipment, Transport Handling Unit, Transport Handling Unit
+            </td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TenderLine</td>
+            <td>DocumentReference, Item, OfferedItemLocationQuantity, ReplacementRelatedItem, WarrantyParty, WarrantyValidityPeriod, SubTenderLine</td>
+            <td>Tender Line, Tendered Project</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TenderPreparation</td>
+            <td>DocumentTenderRequirement</td>
+            <td>Tendering Terms</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TenderRequirement</td>
+            <td>TemplateDocumentReference</td>
+            <td>Framework Agreement, Tender Preparation</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TenderResult</td>
+            <td>Contract, WinningParty, AwardedTenderedProject, SubcontractTerms</td>
+            <td>-</td>
+            <td>Awarded Notification, Contract Award Notice, Unawarded Notification</td>
+         </tr>
+         <tr>
+            <td>TenderedProject</td>
+            <td>TaxTotal, LegalMonetaryTotal, TenderLine, AwardingCriteriaResponse</td>
+            <td>Tender Result</td>
+            <td>Tender</td>
+         </tr>
+         <tr>
+            <td>TendererPartyQualification</td>
+            <td>MainQualifyingParty, AdditionalQualifyingParty</td>
+            <td>-</td>
+            <td>Tenderer Qualification</td>
+         </tr>
+         <tr>
+            <td>TendererQualificationRequest</td>
+            <td>RequiredBusinessClassificationScheme, TechnicalEvaluationCriteria, FinancialEvaluationCriteria, SpecificTendererRequirement</td>
+            <td>Tendering Terms</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TendererRequirement</td>
+            <td>SuggestedEvidence</td>
+            <td>Tenderer Qualification Request</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TenderingProcess</td>
+            <td>DocumentAvailabilityPeriod, TenderSubmissionDeadlinePeriod, InvitationSubmissionPeriod, ParticipationRequestReceptionPeriod,
+               NoticeDocumentReference, AdditionalDocumentReference, ProcessJustification, EconomicOperatorShortList, OpenTenderEvent, AuctionTerms,
+               FrameworkAgreement
+            </td>
+            <td>-</td>
+            <td>Call For Tenders, Contract Award Notice, Contract Notice, Prior Information Notice</td>
+         </tr>
+         <tr>
+            <td>TenderingTerms</td>
+            <td>RequiredFinancialGuarantee, ProcurementLegislationDocumentReference, FiscalLegislationDocumentReference, EnvironmentalLegislationDocumentReference,
+               EmploymentLegislationDocumentReference, ContractualDocumentReference, WarrantyValidityPeriod, PaymentTerms, TendererQualificationRequest,
+               AllowedSubcontractTerms, TenderPreparation, ContractExecutionRequirement, AwardingTerms, AdditionalInformationParty, DocumentProviderParty,
+               TenderRecipientParty, ContractResponsibleParty, TenderEvaluationParty, TenderValidityPeriod, ContractAcceptancePeriod, AppealTerms,
+               Language, BudgetAccountLine
+            </td>
+            <td>Procurement Project Lot</td>
+            <td>Call For Tenders, Contract Award Notice, Contract Notice, Prior Information Notice</td>
+         </tr>
+         <tr>
+            <td>TradeFinancing</td>
+            <td>ContractDocumentReference, DocumentReference, FinancingParty, FinancingFinancialAccount</td>
+            <td>Payment Means</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TradingTerms</td>
+            <td>ApplicableAddress</td>
+            <td>Transport Equipment</td>
+            <td>Catalogue, Catalogue Item Specification Update, Catalogue Pricing Update, Catalogue Request</td>
+         </tr>
+         <tr>
+            <td>TransactionConditions</td>
+            <td>DocumentReference</td>
+            <td>Item</td>
+            <td>Order, Order Change, Order Response, Quotation</td>
+         </tr>
+         <tr>
+            <td>TransportEquipment</td>
+            <td>MeasurementDimension, TransportEquipmentSeal, MinimumTemperature, MaximumTemperature, ProviderParty, LoadingProofParty, SupplierParty,
+               OwnerParty, OperatingParty, LoadingLocation, UnloadingLocation, StorageLocation, PositioningTransportEvent, QuarantineTransportEvent,
+               DeliveryTransportEvent, PickupTransportEvent, HandlingTransportEvent, LoadingTransportEvent, TransportEvent, ApplicableTransportMeans,
+               HaulageTradingTerms, HazardousGoodsTransit, PackagedTransportHandlingUnit, ServiceAllowanceCharge, FreightAllowanceCharge,
+               AttachedTransportEquipment, GoodsItem, Delivery, ContainedInTransportEquipment, Pickup, Despatch
+            </td>
+            <td>Goods Item Container, Transport Equipment, Transport Equipment, Transport Handling Unit</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TransportEquipmentSeal</td>
+            <td>-</td>
+            <td>Transport Equipment</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>TransportEvent</td>
+            <td>ReportedShipment, CurrentStatus, Contact, Location</td>
+            <td>Shipment Stage, Shipment Stage, Shipment Stage, Shipment Stage, Shipment Stage, Shipment Stage, Shipment Stage, Shipment Stage,
+               Shipment Stage, Shipment Stage, Shipment Stage, Shipment Stage, Shipment Stage, Shipment Stage, Transport Equipment, Transport
+               Equipment, Transport Equipment, Transport Equipment, Transport Equipment, Transport Equipment, Transport Equipment
+            </td>
+            <td>Transportation Status</td>
+         </tr>
+         <tr>
+            <td>TransportExecutionTerms</td>
+            <td>PaymentTerms, BonusPaymentTerms, CommissionPaymentTerms, PenaltyPaymentTerms</td>
+            <td>-</td>
+            <td>Transport Execution Plan</td>
+         </tr>
+         <tr>
+            <td>TransportHandlingUnit</td>
+            <td>HandlingUnitDespatchLine, ActualPackage, ReceivedHandlingUnitReceiptLine, TransportEquipment, HazardousGoodsTransit, MeasurementDimension,
+               MinimumTemperature, MaximumTemperature, GoodsItem, FloorSpaceMeasurementDimension, PalletSpaceMeasurementDimension
+            </td>
+            <td>Consignment, Shipment, Transport Equipment, Transport Item Status</td>
+            <td>Transport Execution Plan</td>
+         </tr>
+         <tr>
+            <td>TransportItemStatus</td>
+            <td>Status, UpdatedDelivery, StatusLocation, TransportHandlingUnit</td>
+            <td>-</td>
+            <td>Transport Execution Status</td>
+         </tr>
+         <tr>
+            <td>TransportMeans</td>
+            <td>Stowage, AirTransport, RoadTransport, RailTransport, MaritimeTransport, OwnerParty</td>
+            <td>Shipment Stage, Transport Equipment</td>
+            <td>Transport Operation Status</td>
+         </tr>
+         <tr>
+            <td>TransportStatus</td>
+            <td>Status, StatusLocation</td>
+            <td>-</td>
+            <td>Transport Operation Status</td>
+         </tr>
+         <tr>
+            <td>TransportationService</td>
+            <td>-</td>
+            <td>Consignment, Consignment</td>
+            <td>Transport Execution Plan, Transport Execution Plan</td>
+         </tr>
+         <tr>
+            <td>UnstructuredPrice</td>
+            <td>-</td>
+            <td>Consumption Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>UtilityItem</td>
+            <td>TaxCategory, Contract</td>
+            <td>Consumption Line</td>
+            <td>-</td>
+         </tr>
+         <tr>
+            <td>WebSiteAccess</td>
+            <td>-</td>
+            <td>Consumption Point</td>
+            <td>-</td>
+         </tr>
+      </table>
+   </body>
+</html>

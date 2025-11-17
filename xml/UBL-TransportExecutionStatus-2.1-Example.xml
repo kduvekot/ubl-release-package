@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportExecutionStatus xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionStatus-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:CustomizationID>AV</cbc:CustomizationID>
+	<cbc:ProfileID>FWF</cbc:ProfileID>
+	<cbc:IssueDate>2010-04-30</cbc:IssueDate>
+	<cbc:IssueTime>14:22:00.0Z</cbc:IssueTime>
+	<cbc:Description>AWAITING CUSTOMS. MISSING DOCUMENTATION. ONE HOUR DELAYED</cbc:Description>
+	<cbc:OperationStatusCode>AWAITING CUSTOMS</cbc:OperationStatusCode>
+	<cac:TransportExecutionPlanDocumentReference>
+		<cbc:ID>TEPID_1</cbc:ID>
+	</cac:TransportExecutionPlanDocumentReference>
+	<cac:TransportItemStatus>
+		<cbc:TransportItemTimeDeviationIndicator>true</cbc:TransportItemTimeDeviationIndicator>
+		<cbc:TransportItemConditionDeviationIndicator>false</cbc:TransportItemConditionDeviationIndicator>
+		<cac:UpdatedDelivery>
+			<cac:EstimatedDeliveryPeriod>
+				<cbc:StartDate>2010-04-30</cbc:StartDate>
+				<cbc:StartTime>20:00:00.0Z</cbc:StartTime>
+				<cbc:EndDate>2010-04-30</cbc:EndDate>
+				<cbc:EndTime>20:30:00.0Z</cbc:EndTime>
+			</cac:EstimatedDeliveryPeriod>
+		</cac:UpdatedDelivery>
+		<cac:StatusLocation>
+			<cbc:LocationTypeCode>CUSTOMS OFFICE</cbc:LocationTypeCode>
+			<cac:Address>
+				<cbc:CityName>STORLIEN</cbc:CityName>
+				<cac:Country>
+					<cbc:IdentificationCode>SE</cbc:IdentificationCode>
+					<cbc:Name>SWEDEN</cbc:Name>
+				</cac:Country>
+			</cac:Address>
+		</cac:StatusLocation>
+		<cac:TransportHandlingUnit>
+			<cbc:ID>TI_101</cbc:ID>
+		</cac:TransportHandlingUnit>
+	</cac:TransportItemStatus>
+</TransportExecutionStatus>

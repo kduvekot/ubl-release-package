@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportOperationStatus xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportOperationStatus-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:CustomizationID>AV</cbc:CustomizationID>
+	<cbc:ProfileID>TOS_SUBSET</cbc:ProfileID>
+	<cbc:ID>TOS_1</cbc:ID>
+	<cbc:IssueDate>2010-04-30</cbc:IssueDate>
+	<cbc:IssueTime>14:22:00.0Z</cbc:IssueTime>
+	<cbc:Note>DELAYED</cbc:Note>
+	<cbc:StatusAvailableIndicator>true</cbc:StatusAvailableIndicator>
+	<cac:TransportStatus>
+		<cbc:EstimatedArrivalDate>2010-04-30</cbc:EstimatedArrivalDate>
+		<cbc:EstimatedArrivalTime>12:20:00.0Z</cbc:EstimatedArrivalTime>
+		<cbc:EstimatedDepartureDate>2010-04-30</cbc:EstimatedDepartureDate>
+		<cbc:EstimatedDepartureTime>13:20:00.0Z</cbc:EstimatedDepartureTime>
+		<cbc:ActualArrivalDate>2010-04-30</cbc:ActualArrivalDate>
+		<cbc:ActualArrivalTime>13:20:00.0Z</cbc:ActualArrivalTime>
+		<cbc:ActualDepartureDate>2010-04-30</cbc:ActualDepartureDate>
+		<cbc:ActualDepartureTime>14:20:00.0Z</cbc:ActualDepartureTime>
+		<cbc:Remarks>DELAYED BY ONE HOUR</cbc:Remarks>
+		<cbc:ReferenceDate>2010-04-30</cbc:ReferenceDate>
+		<cbc:ReferenceTime>14:20:00.0Z</cbc:ReferenceTime>
+		<cbc:ReliabilityPercent>100.0</cbc:ReliabilityPercent>
+		<cac:StatusLocation>
+			<cbc:ID>144</cbc:ID>
+			<cbc:Description>OSLO CENTRAL RAILWAY STATION</cbc:Description>
+			<cbc:LocationTypeCode>RAILWAY STATION</cbc:LocationTypeCode>
+			<cac:Address>
+				<cbc:ID>133</cbc:ID>
+				<cbc:StreetName>VIPPETANGEN</cbc:StreetName>
+				<cbc:CityName>OSLO</cbc:CityName>
+				<cbc:TimezoneOffset>GMT+1</cbc:TimezoneOffset>
+				<cac:Country>
+					<cbc:IdentificationCode>NO</cbc:IdentificationCode>
+					<cbc:Name>NORWAY</cbc:Name>
+				</cac:Country>
+				<cac:LocationCoordinate>
+					<cbc:CoordinateSystemCode>WGS84</cbc:CoordinateSystemCode>
+					<cbc:LatitudeDegreesMeasure>58</cbc:LatitudeDegreesMeasure>
+					<cbc:LongitudeDegreesMeasure>10</cbc:LongitudeDegreesMeasure>
+				</cac:LocationCoordinate>
+			</cac:Address>
+		</cac:StatusLocation>
+	</cac:TransportStatus>
+	<cac:TransportMeans>
+		<cac:RailTransport>
+			<cbc:TrainID>VF80145</cbc:TrainID>
+		</cac:RailTransport>
+	</cac:TransportMeans>
+</TransportOperationStatus>

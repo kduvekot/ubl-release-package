@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TransportExecutionPlan xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	<cbc:ID>TEP_1</cbc:ID>
+	<cbc:IssueDate>2010-04-30</cbc:IssueDate>
+	<cbc:IssueTime>14:22:00.0Z</cbc:IssueTime>
+	<cbc:TransportUserRemarks>DROP OFF AT RECEPTION</cbc:TransportUserRemarks>
+	<cbc:SequenceNumber>1</cbc:SequenceNumber>
+	<cbc:TransportServiceProviderReadyForExecutionIndicator>true</cbc:TransportServiceProviderReadyForExecutionIndicator>
+	<cbc:TransportUserReadyForExecutionIndicator>true</cbc:TransportUserReadyForExecutionIndicator>
+	<cbc:TransportServiceProviderCompletionIndicator>false</cbc:TransportServiceProviderCompletionIndicator>
+	<cbc:TransportUserCompletionIndicator>false</cbc:TransportUserCompletionIndicator>
+	<cac:AdditionalDocumentReference>
+		<cbc:ID>CA_1</cbc:ID>
+		<cbc:IssueDate>2010-01-01</cbc:IssueDate>
+		<cbc:DocumentTypeCode>CONTRACT</cbc:DocumentTypeCode>
+		<cbc:DocumentType>FRAMEWORK AGREEMENT</cbc:DocumentType>
+		<cac:ValidityPeriod>
+			<cbc:StartDate>2010-01-01</cbc:StartDate>
+			<cbc:EndDate>2011-01-01</cbc:EndDate>
+		</cac:ValidityPeriod>
+	</cac:AdditionalDocumentReference>
+	<cac:TransportServiceProviderParty>
+		<cac:PartyName>
+			<cbc:Name>CARRIER SERVICE LTD</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Telephone>+324005588588</cbc:Telephone>
+		</cac:Contact>
+		<cac:Person>
+			<cbc:FirstName>RAUL</cbc:FirstName>
+			<cbc:FamilyName>GONZALES</cbc:FamilyName>
+		</cac:Person>
+	</cac:TransportServiceProviderParty>
+	<cac:TransportUserParty>
+		<cac:PartyName>
+			<cbc:Name>CUSTOMER SERVICE LTD</cbc:Name>
+		</cac:PartyName>
+		<cac:Contact>
+			<cbc:Telephone>+324488588578</cbc:Telephone>
+		</cac:Contact>
+		<cac:Person>
+			<cbc:FirstName>DAVID</cbc:FirstName>
+			<cbc:FamilyName>VILLA</cbc:FamilyName>
+		</cac:Person>
+	</cac:TransportUserParty>
+	<cac:MainTransportationService>
+		<cbc:TransportServiceCode>12</cbc:TransportServiceCode>
+		<cbc:TransportationServiceDescription>CARRIER SERVICE</cbc:TransportationServiceDescription>
+	</cac:MainTransportationService>
+	<cac:TransportHandlingUnit>
+		<cbc:ID>THU_1</cbc:ID>
+		<cbc:TransportHandlingUnitTypeCode>122</cbc:TransportHandlingUnitTypeCode>
+		<cbc:HandlingCode>23</cbc:HandlingCode>
+		<cbc:HandlingInstructions>HANDLE WITH CARE</cbc:HandlingInstructions>
+		<cac:TransportEquipment>
+			<cbc:ID>TE_1</cbc:ID>
+			<cbc:TransportEquipmentTypeCode>AE</cbc:TransportEquipmentTypeCode>
+			<cbc:Description>BODY TRAILER</cbc:Description>
+			<cbc:GrossWeightMeasure unitCode="KGM">1000.0</cbc:GrossWeightMeasure>
+			<cac:GoodsItem>
+				<cbc:ID>GID_1</cbc:ID>
+				<cac:Item>
+					<cbc:Description>MOTOR CYCLE</cbc:Description>
+					<cbc:Name>YAMAHA</cbc:Name>
+				</cac:Item>
+			</cac:GoodsItem>
+			<cac:GoodsItem>
+				<cbc:ID>GID_2</cbc:ID>
+				<cac:Item>
+					<cbc:Description>MOTOR CYCLE</cbc:Description>
+					<cbc:Name>HONDA</cbc:Name>
+				</cac:Item>
+			</cac:GoodsItem>
+		</cac:TransportEquipment>
+	</cac:TransportHandlingUnit>
+	<cac:ValidityPeriod>
+		<cbc:StartDate>2010-05-01</cbc:StartDate>
+		<cbc:EndDate>2010-05-01</cbc:EndDate>
+	</cac:ValidityPeriod>
+ 	<cac:ServiceStartTimePeriod>
+		<cbc:StartDate>2010-05-01</cbc:StartDate>
+		<cbc:StartTime>10:00:00.0Z</cbc:StartTime>
+		<cbc:EndDate>2010-05-01</cbc:EndDate>
+		<cbc:EndTime>11:00:00.0Z</cbc:EndTime>
+	</cac:ServiceStartTimePeriod>
+	<cac:ServiceEndTimePeriod>
+		<cbc:StartDate>2010-05-01</cbc:StartDate>
+		<cbc:StartTime>15:00:00.0Z</cbc:StartTime>
+		<cbc:EndDate>2010-05-01</cbc:EndDate>
+		<cbc:EndTime>16:00:00.0Z</cbc:EndTime>
+	</cac:ServiceEndTimePeriod>
+	<cac:ToLocation>
+		<cac:Address>
+			<cbc:Floor>4</cbc:Floor>
+			<cbc:StreetName>CALLE SERPIS</cbc:StreetName>
+			<cbc:CityName>VALENCIA</cbc:CityName>
+			<cbc:PostalZone>460019</cbc:PostalZone>
+			<cac:AddressLine>
+				<cbc:Line>Calle Serpis 64</cbc:Line>
+			</cac:AddressLine>
+		</cac:Address>
+	</cac:ToLocation>
+	<cac:FromLocation>
+		<cac:Address>
+			<cbc:Floor>1</cbc:Floor>
+			<cbc:StreetName>AVD BLASCO IBANEZ</cbc:StreetName>
+			<cbc:CityName>VALENCIA</cbc:CityName>
+			<cbc:PostalZone>460019</cbc:PostalZone>
+			<cac:AddressLine>
+				<cbc:Line>AVD BLASCO IBANEZ 36</cbc:Line>
+			</cac:AddressLine>
+		</cac:Address>
+	</cac:FromLocation>
+	<cac:TransportExecutionTerms>
+		<cac:PaymentTerms>
+			<cbc:Note>PER THIRTY DAYS</cbc:Note>
+		</cac:PaymentTerms>
+	</cac:TransportExecutionTerms>
+	<cac:PriceMonetaryTotal>
+		<cbc:PayableAmount currencyID="EUR">300</cbc:PayableAmount>
+	</cac:PriceMonetaryTotal>
+</TransportExecutionPlan>
