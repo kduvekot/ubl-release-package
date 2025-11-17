@@ -2,6 +2,7 @@
 <!--
   Document Type:     BillOfLading
   Generated On:      Tue Oct 03 2:26:38 P3 2006
+  Manual changes for Update Package by J. Bosak Jan-Mar 2008
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -37,7 +38,7 @@
           <ccts:DictionaryEntryName>Bill Of Lading. Details</ccts:DictionaryEntryName>
           <ccts:Definition>The Bill of Lading is issued by the party who acts as an agent for the carrier or other agents to the party who gives instructions for the transportation services (shipper, consignor, etc.) stating the details of the transportation, charges, and terms and conditions under which the transportation service is provided. The party issuing this document does not necessarily provide the physical transportation service. It corresponds to the information on the Forwarding Instruction. It is used for any mode of transport.
 
-A Bill of Lading can serve as a contractual document between the parties for the transportation service.  The document evidences a contract of carriage by sea and the acceptance of responsibility for the goods by the carrier, and by which the carrier undertakes to deliver the goods against surrender of the document.  A provision in the document that the goods are to be delivered to the order of a named person, or to order, or to bearer, constitutes such an undertaking..</ccts:Definition>
+A Bill of Lading can serve as a contractual document between the parties for the transportation service.  The document evidences a contract of carriage by sea and the acceptance of responsibility for the goods by the carrier, and by which the carrier undertakes to deliver the goods against surrender of the document.  A provision in the document that the goods are to be delivered to the order of a named person, or to order, or to bearer, constitutes such an undertaking.</ccts:Definition>
           <ccts:ObjectClass>Bill Of Lading</ccts:ObjectClass>
           <ccts:AlternativeBusinessTerms>House Bill of Landing, Master Bill, Bill</ccts:AlternativeBusinessTerms>
         </ccts:Component>
@@ -180,7 +181,6 @@ A Bill of Lading can serve as a contractual document between the parties for the
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
               <ccts:DataType>Time. Type</ccts:DataType>
-              <ccts:Examples>"House Bill", "Consolidated Bill of Lading", "Proforma"</ccts:Examples>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -197,6 +197,7 @@ A Bill of Lading can serve as a contractual document between the parties for the
               <ccts:PropertyTerm>Name</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
               <ccts:DataType>Name. Type</ccts:DataType>
+              <ccts:Examples>"House Bill", "Consolidated Bill of Lading", "Proforma", "Sea Waybill"</ccts:Examples>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -207,7 +208,7 @@ A Bill of Lading can serve as a contractual document between the parties for the
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Bill Of Lading. Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Purpose of the document instance.</ccts:Definition>
+              <ccts:Definition>Textual description of the document instance.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Bill Of Lading</ccts:ObjectClass>
               <ccts:PropertyTerm>Description</ccts:PropertyTerm>
@@ -390,7 +391,7 @@ A Bill of Lading can serve as a contractual document between the parties for the
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Bill Of Lading. Shipment</ccts:DictionaryEntryName>
-              <ccts:Definition>Information about the separately identifiable collection of goods items (available to be) transported from one consignor to one consignee via one or more modes of transport.</ccts:Definition>
+              <ccts:Definition>An association to Shipment.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Bill Of Lading</ccts:ObjectClass>
               <ccts:PropertyTerm>Shipment</ccts:PropertyTerm>
@@ -435,7 +436,7 @@ A Bill of Lading can serve as a contractual document between the parties for the
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Bill Of Lading. Document Distribution</ccts:DictionaryEntryName>
-              <ccts:Definition>The distribution of the Bill to interested parties.</ccts:Definition>
+              <ccts:Definition>The distribution of the Bill of Lading to interested parties.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Bill Of Lading</ccts:ObjectClass>
               <ccts:PropertyTerm>Document Distribution</ccts:PropertyTerm>

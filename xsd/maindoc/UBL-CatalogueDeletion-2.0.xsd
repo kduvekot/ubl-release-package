@@ -2,6 +2,7 @@
 <!--
   Document Type:     CatalogueDeletion
   Generated On:      Tue Oct 03 2:26:38 P3 2006
+  Manual changes for Update Package by J. Bosak Jan/Feb 2008
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -216,7 +217,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Deletion. Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Describes the Catalogue Deletion.</ccts:Definition>
+              <ccts:Definition>Textual description of the document instance.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Deletion</ccts:ObjectClass>
               <ccts:PropertyTerm>Description</ccts:PropertyTerm>

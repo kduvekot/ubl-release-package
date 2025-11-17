@@ -1,24 +1,30 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:codelist:gc:SubstitutionStatusCode-2.0" targetNamespace="urn:oasis:names:specification:ubl:codelist:gc:SubstitutionStatusCode-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
-   <xsd:simpleType name="SubstitutionStatusCodeCodeContentType">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:ccts="urn:un:unece:uncefact:documentation:2"
+            xmlns="urn:oasis:names:specification:ubl:codelist:gc:SubstitutionStatusCode-2.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified"
+            targetNamespace="urn:oasis:names:specification:ubl:codelist:gc:SubstitutionStatusCode-2.0"
+            attributeFormDefault="unqualified"
+            version="1.0">
+   <xsd:simpleType name="SubstitutionStatusCodeContentType">
       <xsd:restriction base="xsd:normalizedString">
          <xsd:enumeration value="Original">
             <xsd:annotation>
                <xsd:documentation>
-                  <CodeName xmlns="">Original</CodeName>
+                  <ccts:CodeName>Original</ccts:CodeName>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:enumeration>
          <xsd:enumeration value="Substitution">
             <xsd:annotation>
                <xsd:documentation>
-                  <CodeName xmlns="">Substitution</CodeName>
+                  <ccts:CodeName>Substitution</ccts:CodeName>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:enumeration>
       </xsd:restriction>
    </xsd:simpleType>
-   <xsd:complexType name="SubstitutionStatusCodeCodeType">
+   <xsd:complexType name="SubstitutionStatusCodeType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
@@ -34,23 +40,33 @@
                <ccts:CodeListAgencyName>OASIS Universal Business Language</ccts:CodeListAgencyName>
                <ccts:CodeListName>SubstitutionStatusCode</ccts:CodeListName>
                <ccts:CodeListVersionID>2.0</ccts:CodeListVersionID>
-               <ccts:CodeListURI>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/SubstitutionStatusCode-2.0.gc</ccts:CodeListURI>
+               <ccts:CodeListURI>http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/SubstitutionStatusCode-2.0.gc</ccts:CodeListURI>
                <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:codelist:gc:SubstitutionStatusCode-2.0</ccts:CodeListSchemeURI>
                <ccts:LanguageID>en</ccts:LanguageID>
             </ccts:Instance>
          </xsd:documentation>
       </xsd:annotation>
       <xsd:simpleContent>
-         <xsd:extension base="SubstitutionStatusCodeCodeContentType">
-            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="SubstitutionStatusCode" use="optional"/>
-            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
-            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
-            <xsd:attribute name="codeListName" type="xsd:string" default="SubstitutionStatusCode" use="optional"/>
-            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="2.0" use="optional"/>
+         <xsd:extension base="SubstitutionStatusCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="SubstitutionStatusCode"
+                           use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="UBL"
+                           use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string"
+                           default="OASIS Universal Business Language"
+                           use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="SubstitutionStatusCode"
+                           use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="2.0"
+                           use="optional"/>
             <xsd:attribute name="name" type="xsd:string" use="optional"/>
             <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
-            <xsd:attribute name="codeListURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/SubstitutionStatusCode-2.0.gc" use="optional"/>
-            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:codelist:gc:SubstitutionStatusCode-2.0" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI"
+                           default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/SubstitutionStatusCode-2.0.gc"
+                           use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI"
+                           default="urn:oasis:names:specification:ubl:codelist:gc:SubstitutionStatusCode-2.0"
+                           use="optional"/>
          </xsd:extension>
       </xsd:simpleContent>
    </xsd:complexType>

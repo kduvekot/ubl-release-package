@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
    <Identification>
       <ShortName>BinaryObjectMimeCode</ShortName>
       <LongName xml:lang="en">Binary Object MIME Code</LongName>
       <Version>MIMEMediaType:2003</Version>
       <CanonicalUri>urn:un:unece:uncefact:codelist:specification:IANA_7_04</CanonicalUri>
-      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:specification:IANA_7_04:MIMEMediaType:2003</CanonicalVersionUri>
-      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/BinaryObjectMimeCode-2.0.gc</LocationUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:specification:IANA_7_04:MIMEMediaType:2003-update</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/cefact/BinaryObjectMimeCode-2.0.gc</LocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier>6</Identifier>
@@ -15,11 +15,11 @@
    <ColumnSet>
       <Column Id="code" Use="required">
          <ShortName>Code</ShortName>
-         <Data Type="normalizedString" xml:lang="en"/>
+         <Data Type="normalizedString" Lang="en"/>
       </Column>
       <Column Id="name" Use="optional">
          <ShortName>Name</ShortName>
-         <Data Type="string" xml:lang="en"/>
+         <Data Type="string" Lang="en"/>
       </Column>
       <Key Id="codeKey">
          <ShortName>CodeKey</ShortName>

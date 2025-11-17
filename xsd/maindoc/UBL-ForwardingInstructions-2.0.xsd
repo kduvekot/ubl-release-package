@@ -2,6 +2,7 @@
 <!--
   Document Type:     ForwardingInstructions
   Generated On:      Tue Oct 03 2:26:38 P3 2006
+  Manual changes for Update Package by J. Bosak Jan/Feb 2008
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -37,7 +38,7 @@
           <ccts:DictionaryEntryName>Forwarding Instructions. Details</ccts:DictionaryEntryName>
           <ccts:Definition>The document issued to a forwarder, giving instructions regarding the action to be taken for the forwarding of goods described therein.  Forwarding Instructions is used by any party who gives instructions for the transportation services required for a consignment of goods to any party who is contracted to provide the transportation services. The parties who issue this document are commonly referred to as the shipper or consignor, while the parties who receive this document are forwarders, carriers, shipping agents, etc. Note that this document may also be issued by a forwarder or shipping agent in their capacity as a "shipper". This document can be used to arrange for the transportation (1) of different types of goods or cargoes; (2) whether containerized or non-containerized; (3) through different modes of transport including multi-modal; and (4) from any origin to any destination.</ccts:Definition>
           <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
-          <ccts:AlternativeBusinessTerms>Forwarding Instruction</ccts:AlternativeBusinessTerms>
+          <ccts:AlternativeBusinessTerms>Forwarding Instruction, Freight Forwarding Instruction, Shippers Letter of Instruction, Shipper's Letter of Instruction, Shipping Instruction</ccts:AlternativeBusinessTerms>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
@@ -104,13 +105,12 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Unique identifier of the Forwarding Instructions. Reference number to identify a Shipping Instruction.</ccts:Definition>
+              <ccts:Definition>Unique identifier of the Forwarding Instructions.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
-              <ccts:AlternativeBusinessTerms>Freight Forwarding Instruction, Shippers Letter of Instruction</ccts:AlternativeBusinessTerms>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -202,7 +202,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Description of the type of Forwarding Instructions.</ccts:Definition>
+              <ccts:Definition>Textual description of the document instance.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTerm>Description</ccts:PropertyTerm>
@@ -382,7 +382,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Forwarding Instructions. Shipment</ccts:DictionaryEntryName>
-              <ccts:Definition>Information about the separately identifiable collection of goods items (available to be) transported from one consignor to one consignee via one or more modes of transport.</ccts:Definition>
+              <ccts:Definition>An association to Shipment.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Forwarding Instructions</ccts:ObjectClass>
               <ccts:PropertyTerm>Shipment</ccts:PropertyTerm>

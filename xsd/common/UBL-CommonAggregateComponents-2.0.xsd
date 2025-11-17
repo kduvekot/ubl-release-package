@@ -2,6 +2,7 @@
 <!--
   Document Type:     CommonAggregateComponents
   Generated On:      Tue Oct 03 2:26:38 P3 2006
+  Manual changes for Update Package by J. Bosak Jan-Mar 2008
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -1025,7 +1026,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Allowance Charge. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The buyer's accounting code as applied to the Allowance Charge expressed as text.</ccts:Definition>
+              <ccts:Definition>The buyer's accounting cost centre as applied to the Allowance Charge expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Allowance Charge</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -1275,7 +1276,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Billing Reference Line. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information about a Billing Line.</ccts:Definition>
+          <ccts:Definition>Information about the reference to a Billing line.</ccts:Definition>
           <ccts:ObjectClass>Billing Reference Line</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -1885,7 +1886,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Line. Warranty_ Information. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Information regarding the warranty for the good or service.  Warranty may be provided by any Party (can be described in the assiciation to Warranty Party).</ccts:Definition>
+              <ccts:Definition>Information regarding the warranty for the good or service.  Warranty may be provided by any Party (can be described in the association to Warranty Party).</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Line</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Warranty</ccts:PropertyTermQualifier>
@@ -2235,7 +2236,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue Reference. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Catalogue document.</ccts:Definition>
+              <ccts:Definition>Identifies a reference to a Catalogue document.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue Reference</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -2512,7 +2513,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Certificate Of Origin Application. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>A document that contains information of CO application.</ccts:Definition>
+          <ccts:Definition>Information about a Certificate of Origin application.</ccts:Definition>
           <ccts:ObjectClass>Certificate Of Origin Application</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -2622,7 +2623,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Certificate Of Origin Application. Shipment</ccts:DictionaryEntryName>
-              <ccts:Definition>Information about the separately identifiable collection of goods items (available to be) transported from one consignor to one consignee via one or more modes of transport.</ccts:Definition>
+              <ccts:Definition>An association to Shipment.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Certificate Of Origin Application</ccts:ObjectClass>
               <ccts:PropertyTerm>Shipment</ccts:PropertyTerm>
@@ -3224,7 +3225,7 @@
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Consignment. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>A separately identifiable collection of goods items (available to be) transported from one consignor to one consignee via one or more modes of transport.</ccts:Definition>
+          <ccts:Definition>An identifiable collection of one or more goods items to be transported between the consignor and the consignee. This information may be defined within a transport contract. A consignment may comprise more than one shipment (e.g., when consolidated by a freight forwarder).</ccts:Definition>
           <ccts:ObjectClass>Consignment</ccts:ObjectClass>
         </ccts:Component>
       </xsd:documentation>
@@ -3704,7 +3705,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Consignment. Transport_ Contract. Contract</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Transport Contact.</ccts:Definition>
+              <ccts:Definition>An association to Transport Contract.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Consignment</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Transport</ccts:PropertyTermQualifier>
@@ -4340,7 +4341,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Credit Note Line. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The buyer's accounting code applied to the Credit Note Line, expressed as text.</ccts:Definition>
+              <ccts:Definition>The buyer's accounting cost centre applied to the Credit Note Line, expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Credit Note Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -4764,7 +4765,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Debit Note Line. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The buyer's accounting code applied to the Debit Note Line, expressed as text.</ccts:Definition>
+              <ccts:Definition>The buyer's accounting cost centre applied to the Debit Note Line, expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Debit Note Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -5851,7 +5852,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Dimension. Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>A description of the attribute or measurement of the attribute.</ccts:Definition>
+              <ccts:Definition>A description of the measurement attribute.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Dimension</ccts:ObjectClass>
               <ccts:PropertyTerm>Description</ccts:PropertyTerm>
@@ -7105,11 +7106,11 @@
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Goods Item. Preference Criterion. Code</ccts:DictionaryEntryName>
+              <ccts:DictionaryEntryName>Goods Item. Preference Criterion Code. Code</ccts:DictionaryEntryName>
               <ccts:Definition>Specifies the treatment preference for this good according to international trading agreements.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Goods Item</ccts:ObjectClass>
-              <ccts:PropertyTerm>Preference Criterion</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Preference Criterion Code</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
               <ccts:DataType>Code. Type</ccts:DataType>
               <ccts:Examples>"Preference Criterion" is used in the following manner in the paper CO of another country (e.g.):
@@ -8023,7 +8024,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Invoice Line. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The buyer's accounting code applied to the Invoice Line, expressed as text.</ccts:Definition>
+              <ccts:Definition>The buyer's accounting cost centre applied to the Invoice Line, expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -9568,11 +9569,11 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Line Item. Inspection Method. Code</ccts:DictionaryEntryName>
+              <ccts:DictionaryEntryName>Line Item. Inspection Method Code. Code</ccts:DictionaryEntryName>
               <ccts:Definition>Inspection requirements for a Line Item, expressed as a code.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Line Item</ccts:ObjectClass>
-              <ccts:PropertyTerm>Inspection Method</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Inspection Method Code</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
               <ccts:DataType>Code. Type</ccts:DataType>
             </ccts:Component>
@@ -9633,7 +9634,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Line Item. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The buyer's accounting code applied to the Line Item, expressed as text.</ccts:Definition>
+              <ccts:Definition>The buyer's accounting cost centre applied to the Line Item, expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Line Item</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -11891,7 +11892,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Payment Terms. Prepaid Payment Reference Identifier. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies prepaid payment.</ccts:Definition>
+              <ccts:Definition>Identifies a reference to a prepaid payment.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Payment Terms</ccts:ObjectClass>
               <ccts:PropertyTerm>Prepaid Payment Reference Identifier</ccts:PropertyTerm>
@@ -12660,7 +12661,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Quotation Line. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the Quotation Line Item.</ccts:Definition>
+              <ccts:Definition>Identifies the Quotation Line.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Quotation Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -13012,7 +13013,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Receipt Line. Oversupply Quantity. Quantity</ccts:DictionaryEntryName>
-              <ccts:Definition>The quanitity over-supplied i.e. the quantity over and above that ordered.</ccts:Definition>
+              <ccts:Definition>The quantity over-supplied, i.e., the quantity over and above that ordered.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Receipt Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Oversupply Quantity</ccts:PropertyTerm>
@@ -13347,7 +13348,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Reminder Line. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The buyer's accounting code applied to the Reminder Line, expressed as text.</ccts:Definition>
+              <ccts:Definition>The buyer's accounting cost centre applied to the Reminder Line, expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Reminder Line</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -13963,9 +13964,8 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
         <ccts:Component>
           <ccts:ComponentType>ABIE</ccts:ComponentType>
           <ccts:DictionaryEntryName>Shipment. Details</ccts:DictionaryEntryName>
-          <ccts:Definition>Information about a shipment.</ccts:Definition>
+          <ccts:Definition>An identifiable collection of one or more goods items to be transported between the seller party and the buyer party. This information may be defined within a commercial contract. A shipment can be transported in different consignments (e.g., split for logistical purposes).</ccts:Definition>
           <ccts:ObjectClass>Shipment</ccts:ObjectClass>
-          <ccts:AlternativeBusinessTerms>Consignment</ccts:AlternativeBusinessTerms>
         </ccts:Component>
       </xsd:documentation>
     </xsd:annotation>
@@ -13992,11 +13992,11 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
           <xsd:documentation>
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
-              <ccts:DictionaryEntryName>Shipment. Shipping Priority Level. Code</ccts:DictionaryEntryName>
+              <ccts:DictionaryEntryName>Shipment. Shipping Priority Level Code. Code</ccts:DictionaryEntryName>
               <ccts:Definition>The priority or level of service required for a shipment, expressed as a code.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Shipment</ccts:ObjectClass>
-              <ccts:PropertyTerm>Shipping Priority Level</ccts:PropertyTerm>
+              <ccts:PropertyTerm>Shipping Priority Level Code</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
               <ccts:DataType>Code. Type</ccts:DataType>
               <ccts:AlternativeBusinessTerms>Service Level, Service Priority</ccts:AlternativeBusinessTerms>
@@ -15531,7 +15531,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Supplier Party. Seller_ Contact. Contact</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Seller.</ccts:Definition>
+              <ccts:Definition>An association to Seller Contact.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Supplier Party</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
@@ -16186,7 +16186,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Trading Terms. Applicable_ Address. Address</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Address.</ccts:Definition>
+              <ccts:Definition>An association to the address at which the trading terms apply.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Trading Terms</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Applicable</ccts:PropertyTermQualifier>
@@ -16392,7 +16392,7 @@ Thus, the column "Preference Criterion" will indicate either A, B, C,...</ccts:E
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transport Equipment. Transport Equipment Type Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>Identifies the type of provider of the transport equipment.</ccts:Definition>
+              <ccts:Definition>Identifies the type of the transport equipment.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
               <ccts:PropertyTerm>Transport Equipment Type Code</ccts:PropertyTerm>

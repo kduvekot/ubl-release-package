@@ -2,6 +2,7 @@
 <!--
   Document Type:     TransportationStatus
   Generated On:      Tue Oct 03 2:26:39 P3 2006
+  Manual changes for Update Package by J. Bosak Jan-Mar 2008
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -109,7 +110,6 @@
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
               <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
               <ccts:DataType>Identifier. Type</ccts:DataType>
-              <ccts:AlternativeBusinessTerms>Freight Forwarding Instruction, Shippers Letter of Instruction</ccts:AlternativeBusinessTerms>
             </ccts:Component>
           </xsd:documentation>
         </xsd:annotation>
@@ -201,7 +201,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Textual description of a status message.</ccts:Definition>
+              <ccts:Definition>Textual description of the document instance.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTerm>Description</ccts:PropertyTerm>
@@ -266,7 +266,7 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Transportation Status. Consignment</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Consignment covered by the status message.</ccts:Definition>
+              <ccts:Definition>An association to Consignment.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Transportation Status</ccts:ObjectClass>
               <ccts:PropertyTerm>Consignment</ccts:PropertyTerm>

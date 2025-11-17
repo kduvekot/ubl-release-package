@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="ISO-8859-1"?><!--
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
   Synthesized metadata-only genericode file for: PreferenceCriterionCodeType
--->
-<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+--><gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
    <Identification>
       <ShortName>PreferenceCriterionCode</ShortName>
       <LongName>Preference Criterion Code</LongName>
       <Version>2.0</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PreferenceCriterionCode</CanonicalUri>
-      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PreferenceCriterionCode-2.0</CanonicalVersionUri>
-      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PreferenceCriterionCode-2.0.gc</LocationUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PreferenceCriterionCode-2.0-update</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/PreferenceCriterionCode-2.0.gc</LocationUri>
       <Agency>
          <LongName xml:lang="en">OASIS Universal Business Language</LongName>
          <Identifier>UBL</Identifier>

@@ -2,6 +2,7 @@
 <!--
   Document Type:     Catalogue
   Generated On:      Tue Oct 03 2:26:38 P3 2006
+  Manual changes for Update Package by J. Bosak Jan/Feb 2008
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -135,7 +136,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue. Name</ccts:DictionaryEntryName>
-              <ccts:Definition>A name given to a catalogue.</ccts:Definition>
+              <ccts:Definition>Text that identifies the Catalogue to business users.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue</ccts:ObjectClass>
               <ccts:PropertyTerm>Name</ccts:PropertyTerm>
@@ -232,7 +233,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Catalogue. Description. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>A description of the catalogue.</ccts:Definition>
+              <ccts:Definition>Textual description of the document instance.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Catalogue</ccts:ObjectClass>
               <ccts:PropertyTerm>Description</ccts:PropertyTerm>

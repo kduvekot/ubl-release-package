@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
    <Identification>
       <ShortName>PackagingTypeCode</ShortName>
       <LongName xml:lang="en">Packaging Type</LongName>
       <LongName Identifier="listID">UN/ECE rec 21</LongName>
       <Version>Revision 5</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode</CanonicalUri>
-      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode-2.0</CanonicalVersionUri>
-      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PackagingTypeCode-2.0.gc</LocationUri>
+      <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:PackagingTypeCode-2.0-update</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/PackagingTypeCode-2.0.gc</LocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier>6</Identifier>
@@ -2081,7 +2081,7 @@
             <SimpleValue>VG</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bulk, gas (at 1031 mbar and 15øC)</SimpleValue>
+            <SimpleValue>Bulk, gas (at 1031 mbar and 15Ã¸C)</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2113,7 +2113,7 @@
             <SimpleValue>VO</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bulk, solid, large particles (“nodules”) </SimpleValue>
+            <SimpleValue>Bulk, solid, large particles (&#147;nodules&#148;) </SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2137,7 +2137,7 @@
             <SimpleValue>VR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bulk, solid, granular particles (“grains”) </SimpleValue>
+            <SimpleValue>Bulk, solid, granular particles (&#147;grains&#148;) </SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -2145,7 +2145,7 @@
             <SimpleValue>VY</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>Bulk, solid, fine particles (“powders”)</SimpleValue>
+            <SimpleValue>Bulk, solid, fine particles (&#147;powders&#148;)</SimpleValue>
          </Value>
       </Row>
       <Row>

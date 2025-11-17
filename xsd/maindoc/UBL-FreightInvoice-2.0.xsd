@@ -2,6 +2,7 @@
 <!--
   Document Type:     FreightInvoice
   Generated On:      Tue Oct 03 2:26:38 P3 2006
+  Manual changes for Update Package by J. Bosak Jan/Feb 2008
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -103,7 +104,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Identifier</ccts:DictionaryEntryName>
-              <ccts:Definition>An identifier for the Invoice assigned by the Creditor.</ccts:Definition>
+              <ccts:Definition>An identifier for the Freight Invoice assigned by the Creditor.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -153,7 +154,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Issue Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date assigned by the Creditor on which the Invoice was issued.</ccts:Definition>
+              <ccts:Definition>The date assigned by the Creditor
+              on which the Freight Invoice was issued.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -170,7 +172,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Issue Time. Time</ccts:DictionaryEntryName>
-              <ccts:Definition>The time assigned by the Creditor at which the Invoice was issued.</ccts:Definition>
+              <ccts:Definition>The time assigned by the Creditor
+              at which the Freight Invoice was issued.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -186,7 +189,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Invoice Type Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>Code specifying the type of the Invoice.</ccts:Definition>
+              <ccts:Definition>Code specifying the type of the
+              Freight Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Invoice Type Code</ccts:PropertyTerm>
@@ -202,7 +206,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Note. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>Free-form text applying to the Invoice. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+              <ccts:Definition>Free-form text applying to the
+              Freight Invoice. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -218,7 +223,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Tax Point Date. Date</ccts:DictionaryEntryName>
-              <ccts:Definition>The date of the Invoice, used to indicate the point at which tax becomes applicable.</ccts:Definition>
+              <ccts:Definition>The date of the Freight Invoice, used to indicate the point at which tax becomes applicable.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Tax Point Date</ccts:PropertyTerm>
@@ -251,7 +256,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Tax_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency used for tax amounts in the Invoice.</ccts:Definition>
+              <ccts:Definition>The currency used for tax amounts
+              in the Freight Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Tax</ccts:PropertyTermQualifier>
@@ -268,7 +274,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Pricing_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency used for prices in the Freight Invoice.</ccts:Definition>
+              <ccts:Definition>The currency used for prices in the
+              Freight Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Pricing</ccts:PropertyTermQualifier>
@@ -285,7 +292,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Payment_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The currency used for payment in the Freight Invoice.</ccts:Definition>
+              <ccts:Definition>The currency used for payment in
+              the Freight Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payment</ccts:PropertyTermQualifier>
@@ -302,7 +310,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Payment Alternative_ Currency Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The alternative currency used for payment in the Freight Invoice.</ccts:Definition>
+              <ccts:Definition>The alternative currency used for
+              payment in the Freight Invoice.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Payment Alternative</ccts:PropertyTermQualifier>
@@ -319,7 +328,8 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Accounting Cost Code. Code</ccts:DictionaryEntryName>
-              <ccts:Definition>The Buyer's accounting code applied to the Invoice as a whole.</ccts:Definition>
+              <ccts:Definition>The Buyer's accounting code applied
+              to the Freight Invoice as a whole.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost Code</ccts:PropertyTerm>
@@ -335,7 +345,7 @@
             <ccts:Component>
               <ccts:ComponentType>BBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Accounting Cost. Text</ccts:DictionaryEntryName>
-              <ccts:Definition>The Buyer's accounting code applied to the Invoice as a whole, expressed as text.</ccts:Definition>
+              <ccts:Definition>The Buyer's accounting cost centre applied to the Freight Invoice as a whole, expressed as text.</ccts:Definition>
               <ccts:Cardinality>0..1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Accounting Cost</ccts:PropertyTerm>
@@ -367,7 +377,8 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Invoice_ Period. Period</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to period(s) to which the Invoice applies.</ccts:Definition>
+              <ccts:Definition>An association to period(s) to
+              which the Freight Invoice applies.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Invoice</ccts:PropertyTermQualifier>
@@ -633,7 +644,8 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Allowance Charge</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to Allowances and Charges that apply to the Invoice as a whole.</ccts:Definition>
+              <ccts:Definition>An association to Allowances and
+              Charges that apply to the Freight Invoice as a whole.</ccts:Definition>
               <ccts:Cardinality>0..n</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm>
@@ -727,7 +739,8 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Legal_ Monetary Total. Monetary Total</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to the total amount payable on the Invoice, including Allowances, Charges, and Taxes.</ccts:Definition>
+              <ccts:Definition>An association to the total amount
+              payable on the Freight Invoice, including Allowances, Charges, and Taxes.</ccts:Definition>
               <ccts:Cardinality>1</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTermQualifier>Legal</ccts:PropertyTermQualifier>
@@ -743,7 +756,8 @@
             <ccts:Component>
               <ccts:ComponentType>ASBIE</ccts:ComponentType>
               <ccts:DictionaryEntryName>Freight Invoice. Invoice Line</ccts:DictionaryEntryName>
-              <ccts:Definition>An association to one or more Invoice Lines.</ccts:Definition>
+              <ccts:Definition>An association to one or more
+              Freight Invoice Lines.</ccts:Definition>
               <ccts:Cardinality>1..n</ccts:Cardinality>
               <ccts:ObjectClass>Freight Invoice</ccts:ObjectClass>
               <ccts:PropertyTerm>Invoice Line</ccts:PropertyTerm>

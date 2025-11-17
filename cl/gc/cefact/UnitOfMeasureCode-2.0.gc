@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
    <Identification>
       <ShortName>UnitOfMeasureCode</ShortName>
       <LongName xml:lang="en">Unit Of Measure</LongName>
       <LongName Identifier="listID">UN/ECE rec 20</LongName>
       <Version>Revision 4</Version>
       <CanonicalUri>urn:un:unece:uncefact:codelist:specification:66411</CanonicalUri>
-      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:specification:66411:2001</CanonicalVersionUri>
-      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/UnitOfMeasureCode-2.0.gc</LocationUri>
+      <CanonicalVersionUri>urn:un:unece:uncefact:codelist:specification:66411:2001-update</CanonicalVersionUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/cefact/UnitOfMeasureCode-2.0.gc</LocationUri>
       <Agency>
          <LongName xml:lang="en">United Nations Economic Commission for Europe</LongName>
          <Identifier>6</Identifier>
@@ -16,11 +16,11 @@
    <ColumnSet>
       <Column Id="code" Use="required">
          <ShortName>Code</ShortName>
-         <Data Type="normalizedString" xml:lang="en"/>
+         <Data Type="normalizedString" Lang="en"/>
       </Column>
       <Column Id="name" Use="optional">
          <ShortName>Name</ShortName>
-         <Data Type="string" xml:lang="en"/>
+         <Data Type="string" Lang="en"/>
       </Column>
       <Key Id="codeKey">
          <ShortName>CodeKey</ShortName>
@@ -753,7 +753,7 @@
             <SimpleValue>2C</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>röntgen</SimpleValue>
+            <SimpleValue>rÃ¶ntgen</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -865,7 +865,7 @@
             <SimpleValue>2Y</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>milliröntgen</SimpleValue>
+            <SimpleValue>millirÃ¶ntgen</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -1185,7 +1185,7 @@
             <SimpleValue>A11</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>ångström</SimpleValue>
+            <SimpleValue>Ã¥ngstrÃ¶m</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -3729,7 +3729,7 @@
             <SimpleValue>C85</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>reciprocal �&#8364;�ngstr"m</SimpleValue>
+            <SimpleValue>reciprocal â€ ngstr"m</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -4529,7 +4529,7 @@
             <SimpleValue>D6</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>röntgen per second</SimpleValue>
+            <SimpleValue>rÃ¶ntgen per second</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -6305,7 +6305,7 @@
             <SimpleValue>KR</SimpleValue>
          </Value>
          <Value ColumnRef="name">
-            <SimpleValue>kiloröntgen</SimpleValue>
+            <SimpleValue>kilorÃ¶ntgen</SimpleValue>
          </Value>
       </Row>
       <Row>

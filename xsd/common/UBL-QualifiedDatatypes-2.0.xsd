@@ -2,6 +2,7 @@
 <!--
   Document Type:     QualifiedDatatypes
   Generated On:      Wed Sep 13 09:16:50 2006
+  Manual changes for Update Package by J. Bosak Jan-Mar 2008
 
 -->
 <!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
@@ -95,7 +96,7 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/AllowanceChargeReasonCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/AllowanceChargeReasonCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Allowance Charge Reason_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -195,7 +196,7 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ChannelCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/ChannelCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Channel_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -294,7 +295,7 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ChipCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/ChipCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Chip_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -321,7 +322,7 @@
         <ccts:Component>
           <ccts:DictionaryEntryName>Container Size Type_ Code. Type</ccts:DictionaryEntryName>
           <ccts:Version>2.0</ccts:Version>
-          <ccts:Definition>The set of code values for classifying series 1 freight containers based on external dimensions and specifies the assoziated ratings and, where appropriate, the minimum internal and door opening dimensions for certain types of containers.</ccts:Definition>
+          <ccts:Definition>The set of code values for classifying series 1 freight containers based on external dimensions, associated ratings and, where appropriate, the minimum internal and door opening dimensions for certain types of containers.</ccts:Definition>
           <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
           <ccts:QualifierTerm>Container Size Type</ccts:QualifierTerm>
           <ccts:UniqueID></ccts:UniqueID>
@@ -393,7 +394,7 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/special-purpose/ContainerSizeTypeCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/special-purpose/ContainerSizeTypeCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Container Size Type_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -493,7 +494,7 @@
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/CountryIdentificationCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Country Identification_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -594,7 +595,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/CurrencyCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/cefact/CurrencyCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Currency_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -693,7 +694,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/DocumentStatusCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/DocumentStatusCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Document Status_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -792,7 +793,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LatitudeDirectionCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/LatitudeDirectionCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Latitude Direction_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -891,7 +892,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LineStatusCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/LineStatusCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Line Status_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -990,7 +991,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/LongitudeDirectionCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/LongitudeDirectionCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Longitude Direction_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1089,7 +1090,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/OperatorCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/OperatorCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Operator_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1188,7 +1189,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PackagingTypeCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/PackagingTypeCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Packaging Type_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1288,7 +1289,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/PaymentMeansCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/PaymentMeansCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Payment Means_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1387,7 +1388,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/special-purpose/PortCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/special-purpose/PortCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Port_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1486,7 +1487,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/SubstitutionStatusCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/SubstitutionStatusCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Substitution Status_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1585,7 +1586,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportationStatusCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/TransportationStatusCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transportation Status_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1684,7 +1685,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportEquipmentTypeCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/TransportEquipmentTypeCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Equipment Type_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1783,7 +1784,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/TransportModeCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/default/TransportModeCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Transport Mode_ Code List. Uniform Resource. Identifier</ccts:Name>
@@ -1882,7 +1883,7 @@ http://www.iso.org/iso/en/commcentre/pressreleases/2003/Ref871.html</ccts:UsageR
             </xsd:documentation>
           </xsd:annotation>
         </xsd:attribute>
-        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/cefact/UnitOfMeasureCode-2.0.gc" use="optional">
+        <xsd:attribute name="listURI" type="xsd:anyURI" default="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/cl/gc/cefact/UnitOfMeasureCode-2.0.gc" use="optional">
           <xsd:annotation>
             <xsd:documentation>
               <ccts:Name>Unit Of Measure_ Code List. Uniform Resource. Identifier</ccts:Name>
