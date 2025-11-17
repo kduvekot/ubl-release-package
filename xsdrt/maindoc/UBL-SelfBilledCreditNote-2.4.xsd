@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.4 CSD02
-                     http://docs.oasis-open.org/ubl/csd02-UBL-2.4/
-  Release Date:      26 July 2023
+  Library:           OASIS Universal Business Language (UBL) 2.4 CS01
+                     http://docs.oasis-open.org/ubl/cs01-UBL-2.4/
+  Release Date:      17 October 2023
   Module:            xsdrt/maindoc/UBL-SelfBilledCreditNote-2.4.xsd
-  Generated on:      2023-07-25 10:32z
+  Generated on:      2023-10-24 19:56z
   Copyright (c) OASIS Open 2023. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SelfBilledCreditNote-2"
