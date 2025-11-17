@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" 
   href="db/spec-0.7/stylesheets/oasis-specification-html-offline.xsl"?>
 <!--
-  $Id: UBL-2.2.xml,v 1.99 2017/01/25 20:14:17 admin Exp $
+  $Id: UBL-2.2.xml,v 1.123 2017/10/30 22:10:24 admin Exp $
   Single quote: &#8217; Double quotes: &#8220;&#8221; 
   Search strings: "gentext" "reviewtext"
   role="namespaces"
@@ -16,13 +16,14 @@
 <!ENTITY name "UBL">
 <!ENTITY pversion "NONE">
 <!ENTITY version  "2.2">
-<!ENTITY stage    "csprd01">
-<!ENTITY isostage "CSPRD">
-<!ENTITY standard "Committee Specification Draft 01 / Public Review Draft 01">
+<!ENTITY stage    "csprd02">
+<!ENTITY isostage "CSPRD02">
+<!ENTITY stagetext "Committee Specification Public Review Draft">
+<!ENTITY standard "Committee Specification Public Review Draft 02">
 <!ENTITY this-loc     "http://docs.oasis-open.org/ubl/&stage;-UBL-2.2">
-<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/os-UBL-2.1">
+<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/csprd01-UBL-2.2">
 <!ENTITY latest-loc   "http://docs.oasis-open.org/ubl">
-<!ENTITY pubdate     "21 December 2016"><!--remove time from pub date-->
+<!ENTITY pubdate     "01 November 2017"><!--remove time from pub date-->
 <!ENTITY pubdate-iso "ccyy-mm-dd">
 <!ENTITY reldate-iso "ccyy-mm">
 ]>
@@ -34,12 +35,9 @@
     <releaseinfo role="OASIS-specification-this">&this-loc;/&name;-&version;.html</releaseinfo>
     <releaseinfo role="OASIS-specification-this" lang="none">&this-loc;/&name;-&version;.pdf</releaseinfo>
     <releaseinfo role="OASIS-specification-this-authoritative" lang="none">&this-loc;/&name;-&version;.xml</releaseinfo>
-    <!--<releaseinfo role="OASIS-specification-previous"
-      >&previous-loc;/UBL-2.1.html</releaseinfo>
-    <releaseinfo role="OASIS-specification-previous"
-      >&previous-loc;/UBL-2.1.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-previous-authoritative"
-      >&previous-loc;/UBL-2.1.xml</releaseinfo>-->
+    <releaseinfo role="OASIS-specification-previous">&previous-loc;/UBL-2.2.html</releaseinfo>
+    <releaseinfo role="OASIS-specification-previous">&previous-loc;/UBL-2.2.pdf</releaseinfo>
+    <releaseinfo role="OASIS-specification-previous-authoritative">&previous-loc;/UBL-2.2.xml</releaseinfo>
     <!-- generic form of above
       <releaseinfo role="OASIS-specification-previous"
          >&previous-loc;/&name;-&version;.html</releaseinfo>
@@ -60,15 +58,6 @@
     <releaseinfo role="committee"><ulink url="http://www.oasis-open.org/committees/ubl/" conformance="skip">OASIS Universal
       Business Language TC</ulink></releaseinfo>
     <authorgroup>
-      <editor>
-        <firstname>Tim</firstname>
-        <surname>McGrath</surname>
-        <affiliation>
-          <orgname><ulink url="http://DocumentEngineeringServices.com" conformance="skip">Document
-              Engineering Services</ulink></orgname>
-        </affiliation>
-        <email>tim.mcgrath@documentengineeringservices.com</email>
-      </editor>
       <editor>
         <firstname>G. Ken</firstname>
         <surname>Holman</surname>
@@ -94,7 +83,7 @@
       <para>This prose specification is one component of a Work Product that also includes:</para>
       <itemizedlist>
         <listitem>
-          <para>Code lists for constraint validation:</para>
+          <para>Code lists for constraint validation: </para>
           <itemizedlist>
             <listitem>
               <para><ulink url="&this-loc;/cl/">&this-loc;/cl/</ulink></para>
@@ -102,7 +91,7 @@
           </itemizedlist>
         </listitem>
         <listitem>
-          <para>Context/value Association files for constraint validation:</para>
+          <para>Context/value Association files for constraint validation: </para>
           <itemizedlist>
             <listitem>
               <para><ulink url="&this-loc;/cva/">&this-loc;/cva/</ulink></para>
@@ -110,7 +99,7 @@
           </itemizedlist>
         </listitem>
         <listitem>
-          <para>Document models of information bundles:</para>
+          <para>Document models of information bundles: </para>
           <itemizedlist>
             <listitem>
               <para><ulink url="&this-loc;/mod/">&this-loc;/mod/</ulink></para>
@@ -118,7 +107,7 @@
           </itemizedlist>
         </listitem>
         <listitem>
-          <para>Default validation test environment:</para>
+          <para>Default validation test environment: </para>
           <itemizedlist>
             <listitem>
               <para><ulink url="&this-loc;/val/">&this-loc;/val/</ulink></para>
@@ -126,7 +115,7 @@
           </itemizedlist>
         </listitem>
         <listitem>
-          <para>XML examples:</para>
+          <para>XML examples: </para>
           <itemizedlist>
             <listitem>
               <para><ulink url="&this-loc;/xml/">&this-loc;/xml/</ulink></para>
@@ -134,7 +123,7 @@
           </itemizedlist>
         </listitem>
         <listitem>
-          <para>Annotated XSD schemas:</para>
+          <para>Annotated XSD schemas: </para>
           <itemizedlist>
             <listitem>
               <para><ulink url="&this-loc;/xsd/">&this-loc;/xsd/</ulink></para>
@@ -142,7 +131,7 @@
           </itemizedlist>
         </listitem>
         <listitem>
-          <para>Runtime XSD schemas:</para>
+          <para>Runtime XSD schemas: </para>
           <itemizedlist>
             <listitem>
               <para><ulink url="&this-loc;/xsdrt/">&this-loc;/xsdrt/</ulink></para>
@@ -161,7 +150,7 @@
       <title>Related work</title>
       <para>This specification supersedes: </para>
       <bibliolist>
-        <bibliomixed><abbrev>UBL-2.1</abbrev>
+        <bibliomixed conformance="skip"><abbrev condition="oasis">UBL-2.1</abbrev>
           <citetitle>Universal Business Language Version 2.1.</citetitle>
           <bibliomisc>Edited by Jon Bosak, Tim McGrath and G. Ken Holman.</bibliomisc>
           <date>04 November 2013. </date>
@@ -185,7 +174,6 @@
         <member> urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2 </member>
         <member> urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2 </member>
       </simplelist>
-      <para/>
       <simplelist lang="none">
         <member>urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2</member>
         <member>urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2</member>
@@ -277,16 +265,16 @@
       <title>Status</title>
       <!--
       <para>This <ulink conformance="skip"
-          url="https://www.oasis-open.org/policies-guidelines/tc-process#dWorkingDraft"
-          >Working Draft</ulink> (WD) has been produced by one or more TC
-        Members; it has not yet been voted on by the TC or <ulink conformance="skip"
+          url="https://www.oasis-open.org/policies-guidelines/tc-process#dWorkingDraft">Working
+          Draft</ulink> (WD) has been produced by one or more TC Members; it has not yet been voted
+        on by the TC or <ulink conformance="skip"
           url="https://www.oasis-open.org/policies-guidelines/tc-process#committeeDraft"
-          >approved</ulink> as a Committee Specification Draft. The OASIS
-        document <ulink conformance="skip"
+          >approved</ulink> as a Committee Specification Draft. The OASIS document <ulink
+          conformance="skip"
           url="https://www.oasis-open.org/policies-guidelines/tc-process#standApprovProcess"
-          >Approval Process</ulink> begins officially with a TC vote to approve
-        a WD as a Committee Draft. A TC may approve a Working Draft, revise it,
-        and re-approve it any number of times as a Committee Draft.</para>
+          >Approval Process</ulink> begins officially with a TC vote to approve a WD as a Committee
+        Draft. A TC may approve a Working Draft, revise it, and re-approve it any number of times as
+        a Committee Draft.</para>
       -->
       <para>This document was last revised or approved by the OASIS Universal Business Language TC
         on the above date. The level of approval is also listed above. Check the &#x201c;Latest
@@ -294,19 +282,24 @@
         other numbered Versions and other technical work produced by the Technical Committee (TC)
         are listed at <ulink
           url="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl#technical"
-          >https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl#technical</ulink>.</para>
-      <para>TC members should send comments on this specification to the TC’s email list. Others
-        should send comments to the TC’s public comment list, after subscribing to it by following
-        the instructions at the “<ulink conformance="skip"
+          >https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl#technical</ulink>. </para>
+      
+      <!--only one of the two above paragraphs applies; comment out the other one--> 
+      <para>Technical Committee members should send comments on this specification to the TC’s email
+        list. Others should send comments to the TC’s public comment list, after subscribing to it
+        by following the instructions at the “<ulink conformance="skip"
           url="https://www.oasis-open.org/committees/comments/index.php?wg_abbrev=ubl">Send A
           Comment</ulink>&#8221; button on the TC&#8217;s web page at <ulink
           url="https://www.oasis-open.org/committees/ubl/"
           >https://www.oasis-open.org/committees/ubl/</ulink>.</para>
-      <para>For information on whether any patents have been disclosed that may be essential to
-        implementing this specification, and any offers of patent licensing terms, please refer to
-        the Intellectual Property Rights section of the Technical Committee web page at <ulink
-          url="https://www.oasis-open.org/committees/ubl/ipr.php"
-          >https://www.oasis-open.org/committees/ubl/ipr.php</ulink>.</para>
+      <para>This &stagetext; is provided under the <ulink
+          url="https://www.oasis-open.org/policies-guidelines/ipr/#RF-on-Limited-Mode"
+          conformance="skip">RF on Limited Terms Mode</ulink> of the OASIS IPR Policy, the mode
+        chosen when the Technical Committee was established. For information on whether any patents
+        have been disclosed that may be essential to implementing this specification, and any offers
+        of patent licensing terms, please refer to the Intellectual Property Rights section of the
+        Technical Committee web page (<ulink url="http://www.oasis-open.org/committees/ubl/ipr.php"
+          >http://www.oasis-open.org/committees/ubl/ipr.php</ulink>).</para>
       <para>Note that any machine-readable content (aka Computer Language Definitions) declared
         Normative for this Work Product is provided in separate plain text files. In the event of a
         discrepancy between any such plain text file and display content in the Work Product’s prose
@@ -316,27 +309,25 @@
       <title>Citation format</title>
       <para>When referencing this specification the following citation format should be used:</para>
       <bibliolist id="citationfmt">
-        <bibliomixed id="UBL"><abbrev>UBL-2.2</abbrev>
+        <bibliomixed id="UBL" conformance="skip"><abbrev condition="oasis">UBL-2.2</abbrev>
           <citetitle>Universal Business Language Version 2.2.</citetitle>
-          <bibliomisc>Edited by G. Ken Holman and Tim McGrath.</bibliomisc>
+          <bibliomisc>Edited by G. Ken Holman.</bibliomisc>
           <date>&pubdate;. </date>
           <releaseinfo>OASIS &standard;. </releaseinfo>
           <bibliomisc>
             <ulink url="http://docs.oasis-open.org/ubl/&stage;-UBL-2.2/UBL-2.2.html"
-              >http://docs.oasis-open.org/ubl/&stage;-UBL-2.2/UBL-2.2.html</ulink>.
-            Latest version: <ulink
-              url="http://docs.oasis-open.org/ubl/UBL-2.2.html"
-              >http://docs.oasis-open.org/ubl/UBL-2.2.html</ulink>.
-          </bibliomisc>
+              >http://docs.oasis-open.org/ubl/&stage;-UBL-2.2/UBL-2.2.html</ulink>. Latest version:
+              <ulink url="http://docs.oasis-open.org/ubl/UBL-2.2.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.2.html</ulink>. </bibliomisc>
         </bibliomixed>
       </bibliolist>
     </legalnotice>
     <legalnotice role="notices">
       <title>Notices</title>
-      <para>Copyright &#169; OASIS Open 2001-2016. All Rights Reserved. </para>
+      <para>Copyright &#169; OASIS Open 2001-2017. All Rights Reserved. </para>
       <para>All capitalized terms in the following text have the meanings assigned to them in the
         OASIS Intellectual Property Rights Policy (the &#8220;OASIS IPR Policy&#8221;). The full
-          <ulink url="http://www.oasis-open.org/policies-guidelines/ipr" conformance="skip"
+          <ulink url="https://www.oasis-open.org/policies-guidelines/ipr" conformance="skip"
           >Policy</ulink> may be found at the OASIS website.</para>
       <para>This document and translations of it may be copied and furnished to others, and
         derivative works that comment on or otherwise explain it or assist in its implementation may
@@ -378,12 +369,12 @@
         will at any time be complete, or that any claims in such list are, in fact, Essential
         Claims.</para>
       <para>The name &#8220;OASIS&#8221; is a trademark of <ulink conformance="skip"
-          url="http://www.oasis-open.org">OASIS</ulink>, the owner and developer of this
+          url="https://www.oasis-open.org">OASIS</ulink>, the owner and developer of this
         specification, and should be used only to refer to the organization and its official
         outputs. OASIS welcomes reference to, and implementation and use of, specifications, while
         reserving the right to enforce its marks against misleading uses. Please see <ulink
-          url="http://www.oasis-open.org/policies-guidelines/trademark.php"
-          >http://www.oasis-open.org/policies-guidelines/trademark.php</ulink> for guidance.</para>
+          url="https://www.oasis-open.org/policies-guidelines/trademark"
+          >https://www.oasis-open.org/policies-guidelines/trademark</ulink> for guidance.</para>
       <para>CPFR is a registered trademark of the Voluntary Interindustry Commerce Solutions (VICS)
         association. The term &#8220;CPFR&#8221; is not to be used in any format without written
         permission from VICS. For more information on VICS and CPFR, visit <ulink conformance="skip"
@@ -418,7 +409,7 @@
     <releaseinfo role="secretariat">JTC 1</releaseinfo>
     <releaseinfo role="page-count">x</releaseinfo>
     <copyright condition="isosts">
-      <year>2016</year>
+      <year>2017</year>
       <holder>ISO/IEC</holder>
       <holder role="copyright-statement">All rights reserved.</holder>
     </copyright>
@@ -856,29 +847,30 @@
     <section id="S-NORMATIVE-REFERENCES" role="norm-refs">
       <title>Normative References</title>
       <bibliolist id="normbibl">
-        <bibliomixed id="rfc2119"><abbrev>RFC2119</abbrev><citetitle>
+        <bibliomixed id="rfc2119"><abbrev condition="oasis">RFC2119</abbrev><citetitle>
             <ulink url="http://www.faqs.org/rfcs/rfc2119.html" conformance="skip">Key words for use
               in RFCs to Indicate Requirement Levels</ulink>
           </citetitle></bibliomixed>
-        <bibliomixed id="b_XAdES"><abbrev>XAdES</abbrev><citetitle>
+        <bibliomixed id="b_XAdES"><abbrev condition="oasis">XAdES</abbrev><citetitle>
             <ulink conformance="skip" url="http://uri.etsi.org/01903/v1.4.1/ts_101903v010401p.pdf"
               >XML Advanced Electronic Signatures. ETSI TS 101 903 V1.4.1, June 2009</ulink>.
           </citetitle></bibliomixed>
-        <bibliomixed id="xml"><abbrev>XML</abbrev><citetitle><ulink conformance="skip"
-              url="http://www.w3.org/TR/2000/REC-xml-20001006">Extensible Markup Language (XML) 1.0
-              (Second Edition), W3C Recommendation 6 October 2000</ulink></citetitle></bibliomixed>
-        <bibliomixed id="b_xmldsig"><abbrev lang="none">xmldsig</abbrev><citetitle>
+        <bibliomixed id="xml"><abbrev condition="oasis">XML</abbrev><citetitle><ulink
+              conformance="skip" url="http://www.w3.org/TR/2000/REC-xml-20001006">Extensible Markup
+              Language (XML) 1.0 (Second Edition), W3C Recommendation 6 October
+            2000</ulink></citetitle></bibliomixed>
+        <bibliomixed id="b_xmldsig"><abbrev condition="oasis" lang="none">xmldsig</abbrev><citetitle>
             <ulink url="http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/" conformance="skip"
               >XML-Signature Syntax and Processing. W3C Recommendation 12 February
             2002</ulink></citetitle></bibliomixed>
-        <bibliomixed id="xsd1"><abbrev>XSD1</abbrev><citetitle><ulink conformance="skip"
-              url="http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/">XML Schema Part 1:
-              Structures. Second Edition. W3C Recommendation 28 October
-          2004</ulink></citetitle></bibliomixed>
-        <bibliomixed id="xsd2"><abbrev>XSD2</abbrev><citetitle><ulink conformance="skip"
-              url="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/">XML Schema Part 2:
-              Datatypes. Second Edition. W3C Recommendation 28 October
-          2004</ulink></citetitle></bibliomixed>
+        <bibliomixed id="xsd1"><abbrev condition="oasis">XSD1</abbrev><citetitle><ulink
+              conformance="skip" url="http://www.w3.org/TR/2004/REC-xmlschema-1-20041028/">XML
+              Schema Part 1: Structures. Second Edition. W3C Recommendation 28 October
+            2004</ulink></citetitle></bibliomixed>
+        <bibliomixed id="xsd2"><abbrev condition="oasis">XSD2</abbrev><citetitle><ulink
+              conformance="skip" url="http://www.w3.org/TR/2004/REC-xmlschema-2-20041028/">XML
+              Schema Part 2: Datatypes. Second Edition. W3C Recommendation 28 October
+            2004</ulink></citetitle></bibliomixed>
       </bibliolist>
     </section>
     <section id="S-NON-NORMATIVE-REFERENCES" role="non-norm-refs">
@@ -886,26 +878,25 @@
         <phrase condition="isosts">Bibliography</phrase></title>
       <bibliolist id="infobibl">
         <bibliomixed id="b_1999-93-EC">
-          <abbrev>1999/93/EC</abbrev><citetitle><ulink conformance="skip"
-              url="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=CELEX:31999L0093:EN:NOT"
-              >Directive 1999/93/EC of the European Parliament and of the Council of 13 December
-              1999 on a Community framework for electronic signatures</ulink>.
-          </citetitle></bibliomixed>
+          <abbrev condition="oasis">1999/93/EC</abbrev><citetitle><ulink conformance="skip"
+              url="http://eur-lex.europa.eu/legal-content/en/TXT/?uri=CELEX%3A31999L0093">Directive
+              1999/93/EC of the European Parliament and of the Council of 13 December 1999 on a
+              Community framework for electronic signatures</ulink>. </citetitle></bibliomixed>
         <bibliomixed id="b_2011-130-UE">
-          <abbrev>2011/130/UE</abbrev><citetitle><ulink conformance="skip"
+          <abbrev condition="oasis">2011/130/UE</abbrev><citetitle><ulink conformance="skip"
               url="http://eur-lex.europa.eu/LexUriServ/LexUriServ.do?uri=OJ:L:2011:053:0066:01:EN:HTML"
               >Commission Decision 2011/130/UE of the European Commission of 25 February 2011 on
               establishing minimum requirements for the cross-border processing of documents signed
               electronically by competent authorities under Directive 2006/123/EC of the European
               Parliament and of the Council on services in the internal market</ulink>.
           </citetitle></bibliomixed>
-        <bibliomixed id="b_asic"><abbrev>ASiC</abbrev><citetitle>
+        <bibliomixed id="b_asic"><abbrev condition="oasis">ASiC</abbrev><citetitle>
             <ulink conformance="skip"
               url="http://www.etsi.org/deliver/etsi_ts/102900_102999/102918/01.02.01_60/ts_102918v010201p.pdf"
               >Electronic Signatures and Infrastructures (ESI); Associated Signature Containers
               (ASiC). ETSI TS 102 918 V1.1.1, April 2011</ulink>. </citetitle></bibliomixed>
         <bibliomixed id="b_bdndr">
-          <abbrev>BD-NDR</abbrev>
+          <abbrev condition="oasis">BD-NDR</abbrev>
           <citetitle><ulink conformance="skip"
               url="http://docs.oasis-open.org/ubl/Business-Document-NDR/v1.0/Business-Document-NDR-v1.0.html"
               >Business Document Naming and Design Rules Version 1.0.</ulink></citetitle>
@@ -921,33 +912,36 @@
               >http://docs.oasis-open.org/ubl/Business-Document-NDR/v1.0/Business-Document-NDR-v1.0.html</ulink>.
           </bibliomisc>
         </bibliomixed>
-        <!--<bibliomixed id="b_asn.1"><abbrev>ASN.1</abbrev><citetitle> <ulink url="http://www.itu.int/ITU-T/studygroups/com17/languages/X.680-X.693-0207w.zip" conformance="skip">ITU-T X.680-X.683: Abstract Syntax Notation One (ASN.1)</ulink></citetitle>, <citetitle><ulink conformance="skip" url="http://www.oasis-open.org/committees/download.php/6320/X.680-X.693-0207w.zip">ITU-T X.690-X.693: ASN.1 encoding rules</ulink></citetitle></bibliomixed>-->
+        <!--<bibliomixed id="b_asn.1"><abbrev condition="oasis">ASN.1</abbrev><citetitle> <ulink url="http://www.itu.int/ITU-T/studygroups/com17/languages/X.680-X.693-0207w.zip" conformance="skip">ITU-T X.680-X.683: Abstract Syntax Notation One (ASN.1)</ulink></citetitle>, <citetitle><ulink conformance="skip" url="http://www.oasis-open.org/committees/download.php/6320/X.680-X.693-0207w.zip">ITU-T X.690-X.693: ASN.1 encoding rules</ulink></citetitle></bibliomixed>-->
         <bibliomixed id="b_bovfsv">
-          <abbrev>BOV-FSV</abbrev>
+          <abbrev condition="oasis">BOV-FSV</abbrev>
           <citetitle>ISO/IEC 15944-20 Information technology - Business operational view - Linking
             business operational view to functional service view</citetitle>
         </bibliomixed>
-        <bibliomixed id="ccts"><abbrev>CCTS</abbrev><citetitle><ulink conformance="skip"
-              url="http://www.unece.org/cefact/codesfortrade/ccts_index.html">UN/CEFACT Core
-              Component Technical Specification, Version 2.01</ulink></citetitle></bibliomixed>
-        <bibliomixed id="cpfr"><abbrev>CPFR</abbrev><citetitle><ulink conformance="skip"
-              url="http://www.ecrbrasil.com.br/ecrbrasil/includes/baixarArquivo.asp?caminhoArquivo=../downloads/biblioteca/bibl0349.pdf">Voluntary
-              Interindustry Commerce Standards, Collaborative Planning, Forecasting, and
+        <bibliomixed id="ccts"><abbrev condition="oasis">CCTS</abbrev><citetitle><ulink
+              conformance="skip" url="http://www.unece.org/cefact/codesfortrade/ccts_index.html"
+              >UN/CEFACT Core Component Technical Specification, Version
+          2.01</ulink></citetitle></bibliomixed>
+        <bibliomixed id="cpfr"><abbrev condition="oasis">CPFR</abbrev><citetitle><ulink
+              conformance="skip"
+              url="http://www.ecrbrasil.com.br/ecrbrasil/includes/baixarArquivo.asp?caminhoArquivo=../downloads/biblioteca/bibl0349.pdf"
+              >Voluntary Interindustry Commerce Standards, Collaborative Planning, Forecasting, and
               Replenishment Version 2.0, Global Commerce Initiative Recommended Guidelines, June
               2002</ulink>
           </citetitle></bibliomixed>
         <bibliomixed id="cpfroview">
-          <abbrev lang="none">CPFRoverview</abbrev><citetitle><ulink conformance="skip"
-url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=core_download&amp;entryid=492&amp;language=en-US&amp;PortalId=0&amp;TabId=134"
-            >CPFR: An Overview, 18 May 2004</ulink></citetitle></bibliomixed>
-        <bibliomixed id="custguide"><abbrev>Customization</abbrev>
+          <abbrev condition="oasis" lang="none">CPFRoverview</abbrev><citetitle><ulink
+              conformance="skip"
+              url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=core_download&amp;entryid=492&amp;language=en-US&amp;PortalId=0&amp;TabId=134"
+              >CPFR: An Overview, 18 May 2004</ulink></citetitle></bibliomixed>
+        <bibliomixed id="custguide"><abbrev condition="oasis">Customization</abbrev>
           <citetitle><ulink conformance="skip"
               url="http://docs.oasis-open.org/ubl/guidelines/UBL2-Customization1.0cs01.pdf">OASIS
               Committee Specification 01, UBL 2 Guidelines for Customization, First Edition, 25
               December 2009</ulink>
           </citetitle></bibliomixed>
         <bibliomixed id="cva">
-          <abbrev>CVA</abbrev>
+          <abbrev condition="oasis">CVA</abbrev>
           <citetitle><ulink conformance="skip"
               url="http://docs.oasis-open.org/codelist/ContextValueAssociation/doc/context-value-association.html"
               >OASIS Context/value association using Genericode 1.0.</ulink></citetitle>
@@ -960,22 +954,22 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
           </bibliomisc>
         </bibliomixed>
         <bibliomixed id="b_cwa15579">
-          <abbrev>CWA15579</abbrev><citetitle><ulink conformance="skip"
+          <abbrev condition="oasis">CWA15579</abbrev><citetitle><ulink conformance="skip"
               url="ftp://ftp.cenorm.be/PUBLIC/CWAs/e-Europe/eInvoicing/CWA15579-00-2006-Jul.pdf">CEN
               Workshop Agreement: E-invoices and digital signatures (CWA 15579), July 2006</ulink>.
           </citetitle></bibliomixed>
         <bibliomixed id="b_cwa15580">
-          <abbrev>CWA15580</abbrev><citetitle><ulink conformance="skip"
+          <abbrev condition="oasis">CWA15580</abbrev><citetitle><ulink conformance="skip"
               url="ftp://ftp.cenorm.be/PUBLIC/CWAs/e-Europe/eInvoicing/CWA15580-00-2006-jul.pdf">CEN
               Workshop Agreement: Storage of Electronic Documents (CWA 15580), July 2006</ulink>.
           </citetitle></bibliomixed>
-        <bibliomixed id="ebiz"><abbrev>eBiz-TCF</abbrev><citetitle>
+        <bibliomixed id="ebiz"><abbrev condition="oasis">eBiz-TCF</abbrev><citetitle>
             <ulink conformance="skip"
               url="http://spring.bologna.enea.it/ebiz/defaultebiz.asp?versione=DOWNSTREAM">Reference
               Architecture of <phrase lang="none">eBusiness</phrase> in Textile Clothing and
               Footwear Sector</ulink></citetitle></bibliomixed>
         <bibliomixed id="gc">
-          <abbrev>genericode</abbrev>
+          <abbrev condition="oasis">genericode</abbrev>
           <citetitle><ulink conformance="skip"
               url="http://docs.oasis-open.org/codelist/approved/genericode/oasis-code-list-representation-genericode.html"
               >OASIS Code List Representation (Genericode) Version 1.0.</ulink></citetitle>
@@ -987,11 +981,11 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
               >http://docs.oasis-open.org/codelist/approved/genericode/oasis-code-list-representation-genericode.html</ulink>.
           </bibliomisc>
         </bibliomixed>
-        <bibliomixed id="governance"><abbrev>Governance</abbrev>
+        <bibliomixed id="governance"><abbrev condition="oasis">Governance</abbrev>
           <citetitle>UBL Maintenance Governance Procedures Version &version;.</citetitle>
           <bibliomisc>Edited by Ole Madsen, Tim McGrath and G. Ken Holman.</bibliomisc>
-          <date>&pubdate;.</date>
-          <releaseinfo>OASIS Committee Note 01.</releaseinfo>
+          <date>04 March 2015. </date>
+          <releaseinfo>OASIS Committee Note 01. </releaseinfo>
           <bibliomisc>
             <ulink
               url="http://docs.oasis-open.org/ubl/UBL-Governance/v1.0/cn01/UBL-Governance-v1.0-cn01.html"
@@ -1000,25 +994,25 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
               url="http://docs.oasis-open.org/ubl/UBL-Governance/v1.0/UBL-Governance-v1.0.html"
             />.</bibliomisc>
         </bibliomixed>
-        <bibliomixed id="iso11179"><abbrev>ISO11179</abbrev><citetitle>
+        <bibliomixed id="iso11179"><abbrev condition="oasis">ISO11179</abbrev><citetitle>
             <ulink conformance="skip"
               url="http://www.oasis-open.org/committees/download.php/6233/c002349_ISO_IEC_11179-1_1999%28E%29.pdf"
               >ISO/IEC 11179-1:1999 Information technology &#8212; Specification and standardization
               of data elements &#8212; Part 1: Framework for the specification and standardization
               of data elements</ulink></citetitle></bibliomixed>
         <bibliomixed id="b_openedi">
-          <abbrev>Open-edi</abbrev><citetitle>
+          <abbrev condition="oasis">Open-edi</abbrev><citetitle>
             <ulink conformance="skip"
               url="http://standards.iso.org/ittf/PubliclyAvailableStandards/c055290_ISO_IEC_14662_2010%28E%29.zip"
               >ISO/IEC 14662:2010 Information technology - Open-edi reference
             model</ulink></citetitle>
         </bibliomixed>
-        <bibliomixed id="b_odfp"><abbrev>ODFP</abbrev><citetitle>
+        <bibliomixed id="b_odfp"><abbrev condition="oasis">ODFP</abbrev><citetitle>
             <ulink conformance="skip"
               url="http://docs.oasis-open.org/office/v1.2/csprd03/OpenDocument-v1.2-csprd03-part3.pdf"
               >OASIS Standard, Open Document Format for Office Applications (OpenDocument) Version
               1.2 - Part 3 Packages, December 2006</ulink>. </citetitle></bibliomixed>
-        <bibliomixed id="relaxng"><abbrev>RELAX NG</abbrev><citetitle>
+        <bibliomixed id="relaxng"><abbrev condition="oasis">RELAX NG</abbrev><citetitle>
             <ulink conformance="skip"
               url="http://standards.iso.org/ittf/PubliclyAvailableStandards/c037605_ISO_IEC_19757-2_2003(E).zip"
               >ISO/IEC 19757-2, Information technology &#8212; Document Schema Definition Language
@@ -1028,16 +1022,16 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
               >Information technology &#8212; Document Schema Definition Language (DSDL) &#8212;
               Part 2: Regular-grammar-based validation &#8212; RELAX NG AMENDMENT 1: Compact
               Syntax</ulink></citetitle></bibliomixed>
-        <bibliomixed id="rfc3161"><abbrev>RFC3161</abbrev><citetitle>
+        <bibliomixed id="rfc3161"><abbrev condition="oasis">RFC3161</abbrev><citetitle>
             <ulink url="http://www.faqs.org/rfcs/rfc3161.html" conformance="skip">Internet X.509
               Public Key Infrastructure Time-Stamp Protocol (TSP), August 2001</ulink>.
           </citetitle></bibliomixed>
-        <bibliomixed id="schematron"><abbrev>SCH</abbrev><citetitle>
+        <bibliomixed id="schematron"><abbrev condition="oasis">SCH</abbrev><citetitle>
             <ulink conformance="skip"
               url="http://standards.iso.org/ittf/PubliclyAvailableStandards/c040833_ISO_IEC_19757-3_2006(E).zip"
               >Document Schema Definition Languages (DSDL) &#8212; Part 3: Rule-based validation
               (Schematron)</ulink></citetitle></bibliomixed>
-        <bibliomixed id="b_ublndr"><abbrev>UBL-NDR</abbrev>
+        <bibliomixed id="b_ublndr"><abbrev condition="oasis">UBL-NDR</abbrev>
           <citetitle>UBL Naming and Design Rules Version 3.0</citetitle>. <bibliomisc>Edited by G.
             Ken Holman.</bibliomisc>
           <date>20 July 2016</date>. <releaseinfo>OASIS Committee Note 01.</releaseinfo>
@@ -1046,38 +1040,41 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
             Latest version: <ulink
               url="http://docs.oasis-open.org/ubl/UBL-NDR/v3.0/UBL-NDR-v3.0.html"/>. </bibliomisc>
         </bibliomixed>
-        <bibliomixed id="b_uml"><abbrev>UML</abbrev><citetitle><ulink conformance="skip"
+        <bibliomixed id="b_uml"><abbrev condition="oasis">UML</abbrev><citetitle><ulink
+              conformance="skip"
               url="http://www.oasis-open.org/committees/download.php/6240/03-03-01.zip">Unified
               Modeling Language Version 1.5 (formal/03-03-01)</ulink></citetitle></bibliomixed>
-        <!--<bibliomixed id="b_rec37"><abbrev>UN/CEFACT Rec.
+        <!--<bibliomixed id="b_rec37"><abbrev condition="oasis">UN/CEFACT Rec.
           37</abbrev><citetitle><ulink conformance="skip"
           url="http://www.unece.org/cefact/cf_plenary/plenary10/ECE_TRADE_C_CEFACT_2010_14E.pdf"
           >Signed Digital Evidence Interoperability Recommendation, 27
           September 2010</ulink>.</citetitle></bibliomixed>-->
         <bibliomixed id="b_XAdES-ISO">
-          <abbrev>XAdES (ISO)</abbrev><citetitle>
+          <abbrev condition="oasis">XAdES (ISO)</abbrev><citetitle>
             <ulink conformance="skip" url="http://www.iso.org/iso/catalogue_detail?csnumber=56025"
               >ISO 14533-2:2012 Processes, data elements and documents in commerce, industry and
               administration -- Long term signature profiles -- Part 2: Long term signature profiles
               for XML Advanced Electronic Signatures (XAdES) </ulink></citetitle>
         </bibliomixed>
-        <bibliomixed id="b_c14n"><abbrev>XML C14N</abbrev>John Boyer, <citetitle><ulink
-              conformance="skip" url="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">Canonical XML
-              Version 1.0, 15 March 2001</ulink>. </citetitle></bibliomixed>
-        <bibliomixed id="b_xpath20"><abbrev>XPath 2.0</abbrev>Anders Berglund, et al.,
+        <bibliomixed id="b_c14n"><abbrev condition="oasis">XML C14N</abbrev>John Boyer,
               <citetitle><ulink conformance="skip"
+              url="http://www.w3.org/TR/2001/REC-xml-c14n-20010315">Canonical XML Version 1.0, 15
+              March 2001</ulink>. </citetitle></bibliomixed>
+        <bibliomixed id="b_xpath20"><abbrev condition="oasis">XPath 2.0</abbrev>Anders Berglund, et
+          al., <citetitle><ulink conformance="skip"
               url="http://www.w3.org/TR/2007/REC-xpath20-20070123/">XML Path Language (XPath)
               Version 2.0, 23 January 2007</ulink>. </citetitle></bibliomixed>
-        <bibliomixed id="b_xpointer"><abbrev>XPointer</abbrev>Steven DeRose, et al.,
-              <citetitle><ulink conformance="skip" url="http://www.w3.org/TR/xptr/">XML Pointer
+        <bibliomixed id="b_xpointer"><abbrev condition="oasis">XPointer</abbrev>Steven DeRose, et
+          al., <citetitle><ulink conformance="skip" url="http://www.w3.org/TR/xptr/">XML Pointer
               Language (XPointer) Version 1.0 Working Draft, 16 August 2002</ulink>.
           </citetitle></bibliomixed>
-        <bibliomixed id="xslt"><abbrev>XSLT</abbrev><citetitle><ulink conformance="skip"
-              url="http://www.w3.org/TR/1999/REC-xslt-19991116">XSL Transformations (XSLT) Version
-              1.0, W3C Recommendation 16 November 1999</ulink></citetitle></bibliomixed>
-        <bibliomixed id="b_xslt20"><abbrev>XSLT 2.0</abbrev>Michael Kay, <citetitle><ulink
-              url="http://www.w3.org/TR/xslt20/" conformance="skip">XSL Transformations (XSLT)
-              Version 2.0, 2007-01-23</ulink>. </citetitle></bibliomixed>
+        <bibliomixed id="xslt"><abbrev condition="oasis">XSLT</abbrev><citetitle><ulink
+              conformance="skip" url="http://www.w3.org/TR/1999/REC-xslt-19991116">XSL
+              Transformations (XSLT) Version 1.0, W3C Recommendation 16 November
+            1999</ulink></citetitle></bibliomixed>
+        <bibliomixed id="b_xslt20"><abbrev condition="oasis">XSLT 2.0</abbrev>Michael Kay,
+              <citetitle><ulink url="http://www.w3.org/TR/xslt20/" conformance="skip">XSL
+              Transformations (XSLT) Version 2.0, 2007-01-23</ulink>. </citetitle></bibliomixed>
       </bibliolist>
     </section>
   </section>
@@ -1320,8 +1317,7 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
           is usually a buyer.</para>
         <para>In the simplest fulfilment scenario, these distinctions are almost invisible; see
             <xref linkend="F-SIMPLE-FULFILMENT"/> below (used, like the subsequent three, by
-          permission of <ulink url="http://www.DocumentEngineeringServices.com" conformance="skip"
-            >Document Engineering Services</ulink>). In this case, the supplier of the contracted
+          permission of Document Engineering Services). In this case, the supplier of the contracted
           shipment is the consignor of the physical goods, and the buyer is the consignee.</para>
         <figure id="F-SIMPLE-FULFILMENT">
           <title>Simple Fulfilment</title>
@@ -1468,8 +1464,8 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
         <para>Following from UBL 2.1, the UBL 2.2 library and documents support an increased range
           of different business processes. See <xref linkend="S-MINOR-REVISION-UBL-2.2"/> for a
           detailed summary of the changes to the library and documents. The UBL business processes
-          now supported (with the additions in 2.2 shown in italicized boldface) can be categorized
-          as follows:</para>
+          now supported can be categorized as follows (those with document type additions in 2.2 are
+          shown in italicized boldface):</para>
         <itemizedlist spacing="compact" mark="none" role="processLinkSummary">
           <listitem>
             <para>
@@ -1524,20 +1520,17 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
                   </listitem>
                   <listitem>
                     <para>
-                      <emphasis><emphasis role="bold"><xref
-                            linkend="S-CONTRACT-INFORMATION-PREPARATION"/></emphasis></emphasis>
+                      <xref linkend="S-CONTRACT-INFORMATION-PREPARATION"/>
                     </para>
                   </listitem>
                   <listitem>
                     <para>
-                      <emphasis><emphasis role="bold"><xref
-                            linkend="S-CONTRACT-INFORMATION-NOTIFICATION"/></emphasis></emphasis>
+                      <xref linkend="S-CONTRACT-INFORMATION-NOTIFICATION"/>
                     </para>
                   </listitem>
                   <listitem>
                     <para>
-                      <emphasis><emphasis role="bold"><xref linkend="S-INVITATION-TO-TENDER"
-                          /></emphasis></emphasis>
+                      <xref linkend="S-INVITATION-TO-TENDER"/>
                     </para>
                   </listitem>
                   <listitem>
@@ -1554,9 +1547,7 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
                   </listitem>
                   <listitem>
                     <para>
-                      <emphasis><emphasis role="bold"><xref
-                            linkend="S-SUBMISSION-OF-QUALIFICATION-INFORMATION"
-                        /></emphasis></emphasis>
+                      <xref linkend="S-SUBMISSION-OF-QUALIFICATION-INFORMATION"/>
                     </para>
                   </listitem>
                   <listitem>
@@ -1573,8 +1564,7 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
                   </listitem>
                   <listitem>
                     <para>
-                      <emphasis><emphasis role="bold"><xref linkend="S-SUBMISSION-OF-TENDERS"
-                          /></emphasis></emphasis>
+                      <xref linkend="S-SUBMISSION-OF-TENDERS"/>
                     </para>
                   </listitem>
                   <listitem>
@@ -1898,6 +1888,12 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
               <listitem>
                 <para>
                   <emphasis><emphasis role="bold"><xref linkend="S-BUSINESS-CARD"
+                    /></emphasis></emphasis>
+                </para>
+              </listitem>
+              <listitem>
+                <para>
+                  <emphasis><emphasis role="bold"><xref linkend="S-DIGITAL-CAPABILITY"
                     /></emphasis></emphasis>
                 </para>
               </listitem>
@@ -4279,10 +4275,41 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
         </section>
         <section id="S-BUSINESS-CARD">
           <title>Business Card</title>
-          <para>The Business Card allows a standardized way of presenting digital trading capability
-            information in a form that can be published or exchanged with trading partners.</para>
-          <para>The data structures have been derived from the work of ebXML CPPP, OpenPEPPOL and
-            other directory services initiatives.</para>
+          <para>The Business Card allows a standardized way of presenting general trading capability
+            information as well as company’s main communication channels and references to company
+            presentations such as flyers and brochures. </para>
+          <figure id="F-BUSINESS-CARD-PROCESS">
+            <title>Business card process</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="art/UBL-2.2-BusinessCard.png" contentwidth="750px"/>
+              </imageobject>
+              <textobject>
+                <phrase>[Business Card Diagram]</phrase>
+              </textobject>
+            </mediaobject>
+          </figure>
+        </section>
+        <section id="S-DIGITAL-CAPABILITY">
+          <title>Digital Capability</title>
+          <para>The Digital Capability allows a standardized way of presenting digital trading
+            capability ratification in a form that can be published or exchanged with trading
+            partners. The digital capabilities of business partners are the source for building a
+            Digital Agreement.</para>
+          <figure id="F-DIGITAL-CAPABILITY-PROCESS">
+            <title>Digital capability process</title>
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="art/UBL-2.2-DigitalCapability.png" contentwidth="750px"/>
+              </imageobject>
+              <textobject>
+                <phrase>[Digital Capability Diagram]</phrase>
+              </textobject>
+            </mediaobject>
+          </figure>
+          <para>The data structures have been derived from the work of ebXML CPPA (Collaboration
+            Protocol Profile and Agreement), OpenPEPPOL and other directory services
+            initiatives.</para>
         </section>
         <section id="S-DIGITAL-AGREEMENT">
           <title>Digital Agreement</title>
@@ -12183,7 +12210,10 @@ url="https://www.gs1us.org/DesktopModules/Bring2mind/DMX/Download.aspx?command=c
               qualifications are expressed in the <xref linkend="cva"/> file <literal><ulink
                   url="cva/UBL-DefaultDTQ-2.2.cva">cva/UBL-DefaultDTQ-2.2.cva</ulink></literal>. The
               UBL-QualifiedDataTypes-2.2.xsd file in the UBL 2.2 release has declarations for each
-              qualified type being only a restriction of the base type.</para>
+              qualified type being only an unmodified restriction of the base unqualified data type,
+              thus adding no constraints. The Common Basic Components type declarations point to the
+              XSD qualified types where the BBIEs are qualified in the CCTS model, but all BBIEs are
+              effectively unqualified.</para>
             <para>See <xref linkend="A-DATA-TYPE-QUALIFICATIONS-IN-UBL"/> for information regarding
               UBL 2.2 data type derivation.</para>
           </blockquote>
@@ -12656,7 +12686,7 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
         communication this cannot be assumed.</para>
     </section>
     <section id="S-NATURAL-LANGUAGE-TEXT-ELEMENTS">
-      <title>Natural language text elements</title>
+      <title>Natural Language Text Elements</title>
       <para>Natural language text elements such as Note and Description appear throughout the UBL
         document model. They are of the same unstructured Text type as character data fields that
         are not intended for natural language prose, such as Address Line.</para>
@@ -12680,6 +12710,16 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
         <para><emphasis role="bold">[IND8]</emphasis> Where two or more sibling &#8220;Text.
           Type&#8221; elements of the same name exist in a document, no two can omit the
             &#8220;<phrase lang="none">languageID</phrase>&#8221; attribute.</para>
+      </blockquote>
+    </section>
+    <section id="S-EMPTY-ATTRIBUTES">
+      <title>Empty Attributes</title>
+      <para>Attributes in UBL are used exclusively for supplemental components of the data types of
+        basic business information entities. An empty attribute conveys no information but may be
+        the source of confusion for users.</para>
+      <blockquote>
+        <para><emphasis role="bold">[IND7]</emphasis> UBL-conforming instance documents MUST NOT
+          contain an attribute devoid of content or containing null values.</para>
       </blockquote>
     </section>
   </section>
@@ -14038,9 +14078,9 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
             Common Library and those in the UBL 2.2 Common Library.</para>
           <table id="T-CHANGES-TO-LIBRARY-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
             <title>Changes to Library Elements Universal Business Language (UBL)</title>
-            <!--old2new-->
+            <!--old2new Library UBL current to 2.1 -->
             <tgroup cols="3">
-              <!--Library Universal Business Language (UBL)-->
+              <!--Library Universal Business Language (UBL) 2.2 csd02wd02 to 2.1-->
               <colspec colwidth="35*"/>
               <colspec colwidth="35*"/>
               <colspec colwidth="30*"/>
@@ -14251,6 +14291,12 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                 </row>
                 <row>
                   <entry> </entry>
+                  <entry remap="Evidence. Confidentiality Level Code. Code"
+                    >ConfidentialityLevelCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
                   <entry remap="Evidence. Document Reference">DocumentReference</entry>
                   <entry>Changed cardinality from 0..1 to 0..n</entry>
                 </row>
@@ -14287,6 +14333,19 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                   <entry remap="Meter. Meter Name. Name">MeterName</entry>
                   <entry>Changed dictionary entry name from “Meter. Meter Name. Text” to “Meter.
                     Meter Name. Name”</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>MonetaryTotal</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Monetary Total. Withholding Tax_ Total Amount. Amount"
+                    >WithholdingTaxTotalAmount</entry>
+                  <entry>Added</entry>
                 </row>
                 <row>
                   <?dbhtml bgcolor="#DDDDDD"?>
@@ -14439,13 +14498,6 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                 <row>
                   <?dbhtml bgcolor="#DDDDDD"?>
                   <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tendering Criteria Group. Details">TenderingCriteriaGroup</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
                   <entry remap="Tendering Criterion. Details">TenderingCriterion</entry>
                   <entry> </entry>
                   <entry>Added</entry>
@@ -14453,8 +14505,16 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                 <row>
                   <?dbhtml bgcolor="#DDDDDD"?>
                   <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tendering Criterion Requirement. Details"
-                    >TenderingCriterionRequirement</entry>
+                  <entry remap="Tendering Criterion Property. Details"
+                    >TenderingCriterionProperty</entry>
+                  <entry> </entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry remap="Tendering Criterion Property Group. Details"
+                    >TenderingCriterionPropertyGroup</entry>
                   <entry> </entry>
                   <entry>Added</entry>
                 </row>
@@ -14561,9 +14621,9 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
             document schemas and those in the UBL 2.2 document schemas.</para>
           <table id="T-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
             <title>Changes to Document Elements Universal Business Language (UBL)</title>
-            <!--old2new-->
+            <!--old2new Document UBL current to 2.1-->
             <tgroup cols="3">
-              <!--Document Universal Business Language (UBL)-->
+              <!--Document Universal Business Language (UBL) 2.2 csd02wd02 to 2.1-->
               <colspec colwidth="35*"/>
               <colspec colwidth="35*"/>
               <colspec colwidth="30*"/>
@@ -14657,6 +14717,16 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                 </row>
                 <row>
                   <entry> </entry>
+                  <entry remap="Credit Note. Due Date. Date">DueDate</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Credit Note. Project Reference">ProjectReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
                   <entry remap="Credit Note. Withholding_ Tax Total. Tax Total"
                     >WithholdingTaxTotal</entry>
                   <entry>Added</entry>
@@ -14737,6 +14807,16 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                   <entry>FreightInvoice</entry>
                   <entry> </entry>
                   <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Freight Invoice. Due Date. Date">DueDate</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Freight Invoice. Project Reference">ProjectReference</entry>
+                  <entry>Added</entry>
                 </row>
                 <row>
                   <entry> </entry>
@@ -14834,6 +14914,28 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                 </row>
                 <row>
                   <entry> </entry>
+                  <entry remap="Self Billed Credit Note. Due Date. Date">DueDate</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Credit Note. Credit Note Type Code. Code"
+                    >CreditNoteTypeCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Credit Note. Buyer_ Reference. Text"
+                    >BuyerReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Credit Note. Project Reference">ProjectReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
                   <entry remap="Self Billed Credit Note. Withholding_ Tax Total. Tax Total"
                     >WithholdingTaxTotal</entry>
                   <entry>Added</entry>
@@ -14844,6 +14946,21 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                   <entry>SelfBilledInvoice</entry>
                   <entry> </entry>
                   <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Invoice. Due Date. Date">DueDate</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Invoice. Buyer_ Reference. Text">BuyerReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Invoice. Project Reference">ProjectReference</entry>
+                  <entry>Added</entry>
                 </row>
                 <row>
                   <entry> </entry>
@@ -15020,6 +15137,437 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
         <para>The UBL 2.2 release does not include the non-normative RELAX-NG and UML diagram
           alternative representations of the UBL normative schemas that are found in earlier
           releases.</para>
+      </section>
+      <section id="S-TEMPORARY-ANNEX-SCHEMA-CHANGES-FROM-UBL-2.2-CSPRD01-TO-UBL-2.2-&isostage;">
+        <title>Temporary Annex: Schema changes from UBL 2.2 csprd01 to UBL 2.2 &stage;</title>
+        <section id="S-UBL-2.2-CSPRD01-SCHEMA-CHANGES-INTRODUCTION">
+          <title>UBL 2.2 csprd01 Schema Changes Introduction</title>
+          <para>The following two tables show the differences between the XML elements in UBL 2.1
+            and those in UBL 2.2.</para>
+          <para>All changes in 2.2 schemas are backward-compatible with valid UBL 2.1 and UBL 2.0
+            instances. Changes include the addition of new elements and attributes; changes in
+            cardinality from 1 to 0..1 (i.e., making a formerly required element optional); changes
+            in cardinality from 0..1 to 0..n (i.e., allowing an unlimited number of occurrences
+            instead of just one); and corrections to Dictionary Entry Names (DENs).</para>
+        </section>
+        <section id="S-CHANGES-TO-LIBRARY-ELEMENTS-UBL-2.2-CSPRD01-TO-UBL-2.2-&isostage;">
+          <title>Changes to Library Elements, UBL 2.2 csprd01 to UBL 2.2 &stage;</title>
+          <para>The following table sums up the differences between the XML elements in the UBL 2.2
+            csprd01 Common Library and those in the current UBL 2.2 &stage; Common Library.</para>
+          <table id="T-UBL-2.2-CSPRD01-CHANGES-TO-LIBRARY-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
+            <title>UBL 2.2 csprd01 Changes to Library Elements Universal Business Language
+              (UBL)</title>
+            <!--old2new Library UBL current to 2.2 csd01-->
+            <tgroup cols="3">
+              <!--Library Universal Business Language (UBL) 2.2 csd02wd02 to 2.2 csd01-->
+              <colspec colwidth="35*"/>
+              <colspec colwidth="35*"/>
+              <colspec colwidth="30*"/>
+              <thead>
+                <row>
+                  <entry>Aggregate BIE</entry>
+                  <entry>Basic or Association BIE</entry>
+                  <entry>Changes for UBL</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>EconomicOperatorParty</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Economic Operator Party. Qualifying Party">QualifyingParty</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>Evidence</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Evidence. Confidentiality Level Code. Code"
+                    >ConfidentialityLevelCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>Legislation</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Legislation. Language">Language</entry>
+                  <entry>Changed dictionary entry name from “Legislation. Language. Text” to
+                    “Legislation. Language” and changed component type from BBIE to ASBIE</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>MonetaryTotal</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Monetary Total. Withholding Tax_ Total Amount. Amount"
+                    >WithholdingTaxTotalAmount</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>ResponseValue</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Response Value. Response URI. Identifier">ResponseURI</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>TenderingCriteriaGroup</entry>
+                  <entry> </entry>
+                  <entry>Deleted</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>TenderingCriterion</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Tendering Criterion. Tendering Criteria Group"
+                    >TenderingCriteriaGroup</entry>
+                  <entry>Deleted</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Tendering Criterion. Tendering Criterion Property Group"
+                    >TenderingCriterionPropertyGroup</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry remap="Tendering Criterion Property. Details"
+                    >TenderingCriterionProperty</entry>
+                  <entry> </entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry remap="Tendering Criterion Property Group. Details"
+                    >TenderingCriterionPropertyGroup</entry>
+                  <entry> </entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>TenderingCriterionResponse</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry
+                    remap="Tendering Criterion Response. Validated Criterion Requirement Identifier. Identifier"
+                    >ValidatedCriterionRequirementID</entry>
+                  <entry>Deleted</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Tendering Criterion Response. Evidence">Evidence</entry>
+                  <entry>Deleted</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry
+                    remap="Tendering Criterion Response. Validated Criterion Property Identifier. Identifier"
+                    >ValidatedCriterionPropertyID</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Tendering Criterion Response. Confidentiality Level Code. Code"
+                    >ConfidentialityLevelCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Tendering Criterion Response. Evidence Supplied"
+                    >EvidenceSupplied</entry>
+                  <entry>Added</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
+        <section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-UBL-2.2-CSPRD01-TO-UBL-2.2-&isostage;">
+          <title>Changes to Document Elements, UBL 2.2 csprd01 to UBL 2.2 &stage;</title>
+          <para>The following table sums up the differences between the XML elements in the UBL 2.2
+            csprd01 document schemas and those in the current UBL 2.2 &stage; document
+            schemas.</para>
+          <table id="T-UBL-2.2-CSPRD01-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
+            <title>UBL 2.2 csprd01 Changes to Document Elements Universal Business Language
+              (UBL)</title>
+            <!--old2new Document UBL current to 2.2 csd01-->
+            <tgroup cols="3">
+              <!--Document Universal Business Language (UBL) 2.2 csd02wd02 to 2.2 csd01-->
+              <colspec colwidth="35*"/>
+              <colspec colwidth="35*"/>
+              <colspec colwidth="30*"/>
+              <thead>
+                <row>
+                  <entry>Aggregate BIE</entry>
+                  <entry>Basic or Association BIE</entry>
+                  <entry>Changes for UBL</entry>
+                </row>
+              </thead>
+              <tbody>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>BusinessCard</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Business Card. Sender_ Party. Party">SenderParty</entry>
+                  <entry>Changed cardinality from 1 to 0..1</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Business Card. Receiver_ Party. Party">ReceiverParty</entry>
+                  <entry>Changed cardinality from 1 to 0..1</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Business Card. Business_ Party. Party">BusinessParty</entry>
+                  <entry>Changed cardinality from 0..1 to 1</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>CreditNote</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Credit Note. Due Date. Date">DueDate</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Credit Note. Project Reference">ProjectReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>DigitalCapability</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Digital Capability. Sender_ Party. Party">SenderParty</entry>
+                  <entry>Changed cardinality from 1 to 0..1</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Digital Capability. Receiver_ Party. Party">ReceiverParty</entry>
+                  <entry>Changed cardinality from 1 to 0..1</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Digital Capability. Business_ Party. Party">BusinessParty</entry>
+                  <entry>Changed cardinality from 0..1 to 1</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>FreightInvoice</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Freight Invoice. Due Date. Date">DueDate</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Freight Invoice. Project Reference">ProjectReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>QualificationApplicationRequest</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Request. Procedure Code. Code"
+                    >ProcedureCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry
+                    remap="Qualification Application Request. Qualification Application Type Code. Code"
+                    >QualificationApplicationTypeCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry
+                    remap="Qualification Application Request. Weight Scoring Methodology Note. Text"
+                    >WeightScoringMethodologyNote</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Request. Weighting Type Code. Code"
+                    >WeightingTypeCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Request. Economic Operator Party"
+                    >EconomicOperatorParty</entry>
+                  <entry>Changed cardinality from 0..1 to 0..n</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>QualificationApplicationResponse</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Response. Tenderer Role Code. Code"
+                    >TendererRoleCode</entry>
+                  <entry>Deleted</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Response. Procedure Code. Code"
+                    >ProcedureCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry
+                    remap="Qualification Application Response. Qualification Application Type Code. Code"
+                    >QualificationApplicationTypeCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry
+                    remap="Qualification Application Response. Weight Scoring Methodology Note. Text"
+                    >WeightScoringMethodologyNote</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Response. Weighting Type Code. Code"
+                    >WeightingTypeCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Response. Economic Operator Party"
+                    >EconomicOperatorParty</entry>
+                  <entry>Changed cardinality from 1 to 1..n</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Response. Tendering Criterion Response"
+                    >TenderingCriterionResponse</entry>
+                  <entry>Changed cardinality from 0..n to 1..n</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Qualification Application Response. Evidence">Evidence</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>SelfBilledCreditNote</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Credit Note. Due Date. Date">DueDate</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Credit Note. Credit Note Type Code. Code"
+                    >CreditNoteTypeCode</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Credit Note. Buyer_ Reference. Text"
+                    >BuyerReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Credit Note. Project Reference">ProjectReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <?dbhtml bgcolor="#DDDDDD"?>
+                  <?dbfo bgcolor="#DDDDDD"?>
+                  <entry>SelfBilledInvoice</entry>
+                  <entry> </entry>
+                  <entry> </entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Invoice. Due Date. Date">DueDate</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Invoice. Buyer_ Reference. Text">BuyerReference</entry>
+                  <entry>Added</entry>
+                </row>
+                <row>
+                  <entry> </entry>
+                  <entry remap="Self Billed Invoice. Project Reference">ProjectReference</entry>
+                  <entry>Added</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
+        </section>
       </section>
     </section>
   </appendix>
@@ -15309,7 +15857,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       <para><literal><ulink url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Period.Details"
             conformance="skip" role="DEN-Name" remap="Period. Details">Period</ulink></literal> will
         be found at line <ulink url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Period.Details"
-          conformance="skip" role="DEN-Row" remap="Period. Details">1507</ulink> and seen to contain
+          conformance="skip" role="DEN-Row" remap="Period. Details">1510</ulink> and seen to contain
         a number of possible BBIE children, all of them optional; and the ASBIE <literal><ulink
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Invoice.Invoice_Period.Period"
             conformance="skip" role="DEN-Name" remap="Invoice. Invoice_ Period. Period"
@@ -15322,7 +15870,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         more than 50 of them in UBL) need not contain any of the seven optional BBIE elements
         specified after line <ulink
           url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Period.Details" conformance="skip"
-          role="DEN-Row" remap="Period. Details">1507</ulink>, and indeed the corresponding
+          role="DEN-Row" remap="Period. Details">1510</ulink>, and indeed the corresponding
         declaration of the complex type <literal>PeriodType</literal> in the CAC schema
             (<literal><ulink url="xsd/common/UBL-CommonAggregateComponents-2.2.xsd"
             >xsd/common/UBL-CommonAggregateComponents-2.2.xsd</ulink></literal>) shows that an empty
@@ -15393,7 +15941,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             conformance="skip" role="DEN-Name" remap="Supplier Party. Details"
           >SupplierParty</ulink></literal> (line <ulink
           url="mod/summary/reports/UBL-Invoice-2.2.html#Table_SupplierParty.Details"
-          conformance="skip" role="DEN-Row" remap="Supplier Party. Details">2035</ulink> of the
+          conformance="skip" role="DEN-Row" remap="Supplier Party. Details">2039</ulink> of the
         Common Library) and <literal><ulink
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_CustomerParty.Details"
             conformance="skip" role="DEN-Name" remap="Customer Party. Details"
@@ -15402,17 +15950,17 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
           conformance="skip" role="DEN-Row" remap="Customer Party. Details">562</ulink> of the
         Common Library) can contain an ASBIE named <literal>Party</literal> (as shown in lines
           <ulink url="mod/summary/reports/UBL-Invoice-2.2.html#Table_SupplierParty.Party"
-          conformance="skip" role="DEN-Row" remap="Supplier Party. Party">2039</ulink> and <ulink
+          conformance="skip" role="DEN-Row" remap="Supplier Party. Party">2043</ulink> and <ulink
           url="mod/summary/reports/UBL-Invoice-2.2.html#Table_CustomerParty.Party"
           conformance="skip" role="DEN-Row" remap="Customer Party. Party">566</ulink>, respectively)
         and that each <literal>Party</literal> ASBIE is an instantiation of the <literal><ulink
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Party.Details" conformance="skip"
             role="DEN-Name" remap="Party. Details">Party</ulink></literal> ABIE (line <ulink
           url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Party.Details" conformance="skip"
-          role="DEN-Row" remap="Party. Details">1399</ulink>). Therefore both parties have the same
+          role="DEN-Row" remap="Party. Details">1402</ulink>). Therefore both parties have the same
         structure (the BBIEs and ASBIEs following line <ulink
           url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Party.Details" conformance="skip"
-          role="DEN-Row" remap="Party. Details">1399</ulink>). Thus <literal><ulink
+          role="DEN-Row" remap="Party. Details">1402</ulink>). Thus <literal><ulink
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Invoice.Accounting_SupplierParty.SupplierParty"
             conformance="skip" role="DEN-Name"
             remap="Invoice. Accounting_ Supplier Party. Supplier Party"
@@ -15426,17 +15974,17 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Party.PartyName" conformance="skip"
             role="DEN-Name" remap="Party. Party Name">PartyName</ulink></literal> (line <ulink
           url="mod/summary/reports/UBL-Invoice-2.2.html#Table_Party.PartyName" conformance="skip"
-          role="DEN-Row" remap="Party. Party Name">1407</ulink>) that derives (the Associated Object
+          role="DEN-Row" remap="Party. Party Name">1410</ulink>) that derives (the Associated Object
         Class column) from the ABIE <literal><ulink
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_PartyName.Details"
             conformance="skip" role="DEN-Name" remap="Party Name. Details"
           >PartyName</ulink></literal> (line <ulink
           url="mod/summary/reports/UBL-Invoice-2.2.html#Table_PartyName.Details" conformance="skip"
-          role="DEN-Row" remap="Party Name. Details">1438</ulink>), which is a wrapper for the BBIE
+          role="DEN-Row" remap="Party Name. Details">1441</ulink>), which is a wrapper for the BBIE
             <literal><ulink url="mod/summary/reports/UBL-Invoice-2.2.html#Table_PartyName.Name"
             conformance="skip" role="DEN-Name" remap="Party Name. Name">Name</ulink></literal> (line
           <ulink url="mod/summary/reports/UBL-Invoice-2.2.html#Table_PartyName.Name"
-          conformance="skip" role="DEN-Row" remap="Party Name. Name">1439</ulink>). A conforming
+          conformance="skip" role="DEN-Row" remap="Party Name. Name">1442</ulink>). A conforming
         piece of the document instance might therefore look like this: </para>
       <programlisting role="font-size-92%"><![CDATA[  <cac:AccountingSupplierParty>
     <cac:Party>
@@ -15479,7 +16027,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             conformance="skip" role="DEN-Name" remap="Monetary Total. Details"
           >MonetaryTotal</ulink></literal> (line <literal><ulink
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_MonetaryTotal.Details"
-            conformance="skip" role="DEN-Row" remap="Monetary Total. Details">1322</ulink>), which
+            conformance="skip" role="DEN-Row" remap="Monetary Total. Details">1324</ulink>), which
           has a mandatory <ulink
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_MonetaryTotal.Payable_Amount.Amount"
             conformance="skip" role="DEN-Name" remap="Monetary Total. Payable_ Amount. Amount"
@@ -15504,7 +16052,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         that BBIE (line <ulink
           url="mod/summary/reports/UBL-Invoice-2.2.html#Table_MonetaryTotal.Payable_Amount.Amount"
           conformance="skip" role="DEN-Row" remap="Monetary Total. Payable_ Amount. Amount"
-          >1330</ulink>). This is because UBL does not define the primitive data types upon which
+          >1333</ulink>). This is because UBL does not define the primitive data types upon which
         the model is built; instead it uses standard data type definitions from <xref linkend="ccts"
         /> and <xref linkend="xsd2"/>. In the case of <literal><ulink
             url="mod/summary/reports/UBL-Invoice-2.2.html#Table_MonetaryTotal.Payable_Amount.Amount"
@@ -16398,7 +16946,11 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
           list check using an unmodified version of the test setup from this distribution as
           described above will verify all occurrences of code values from these lists against the
           values specified in the <literal>cl/gc/default</literal> directory. These are the code
-          lists expected to be used in most application contexts.</para>
+          lists expected to be used in most application contexts, but there is no obligation to use
+          them. The genericode files with corresponding “including deprecated” or “including
+          deleted” files have been culled of deprecated or deleted values in order to be used in
+          typical contexts. The files with entries no longer used are included for
+          completeness.</para>
         <!--gentext: codelists-->
         <blockquote>
           <simplelist role="codelists">
@@ -16412,6 +16964,12 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
               <literal>
                 <ulink url="cl/gc/default/BinaryObjectMimeCode-2.2.gc"
                   >cl/gc/default/BinaryObjectMimeCode-2.2.gc</ulink>
+              </literal>
+            </member>
+            <member>
+              <literal>
+                <ulink url="cl/gc/default/BinaryObjectMimeCode-2.2-incl-deprecated.gc"
+                  >cl/gc/default/BinaryObjectMimeCode-2.2-incl-deprecated.gc</ulink>
               </literal>
             </member>
             <member>
@@ -16446,6 +17004,12 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             </member>
             <member>
               <literal>
+                <ulink url="cl/gc/default/PackagingTypeCode-2.2-incl-deleted.gc"
+                  >cl/gc/default/PackagingTypeCode-2.2-incl-deleted.gc</ulink>
+              </literal>
+            </member>
+            <member>
+              <literal>
                 <ulink url="cl/gc/default/PaymentMeansCode-2.2.gc"
                   >cl/gc/default/PaymentMeansCode-2.2.gc</ulink>
               </literal>
@@ -16466,6 +17030,12 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
               <literal>
                 <ulink url="cl/gc/default/UnitOfMeasureCode-2.2.gc"
                   >cl/gc/default/UnitOfMeasureCode-2.2.gc</ulink>
+              </literal>
+            </member>
+            <member>
+              <literal>
+                <ulink url="cl/gc/default/UnitOfMeasureCode-2.2-incl-deleted.gc"
+                  >cl/gc/default/UnitOfMeasureCode-2.2-incl-deleted.gc</ulink>
               </literal>
             </member>
             <member>
@@ -17019,8 +17589,9 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       its contribution of XEP licenses used in generating PDF documents from DocBook originals; and
       Crane Softwrights for the generation of the summary reports.</para>
     <para>The following persons and companies participated as members of the OASIS UBL Technical
-      Committee during the four years of its development (2013&ndash;2016).</para>
+      Committee during the four years of its development (2013–2017).</para>
     <simplelist lang="none">
+      <member>Todd Albers, Federal Reserve Bank of Minneapolis</member>
       <member>Oriol Bausà Peris, Individual</member>
       <member>Kenneth Bengtsson, Alfa1lab</member>
       <member>Erlend Klakegg Bergheim, Difi-Agency for Public Management and <phrase lang="none"
@@ -17073,6 +17644,18 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
           </row>
         </thead>
         <tbody>
+          <row>
+            <entry>csd02wd02</entry>
+            <entry>04 October 2017</entry>
+            <entry>GKH</entry>
+            <entry>Prepare dated version of CSD02WD02 for voting</entry>
+          </row>
+          <row>
+            <entry>csd02wd02</entry>
+            <entry>30 September 2017</entry>
+            <entry>GKH</entry>
+            <entry>Incorporate CSD02 changes (models and code lists)</entry>
+          </row>
           <row>
             <entry>csprd01</entry>
             <entry>18 January 2017</entry>

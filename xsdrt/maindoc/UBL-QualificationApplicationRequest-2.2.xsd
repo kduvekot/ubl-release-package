@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.2/
-  Release Date:      21 December 2016
+  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
+  Release Date:      01 November 2017
   Module:            xsdrt/maindoc/UBL-QualificationApplicationRequest-2.2.xsd
-  Generated on:      2016-12-19 23:28z
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
+  Generated on:      2017-10-30 23:18z
+  Copyright (c) OASIS Open 2017. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:QualificationApplicationRequest-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -40,9 +40,17 @@
          <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:VersionID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PreviousVersionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProcedureCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:QualificationApplicationTypeCode"
+                      minOccurs="0"
+                      maxOccurs="1"/>
+         <xsd:element ref="cbc:WeightScoringMethodologyNote"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:WeightingTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:ContractingParty" minOccurs="1" maxOccurs="unbounded"/>
-         <xsd:element ref="cac:EconomicOperatorParty" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:EconomicOperatorParty" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:ProcurementProject" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ProcurementProjectLot" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:TenderingCriterion" minOccurs="0" maxOccurs="unbounded"/>

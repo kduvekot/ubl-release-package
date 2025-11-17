@@ -13,7 +13,7 @@
                 xmlns:exsl="http://exslt.org/common"
                 extension-element-prefixes="saxon xalanredirect lxslt exsl"
                 version="1.0">
-<!-- $Id: oasis-note-html.xsl,v 1.6 2016/11/08 03:15:13 admin Exp $ -->
+<!-- $Id: oasis-note-html.xsl,v 1.7 2017/07/11 11:38:40 admin Exp $ -->
 
 <!-- This stylesheet is a customization of the DocBook XSL Stylesheets -->
 <!-- from http://docs.oasis-open.org/templates/ -->
@@ -739,7 +739,7 @@
         </xsl:choose>
         <xsl:text> </xsl:text>
         <xsl:value-of select="/*/articleinfo/copyright/year"/>
-        <xsl:text>. All rights reserved.</xsl:text>
+        <xsl:text>. All Rights Reserved.</xsl:text>
       </td>
       <td style="text-align:right">
         <xsl:value-of select="/*/articleinfo/pubdate"/>

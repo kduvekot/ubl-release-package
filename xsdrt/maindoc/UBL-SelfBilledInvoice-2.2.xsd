@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.2/
-  Release Date:      21 December 2016
+  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
+  Release Date:      01 November 2017
   Module:            xsdrt/maindoc/UBL-SelfBilledInvoice-2.2.xsd
-  Generated on:      2016-12-19 23:28z
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
+  Generated on:      2017-10-30 23:18z
+  Copyright (c) OASIS Open 2017. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SelfBilledInvoice-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -35,6 +35,7 @@
          <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1"/>
          <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:DueDate" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TaxPointDate" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:InvoiceTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
@@ -48,6 +49,7 @@
          <xsd:element ref="cbc:AccountingCostCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:AccountingCost" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:LineCountNumeric" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:BuyerReference" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:InvoicePeriod" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:OrderReference" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:BillingReference" minOccurs="0" maxOccurs="unbounded"/>
@@ -69,6 +71,7 @@
          <xsd:element ref="cac:AdditionalDocumentReference"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
+         <xsd:element ref="cac:ProjectReference" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:AccountingCustomerParty" minOccurs="1" maxOccurs="1"/>
          <xsd:element ref="cac:AccountingSupplierParty" minOccurs="1" maxOccurs="1"/>

@@ -26,7 +26,6 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       <cac:Country>
         <cbc:IdentificationCode>US</cbc:IdentificationCode>
       </cac:Country>
-      <cac:LocationCoordinate/>
     </cac:PostalAddress>
     <cac:PhysicalLocation>
       <cbc:InformationURI>https://goo.gl/maps/2k242</cbc:InformationURI>
@@ -69,7 +68,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       <cbc:URI>https://plus.google.com/+Oasis-openOrg</cbc:URI>
     </cac:SocialMediaProfile>
   </cac:SenderParty>
-  <cac:ReceiverParty>
+  <cac:BusinessParty>
     <cbc:EndpointID schemeID="GLN" schemeAgencyID="9">9994567987654</cbc:EndpointID>
     <cac:PartyIdentification>
       <cbc:ID schemeID="GB:VAT">GB999999973</cbc:ID>
@@ -83,7 +82,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         <cbc:IdentificationCode>GB</cbc:IdentificationCode>
       </cac:Country>
     </cac:PostalAddress>
-  </cac:ReceiverParty>
+  </cac:BusinessParty>
   <cac:BusinessCapability>
     <cbc:CapabilityTypeCode>General</cbc:CapabilityTypeCode>
     <cbc:Description>Advancing open standards for the information society.</cbc:Description>

@@ -26,7 +26,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       </cac:Country>
     </cac:PostalAddress>
   </cac:SenderParty>
-  <cac:ReceiverParty>
+  <cac:BusinessParty>
     <cbc:EndpointID schemeID="GLN" schemeAgencyID="9">9994567987654</cbc:EndpointID>
     <cac:PartyIdentification>
       <cbc:ID schemeID="IT:VAT">IT01234567890</cbc:ID>
@@ -40,7 +40,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         <cbc:IdentificationCode>IT</cbc:IdentificationCode>
       </cac:Country>
     </cac:PostalAddress>
-  </cac:ReceiverParty>
+  </cac:BusinessParty>
   <cac:DigitalProcess>
     <cbc:ID>urn:www.cenbii.eu:profile:bii05:ver2.0</cbc:ID>
     <cbc:ProfileID>BII</cbc:ProfileID>

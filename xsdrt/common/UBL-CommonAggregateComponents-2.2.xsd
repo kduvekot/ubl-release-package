@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.2/
-  Release Date:      21 December 2016
+  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
+  Release Date:      01 November 2017
   Module:            xsdrt/common/UBL-CommonAggregateComponents-2.2.xsd
-  Generated on:      2016-12-19 23:28z
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
+  Generated on:      2017-10-30 23:18z
+  Copyright (c) OASIS Open 2017. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -660,8 +660,8 @@
    <xsd:element name="SubscriberParty" type="PartyType"/>
    <xsd:element name="SubsequentProcessTenderRequirement" type="TenderRequirementType"/>
    <xsd:element name="SubsidiaryLocation" type="LocationType"/>
-   <xsd:element name="SubsidiaryTenderingCriteriaGroup"
-                type="TenderingCriteriaGroupType"/>
+   <xsd:element name="SubsidiaryTenderingCriterionPropertyGroup"
+                type="TenderingCriterionPropertyGroupType"/>
    <xsd:element name="SubstituteCarrierParty" type="PartyType"/>
    <xsd:element name="SuggestedEvidence" type="EvidenceType"/>
    <xsd:element name="SupplierConsumption" type="SupplierConsumptionType"/>
@@ -715,10 +715,10 @@
    <xsd:element name="TendererQualificationRequest"
                 type="TendererQualificationRequestType"/>
    <xsd:element name="TendererRequirement" type="TendererRequirementType"/>
-   <xsd:element name="TenderingCriteriaGroup" type="TenderingCriteriaGroupType"/>
    <xsd:element name="TenderingCriterion" type="TenderingCriterionType"/>
-   <xsd:element name="TenderingCriterionRequirement"
-                type="TenderingCriterionRequirementType"/>
+   <xsd:element name="TenderingCriterionProperty" type="TenderingCriterionPropertyType"/>
+   <xsd:element name="TenderingCriterionPropertyGroup"
+                type="TenderingCriterionPropertyGroupType"/>
    <xsd:element name="TenderingCriterionResponse" type="TenderingCriterionResponseType"/>
    <xsd:element name="TenderingProcess" type="TenderingProcessType"/>
    <xsd:element name="TenderingTerms" type="TenderingTermsType"/>
@@ -1848,6 +1848,7 @@
    </xsd:complexType>
    <xsd:complexType name="EconomicOperatorPartyType">
       <xsd:sequence>
+         <xsd:element ref="cac:QualifyingParty" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:EconomicOperatorRole" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:Party" minOccurs="1" maxOccurs="1"/>
       </xsd:sequence>
@@ -2015,6 +2016,7 @@
          <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:CandidateStatement" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:ConfidentialityLevelCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:EvidenceIssuingParty" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Language" minOccurs="0" maxOccurs="1"/>
@@ -2496,10 +2498,10 @@
          <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Title" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cbc:Language" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:JurisdictionLevel" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:Article" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:URI" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:Language" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:JurisdictionRegionAddress"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
@@ -2672,6 +2674,7 @@
          <xsd:element ref="cbc:TaxInclusiveAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:AllowanceTotalAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ChargeTotalAmount" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:WithholdingTaxTotalAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PrepaidAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PayableRoundingAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PayableAmount" minOccurs="1" maxOccurs="1"/>
@@ -3340,6 +3343,7 @@
          <xsd:element ref="cbc:ResponseNumeric" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ResponseQuantity" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ResponseTime" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ResponseURI" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="ResultOfVerificationType">
@@ -3949,22 +3953,6 @@
          <xsd:element ref="cac:SuggestedEvidence" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
-   <xsd:complexType name="TenderingCriteriaGroupType">
-      <xsd:sequence>
-         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cbc:CriteriaGroupTypeCode" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:FulfilmentIndicator" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:FulfilmentIndicatorTypeCode" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cac:TenderingCriterionRequirement"
-                      minOccurs="1"
-                      maxOccurs="unbounded"/>
-         <xsd:element ref="cac:SubsidiaryTenderingCriteriaGroup"
-                      minOccurs="0"
-                      maxOccurs="unbounded"/>
-      </xsd:sequence>
-   </xsd:complexType>
    <xsd:complexType name="TenderingCriterionType">
       <xsd:sequence>
          <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
@@ -3980,20 +3968,27 @@
                       maxOccurs="unbounded"/>
          <xsd:element ref="cac:SubTenderingCriterion" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Legislation" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cac:TenderingCriteriaGroup"
+         <xsd:element ref="cac:TenderingCriterionPropertyGroup"
                       minOccurs="1"
                       maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
-   <xsd:complexType name="TenderingCriterionRequirementType">
+   <xsd:complexType name="TenderingCriterionPropertyType">
       <xsd:sequence>
          <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:TypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ValueDataTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ValueUnitCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ValueCurrencyCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ExpectedAmount" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ExpectedID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ExpectedCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ExpectedValueNumeric" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ExpectedDescription" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:MaximumAmount" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:MinimumAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:MaximumValueNumeric" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:MinimumValueNumeric" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TranslationTypeCode" minOccurs="0" maxOccurs="1"/>
@@ -4005,17 +4000,32 @@
          <xsd:element ref="cac:TemplateEvidence" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
+   <xsd:complexType name="TenderingCriterionPropertyGroupType">
+      <xsd:sequence>
+         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:PropertyGroupTypeCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:FulfilmentIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:FulfilmentIndicatorTypeCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:TenderingCriterionProperty"
+                      minOccurs="1"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:SubsidiaryTenderingCriterionPropertyGroup"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:complexType>
    <xsd:complexType name="TenderingCriterionResponseType">
       <xsd:sequence>
          <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cbc:ValidatedCriterionRequirementID"
-                      minOccurs="0"
-                      maxOccurs="1"/>
+         <xsd:element ref="cbc:ValidatedCriterionPropertyID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ConfidentialityLevelCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ResponseValue" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:ApplicablePeriod" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cac:Evidence" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:EvidenceSupplied" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="TenderingProcessType">

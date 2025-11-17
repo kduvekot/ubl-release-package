@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.2/
-  Release Date:      21 December 2016
+  Library:           OASIS Universal Business Language (UBL) 2.2 CSPRD02
+                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.2/
+  Release Date:      01 November 2017
   Module:            xsdrt/common/UBL-CommonBasicComponents-2.2.xsd
-  Generated on:      2016-12-19 23:28z
-  Copyright (c) OASIS Open 2016. All Rights Reserved.
+  Generated on:      2017-10-30 23:18z
+  Copyright (c) OASIS Open 2017. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"
@@ -178,6 +178,7 @@
    <xsd:element name="ConditionCode" type="ConditionCodeType"/>
    <xsd:element name="Conditions" type="ConditionsType"/>
    <xsd:element name="ConditionsDescription" type="ConditionsDescriptionType"/>
+   <xsd:element name="ConfidentialityLevelCode" type="ConfidentialityLevelCodeType"/>
    <xsd:element name="ConsigneeAssignedID" type="ConsigneeAssignedIDType"/>
    <xsd:element name="ConsignmentQuantity" type="ConsignmentQuantityType"/>
    <xsd:element name="ConsignorAssignedID" type="ConsignorAssignedIDType"/>
@@ -224,7 +225,6 @@
    <xsd:element name="CreditNoteTypeCode" type="CreditNoteTypeCodeType"/>
    <xsd:element name="CreditedQuantity" type="CreditedQuantityType"/>
    <xsd:element name="CrewQuantity" type="CrewQuantityType"/>
-   <xsd:element name="CriteriaGroupTypeCode" type="CriteriaGroupTypeCodeType"/>
    <xsd:element name="CriterionTypeCode" type="CriterionTypeCodeType"/>
    <xsd:element name="CurrencyCode" type="CurrencyCodeType"/>
    <xsd:element name="CurrentChargeType" type="CurrentChargeTypeType"/>
@@ -336,6 +336,10 @@
    <xsd:element name="ExecutionRequirementCode" type="ExecutionRequirementCodeType"/>
    <xsd:element name="ExemptionReason" type="ExemptionReasonType"/>
    <xsd:element name="ExemptionReasonCode" type="ExemptionReasonCodeType"/>
+   <xsd:element name="ExpectedAmount" type="ExpectedAmountType"/>
+   <xsd:element name="ExpectedCode" type="ExpectedCodeType"/>
+   <xsd:element name="ExpectedDescription" type="ExpectedDescriptionType"/>
+   <xsd:element name="ExpectedID" type="ExpectedIDType"/>
    <xsd:element name="ExpectedOperatorQuantity" type="ExpectedOperatorQuantityType"/>
    <xsd:element name="ExpectedQuantity" type="ExpectedQuantityType"/>
    <xsd:element name="ExpectedValueNumeric" type="ExpectedValueNumericType"/>
@@ -444,7 +448,6 @@
    <xsd:element name="Justification" type="JustificationType"/>
    <xsd:element name="JustificationDescription" type="JustificationDescriptionType"/>
    <xsd:element name="Keyword" type="KeywordType"/>
-   <xsd:element name="Language" type="LanguageType"/>
    <xsd:element name="LanguageID" type="LanguageIDType"/>
    <xsd:element name="LastRevisionDate" type="LastRevisionDateType"/>
    <xsd:element name="LastRevisionTime" type="LastRevisionTimeType"/>
@@ -732,12 +735,15 @@
    <xsd:element name="ProfileStatusCode" type="ProfileStatusCodeType"/>
    <xsd:element name="ProgressPercent" type="ProgressPercentType"/>
    <xsd:element name="PromotionalEventTypeCode" type="PromotionalEventTypeCodeType"/>
+   <xsd:element name="PropertyGroupTypeCode" type="PropertyGroupTypeCodeType"/>
    <xsd:element name="ProtocolID" type="ProtocolIDType"/>
    <xsd:element name="ProviderTypeCode" type="ProviderTypeCodeType"/>
    <xsd:element name="PublicPartyIndicator" type="PublicPartyIndicatorType"/>
    <xsd:element name="PublishAwardIndicator" type="PublishAwardIndicatorType"/>
    <xsd:element name="Purpose" type="PurposeType"/>
    <xsd:element name="PurposeCode" type="PurposeCodeType"/>
+   <xsd:element name="QualificationApplicationTypeCode"
+                type="QualificationApplicationTypeCodeType"/>
    <xsd:element name="QualityControlCode" type="QualityControlCodeType"/>
    <xsd:element name="Quantity" type="QuantityType"/>
    <xsd:element name="QuantityDiscrepancyCode" type="QuantityDiscrepancyCodeType"/>
@@ -818,6 +824,7 @@
    <xsd:element name="ResponseNumeric" type="ResponseNumericType"/>
    <xsd:element name="ResponseQuantity" type="ResponseQuantityType"/>
    <xsd:element name="ResponseTime" type="ResponseTimeType"/>
+   <xsd:element name="ResponseURI" type="ResponseURIType"/>
    <xsd:element name="RetailEventName" type="RetailEventNameType"/>
    <xsd:element name="RetailEventStatusCode" type="RetailEventStatusCodeType"/>
    <xsd:element name="ReturnabilityIndicator" type="ReturnabilityIndicatorType"/>
@@ -1045,8 +1052,8 @@
    <xsd:element name="ValidateProcess" type="ValidateProcessType"/>
    <xsd:element name="ValidateTool" type="ValidateToolType"/>
    <xsd:element name="ValidateToolVersion" type="ValidateToolVersionType"/>
-   <xsd:element name="ValidatedCriterionRequirementID"
-                type="ValidatedCriterionRequirementIDType"/>
+   <xsd:element name="ValidatedCriterionPropertyID"
+                type="ValidatedCriterionPropertyIDType"/>
    <xsd:element name="ValidationDate" type="ValidationDateType"/>
    <xsd:element name="ValidationResultCode" type="ValidationResultCodeType"/>
    <xsd:element name="ValidationTime" type="ValidationTimeType"/>
@@ -1079,11 +1086,15 @@
    <xsd:element name="WeighingTime" type="WeighingTimeType"/>
    <xsd:element name="Weight" type="WeightType"/>
    <xsd:element name="WeightNumeric" type="WeightNumericType"/>
+   <xsd:element name="WeightScoringMethodologyNote"
+                type="WeightScoringMethodologyNoteType"/>
    <xsd:element name="WeightStatementTypeCode" type="WeightStatementTypeCodeType"/>
    <xsd:element name="WeightingAlgorithmCode" type="WeightingAlgorithmCodeType"/>
    <xsd:element name="WeightingConsiderationDescription"
                 type="WeightingConsiderationDescriptionType"/>
+   <xsd:element name="WeightingTypeCode" type="WeightingTypeCodeType"/>
    <xsd:element name="WithdrawOfferIndicator" type="WithdrawOfferIndicatorType"/>
+   <xsd:element name="WithholdingTaxTotalAmount" type="WithholdingTaxTotalAmountType"/>
    <xsd:element name="WorkPhase" type="WorkPhaseType"/>
    <xsd:element name="WorkPhaseCode" type="WorkPhaseCodeType"/>
    <xsd:element name="XPath" type="XPathType"/>
@@ -1822,6 +1833,11 @@
          <xsd:restriction base="udt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
+   <xsd:complexType name="ConfidentialityLevelCodeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="ConsigneeAssignedIDType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IdentifierType"/>
@@ -2035,11 +2051,6 @@
    <xsd:complexType name="CrewQuantityType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:QuantityType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="CriteriaGroupTypeCodeType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="CriterionTypeCodeType">
@@ -2495,6 +2506,26 @@
    <xsd:complexType name="ExemptionReasonType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:TextType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="ExpectedAmountType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:AmountType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="ExpectedCodeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="ExpectedDescriptionType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:TextType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="ExpectedIDType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="ExpectedOperatorQuantityType">
@@ -3010,11 +3041,6 @@
    <xsd:complexType name="LanguageIDType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IdentifierType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="LanguageType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="LastRevisionDateType">
@@ -4322,6 +4348,11 @@
          <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
+   <xsd:complexType name="PropertyGroupTypeCodeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="ProtocolIDType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IdentifierType"/>
@@ -4350,6 +4381,11 @@
    <xsd:complexType name="PurposeType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:TextType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="QualificationApplicationTypeCodeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="QualityControlCodeType">
@@ -4720,6 +4756,11 @@
    <xsd:complexType name="ResponseType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:TextType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="ResponseURIType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="RetailEventNameType">
@@ -5702,7 +5743,7 @@
          <xsd:restriction base="udt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="ValidatedCriterionRequirementIDType">
+   <xsd:complexType name="ValidatedCriterionPropertyIDType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IdentifierType"/>
       </xsd:simpleContent>
@@ -5857,6 +5898,11 @@
          <xsd:restriction base="udt:NumericType"/>
       </xsd:simpleContent>
    </xsd:complexType>
+   <xsd:complexType name="WeightScoringMethodologyNoteType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:TextType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="WeightStatementTypeCodeType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:CodeType"/>
@@ -5877,9 +5923,19 @@
          <xsd:restriction base="udt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
+   <xsd:complexType name="WeightingTypeCodeType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:CodeType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
    <xsd:complexType name="WithdrawOfferIndicatorType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IndicatorType"/>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <xsd:complexType name="WithholdingTaxTotalAmountType">
+      <xsd:simpleContent>
+         <xsd:restriction base="udt:AmountType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="WorkPhaseCodeType">
