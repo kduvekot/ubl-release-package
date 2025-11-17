@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:ChannelCode-2.0" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ChannelCode-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xsd:simpleType name="CommunicationAddressCodeQualifierCodeContentType">
+      <xsd:restriction base="xsd:normalizedString">
+         <xsd:enumeration value="AA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Circuit switching</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">SITA</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AC">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">ARINC</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AD">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">AT&amp;T mailbox</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Peripheral device</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">U.S. Defense Switched Network</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">U.S. federal telecommunications system</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">World Wide Web</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">International calling country code</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Alternate telephone</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AK">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Videotex number</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cellular phone</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">International telephone direct line</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AN">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">O.F.T.P. (ODETTE File Transfer Protocol)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AO">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Uniform Resource Location (URL)</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="AP">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Very High Frequency (VHF) radio telephone</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="CA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Cable address</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">EDI transmission</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Electronic mail</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="EX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Extension</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">File transfer access method</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="FX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Telefax</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="GM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">GEIS (General Electric Information Service) mailbox</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">IBM information exchange</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="IM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Internal mail</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="MA">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Mail</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PB">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Postbox number</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="PS">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Packet switching</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="SW">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">S.W.I.F.T.</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TE">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Telephone</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Telegraph</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TL">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Telex</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TM">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Telemail</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TT">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Teletext</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="TX">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">TWX</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XF">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">X.400 address</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XG">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">Pager</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XH">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">International telephone switchboard</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XI">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">National telephone direct line</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+         <xsd:enumeration value="XJ">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <CodeName xmlns="">National telephone switchboard</CodeName>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:enumeration>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <xsd:complexType name="CommunicationAddressCodeQualifierCodeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>DT</ccts:ComponentType>
+               <ccts:DictionaryEntryName>Communication Address Code Qualifier_ Code. Type</ccts:DictionaryEntryName>
+               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+               <ccts:DataTypeQualifier>Communication Address Code Qualifier</ccts:DataTypeQualifier>
+               <ccts:DataType>Code. Type</ccts:DataType>
+            </ccts:Component>
+            <ccts:Instance>
+               <ccts:CodeListID>Communication Address Code Qualifier</ccts:CodeListID>
+               <ccts:CodeListAgencyID>6</ccts:CodeListAgencyID>
+               <ccts:CodeListAgencyName>United Nations Economic Commission for Europe</ccts:CodeListAgencyName>
+               <ccts:CodeListName>Communication Address Code Qualifier</ccts:CodeListName>
+               <ccts:CodeListVersionID>D03A</ccts:CodeListVersionID>
+               <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:schema:xsd:ChannelCode</ccts:CodeListSchemeURI>
+               <ccts:LanguageID>en</ccts:LanguageID>
+            </ccts:Instance>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="CommunicationAddressCodeQualifierCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="Communication Address Code Qualifier" use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="6" use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="United Nations Economic Commission for Europe" use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="Communication Address Code Qualifier" use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="D03A" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI" use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:schema:xsd:ChannelCode" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>

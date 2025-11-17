@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ccts="urn:un:unece:uncefact:documentation:2" xmlns="urn:oasis:names:specification:ubl:schema:xsd:ShortageActionCodeType-2.0" targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ShortageActionCodeType-2.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+   <xsd:simpleType name="ShortageActionCodeContentType">
+      <xsd:restriction base="xsd:normalizedString"/>
+   </xsd:simpleType>
+   <xsd:complexType name="ShortageActionCodeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>DT</ccts:ComponentType>
+               <ccts:DictionaryEntryName>ShortageAction_ Code. Type</ccts:DictionaryEntryName>
+               <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+               <ccts:DataTypeQualifier>ShortageAction</ccts:DataTypeQualifier>
+               <ccts:DataType>Code. Type</ccts:DataType>
+            </ccts:Component>
+            <ccts:Instance>
+               <ccts:CodeListID>ShortageAction</ccts:CodeListID>
+               <ccts:CodeListAgencyID>UBL</ccts:CodeListAgencyID>
+               <ccts:CodeListAgencyName>OASIS Universal Business Language</ccts:CodeListAgencyName>
+               <ccts:CodeListName>ShortageAction</ccts:CodeListName>
+               <ccts:CodeListVersionID/>
+               <ccts:CodeListSchemeURI>urn:oasis:names:specification:ubl:schema:xsd:ShortageActionCodeType</ccts:CodeListSchemeURI>
+               <ccts:LanguageID>en</ccts:LanguageID>
+            </ccts:Instance>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:simpleContent>
+         <xsd:extension base="ShortageActionCodeContentType">
+            <xsd:attribute name="codeListID" type="xsd:normalizedString" default="ShortageAction" use="optional"/>
+            <xsd:attribute name="codeListAgencyID" type="xsd:normalizedString" default="UBL" use="optional"/>
+            <xsd:attribute name="codeListAgencyName" type="xsd:string" default="OASIS Universal Business Language" use="optional"/>
+            <xsd:attribute name="codeListName" type="xsd:string" default="ShortageAction" use="optional"/>
+            <xsd:attribute name="codeListVersionID" type="xsd:normalizedString" default="" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" default="en" use="optional"/>
+            <xsd:attribute name="codeListURI" type="xsd:anyURI" use="optional"/>
+            <xsd:attribute name="codeListSchemeURI" type="xsd:anyURI" default="urn:oasis:names:specification:ubl:schema:xsd:ShortageActionCodeType" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>

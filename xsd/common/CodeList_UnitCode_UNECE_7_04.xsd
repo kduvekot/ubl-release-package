@@ -31,10 +31,10 @@
 	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
 	FITNESS FOR A PARTICULAR PURPOSE.
 -->
-<xsd:schema targetNamespace="urn:un:unece:uncefact:codelist:draft:66411:2001" 
+<xsd:schema targetNamespace="urn:un:unece:uncefact:codelist:specification:66411:2001" 
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-xmlns:clm66411="urn:un:unece:uncefact:codelist:draft:66411:2001" elementFormDefault="qualified" attributeFormDefault="unqualified">
+xmlns:clm66411="urn:un:unece:uncefact:codelist:specification:66411:2001" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xsd:simpleType name="UnitCodeContentType">
 		<xsd:restriction base="xsd:token">
       <xsd:enumeration value="04">

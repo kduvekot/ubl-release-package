@@ -31,9 +31,9 @@
 	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
 	FITNESS FOR A PARTICULAR PURPOSE.
 -->
-<xsd:schema targetNamespace="urn:un:unece:uncefact:codelist:draft:5639:1988" 
+<xsd:schema targetNamespace="urn:un:unece:uncefact:codelist:specification:5639:1988" 
 xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-xmlns="urn:un:unece:uncefact:codelist:draft:5639:1988" 
+xmlns="urn:un:unece:uncefact:codelist:specification:5639:1988" 
 xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xsd:simpleType name="LanguageCodeContentType">
 		<xsd:restriction base="xsd:token">

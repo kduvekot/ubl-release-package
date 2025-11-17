@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== -->
+<!-- ===== UDT Unqualified Data Type Schema Module ===== -->
+<!-- ====================================================================== -->
+<!--
+   Module of Unqualified Data Type
+   Agency: UN/CEFACT
+   Version: 1.1, rev. A
+   Last change: 16 February 2005
+
+
+
+   Copyright (C) UN/CEFACT (2005). All Rights Reserved.
+   This document and translations of it may be copied and furnished to others,
+   and derivative works that comment on or otherwise explain it or assist
+   in its implementation may be prepared, copied, published and distributed,
+   in whole or in part, without restriction of any kind, provided that the
+   above copyright notice and this paragraph are included on all such copies
+   and derivative works. However, this document itself may not be modified in
+   any way, such as by removing the copyright notice or references to
+   UN/CEFACT, except as needed for the purpose of developing UN/CEFACT
+   specifications, in which case the procedures for copyrights defined in the
+   UN/CEFACT Intellectual Property Rights document must be followed, or as
+
+
+   required to translate it into languages other than English.
+   The limited permissions granted above are perpetual and will not be revoked
+
+
+   by UN/CEFACT or its successors or assigns.
+   This document and the information contained herein is provided on an "AS IS"
+   basis and UN/CEFACT DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+   BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL
+   NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR
+   FITNESS FOR A PARTICULAR PURPOSE.
+-->
+<xsd:schema targetNamespace="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:clm5639="urn:un:unece:uncefact:codelist:specification:5639:1988"
+xmlns:clm54217="urn:un:unece:uncefact:codelist:specification:54217:2001"
+xmlns:clmIANAMIMEMediaType="urn:un:unece:uncefact:codelist:specification:IANAMIMEMediaType:2003"
+xmlns:clm66411="urn:un:unece:uncefact:codelist:specification:66411:2001"
+xmlns:udt="urn:un:unece:uncefact:data:specification:UnqualifiedDataTypesSchemaModule:2" elementFormDefault="qualified"
+attributeFormDefault="unqualified">
+   <!-- ===== Imports ===== -->
+   <!-- =================================================================== -->
+   <!-- ===== Imports of Code Lists ===== -->
+   <!-- =================================================================== -->
+   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:66411:2001" schemaLocation="CodeList_UnitCode_UNECE_7_04.xsd"/>
+   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:IANAMIMEMediaType:2003" schemaLocation="CodeList_MIMEMediaTypeCode_IANA_7_04.xsd"/>
+   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:54217:2001" schemaLocation="CodeList_CurrencyCode_ISO_7_04.xsd"/>
+   <xsd:import namespace="urn:un:unece:uncefact:codelist:specification:5639:1988" schemaLocation="CodeList_LanguageCode_ISO_7_04.xsd"/>
+   <!-- ===== Type Definitions ===== -->
+   <!-- =================================================================== -->
+   <!-- ===== Primary RT: Amount. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="AmountType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:decimal">
+            <xsd:attribute name="currencyID" type="clm54217:CurrencyCodeContentType" use="required"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Primary RT: Binary Object. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="BinaryObjectType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:base64Binary">
+            <xsd:attribute name="format" type="xsd:string" use="optional"/>
+            <xsd:attribute name="mimeCode" type="clmIANAMIMEMediaType:BinaryObjectMimeCodeContentType" use="required"/>
+            <xsd:attribute name="encodingCode" type="xsd:normalizedString" use="optional"/>
+            <xsd:attribute name="characterSetCode" type="xsd:normalizedString" use="optional"/>
+            <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+            <xsd:attribute name="filename" type="xsd:string" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Secondary RT: Graphic. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="GraphicType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:base64Binary">
+            <xsd:attribute name="format" type="xsd:string" use="optional"/>
+            <xsd:attribute name="mimeCode" type="clmIANAMIMEMediaType:BinaryObjectMimeCodeContentType" use="required"/>
+            <xsd:attribute name="encodingCode" type="xsd:normalizedString" use="optional"/>
+            <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+            <xsd:attribute name="filename" type="xsd:string" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Secondary RT: Picture. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="PictureType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:base64Binary">
+            <xsd:attribute name="format" type="xsd:string" use="optional"/>
+            <xsd:attribute name="mimeCode" type="clmIANAMIMEMediaType:BinaryObjectMimeCodeContentType" use="required"/>
+            <xsd:attribute name="encodingCode" type="xsd:normalizedString" use="optional"/>
+            <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+            <xsd:attribute name="filename" type="xsd:string" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Secondary RT: Sound. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="SoundType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:base64Binary">
+            <xsd:attribute name="format" type="xsd:string" use="optional"/>
+            <xsd:attribute name="mimeCode" type="clmIANAMIMEMediaType:BinaryObjectMimeCodeContentType" use="required"/>
+            <xsd:attribute name="encodingCode" type="xsd:normalizedString" use="optional"/>
+            <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+            <xsd:attribute name="filename" type="xsd:string" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Secondary RT: Video. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="VideoType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:base64Binary">
+            <xsd:attribute name="format" type="xsd:string" use="optional"/>
+            <xsd:attribute name="mimeCode" type="clmIANAMIMEMediaType:BinaryObjectMimeCodeContentType" use="required"/>
+            <xsd:attribute name="encodingCode" type="xsd:normalizedString" use="optional"/>
+            <xsd:attribute name="uri" type="xsd:anyURI" use="optional"/>
+            <xsd:attribute name="filename" type="xsd:string" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Primary RT: Code. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="CodeType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:normalizedString">
+				    <xsd:attribute name="listID" type="xsd:normalizedString" use="optional"/>
+				    <xsd:attribute name="listAgencyID" type="xsd:normalizedString" use="optional"/>
+				    <xsd:attribute name="listAgencyName" type="xsd:string" use="optional"/>
+				    <xsd:attribute name="listName" type="xsd:string" use="optional"/>
+            <xsd:attribute name="listVersionID" type="xsd:normalizedString" use="optional"/>
+            <xsd:attribute name="name" type="xsd:string" use="optional"/>
+            <xsd:attribute name="languageID" type="xsd:language" use="optional"/>
+            <xsd:attribute name="listURI" type="xsd:anyURI" use="optional"/>
+            <xsd:attribute name="listSchemeURI" type="xsd:anyURI" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Primary RT: Date Time. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:simpleType name="DateTimeType">
+      <xsd:restriction base="xsd:dateTime"/>
+   </xsd:simpleType>
+   <!-- ===== Secondary RT: Date. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:simpleType name="DateType">
+      <xsd:restriction base="xsd:date"/>
+   </xsd:simpleType>
+   <!-- ===== Secondary RT: Time. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:simpleType name="TimeType">
+      <xsd:restriction base="xsd:time"/>
+   </xsd:simpleType>
+   <!-- ===== Primary RT: Identifier. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="IdentifierType">
+   <xsd:simpleContent>
+      <xsd:extension base="xsd:normalizedString">
+         <xsd:attribute name="schemeID" type="xsd:normalizedString" use="optional"/>
+         <xsd:attribute name="schemeName" type="xsd:string" use="optional"/>
+         <xsd:attribute name="schemeAgencyID" type="xsd:normalizedString" use="optional"/>
+         <xsd:attribute name="schemeAgencyName" type="xsd:string" use="optional"/>
+         <xsd:attribute name="schemeVersionID" type="xsd:normalizedString" use="optional"/>
+         <xsd:attribute name="schemeDataURI" type="xsd:anyURI" use="optional"/>
+         <xsd:attribute name="schemeURI" type="xsd:anyURI" use="optional"/>
+      </xsd:extension>
+   </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Primary RT: Indicator. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:simpleType name="IndicatorType">
+      <xsd:restriction base="xsd:boolean">
+         <xsd:pattern value="false"/>
+         <xsd:pattern value="true"/>
+      </xsd:restriction>
+   </xsd:simpleType>
+   <!-- ===== Primary RT: Measure. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="MeasureType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:decimal">
+            <xsd:attribute name="unitCode" type="clm66411:UnitCodeContentType" use="required"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Primary RT: Numeric. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:simpleType name="NumericType">
+      <xsd:restriction base="xsd:decimal"/>
+   </xsd:simpleType>
+   <!-- ===== Secondary RT: Value. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:simpleType name="ValueType">
+      <xsd:restriction base="xsd:decimal"/>
+   </xsd:simpleType>
+   <!-- ===== Secondary RT: Percent. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:simpleType name="PercentType">
+      <xsd:restriction base="xsd:decimal"/>
+   </xsd:simpleType>
+   <!-- ===== Secondary RT: Rate. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:simpleType name="RateType">
+      <xsd:restriction base="xsd:decimal"/>
+   </xsd:simpleType>
+   <!-- ===== Primary RT: Quantity. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="QuantityType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:decimal">
+            <xsd:attribute name="unitCode" type="clm66411:UnitCodeContentType" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Primary RT: Text.Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="TextType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:string">
+            <xsd:attribute name="languageID" type="xsd:language" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+   <!-- ===== Secondary RT: Name. Type ===== -->
+   <!-- =================================================================== -->
+   <xsd:complexType name="NameType">
+      <xsd:simpleContent>
+         <xsd:extension base="xsd:string">
+            <xsd:attribute name="languageID" type="xsd:language" use="optional"/>
+         </xsd:extension>
+      </xsd:simpleContent>
+   </xsd:complexType>
+</xsd:schema>
