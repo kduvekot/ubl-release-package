@@ -1202,6 +1202,9 @@ PaymentTermsDetailsURI =
 OutstandingReason =
   notAllowed
   | element OutstandingReason { anonymous7 }
+SealingPartyType =
+  notAllowed
+  | element SealingPartyType { anonymous7 }
 TaxAmount =
   notAllowed
   | element TaxAmount { anonymous5 }
@@ -2522,6 +2525,9 @@ EstimatedConsumedQuantity =
 Description =
   notAllowed
   | element Description { anonymous7 }
+SecurityClassificationCode =
+  notAllowed
+  | element SecurityClassificationCode { anonymous1 }
 CapabilityType =
   (CapabilityTypeCode?,
    Description*,
@@ -4816,9 +4822,6 @@ ShortageActionCode =
 Clause =
   notAllowed
   | element ns3:Clause { ClauseType }
-SealingPartyType =
-  notAllowed
-  | element SealingPartyType { anonymous7 }
 TaxExemptionReasonCode =
   notAllowed
   | element TaxExemptionReasonCode { anonymous1 }
@@ -5450,9 +5453,6 @@ TaxLevelCode =
 ResidenceTypeCode =
   notAllowed
   | element ResidenceTypeCode { anonymous1 }
-SecurityClassificationCode =
-  notAllowed
-  | element SecurityClassificationCode { anonymous1 }
 LoadingPortLocation =
   notAllowed
   | element ns3:LoadingPortLocation { LocationType }
@@ -6049,7 +6049,7 @@ TemplateDocumentReference =
   notAllowed
   | element ns3:TemplateDocumentReference { DocumentReferenceType }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-05-14 12:38:26z
+# RELAX-NG models synthesized from UBL document models on 2013-05-14 01:33:43z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

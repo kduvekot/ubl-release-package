@@ -2051,9 +2051,6 @@ AdditionalInformationParty =
 CorporateStockAmount =
   notAllowed
   | element CorporateStockAmount { anonymous5 }
-SequenceNumberID =
-  notAllowed
-  | element SequenceNumberID { anonymous4 }
 Channel =
   notAllowed
   | element Channel { anonymous7 }
@@ -4040,9 +4037,6 @@ ActivityDataLineType =
 Region =
   notAllowed
   | element Region { anonymous7 }
-SequenceID =
-  notAllowed
-  | element SequenceID { anonymous4 }
 ValueMeasure =
   notAllowed
   | element ValueMeasure { anonymous14 }
@@ -4521,6 +4515,9 @@ EstimatedDeliveryPeriod =
 FinancialEvaluationCriterion =
   notAllowed
   | element ns2:FinancialEvaluationCriterion { EvaluationCriterionType }
+SequenceID =
+  notAllowed
+  | element SequenceID { anonymous4 }
 MediationParty =
   notAllowed
   | element ns2:MediationParty { PartyType2 }
@@ -5945,6 +5942,9 @@ CargoTypeCode =
 TaxIncludedIndicator =
   notAllowed
   | element TaxIncludedIndicator { anonymous11 }
+SequenceNumberID =
+  notAllowed
+  | element SequenceNumberID { anonymous4 }
 PromotionalEventLineItem =
   notAllowed
   | element ns2:PromotionalEventLineItem { Amount, EventLineItem }
@@ -6051,7 +6051,7 @@ TemplateDocumentReference =
   notAllowed
   | element ns2:TemplateDocumentReference { DocumentReferenceType }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-05-14 12:42:43z
+# RELAX-NG models synthesized from UBL document models on 2013-05-14 01:38:20z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

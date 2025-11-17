@@ -410,9 +410,6 @@ SubscriberTypeCode =
 RequestedWaypointTransportEvent =
   notAllowed
   | element ns2:RequestedWaypointTransportEvent { TransportEventType }
-SequenceNumeric =
-  notAllowed
-  | element SequenceNumeric { anonymous9 }
 Location =
   notAllowed
   | element ns2:Location { LocationType }
@@ -680,6 +677,9 @@ MinimumPercent =
 ManufactureDate =
   notAllowed
   | element ManufactureDate { anonymous8 }
+SequenceNumeric =
+  notAllowed
+  | element SequenceNumeric { anonymous9 }
 TaxExemptionReason =
   notAllowed
   | element TaxExemptionReason { anonymous7 }
@@ -6077,7 +6077,7 @@ TemplateDocumentReference =
   notAllowed
   | element ns2:TemplateDocumentReference { DocumentReferenceType }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-05-14 12:40:55z
+# RELAX-NG models synthesized from UBL document models on 2013-05-14 01:36:25z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

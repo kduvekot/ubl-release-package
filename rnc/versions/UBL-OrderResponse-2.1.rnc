@@ -6095,7 +6095,7 @@ TemplateDocumentReference =
   notAllowed
   | element ns3:TemplateDocumentReference { DocumentReferenceType }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-05-14 12:39:52z
+# RELAX-NG models synthesized from UBL document models on 2013-05-14 01:35:20z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

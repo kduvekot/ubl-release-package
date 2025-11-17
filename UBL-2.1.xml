@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" 
                  href="db/spec-0.6/stylesheets/oasis-specification-html-offline.xsl"?>
 <!--
-  $Id: UBL-2.1.xml,v 1.56 2013/05/14 17:30:08 admin Exp $
+  $Id: UBL-2.1.xml,v 1.55 2013/05/14 16:40:08 admin Exp $
   Single quote: &#8217; Double quotes: &#8220;&#8221; 
 -->
 <!DOCTYPE article
@@ -13,9 +13,9 @@
 <!ENTITY name "UBL">
 <!ENTITY pversion "NONE">
 <!ENTITY version "2.1">
-<!ENTITY stage "prd4">
-<!ENTITY STAGE "PRD4">
-<!ENTITY standard "Committee Specification Draft 4 / Public Review Draft 4">
+<!ENTITY stage "csd4">
+<!ENTITY STAGE "CSD4">
+<!ENTITY standard "Committee Specification Draft 4">
 <!ENTITY this-loc     "http://docs.oasis-open.org/ubl/&stage;-UBL-2.1">
 <!ENTITY previous-loc "http://docs.oasis-open.org/ubl/prd3-UBL-2.1">
 <!ENTITY latest-loc   "http://docs.oasis-open.org/ubl">

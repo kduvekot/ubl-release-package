@@ -400,6 +400,9 @@ SubscriberTypeCode =
 RequestedWaypointTransportEvent =
   notAllowed
   | element ns2:RequestedWaypointTransportEvent { TransportEventType }
+SequenceNumeric =
+  notAllowed
+  | element SequenceNumeric { anonymous9 }
 Location =
   notAllowed
   | element ns2:Location { LocationType }
@@ -638,6 +641,9 @@ ActionCode =
 BonusPaymentTerms =
   notAllowed
   | element ns2:BonusPaymentTerms { PaymentTermsType }
+SecurityID =
+  notAllowed
+  | element SecurityID { anonymous4 }
 AdditionalCommodityClassification =
   notAllowed
   | element ns2:AdditionalCommodityClassification {
@@ -667,9 +673,6 @@ MinimumPercent =
 ManufactureDate =
   notAllowed
   | element ManufactureDate { anonymous8 }
-SequenceNumeric =
-  notAllowed
-  | element SequenceNumeric { anonymous9 }
 TaxExemptionReason =
   notAllowed
   | element TaxExemptionReason { anonymous7 }
@@ -1762,6 +1765,9 @@ CollaborationPriorityCode =
 ReturnabilityIndicator =
   notAllowed
   | element ReturnabilityIndicator { anonymous11 }
+SerialID =
+  notAllowed
+  | element SerialID { anonymous4 }
 MarkCare =
   notAllowed
   | element MarkCare { anonymous7 }
@@ -2039,6 +2045,9 @@ AdditionalInformationParty =
 CorporateStockAmount =
   notAllowed
   | element CorporateStockAmount { anonymous5 }
+SequenceNumberID =
+  notAllowed
+  | element SequenceNumberID { anonymous4 }
 Channel =
   notAllowed
   | element Channel { anonymous7 }
@@ -2125,9 +2134,6 @@ DigitalSignatureAttachment =
 WithholdingTaxTotal =
   notAllowed
   | element ns2:WithholdingTaxTotal { TaxTotalType }
-SecurityID =
-  notAllowed
-  | element SecurityID { anonymous4 }
 ShippingMarks =
   notAllowed
   | element ShippingMarks { anonymous7 }
@@ -2516,9 +2522,6 @@ EstimatedConsumedQuantity =
 Description =
   notAllowed
   | element Description { anonymous7 }
-SecurityClassificationCode =
-  notAllowed
-  | element SecurityClassificationCode { anonymous1 }
 CapabilityType =
   (CapabilityTypeCode?,
    Description*,
@@ -4023,6 +4026,9 @@ ActivityDataLineType =
 Region =
   notAllowed
   | element Region { anonymous7 }
+SequenceID =
+  notAllowed
+  | element SequenceID { anonymous4 }
 ValueMeasure =
   notAllowed
   | element ValueMeasure { anonymous14 }
@@ -4418,9 +4424,6 @@ SpecificationTypeCode =
 DeliveryLocation =
   notAllowed
   | element ns2:DeliveryLocation { LocationType }
-SerialID =
-  notAllowed
-  | element SerialID { anonymous4 }
 PackageType =
   (ID?,
    Quantity?,
@@ -4504,9 +4507,6 @@ EstimatedDeliveryPeriod =
 FinancialEvaluationCriterion =
   notAllowed
   | element ns2:FinancialEvaluationCriterion { EvaluationCriterionType }
-SequenceID =
-  notAllowed
-  | element SequenceID { anonymous4 }
 MediationParty =
   notAllowed
   | element ns2:MediationParty { PartyType2 }
@@ -5441,6 +5441,9 @@ TaxLevelCode =
 ResidenceTypeCode =
   notAllowed
   | element ResidenceTypeCode { anonymous1 }
+SecurityClassificationCode =
+  notAllowed
+  | element SecurityClassificationCode { anonymous1 }
 LoadingPortLocation =
   notAllowed
   | element ns2:LoadingPortLocation { LocationType }
@@ -5925,9 +5928,6 @@ CargoTypeCode =
 TaxIncludedIndicator =
   notAllowed
   | element TaxIncludedIndicator { anonymous11 }
-SequenceNumberID =
-  notAllowed
-  | element SequenceNumberID { anonymous4 }
 PromotionalEventLineItem =
   notAllowed
   | element ns2:PromotionalEventLineItem { Amount, EventLineItem }
@@ -6034,7 +6034,7 @@ TemplateDocumentReference =
   notAllowed
   | element ns2:TemplateDocumentReference { DocumentReferenceType }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-05-14 12:42:49z
+# RELAX-NG models synthesized from UBL document models on 2013-05-14 01:38:27z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

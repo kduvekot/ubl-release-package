@@ -402,6 +402,9 @@ SubscriberTypeCode =
 RequestedWaypointTransportEvent =
   notAllowed
   | element ns3:RequestedWaypointTransportEvent { TransportEventType }
+SequenceNumeric =
+  notAllowed
+  | element SequenceNumeric { anonymous9 }
 Location =
   notAllowed
   | element ns3:Location { LocationType }
@@ -675,9 +678,6 @@ MinimumPercent =
 ManufactureDate =
   notAllowed
   | element ManufactureDate { anonymous8 }
-SequenceNumeric =
-  notAllowed
-  | element SequenceNumeric { anonymous9 }
 TaxExemptionReason =
   notAllowed
   | element TaxExemptionReason { anonymous7 }
@@ -1788,6 +1788,9 @@ CollaborationPriorityCode =
 ReturnabilityIndicator =
   notAllowed
   | element ReturnabilityIndicator { anonymous11 }
+SerialID =
+  notAllowed
+  | element SerialID { anonymous4 }
 MarkCare =
   notAllowed
   | element MarkCare { anonymous7 }
@@ -2065,6 +2068,9 @@ AdditionalInformationParty =
 CorporateStockAmount =
   notAllowed
   | element CorporateStockAmount { anonymous5 }
+SequenceNumberID =
+  notAllowed
+  | element SequenceNumberID { anonymous4 }
 Channel =
   notAllowed
   | element Channel { anonymous7 }
@@ -4441,9 +4447,6 @@ SpecificationTypeCode =
 DeliveryLocation =
   notAllowed
   | element ns3:DeliveryLocation { LocationType }
-SerialID =
-  notAllowed
-  | element SerialID { anonymous4 }
 PackageType =
   (ID?,
    Quantity?,
@@ -5948,9 +5951,6 @@ CargoTypeCode =
 TaxIncludedIndicator =
   notAllowed
   | element TaxIncludedIndicator { anonymous11 }
-SequenceNumberID =
-  notAllowed
-  | element SequenceNumberID { anonymous4 }
 PromotionalEventLineItem =
   notAllowed
   | element ns3:PromotionalEventLineItem { Amount, EventLineItem }
@@ -6057,7 +6057,7 @@ TemplateDocumentReference =
   notAllowed
   | element ns3:TemplateDocumentReference { DocumentReferenceType }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-05-14 12:41:16z
+# RELAX-NG models synthesized from UBL document models on 2013-05-14 01:36:41z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

@@ -4027,9 +4027,6 @@ ActivityDataLineType =
 Region =
   notAllowed
   | element Region { anonymous7 }
-SequenceID =
-  notAllowed
-  | element SequenceID { anonymous4 }
 ValueMeasure =
   notAllowed
   | element ValueMeasure { anonymous14 }
@@ -4511,6 +4508,9 @@ EstimatedDeliveryPeriod =
 FinancialEvaluationCriterion =
   notAllowed
   | element ns2:FinancialEvaluationCriterion { EvaluationCriterionType }
+SequenceID =
+  notAllowed
+  | element SequenceID { anonymous4 }
 MediationParty =
   notAllowed
   | element ns2:MediationParty { PartyType2 }
@@ -6052,7 +6052,7 @@ TemplateDocumentReference =
   notAllowed
   | element ns2:TemplateDocumentReference { DocumentReferenceType }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-05-14 12:38:34z
+# RELAX-NG models synthesized from UBL document models on 2013-05-14 01:33:49z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc
