@@ -1,0 +1,8 @@
+# Python dependencies for UBL Release Import Tools
+#
+# Approved exception to "no external dependencies" policy
+# Approval date: 2025-11-17
+# Reason: Google Drive integration for downloading UBL release packages
+
+# Google Drive download library (public files/folders)
+gdown>=5.0.0

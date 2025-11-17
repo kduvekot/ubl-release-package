@@ -25,6 +25,7 @@ from typing import Optional, Dict
 from .git_state import GitStateManager
 from .release_data import Release, get_release_by_num
 from .validators import Validators, ValidationError
+from .gdrive_downloader import download_release_from_gdrive
 
 
 class ImportError(Exception):
@@ -107,8 +108,9 @@ class ReleaseImporter:
             self.cleanup()
 
     def download_and_extract(self) -> Path:
-        """Download ZIP and extract to temp directory."""
-        print(f"Downloading {self.release.url}...")
+        """Download ZIP from Google Drive and extract to temp directory."""
+        print(f"Downloading release #{self.release.num} from Google Drive...")
+        print(f"  (OASIS URL for reference: {self.release.url})")
 
         if self.dry_run:
             print("  (DRY RUN: skipping download)")
@@ -117,13 +119,17 @@ class ReleaseImporter:
         # Create temp directory
         self.temp_dir = Path(tempfile.mkdtemp(prefix='ubl-import-'))
 
-        # Download
+        # Download from Google Drive
         zip_path = self.temp_dir / "release.zip"
         try:
-            urllib.request.urlretrieve(self.release.url, zip_path)
-            print(f"  Downloaded {zip_path.stat().st_size / 1024 / 1024:.1f} MB")
+            download_release_from_gdrive(
+                self.release.num,
+                self.release.stage,
+                self.release.version,
+                zip_path
+            )
         except Exception as e:
-            raise ImportError(f"Download failed: {e}")
+            raise ImportError(f"Google Drive download failed: {e}")
 
         # Extract
         print(f"Extracting to {self.temp_dir}...")
