@@ -48,5 +48,4 @@ tmp/
 
 # Downloaded packages during development
 *.zip
-!sources/*.zip
 downloads/
