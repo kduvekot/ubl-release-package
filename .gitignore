@@ -49,5 +49,4 @@ tmp/
 # Downloaded packages during development
 *.zip
 !sources/*.zip
-sources/prd2-UBL-2.0.zip
 downloads/
