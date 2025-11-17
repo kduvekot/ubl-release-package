@@ -1,0 +1,386 @@
+
+Xmldsig
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    ID, String, AnyURI
+    FROM XSD;
+
+CryptoBinary ::= OCTET STRING
+
+Signature ::= SignatureType
+
+SignatureType ::= SEQUENCE {
+    id             XSD.ID OPTIONAL,
+    signedInfo     SignedInfo,
+    signatureValue SignatureValue,
+    keyInfo        KeyInfo OPTIONAL,
+    object-list    SEQUENCE OF object Object
+}
+
+SignatureValue ::= SignatureValueType
+
+SignatureValueType ::= SEQUENCE {
+    id   XSD.ID OPTIONAL,
+    base OCTET STRING
+}
+
+SignedInfo ::= SignedInfoType
+
+SignedInfoType ::= SEQUENCE {
+    id           XSD.ID OPTIONAL,
+    canonicalizationMethod CanonicalizationMethod,
+    signatureMethod SignatureMethod,
+    reference-list SEQUENCE (SIZE(1..MAX)) OF reference Reference
+}
+
+CanonicalizationMethod ::= CanonicalizationMethodType
+
+CanonicalizationMethodType ::= SEQUENCE {
+    embed-values SEQUENCE OF XSD.String,
+    algorithm    XSD.AnyURI,
+    elem-list    SEQUENCE OF elem XSD.String (CONSTRAINED BY
+		 {/* Shall conform to the "AnyElementFormat" specified
+		 in ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19 */})
+} (CONSTRAINED BY
+    {/* Shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25 */})
+
+SignatureMethod ::= SignatureMethodType
+
+SignatureMethodType ::= SEQUENCE {
+    embed-values     SEQUENCE OF XSD.String,
+    algorithm        XSD.AnyURI,
+    hMACOutputLength HMACOutputLengthType OPTIONAL,
+    elem-list        SEQUENCE OF elem XSD.String (CONSTRAINED BY
+		     {/* Shall conform to the "AnyElementFormat" specified
+		     in ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19 */})
+} (CONSTRAINED BY
+    {/* Shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25 */})
+
+Reference ::= ReferenceType
+
+ReferenceType ::= SEQUENCE {
+    id           XSD.ID OPTIONAL,
+    type         XSD.AnyURI OPTIONAL,
+    uRI          XSD.AnyURI OPTIONAL,
+    transforms   Transforms OPTIONAL,
+    digestMethod DigestMethod,
+    digestValue  DigestValue
+}
+
+Transforms ::= TransformsType
+
+TransformsType ::= SEQUENCE {
+    transform-list SEQUENCE (SIZE(1..MAX)) OF transform Transform
+}
+
+Transform ::= TransformType
+
+TransformType ::= SEQUENCE {
+    embed-values SEQUENCE OF XSD.String,
+    algorithm    XSD.AnyURI,
+    choice-list  SEQUENCE OF CHOICE {
+	elem  XSD.String (CONSTRAINED BY
+	      {/* Shall conform to the "AnyElementFormat" specified in ITU-T
+	      Rec. X.693 | ISO/IEC 8825-4, clause 19 */}),
+	xPath XSD.String
+    }
+} (CONSTRAINED BY
+    {/* Shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25 */})
+
+DigestMethod ::= DigestMethodType
+
+DigestMethodType ::= SEQUENCE {
+    embed-values SEQUENCE OF XSD.String,
+    algorithm    XSD.AnyURI,
+    elem-list    SEQUENCE OF elem XSD.String (CONSTRAINED BY
+		 {/* Shall conform to the "AnyElementFormat" specified
+		 in ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19 */})
+} (CONSTRAINED BY
+    {/* Shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25 */})
+
+DigestValue ::= DigestValueType
+
+DigestValueType ::= OCTET STRING
+
+KeyInfo ::= KeyInfoType
+
+KeyInfoType ::= SEQUENCE {
+    embed-values SEQUENCE OF XSD.String,
+    id           XSD.ID OPTIONAL,
+    choice-list  SEQUENCE (SIZE(1..MAX)) OF CHOICE {
+	keyName         KeyName,
+	keyValue        KeyValue,
+	retrievalMethod RetrievalMethod,
+	x509Data        X509Data,
+	pGPData         PGPData,
+	sPKIData        SPKIData,
+	mgmtData        MgmtData,
+	elem            XSD.String (CONSTRAINED BY
+			{/* Shall conform to the "AnyElementFormat" specified
+			in ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19 */})
+    }
+} (CONSTRAINED BY
+    {/* Shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25 */})
+
+KeyName ::= XSD.String
+
+MgmtData ::= XSD.String
+
+KeyValue ::= KeyValueType
+
+KeyValueType ::= SEQUENCE {
+    embed-values SEQUENCE OF XSD.String,
+    choice       CHOICE {
+	dSAKeyValue DSAKeyValue,
+	rSAKeyValue RSAKeyValue,
+	elem        XSD.String (CONSTRAINED BY
+		    {/* Shall conform to the "AnyElementFormat" specified
+		    in ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19 */})
+    }
+} (CONSTRAINED BY
+    {/* Shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25 */})
+
+RetrievalMethod ::= RetrievalMethodType
+
+RetrievalMethodType ::= SEQUENCE {
+    type       XSD.AnyURI OPTIONAL,
+    uRI        XSD.AnyURI OPTIONAL,
+    transforms Transforms OPTIONAL
+}
+
+X509Data ::= X509DataType
+
+X509DataType ::= SEQUENCE {
+    sequence-list SEQUENCE (SIZE(1..MAX)) OF SEQUENCE {
+	choice CHOICE {
+	    x509IssuerSerial X509IssuerSerialType,
+	    x509SKI          OCTET STRING,
+	    x509SubjectName  XSD.String,
+	    x509Certificate  OCTET STRING,
+	    x509CRL          OCTET STRING,
+	    elem             XSD.String (CONSTRAINED BY
+			     {/* Shall conform to the
+			     "AnyElementFormat" specified in ITU-T Rec.
+			     X.693 | ISO/IEC 8825-4, clause 19 */})
+	}
+    }
+}
+
+X509IssuerSerialType ::= SEQUENCE {
+    x509IssuerName   XSD.String,
+    x509SerialNumber INTEGER
+}
+
+PGPData ::= PGPDataType
+
+PGPDataType ::= SEQUENCE {
+    choice CHOICE {
+	sequence   SEQUENCE {
+	    pGPKeyID     OCTET STRING,
+	    pGPKeyPacket OCTET STRING OPTIONAL,
+	    elem-list    SEQUENCE OF elem XSD.String (CONSTRAINED BY
+			 {/* Shall conform to the
+			 "AnyElementFormat" specified in ITU-T Rec. X.693 |
+			 ISO/IEC 8825-4, clause 19 */})
+	},
+	sequence-1 SEQUENCE {
+	    pGPKeyPacket OCTET STRING,
+	    elem-list    SEQUENCE OF elem XSD.String (CONSTRAINED BY
+			 {/* Shall conform to the
+			 "AnyElementFormat" specified in ITU-T Rec. X.693 |
+			 ISO/IEC 8825-4, clause 19 */})
+	}
+    }
+}
+
+SPKIData ::= SPKIDataType
+
+SPKIDataType ::= SEQUENCE {
+    sequence-list SEQUENCE (SIZE(1..MAX)) OF SEQUENCE {
+	sPKISexp OCTET STRING,
+	elem     XSD.String (CONSTRAINED BY
+		 {/* Shall conform to the "AnyElementFormat" specified
+		 in ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 19 */}) OPTIONAL
+    }
+}
+
+Object ::= ObjectType
+
+ObjectType ::= SEQUENCE {
+    embed-values  SEQUENCE OF XSD.String,
+    encoding      XSD.AnyURI OPTIONAL,
+    id            XSD.ID OPTIONAL,
+    mimeType      XSD.String OPTIONAL,
+    sequence-list SEQUENCE OF SEQUENCE {
+	elem XSD.String (CONSTRAINED BY
+	     {/* Shall conform to the "AnyElementFormat" specified in ITU-T
+	     Rec. X.693 | ISO/IEC 8825-4, clause 19 */})
+    }
+} (CONSTRAINED BY
+    {/* Shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25 */})
+
+Manifest ::= ManifestType
+
+ManifestType ::= SEQUENCE {
+    id             XSD.ID OPTIONAL,
+    reference-list SEQUENCE (SIZE(1..MAX)) OF reference Reference
+}
+
+SignatureProperties ::= SignaturePropertiesType
+
+SignaturePropertiesType ::= SEQUENCE {
+    id           XSD.ID OPTIONAL,
+    signatureProperty-list SEQUENCE (SIZE(1..MAX)) OF signatureProperty 
+		 SignatureProperty
+}
+
+SignatureProperty ::= SignaturePropertyType
+
+SignaturePropertyType ::= SEQUENCE {
+    embed-values SEQUENCE OF XSD.String,
+    id           XSD.ID OPTIONAL,
+    target       XSD.AnyURI,
+    choice-list  SEQUENCE (SIZE(1..MAX)) OF CHOICE {
+	elem XSD.String (CONSTRAINED BY
+	     {/* Shall conform to the "AnyElementFormat" specified in ITU-T
+	     Rec. X.693 | ISO/IEC 8825-4, clause 19 */})
+    }
+} (CONSTRAINED BY
+    {/* Shall conform to ITU-T Rec. X.693 | ISO/IEC 8825-4, clause 25 */})
+
+HMACOutputLengthType ::= INTEGER
+
+DSAKeyValue ::= DSAKeyValueType
+
+DSAKeyValueType ::= SEQUENCE {
+    sequence   SEQUENCE {
+	p CryptoBinary,
+	q CryptoBinary
+    } OPTIONAL,
+    g          CryptoBinary OPTIONAL,
+    y          CryptoBinary,
+    j          CryptoBinary OPTIONAL,
+    sequence-1 SEQUENCE {
+	seed        CryptoBinary,
+	pgenCounter CryptoBinary
+    } OPTIONAL
+}
+
+RSAKeyValue ::= RSAKeyValueType
+
+RSAKeyValueType ::= SEQUENCE {
+    modulus  CryptoBinary,
+    exponent CryptoBinary
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "http://www.w3.org/2000/09/xmldsig#"
+	PREFIX "ds"
+    NOT NAMESPACE SignatureType.id, SignatureValueType.id, SignedInfoType.id, 
+	CanonicalizationMethodType.algorithm, SignatureMethodType.algorithm, 
+	ReferenceType.id, ReferenceType.type, ReferenceType.uRI, 
+	TransformType.algorithm, DigestMethodType.algorithm, KeyInfoType.id, 
+	RetrievalMethodType.type, RetrievalMethodType.uRI, 
+	ObjectType.encoding, ObjectType.id, ObjectType.mimeType, 
+	ManifestType.id, SignaturePropertiesType.id, SignaturePropertyType.id,
+	SignaturePropertyType.target
+    NAME SignatureType.id, SignatureType.signedInfo, 
+	SignatureType.signatureValue, SignatureType.keyInfo, 
+	SignatureType.object-list.object, SignatureValueType.id, 
+	SignedInfoType.id, SignedInfoType.canonicalizationMethod, 
+	SignedInfoType.signatureMethod, 
+	SignedInfoType.reference-list.reference, 
+	CanonicalizationMethodType.algorithm, SignatureMethodType.algorithm, 
+	SignatureMethodType.hMACOutputLength, ReferenceType.id, 
+	ReferenceType.type, ReferenceType.uRI, ReferenceType.transforms, 
+	ReferenceType.digestMethod, ReferenceType.digestValue, 
+	TransformsType.transform-list.transform, TransformType.algorithm, 
+	TransformType.choice-list.*.xPath, DigestMethodType.algorithm, 
+	KeyInfoType.id, KeyInfoType.choice-list.*.keyName, 
+	KeyInfoType.choice-list.*.keyValue, 
+	KeyInfoType.choice-list.*.retrievalMethod, 
+	KeyInfoType.choice-list.*.x509Data, KeyInfoType.choice-list.*.pGPData,
+	KeyInfoType.choice-list.*.sPKIData, 
+	KeyInfoType.choice-list.*.mgmtData, KeyValueType.choice.dSAKeyValue, 
+	KeyValueType.choice.rSAKeyValue, RetrievalMethodType.type, 
+	RetrievalMethodType.uRI, RetrievalMethodType.transforms, 
+	X509DataType.sequence-list.*.choice.x509IssuerSerial, 
+	X509DataType.sequence-list.*.choice.x509SKI, 
+	X509DataType.sequence-list.*.choice.x509SubjectName, 
+	X509DataType.sequence-list.*.choice.x509Certificate, 
+	X509DataType.sequence-list.*.choice.x509CRL, 
+	X509IssuerSerialType.x509IssuerName, 
+	X509IssuerSerialType.x509SerialNumber, 
+	PGPDataType.choice.sequence.pGPKeyID, 
+	PGPDataType.choice.sequence.pGPKeyPacket, 
+	PGPDataType.choice.sequence-1.pGPKeyPacket, 
+	SPKIDataType.sequence-list.*.sPKISexp, ObjectType.encoding, 
+	ObjectType.id, ObjectType.mimeType, ManifestType.id, 
+	ManifestType.reference-list.reference, SignaturePropertiesType.id, 
+	SignaturePropertiesType.signatureProperty-list.signatureProperty, 
+	SignaturePropertyType.id, SignaturePropertyType.target, 
+	DSAKeyValueType.sequence.p, DSAKeyValueType.sequence.q, 
+	DSAKeyValueType.g, DSAKeyValueType.y, DSAKeyValueType.j, 
+	DSAKeyValueType.sequence-1.seed, 
+	DSAKeyValueType.sequence-1.pgenCounter, RSAKeyValueType.modulus, 
+	RSAKeyValueType.exponent AS CAPITALIZED
+    ATTRIBUTE SignatureType.id, SignatureValueType.id, SignedInfoType.id, 
+	CanonicalizationMethodType.algorithm, SignatureMethodType.algorithm, 
+	ReferenceType.id, ReferenceType.type, ReferenceType.uRI, 
+	TransformType.algorithm, DigestMethodType.algorithm, KeyInfoType.id, 
+	RetrievalMethodType.type, RetrievalMethodType.uRI, 
+	ObjectType.encoding, ObjectType.id, ObjectType.mimeType, 
+	ManifestType.id, SignaturePropertiesType.id, SignaturePropertyType.id,
+	SignaturePropertyType.target
+    BASE64 CryptoBinary, SignatureValueType.base, DigestValueType, 
+	X509DataType.sequence-list.*.choice.x509SKI, 
+	X509DataType.sequence-list.*.choice.x509Certificate, 
+	X509DataType.sequence-list.*.choice.x509CRL, 
+	PGPDataType.choice.sequence.pGPKeyID, 
+	PGPDataType.choice.sequence.pGPKeyPacket, 
+	PGPDataType.choice.sequence-1.pGPKeyPacket, 
+	SPKIDataType.sequence-list.*.sPKISexp
+    EMBED-VALUES CanonicalizationMethodType, SignatureMethodType, 
+	TransformType, DigestMethodType, KeyInfoType, KeyValueType, 
+	ObjectType, SignaturePropertyType
+    UNTAGGED SEQUENCE OF, SignatureValueType.base, 
+	TransformType.choice-list.*, KeyInfoType.choice-list.*, 
+	KeyValueType.choice, X509DataType.sequence-list.*, 
+	X509DataType.sequence-list.*.choice, PGPDataType.choice, 
+	PGPDataType.choice.sequence, PGPDataType.choice.sequence-1, 
+	SPKIDataType.sequence-list.*, ObjectType.sequence-list.*, 
+	SignaturePropertyType.choice-list.*, DSAKeyValueType.sequence, 
+	DSAKeyValueType.sequence-1
+    NOT UNTAGGED CanonicalizationMethodType.embed-values, 
+	SignatureMethodType.embed-values, TransformType.embed-values, 
+	DigestMethodType.embed-values, KeyInfoType.embed-values, 
+	KeyValueType.embed-values, ObjectType.embed-values, 
+	SignaturePropertyType.embed-values
+    ANY-ELEMENT CanonicalizationMethodType.elem-list.elem
+    ANY-ELEMENT SignatureMethodType.elem-list.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT TransformType.choice-list.*.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT DigestMethodType.elem-list.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT KeyInfoType.choice-list.*.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT KeyValueType.choice.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT X509DataType.sequence-list.*.choice.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT PGPDataType.choice.sequence.elem-list.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT PGPDataType.choice.sequence-1.elem-list.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT SPKIDataType.sequence-list.*.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+    ANY-ELEMENT ObjectType.sequence-list.*.elem
+    ANY-ELEMENT SignaturePropertyType.choice-list.*.elem EXCEPT ABSENT
+	"http://www.w3.org/2000/09/xmldsig#"
+END
+

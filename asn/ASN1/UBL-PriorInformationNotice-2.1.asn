@@ -1,0 +1,106 @@
+
+PriorInformationNotice-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, ContractFolderID, IssueDate, IssueTime, Note, 
+    PlannedDate
+    FROM CommonBasicComponents-2
+    DocumentReference, Signature-1, ContractingParty, OriginatorCustomerParty,
+    ReceiverParty, TenderingTerms, TenderingProcess, ProcurementProject, 
+    ProcurementProjectLot
+    FROM CommonAggregateComponents-2;
+
+PriorInformationNotice ::= PriorInformationNoticeType
+
+PriorInformationNoticeType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1 OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    contractFolderID ContractFolderID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    plannedDate PlannedDate OPTIONAL,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    contractingParty ContractingParty,
+    originatorCustomerParty-list SEQUENCE OF originatorCustomerParty 
+	OriginatorCustomerParty,
+    receiverParty ReceiverParty OPTIONAL,
+    tenderingTerms TenderingTerms OPTIONAL,
+    tenderingProcess TenderingProcess OPTIONAL,
+    procurementProject ProcurementProject OPTIONAL,
+    procurementProjectLot-list SEQUENCE OF procurementProjectLot 
+	ProcurementProjectLot
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"
+	PREFIX "ns37"
+    NAMESPACE PriorInformationNoticeType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE PriorInformationNoticeType.uBLVersionID, 
+	PriorInformationNoticeType.customizationID, 
+	PriorInformationNoticeType.profileID, 
+	PriorInformationNoticeType.profileExecutionID, 
+	PriorInformationNoticeType.iD, 
+	PriorInformationNoticeType.copyIndicator, 
+	PriorInformationNoticeType.uUID, 
+	PriorInformationNoticeType.contractFolderID, 
+	PriorInformationNoticeType.issueDate, 
+	PriorInformationNoticeType.issueTime, 
+	PriorInformationNoticeType.note-list.note, 
+	PriorInformationNoticeType.plannedDate
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE 
+	PriorInformationNoticeType.documentReference-list.documentReference, 
+	PriorInformationNoticeType.signature-list.signature, 
+	PriorInformationNoticeType.contractingParty, 
+	PriorInformationNoticeType.originatorCustomerParty-list.originatorCustomerParty,
+	PriorInformationNoticeType.receiverParty, 
+	PriorInformationNoticeType.tenderingTerms, 
+	PriorInformationNoticeType.tenderingProcess, 
+	PriorInformationNoticeType.procurementProject, 
+	PriorInformationNoticeType.procurementProjectLot-list.procurementProjectLot
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME PriorInformationNoticeType.uBLExtensions, 
+	PriorInformationNoticeType.uBLVersionID, 
+	PriorInformationNoticeType.customizationID, 
+	PriorInformationNoticeType.profileID, 
+	PriorInformationNoticeType.profileExecutionID, 
+	PriorInformationNoticeType.iD, 
+	PriorInformationNoticeType.copyIndicator, 
+	PriorInformationNoticeType.uUID, 
+	PriorInformationNoticeType.contractFolderID, 
+	PriorInformationNoticeType.issueDate, 
+	PriorInformationNoticeType.issueTime, 
+	PriorInformationNoticeType.note-list.note, 
+	PriorInformationNoticeType.plannedDate, 
+	PriorInformationNoticeType.documentReference-list.documentReference, 
+	PriorInformationNoticeType.signature-list.signature, 
+	PriorInformationNoticeType.contractingParty, 
+	PriorInformationNoticeType.originatorCustomerParty-list.originatorCustomerParty,
+	PriorInformationNoticeType.receiverParty, 
+	PriorInformationNoticeType.tenderingTerms, 
+	PriorInformationNoticeType.tenderingProcess, 
+	PriorInformationNoticeType.procurementProject, 
+	PriorInformationNoticeType.procurementProjectLot-list.procurementProjectLot
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

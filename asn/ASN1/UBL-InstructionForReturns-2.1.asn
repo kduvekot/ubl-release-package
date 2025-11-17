@@ -1,0 +1,88 @@
+
+InstructionForReturns-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note
+    FROM CommonBasicComponents-2
+    DocumentReference, Signature-1, SellerSupplierParty, 
+    RetailerCustomerParty, ManufacturerParty, Shipment, 
+    InstructionForReturnsLine
+    FROM CommonAggregateComponents-2;
+
+InstructionForReturns ::= InstructionForReturnsType
+
+InstructionForReturnsType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    sellerSupplierParty SellerSupplierParty,
+    retailerCustomerParty RetailerCustomerParty,
+    manufacturerParty ManufacturerParty OPTIONAL,
+    shipment   Shipment OPTIONAL,
+    instructionForReturnsLine-list SEQUENCE (SIZE(1..MAX)) OF 
+	instructionForReturnsLine InstructionForReturnsLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:InstructionForReturns-2"
+	PREFIX "ns26"
+    NAMESPACE InstructionForReturnsType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE InstructionForReturnsType.uBLVersionID, 
+	InstructionForReturnsType.customizationID, 
+	InstructionForReturnsType.profileID, 
+	InstructionForReturnsType.profileExecutionID, 
+	InstructionForReturnsType.iD, InstructionForReturnsType.copyIndicator,
+	InstructionForReturnsType.uUID, InstructionForReturnsType.issueDate, 
+	InstructionForReturnsType.issueTime, 
+	InstructionForReturnsType.note-list.note
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE 
+	InstructionForReturnsType.documentReference-list.documentReference, 
+	InstructionForReturnsType.signature-list.signature, 
+	InstructionForReturnsType.sellerSupplierParty, 
+	InstructionForReturnsType.retailerCustomerParty, 
+	InstructionForReturnsType.manufacturerParty, 
+	InstructionForReturnsType.shipment, 
+	InstructionForReturnsType.instructionForReturnsLine-list.instructionForReturnsLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME InstructionForReturnsType.uBLExtensions, 
+	InstructionForReturnsType.uBLVersionID, 
+	InstructionForReturnsType.customizationID, 
+	InstructionForReturnsType.profileID, 
+	InstructionForReturnsType.profileExecutionID, 
+	InstructionForReturnsType.iD, InstructionForReturnsType.copyIndicator,
+	InstructionForReturnsType.uUID, InstructionForReturnsType.issueDate, 
+	InstructionForReturnsType.issueTime, 
+	InstructionForReturnsType.note-list.note, 
+	InstructionForReturnsType.documentReference-list.documentReference, 
+	InstructionForReturnsType.signature-list.signature, 
+	InstructionForReturnsType.sellerSupplierParty, 
+	InstructionForReturnsType.retailerCustomerParty, 
+	InstructionForReturnsType.manufacturerParty, 
+	InstructionForReturnsType.shipment, 
+	InstructionForReturnsType.instructionForReturnsLine-list.instructionForReturnsLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

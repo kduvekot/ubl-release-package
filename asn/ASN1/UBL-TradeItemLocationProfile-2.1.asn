@@ -1,0 +1,96 @@
+
+TradeItemLocationProfile-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, ProfileStatusCode
+    FROM CommonBasicComponents-2
+    Period, DocumentReference, Signature-1, SenderParty, ReceiverParty, 
+    BuyerCustomerParty, SellerSupplierParty, ItemManagementProfile
+    FROM CommonAggregateComponents-2;
+
+TradeItemLocationProfile ::= TradeItemLocationProfileType
+
+TradeItemLocationProfileType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    profileStatusCode ProfileStatusCode OPTIONAL,
+    period     Period,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    itemManagementProfile-list SEQUENCE (SIZE(1..MAX)) OF 
+	itemManagementProfile ItemManagementProfile
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:TradeItemLocationProfile-2"
+	PREFIX "ns53"
+    NAMESPACE TradeItemLocationProfileType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE TradeItemLocationProfileType.uBLVersionID, 
+	TradeItemLocationProfileType.customizationID, 
+	TradeItemLocationProfileType.profileID, 
+	TradeItemLocationProfileType.profileExecutionID, 
+	TradeItemLocationProfileType.iD, 
+	TradeItemLocationProfileType.copyIndicator, 
+	TradeItemLocationProfileType.uUID, 
+	TradeItemLocationProfileType.issueDate, 
+	TradeItemLocationProfileType.issueTime, 
+	TradeItemLocationProfileType.note-list.note, 
+	TradeItemLocationProfileType.profileStatusCode
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE TradeItemLocationProfileType.period, 
+	TradeItemLocationProfileType.documentReference-list.documentReference,
+	TradeItemLocationProfileType.signature-list.signature, 
+	TradeItemLocationProfileType.senderParty, 
+	TradeItemLocationProfileType.receiverParty, 
+	TradeItemLocationProfileType.buyerCustomerParty, 
+	TradeItemLocationProfileType.sellerSupplierParty, 
+	TradeItemLocationProfileType.itemManagementProfile-list.itemManagementProfile
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME TradeItemLocationProfileType.uBLExtensions, 
+	TradeItemLocationProfileType.uBLVersionID, 
+	TradeItemLocationProfileType.customizationID, 
+	TradeItemLocationProfileType.profileID, 
+	TradeItemLocationProfileType.profileExecutionID, 
+	TradeItemLocationProfileType.iD, 
+	TradeItemLocationProfileType.copyIndicator, 
+	TradeItemLocationProfileType.uUID, 
+	TradeItemLocationProfileType.issueDate, 
+	TradeItemLocationProfileType.issueTime, 
+	TradeItemLocationProfileType.note-list.note, 
+	TradeItemLocationProfileType.profileStatusCode, 
+	TradeItemLocationProfileType.period, 
+	TradeItemLocationProfileType.documentReference-list.documentReference,
+	TradeItemLocationProfileType.signature-list.signature, 
+	TradeItemLocationProfileType.senderParty, 
+	TradeItemLocationProfileType.receiverParty, 
+	TradeItemLocationProfileType.buyerCustomerParty, 
+	TradeItemLocationProfileType.sellerSupplierParty, 
+	TradeItemLocationProfileType.itemManagementProfile-list.itemManagementProfile
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

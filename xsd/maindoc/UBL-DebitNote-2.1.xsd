@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsd
   Module:            UBL-DebitNote-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns="urn:oasis:names:specification:ubl:schema:xsd:DebitNote-2"
@@ -30,7 +29,7 @@
       </xsd:annotation>
   </xsd:element>
    <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definiition ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
    <xsd:complexType name="DebitNoteType">
       <xsd:annotation>
          <xsd:documentation>
@@ -456,6 +455,22 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:StatementDocumentReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Debit Note. Statement_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>An associative reference to Statement.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Debit Note</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Statement</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cac:ContractDocumentReference" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -615,6 +630,81 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:AllowanceCharge" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Debit Note. Allowance Charge</ccts:DictionaryEntryName>
+                     <ccts:Definition>Information about a charge or discount price component.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Debit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Allowance Charge</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Allowance Charge</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:Delivery" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Debit Note. Delivery</ccts:DictionaryEntryName>
+                     <ccts:Definition>Information about Delivery.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Debit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Delivery</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Delivery</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:DeliveryTerms" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Debit Note. Delivery Terms</ccts:DictionaryEntryName>
+                     <ccts:Definition>Information about Delivery Terms.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Debit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Delivery Terms</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Delivery Terms</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:PaymentMeans" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Debit Note. Payment Means</ccts:DictionaryEntryName>
+                     <ccts:Definition>Information about Payment Means.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Debit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Payment Means</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Payment Means</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:PaymentTerms" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Debit Note. Payment Terms</ccts:DictionaryEntryName>
+                     <ccts:Definition>Information about Payment Terms.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Debit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Payment Terms</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Payment Terms</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cac:TaxExchangeRate" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -750,7 +840,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

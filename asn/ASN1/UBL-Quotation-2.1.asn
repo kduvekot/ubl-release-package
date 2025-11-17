@@ -1,0 +1,111 @@
+
+Quotation-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, PricingCurrencyCode, 
+    LineCountNumeric
+    FROM CommonBasicComponents-2
+    ValidityPeriod, RequestForQuotationDocumentReference, 
+    AdditionalDocumentReference, Contract, Signature-1, SellerSupplierParty, 
+    OriginatorCustomerParty, Delivery, DeliveryTerms, PaymentMeans, 
+    TransactionConditions, AllowanceCharge, DestinationCountry, TaxTotal, 
+    QuotedMonetaryTotal, QuotationLine
+    FROM CommonAggregateComponents-2;
+
+Quotation ::= QuotationType
+
+QuotationType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1 OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    pricingCurrencyCode PricingCurrencyCode OPTIONAL,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    validityPeriod ValidityPeriod OPTIONAL,
+    requestForQuotationDocumentReference RequestForQuotationDocumentReference
+	OPTIONAL,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    contract-list SEQUENCE OF contract Contract,
+    signature-list SEQUENCE OF signature Signature-1,
+    sellerSupplierParty SellerSupplierParty,
+    originatorCustomerParty OriginatorCustomerParty OPTIONAL,
+    delivery-list SEQUENCE OF delivery Delivery,
+    deliveryTerms DeliveryTerms OPTIONAL,
+    paymentMeans PaymentMeans OPTIONAL,
+    transactionConditions TransactionConditions OPTIONAL,
+    allowanceCharge-list SEQUENCE OF allowanceCharge AllowanceCharge,
+    destinationCountry DestinationCountry OPTIONAL,
+    taxTotal-list SEQUENCE OF taxTotal TaxTotal,
+    quotedMonetaryTotal QuotedMonetaryTotal,
+    quotationLine-list SEQUENCE (SIZE(1..MAX)) OF quotationLine QuotationLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:Quotation-2"
+	PREFIX "ns39"
+    NAMESPACE QuotationType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE QuotationType.uBLVersionID, QuotationType.customizationID, 
+	QuotationType.profileID, QuotationType.profileExecutionID, 
+	QuotationType.iD, QuotationType.copyIndicator, QuotationType.uUID, 
+	QuotationType.issueDate, QuotationType.issueTime, 
+	QuotationType.note-list.note, QuotationType.pricingCurrencyCode, 
+	QuotationType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE QuotationType.validityPeriod, 
+	QuotationType.requestForQuotationDocumentReference, 
+	QuotationType.additionalDocumentReference-list.additionalDocumentReference,
+	QuotationType.contract-list.contract, 
+	QuotationType.signature-list.signature, 
+	QuotationType.sellerSupplierParty, 
+	QuotationType.originatorCustomerParty, 
+	QuotationType.delivery-list.delivery, QuotationType.deliveryTerms, 
+	QuotationType.paymentMeans, QuotationType.transactionConditions, 
+	QuotationType.allowanceCharge-list.allowanceCharge, 
+	QuotationType.destinationCountry, 
+	QuotationType.taxTotal-list.taxTotal, 
+	QuotationType.quotedMonetaryTotal, 
+	QuotationType.quotationLine-list.quotationLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME QuotationType.uBLExtensions, QuotationType.uBLVersionID, 
+	QuotationType.customizationID, QuotationType.profileID, 
+	QuotationType.profileExecutionID, QuotationType.iD, 
+	QuotationType.copyIndicator, QuotationType.uUID, 
+	QuotationType.issueDate, QuotationType.issueTime, 
+	QuotationType.note-list.note, QuotationType.pricingCurrencyCode, 
+	QuotationType.lineCountNumeric, QuotationType.validityPeriod, 
+	QuotationType.requestForQuotationDocumentReference, 
+	QuotationType.additionalDocumentReference-list.additionalDocumentReference,
+	QuotationType.contract-list.contract, 
+	QuotationType.signature-list.signature, 
+	QuotationType.sellerSupplierParty, 
+	QuotationType.originatorCustomerParty, 
+	QuotationType.delivery-list.delivery, QuotationType.deliveryTerms, 
+	QuotationType.paymentMeans, QuotationType.transactionConditions, 
+	QuotationType.allowanceCharge-list.allowanceCharge, 
+	QuotationType.destinationCountry, 
+	QuotationType.taxTotal-list.taxTotal, 
+	QuotationType.quotedMonetaryTotal, 
+	QuotationType.quotationLine-list.quotationLine AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

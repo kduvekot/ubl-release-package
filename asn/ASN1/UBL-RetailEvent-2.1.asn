@@ -1,0 +1,95 @@
+
+RetailEvent-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, RetailEventName, 
+    RetailEventStatusCode, SellerEventID, BuyerEventID, Description
+    FROM CommonBasicComponents-2
+    Period, OriginalDocumentReference, Signature-1, SenderParty, 
+    ReceiverParty, BuyerCustomerParty, SellerSupplierParty, EventComment, 
+    PromotionalEvent, MiscellaneousEvent
+    FROM CommonAggregateComponents-2;
+
+RetailEvent ::= RetailEventType
+
+RetailEventType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    retailEventName RetailEventName OPTIONAL,
+    retailEventStatusCode RetailEventStatusCode,
+    sellerEventID SellerEventID OPTIONAL,
+    buyerEventID BuyerEventID OPTIONAL,
+    description Description OPTIONAL,
+    period     Period,
+    originalDocumentReference-list SEQUENCE OF originalDocumentReference 
+	OriginalDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    eventComment-list SEQUENCE OF eventComment EventComment,
+    promotionalEvent PromotionalEvent OPTIONAL,
+    miscellaneousEvent MiscellaneousEvent OPTIONAL
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2"
+	PREFIX "ns44"
+    NAMESPACE RetailEventType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE RetailEventType.uBLVersionID, RetailEventType.customizationID, 
+	RetailEventType.profileID, RetailEventType.profileExecutionID, 
+	RetailEventType.iD, RetailEventType.copyIndicator, 
+	RetailEventType.uUID, RetailEventType.issueDate, 
+	RetailEventType.issueTime, RetailEventType.note-list.note, 
+	RetailEventType.retailEventName, 
+	RetailEventType.retailEventStatusCode, RetailEventType.sellerEventID, 
+	RetailEventType.buyerEventID, RetailEventType.description
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE RetailEventType.period, 
+	RetailEventType.originalDocumentReference-list.originalDocumentReference,
+	RetailEventType.signature-list.signature, RetailEventType.senderParty,
+	RetailEventType.receiverParty, RetailEventType.buyerCustomerParty, 
+	RetailEventType.sellerSupplierParty, 
+	RetailEventType.eventComment-list.eventComment, 
+	RetailEventType.promotionalEvent, RetailEventType.miscellaneousEvent
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME RetailEventType.uBLExtensions, RetailEventType.uBLVersionID, 
+	RetailEventType.customizationID, RetailEventType.profileID, 
+	RetailEventType.profileExecutionID, RetailEventType.iD, 
+	RetailEventType.copyIndicator, RetailEventType.uUID, 
+	RetailEventType.issueDate, RetailEventType.issueTime, 
+	RetailEventType.note-list.note, RetailEventType.retailEventName, 
+	RetailEventType.retailEventStatusCode, RetailEventType.sellerEventID, 
+	RetailEventType.buyerEventID, RetailEventType.description, 
+	RetailEventType.period, RetailEventType.originalDocumentReference-list.originalDocumentReference,
+	RetailEventType.signature-list.signature, RetailEventType.senderParty,
+	RetailEventType.receiverParty, RetailEventType.buyerCustomerParty, 
+	RetailEventType.sellerSupplierParty, 
+	RetailEventType.eventComment-list.eventComment, 
+	RetailEventType.promotionalEvent, RetailEventType.miscellaneousEvent
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

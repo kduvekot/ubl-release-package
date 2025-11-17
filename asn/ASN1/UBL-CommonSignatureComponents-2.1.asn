@@ -1,0 +1,29 @@
+
+CommonSignatureComponents-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    SignatureInformation
+    FROM SignatureAggregateComponents-2;
+
+UBLDocumentSignatures ::= UBLDocumentSignaturesType
+
+UBLDocumentSignaturesType ::= SEQUENCE {
+    signatureInformation-list SEQUENCE (SIZE(1..MAX)) OF signatureInformation 
+	SignatureInformation
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
+	PREFIX "ns62"
+    NAMESPACE UBLDocumentSignaturesType.signatureInformation-list.signatureInformation
+	AS "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
+	    PREFIX "sac"
+    NAME UBLDocumentSignaturesType.signatureInformation-list.signatureInformation
+	AS CAPITALIZED
+    UNTAGGED UBLDocumentSignaturesType.signatureInformation-list
+END
+

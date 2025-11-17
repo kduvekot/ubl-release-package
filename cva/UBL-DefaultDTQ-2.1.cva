@@ -3,7 +3,7 @@
                              xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                              xmlns:x="http://www.w3.org/1999/xhtml"
                              name="UBL-QualifiedDataTypes-2.0"
-                             version="2010-08-30 20:21:05(UTC)"
+                             version="2011-05-17 15:53:00(UTC)"
                              id="urn:oasis:names:specification:ubl:cva:UBL-Qualified-Data-Types:2">
    <Annotation>
       <Description>
@@ -280,6 +280,7 @@
                         cbc:Measure/@unitCode | 
                         cbc:MinimumMeasure/@unitCode | 
                         cbc:MaximumMeasure/@unitCode | 
+                        cbc:ValueMeasure/@unitCode | 
                         cbc:ComparedValueMeasure/@unitCode | 
                         cbc:SourceValueMeasure/@unitCode | 
                         cbc:LeadTimeMeasure/@unitCode | 
@@ -309,7 +310,6 @@
                         cbc:TotalDeliveredQuantity/@unitCode | 
                         cbc:TotalConsumedQuantity/@unitCode | 
                         cbc:BasicConsumedQuantity/@unitCode | 
-                        cbc:TotalConsumptedQuantity/@unitCode | 
                         cbc:GasPressureQuantity/@unitCode | 
                         cbc:ActualTemperatureReductionQuantity/@unitCode | 
                         cbc:NormalTemperatureReductionQuantity/@unitCode | 
@@ -342,9 +342,10 @@
                         cbc:MaximumBackorderQuantity/@unitCode | 
                         cbc:PreviousMeterQuantity/@unitCode | 
                         cbc:LatestMeterQuantity/@unitCode | 
-                        cbc:EstimatedConsumptedQuantity/@unitCode | 
+                        cbc:EstimatedConsumedQuantity/@unitCode | 
                         cbc:PerformanceValueQuantity/@unitCode | 
                         cbc:BaseQuantity/@unitCode | 
+                        cbc:EstimatedOverallContractQuantity/@unitCode | 
                         cbc:OperatingYearsQuantity/@unitCode | 
                         cbc:EmployeeQuantity/@unitCode | 
                         cbc:ReceivedQuantity/@unitCode | 
@@ -353,9 +354,7 @@
                         cbc:TotalMeteredQuantity/@unitCode | 
                         cbc:ReceivedTenderQuantity/@unitCode | 
                         cbc:MaximumVariantQuantity/@unitCode | 
-                        cbc:TotalPackageQuantity/@unitCode | 
-                        cbc:PriceAmountQuantity/@unitCode | 
-                        cbc:TimeAmountQuantity/@unitCode"/>
+                        cbc:TotalPackageQuantity/@unitCode"/>
       <Context values="AllowanceChargeReason-2.0 AllowanceChargeReason-2.1"
                metadata="cctsV2.01-code"
                address="cbc:AllowanceChargeReasonCode"/>

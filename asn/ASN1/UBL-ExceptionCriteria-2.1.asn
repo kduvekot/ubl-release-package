@@ -1,0 +1,89 @@
+
+ExceptionCriteria-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, VersionID
+    FROM CommonBasicComponents-2
+    ValidityPeriod, DocumentReference, Signature-1, SenderParty, 
+    ReceiverParty, BuyerCustomerParty, SellerSupplierParty, 
+    ExceptionCriteriaLine
+    FROM CommonAggregateComponents-2;
+
+ExceptionCriteria ::= ExceptionCriteriaType
+
+ExceptionCriteriaType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    versionID  VersionID OPTIONAL,
+    validityPeriod ValidityPeriod,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    exceptionCriteriaLine-list SEQUENCE (SIZE(1..MAX)) OF 
+	exceptionCriteriaLine ExceptionCriteriaLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:ExceptionCriteria-2"
+	PREFIX "ns18"
+    NAMESPACE ExceptionCriteriaType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ExceptionCriteriaType.uBLVersionID, 
+	ExceptionCriteriaType.customizationID, 
+	ExceptionCriteriaType.profileID, 
+	ExceptionCriteriaType.profileExecutionID, ExceptionCriteriaType.iD, 
+	ExceptionCriteriaType.copyIndicator, ExceptionCriteriaType.uUID, 
+	ExceptionCriteriaType.issueDate, ExceptionCriteriaType.issueTime, 
+	ExceptionCriteriaType.note-list.note, ExceptionCriteriaType.versionID
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ExceptionCriteriaType.validityPeriod, 
+	ExceptionCriteriaType.documentReference-list.documentReference, 
+	ExceptionCriteriaType.signature-list.signature, 
+	ExceptionCriteriaType.senderParty, 
+	ExceptionCriteriaType.receiverParty, 
+	ExceptionCriteriaType.buyerCustomerParty, 
+	ExceptionCriteriaType.sellerSupplierParty, 
+	ExceptionCriteriaType.exceptionCriteriaLine-list.exceptionCriteriaLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ExceptionCriteriaType.uBLExtensions, 
+	ExceptionCriteriaType.uBLVersionID, 
+	ExceptionCriteriaType.customizationID, 
+	ExceptionCriteriaType.profileID, 
+	ExceptionCriteriaType.profileExecutionID, ExceptionCriteriaType.iD, 
+	ExceptionCriteriaType.copyIndicator, ExceptionCriteriaType.uUID, 
+	ExceptionCriteriaType.issueDate, ExceptionCriteriaType.issueTime, 
+	ExceptionCriteriaType.note-list.note, ExceptionCriteriaType.versionID,
+	ExceptionCriteriaType.validityPeriod, 
+	ExceptionCriteriaType.documentReference-list.documentReference, 
+	ExceptionCriteriaType.signature-list.signature, 
+	ExceptionCriteriaType.senderParty, 
+	ExceptionCriteriaType.receiverParty, 
+	ExceptionCriteriaType.buyerCustomerParty, 
+	ExceptionCriteriaType.sellerSupplierParty, 
+	ExceptionCriteriaType.exceptionCriteriaLine-list.exceptionCriteriaLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

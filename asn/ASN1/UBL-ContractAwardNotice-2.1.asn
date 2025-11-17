@@ -1,0 +1,103 @@
+
+ContractAwardNotice-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, ContractFolderID, IssueDate, IssueTime, Note
+    FROM CommonBasicComponents-2
+    PreviousDocumentReference, MinutesDocumentReference, Signature-1, 
+    ContractingParty, OriginatorCustomerParty, ReceiverParty, TenderingTerms, 
+    TenderingProcess, ProcurementProject, ProcurementProjectLot, TenderResult
+    FROM CommonAggregateComponents-2;
+
+ContractAwardNotice ::= ContractAwardNoticeType
+
+ContractAwardNoticeType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1 OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    contractFolderID ContractFolderID,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    previousDocumentReference-list SEQUENCE OF previousDocumentReference 
+	PreviousDocumentReference,
+    minutesDocumentReference-list SEQUENCE OF minutesDocumentReference 
+	MinutesDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    contractingParty ContractingParty,
+    originatorCustomerParty OriginatorCustomerParty OPTIONAL,
+    receiverParty ReceiverParty OPTIONAL,
+    tenderingTerms TenderingTerms OPTIONAL,
+    tenderingProcess TenderingProcess OPTIONAL,
+    procurementProject ProcurementProject OPTIONAL,
+    procurementProjectLot-list SEQUENCE OF procurementProjectLot 
+	ProcurementProjectLot,
+    tenderResult-list SEQUENCE (SIZE(1..MAX)) OF tenderResult TenderResult
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2"
+	PREFIX "ns11"
+    NAMESPACE ContractAwardNoticeType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ContractAwardNoticeType.uBLVersionID, 
+	ContractAwardNoticeType.customizationID, 
+	ContractAwardNoticeType.profileID, 
+	ContractAwardNoticeType.profileExecutionID, 
+	ContractAwardNoticeType.iD, ContractAwardNoticeType.copyIndicator, 
+	ContractAwardNoticeType.uUID, 
+	ContractAwardNoticeType.contractFolderID, 
+	ContractAwardNoticeType.issueDate, ContractAwardNoticeType.issueTime, 
+	ContractAwardNoticeType.note-list.note
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ContractAwardNoticeType.previousDocumentReference-list.previousDocumentReference,
+	ContractAwardNoticeType.minutesDocumentReference-list.minutesDocumentReference,
+	ContractAwardNoticeType.signature-list.signature, 
+	ContractAwardNoticeType.contractingParty, 
+	ContractAwardNoticeType.originatorCustomerParty, 
+	ContractAwardNoticeType.receiverParty, 
+	ContractAwardNoticeType.tenderingTerms, 
+	ContractAwardNoticeType.tenderingProcess, 
+	ContractAwardNoticeType.procurementProject, 
+	ContractAwardNoticeType.procurementProjectLot-list.procurementProjectLot,
+	ContractAwardNoticeType.tenderResult-list.tenderResult
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ContractAwardNoticeType.uBLExtensions, 
+	ContractAwardNoticeType.uBLVersionID, 
+	ContractAwardNoticeType.customizationID, 
+	ContractAwardNoticeType.profileID, 
+	ContractAwardNoticeType.profileExecutionID, 
+	ContractAwardNoticeType.iD, ContractAwardNoticeType.copyIndicator, 
+	ContractAwardNoticeType.uUID, 
+	ContractAwardNoticeType.contractFolderID, 
+	ContractAwardNoticeType.issueDate, ContractAwardNoticeType.issueTime, 
+	ContractAwardNoticeType.note-list.note, 
+	ContractAwardNoticeType.previousDocumentReference-list.previousDocumentReference,
+	ContractAwardNoticeType.minutesDocumentReference-list.minutesDocumentReference,
+	ContractAwardNoticeType.signature-list.signature, 
+	ContractAwardNoticeType.contractingParty, 
+	ContractAwardNoticeType.originatorCustomerParty, 
+	ContractAwardNoticeType.receiverParty, 
+	ContractAwardNoticeType.tenderingTerms, 
+	ContractAwardNoticeType.tenderingProcess, 
+	ContractAwardNoticeType.procurementProject, 
+	ContractAwardNoticeType.procurementProjectLot-list.procurementProjectLot,
+	ContractAwardNoticeType.tenderResult-list.tenderResult AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

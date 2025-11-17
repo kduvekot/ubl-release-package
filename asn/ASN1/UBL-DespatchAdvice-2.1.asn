@@ -1,0 +1,100 @@
+
+DespatchAdvice-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, DocumentStatusCode, 
+    DespatchAdviceTypeCode, Note, LineCountNumeric
+    FROM CommonBasicComponents-2
+    OrderReference, AdditionalDocumentReference, Signature-1, 
+    DespatchSupplierParty, DeliveryCustomerParty, BuyerCustomerParty, 
+    SellerSupplierParty, OriginatorCustomerParty, Shipment, DespatchLine
+    FROM CommonAggregateComponents-2;
+
+DespatchAdvice ::= DespatchAdviceType
+
+DespatchAdviceType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    documentStatusCode DocumentStatusCode OPTIONAL,
+    despatchAdviceTypeCode DespatchAdviceTypeCode OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    orderReference-list SEQUENCE OF orderReference OrderReference,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    despatchSupplierParty DespatchSupplierParty,
+    deliveryCustomerParty DeliveryCustomerParty,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    originatorCustomerParty OriginatorCustomerParty OPTIONAL,
+    shipment   Shipment OPTIONAL,
+    despatchLine-list SEQUENCE (SIZE(1..MAX)) OF despatchLine DespatchLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:DespatchAdvice-2"
+	PREFIX "ns15"
+    NAMESPACE DespatchAdviceType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE DespatchAdviceType.uBLVersionID, 
+	DespatchAdviceType.customizationID, DespatchAdviceType.profileID, 
+	DespatchAdviceType.profileExecutionID, DespatchAdviceType.iD, 
+	DespatchAdviceType.copyIndicator, DespatchAdviceType.uUID, 
+	DespatchAdviceType.issueDate, DespatchAdviceType.issueTime, 
+	DespatchAdviceType.documentStatusCode, 
+	DespatchAdviceType.despatchAdviceTypeCode, 
+	DespatchAdviceType.note-list.note, DespatchAdviceType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE DespatchAdviceType.orderReference-list.orderReference, 
+	DespatchAdviceType.additionalDocumentReference-list.additionalDocumentReference,
+	DespatchAdviceType.signature-list.signature, 
+	DespatchAdviceType.despatchSupplierParty, 
+	DespatchAdviceType.deliveryCustomerParty, 
+	DespatchAdviceType.buyerCustomerParty, 
+	DespatchAdviceType.sellerSupplierParty, 
+	DespatchAdviceType.originatorCustomerParty, 
+	DespatchAdviceType.shipment, 
+	DespatchAdviceType.despatchLine-list.despatchLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME DespatchAdviceType.uBLExtensions, DespatchAdviceType.uBLVersionID, 
+	DespatchAdviceType.customizationID, DespatchAdviceType.profileID, 
+	DespatchAdviceType.profileExecutionID, DespatchAdviceType.iD, 
+	DespatchAdviceType.copyIndicator, DespatchAdviceType.uUID, 
+	DespatchAdviceType.issueDate, DespatchAdviceType.issueTime, 
+	DespatchAdviceType.documentStatusCode, 
+	DespatchAdviceType.despatchAdviceTypeCode, 
+	DespatchAdviceType.note-list.note, 
+	DespatchAdviceType.lineCountNumeric, 
+	DespatchAdviceType.orderReference-list.orderReference, 
+	DespatchAdviceType.additionalDocumentReference-list.additionalDocumentReference,
+	DespatchAdviceType.signature-list.signature, 
+	DespatchAdviceType.despatchSupplierParty, 
+	DespatchAdviceType.deliveryCustomerParty, 
+	DespatchAdviceType.buyerCustomerParty, 
+	DespatchAdviceType.sellerSupplierParty, 
+	DespatchAdviceType.originatorCustomerParty, 
+	DespatchAdviceType.shipment, 
+	DespatchAdviceType.despatchLine-list.despatchLine AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

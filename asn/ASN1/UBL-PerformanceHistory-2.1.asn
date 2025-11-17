@@ -1,0 +1,80 @@
+
+PerformanceHistory-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note
+    FROM CommonBasicComponents-2
+    Period, DocumentReference, Signature-1, SenderParty, ReceiverParty, 
+    PerformanceDataLine
+    FROM CommonAggregateComponents-2;
+
+PerformanceHistory ::= PerformanceHistoryType
+
+PerformanceHistoryType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    period     Period,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    performanceDataLine-list SEQUENCE (SIZE(1..MAX)) OF performanceDataLine 
+	PerformanceDataLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:PerformanceHistory-2"
+	PREFIX "ns36"
+    NAMESPACE PerformanceHistoryType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE PerformanceHistoryType.uBLVersionID, 
+	PerformanceHistoryType.customizationID, 
+	PerformanceHistoryType.profileID, 
+	PerformanceHistoryType.profileExecutionID, PerformanceHistoryType.iD, 
+	PerformanceHistoryType.copyIndicator, PerformanceHistoryType.uUID, 
+	PerformanceHistoryType.issueDate, PerformanceHistoryType.issueTime, 
+	PerformanceHistoryType.note-list.note
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE PerformanceHistoryType.period, 
+	PerformanceHistoryType.documentReference-list.documentReference, 
+	PerformanceHistoryType.signature-list.signature, 
+	PerformanceHistoryType.senderParty, 
+	PerformanceHistoryType.receiverParty, 
+	PerformanceHistoryType.performanceDataLine-list.performanceDataLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME PerformanceHistoryType.uBLExtensions, 
+	PerformanceHistoryType.uBLVersionID, 
+	PerformanceHistoryType.customizationID, 
+	PerformanceHistoryType.profileID, 
+	PerformanceHistoryType.profileExecutionID, PerformanceHistoryType.iD, 
+	PerformanceHistoryType.copyIndicator, PerformanceHistoryType.uUID, 
+	PerformanceHistoryType.issueDate, PerformanceHistoryType.issueTime, 
+	PerformanceHistoryType.note-list.note, PerformanceHistoryType.period, 
+	PerformanceHistoryType.documentReference-list.documentReference, 
+	PerformanceHistoryType.signature-list.signature, 
+	PerformanceHistoryType.senderParty, 
+	PerformanceHistoryType.receiverParty, 
+	PerformanceHistoryType.performanceDataLine-list.performanceDataLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

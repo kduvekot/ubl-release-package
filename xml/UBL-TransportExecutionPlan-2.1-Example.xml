@@ -1,122 +1,233 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TransportExecutionPlan xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
-	<cbc:ID>TEP_1</cbc:ID>
-	<cbc:IssueDate>2010-04-30</cbc:IssueDate>
-	<cbc:IssueTime>14:22:00.0Z</cbc:IssueTime>
-	<cbc:TransportUserRemarks>DROP OFF AT RECEPTION</cbc:TransportUserRemarks>
-	<cbc:SequenceNumber>1</cbc:SequenceNumber>
+<TransportExecutionPlan xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" 
+	xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2">
+	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+	<cbc:ProfileID>eFreightProfile</cbc:ProfileID>
+	<cbc:ID>TEPID_1</cbc:ID>
+	<cbc:IssueDate>2011-03-12</cbc:IssueDate>
+	<cbc:IssueTime>14:00:00.0Z</cbc:IssueTime>
+	<cbc:SequenceNumberID>1</cbc:SequenceNumberID>
 	<cbc:TransportServiceProviderReadyForExecutionIndicator>true</cbc:TransportServiceProviderReadyForExecutionIndicator>
 	<cbc:TransportUserReadyForExecutionIndicator>true</cbc:TransportUserReadyForExecutionIndicator>
 	<cbc:TransportServiceProviderCompletionIndicator>false</cbc:TransportServiceProviderCompletionIndicator>
 	<cbc:TransportUserCompletionIndicator>false</cbc:TransportUserCompletionIndicator>
-	<cac:AdditionalDocumentReference>
-		<cbc:ID>CA_1</cbc:ID>
-		<cbc:IssueDate>2010-01-01</cbc:IssueDate>
-		<cbc:DocumentTypeCode>CONTRACT</cbc:DocumentTypeCode>
-		<cbc:DocumentType>FRAMEWORK AGREEMENT</cbc:DocumentType>
-		<cac:ValidityPeriod>
-			<cbc:StartDate>2010-01-01</cbc:StartDate>
-			<cbc:EndDate>2011-01-01</cbc:EndDate>
-		</cac:ValidityPeriod>
-	</cac:AdditionalDocumentReference>
+	<cbc:TransportServiceProviderCancellationIndicator>false</cbc:TransportServiceProviderCancellationIndicator>
+	<cbc:TransportUserCancellationIndicator>false</cbc:TransportUserCancellationIndicator>
+	<cac:ShipmentDocumentReference>
+		<cbc:ID>ID168</cbc:ID>
+		<cbc:DocumentTypeCode>Certificate of shipment</cbc:DocumentTypeCode>
+		<cbc:DocumentType>Shipment reference</cbc:DocumentType>
+	</cac:ShipmentDocumentReference>
 	<cac:TransportServiceProviderParty>
+		<cac:PartyIdentification>
+			<cbc:ID>987654321</cbc:ID>
+		</cac:PartyIdentification>
 		<cac:PartyName>
-			<cbc:Name>CARRIER SERVICE LTD</cbc:Name>
+			<cbc:Name>FORWARDER</cbc:Name>
 		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:StreetName>Schonestrasse 1</cbc:StreetName>
+			<cbc:CityName>Munich</cbc:CityName>
+			<cbc:PostalZone>80331</cbc:PostalZone>
+			<cac:Country>
+				<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
 		<cac:Contact>
-			<cbc:Telephone>+324005588588</cbc:Telephone>
+			<cbc:Name>Hans Weisser</cbc:Name>
+			<cbc:Telephone>+4992894481</cbc:Telephone>
+			<cbc:ElectronicMail>hans.weisser@FORWARDER.de</cbc:ElectronicMail>
 		</cac:Contact>
-		<cac:Person>
-			<cbc:FirstName>RAUL</cbc:FirstName>
-			<cbc:FamilyName>GONZALES</cbc:FamilyName>
-		</cac:Person>
+		<cac:FinancialAccount>
+			<cbc:ID>8601.12.11189</cbc:ID>
+			<cbc:PaymentNote>Deutsche Bank</cbc:PaymentNote>
+		</cac:FinancialAccount>
 	</cac:TransportServiceProviderParty>
 	<cac:TransportUserParty>
+		<cac:PartyIdentification>
+			<cbc:ID>123456789</cbc:ID>
+		</cac:PartyIdentification>
 		<cac:PartyName>
-			<cbc:Name>CUSTOMER SERVICE LTD</cbc:Name>
+			<cbc:Name>CONSIGNEE</cbc:Name>
 		</cac:PartyName>
+		<cac:PostalAddress>
+			<cbc:Postbox>456</cbc:Postbox>
+			<cbc:StreetName>Jordbærstien 2</cbc:StreetName>
+			<cbc:CityName>Hamar</cbc:CityName>
+			<cbc:PostalZone>2321</cbc:PostalZone>
+			<cac:Country>
+				<cbc:IdentificationCode>NO</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PostalAddress>
 		<cac:Contact>
-			<cbc:Telephone>+324488588578</cbc:Telephone>
+			<cbc:Name>Jon Persen</cbc:Name>
+			<cbc:Telephone>+4793656656</cbc:Telephone>
+			<cbc:ElectronicMail>jonp@CONSIGNEE.no</cbc:ElectronicMail>
 		</cac:Contact>
-		<cac:Person>
-			<cbc:FirstName>DAVID</cbc:FirstName>
-			<cbc:FamilyName>VILLA</cbc:FamilyName>
-		</cac:Person>
 	</cac:TransportUserParty>
 	<cac:MainTransportationService>
-		<cbc:TransportServiceCode>12</cbc:TransportServiceCode>
-		<cbc:TransportationServiceDescription>CARRIER SERVICE</cbc:TransportationServiceDescription>
+		<cbc:TransportServiceCode>Transport</cbc:TransportServiceCode>
+		<cbc:TransportationServiceDescription>Complete D2D service from Munich, Germany to Hamar, Norway</cbc:TransportationServiceDescription>
 	</cac:MainTransportationService>
 	<cac:TransportHandlingUnit>
-		<cbc:ID>THU_1</cbc:ID>
-		<cbc:TransportHandlingUnitTypeCode>122</cbc:TransportHandlingUnitTypeCode>
-		<cbc:HandlingCode>23</cbc:HandlingCode>
-		<cbc:HandlingInstructions>HANDLE WITH CARE</cbc:HandlingInstructions>
+		<cbc:ID>THU1</cbc:ID>
+		<cbc:TransportHandlingUnitTypeCode>Palletized cargo</cbc:TransportHandlingUnitTypeCode>
+		<cbc:TotalGoodsItemQuantity>2</cbc:TotalGoodsItemQuantity>
+		<cbc:TotalPackageQuantity>2</cbc:TotalPackageQuantity>
 		<cac:TransportEquipment>
-			<cbc:ID>TE_1</cbc:ID>
-			<cbc:TransportEquipmentTypeCode>AE</cbc:TransportEquipmentTypeCode>
-			<cbc:Description>BODY TRAILER</cbc:Description>
-			<cbc:GrossWeightMeasure unitCode="KGM">1000.0</cbc:GrossWeightMeasure>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GRAI">12345698</cbc:ID>
+			<cbc:TransportEquipmentTypeCode>EFP</cbc:TransportEquipmentTypeCode>
+			<cbc:GrossWeightMeasure unitCode="KGM">400</cbc:GrossWeightMeasure>
+			<cbc:GrossVolumeMeasure unitCode="MTQ">1.536</cbc:GrossVolumeMeasure>
+			<cac:MeasurementDimension>
+				<cbc:AttributeID>Width</cbc:AttributeID>
+				<cbc:Measure unitCode="CMT">80</cbc:Measure>
+			</cac:MeasurementDimension>
+			<cac:MeasurementDimension>
+				<cbc:AttributeID>Length</cbc:AttributeID>
+				<cbc:Measure unitCode="CMT">120</cbc:Measure>
+			</cac:MeasurementDimension>
+			<cac:MeasurementDimension>
+				<cbc:AttributeID>Height</cbc:AttributeID>
+				<cbc:Measure unitCode="CMT">160</cbc:Measure>
+			</cac:MeasurementDimension>
 			<cac:GoodsItem>
-				<cbc:ID>GID_1</cbc:ID>
+				<cbc:ID>GoodsItemID1</cbc:ID>
+				<cbc:Description>Office Printer 1</cbc:Description>
+				<cbc:HazardousRiskIndicator>false</cbc:HazardousRiskIndicator>
+				<cbc:Quantity>1</cbc:Quantity>
 				<cac:Item>
-					<cbc:Description>MOTOR CYCLE</cbc:Description>
-					<cbc:Name>YAMAHA</cbc:Name>
+					<cbc:Name>Office Printer 1</cbc:Name>
+					<cbc:BrandName>Canon</cbc:BrandName>
+					<cbc:ModelName>ModelName28</cbc:ModelName>
+					<cac:CommodityClassification>
+						<cbc:NatureCode>Machinery / Electrical
+                        </cbc:NatureCode>
+					</cac:CommodityClassification>
 				</cac:Item>
 			</cac:GoodsItem>
 			<cac:GoodsItem>
-				<cbc:ID>GID_2</cbc:ID>
+				<cbc:ID>GoodsItemID2</cbc:ID>
+				<cbc:Description>Office Printer 2</cbc:Description>
+				<cbc:HazardousRiskIndicator>false</cbc:HazardousRiskIndicator>
+				<cbc:Quantity>1</cbc:Quantity>
 				<cac:Item>
-					<cbc:Description>MOTOR CYCLE</cbc:Description>
-					<cbc:Name>HONDA</cbc:Name>
+					<cbc:Name>Office Printer 2</cbc:Name>
+					<cbc:BrandName>Canon</cbc:BrandName>
+					<cbc:ModelName>MPX2000</cbc:ModelName>
+					<cac:CommodityClassification>
+						<cbc:NatureCode>Machinery / Electrical
+                        </cbc:NatureCode>
+					</cac:CommodityClassification>
 				</cac:Item>
 			</cac:GoodsItem>
 		</cac:TransportEquipment>
+		<cac:MeasurementDimension>
+			<cbc:AttributeID>Width</cbc:AttributeID>
+			<cbc:Measure unitCode="CMT">80</cbc:Measure>
+		</cac:MeasurementDimension>
+		<cac:MeasurementDimension>
+			<cbc:AttributeID>Length</cbc:AttributeID>
+			<cbc:Measure unitCode="CMT">120</cbc:Measure>
+		</cac:MeasurementDimension>
+		<cac:MeasurementDimension>
+			<cbc:AttributeID>Height</cbc:AttributeID>
+			<cbc:Measure unitCode="CMT">160</cbc:Measure>
+		</cac:MeasurementDimension>
 	</cac:TransportHandlingUnit>
-	<cac:ValidityPeriod>
-		<cbc:StartDate>2010-05-01</cbc:StartDate>
-		<cbc:EndDate>2010-05-01</cbc:EndDate>
-	</cac:ValidityPeriod>
- 	<cac:ServiceStartTimePeriod>
-		<cbc:StartDate>2010-05-01</cbc:StartDate>
-		<cbc:StartTime>10:00:00.0Z</cbc:StartTime>
-		<cbc:EndDate>2010-05-01</cbc:EndDate>
-		<cbc:EndTime>11:00:00.0Z</cbc:EndTime>
+	<cac:ServiceStartTimePeriod>
+		<cbc:StartDate>2011-03-13</cbc:StartDate>
+		<cbc:StartTime>13:30:00.0Z</cbc:StartTime>
+		<cbc:EndDate>2011-03-13</cbc:EndDate>
+		<cbc:EndTime>14:00:00.0Z</cbc:EndTime>
 	</cac:ServiceStartTimePeriod>
 	<cac:ServiceEndTimePeriod>
-		<cbc:StartDate>2010-05-01</cbc:StartDate>
-		<cbc:StartTime>15:00:00.0Z</cbc:StartTime>
-		<cbc:EndDate>2010-05-01</cbc:EndDate>
+		<cbc:StartDate>2011-03-17</cbc:StartDate>
+		<cbc:StartTime>15:30:00.0Z</cbc:StartTime>
+		<cbc:EndDate>2011-03-17</cbc:EndDate>
 		<cbc:EndTime>16:00:00.0Z</cbc:EndTime>
 	</cac:ServiceEndTimePeriod>
 	<cac:ToLocation>
+		<cbc:ID schemeAgencyName="GS1" schemeName="GLN">43125678</cbc:ID>
+		<cbc:LocationTypeCode>Place of delivery</cbc:LocationTypeCode>
 		<cac:Address>
-			<cbc:Floor>4</cbc:Floor>
-			<cbc:StreetName>CALLE SERPIS</cbc:StreetName>
-			<cbc:CityName>VALENCIA</cbc:CityName>
-			<cbc:PostalZone>460019</cbc:PostalZone>
-			<cac:AddressLine>
-				<cbc:Line>Calle Serpis 64</cbc:Line>
-			</cac:AddressLine>
+			<cbc:StreetName>Heissestrasse 45</cbc:StreetName>
+			<cbc:CityName>Munich</cbc:CityName>
+			<cac:Country>
+				<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+			</cac:Country>
 		</cac:Address>
 	</cac:ToLocation>
 	<cac:FromLocation>
+		<cbc:ID schemeAgencyName="GS1" schemeName="GLN">123465</cbc:ID>
+		<cbc:LocationTypeCode>Place of despatch</cbc:LocationTypeCode>
 		<cac:Address>
-			<cbc:Floor>1</cbc:Floor>
-			<cbc:StreetName>AVD BLASCO IBANEZ</cbc:StreetName>
-			<cbc:CityName>VALENCIA</cbc:CityName>
-			<cbc:PostalZone>460019</cbc:PostalZone>
-			<cac:AddressLine>
-				<cbc:Line>AVD BLASCO IBANEZ 36</cbc:Line>
-			</cac:AddressLine>
+			<cbc:StreetName>Jordbærstien 2</cbc:StreetName>
+			<cbc:CityName>Hamar</cbc:CityName>
+			<cac:Country>
+				<cbc:IdentificationCode>NO</cbc:IdentificationCode>
+			</cac:Country>
 		</cac:Address>
 	</cac:FromLocation>
 	<cac:TransportExecutionTerms>
 		<cac:PaymentTerms>
-			<cbc:Note>PER THIRTY DAYS</cbc:Note>
+			<cbc:Note>Per thirty days</cbc:Note>
+			<cac:SettlementPeriod>
+				<cbc:StartDate>2011-03-13</cbc:StartDate>
+				<cbc:StartTime>14:00:00.0Z</cbc:StartTime>
+				<cbc:EndDate>2011-04-12</cbc:EndDate>
+				<cbc:EndTime>14:00:00.0Z</cbc:EndTime>
+			</cac:SettlementPeriod>
 		</cac:PaymentTerms>
+		<cac:DeliveryTerms>
+			<cbc:ID schemeName="INCOTERMS">EXW</cbc:ID>
+			<cac:DeliveryLocation>
+				<cac:Address>
+					<cbc:CityName>Munich</cbc:CityName>
+				</cac:Address>
+			</cac:DeliveryLocation>
+		</cac:DeliveryTerms>
+		<cac:EnvironmentalEmission>
+			<cbc:EnvironmentalEmissionTypeCode>CO2</cbc:EnvironmentalEmissionTypeCode>
+			<cbc:ValueMeasure unitCode="KGM">0.2</cbc:ValueMeasure>
+			<cbc:Description>200 grams of Carbon Dioxide per km</cbc:Description>
+		</cac:EnvironmentalEmission>
+		<cac:NotificationRequirement>
+			<cbc:NotificationTypeCode>Status Notifications, schedule deviations</cbc:NotificationTypeCode>
+			<cac:NotifyParty>
+				<cbc:WebsiteURI>http://www.CONSIGNEE.no/statusreceptioninterface#2</cbc:WebsiteURI>
+				<cac:PartyName>
+					<cbc:Name>CONSIGNEE</cbc:Name>
+				</cac:PartyName>
+			</cac:NotifyParty>
+			<cac:PostEventPeriod>
+				<cbc:DurationMeasure unitCode="MIN">30</cbc:DurationMeasure>
+				<cbc:Description>Deviations shall be notified to the CONSIGNEE within max 30 minutes</cbc:Description>
+			</cac:PostEventPeriod>
+		</cac:NotificationRequirement>
 	</cac:TransportExecutionTerms>
 	<cac:PriceMonetaryTotal>
-		<cbc:PayableAmount currencyID="EUR">300</cbc:PayableAmount>
+		<cbc:PayableAmount currencyID="EUR">2000</cbc:PayableAmount>
 	</cac:PriceMonetaryTotal>
+	<cac:TransportContract>
+		<cbc:ID>101_3</cbc:ID>
+		<cbc:IssueDate>2011-03-13</cbc:IssueDate>
+		<cbc:IssueTime>08:20:00.0Z</cbc:IssueTime>
+		<cbc:NominationDate>2011-03-13</cbc:NominationDate>
+		<cbc:NominationTime>09:30:00.0Z</cbc:NominationTime>
+		<cbc:ContractType>Continuing Transport Contract</cbc:ContractType>
+		<cbc:Note>A call-off from the annual contract</cbc:Note>
+		<cac:ValidityPeriod>
+			<cbc:StartDate>2011-03-13</cbc:StartDate>
+			<cbc:EndDate>2011-03-17</cbc:EndDate>
+		</cac:ValidityPeriod>
+		<cac:ContractDocumentReference>
+			<cbc:ID>101</cbc:ID>
+			<cbc:DocumentType>Annual Contract</cbc:DocumentType>
+			<cac:Attachment>
+				<cbc:EmbeddedDocumentBinaryObject mimeCode="application/CSTAdata+xml">UjBsR09EbGhjZ0dTQUxNQUFBUUNBRU1tQ1p0dU1GUXhEUzhi</cbc:EmbeddedDocumentBinaryObject>
+			</cac:Attachment>
+		</cac:ContractDocumentReference>
+	</cac:TransportContract>
 </TransportExecutionPlan>

@@ -1,0 +1,37 @@
+
+V1-4-1
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    ID, AnyURI
+    FROM XSD
+    CertificateValues, RevocationValues, XAdESTimeStampType
+    FROM V1-3-2;
+
+TimeStampValidationData ::= ValidationDataType
+
+ValidationDataType ::= SEQUENCE {
+    id                XSD.ID OPTIONAL,
+    uR                XSD.AnyURI OPTIONAL,
+    certificateValues CertificateValues OPTIONAL,
+    revocationValues  RevocationValues OPTIONAL
+}
+
+ArchiveTimeStampV2 ::= XAdESTimeStampType
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "http://uri.etsi.org/01903/v1.4.1#"
+	PREFIX "ns63"
+    NAMESPACE ValidationDataType.certificateValues, 
+	ValidationDataType.revocationValues
+	AS "http://uri.etsi.org/01903/v1.3.2#" PREFIX "xades"
+    NOT NAMESPACE ValidationDataType.id, ValidationDataType.uR
+    NAME ValidationDataType.id, ValidationDataType.uR, 
+	ValidationDataType.certificateValues, 
+	ValidationDataType.revocationValues AS CAPITALIZED
+    ATTRIBUTE ValidationDataType.id, ValidationDataType.uR
+END
+

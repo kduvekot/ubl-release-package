@@ -2,7 +2,7 @@ FreightInvoice-2.0 = external "versions/UBL-FreightInvoice-2.0.rnc"
 FreightInvoice-2.1 = external "versions/UBL-FreightInvoice-2.1.rnc"
 start = FreightInvoice-2.0 | FreightInvoice-2.1
 
-# Synthesized from UBL document models 2010-08-30 20:50:19z
+# Synthesized from UBL document models 2011-05-17 17:30:04z
 #
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

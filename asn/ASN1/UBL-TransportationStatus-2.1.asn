@@ -1,0 +1,88 @@
+
+TransportationStatus-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CarrierAssignedID, UUID, IssueDate, IssueTime, Name-1, Description, Note, 
+    ShippingOrderID, OtherInstruction
+    FROM CommonBasicComponents-2
+    Consignment, TransportEvent, DocumentReference, Signature-1
+    FROM CommonAggregateComponents-2;
+
+TransportationStatus ::= TransportationStatusType
+
+TransportationStatusType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID    ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD           ID-1,
+    carrierAssignedID CarrierAssignedID OPTIONAL,
+    uUID         UUID OPTIONAL,
+    issueDate    IssueDate OPTIONAL,
+    issueTime    IssueTime OPTIONAL,
+    name         Name-1 OPTIONAL,
+    description-list SEQUENCE OF description Description,
+    note-list    SEQUENCE OF note Note,
+    shippingOrderID ShippingOrderID OPTIONAL,
+    otherInstruction OtherInstruction OPTIONAL,
+    consignment  Consignment,
+    transportEvent-list SEQUENCE (SIZE(1..MAX)) OF transportEvent 
+	TransportEvent,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    signature-list SEQUENCE OF signature Signature-1
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2"
+	PREFIX "ns58"
+    NAMESPACE TransportationStatusType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE TransportationStatusType.uBLVersionID, 
+	TransportationStatusType.customizationID, 
+	TransportationStatusType.profileID, 
+	TransportationStatusType.profileExecutionID, 
+	TransportationStatusType.iD, 
+	TransportationStatusType.carrierAssignedID, 
+	TransportationStatusType.uUID, TransportationStatusType.issueDate, 
+	TransportationStatusType.issueTime, TransportationStatusType.name, 
+	TransportationStatusType.description-list.description, 
+	TransportationStatusType.note-list.note, 
+	TransportationStatusType.shippingOrderID, 
+	TransportationStatusType.otherInstruction
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE TransportationStatusType.consignment, 
+	TransportationStatusType.transportEvent-list.transportEvent, 
+	TransportationStatusType.documentReference-list.documentReference, 
+	TransportationStatusType.signature-list.signature
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME TransportationStatusType.uBLExtensions, 
+	TransportationStatusType.uBLVersionID, 
+	TransportationStatusType.customizationID, 
+	TransportationStatusType.profileID, 
+	TransportationStatusType.profileExecutionID, 
+	TransportationStatusType.iD, 
+	TransportationStatusType.carrierAssignedID, 
+	TransportationStatusType.uUID, TransportationStatusType.issueDate, 
+	TransportationStatusType.issueTime, TransportationStatusType.name, 
+	TransportationStatusType.description-list.description, 
+	TransportationStatusType.note-list.note, 
+	TransportationStatusType.shippingOrderID, 
+	TransportationStatusType.otherInstruction, 
+	TransportationStatusType.consignment, 
+	TransportationStatusType.transportEvent-list.transportEvent, 
+	TransportationStatusType.documentReference-list.documentReference, 
+	TransportationStatusType.signature-list.signature AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

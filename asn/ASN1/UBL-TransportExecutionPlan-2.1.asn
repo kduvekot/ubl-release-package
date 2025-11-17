@@ -1,0 +1,200 @@
+
+TransportExecutionPlan-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, TransportUserRemarks, 
+    TransportServiceProviderRemarks, SequenceNumberID, 
+    TransportServiceProviderReadyForExecutionIndicator, 
+    TransportUserReadyForExecutionIndicator, 
+    TransportServiceProviderCompletionIndicator, 
+    TransportUserCompletionIndicator, 
+    TransportServiceProviderCancellationIndicator, 
+    TransportUserCancellationIndicator
+    FROM CommonBasicComponents-2
+    TransportServiceDescriptionDocumentReference, AdditionalDocumentReference,
+    ShipmentDocumentReference, Signature-1, TransportServiceProviderParty, 
+    TransportUserParty, NotifyParty, TransportUserReferenceParty, 
+    MainTransportationService, AdditionalTransportationService, 
+    TransportHandlingUnit, ValidityPeriod, 
+    TransportUserResponseDeadlinePeriod, 
+    TransportServiceProviderResponseDeadlinePeriod, ServiceStartTimePeriod, 
+    ServiceEndTimePeriod, ToLocation, FromLocation, AtLocation, 
+    TransportExecutionTerms, PriceMonetaryTotal, PenaltyMonetaryTotal, 
+    CommissionMonetaryTotal, BonusMonetaryTotal, TransportContract
+    FROM CommonAggregateComponents-2;
+
+TransportExecutionPlan ::= TransportExecutionPlanType
+
+TransportExecutionPlanType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    transportUserRemarks-list SEQUENCE OF transportUserRemarks 
+	TransportUserRemarks,
+    transportServiceProviderRemarks-list SEQUENCE OF 
+	transportServiceProviderRemarks TransportServiceProviderRemarks,
+    sequenceNumberID SequenceNumberID OPTIONAL,
+    transportServiceProviderReadyForExecutionIndicator 
+	TransportServiceProviderReadyForExecutionIndicator OPTIONAL,
+    transportUserReadyForExecutionIndicator 
+	TransportUserReadyForExecutionIndicator OPTIONAL,
+    transportServiceProviderCompletionIndicator 
+	TransportServiceProviderCompletionIndicator OPTIONAL,
+    transportUserCompletionIndicator TransportUserCompletionIndicator OPTIONAL
+	,
+    transportServiceProviderCancellationIndicator 
+	TransportServiceProviderCancellationIndicator OPTIONAL,
+    transportUserCancellationIndicator TransportUserCancellationIndicator
+	OPTIONAL,
+    transportServiceDescriptionDocumentReference 
+	TransportServiceDescriptionDocumentReference OPTIONAL,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    shipmentDocumentReference-list SEQUENCE OF shipmentDocumentReference 
+	ShipmentDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    transportServiceProviderParty TransportServiceProviderParty,
+    transportUserParty TransportUserParty,
+    notifyParty-list SEQUENCE OF notifyParty NotifyParty,
+    transportUserReferenceParty-list SEQUENCE OF transportUserReferenceParty 
+	TransportUserReferenceParty,
+    mainTransportationService MainTransportationService OPTIONAL,
+    additionalTransportationService-list SEQUENCE OF 
+	additionalTransportationService AdditionalTransportationService,
+    transportHandlingUnit-list SEQUENCE OF transportHandlingUnit 
+	TransportHandlingUnit,
+    validityPeriod-list SEQUENCE OF validityPeriod ValidityPeriod,
+    transportUserResponseDeadlinePeriod-list SEQUENCE OF 
+	transportUserResponseDeadlinePeriod 
+	TransportUserResponseDeadlinePeriod,
+    transportServiceProviderResponseDeadlinePeriod-list SEQUENCE OF 
+	transportServiceProviderResponseDeadlinePeriod 
+	TransportServiceProviderResponseDeadlinePeriod,
+    serviceStartTimePeriod ServiceStartTimePeriod OPTIONAL,
+    serviceEndTimePeriod ServiceEndTimePeriod OPTIONAL,
+    toLocation ToLocation OPTIONAL,
+    fromLocation FromLocation OPTIONAL,
+    atLocation AtLocation OPTIONAL,
+    transportExecutionTerms TransportExecutionTerms OPTIONAL,
+    priceMonetaryTotal PriceMonetaryTotal OPTIONAL,
+    penaltyMonetaryTotal PenaltyMonetaryTotal OPTIONAL,
+    commissionMonetaryTotal CommissionMonetaryTotal OPTIONAL,
+    bonusMonetaryTotal BonusMonetaryTotal OPTIONAL,
+    transportContract TransportContract OPTIONAL
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2"
+	PREFIX "ns54"
+    NAMESPACE TransportExecutionPlanType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE TransportExecutionPlanType.uBLVersionID, 
+	TransportExecutionPlanType.customizationID, 
+	TransportExecutionPlanType.profileID, 
+	TransportExecutionPlanType.profileExecutionID, 
+	TransportExecutionPlanType.iD, 
+	TransportExecutionPlanType.copyIndicator, 
+	TransportExecutionPlanType.uUID, TransportExecutionPlanType.issueDate,
+	TransportExecutionPlanType.issueTime, 
+	TransportExecutionPlanType.note-list.note, 
+	TransportExecutionPlanType.transportUserRemarks-list.transportUserRemarks,
+	TransportExecutionPlanType.transportServiceProviderRemarks-list.transportServiceProviderRemarks,
+	TransportExecutionPlanType.sequenceNumberID, 
+	TransportExecutionPlanType.transportServiceProviderReadyForExecutionIndicator,
+	TransportExecutionPlanType.transportUserReadyForExecutionIndicator, 
+	TransportExecutionPlanType.transportServiceProviderCompletionIndicator,
+	TransportExecutionPlanType.transportUserCompletionIndicator, 
+	TransportExecutionPlanType.transportServiceProviderCancellationIndicator,
+	TransportExecutionPlanType.transportUserCancellationIndicator
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE TransportExecutionPlanType.transportServiceDescriptionDocumentReference,
+	TransportExecutionPlanType.additionalDocumentReference-list.additionalDocumentReference,
+	TransportExecutionPlanType.shipmentDocumentReference-list.shipmentDocumentReference,
+	TransportExecutionPlanType.signature-list.signature, 
+	TransportExecutionPlanType.transportServiceProviderParty, 
+	TransportExecutionPlanType.transportUserParty, 
+	TransportExecutionPlanType.notifyParty-list.notifyParty, 
+	TransportExecutionPlanType.transportUserReferenceParty-list.transportUserReferenceParty,
+	TransportExecutionPlanType.mainTransportationService, 
+	TransportExecutionPlanType.additionalTransportationService-list.additionalTransportationService,
+	TransportExecutionPlanType.transportHandlingUnit-list.transportHandlingUnit,
+	TransportExecutionPlanType.validityPeriod-list.validityPeriod, 
+	TransportExecutionPlanType.transportUserResponseDeadlinePeriod-list.transportUserResponseDeadlinePeriod,
+	TransportExecutionPlanType.transportServiceProviderResponseDeadlinePeriod-list.transportServiceProviderResponseDeadlinePeriod,
+	TransportExecutionPlanType.serviceStartTimePeriod, 
+	TransportExecutionPlanType.serviceEndTimePeriod, 
+	TransportExecutionPlanType.toLocation, 
+	TransportExecutionPlanType.fromLocation, 
+	TransportExecutionPlanType.atLocation, 
+	TransportExecutionPlanType.transportExecutionTerms, 
+	TransportExecutionPlanType.priceMonetaryTotal, 
+	TransportExecutionPlanType.penaltyMonetaryTotal, 
+	TransportExecutionPlanType.commissionMonetaryTotal, 
+	TransportExecutionPlanType.bonusMonetaryTotal, 
+	TransportExecutionPlanType.transportContract
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME TransportExecutionPlanType.uBLExtensions, 
+	TransportExecutionPlanType.uBLVersionID, 
+	TransportExecutionPlanType.customizationID, 
+	TransportExecutionPlanType.profileID, 
+	TransportExecutionPlanType.profileExecutionID, 
+	TransportExecutionPlanType.iD, 
+	TransportExecutionPlanType.copyIndicator, 
+	TransportExecutionPlanType.uUID, TransportExecutionPlanType.issueDate,
+	TransportExecutionPlanType.issueTime, 
+	TransportExecutionPlanType.note-list.note, 
+	TransportExecutionPlanType.transportUserRemarks-list.transportUserRemarks,
+	TransportExecutionPlanType.transportServiceProviderRemarks-list.transportServiceProviderRemarks,
+	TransportExecutionPlanType.sequenceNumberID, 
+	TransportExecutionPlanType.transportServiceProviderReadyForExecutionIndicator,
+	TransportExecutionPlanType.transportUserReadyForExecutionIndicator, 
+	TransportExecutionPlanType.transportServiceProviderCompletionIndicator,
+	TransportExecutionPlanType.transportUserCompletionIndicator, 
+	TransportExecutionPlanType.transportServiceProviderCancellationIndicator,
+	TransportExecutionPlanType.transportUserCancellationIndicator, 
+	TransportExecutionPlanType.transportServiceDescriptionDocumentReference,
+	TransportExecutionPlanType.additionalDocumentReference-list.additionalDocumentReference,
+	TransportExecutionPlanType.shipmentDocumentReference-list.shipmentDocumentReference,
+	TransportExecutionPlanType.signature-list.signature, 
+	TransportExecutionPlanType.transportServiceProviderParty, 
+	TransportExecutionPlanType.transportUserParty, 
+	TransportExecutionPlanType.notifyParty-list.notifyParty, 
+	TransportExecutionPlanType.transportUserReferenceParty-list.transportUserReferenceParty,
+	TransportExecutionPlanType.mainTransportationService, 
+	TransportExecutionPlanType.additionalTransportationService-list.additionalTransportationService,
+	TransportExecutionPlanType.transportHandlingUnit-list.transportHandlingUnit,
+	TransportExecutionPlanType.validityPeriod-list.validityPeriod, 
+	TransportExecutionPlanType.transportUserResponseDeadlinePeriod-list.transportUserResponseDeadlinePeriod,
+	TransportExecutionPlanType.transportServiceProviderResponseDeadlinePeriod-list.transportServiceProviderResponseDeadlinePeriod,
+	TransportExecutionPlanType.serviceStartTimePeriod, 
+	TransportExecutionPlanType.serviceEndTimePeriod, 
+	TransportExecutionPlanType.toLocation, 
+	TransportExecutionPlanType.fromLocation, 
+	TransportExecutionPlanType.atLocation, 
+	TransportExecutionPlanType.transportExecutionTerms, 
+	TransportExecutionPlanType.priceMonetaryTotal, 
+	TransportExecutionPlanType.penaltyMonetaryTotal, 
+	TransportExecutionPlanType.commissionMonetaryTotal, 
+	TransportExecutionPlanType.bonusMonetaryTotal, 
+	TransportExecutionPlanType.transportContract AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

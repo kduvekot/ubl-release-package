@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+  <ext:UBLExtensions>
+   <ext:UBLExtension>
+     <ext:ExtensionURI>dummy1</ext:ExtensionURI>
+     <ext:ExtensionContent>
+       <dummy1:AnExtension xmlns:dummy1="urn:X-dummy1">
+       </dummy1:AnExtension>
+     </ext:ExtensionContent>
+   </ext:UBLExtension> 
+   <ext:UBLExtension>
+     <ext:ExtensionURI>dummy2</ext:ExtensionURI>
+     <ext:ExtensionContent>
+       <dummy2:AnotherExtension xmlns:dummy2="urn:X-dummy2">
+       </dummy2:AnotherExtension>
+     </ext:ExtensionContent>
+   </ext:UBLExtension> 
+  <ext:UBLExtension xmlns:sig="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2" xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2" xmlns:sbc="urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2">
+    <ext:ExtensionContent>
+      <sig:UBLDocumentSignatures>
+<sac:SignatureInformation>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="addedSig">
+  <ds:SignedInfo>
+    <ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    <ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+    <ds:Reference URI="">
+      <ds:Transforms>
+        <ds:Transform Algorithm="http://www.w3.org/TR/1999/REC-xpath-19991116">
+          <ds:XPath>
+            count(ancestor-or-self::sig:UBLDocumentSignatures |
+                  here()/ancestor::sig:UBLDocumentSignatures[1]) &gt;
+            count(ancestor-or-self::sig:UBLDocumentSignatures)
+          </ds:XPath>
+        </ds:Transform>
+      </ds:Transforms>
+      <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <ds:DigestValue>7RV9SbsUtlqdqbWRX0itqCJOSeE=</ds:DigestValue>
+    </ds:Reference>
+    <ds:Reference URI="#xades-test-s">
+      <ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <ds:DigestValue>rcWlUoFmv2beSz8h5BKpxBv/IWQ=</ds:DigestValue>
+    </ds:Reference>
+  </ds:SignedInfo>
+  <ds:SignatureValue Id="addedSigVal">LL7c/cdNmwiwMDQHMzBju/2/Cd02hnyE4khPSTwfXalHYHdisI6OOjWMWAXpHwmk
+Qu9l7atOmEwiQlWYGjkfdmATTN+pQdHBtiRddJ9dpywqwIXa8udc4ETdeQQN2Uvi
+ChtlPBt/v+LjPR+4EHLXjWC3UuzZgm7IFvycpqe6ICM=</ds:SignatureValue>
+  <ds:KeyInfo>
+    <ds:KeyValue>
+<ds:RSAKeyValue>
+<ds:Modulus>
+mAB8UK54FBAA0lR55IIXwt6KmiF8QuTwMOs7dcQ8lCxIoMa1cxMX+521G0zcPhS3
+D7f5u4twwDLmymcPYjhsjR7D0ORMEkko8TRfo75Zkes2lsUI6NWjyvr3uVYfHYyy
+U9r54tCMyK5yYvFLtiT1yKVMnRTkKoG1qwDyCQJQujM=
+</ds:Modulus>
+<ds:Exponent>
+AQAB
+</ds:Exponent>
+</ds:RSAKeyValue>
+</ds:KeyValue>
+    <ds:X509Data>
+      
+      
+      
+    <ds:X509Certificate>MIIEFzCCAv+gAwIBAgIBATANBgkqhkiG9w0BAQUFADCBlDEXMBUGA1UEAxMOSW50
+ZXJhY3RpdmEgQ0ExCzAJBgNVBAYTAkVTMQ8wDQYDVQQHEwZNYWRyaWQxDzANBgNV
+BAgTBk1hZHJpZDEcMBoGA1UEChMTQWxiYWxpYSBJbnRlcmFjdGl2YTEMMAoGA1UE
+CxMDUEtJMR4wHAYJKoZIhvcNAQkBFg9wa2lAYWxiYWxpYS5jb20wHhcNMDYwMzAz
+MTAzNzA4WhcNMTYwMjI5MTAzNzA4WjCBlDEXMBUGA1UEAxMOSW50ZXJhY3RpdmEg
+Q0ExCzAJBgNVBAYTAkVTMQ8wDQYDVQQHEwZNYWRyaWQxDzANBgNVBAgTBk1hZHJp
+ZDEcMBoGA1UEChMTQWxiYWxpYSBJbnRlcmFjdGl2YTEMMAoGA1UECxMDUEtJMR4w
+HAYJKoZIhvcNAQkBFg9wa2lAYWxiYWxpYS5jb20wggEiMA0GCSqGSIb3DQEBAQUA
+A4IBDwAwggEKAoIBAQC3icEou5qcOvVfrqE5Cqr6pyBnvy2MyejiYlj18+k8AL8c
+/us2ZoE+oh54Sp9EF2224tcCV/TkJKKrLX4nOXznvEq65OynrNao4MvCAgs6mZK/
+zU3A53wsv+P2u4mfMT3u3iAyDCVqEfRk7/knoVZEqB3A9KhMgOZzfXh34RjQyj6b
+zmYZ42qVH0MDytq7Ps8CBwNOPcySzvorVa4gQTJfzFi5qlw+fqExFWDpJ6Khu3SB
+NxWb41+VztVSxSrPk9CNnDvoNL+CvVFbZrHj/+5q5jtiaVewaWoiEZ3Rh7Y80JEm
+j1K+gW643W+E8DAAt9QyxOipB8UD4aKF5g+ViiBdAgMBAAGjcjBwMA8GA1UdEwEB
+/wQFMAMBAf8wHQYDVR0OBBYEFKcgmJa5roNgQe5qwmy+PF4Agy3vMAsGA1UdDwQE
+AwIBBjARBglghkgBhvhCAQEEBAMCAAcwHgYJYIZIAYb4QgENBBEWD3hjYSBjZXJ0
+aWZpY2F0ZTANBgkqhkiG9w0BAQUFAAOCAQEAbsRjhj6s/BvDFLyFXKYxxis/vuny
+z+fkwJorHWOu9a4uOcihUQTyvE4phDjSK5pkUumotKL3f8iPn6hFUn487h0cUiDg
+NzAaH6STWbR5uPZqRhaRYpL6WVjqPKNFdKEvlzQzEGArTqDQjgWe1uL14jXrgSXH
+o6e4NNTfdX43Hx8a8VPM0/8onvb2+Ob3KiXay4q4p0j8qkjHJ2xmtyZTcdwk0gfg
+S6Br+cME0mTrGvJCsKhSwDYBC1T8f9EgGJ1GjRLFO4+dLv8JUisiv1l3vI/DN557
+0J1FCUcRQy7QOrl37Gi/dcjWf2ULc8bB4HelPg52u0gslWcgcdQns4CrkQ==</ds:X509Certificate>
+<ds:X509SubjectName>emailAddress=pki@albalia.com,OU=PKI,O=Albalia Interactiva,ST=Madrid,L=Madrid,C=ES,CN=Interactiva CA</ds:X509SubjectName>
+<ds:X509IssuerSerial>
+<ds:X509IssuerName>emailAddress=pki@albalia.com,OU=PKI,O=Albalia Interactiva,ST=Madrid,L=Madrid,C=ES,CN=Interactiva CA</ds:X509IssuerName>
+<ds:X509SerialNumber>1</ds:X509SerialNumber>
+</ds:X509IssuerSerial>
+<ds:X509Certificate>MIIFzTCCBLWgAwIBAgICAoAwDQYJKoZIhvcNAQEFBQAwgZQxFzAVBgNVBAMTDklu
+dGVyYWN0aXZhIENBMQswCQYDVQQGEwJFUzEPMA0GA1UEBxMGTWFkcmlkMQ8wDQYD
+VQQIEwZNYWRyaWQxHDAaBgNVBAoTE0FsYmFsaWEgSW50ZXJhY3RpdmExDDAKBgNV
+BAsTA1BLSTEeMBwGCSqGSIb3DQEJARYPcGtpQGFsYmFsaWEuY29tMB4XDTEwMTEx
+NTEzMjMzNloXDTExMTExNTEzMjMzNlowgdcxCzAJBgNVBAYTAkVTMRIwEAYDVQQI
+EwlXb3JsZHdpZGUxDzANBgNVBAoTBlVCTCBUQzEYMBYGA1UECxMPVUJMIFNlY3Vy
+aXR5IFNDMREwDwYDVQQDEwhVQkwgRGVtbzEvMC0GCSqGSIb3DQEJARYgdWJsLWNv
+bW1lbnRAbGlzdHMub2FzaXMtb3Blbi5vcmcxEDAOBgNVBAUTB1ByaXZhdGUxDDAK
+BgNVBCoTA1VCTDENMAsGA1UEBBMERGVtbzEWMBQGA1UEDBMNRGVtb25zdHJhdGlv
+bjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAmAB8UK54FBAA0lR55IIXwt6K
+miF8QuTwMOs7dcQ8lCxIoMa1cxMX+521G0zcPhS3D7f5u4twwDLmymcPYjhsjR7D
+0ORMEkko8TRfo75Zkes2lsUI6NWjyvr3uVYfHYyyU9r54tCMyK5yYvFLtiT1yKVM
+nRTkKoG1qwDyCQJQujMCAwEAAaOCAmYwggJiMAkGA1UdEwQCMAAwCwYDVR0PBAQD
+AgXgMEAGCWCGSAGG+EIBDQQzFjFDZXJ0aWZpY2FkbyBkZW1vIGdlbmVyYWRvIHBv
+ciBBbGJhbGlhIEludGVyYWN0aXZhMB0GA1UdDgQWBBTTbgOxzBtke/502B+Z5fNb
+nRj7UjCBwQYDVR0jBIG5MIG2gBSnIJiWua6DYEHuasJsvjxeAIMt76GBmqSBlzCB
+lDEXMBUGA1UEAxMOSW50ZXJhY3RpdmEgQ0ExCzAJBgNVBAYTAkVTMQ8wDQYDVQQH
+EwZNYWRyaWQxDzANBgNVBAgTBk1hZHJpZDEcMBoGA1UEChMTQWxiYWxpYSBJbnRl
+cmFjdGl2YTEMMAoGA1UECxMDUEtJMR4wHAYJKoZIhvcNAQkBFg9wa2lAYWxiYWxp
+YS5jb22CAQEwKwYDVR0RBCQwIoEgdWJsLWNvbW1lbnRAbGlzdHMub2FzaXMtb3Bl
+bi5vcmcwLgYJYIZIAYb4QgEEBCEWH2h0dHA6Ly9sb2NhbGhvc3QvbmNhL2NhLWNy
+bC5jcmwwPwYDVR0fBDgwNjA0oDKgMIYuaHR0cDovL2NhLmFsYmFsaWEuY29tOjgw
+ODAvZGVtb2NhL2RlbW9fY3JsLmNybDBxBggrBgEFBQcBAQRlMGMwJgYIKwYBBQUH
+MAGGGmh0dHA6Ly9jYS5hbGJhbGlhLmNvbTo4ODg4MDkGCCsGAQUFBzAChi1odHRw
+Oi8vY2EuYWxiYWxpYS5jb206ODA4MC9kZW1vY2EvRGVtb19DQS5jcnQwEgYDVR0g
+BAswCTAHBgUAAAAAADANBgkqhkiG9w0BAQUFAAOCAQEAqQRGTsRAQ99QhQ9XZKV9
+ixfA/igC6FQ3cRaLQ4DG3zyPAz20YRKN30hbHt/8El8yzi4kX0f4w55CckXGU5/1
+WmNbecFpWhqn4odayHyVP2RszV6qjIta0qUK1ggG2WgwCwUrSbdS6rscYE1uCymd
+/+pVZkwrdTXSyea99kbZymWYrM6/bmZlG2Qo+UVE9sFiHuLJ17X7SXVS5leeFjOb
+hlASjHXm7sr5FBPjioJxpz96dpVSxEcBIOTFgao7ToLqvS/EZ3qnSVD8ef9yXFRZ
+Om5s9uBemaBh0wOIQrwbHi0XL6VxETNB/+k5C7c+RzvR+91jkQxiuzH6Db+zJBwy
+Jg==</ds:X509Certificate>
+<ds:X509SubjectName>title=Demonstration,SN=Demo,GN=UBL,serialNumber=Private,emailAddress=ubl-comment@lists.oasis-open.org,CN=UBL Demo,OU=UBL Security SC,O=UBL TC,ST=Worldwide,C=ES</ds:X509SubjectName>
+<ds:X509IssuerSerial>
+<ds:X509IssuerName>emailAddress=pki@albalia.com,OU=PKI,O=Albalia Interactiva,ST=Madrid,L=Madrid,C=ES,CN=Interactiva CA</ds:X509IssuerName>
+<ds:X509SerialNumber>640</ds:X509SerialNumber>
+</ds:X509IssuerSerial>
+</ds:X509Data>
+  </ds:KeyInfo>
+<ds:Object>
+  <QualifyingProperties xmlns="http://uri.etsi.org/01903/v1.3.2#" Target="#addedSig">
+    <SignedProperties Id="xades-test-s">
+      <SignedSignatureProperties>
+        <SigningTime>2010-11-26T18:00:00Z</SigningTime>
+      </SignedSignatureProperties>
+    </SignedProperties>
+    <UnsignedProperties Id="xades-test-u">
+      <UnsignedSignatureProperties>
+        <SignatureTimeStamp>
+          <XMLTimeStamp>2010-11-26T18:00:00Z</XMLTimeStamp>
+        </SignatureTimeStamp>
+      </UnsignedSignatureProperties>
+    </UnsignedProperties>
+  </QualifyingProperties>
+</ds:Object>
+</ds:Signature>
+</sac:SignatureInformation>
+      </sig:UBLDocumentSignatures>
+    </ext:ExtensionContent>
+  </ext:UBLExtension>
+</ext:UBLExtensions>
+	<cbc:UBLVersionID>2.0</cbc:UBLVersionID>
+	<cbc:CustomizationID>urn:oasis:names:specification:ubl:xpath:Invoice-2.0:sbs-1.0-draft</cbc:CustomizationID>
+	<cbc:ProfileID>bpid:urn:oasis:names:draft:bpss:ubl-2-sbs-invoice-notification-draft</cbc:ProfileID>
+	<cbc:ID>A00095678</cbc:ID>
+	<cbc:CopyIndicator>false</cbc:CopyIndicator>
+	<cbc:UUID>849FBBCE-E081-40B4-906C-94C5FF9D1AC3</cbc:UUID>
+	<cbc:IssueDate>2005-06-21</cbc:IssueDate>
+	<cbc:InvoiceTypeCode>SalesInvoice</cbc:InvoiceTypeCode>
+	<cbc:Note>sample</cbc:Note>
+	<cbc:TaxPointDate>2005-06-21</cbc:TaxPointDate>
+	<cac:OrderReference>
+		<cbc:ID>AEG012345</cbc:ID>
+		<cbc:SalesOrderID>CON0095678</cbc:SalesOrderID>
+		<cbc:UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</cbc:UUID>
+		<cbc:IssueDate>2005-06-20</cbc:IssueDate>
+	</cac:OrderReference>
+        <cac:Signature>
+          <cbc:ID>urn:oasis:names:specification:ubl:signature:Invoice</cbc:ID>
+          <cbc:SignatureMethod>urn:oasis:names:specification:ubl:dsig:enveloped</cbc:SignatureMethod>
+          <cac:SignatoryParty>
+            <cac:PartyIdentification>
+              <cbc:ID>MyParty</cbc:ID>
+            </cac:PartyIdentification>
+          </cac:SignatoryParty>
+        </cac:Signature>
+	<cac:AccountingSupplierParty>
+		<cbc:CustomerAssignedAccountID>CO001</cbc:CustomerAssignedAccountID>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>Consortial</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Busy Street</cbc:StreetName>
+				<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+				<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+				<cbc:CityName>Farthing</cbc:CityName>
+				<cbc:PostalZone>AA99 1BB</cbc:PostalZone>
+				<cbc:CountrySubentity>Heremouthshire</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>The Roundabout</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:RegistrationName>Farthing Purchasing Consortia</cbc:RegistrationName>
+				<cbc:CompanyID>175 269 2355</cbc:CompanyID>
+				<cbc:ExemptionReason>N/A</cbc:ExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID>VAT</cbc:ID>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:Contact>
+				<cbc:Name>Mrs Bouquet</cbc:Name>
+				<cbc:Telephone>0158 1233714</cbc:Telephone>
+				<cbc:Telefax>0158 1233856</cbc:Telefax>
+				<cbc:ElectronicMail>bouquet@fpconsortial.co.uk</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingSupplierParty>
+	<cac:AccountingCustomerParty>
+		<cbc:CustomerAssignedAccountID>XFB01</cbc:CustomerAssignedAccountID>
+		<cbc:SupplierAssignedAccountID>GT00978567</cbc:SupplierAssignedAccountID>
+		<cac:Party>
+			<cac:PartyName>
+				<cbc:Name>IYT Corporation</cbc:Name>
+			</cac:PartyName>
+			<cac:PostalAddress>
+				<cbc:StreetName>Avon Way</cbc:StreetName>
+				<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+				<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+				<cbc:CityName>Bridgtow</cbc:CityName>
+				<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+				<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+				<cac:AddressLine>
+					<cbc:Line>3rd Floor, Room 5</cbc:Line>
+				</cac:AddressLine>
+				<cac:Country>
+					<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+				</cac:Country>
+			</cac:PostalAddress>
+			<cac:PartyTaxScheme>
+				<cbc:RegistrationName>Bridgtow District Council</cbc:RegistrationName>
+				<cbc:CompanyID>12356478</cbc:CompanyID>
+				<cbc:ExemptionReason>Local Authority</cbc:ExemptionReason>
+				<cac:TaxScheme>
+					<cbc:ID>UK VAT</cbc:ID>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:PartyTaxScheme>
+			<cac:Contact>
+				<cbc:Name>Mr Fred Churchill</cbc:Name>
+				<cbc:Telephone>0127 2653214</cbc:Telephone>
+				<cbc:Telefax>0127 2653215</cbc:Telefax>
+				<cbc:ElectronicMail>fred@iytcorporation.gov.uk</cbc:ElectronicMail>
+			</cac:Contact>
+		</cac:Party>
+	</cac:AccountingCustomerParty>
+	<cac:Delivery>
+		<cbc:ActualDeliveryDate>2005-06-20</cbc:ActualDeliveryDate>
+		<cbc:ActualDeliveryTime>11:30:00.0Z</cbc:ActualDeliveryTime>
+		<cac:DeliveryAddress>
+			<cbc:StreetName>Avon Way</cbc:StreetName>
+			<cbc:BuildingName>Thereabouts</cbc:BuildingName>
+			<cbc:BuildingNumber>56A</cbc:BuildingNumber>
+			<cbc:CityName>Bridgtow</cbc:CityName>
+			<cbc:PostalZone>ZZ99 1ZZ</cbc:PostalZone>
+			<cbc:CountrySubentity>Avon</cbc:CountrySubentity>
+			<cac:AddressLine>
+				<cbc:Line>3rd Floor, Room 5</cbc:Line>
+			</cac:AddressLine>
+			<cac:Country>
+				<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:DeliveryAddress>
+	</cac:Delivery>
+	<cac:PaymentMeans>
+		<cbc:PaymentMeansCode>20</cbc:PaymentMeansCode>
+		<cbc:PaymentDueDate>2005-07-21</cbc:PaymentDueDate>
+		<cac:PayeeFinancialAccount>
+			<cbc:ID>12345678</cbc:ID>
+			<cbc:Name>Farthing Purchasing Consortia</cbc:Name>
+			<cbc:AccountTypeCode>Current</cbc:AccountTypeCode>
+			<cbc:CurrencyCode>GBP</cbc:CurrencyCode>
+			<cac:FinancialInstitutionBranch>
+				<cbc:ID>10-26-58</cbc:ID>
+				<cbc:Name>Open Bank Ltd, Bridgstow Branch </cbc:Name>
+				<cac:FinancialInstitution>
+					<cbc:ID>10-26-58</cbc:ID>
+					<cbc:Name>Open Bank Ltd</cbc:Name>
+					<cac:Address>
+						<cbc:StreetName>City Road</cbc:StreetName>
+						<cbc:BuildingName>Banking House</cbc:BuildingName>
+						<cbc:BuildingNumber>12</cbc:BuildingNumber>
+						<cbc:CityName>London</cbc:CityName>
+						<cbc:PostalZone>AQ1 6TH</cbc:PostalZone>
+						<cbc:CountrySubentity>London
+</cbc:CountrySubentity>
+						<cac:AddressLine>
+							<cbc:Line>5th Floor</cbc:Line>
+						</cac:AddressLine>
+						<cac:Country>
+							<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:FinancialInstitution>
+				<cac:Address>
+					<cbc:StreetName>Busy Street</cbc:StreetName>
+					<cbc:BuildingName>The Mall</cbc:BuildingName>
+					<cbc:BuildingNumber>152</cbc:BuildingNumber>
+					<cbc:CityName>Farthing</cbc:CityName>
+					<cbc:PostalZone>AA99 1BB</cbc:PostalZone>
+					<cbc:CountrySubentity>Heremouthshire</cbc:CountrySubentity>
+					<cac:AddressLine>
+						<cbc:Line>West Wing</cbc:Line>
+					</cac:AddressLine>
+					<cac:Country>
+						<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+					</cac:Country>
+				</cac:Address>
+			</cac:FinancialInstitutionBranch>
+			<cac:Country>
+				<cbc:IdentificationCode>GB</cbc:IdentificationCode>
+			</cac:Country>
+		</cac:PayeeFinancialAccount>
+	</cac:PaymentMeans>
+	<cac:PaymentTerms>
+		<cbc:Note>Payable within 1 calendar month from the invoice date</cbc:Note>
+	</cac:PaymentTerms>
+	<cac:AllowanceCharge>
+		<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+		<cbc:AllowanceChargeReasonCode>17</cbc:AllowanceChargeReasonCode>
+		<cbc:MultiplierFactorNumeric>0.10</cbc:MultiplierFactorNumeric>
+		<cbc:Amount currencyID="GBP">10.00</cbc:Amount>
+	</cac:AllowanceCharge>
+	<cac:TaxTotal>
+		<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
+		<cbc:TaxEvidenceIndicator>true</cbc:TaxEvidenceIndicator>
+		<cac:TaxSubtotal>
+			<cbc:TaxableAmount currencyID="GBP">100.00</cbc:TaxableAmount>
+			<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
+			<cac:TaxCategory>
+				<cbc:ID>A</cbc:ID>
+				<cac:TaxScheme>
+					<cbc:ID>UK VAT</cbc:ID>
+					<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+				</cac:TaxScheme>
+			</cac:TaxCategory>
+		</cac:TaxSubtotal>
+	</cac:TaxTotal>
+	<cac:LegalMonetaryTotal>
+		<cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
+		<cbc:TaxExclusiveAmount currencyID="GBP">90.00</cbc:TaxExclusiveAmount>
+		<cbc:AllowanceTotalAmount currencyID="GBP">10.00</cbc:AllowanceTotalAmount>
+		<cbc:PayableAmount currencyID="GBP">107.50</cbc:PayableAmount>
+	</cac:LegalMonetaryTotal>
+	<cac:InvoiceLine>
+		<cbc:ID>A</cbc:ID>
+		<cbc:InvoicedQuantity unitCode="KGM">100</cbc:InvoicedQuantity>
+		<cbc:LineExtensionAmount currencyID="GBP">100.00</cbc:LineExtensionAmount>
+		<cac:OrderLineReference>
+			<cbc:LineID>1</cbc:LineID>
+			<cbc:SalesOrderLineID>A</cbc:SalesOrderLineID>
+			<cbc:LineStatusCode>NoStatus</cbc:LineStatusCode>
+			<cac:OrderReference>
+				<cbc:ID>AEG012345</cbc:ID>
+				<cbc:SalesOrderID>CON0095678</cbc:SalesOrderID>
+				<cbc:UUID>6E09886B-DC6E-439F-82D1-7CCAC7F4E3B1</cbc:UUID>
+				<cbc:IssueDate>2005-06-20</cbc:IssueDate>
+			</cac:OrderReference>
+		</cac:OrderLineReference>
+		<cac:TaxTotal>
+			<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
+			<cbc:TaxEvidenceIndicator>true</cbc:TaxEvidenceIndicator>
+			<cac:TaxSubtotal>
+				<cbc:TaxableAmount currencyID="GBP">100.00</cbc:TaxableAmount>
+				<cbc:TaxAmount currencyID="GBP">17.50</cbc:TaxAmount>
+				<cac:TaxCategory>
+					<cbc:ID>A</cbc:ID>
+					<cbc:Percent>17.5</cbc:Percent>
+					<cac:TaxScheme>
+						<cbc:ID>UK VAT</cbc:ID>
+						<cbc:TaxTypeCode>VAT</cbc:TaxTypeCode>
+					</cac:TaxScheme>
+				</cac:TaxCategory>
+			</cac:TaxSubtotal>
+		</cac:TaxTotal>
+		<cac:Item>
+			<cbc:Description>Acme beeswax</cbc:Description>
+			<cbc:Name>beeswax</cbc:Name>
+			<cac:BuyersItemIdentification>
+				<cbc:ID>6578489</cbc:ID>
+			</cac:BuyersItemIdentification>
+			<cac:SellersItemIdentification>
+				<cbc:ID>17589683</cbc:ID>
+			</cac:SellersItemIdentification>
+			<cac:ItemInstance>
+				<cac:LotIdentification>
+					<cbc:LotNumberID>546378239</cbc:LotNumberID>
+					<cbc:ExpiryDate>2010-01-01</cbc:ExpiryDate>
+				</cac:LotIdentification>
+			</cac:ItemInstance>
+		</cac:Item>
+		<cac:Price>
+			<cbc:PriceAmount currencyID="GBP">1.00</cbc:PriceAmount>
+			<cbc:BaseQuantity unitCode="KGM">1</cbc:BaseQuantity>
+		</cac:Price>
+	</cac:InvoiceLine>
+</Invoice>

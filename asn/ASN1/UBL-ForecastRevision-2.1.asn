@@ -1,0 +1,95 @@
+
+ForecastRevision-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, SequenceNumberID, 
+    RevisionStatusCode, PurposeCode
+    FROM CommonBasicComponents-2
+    ForecastPeriod, OriginalDocumentReference, Signature-1, SenderParty, 
+    ReceiverParty, BuyerCustomerParty, SellerSupplierParty, 
+    ForecastRevisionLine
+    FROM CommonAggregateComponents-2;
+
+ForecastRevision ::= ForecastRevisionType
+
+ForecastRevisionType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    sequenceNumberID SequenceNumberID,
+    revisionStatusCode RevisionStatusCode OPTIONAL,
+    purposeCode PurposeCode OPTIONAL,
+    forecastPeriod ForecastPeriod,
+    originalDocumentReference-list SEQUENCE OF originalDocumentReference 
+	OriginalDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    forecastRevisionLine-list SEQUENCE (SIZE(1..MAX)) OF forecastRevisionLine 
+	ForecastRevisionLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2"
+	PREFIX "ns21"
+    NAMESPACE ForecastRevisionType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ForecastRevisionType.uBLVersionID, 
+	ForecastRevisionType.customizationID, ForecastRevisionType.profileID, 
+	ForecastRevisionType.profileExecutionID, ForecastRevisionType.iD, 
+	ForecastRevisionType.copyIndicator, ForecastRevisionType.uUID, 
+	ForecastRevisionType.issueDate, ForecastRevisionType.issueTime, 
+	ForecastRevisionType.note-list.note, 
+	ForecastRevisionType.sequenceNumberID, 
+	ForecastRevisionType.revisionStatusCode, 
+	ForecastRevisionType.purposeCode
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ForecastRevisionType.forecastPeriod, 
+	ForecastRevisionType.originalDocumentReference-list.originalDocumentReference,
+	ForecastRevisionType.signature-list.signature, 
+	ForecastRevisionType.senderParty, ForecastRevisionType.receiverParty, 
+	ForecastRevisionType.buyerCustomerParty, 
+	ForecastRevisionType.sellerSupplierParty, 
+	ForecastRevisionType.forecastRevisionLine-list.forecastRevisionLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ForecastRevisionType.uBLExtensions, 
+	ForecastRevisionType.uBLVersionID, 
+	ForecastRevisionType.customizationID, ForecastRevisionType.profileID, 
+	ForecastRevisionType.profileExecutionID, ForecastRevisionType.iD, 
+	ForecastRevisionType.copyIndicator, ForecastRevisionType.uUID, 
+	ForecastRevisionType.issueDate, ForecastRevisionType.issueTime, 
+	ForecastRevisionType.note-list.note, 
+	ForecastRevisionType.sequenceNumberID, 
+	ForecastRevisionType.revisionStatusCode, 
+	ForecastRevisionType.purposeCode, ForecastRevisionType.forecastPeriod,
+	ForecastRevisionType.originalDocumentReference-list.originalDocumentReference,
+	ForecastRevisionType.signature-list.signature, 
+	ForecastRevisionType.senderParty, ForecastRevisionType.receiverParty, 
+	ForecastRevisionType.buyerCustomerParty, 
+	ForecastRevisionType.sellerSupplierParty, 
+	ForecastRevisionType.forecastRevisionLine-list.forecastRevisionLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

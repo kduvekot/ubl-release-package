@@ -1,0 +1,100 @@
+
+TransportServiceDescription-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, ServiceName
+    FROM CommonBasicComponents-2
+    Signature-1, SenderParty, ReceiverParty, TransportServiceProviderParty, 
+    MainTransportationService, AdditionalTransportationService, 
+    ValidityPeriod, PaymentTerms, ServicePoint
+    FROM CommonAggregateComponents-2;
+
+TransportServiceDescription ::= TransportServiceDescriptionType
+
+TransportServiceDescriptionType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1 OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    serviceName ServiceName OPTIONAL,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty OPTIONAL,
+    receiverParty ReceiverParty OPTIONAL,
+    transportServiceProviderParty TransportServiceProviderParty,
+    mainTransportationService MainTransportationService,
+    additionalTransportationService-list SEQUENCE OF 
+	additionalTransportationService AdditionalTransportationService,
+    validityPeriod ValidityPeriod,
+    paymentTerms PaymentTerms OPTIONAL,
+    servicePoint-list SEQUENCE OF servicePoint ServicePoint
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2"
+	PREFIX "ns57"
+    NAMESPACE TransportServiceDescriptionType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE TransportServiceDescriptionType.uBLVersionID, 
+	TransportServiceDescriptionType.customizationID, 
+	TransportServiceDescriptionType.profileID, 
+	TransportServiceDescriptionType.profileExecutionID, 
+	TransportServiceDescriptionType.iD, 
+	TransportServiceDescriptionType.copyIndicator, 
+	TransportServiceDescriptionType.uUID, 
+	TransportServiceDescriptionType.issueDate, 
+	TransportServiceDescriptionType.issueTime, 
+	TransportServiceDescriptionType.note-list.note, 
+	TransportServiceDescriptionType.serviceName
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE TransportServiceDescriptionType.signature-list.signature, 
+	TransportServiceDescriptionType.senderParty, 
+	TransportServiceDescriptionType.receiverParty, 
+	TransportServiceDescriptionType.transportServiceProviderParty, 
+	TransportServiceDescriptionType.mainTransportationService, 
+	TransportServiceDescriptionType.additionalTransportationService-list.additionalTransportationService,
+	TransportServiceDescriptionType.validityPeriod, 
+	TransportServiceDescriptionType.paymentTerms, 
+	TransportServiceDescriptionType.servicePoint-list.servicePoint
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME TransportServiceDescriptionType.uBLExtensions, 
+	TransportServiceDescriptionType.uBLVersionID, 
+	TransportServiceDescriptionType.customizationID, 
+	TransportServiceDescriptionType.profileID, 
+	TransportServiceDescriptionType.profileExecutionID, 
+	TransportServiceDescriptionType.iD, 
+	TransportServiceDescriptionType.copyIndicator, 
+	TransportServiceDescriptionType.uUID, 
+	TransportServiceDescriptionType.issueDate, 
+	TransportServiceDescriptionType.issueTime, 
+	TransportServiceDescriptionType.note-list.note, 
+	TransportServiceDescriptionType.serviceName, 
+	TransportServiceDescriptionType.signature-list.signature, 
+	TransportServiceDescriptionType.senderParty, 
+	TransportServiceDescriptionType.receiverParty, 
+	TransportServiceDescriptionType.transportServiceProviderParty, 
+	TransportServiceDescriptionType.mainTransportationService, 
+	TransportServiceDescriptionType.additionalTransportationService-list.additionalTransportationService,
+	TransportServiceDescriptionType.validityPeriod, 
+	TransportServiceDescriptionType.paymentTerms, 
+	TransportServiceDescriptionType.servicePoint-list.servicePoint
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

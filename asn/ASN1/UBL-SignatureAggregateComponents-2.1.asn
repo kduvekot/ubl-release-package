@@ -1,0 +1,39 @@
+
+SignatureAggregateComponents-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    ID-1
+    FROM CommonBasicComponents-2
+    ReferencedSignatureID
+    FROM SignatureBasicComponents-2
+    Signature
+    FROM Xmldsig;
+
+SignatureInformation ::= SignatureInformationType
+
+SignatureInformationType ::= SEQUENCE {
+    iD          ID-1 OPTIONAL,
+    referencedSignatureID ReferencedSignatureID OPTIONAL,
+    signature   Signature OPTIONAL
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
+	PREFIX "sac"
+    NAMESPACE SignatureInformationType.iD
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE SignatureInformationType.referencedSignatureID
+	AS "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2"
+	    PREFIX "sbc"
+    NAMESPACE SignatureInformationType.signature
+	AS "http://www.w3.org/2000/09/xmldsig#" PREFIX "ds"
+    NAME SignatureInformationType.iD, 
+	SignatureInformationType.referencedSignatureID, 
+	SignatureInformationType.signature AS CAPITALIZED
+END
+

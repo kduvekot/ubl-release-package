@@ -1,0 +1,116 @@
+
+CataloguePricingUpdate-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, UUID, 
+    Name-1, IssueDate, IssueTime, RevisionDate, RevisionTime, Note, 
+    Description, VersionID, LineCountNumeric
+    FROM CommonBasicComponents-2
+    ValidityPeriod, RelatedCatalogueReference, ReferencedContract, 
+    Signature-1, ProviderParty, ReceiverParty, SellerSupplierParty, 
+    ContractorCustomerParty, TradingTerms, DefaultLanguage, 
+    CataloguePricingUpdateLine
+    FROM CommonAggregateComponents-2;
+
+CataloguePricingUpdate ::= CataloguePricingUpdateType
+
+CataloguePricingUpdateType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    uUID       UUID OPTIONAL,
+    name       Name-1 OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    revisionDate RevisionDate OPTIONAL,
+    revisionTime RevisionTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    description-list SEQUENCE OF description Description,
+    versionID  VersionID OPTIONAL,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    validityPeriod-list SEQUENCE OF validityPeriod ValidityPeriod,
+    relatedCatalogueReference RelatedCatalogueReference,
+    referencedContract-list SEQUENCE OF referencedContract ReferencedContract,
+    signature-list SEQUENCE OF signature Signature-1,
+    providerParty ProviderParty,
+    receiverParty ReceiverParty,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    contractorCustomerParty ContractorCustomerParty OPTIONAL,
+    tradingTerms TradingTerms OPTIONAL,
+    defaultLanguage DefaultLanguage OPTIONAL,
+    cataloguePricingUpdateLine-list SEQUENCE (SIZE(1..MAX)) OF 
+	cataloguePricingUpdateLine CataloguePricingUpdateLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:CataloguePricingUpdate-2"
+	PREFIX "ns8"
+    NAMESPACE CataloguePricingUpdateType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE CataloguePricingUpdateType.uBLVersionID, 
+	CataloguePricingUpdateType.customizationID, 
+	CataloguePricingUpdateType.profileID, 
+	CataloguePricingUpdateType.profileExecutionID, 
+	CataloguePricingUpdateType.iD, CataloguePricingUpdateType.uUID, 
+	CataloguePricingUpdateType.name, CataloguePricingUpdateType.issueDate,
+	CataloguePricingUpdateType.issueTime, 
+	CataloguePricingUpdateType.revisionDate, 
+	CataloguePricingUpdateType.revisionTime, 
+	CataloguePricingUpdateType.note-list.note, 
+	CataloguePricingUpdateType.description-list.description, 
+	CataloguePricingUpdateType.versionID, 
+	CataloguePricingUpdateType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE CataloguePricingUpdateType.validityPeriod-list.validityPeriod, 
+	CataloguePricingUpdateType.relatedCatalogueReference, 
+	CataloguePricingUpdateType.referencedContract-list.referencedContract,
+	CataloguePricingUpdateType.signature-list.signature, 
+	CataloguePricingUpdateType.providerParty, 
+	CataloguePricingUpdateType.receiverParty, 
+	CataloguePricingUpdateType.sellerSupplierParty, 
+	CataloguePricingUpdateType.contractorCustomerParty, 
+	CataloguePricingUpdateType.tradingTerms, 
+	CataloguePricingUpdateType.defaultLanguage, 
+	CataloguePricingUpdateType.cataloguePricingUpdateLine-list.cataloguePricingUpdateLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME CataloguePricingUpdateType.uBLExtensions, 
+	CataloguePricingUpdateType.uBLVersionID, 
+	CataloguePricingUpdateType.customizationID, 
+	CataloguePricingUpdateType.profileID, 
+	CataloguePricingUpdateType.profileExecutionID, 
+	CataloguePricingUpdateType.iD, CataloguePricingUpdateType.uUID, 
+	CataloguePricingUpdateType.name, CataloguePricingUpdateType.issueDate,
+	CataloguePricingUpdateType.issueTime, 
+	CataloguePricingUpdateType.revisionDate, 
+	CataloguePricingUpdateType.revisionTime, 
+	CataloguePricingUpdateType.note-list.note, 
+	CataloguePricingUpdateType.description-list.description, 
+	CataloguePricingUpdateType.versionID, 
+	CataloguePricingUpdateType.lineCountNumeric, 
+	CataloguePricingUpdateType.validityPeriod-list.validityPeriod, 
+	CataloguePricingUpdateType.relatedCatalogueReference, 
+	CataloguePricingUpdateType.referencedContract-list.referencedContract,
+	CataloguePricingUpdateType.signature-list.signature, 
+	CataloguePricingUpdateType.providerParty, 
+	CataloguePricingUpdateType.receiverParty, 
+	CataloguePricingUpdateType.sellerSupplierParty, 
+	CataloguePricingUpdateType.contractorCustomerParty, 
+	CataloguePricingUpdateType.tradingTerms, 
+	CataloguePricingUpdateType.defaultLanguage, 
+	CataloguePricingUpdateType.cataloguePricingUpdateLine-list.cataloguePricingUpdateLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

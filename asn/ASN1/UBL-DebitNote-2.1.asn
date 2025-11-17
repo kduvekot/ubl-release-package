@@ -1,0 +1,175 @@
+
+DebitNote-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, TaxPointDate, 
+    DocumentCurrencyCode, TaxCurrencyCode, PricingCurrencyCode, 
+    PaymentCurrencyCode, PaymentAlternativeCurrencyCode, AccountingCostCode, 
+    AccountingCost, LineCountNumeric
+    FROM CommonBasicComponents-2
+    InvoicePeriod, DiscrepancyResponse, OrderReference, BillingReference, 
+    DespatchDocumentReference, ReceiptDocumentReference, 
+    StatementDocumentReference, ContractDocumentReference, 
+    AdditionalDocumentReference, Signature-1, AccountingSupplierParty, 
+    AccountingCustomerParty, PayeeParty, BuyerCustomerParty, 
+    SellerSupplierParty, TaxRepresentativeParty, PrepaidPayment, 
+    AllowanceCharge, Delivery, DeliveryTerms, PaymentMeans, PaymentTerms, 
+    TaxExchangeRate, PricingExchangeRate, PaymentExchangeRate, 
+    PaymentAlternativeExchangeRate, TaxTotal, RequestedMonetaryTotal, 
+    DebitNoteLine
+    FROM CommonAggregateComponents-2;
+
+DebitNote ::= DebitNoteType
+
+DebitNoteType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    taxPointDate TaxPointDate OPTIONAL,
+    documentCurrencyCode DocumentCurrencyCode OPTIONAL,
+    taxCurrencyCode TaxCurrencyCode OPTIONAL,
+    pricingCurrencyCode PricingCurrencyCode OPTIONAL,
+    paymentCurrencyCode PaymentCurrencyCode OPTIONAL,
+    paymentAlternativeCurrencyCode PaymentAlternativeCurrencyCode OPTIONAL,
+    accountingCostCode AccountingCostCode OPTIONAL,
+    accountingCost AccountingCost OPTIONAL,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    invoicePeriod-list SEQUENCE OF invoicePeriod InvoicePeriod,
+    discrepancyResponse-list SEQUENCE OF discrepancyResponse 
+	DiscrepancyResponse,
+    orderReference OrderReference OPTIONAL,
+    billingReference-list SEQUENCE OF billingReference BillingReference,
+    despatchDocumentReference-list SEQUENCE OF despatchDocumentReference 
+	DespatchDocumentReference,
+    receiptDocumentReference-list SEQUENCE OF receiptDocumentReference 
+	ReceiptDocumentReference,
+    statementDocumentReference-list SEQUENCE OF statementDocumentReference 
+	StatementDocumentReference,
+    contractDocumentReference-list SEQUENCE OF contractDocumentReference 
+	ContractDocumentReference,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    accountingSupplierParty AccountingSupplierParty,
+    accountingCustomerParty AccountingCustomerParty,
+    payeeParty PayeeParty OPTIONAL,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    taxRepresentativeParty TaxRepresentativeParty OPTIONAL,
+    prepaidPayment-list SEQUENCE OF prepaidPayment PrepaidPayment,
+    allowanceCharge-list SEQUENCE OF allowanceCharge AllowanceCharge,
+    delivery-list SEQUENCE OF delivery Delivery,
+    deliveryTerms-list SEQUENCE OF deliveryTerms DeliveryTerms,
+    paymentMeans-list SEQUENCE OF paymentMeans PaymentMeans,
+    paymentTerms-list SEQUENCE OF paymentTerms PaymentTerms,
+    taxExchangeRate TaxExchangeRate OPTIONAL,
+    pricingExchangeRate PricingExchangeRate OPTIONAL,
+    paymentExchangeRate PaymentExchangeRate OPTIONAL,
+    paymentAlternativeExchangeRate PaymentAlternativeExchangeRate OPTIONAL,
+    taxTotal-list SEQUENCE OF taxTotal TaxTotal,
+    requestedMonetaryTotal RequestedMonetaryTotal,
+    debitNoteLine-list SEQUENCE (SIZE(1..MAX)) OF debitNoteLine DebitNoteLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:DebitNote-2"
+	PREFIX "ns14"
+    NAMESPACE DebitNoteType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE DebitNoteType.uBLVersionID, DebitNoteType.customizationID, 
+	DebitNoteType.profileID, DebitNoteType.profileExecutionID, 
+	DebitNoteType.iD, DebitNoteType.copyIndicator, DebitNoteType.uUID, 
+	DebitNoteType.issueDate, DebitNoteType.issueTime, 
+	DebitNoteType.note-list.note, DebitNoteType.taxPointDate, 
+	DebitNoteType.documentCurrencyCode, DebitNoteType.taxCurrencyCode, 
+	DebitNoteType.pricingCurrencyCode, DebitNoteType.paymentCurrencyCode, 
+	DebitNoteType.paymentAlternativeCurrencyCode, 
+	DebitNoteType.accountingCostCode, DebitNoteType.accountingCost, 
+	DebitNoteType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE DebitNoteType.invoicePeriod-list.invoicePeriod, 
+	DebitNoteType.discrepancyResponse-list.discrepancyResponse, 
+	DebitNoteType.orderReference, 
+	DebitNoteType.billingReference-list.billingReference, 
+	DebitNoteType.despatchDocumentReference-list.despatchDocumentReference,
+	DebitNoteType.receiptDocumentReference-list.receiptDocumentReference, 
+	DebitNoteType.statementDocumentReference-list.statementDocumentReference,
+	DebitNoteType.contractDocumentReference-list.contractDocumentReference,
+	DebitNoteType.additionalDocumentReference-list.additionalDocumentReference,
+	DebitNoteType.signature-list.signature, 
+	DebitNoteType.accountingSupplierParty, 
+	DebitNoteType.accountingCustomerParty, DebitNoteType.payeeParty, 
+	DebitNoteType.buyerCustomerParty, DebitNoteType.sellerSupplierParty, 
+	DebitNoteType.taxRepresentativeParty, 
+	DebitNoteType.prepaidPayment-list.prepaidPayment, 
+	DebitNoteType.allowanceCharge-list.allowanceCharge, 
+	DebitNoteType.delivery-list.delivery, 
+	DebitNoteType.deliveryTerms-list.deliveryTerms, 
+	DebitNoteType.paymentMeans-list.paymentMeans, 
+	DebitNoteType.paymentTerms-list.paymentTerms, 
+	DebitNoteType.taxExchangeRate, DebitNoteType.pricingExchangeRate, 
+	DebitNoteType.paymentExchangeRate, 
+	DebitNoteType.paymentAlternativeExchangeRate, 
+	DebitNoteType.taxTotal-list.taxTotal, 
+	DebitNoteType.requestedMonetaryTotal, 
+	DebitNoteType.debitNoteLine-list.debitNoteLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME DebitNoteType.uBLExtensions, DebitNoteType.uBLVersionID, 
+	DebitNoteType.customizationID, DebitNoteType.profileID, 
+	DebitNoteType.profileExecutionID, DebitNoteType.iD, 
+	DebitNoteType.copyIndicator, DebitNoteType.uUID, 
+	DebitNoteType.issueDate, DebitNoteType.issueTime, 
+	DebitNoteType.note-list.note, DebitNoteType.taxPointDate, 
+	DebitNoteType.documentCurrencyCode, DebitNoteType.taxCurrencyCode, 
+	DebitNoteType.pricingCurrencyCode, DebitNoteType.paymentCurrencyCode, 
+	DebitNoteType.paymentAlternativeCurrencyCode, 
+	DebitNoteType.accountingCostCode, DebitNoteType.accountingCost, 
+	DebitNoteType.lineCountNumeric, 
+	DebitNoteType.invoicePeriod-list.invoicePeriod, 
+	DebitNoteType.discrepancyResponse-list.discrepancyResponse, 
+	DebitNoteType.orderReference, 
+	DebitNoteType.billingReference-list.billingReference, 
+	DebitNoteType.despatchDocumentReference-list.despatchDocumentReference,
+	DebitNoteType.receiptDocumentReference-list.receiptDocumentReference, 
+	DebitNoteType.statementDocumentReference-list.statementDocumentReference,
+	DebitNoteType.contractDocumentReference-list.contractDocumentReference,
+	DebitNoteType.additionalDocumentReference-list.additionalDocumentReference,
+	DebitNoteType.signature-list.signature, 
+	DebitNoteType.accountingSupplierParty, 
+	DebitNoteType.accountingCustomerParty, DebitNoteType.payeeParty, 
+	DebitNoteType.buyerCustomerParty, DebitNoteType.sellerSupplierParty, 
+	DebitNoteType.taxRepresentativeParty, 
+	DebitNoteType.prepaidPayment-list.prepaidPayment, 
+	DebitNoteType.allowanceCharge-list.allowanceCharge, 
+	DebitNoteType.delivery-list.delivery, 
+	DebitNoteType.deliveryTerms-list.deliveryTerms, 
+	DebitNoteType.paymentMeans-list.paymentMeans, 
+	DebitNoteType.paymentTerms-list.paymentTerms, 
+	DebitNoteType.taxExchangeRate, DebitNoteType.pricingExchangeRate, 
+	DebitNoteType.paymentExchangeRate, 
+	DebitNoteType.paymentAlternativeExchangeRate, 
+	DebitNoteType.taxTotal-list.taxTotal, 
+	DebitNoteType.requestedMonetaryTotal, 
+	DebitNoteType.debitNoteLine-list.debitNoteLine AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

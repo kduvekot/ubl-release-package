@@ -1,0 +1,93 @@
+
+ContractNotice-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, ContractFolderID, IssueDate, IssueTime, Note, 
+    RequestedPublicationDate
+    FROM CommonBasicComponents-2
+    FrequencyPeriod, Signature-1, ContractingParty, OriginatorCustomerParty, 
+    ReceiverParty, TenderingTerms, TenderingProcess, ProcurementProject, 
+    ProcurementProjectLot
+    FROM CommonAggregateComponents-2;
+
+ContractNotice ::= ContractNoticeType
+
+ContractNoticeType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1 OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    contractFolderID ContractFolderID,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    requestedPublicationDate RequestedPublicationDate OPTIONAL,
+    frequencyPeriod FrequencyPeriod OPTIONAL,
+    signature-list SEQUENCE OF signature Signature-1,
+    contractingParty ContractingParty,
+    originatorCustomerParty-list SEQUENCE OF originatorCustomerParty 
+	OriginatorCustomerParty,
+    receiverParty ReceiverParty OPTIONAL,
+    tenderingTerms TenderingTerms OPTIONAL,
+    tenderingProcess TenderingProcess OPTIONAL,
+    procurementProject ProcurementProject,
+    procurementProjectLot-list SEQUENCE OF procurementProjectLot 
+	ProcurementProjectLot
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+	PREFIX "ns12"
+    NAMESPACE ContractNoticeType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ContractNoticeType.uBLVersionID, 
+	ContractNoticeType.customizationID, ContractNoticeType.profileID, 
+	ContractNoticeType.profileExecutionID, ContractNoticeType.iD, 
+	ContractNoticeType.copyIndicator, ContractNoticeType.uUID, 
+	ContractNoticeType.contractFolderID, ContractNoticeType.issueDate, 
+	ContractNoticeType.issueTime, ContractNoticeType.note-list.note, 
+	ContractNoticeType.requestedPublicationDate
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ContractNoticeType.frequencyPeriod, 
+	ContractNoticeType.signature-list.signature, 
+	ContractNoticeType.contractingParty, 
+	ContractNoticeType.originatorCustomerParty-list.originatorCustomerParty,
+	ContractNoticeType.receiverParty, ContractNoticeType.tenderingTerms, 
+	ContractNoticeType.tenderingProcess, 
+	ContractNoticeType.procurementProject, 
+	ContractNoticeType.procurementProjectLot-list.procurementProjectLot
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ContractNoticeType.uBLExtensions, ContractNoticeType.uBLVersionID, 
+	ContractNoticeType.customizationID, ContractNoticeType.profileID, 
+	ContractNoticeType.profileExecutionID, ContractNoticeType.iD, 
+	ContractNoticeType.copyIndicator, ContractNoticeType.uUID, 
+	ContractNoticeType.contractFolderID, ContractNoticeType.issueDate, 
+	ContractNoticeType.issueTime, ContractNoticeType.note-list.note, 
+	ContractNoticeType.requestedPublicationDate, 
+	ContractNoticeType.frequencyPeriod, 
+	ContractNoticeType.signature-list.signature, 
+	ContractNoticeType.contractingParty, 
+	ContractNoticeType.originatorCustomerParty-list.originatorCustomerParty,
+	ContractNoticeType.receiverParty, ContractNoticeType.tenderingTerms, 
+	ContractNoticeType.tenderingProcess, 
+	ContractNoticeType.procurementProject, 
+	ContractNoticeType.procurementProjectLot-list.procurementProjectLot
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

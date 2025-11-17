@@ -1,0 +1,208 @@
+
+UnqualifiedDataTypes-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    NormalizedString, Decimal, String, AnyURI, Language, DateTime, Date, Time
+    FROM XSD;
+
+AmountType-1 ::= SEQUENCE {
+    currencyCodeListVersionID XSD.NormalizedString OPTIONAL,
+    currencyID   XSD.NormalizedString OPTIONAL,
+    base         XSD.Decimal
+}
+
+BinaryObjectType ::= SEQUENCE {
+    characterSetCode XSD.NormalizedString OPTIONAL,
+    encodingCode     XSD.NormalizedString OPTIONAL,
+    filename         XSD.String OPTIONAL,
+    format           XSD.String OPTIONAL,
+    mimeCode         XSD.NormalizedString OPTIONAL,
+    uri              XSD.AnyURI OPTIONAL,
+    base             OCTET STRING
+}
+
+GraphicType ::= SEQUENCE {
+    characterSetCode XSD.NormalizedString OPTIONAL,
+    encodingCode     XSD.NormalizedString OPTIONAL,
+    filename         XSD.String OPTIONAL,
+    format           XSD.String OPTIONAL,
+    mimeCode         XSD.NormalizedString OPTIONAL,
+    uri              XSD.AnyURI OPTIONAL,
+    base             OCTET STRING
+}
+
+PictureType ::= SEQUENCE {
+    characterSetCode XSD.NormalizedString OPTIONAL,
+    encodingCode     XSD.NormalizedString OPTIONAL,
+    filename         XSD.String OPTIONAL,
+    format           XSD.String OPTIONAL,
+    mimeCode         XSD.NormalizedString OPTIONAL,
+    uri              XSD.AnyURI OPTIONAL,
+    base             OCTET STRING
+}
+
+SoundType ::= SEQUENCE {
+    characterSetCode XSD.NormalizedString OPTIONAL,
+    encodingCode     XSD.NormalizedString OPTIONAL,
+    filename         XSD.String OPTIONAL,
+    format           XSD.String OPTIONAL,
+    mimeCode         XSD.NormalizedString OPTIONAL,
+    uri              XSD.AnyURI OPTIONAL,
+    base             OCTET STRING
+}
+
+VideoType ::= SEQUENCE {
+    characterSetCode XSD.NormalizedString OPTIONAL,
+    encodingCode     XSD.NormalizedString OPTIONAL,
+    filename         XSD.String OPTIONAL,
+    format           XSD.String OPTIONAL,
+    mimeCode         XSD.NormalizedString OPTIONAL,
+    uri              XSD.AnyURI OPTIONAL,
+    base             OCTET STRING
+}
+
+CodeType ::= SEQUENCE {
+    languageID     XSD.Language OPTIONAL,
+    listAgencyID   XSD.NormalizedString OPTIONAL,
+    listAgencyName XSD.String OPTIONAL,
+    listID         XSD.NormalizedString OPTIONAL,
+    listName       XSD.String OPTIONAL,
+    listSchemeURI  XSD.AnyURI OPTIONAL,
+    listURI        XSD.AnyURI OPTIONAL,
+    listVersionID  XSD.NormalizedString OPTIONAL,
+    name           XSD.String OPTIONAL,
+    base           XSD.NormalizedString
+}
+
+DateTimeType ::= SEQUENCE {
+    base XSD.DateTime
+}
+
+DateType-1 ::= SEQUENCE {
+    base XSD.Date
+}
+
+TimeType ::= SEQUENCE {
+    base XSD.Time
+}
+
+IdentifierType-1 ::= SEQUENCE {
+    schemeAgencyID   XSD.NormalizedString OPTIONAL,
+    schemeAgencyName XSD.String OPTIONAL,
+    schemeDataURI    XSD.AnyURI OPTIONAL,
+    schemeID         XSD.NormalizedString OPTIONAL,
+    schemeName       XSD.String OPTIONAL,
+    schemeURI        XSD.AnyURI OPTIONAL,
+    schemeVersionID  XSD.NormalizedString OPTIONAL,
+    base             XSD.NormalizedString
+}
+
+IndicatorType ::= SEQUENCE {
+    base BOOLEAN
+}
+
+MeasureType-1 ::= SEQUENCE {
+    unitCode     XSD.NormalizedString OPTIONAL,
+    unitCodeListVersionID XSD.NormalizedString OPTIONAL,
+    base         XSD.Decimal
+}
+
+NumericType ::= SEQUENCE {
+    format XSD.String OPTIONAL,
+    base   XSD.Decimal
+}
+
+ValueType-1 ::= SEQUENCE {
+    format XSD.String OPTIONAL,
+    base   XSD.Decimal
+}
+
+PercentType-1 ::= SEQUENCE {
+    format XSD.String OPTIONAL,
+    base   XSD.Decimal
+}
+
+RateType-1 ::= SEQUENCE {
+    format XSD.String OPTIONAL,
+    base   XSD.Decimal
+}
+
+QuantityType-1 ::= SEQUENCE {
+    unitCode      XSD.NormalizedString OPTIONAL,
+    unitCodeListAgencyID XSD.NormalizedString OPTIONAL,
+    unitCodeListAgencyName XSD.String OPTIONAL,
+    unitCodeListID XSD.NormalizedString OPTIONAL,
+    base          XSD.Decimal
+}
+
+TextType-1 ::= SEQUENCE {
+    languageID       XSD.Language OPTIONAL,
+    languageLocaleID XSD.NormalizedString OPTIONAL,
+    base             XSD.String
+}
+
+NameType-1 ::= SEQUENCE {
+    languageID       XSD.Language OPTIONAL,
+    languageLocaleID XSD.NormalizedString OPTIONAL,
+    base             XSD.String
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:UnqualifiedDataTypes-2"
+	PREFIX "udt"
+    NOT NAMESPACE AmountType-1.currencyCodeListVersionID, 
+	AmountType-1.currencyID, BinaryObjectType.characterSetCode, 
+	BinaryObjectType.encodingCode, BinaryObjectType.filename, 
+	BinaryObjectType.format, BinaryObjectType.mimeCode, 
+	BinaryObjectType.uri, GraphicType.characterSetCode, 
+	GraphicType.encodingCode, GraphicType.filename, GraphicType.format, 
+	GraphicType.mimeCode, GraphicType.uri, PictureType.characterSetCode, 
+	PictureType.encodingCode, PictureType.filename, PictureType.format, 
+	PictureType.mimeCode, PictureType.uri, SoundType.characterSetCode, 
+	SoundType.encodingCode, SoundType.filename, SoundType.format, 
+	SoundType.mimeCode, SoundType.uri, VideoType.characterSetCode, 
+	VideoType.encodingCode, VideoType.filename, VideoType.format, 
+	VideoType.mimeCode, VideoType.uri, CodeType.languageID, 
+	CodeType.listAgencyID, CodeType.listAgencyName, CodeType.listID, 
+	CodeType.listName, CodeType.listSchemeURI, CodeType.listURI, 
+	CodeType.listVersionID, CodeType.name, 
+	IdentifierType-1.schemeAgencyID, IdentifierType-1.schemeAgencyName, 
+	IdentifierType-1.schemeDataURI, IdentifierType-1.schemeID, 
+	IdentifierType-1.schemeName, IdentifierType-1.schemeURI, 
+	IdentifierType-1.schemeVersionID, MeasureType-1.unitCode, 
+	MeasureType-1.unitCodeListVersionID, NumericType.format, 
+	ValueType-1.format, PercentType-1.format, RateType-1.format, 
+	QuantityType-1.unitCode, QuantityType-1.unitCodeListAgencyID, 
+	QuantityType-1.unitCodeListAgencyName, QuantityType-1.unitCodeListID, 
+	TextType-1.languageID, TextType-1.languageLocaleID, 
+	NameType-1.languageID, NameType-1.languageLocaleID
+    NAME AmountType-1 AS "AmountType"
+    NAME DateType-1 AS "DateType"
+    NAME IdentifierType-1 AS "IdentifierType"
+    NAME MeasureType-1 AS "MeasureType"
+    NAME ValueType-1 AS "ValueType"
+    NAME PercentType-1 AS "PercentType"
+    NAME RateType-1 AS "RateType"
+    NAME QuantityType-1 AS "QuantityType"
+    NAME TextType-1 AS "TextType"
+    NAME NameType-1 AS "NameType"
+    ATTRIBUTE AmountType-1.currencyCodeListVersionID, AmountType-1.currencyID,
+	MeasureType-1.unitCode, MeasureType-1.unitCodeListVersionID, 
+	NumericType.format, ValueType-1.format, PercentType-1.format, 
+	RateType-1.format, TextType-1.languageID, TextType-1.languageLocaleID,
+	NameType-1.languageID, NameType-1.languageLocaleID
+    ATTRIBUTE ALL IN BinaryObjectType, ALL IN GraphicType, ALL IN PictureType,
+	ALL IN SoundType, ALL IN VideoType, ALL IN CodeType, 
+	ALL IN IdentifierType-1, ALL IN QuantityType-1
+    NOT ATTRIBUTE BinaryObjectType.base, GraphicType.base, PictureType.base, 
+	SoundType.base, VideoType.base, CodeType.base, IdentifierType-1.base, 
+	QuantityType-1.base
+    BASE64 BinaryObjectType.base, GraphicType.base, PictureType.base, 
+	SoundType.base, VideoType.base
+    UNTAGGED base IN ALL
+END
+

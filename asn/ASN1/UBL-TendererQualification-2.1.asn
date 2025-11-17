@@ -1,0 +1,86 @@
+
+TendererQualification-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, ContractFolderID, IssueDate, IssueTime, Note
+    FROM CommonBasicComponents-2
+    Signature-1, TendererPartyQualification, ContractingParty, Evidence, 
+    AdditionalDocumentReference
+    FROM CommonAggregateComponents-2;
+
+TendererQualification ::= TendererQualificationType
+
+TendererQualificationType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1 OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    contractFolderID ContractFolderID,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    signature-list SEQUENCE OF signature Signature-1,
+    tendererPartyQualification-list SEQUENCE (SIZE(1..MAX)) OF 
+	tendererPartyQualification TendererPartyQualification,
+    contractingParty ContractingParty OPTIONAL,
+    evidence-list SEQUENCE OF evidence Evidence,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:TendererQualification-2"
+	PREFIX "ns51"
+    NAMESPACE TendererQualificationType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE TendererQualificationType.uBLVersionID, 
+	TendererQualificationType.customizationID, 
+	TendererQualificationType.profileID, 
+	TendererQualificationType.profileExecutionID, 
+	TendererQualificationType.iD, TendererQualificationType.copyIndicator,
+	TendererQualificationType.uUID, 
+	TendererQualificationType.contractFolderID, 
+	TendererQualificationType.issueDate, 
+	TendererQualificationType.issueTime, 
+	TendererQualificationType.note-list.note
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE TendererQualificationType.signature-list.signature, 
+	TendererQualificationType.tendererPartyQualification-list.tendererPartyQualification,
+	TendererQualificationType.contractingParty, 
+	TendererQualificationType.evidence-list.evidence, 
+	TendererQualificationType.additionalDocumentReference-list.additionalDocumentReference
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME TendererQualificationType.uBLExtensions, 
+	TendererQualificationType.uBLVersionID, 
+	TendererQualificationType.customizationID, 
+	TendererQualificationType.profileID, 
+	TendererQualificationType.profileExecutionID, 
+	TendererQualificationType.iD, TendererQualificationType.copyIndicator,
+	TendererQualificationType.uUID, 
+	TendererQualificationType.contractFolderID, 
+	TendererQualificationType.issueDate, 
+	TendererQualificationType.issueTime, 
+	TendererQualificationType.note-list.note, 
+	TendererQualificationType.signature-list.signature, 
+	TendererQualificationType.tendererPartyQualification-list.tendererPartyQualification,
+	TendererQualificationType.contractingParty, 
+	TendererQualificationType.evidence-list.evidence, 
+	TendererQualificationType.additionalDocumentReference-list.additionalDocumentReference
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

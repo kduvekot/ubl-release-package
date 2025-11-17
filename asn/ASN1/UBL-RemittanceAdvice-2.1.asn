@@ -1,0 +1,119 @@
+
+RemittanceAdvice-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, DocumentCurrencyCode, 
+    TotalDebitAmount, TotalCreditAmount, TotalPaymentAmount, 
+    PaymentOrderReference, PayerReference, InvoicingPartyReference, 
+    LineCountNumeric
+    FROM CommonBasicComponents-2
+    InvoicePeriod, BillingReference, AdditionalDocumentReference, Signature-1,
+    AccountingCustomerParty, AccountingSupplierParty, PayeeParty, 
+    PaymentMeans, TaxTotal, RemittanceAdviceLine
+    FROM CommonAggregateComponents-2;
+
+RemittanceAdvice ::= RemittanceAdviceType
+
+RemittanceAdviceType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    documentCurrencyCode DocumentCurrencyCode OPTIONAL,
+    totalDebitAmount TotalDebitAmount OPTIONAL,
+    totalCreditAmount TotalCreditAmount OPTIONAL,
+    totalPaymentAmount TotalPaymentAmount OPTIONAL,
+    paymentOrderReference PaymentOrderReference OPTIONAL,
+    payerReference PayerReference OPTIONAL,
+    invoicingPartyReference InvoicingPartyReference OPTIONAL,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    invoicePeriod-list SEQUENCE OF invoicePeriod InvoicePeriod,
+    billingReference BillingReference OPTIONAL,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    accountingCustomerParty AccountingCustomerParty,
+    accountingSupplierParty AccountingSupplierParty,
+    payeeParty PayeeParty OPTIONAL,
+    paymentMeans PaymentMeans OPTIONAL,
+    taxTotal-list SEQUENCE OF taxTotal TaxTotal,
+    remittanceAdviceLine-list SEQUENCE (SIZE(1..MAX)) OF remittanceAdviceLine 
+	RemittanceAdviceLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:RemittanceAdvice-2"
+	PREFIX "ns42"
+    NAMESPACE RemittanceAdviceType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE RemittanceAdviceType.uBLVersionID, 
+	RemittanceAdviceType.customizationID, RemittanceAdviceType.profileID, 
+	RemittanceAdviceType.profileExecutionID, RemittanceAdviceType.iD, 
+	RemittanceAdviceType.copyIndicator, RemittanceAdviceType.uUID, 
+	RemittanceAdviceType.issueDate, RemittanceAdviceType.issueTime, 
+	RemittanceAdviceType.note-list.note, 
+	RemittanceAdviceType.documentCurrencyCode, 
+	RemittanceAdviceType.totalDebitAmount, 
+	RemittanceAdviceType.totalCreditAmount, 
+	RemittanceAdviceType.totalPaymentAmount, 
+	RemittanceAdviceType.paymentOrderReference, 
+	RemittanceAdviceType.payerReference, 
+	RemittanceAdviceType.invoicingPartyReference, 
+	RemittanceAdviceType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE RemittanceAdviceType.invoicePeriod-list.invoicePeriod, 
+	RemittanceAdviceType.billingReference, 
+	RemittanceAdviceType.additionalDocumentReference-list.additionalDocumentReference,
+	RemittanceAdviceType.signature-list.signature, 
+	RemittanceAdviceType.accountingCustomerParty, 
+	RemittanceAdviceType.accountingSupplierParty, 
+	RemittanceAdviceType.payeeParty, RemittanceAdviceType.paymentMeans, 
+	RemittanceAdviceType.taxTotal-list.taxTotal, 
+	RemittanceAdviceType.remittanceAdviceLine-list.remittanceAdviceLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME RemittanceAdviceType.uBLExtensions, 
+	RemittanceAdviceType.uBLVersionID, 
+	RemittanceAdviceType.customizationID, RemittanceAdviceType.profileID, 
+	RemittanceAdviceType.profileExecutionID, RemittanceAdviceType.iD, 
+	RemittanceAdviceType.copyIndicator, RemittanceAdviceType.uUID, 
+	RemittanceAdviceType.issueDate, RemittanceAdviceType.issueTime, 
+	RemittanceAdviceType.note-list.note, 
+	RemittanceAdviceType.documentCurrencyCode, 
+	RemittanceAdviceType.totalDebitAmount, 
+	RemittanceAdviceType.totalCreditAmount, 
+	RemittanceAdviceType.totalPaymentAmount, 
+	RemittanceAdviceType.paymentOrderReference, 
+	RemittanceAdviceType.payerReference, 
+	RemittanceAdviceType.invoicingPartyReference, 
+	RemittanceAdviceType.lineCountNumeric, 
+	RemittanceAdviceType.invoicePeriod-list.invoicePeriod, 
+	RemittanceAdviceType.billingReference, 
+	RemittanceAdviceType.additionalDocumentReference-list.additionalDocumentReference,
+	RemittanceAdviceType.signature-list.signature, 
+	RemittanceAdviceType.accountingCustomerParty, 
+	RemittanceAdviceType.accountingSupplierParty, 
+	RemittanceAdviceType.payeeParty, RemittanceAdviceType.paymentMeans, 
+	RemittanceAdviceType.taxTotal-list.taxTotal, 
+	RemittanceAdviceType.remittanceAdviceLine-list.remittanceAdviceLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

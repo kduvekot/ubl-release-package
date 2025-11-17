@@ -1,0 +1,81 @@
+
+TenderReceipt-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, ContractFolderID, IssueDate, IssueTime, ContractName,
+    Note, RegisteredDate, RegisteredTime
+    FROM CommonBasicComponents-2
+    TenderDocumentReference, Signature-1, SenderParty, ReceiverParty
+    FROM CommonAggregateComponents-2;
+
+TenderReceipt ::= TenderReceiptType
+
+TenderReceiptType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1 OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    contractFolderID ContractFolderID,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    contractName-list SEQUENCE OF contractName ContractName,
+    note-list  SEQUENCE OF note Note,
+    registeredDate RegisteredDate,
+    registeredTime RegisteredTime,
+    tenderDocumentReference-list SEQUENCE OF tenderDocumentReference 
+	TenderDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:TenderReceipt-2"
+	PREFIX "ns50"
+    NAMESPACE TenderReceiptType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE TenderReceiptType.uBLVersionID, 
+	TenderReceiptType.customizationID, TenderReceiptType.profileID, 
+	TenderReceiptType.profileExecutionID, TenderReceiptType.iD, 
+	TenderReceiptType.copyIndicator, TenderReceiptType.uUID, 
+	TenderReceiptType.contractFolderID, TenderReceiptType.issueDate, 
+	TenderReceiptType.issueTime, 
+	TenderReceiptType.contractName-list.contractName, 
+	TenderReceiptType.note-list.note, TenderReceiptType.registeredDate, 
+	TenderReceiptType.registeredTime
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE TenderReceiptType.tenderDocumentReference-list.tenderDocumentReference,
+	TenderReceiptType.signature-list.signature, 
+	TenderReceiptType.senderParty, TenderReceiptType.receiverParty
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME TenderReceiptType.uBLExtensions, TenderReceiptType.uBLVersionID, 
+	TenderReceiptType.customizationID, TenderReceiptType.profileID, 
+	TenderReceiptType.profileExecutionID, TenderReceiptType.iD, 
+	TenderReceiptType.copyIndicator, TenderReceiptType.uUID, 
+	TenderReceiptType.contractFolderID, TenderReceiptType.issueDate, 
+	TenderReceiptType.issueTime, 
+	TenderReceiptType.contractName-list.contractName, 
+	TenderReceiptType.note-list.note, TenderReceiptType.registeredDate, 
+	TenderReceiptType.registeredTime, 
+	TenderReceiptType.tenderDocumentReference-list.tenderDocumentReference,
+	TenderReceiptType.signature-list.signature, 
+	TenderReceiptType.senderParty, TenderReceiptType.receiverParty
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

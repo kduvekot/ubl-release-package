@@ -115,7 +115,7 @@
 			<cbc:EndDate>2010-04-10</cbc:EndDate>
 		</cac:ExceptionObservationPeriod>
 		<cac:ForecastException>
-			<cbc:PurposeCode>ORDER_FORECAST</cbc:PurposeCode>
+			<cbc:ForecastPurposeCode>ORDER_FORECAST</cbc:ForecastPurposeCode>
 			<cbc:ForecastTypeCode>TOTAL</cbc:ForecastTypeCode>
 			<cbc:IssueDate>2010-04-17</cbc:IssueDate>
 			<cbc:IssueTime>10:00:00.000</cbc:IssueTime>

@@ -1,0 +1,192 @@
+
+OrderResponse-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    SalesOrderID, CopyIndicator, UUID, IssueDate, IssueTime, 
+    OrderResponseCode, Note, DocumentCurrencyCode, PricingCurrencyCode, 
+    TaxCurrencyCode, TotalPackagesQuantity, GrossWeightMeasure, 
+    NetWeightMeasure, NetNetWeightMeasure, GrossVolumeMeasure, 
+    NetVolumeMeasure, CustomerReference, AccountingCostCode, AccountingCost, 
+    LineCountNumeric
+    FROM CommonBasicComponents-2
+    ValidityPeriod, OrderReference, OrderDocumentReference, 
+    OriginatorDocumentReference, AdditionalDocumentReference, Contract, 
+    Signature-1, SellerSupplierParty, BuyerCustomerParty, 
+    OriginatorCustomerParty, FreightForwarderParty, AccountingSupplierParty, 
+    AccountingCustomerParty, Delivery, DeliveryTerms, PaymentMeans, 
+    PaymentTerms, AllowanceCharge, TransactionConditions, TaxExchangeRate, 
+    PricingExchangeRate, PaymentExchangeRate, DestinationCountry, TaxTotal, 
+    LegalMonetaryTotal, OrderLine
+    FROM CommonAggregateComponents-2;
+
+OrderResponse ::= OrderResponseType
+
+OrderResponseType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    salesOrderID SalesOrderID OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    orderResponseCode OrderResponseCode OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    documentCurrencyCode DocumentCurrencyCode OPTIONAL,
+    pricingCurrencyCode PricingCurrencyCode OPTIONAL,
+    taxCurrencyCode TaxCurrencyCode OPTIONAL,
+    totalPackagesQuantity TotalPackagesQuantity OPTIONAL,
+    grossWeightMeasure GrossWeightMeasure OPTIONAL,
+    netWeightMeasure NetWeightMeasure OPTIONAL,
+    netNetWeightMeasure NetNetWeightMeasure OPTIONAL,
+    grossVolumeMeasure GrossVolumeMeasure OPTIONAL,
+    netVolumeMeasure NetVolumeMeasure OPTIONAL,
+    customerReference CustomerReference OPTIONAL,
+    accountingCostCode AccountingCostCode OPTIONAL,
+    accountingCost AccountingCost OPTIONAL,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    validityPeriod-list SEQUENCE OF validityPeriod ValidityPeriod,
+    orderReference-list SEQUENCE (SIZE(1..MAX)) OF orderReference 
+	OrderReference,
+    orderDocumentReference-list SEQUENCE OF orderDocumentReference 
+	OrderDocumentReference,
+    originatorDocumentReference OriginatorDocumentReference OPTIONAL,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    contract-list SEQUENCE OF contract Contract,
+    signature-list SEQUENCE OF signature Signature-1,
+    sellerSupplierParty SellerSupplierParty,
+    buyerCustomerParty BuyerCustomerParty,
+    originatorCustomerParty OriginatorCustomerParty OPTIONAL,
+    freightForwarderParty FreightForwarderParty OPTIONAL,
+    accountingSupplierParty AccountingSupplierParty OPTIONAL,
+    accountingCustomerParty AccountingCustomerParty OPTIONAL,
+    delivery-list SEQUENCE OF delivery Delivery,
+    deliveryTerms DeliveryTerms OPTIONAL,
+    paymentMeans-list SEQUENCE OF paymentMeans PaymentMeans,
+    paymentTerms-list SEQUENCE OF paymentTerms PaymentTerms,
+    allowanceCharge-list SEQUENCE OF allowanceCharge AllowanceCharge,
+    transactionConditions TransactionConditions OPTIONAL,
+    taxExchangeRate TaxExchangeRate OPTIONAL,
+    pricingExchangeRate PricingExchangeRate OPTIONAL,
+    paymentExchangeRate PaymentExchangeRate OPTIONAL,
+    destinationCountry DestinationCountry OPTIONAL,
+    taxTotal-list SEQUENCE OF taxTotal TaxTotal,
+    legalMonetaryTotal LegalMonetaryTotal OPTIONAL,
+    orderLine-list SEQUENCE (SIZE(1..MAX)) OF orderLine OrderLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:OrderResponse-2"
+	PREFIX "ns33"
+    NAMESPACE OrderResponseType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE OrderResponseType.uBLVersionID, 
+	OrderResponseType.customizationID, OrderResponseType.profileID, 
+	OrderResponseType.profileExecutionID, OrderResponseType.iD, 
+	OrderResponseType.salesOrderID, OrderResponseType.copyIndicator, 
+	OrderResponseType.uUID, OrderResponseType.issueDate, 
+	OrderResponseType.issueTime, OrderResponseType.orderResponseCode, 
+	OrderResponseType.note-list.note, 
+	OrderResponseType.documentCurrencyCode, 
+	OrderResponseType.pricingCurrencyCode, 
+	OrderResponseType.taxCurrencyCode, 
+	OrderResponseType.totalPackagesQuantity, 
+	OrderResponseType.grossWeightMeasure, 
+	OrderResponseType.netWeightMeasure, 
+	OrderResponseType.netNetWeightMeasure, 
+	OrderResponseType.grossVolumeMeasure, 
+	OrderResponseType.netVolumeMeasure, 
+	OrderResponseType.customerReference, 
+	OrderResponseType.accountingCostCode, 
+	OrderResponseType.accountingCost, OrderResponseType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE OrderResponseType.validityPeriod-list.validityPeriod, 
+	OrderResponseType.orderReference-list.orderReference, 
+	OrderResponseType.orderDocumentReference-list.orderDocumentReference, 
+	OrderResponseType.originatorDocumentReference, 
+	OrderResponseType.additionalDocumentReference-list.additionalDocumentReference,
+	OrderResponseType.contract-list.contract, 
+	OrderResponseType.signature-list.signature, 
+	OrderResponseType.sellerSupplierParty, 
+	OrderResponseType.buyerCustomerParty, 
+	OrderResponseType.originatorCustomerParty, 
+	OrderResponseType.freightForwarderParty, 
+	OrderResponseType.accountingSupplierParty, 
+	OrderResponseType.accountingCustomerParty, 
+	OrderResponseType.delivery-list.delivery, 
+	OrderResponseType.deliveryTerms, 
+	OrderResponseType.paymentMeans-list.paymentMeans, 
+	OrderResponseType.paymentTerms-list.paymentTerms, 
+	OrderResponseType.allowanceCharge-list.allowanceCharge, 
+	OrderResponseType.transactionConditions, 
+	OrderResponseType.taxExchangeRate, 
+	OrderResponseType.pricingExchangeRate, 
+	OrderResponseType.paymentExchangeRate, 
+	OrderResponseType.destinationCountry, 
+	OrderResponseType.taxTotal-list.taxTotal, 
+	OrderResponseType.legalMonetaryTotal, 
+	OrderResponseType.orderLine-list.orderLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME OrderResponseType.uBLExtensions, OrderResponseType.uBLVersionID, 
+	OrderResponseType.customizationID, OrderResponseType.profileID, 
+	OrderResponseType.profileExecutionID, OrderResponseType.iD, 
+	OrderResponseType.salesOrderID, OrderResponseType.copyIndicator, 
+	OrderResponseType.uUID, OrderResponseType.issueDate, 
+	OrderResponseType.issueTime, OrderResponseType.orderResponseCode, 
+	OrderResponseType.note-list.note, 
+	OrderResponseType.documentCurrencyCode, 
+	OrderResponseType.pricingCurrencyCode, 
+	OrderResponseType.taxCurrencyCode, 
+	OrderResponseType.totalPackagesQuantity, 
+	OrderResponseType.grossWeightMeasure, 
+	OrderResponseType.netWeightMeasure, 
+	OrderResponseType.netNetWeightMeasure, 
+	OrderResponseType.grossVolumeMeasure, 
+	OrderResponseType.netVolumeMeasure, 
+	OrderResponseType.customerReference, 
+	OrderResponseType.accountingCostCode, 
+	OrderResponseType.accountingCost, OrderResponseType.lineCountNumeric, 
+	OrderResponseType.validityPeriod-list.validityPeriod, 
+	OrderResponseType.orderReference-list.orderReference, 
+	OrderResponseType.orderDocumentReference-list.orderDocumentReference, 
+	OrderResponseType.originatorDocumentReference, 
+	OrderResponseType.additionalDocumentReference-list.additionalDocumentReference,
+	OrderResponseType.contract-list.contract, 
+	OrderResponseType.signature-list.signature, 
+	OrderResponseType.sellerSupplierParty, 
+	OrderResponseType.buyerCustomerParty, 
+	OrderResponseType.originatorCustomerParty, 
+	OrderResponseType.freightForwarderParty, 
+	OrderResponseType.accountingSupplierParty, 
+	OrderResponseType.accountingCustomerParty, 
+	OrderResponseType.delivery-list.delivery, 
+	OrderResponseType.deliveryTerms, 
+	OrderResponseType.paymentMeans-list.paymentMeans, 
+	OrderResponseType.paymentTerms-list.paymentTerms, 
+	OrderResponseType.allowanceCharge-list.allowanceCharge, 
+	OrderResponseType.transactionConditions, 
+	OrderResponseType.taxExchangeRate, 
+	OrderResponseType.pricingExchangeRate, 
+	OrderResponseType.paymentExchangeRate, 
+	OrderResponseType.destinationCountry, 
+	OrderResponseType.taxTotal-list.taxTotal, 
+	OrderResponseType.legalMonetaryTotal, 
+	OrderResponseType.orderLine-list.orderLine AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

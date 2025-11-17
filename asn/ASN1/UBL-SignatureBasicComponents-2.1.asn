@@ -1,0 +1,39 @@
+
+SignatureBasicComponents-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    NormalizedString, String, AnyURI
+    FROM XSD;
+
+ReferencedSignatureID ::= ReferencedSignatureIDType
+
+ReferencedSignatureIDType ::= SEQUENCE {
+    schemeAgencyID   XSD.NormalizedString OPTIONAL,
+    schemeAgencyName XSD.String OPTIONAL,
+    schemeDataURI    XSD.AnyURI OPTIONAL,
+    schemeID         XSD.NormalizedString OPTIONAL,
+    schemeName       XSD.String OPTIONAL,
+    schemeURI        XSD.AnyURI OPTIONAL,
+    schemeVersionID  XSD.NormalizedString OPTIONAL,
+    base             XSD.NormalizedString
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2"
+	PREFIX "sbc"
+    NOT NAMESPACE ReferencedSignatureIDType.schemeAgencyID, 
+	ReferencedSignatureIDType.schemeAgencyName, 
+	ReferencedSignatureIDType.schemeDataURI, 
+	ReferencedSignatureIDType.schemeID, 
+	ReferencedSignatureIDType.schemeName, 
+	ReferencedSignatureIDType.schemeURI, 
+	ReferencedSignatureIDType.schemeVersionID
+    ATTRIBUTE ALL IN ReferencedSignatureIDType
+    NOT ATTRIBUTE ReferencedSignatureIDType.base
+    UNTAGGED ReferencedSignatureIDType.base
+END
+

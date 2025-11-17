@@ -1,0 +1,81 @@
+
+ApplicationResponse-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, UUID, 
+    IssueDate, IssueTime, ResponseDate, ResponseTime, Note, VersionID
+    FROM CommonBasicComponents-2
+    Signature-1, SenderParty, ReceiverParty, DocumentResponse
+    FROM CommonAggregateComponents-2;
+
+ApplicationResponse ::= ApplicationResponseType
+
+ApplicationResponseType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID   ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD          ID-1,
+    uUID        UUID OPTIONAL,
+    issueDate   IssueDate,
+    issueTime   IssueTime OPTIONAL,
+    responseDate ResponseDate OPTIONAL,
+    responseTime ResponseTime OPTIONAL,
+    note-list   SEQUENCE OF note Note,
+    versionID   VersionID OPTIONAL,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    documentResponse-list SEQUENCE OF documentResponse DocumentResponse
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"
+	PREFIX "ns"
+    NAMESPACE ApplicationResponseType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ApplicationResponseType.uBLVersionID, 
+	ApplicationResponseType.customizationID, 
+	ApplicationResponseType.profileID, 
+	ApplicationResponseType.profileExecutionID, 
+	ApplicationResponseType.iD, ApplicationResponseType.uUID, 
+	ApplicationResponseType.issueDate, ApplicationResponseType.issueTime, 
+	ApplicationResponseType.responseDate, 
+	ApplicationResponseType.responseTime, 
+	ApplicationResponseType.note-list.note, 
+	ApplicationResponseType.versionID
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ApplicationResponseType.signature-list.signature, 
+	ApplicationResponseType.senderParty, 
+	ApplicationResponseType.receiverParty, 
+	ApplicationResponseType.documentResponse-list.documentResponse
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ApplicationResponseType.uBLExtensions, 
+	ApplicationResponseType.uBLVersionID, 
+	ApplicationResponseType.customizationID, 
+	ApplicationResponseType.profileID, 
+	ApplicationResponseType.profileExecutionID, 
+	ApplicationResponseType.iD, ApplicationResponseType.uUID, 
+	ApplicationResponseType.issueDate, ApplicationResponseType.issueTime, 
+	ApplicationResponseType.responseDate, 
+	ApplicationResponseType.responseTime, 
+	ApplicationResponseType.note-list.note, 
+	ApplicationResponseType.versionID, 
+	ApplicationResponseType.signature-list.signature, 
+	ApplicationResponseType.senderParty, 
+	ApplicationResponseType.receiverParty, 
+	ApplicationResponseType.documentResponse-list.documentResponse
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

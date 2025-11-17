@@ -1,0 +1,94 @@
+
+UnawardedNotification-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, ContractFolderID, IssueDate, IssueTime, ContractName,
+    Note
+    FROM CommonBasicComponents-2
+    Signature-1, SenderParty, ReceiverParty, MinutesDocumentReference, 
+    AdditionalDocumentReference, TenderResult, AppealTerms
+    FROM CommonAggregateComponents-2;
+
+UnawardedNotification ::= UnawardedNotificationType
+
+UnawardedNotificationType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1 OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    contractFolderID ContractFolderID,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    contractName ContractName OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    minutesDocumentReference MinutesDocumentReference OPTIONAL,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    tenderResult-list SEQUENCE (SIZE(1..MAX)) OF tenderResult TenderResult,
+    appealTerms AppealTerms OPTIONAL
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:UnawardedNotification-2"
+	PREFIX "ns59"
+    NAMESPACE UnawardedNotificationType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE UnawardedNotificationType.uBLVersionID, 
+	UnawardedNotificationType.customizationID, 
+	UnawardedNotificationType.profileID, 
+	UnawardedNotificationType.profileExecutionID, 
+	UnawardedNotificationType.iD, UnawardedNotificationType.copyIndicator,
+	UnawardedNotificationType.uUID, 
+	UnawardedNotificationType.contractFolderID, 
+	UnawardedNotificationType.issueDate, 
+	UnawardedNotificationType.issueTime, 
+	UnawardedNotificationType.contractName, 
+	UnawardedNotificationType.note-list.note
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE UnawardedNotificationType.signature-list.signature, 
+	UnawardedNotificationType.senderParty, 
+	UnawardedNotificationType.receiverParty, 
+	UnawardedNotificationType.minutesDocumentReference, 
+	UnawardedNotificationType.additionalDocumentReference-list.additionalDocumentReference,
+	UnawardedNotificationType.tenderResult-list.tenderResult, 
+	UnawardedNotificationType.appealTerms
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME UnawardedNotificationType.uBLExtensions, 
+	UnawardedNotificationType.uBLVersionID, 
+	UnawardedNotificationType.customizationID, 
+	UnawardedNotificationType.profileID, 
+	UnawardedNotificationType.profileExecutionID, 
+	UnawardedNotificationType.iD, UnawardedNotificationType.copyIndicator,
+	UnawardedNotificationType.uUID, 
+	UnawardedNotificationType.contractFolderID, 
+	UnawardedNotificationType.issueDate, 
+	UnawardedNotificationType.issueTime, 
+	UnawardedNotificationType.contractName, 
+	UnawardedNotificationType.note-list.note, 
+	UnawardedNotificationType.signature-list.signature, 
+	UnawardedNotificationType.senderParty, 
+	UnawardedNotificationType.receiverParty, 
+	UnawardedNotificationType.minutesDocumentReference, 
+	UnawardedNotificationType.additionalDocumentReference-list.additionalDocumentReference,
+	UnawardedNotificationType.tenderResult-list.tenderResult, 
+	UnawardedNotificationType.appealTerms AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

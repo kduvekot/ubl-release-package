@@ -1,0 +1,90 @@
+
+ExceptionNotification-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note
+    FROM CommonBasicComponents-2
+    ExceptionObservationPeriod, DocumentReference, Signature-1, SenderParty, 
+    ReceiverParty, BuyerCustomerParty, SellerSupplierParty, 
+    ExceptionNotificationLine
+    FROM CommonAggregateComponents-2;
+
+ExceptionNotification ::= ExceptionNotificationType
+
+ExceptionNotificationType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    exceptionObservationPeriod ExceptionObservationPeriod,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    exceptionNotificationLine-list SEQUENCE (SIZE(1..MAX)) OF 
+	exceptionNotificationLine ExceptionNotificationLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:ExceptionNotification-2"
+	PREFIX "ns19"
+    NAMESPACE ExceptionNotificationType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ExceptionNotificationType.uBLVersionID, 
+	ExceptionNotificationType.customizationID, 
+	ExceptionNotificationType.profileID, 
+	ExceptionNotificationType.profileExecutionID, 
+	ExceptionNotificationType.iD, ExceptionNotificationType.copyIndicator,
+	ExceptionNotificationType.uUID, ExceptionNotificationType.issueDate, 
+	ExceptionNotificationType.issueTime, 
+	ExceptionNotificationType.note-list.note
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ExceptionNotificationType.exceptionObservationPeriod, 
+	ExceptionNotificationType.documentReference-list.documentReference, 
+	ExceptionNotificationType.signature-list.signature, 
+	ExceptionNotificationType.senderParty, 
+	ExceptionNotificationType.receiverParty, 
+	ExceptionNotificationType.buyerCustomerParty, 
+	ExceptionNotificationType.sellerSupplierParty, 
+	ExceptionNotificationType.exceptionNotificationLine-list.exceptionNotificationLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ExceptionNotificationType.uBLExtensions, 
+	ExceptionNotificationType.uBLVersionID, 
+	ExceptionNotificationType.customizationID, 
+	ExceptionNotificationType.profileID, 
+	ExceptionNotificationType.profileExecutionID, 
+	ExceptionNotificationType.iD, ExceptionNotificationType.copyIndicator,
+	ExceptionNotificationType.uUID, ExceptionNotificationType.issueDate, 
+	ExceptionNotificationType.issueTime, 
+	ExceptionNotificationType.note-list.note, 
+	ExceptionNotificationType.exceptionObservationPeriod, 
+	ExceptionNotificationType.documentReference-list.documentReference, 
+	ExceptionNotificationType.signature-list.signature, 
+	ExceptionNotificationType.senderParty, 
+	ExceptionNotificationType.receiverParty, 
+	ExceptionNotificationType.buyerCustomerParty, 
+	ExceptionNotificationType.sellerSupplierParty, 
+	ExceptionNotificationType.exceptionNotificationLine-list.exceptionNotificationLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

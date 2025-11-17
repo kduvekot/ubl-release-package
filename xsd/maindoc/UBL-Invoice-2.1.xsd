@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsd
   Module:            UBL-Invoice-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
@@ -30,7 +29,7 @@
       </xsd:annotation>
   </xsd:element>
    <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definiition ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
    <xsd:complexType name="InvoiceType">
       <xsd:annotation>
          <xsd:documentation>
@@ -199,16 +198,16 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:InvoiceDueDate" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cbc:DueDate" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Invoice. Invoice Due Date. Date</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Invoice. Due Date. Date</ccts:DictionaryEntryName>
                      <ccts:Definition>The date on which Invoice is due.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Invoice</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Invoice Due Date</ccts:PropertyTerm>
+                     <ccts:PropertyTerm>Due Date</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
                      <ccts:DataType>Date. Type</ccts:DataType>
                   </ccts:Component>
@@ -468,6 +467,22 @@
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receipt</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:StatementDocumentReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Invoice. Statement_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>An associative reference to Statement.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Invoice</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Statement</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
                   </ccts:Component>
@@ -859,7 +874,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

@@ -1,0 +1,82 @@
+
+PackingList-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, UUID, 
+    IssueDate, IssueTime, Name-1, Description, Note, VersionID, 
+    OtherInstruction
+    FROM CommonBasicComponents-2
+    ConsignorParty, CarrierParty, FreightForwarderParty, Shipment, 
+    DocumentReference, DocumentDistribution, Signature-1
+    FROM CommonAggregateComponents-2;
+
+PackingList ::= PackingListType
+
+PackingListType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    name       Name-1 OPTIONAL,
+    description Description OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    versionID  VersionID OPTIONAL,
+    otherInstruction OtherInstruction OPTIONAL,
+    consignorParty ConsignorParty OPTIONAL,
+    carrierParty CarrierParty OPTIONAL,
+    freightForwarderParty FreightForwarderParty OPTIONAL,
+    shipment   Shipment,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    documentDistribution-list SEQUENCE OF documentDistribution 
+	DocumentDistribution,
+    signature-list SEQUENCE OF signature Signature-1
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:PackingList-2"
+	PREFIX "ns35"
+    NAMESPACE PackingListType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE PackingListType.uBLVersionID, PackingListType.customizationID, 
+	PackingListType.profileID, PackingListType.profileExecutionID, 
+	PackingListType.iD, PackingListType.uUID, PackingListType.issueDate, 
+	PackingListType.issueTime, PackingListType.name, 
+	PackingListType.description, PackingListType.note-list.note, 
+	PackingListType.versionID, PackingListType.otherInstruction
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE PackingListType.consignorParty, PackingListType.carrierParty, 
+	PackingListType.freightForwarderParty, PackingListType.shipment, 
+	PackingListType.documentReference-list.documentReference, 
+	PackingListType.documentDistribution-list.documentDistribution, 
+	PackingListType.signature-list.signature
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME PackingListType.uBLExtensions, PackingListType.uBLVersionID, 
+	PackingListType.customizationID, PackingListType.profileID, 
+	PackingListType.profileExecutionID, PackingListType.iD, 
+	PackingListType.uUID, PackingListType.issueDate, 
+	PackingListType.issueTime, PackingListType.name, 
+	PackingListType.description, PackingListType.note-list.note, 
+	PackingListType.versionID, PackingListType.otherInstruction, 
+	PackingListType.consignorParty, PackingListType.carrierParty, 
+	PackingListType.freightForwarderParty, PackingListType.shipment, 
+	PackingListType.documentReference-list.documentReference, 
+	PackingListType.documentDistribution-list.documentDistribution, 
+	PackingListType.signature-list.signature AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

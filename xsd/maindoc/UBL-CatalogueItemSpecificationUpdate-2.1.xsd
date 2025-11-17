@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsd
   Module:            UBL-CatalogueItemSpecificationUpdate-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns="urn:oasis:names:specification:ubl:schema:xsd:CatalogueItemSpecificationUpdate-2"
@@ -31,7 +30,7 @@
       </xsd:annotation>
   </xsd:element>
    <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definiition ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
    <xsd:complexType name="CatalogueItemSpecificationUpdateType">
       <xsd:annotation>
          <xsd:documentation>
@@ -494,7 +493,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

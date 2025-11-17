@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsdrt
   Module:            UBL-TradeItemLocationProfile-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TradeItemLocationProfile-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -72,7 +71,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

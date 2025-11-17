@@ -1,0 +1,93 @@
+
+Waybill-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CarrierAssignedID, UUID, IssueDate, IssueTime, Name-1, Description, Note, 
+    ShippingOrderID, AdValoremIndicator, DeclaredCarriageValueAmount, 
+    OtherInstruction
+    FROM CommonBasicComponents-2
+    ConsignorParty, CarrierParty, FreightForwarderParty, Shipment, 
+    DocumentReference, ExchangeRate, DocumentDistribution, Signature-1
+    FROM CommonAggregateComponents-2;
+
+Waybill ::= WaybillType
+
+WaybillType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    carrierAssignedID CarrierAssignedID OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    name       Name-1 OPTIONAL,
+    description-list SEQUENCE OF description Description,
+    note-list  SEQUENCE OF note Note,
+    shippingOrderID ShippingOrderID OPTIONAL,
+    adValoremIndicator AdValoremIndicator OPTIONAL,
+    declaredCarriageValueAmount DeclaredCarriageValueAmount OPTIONAL,
+    otherInstruction-list SEQUENCE OF otherInstruction OtherInstruction,
+    consignorParty ConsignorParty OPTIONAL,
+    carrierParty CarrierParty OPTIONAL,
+    freightForwarderParty FreightForwarderParty OPTIONAL,
+    shipment   Shipment,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    exchangeRate-list SEQUENCE OF exchangeRate ExchangeRate,
+    documentDistribution-list SEQUENCE OF documentDistribution 
+	DocumentDistribution,
+    signature-list SEQUENCE OF signature Signature-1
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"
+	PREFIX "ns61"
+    NAMESPACE WaybillType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE WaybillType.uBLVersionID, WaybillType.customizationID, 
+	WaybillType.profileID, WaybillType.profileExecutionID, WaybillType.iD,
+	WaybillType.carrierAssignedID, WaybillType.uUID, 
+	WaybillType.issueDate, WaybillType.issueTime, WaybillType.name, 
+	WaybillType.description-list.description, WaybillType.note-list.note, 
+	WaybillType.shippingOrderID, WaybillType.adValoremIndicator, 
+	WaybillType.declaredCarriageValueAmount, 
+	WaybillType.otherInstruction-list.otherInstruction
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE WaybillType.consignorParty, WaybillType.carrierParty, 
+	WaybillType.freightForwarderParty, WaybillType.shipment, 
+	WaybillType.documentReference-list.documentReference, 
+	WaybillType.exchangeRate-list.exchangeRate, 
+	WaybillType.documentDistribution-list.documentDistribution, 
+	WaybillType.signature-list.signature
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME WaybillType.uBLExtensions, WaybillType.uBLVersionID, 
+	WaybillType.customizationID, WaybillType.profileID, 
+	WaybillType.profileExecutionID, WaybillType.iD, 
+	WaybillType.carrierAssignedID, WaybillType.uUID, 
+	WaybillType.issueDate, WaybillType.issueTime, WaybillType.name, 
+	WaybillType.description-list.description, WaybillType.note-list.note, 
+	WaybillType.shippingOrderID, WaybillType.adValoremIndicator, 
+	WaybillType.declaredCarriageValueAmount, 
+	WaybillType.otherInstruction-list.otherInstruction, 
+	WaybillType.consignorParty, WaybillType.carrierParty, 
+	WaybillType.freightForwarderParty, WaybillType.shipment, 
+	WaybillType.documentReference-list.documentReference, 
+	WaybillType.exchangeRate-list.exchangeRate, 
+	WaybillType.documentDistribution-list.documentDistribution, 
+	WaybillType.signature-list.signature AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

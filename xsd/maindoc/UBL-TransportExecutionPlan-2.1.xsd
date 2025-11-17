@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsd
   Module:            UBL-TransportExecutionPlan-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2"
@@ -30,7 +29,7 @@
       </xsd:annotation>
   </xsd:element>
    <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definiition ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
    <xsd:complexType name="TransportExecutionPlanType">
       <xsd:annotation>
          <xsd:documentation>
@@ -128,6 +127,39 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Execution Plan. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
+                     <ccts:Definition>Indicates whether the Transport Execution Plan is a copy (true) or not (false).</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
+                     <ccts:DataType>Indicator. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Execution Plan. UUID. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
+                     <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:IssueDate" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -157,6 +189,22 @@
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
                      <ccts:DataType>Time. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Execution Plan. Note. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>Free-form text applying to the Transport Execution Plan. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Note</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -195,18 +243,18 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:SequenceNumber" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cbc:SequenceNumberID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Transport Execution Plan. Sequence Number. Numeric</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Transport Execution Plan. Sequence Number. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Sequence number differentiating a new Transport Execution Plan from previous ones.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
                      <ccts:PropertyTerm>Sequence Number</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
-                     <ccts:DataType>Numeric. Type</ccts:DataType>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -349,6 +397,37 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:ShipmentDocumentReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Execution Plan. Shipment_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>A reference to any shipment documents related to the Transport Execution Plan (e.g. a product order).</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Shipment</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Execution Plan. Signature</ccts:DictionaryEntryName>
+                     <ccts:Definition>An association to Signature.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cac:TransportServiceProviderParty" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -429,21 +508,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Transport Execution Plan. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Signature.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
          <xsd:element ref="cac:AdditionalTransportationService" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -485,6 +549,40 @@
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Validity</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Period</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:TransportUserResponseDeadlinePeriod" minOccurs="0"
+                      maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Execution Plan. Transport User Response Deadline_ Period. Period</ccts:DictionaryEntryName>
+                     <ccts:Definition>The deadline for when the Transport User will have to respond to a Transport Execution Plan suggested by a Transport Service Provider.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Transport User Response Deadline</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Period</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:TransportServiceProviderResponseDeadlinePeriod" minOccurs="0"
+                      maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Execution Plan. Transport Service Provider Response Deadline_ Period. Period</ccts:DictionaryEntryName>
+                     <ccts:Definition>The deadline for when the Transport Service Provider will have to respond to a Transport Execution Plan suggested by a Transport User.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Execution Plan</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Transport Service Provider Response Deadline</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Period</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
                   </ccts:Component>
@@ -691,7 +789,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

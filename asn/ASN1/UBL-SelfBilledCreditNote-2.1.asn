@@ -1,0 +1,197 @@
+
+SelfBilledCreditNote-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, TaxPointDate, Note, 
+    DocumentCurrencyCode, TaxCurrencyCode, PricingCurrencyCode, 
+    PaymentCurrencyCode, PaymentAlternativeCurrencyCode, AccountingCostCode, 
+    AccountingCost, LineCountNumeric
+    FROM CommonBasicComponents-2
+    InvoicePeriod, DiscrepancyResponse, OrderReference, BillingReference, 
+    DespatchDocumentReference, ReceiptDocumentReference, 
+    ContractDocumentReference, StatementDocumentReference, 
+    OriginatorDocumentReference, AdditionalDocumentReference, Signature-1, 
+    AccountingCustomerParty, AccountingSupplierParty, PayeeParty, 
+    BuyerCustomerParty, SellerSupplierParty, TaxRepresentativeParty, Delivery,
+    DeliveryTerms, PaymentMeans, PaymentTerms, AllowanceCharge, 
+    TaxExchangeRate, PricingExchangeRate, PaymentExchangeRate, 
+    PaymentAlternativeExchangeRate, TaxTotal, LegalMonetaryTotal, 
+    CreditNoteLine
+    FROM CommonAggregateComponents-2;
+
+SelfBilledCreditNote ::= SelfBilledCreditNoteType
+
+SelfBilledCreditNoteType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    taxPointDate TaxPointDate OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    documentCurrencyCode DocumentCurrencyCode,
+    taxCurrencyCode TaxCurrencyCode OPTIONAL,
+    pricingCurrencyCode PricingCurrencyCode OPTIONAL,
+    paymentCurrencyCode PaymentCurrencyCode OPTIONAL,
+    paymentAlternativeCurrencyCode PaymentAlternativeCurrencyCode OPTIONAL,
+    accountingCostCode AccountingCostCode OPTIONAL,
+    accountingCost AccountingCost OPTIONAL,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    invoicePeriod-list SEQUENCE OF invoicePeriod InvoicePeriod,
+    discrepancyResponse-list SEQUENCE OF discrepancyResponse 
+	DiscrepancyResponse,
+    orderReference OrderReference OPTIONAL,
+    billingReference-list SEQUENCE OF billingReference BillingReference,
+    despatchDocumentReference-list SEQUENCE OF despatchDocumentReference 
+	DespatchDocumentReference,
+    receiptDocumentReference-list SEQUENCE OF receiptDocumentReference 
+	ReceiptDocumentReference,
+    contractDocumentReference-list SEQUENCE OF contractDocumentReference 
+	ContractDocumentReference,
+    statementDocumentReference-list SEQUENCE OF statementDocumentReference 
+	StatementDocumentReference,
+    originatorDocumentReference-list SEQUENCE OF originatorDocumentReference 
+	OriginatorDocumentReference,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    accountingCustomerParty AccountingCustomerParty,
+    accountingSupplierParty AccountingSupplierParty,
+    payeeParty PayeeParty OPTIONAL,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    taxRepresentativeParty TaxRepresentativeParty OPTIONAL,
+    delivery-list SEQUENCE OF delivery Delivery,
+    deliveryTerms-list SEQUENCE OF deliveryTerms DeliveryTerms,
+    paymentMeans-list SEQUENCE OF paymentMeans PaymentMeans,
+    paymentTerms-list SEQUENCE OF paymentTerms PaymentTerms,
+    allowanceCharge-list SEQUENCE OF allowanceCharge AllowanceCharge,
+    taxExchangeRate TaxExchangeRate OPTIONAL,
+    pricingExchangeRate PricingExchangeRate OPTIONAL,
+    paymentExchangeRate PaymentExchangeRate OPTIONAL,
+    paymentAlternativeExchangeRate PaymentAlternativeExchangeRate OPTIONAL,
+    taxTotal-list SEQUENCE OF taxTotal TaxTotal,
+    legalMonetaryTotal LegalMonetaryTotal,
+    creditNoteLine-list SEQUENCE (SIZE(1..MAX)) OF creditNoteLine 
+	CreditNoteLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:SelfBilledCreditNote-2"
+	PREFIX "ns45"
+    NAMESPACE SelfBilledCreditNoteType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE SelfBilledCreditNoteType.uBLVersionID, 
+	SelfBilledCreditNoteType.customizationID, 
+	SelfBilledCreditNoteType.profileID, 
+	SelfBilledCreditNoteType.profileExecutionID, 
+	SelfBilledCreditNoteType.iD, SelfBilledCreditNoteType.copyIndicator, 
+	SelfBilledCreditNoteType.uUID, SelfBilledCreditNoteType.issueDate, 
+	SelfBilledCreditNoteType.issueTime, 
+	SelfBilledCreditNoteType.taxPointDate, 
+	SelfBilledCreditNoteType.note-list.note, 
+	SelfBilledCreditNoteType.documentCurrencyCode, 
+	SelfBilledCreditNoteType.taxCurrencyCode, 
+	SelfBilledCreditNoteType.pricingCurrencyCode, 
+	SelfBilledCreditNoteType.paymentCurrencyCode, 
+	SelfBilledCreditNoteType.paymentAlternativeCurrencyCode, 
+	SelfBilledCreditNoteType.accountingCostCode, 
+	SelfBilledCreditNoteType.accountingCost, 
+	SelfBilledCreditNoteType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE SelfBilledCreditNoteType.invoicePeriod-list.invoicePeriod, 
+	SelfBilledCreditNoteType.discrepancyResponse-list.discrepancyResponse,
+	SelfBilledCreditNoteType.orderReference, 
+	SelfBilledCreditNoteType.billingReference-list.billingReference, 
+	SelfBilledCreditNoteType.despatchDocumentReference-list.despatchDocumentReference,
+	SelfBilledCreditNoteType.receiptDocumentReference-list.receiptDocumentReference,
+	SelfBilledCreditNoteType.contractDocumentReference-list.contractDocumentReference,
+	SelfBilledCreditNoteType.statementDocumentReference-list.statementDocumentReference,
+	SelfBilledCreditNoteType.originatorDocumentReference-list.originatorDocumentReference,
+	SelfBilledCreditNoteType.additionalDocumentReference-list.additionalDocumentReference,
+	SelfBilledCreditNoteType.signature-list.signature, 
+	SelfBilledCreditNoteType.accountingCustomerParty, 
+	SelfBilledCreditNoteType.accountingSupplierParty, 
+	SelfBilledCreditNoteType.payeeParty, 
+	SelfBilledCreditNoteType.buyerCustomerParty, 
+	SelfBilledCreditNoteType.sellerSupplierParty, 
+	SelfBilledCreditNoteType.taxRepresentativeParty, 
+	SelfBilledCreditNoteType.delivery-list.delivery, 
+	SelfBilledCreditNoteType.deliveryTerms-list.deliveryTerms, 
+	SelfBilledCreditNoteType.paymentMeans-list.paymentMeans, 
+	SelfBilledCreditNoteType.paymentTerms-list.paymentTerms, 
+	SelfBilledCreditNoteType.allowanceCharge-list.allowanceCharge, 
+	SelfBilledCreditNoteType.taxExchangeRate, 
+	SelfBilledCreditNoteType.pricingExchangeRate, 
+	SelfBilledCreditNoteType.paymentExchangeRate, 
+	SelfBilledCreditNoteType.paymentAlternativeExchangeRate, 
+	SelfBilledCreditNoteType.taxTotal-list.taxTotal, 
+	SelfBilledCreditNoteType.legalMonetaryTotal, 
+	SelfBilledCreditNoteType.creditNoteLine-list.creditNoteLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME SelfBilledCreditNoteType.uBLExtensions, 
+	SelfBilledCreditNoteType.uBLVersionID, 
+	SelfBilledCreditNoteType.customizationID, 
+	SelfBilledCreditNoteType.profileID, 
+	SelfBilledCreditNoteType.profileExecutionID, 
+	SelfBilledCreditNoteType.iD, SelfBilledCreditNoteType.copyIndicator, 
+	SelfBilledCreditNoteType.uUID, SelfBilledCreditNoteType.issueDate, 
+	SelfBilledCreditNoteType.issueTime, 
+	SelfBilledCreditNoteType.taxPointDate, 
+	SelfBilledCreditNoteType.note-list.note, 
+	SelfBilledCreditNoteType.documentCurrencyCode, 
+	SelfBilledCreditNoteType.taxCurrencyCode, 
+	SelfBilledCreditNoteType.pricingCurrencyCode, 
+	SelfBilledCreditNoteType.paymentCurrencyCode, 
+	SelfBilledCreditNoteType.paymentAlternativeCurrencyCode, 
+	SelfBilledCreditNoteType.accountingCostCode, 
+	SelfBilledCreditNoteType.accountingCost, 
+	SelfBilledCreditNoteType.lineCountNumeric, 
+	SelfBilledCreditNoteType.invoicePeriod-list.invoicePeriod, 
+	SelfBilledCreditNoteType.discrepancyResponse-list.discrepancyResponse,
+	SelfBilledCreditNoteType.orderReference, 
+	SelfBilledCreditNoteType.billingReference-list.billingReference, 
+	SelfBilledCreditNoteType.despatchDocumentReference-list.despatchDocumentReference,
+	SelfBilledCreditNoteType.receiptDocumentReference-list.receiptDocumentReference,
+	SelfBilledCreditNoteType.contractDocumentReference-list.contractDocumentReference,
+	SelfBilledCreditNoteType.statementDocumentReference-list.statementDocumentReference,
+	SelfBilledCreditNoteType.originatorDocumentReference-list.originatorDocumentReference,
+	SelfBilledCreditNoteType.additionalDocumentReference-list.additionalDocumentReference,
+	SelfBilledCreditNoteType.signature-list.signature, 
+	SelfBilledCreditNoteType.accountingCustomerParty, 
+	SelfBilledCreditNoteType.accountingSupplierParty, 
+	SelfBilledCreditNoteType.payeeParty, 
+	SelfBilledCreditNoteType.buyerCustomerParty, 
+	SelfBilledCreditNoteType.sellerSupplierParty, 
+	SelfBilledCreditNoteType.taxRepresentativeParty, 
+	SelfBilledCreditNoteType.delivery-list.delivery, 
+	SelfBilledCreditNoteType.deliveryTerms-list.deliveryTerms, 
+	SelfBilledCreditNoteType.paymentMeans-list.paymentMeans, 
+	SelfBilledCreditNoteType.paymentTerms-list.paymentTerms, 
+	SelfBilledCreditNoteType.allowanceCharge-list.allowanceCharge, 
+	SelfBilledCreditNoteType.taxExchangeRate, 
+	SelfBilledCreditNoteType.pricingExchangeRate, 
+	SelfBilledCreditNoteType.paymentExchangeRate, 
+	SelfBilledCreditNoteType.paymentAlternativeExchangeRate, 
+	SelfBilledCreditNoteType.taxTotal-list.taxTotal, 
+	SelfBilledCreditNoteType.legalMonetaryTotal, 
+	SelfBilledCreditNoteType.creditNoteLine-list.creditNoteLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

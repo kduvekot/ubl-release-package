@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsd
   Module:            UBL-AttachedDocument-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns="urn:oasis:names:specification:ubl:schema:xsd:AttachedDocument-2"
@@ -30,7 +29,7 @@
       </xsd:annotation>
   </xsd:element>
    <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definiition ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
    <xsd:complexType name="AttachedDocumentType">
       <xsd:annotation>
          <xsd:documentation>
@@ -261,6 +260,24 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:ParentDocumentVersionID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Attached Document. Parent Document_ Version. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Indicates the current version of the referred document.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Parent Document</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Version</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                     <ccts:Examples>1.1</ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -323,6 +340,22 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:ParentDocumentLineReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Attached Document. Parent Document_ Line Reference. Line Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>Reference to a Line on a document.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Attached Document</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Parent Document</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Line Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Line Reference</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
       </xsd:sequence>
   </xsd:complexType>
 </xsd:schema>
@@ -348,7 +381,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

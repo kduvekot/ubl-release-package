@@ -1,0 +1,105 @@
+
+OrderResponseSimple-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, AcceptedIndicator, 
+    RejectionNote, CustomerReference, AccountingCostCode, AccountingCost
+    FROM CommonBasicComponents-2
+    OrderReference, AdditionalDocumentReference, Signature-1, 
+    SellerSupplierParty, BuyerCustomerParty, OriginatorCustomerParty, 
+    AccountingSupplierParty, AccountingCustomerParty
+    FROM CommonAggregateComponents-2;
+
+OrderResponseSimple ::= OrderResponseSimpleType
+
+OrderResponseSimpleType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    acceptedIndicator AcceptedIndicator,
+    rejectionNote RejectionNote OPTIONAL,
+    customerReference CustomerReference OPTIONAL,
+    accountingCostCode AccountingCostCode OPTIONAL,
+    accountingCost AccountingCost OPTIONAL,
+    orderReference OrderReference,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    sellerSupplierParty SellerSupplierParty,
+    buyerCustomerParty BuyerCustomerParty,
+    originatorCustomerParty OriginatorCustomerParty OPTIONAL,
+    accountingSupplierParty AccountingSupplierParty OPTIONAL,
+    accountingCustomerParty AccountingCustomerParty OPTIONAL
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:OrderResponseSimple-2"
+	PREFIX "ns34"
+    NAMESPACE OrderResponseSimpleType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE OrderResponseSimpleType.uBLVersionID, 
+	OrderResponseSimpleType.customizationID, 
+	OrderResponseSimpleType.profileID, 
+	OrderResponseSimpleType.profileExecutionID, 
+	OrderResponseSimpleType.iD, OrderResponseSimpleType.copyIndicator, 
+	OrderResponseSimpleType.uUID, OrderResponseSimpleType.issueDate, 
+	OrderResponseSimpleType.issueTime, 
+	OrderResponseSimpleType.note-list.note, 
+	OrderResponseSimpleType.acceptedIndicator, 
+	OrderResponseSimpleType.rejectionNote, 
+	OrderResponseSimpleType.customerReference, 
+	OrderResponseSimpleType.accountingCostCode, 
+	OrderResponseSimpleType.accountingCost
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE OrderResponseSimpleType.orderReference, 
+	OrderResponseSimpleType.additionalDocumentReference-list.additionalDocumentReference,
+	OrderResponseSimpleType.signature-list.signature, 
+	OrderResponseSimpleType.sellerSupplierParty, 
+	OrderResponseSimpleType.buyerCustomerParty, 
+	OrderResponseSimpleType.originatorCustomerParty, 
+	OrderResponseSimpleType.accountingSupplierParty, 
+	OrderResponseSimpleType.accountingCustomerParty
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME OrderResponseSimpleType.uBLExtensions, 
+	OrderResponseSimpleType.uBLVersionID, 
+	OrderResponseSimpleType.customizationID, 
+	OrderResponseSimpleType.profileID, 
+	OrderResponseSimpleType.profileExecutionID, 
+	OrderResponseSimpleType.iD, OrderResponseSimpleType.copyIndicator, 
+	OrderResponseSimpleType.uUID, OrderResponseSimpleType.issueDate, 
+	OrderResponseSimpleType.issueTime, 
+	OrderResponseSimpleType.note-list.note, 
+	OrderResponseSimpleType.acceptedIndicator, 
+	OrderResponseSimpleType.rejectionNote, 
+	OrderResponseSimpleType.customerReference, 
+	OrderResponseSimpleType.accountingCostCode, 
+	OrderResponseSimpleType.accountingCost, 
+	OrderResponseSimpleType.orderReference, 
+	OrderResponseSimpleType.additionalDocumentReference-list.additionalDocumentReference,
+	OrderResponseSimpleType.signature-list.signature, 
+	OrderResponseSimpleType.sellerSupplierParty, 
+	OrderResponseSimpleType.buyerCustomerParty, 
+	OrderResponseSimpleType.originatorCustomerParty, 
+	OrderResponseSimpleType.accountingSupplierParty, 
+	OrderResponseSimpleType.accountingCustomerParty AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

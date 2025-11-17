@@ -1,0 +1,91 @@
+
+CertificateOfOrigin-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, UUID, 
+    IssueDate, IssueTime, Description, Note, VersionID
+    FROM CommonBasicComponents-2
+    Signature-1, ExporterParty, ImporterParty, EndorserParty, 
+    CertificateOfOriginApplication, IssuerEndorsement, EmbassyEndorsement, 
+    InsuranceEndorsement
+    FROM CommonAggregateComponents-2;
+
+CertificateOfOrigin ::= CertificateOfOriginType
+
+CertificateOfOriginType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    description-list SEQUENCE OF description Description,
+    note-list  SEQUENCE OF note Note,
+    versionID  VersionID OPTIONAL,
+    signature-list SEQUENCE OF signature Signature-1,
+    exporterParty ExporterParty OPTIONAL,
+    importerParty ImporterParty OPTIONAL,
+    endorserParty-list SEQUENCE OF endorserParty EndorserParty,
+    certificateOfOriginApplication CertificateOfOriginApplication,
+    issuerEndorsement IssuerEndorsement,
+    embassyEndorsement EmbassyEndorsement OPTIONAL,
+    insuranceEndorsement InsuranceEndorsement OPTIONAL
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"
+	PREFIX "ns10"
+    NAMESPACE CertificateOfOriginType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE CertificateOfOriginType.uBLVersionID, 
+	CertificateOfOriginType.customizationID, 
+	CertificateOfOriginType.profileID, 
+	CertificateOfOriginType.profileExecutionID, 
+	CertificateOfOriginType.iD, CertificateOfOriginType.uUID, 
+	CertificateOfOriginType.issueDate, CertificateOfOriginType.issueTime, 
+	CertificateOfOriginType.description-list.description, 
+	CertificateOfOriginType.note-list.note, 
+	CertificateOfOriginType.versionID
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE CertificateOfOriginType.signature-list.signature, 
+	CertificateOfOriginType.exporterParty, 
+	CertificateOfOriginType.importerParty, 
+	CertificateOfOriginType.endorserParty-list.endorserParty, 
+	CertificateOfOriginType.certificateOfOriginApplication, 
+	CertificateOfOriginType.issuerEndorsement, 
+	CertificateOfOriginType.embassyEndorsement, 
+	CertificateOfOriginType.insuranceEndorsement
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME CertificateOfOriginType.uBLExtensions, 
+	CertificateOfOriginType.uBLVersionID, 
+	CertificateOfOriginType.customizationID, 
+	CertificateOfOriginType.profileID, 
+	CertificateOfOriginType.profileExecutionID, 
+	CertificateOfOriginType.iD, CertificateOfOriginType.uUID, 
+	CertificateOfOriginType.issueDate, CertificateOfOriginType.issueTime, 
+	CertificateOfOriginType.description-list.description, 
+	CertificateOfOriginType.note-list.note, 
+	CertificateOfOriginType.versionID, 
+	CertificateOfOriginType.signature-list.signature, 
+	CertificateOfOriginType.exporterParty, 
+	CertificateOfOriginType.importerParty, 
+	CertificateOfOriginType.endorserParty-list.endorserParty, 
+	CertificateOfOriginType.certificateOfOriginApplication, 
+	CertificateOfOriginType.issuerEndorsement, 
+	CertificateOfOriginType.embassyEndorsement, 
+	CertificateOfOriginType.insuranceEndorsement AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

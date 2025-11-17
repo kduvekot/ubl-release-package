@@ -81,6 +81,8 @@
               ns="urn:oasis:names:specification:ubl:schema:xsd:Forecast-2"/>
    <namespace uri="UBL-ForecastRevision.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2"/>
+   <namespace uri="UBL-GoodsItemItinerary.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2"/>
    <namespace uri="UBL-GuaranteeCertificate.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:GuaranteeCertificate-2"/>
    <namespace uri="UBL-InstructionForReturns.rnc"
@@ -112,8 +114,10 @@
               ns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2"/>
    <namespace uri="UBL-TransportExecutionStatus.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionStatus-2"/>
-   <namespace uri="UBL-TransportOperationStatus.rnc"
-              ns="urn:oasis:names:specification:ubl:schema:xsd:TransportOperationStatus-2"/>
+   <namespace uri="UBL-TransportProgressStatus.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2"/>
+   <namespace uri="UBL-TransportServiceDescription.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2"/>
    <namespace uri="UBL-UnawardedNotification.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:UnawardedNotification-2"/>
    <namespace uri="UBL-UtilityStatement.rnc"

@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsd
   Module:            UBL-SelfBilledCreditNote-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns="urn:oasis:names:specification:ubl:schema:xsd:SelfBilledCreditNote-2"
@@ -30,7 +29,7 @@
       </xsd:annotation>
   </xsd:element>
    <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definiition ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
    <xsd:complexType name="SelfBilledCreditNoteType">
       <xsd:annotation>
          <xsd:documentation>
@@ -280,6 +279,40 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:PaymentCurrencyCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Payment_ Currency Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>The currency used for payment in the Self Billed Credit Note.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Payment</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Currency_ Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:PaymentAlternativeCurrencyCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Payment Alternative_ Currency Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>The alternative currency used for payment in the Self Billed Credit Note.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Payment Alternative</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Currency_ Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:AccountingCostCode" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -438,6 +471,38 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:StatementDocumentReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Statement_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>An associative reference to Statement.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Statement</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:OriginatorDocumentReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Originator_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>An associative reference to Originator Document.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cac:AdditionalDocumentReference" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -565,6 +630,66 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:Delivery" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Delivery</ccts:DictionaryEntryName>
+                     <ccts:Definition>Associates the overall Self Billed Credit Note with the details of a delivery (or deliveries).</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Delivery</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Delivery</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:DeliveryTerms" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Delivery Terms</ccts:DictionaryEntryName>
+                     <ccts:Definition>Associates the Self Billed Credit Note with the delivery terms applicable/required.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Delivery Terms</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Delivery Terms</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:PaymentMeans" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Payment Means</ccts:DictionaryEntryName>
+                     <ccts:Definition>Associates the Self Billed Credit Note with the expected means of payment.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Payment Means</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Payment Means</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:PaymentTerms" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Payment Terms</ccts:DictionaryEntryName>
+                     <ccts:Definition>Associates the Self Billed Credit Note with the payment terms applicable/offered.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Payment Terms</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Payment Terms</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cac:AllowanceCharge" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -606,6 +731,38 @@
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Pricing</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Exchange Rate</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Exchange Rate</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:PaymentExchangeRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Payment_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
+                     <ccts:Definition>An association to Exchange Rate between the Document Currency and the Payment Currency.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Payment</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Exchange Rate</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Exchange Rate</ccts:AssociatedObjectClass>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:PaymentAlternativeExchangeRate" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Payment Alternative_ Exchange Rate. Exchange Rate</ccts:DictionaryEntryName>
+                     <ccts:Definition>An association to Exchange Rate between the Document Currency and the Payment Alternative Currency.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Payment Alternative</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Exchange Rate</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Exchange Rate</ccts:AssociatedObjectClass>
                   </ccts:Component>
@@ -683,7 +840,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

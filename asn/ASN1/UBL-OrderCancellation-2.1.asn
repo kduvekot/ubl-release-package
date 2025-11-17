@@ -1,0 +1,91 @@
+
+OrderCancellation-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, CancellationNote
+    FROM CommonBasicComponents-2
+    OrderReference, OriginatorDocumentReference, AdditionalDocumentReference, 
+    Contract, Signature-1, BuyerCustomerParty, SellerSupplierParty, 
+    OriginatorCustomerParty
+    FROM CommonAggregateComponents-2;
+
+OrderCancellation ::= OrderCancellationType
+
+OrderCancellationType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    cancellationNote CancellationNote,
+    orderReference-list SEQUENCE (SIZE(1..MAX)) OF orderReference 
+	OrderReference,
+    originatorDocumentReference OriginatorDocumentReference OPTIONAL,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    contract-list SEQUENCE OF contract Contract,
+    signature-list SEQUENCE OF signature Signature-1,
+    buyerCustomerParty BuyerCustomerParty,
+    sellerSupplierParty SellerSupplierParty,
+    originatorCustomerParty OriginatorCustomerParty OPTIONAL
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2"
+	PREFIX "ns31"
+    NAMESPACE OrderCancellationType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE OrderCancellationType.uBLVersionID, 
+	OrderCancellationType.customizationID, 
+	OrderCancellationType.profileID, 
+	OrderCancellationType.profileExecutionID, OrderCancellationType.iD, 
+	OrderCancellationType.copyIndicator, OrderCancellationType.uUID, 
+	OrderCancellationType.issueDate, OrderCancellationType.issueTime, 
+	OrderCancellationType.note-list.note, 
+	OrderCancellationType.cancellationNote
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE OrderCancellationType.orderReference-list.orderReference, 
+	OrderCancellationType.originatorDocumentReference, 
+	OrderCancellationType.additionalDocumentReference-list.additionalDocumentReference,
+	OrderCancellationType.contract-list.contract, 
+	OrderCancellationType.signature-list.signature, 
+	OrderCancellationType.buyerCustomerParty, 
+	OrderCancellationType.sellerSupplierParty, 
+	OrderCancellationType.originatorCustomerParty
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME OrderCancellationType.uBLExtensions, 
+	OrderCancellationType.uBLVersionID, 
+	OrderCancellationType.customizationID, 
+	OrderCancellationType.profileID, 
+	OrderCancellationType.profileExecutionID, OrderCancellationType.iD, 
+	OrderCancellationType.copyIndicator, OrderCancellationType.uUID, 
+	OrderCancellationType.issueDate, OrderCancellationType.issueTime, 
+	OrderCancellationType.note-list.note, 
+	OrderCancellationType.cancellationNote, 
+	OrderCancellationType.orderReference-list.orderReference, 
+	OrderCancellationType.originatorDocumentReference, 
+	OrderCancellationType.additionalDocumentReference-list.additionalDocumentReference,
+	OrderCancellationType.contract-list.contract, 
+	OrderCancellationType.signature-list.signature, 
+	OrderCancellationType.buyerCustomerParty, 
+	OrderCancellationType.sellerSupplierParty, 
+	OrderCancellationType.originatorCustomerParty AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

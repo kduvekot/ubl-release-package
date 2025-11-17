@@ -1,0 +1,100 @@
+
+BillOfLading-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CarrierAssignedID, UUID, IssueDate, IssueTime, Name-1, Description, Note, 
+    DocumentStatusCode, ShippingOrderID, ToOrderIndicator, AdValoremIndicator,
+    DeclaredCarriageValueAmount, OtherInstruction
+    FROM CommonBasicComponents-2
+    ConsignorParty, CarrierParty, FreightForwarderParty, Shipment, 
+    DocumentReference, ExchangeRate, DocumentDistribution, Signature-1
+    FROM CommonAggregateComponents-2;
+
+BillOfLading ::= BillOfLadingType
+
+BillOfLadingType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    carrierAssignedID CarrierAssignedID OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    name       Name-1 OPTIONAL,
+    description-list SEQUENCE OF description Description,
+    note-list  SEQUENCE OF note Note,
+    documentStatusCode DocumentStatusCode OPTIONAL,
+    shippingOrderID ShippingOrderID OPTIONAL,
+    toOrderIndicator ToOrderIndicator OPTIONAL,
+    adValoremIndicator AdValoremIndicator OPTIONAL,
+    declaredCarriageValueAmount DeclaredCarriageValueAmount OPTIONAL,
+    otherInstruction-list SEQUENCE OF otherInstruction OtherInstruction,
+    consignorParty ConsignorParty OPTIONAL,
+    carrierParty CarrierParty OPTIONAL,
+    freightForwarderParty FreightForwarderParty OPTIONAL,
+    shipment   Shipment OPTIONAL,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    exchangeRate-list SEQUENCE OF exchangeRate ExchangeRate,
+    documentDistribution-list SEQUENCE OF documentDistribution 
+	DocumentDistribution,
+    signature-list SEQUENCE OF signature Signature-1
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:BillOfLading-2"
+	PREFIX "ns3"
+    NAMESPACE BillOfLadingType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE BillOfLadingType.uBLVersionID, BillOfLadingType.customizationID,
+	BillOfLadingType.profileID, BillOfLadingType.profileExecutionID, 
+	BillOfLadingType.iD, BillOfLadingType.carrierAssignedID, 
+	BillOfLadingType.uUID, BillOfLadingType.issueDate, 
+	BillOfLadingType.issueTime, BillOfLadingType.name, 
+	BillOfLadingType.description-list.description, 
+	BillOfLadingType.note-list.note, BillOfLadingType.documentStatusCode, 
+	BillOfLadingType.shippingOrderID, BillOfLadingType.toOrderIndicator, 
+	BillOfLadingType.adValoremIndicator, 
+	BillOfLadingType.declaredCarriageValueAmount, 
+	BillOfLadingType.otherInstruction-list.otherInstruction
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE BillOfLadingType.consignorParty, BillOfLadingType.carrierParty, 
+	BillOfLadingType.freightForwarderParty, BillOfLadingType.shipment, 
+	BillOfLadingType.documentReference-list.documentReference, 
+	BillOfLadingType.exchangeRate-list.exchangeRate, 
+	BillOfLadingType.documentDistribution-list.documentDistribution, 
+	BillOfLadingType.signature-list.signature
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME BillOfLadingType.uBLExtensions, BillOfLadingType.uBLVersionID, 
+	BillOfLadingType.customizationID, BillOfLadingType.profileID, 
+	BillOfLadingType.profileExecutionID, BillOfLadingType.iD, 
+	BillOfLadingType.carrierAssignedID, BillOfLadingType.uUID, 
+	BillOfLadingType.issueDate, BillOfLadingType.issueTime, 
+	BillOfLadingType.name, BillOfLadingType.description-list.description, 
+	BillOfLadingType.note-list.note, BillOfLadingType.documentStatusCode, 
+	BillOfLadingType.shippingOrderID, BillOfLadingType.toOrderIndicator, 
+	BillOfLadingType.adValoremIndicator, 
+	BillOfLadingType.declaredCarriageValueAmount, 
+	BillOfLadingType.otherInstruction-list.otherInstruction, 
+	BillOfLadingType.consignorParty, BillOfLadingType.carrierParty, 
+	BillOfLadingType.freightForwarderParty, BillOfLadingType.shipment, 
+	BillOfLadingType.documentReference-list.documentReference, 
+	BillOfLadingType.exchangeRate-list.exchangeRate, 
+	BillOfLadingType.documentDistribution-list.documentDistribution, 
+	BillOfLadingType.signature-list.signature AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

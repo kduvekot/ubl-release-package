@@ -3,7 +3,7 @@
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
   Module:            UBL-CommonSignatureComponents-2.1.xsd
-  Generated on:      2010-08-29 00:10(UTC)
+  Generated on:      2010-11-10 21:40(UTC)
 
   This schema fragment defines the signature constructs used in the
   standardized extension.
@@ -50,18 +50,6 @@
      </xsd:sequence>
    </xsd:complexType>
    
-  <!-- ===== Group Declaration ===== -->
-  <xsd:group name="NonSignatureNamespaceElements">
-    <xsd:sequence>
-      <xsd:any namespace="##other" processContents="skip">
-        <xsd:annotation>
-          <xsd:documentation>
-            <sig:Definition>This is any element not in the signature namespace.  This is utilized by the extension content schema to distinguish extensions other than the signature extension.</sig:Definition>
-          </xsd:documentation>
-        </xsd:annotation>
-      </xsd:any>
-    </xsd:sequence>
-  </xsd:group>
 </xsd:schema>
 <!-- ===== Copyright Notice ===== -->
 <!--

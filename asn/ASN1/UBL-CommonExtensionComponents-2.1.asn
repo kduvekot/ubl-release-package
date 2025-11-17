@@ -1,0 +1,184 @@
+
+CommonExtensionComponents-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    ID-1, Name-1
+    FROM CommonBasicComponents-2
+    NormalizedString, String, AnyURI, Language
+    FROM XSD;
+
+UBLExtensions ::= UBLExtensionsType
+
+UBLExtensionsType ::= SEQUENCE {
+    uBLExtension-list SEQUENCE (SIZE(1..MAX)) OF uBLExtension UBLExtension
+}
+
+UBLExtension ::= UBLExtensionType
+
+UBLExtensionType ::= SEQUENCE {
+    iD                  ID-1 OPTIONAL,
+    name                Name-1 OPTIONAL,
+    extensionAgencyID   ExtensionAgencyID OPTIONAL,
+    extensionAgencyName ExtensionAgencyName OPTIONAL,
+    extensionVersionID  ExtensionVersionID OPTIONAL,
+    extensionAgencyURI  ExtensionAgencyURI OPTIONAL,
+    extensionURI        ExtensionURI OPTIONAL,
+    extensionReasonCode ExtensionReasonCode OPTIONAL,
+    extensionReason     ExtensionReason OPTIONAL,
+    extensionContent    ExtensionContent
+}
+
+ExtensionAgencyID ::= ExtensionAgencyIDType
+
+ExtensionAgencyName ::= ExtensionAgencyNameType
+
+ExtensionAgencyURI ::= ExtensionAgencyURIType
+
+ExtensionContent ::= ExtensionContentType
+
+ExtensionReason ::= ExtensionReasonType
+
+ExtensionReasonCode ::= ExtensionReasonCodeType
+
+ExtensionURI ::= ExtensionURIType
+
+ExtensionVersionID ::= ExtensionVersionIDType
+
+ExtensionAgencyIDType ::= SEQUENCE {
+    schemeAgencyID   XSD.NormalizedString OPTIONAL,
+    schemeAgencyName XSD.String OPTIONAL,
+    schemeDataURI    XSD.AnyURI OPTIONAL,
+    schemeID         XSD.NormalizedString OPTIONAL,
+    schemeName       XSD.String OPTIONAL,
+    schemeURI        XSD.AnyURI OPTIONAL,
+    schemeVersionID  XSD.NormalizedString OPTIONAL,
+    base             XSD.NormalizedString
+}
+
+ExtensionAgencyNameType ::= SEQUENCE {
+    languageID       XSD.Language OPTIONAL,
+    languageLocaleID XSD.NormalizedString OPTIONAL,
+    base             XSD.String
+}
+
+ExtensionAgencyURIType ::= SEQUENCE {
+    schemeAgencyID   XSD.NormalizedString OPTIONAL,
+    schemeAgencyName XSD.String OPTIONAL,
+    schemeDataURI    XSD.AnyURI OPTIONAL,
+    schemeID         XSD.NormalizedString OPTIONAL,
+    schemeName       XSD.String OPTIONAL,
+    schemeURI        XSD.AnyURI OPTIONAL,
+    schemeVersionID  XSD.NormalizedString OPTIONAL,
+    base             XSD.NormalizedString
+}
+
+ExtensionReasonType ::= SEQUENCE {
+    languageID       XSD.Language OPTIONAL,
+    languageLocaleID XSD.NormalizedString OPTIONAL,
+    base             XSD.String
+}
+
+ExtensionReasonCodeType ::= SEQUENCE {
+    languageID     XSD.Language OPTIONAL,
+    listAgencyID   XSD.NormalizedString OPTIONAL,
+    listAgencyName XSD.String OPTIONAL,
+    listID         XSD.NormalizedString OPTIONAL,
+    listName       XSD.String OPTIONAL,
+    listSchemeURI  XSD.AnyURI OPTIONAL,
+    listURI        XSD.AnyURI OPTIONAL,
+    listVersionID  XSD.NormalizedString OPTIONAL,
+    name           XSD.String OPTIONAL,
+    base           XSD.NormalizedString
+}
+
+ExtensionURIType ::= SEQUENCE {
+    schemeAgencyID   XSD.NormalizedString OPTIONAL,
+    schemeAgencyName XSD.String OPTIONAL,
+    schemeDataURI    XSD.AnyURI OPTIONAL,
+    schemeID         XSD.NormalizedString OPTIONAL,
+    schemeName       XSD.String OPTIONAL,
+    schemeURI        XSD.AnyURI OPTIONAL,
+    schemeVersionID  XSD.NormalizedString OPTIONAL,
+    base             XSD.NormalizedString
+}
+
+ExtensionVersionIDType ::= SEQUENCE {
+    schemeAgencyID   XSD.NormalizedString OPTIONAL,
+    schemeAgencyName XSD.String OPTIONAL,
+    schemeDataURI    XSD.AnyURI OPTIONAL,
+    schemeID         XSD.NormalizedString OPTIONAL,
+    schemeName       XSD.String OPTIONAL,
+    schemeURI        XSD.AnyURI OPTIONAL,
+    schemeVersionID  XSD.NormalizedString OPTIONAL,
+    base             XSD.NormalizedString
+}
+
+ExtensionContentType ::= SEQUENCE {
+    elem XSD.String (CONSTRAINED BY
+	{/* Shall conform to the "AnyElementFormat" specified in ITU-T
+	    Rec. X.693 | ISO/IEC 8825-4, clause 19 */})
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	PREFIX "ext"
+    NAMESPACE UBLExtensionType.iD, UBLExtensionType.name
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NOT NAMESPACE ExtensionAgencyIDType.schemeAgencyID, 
+	ExtensionAgencyIDType.schemeAgencyName, 
+	ExtensionAgencyIDType.schemeDataURI, ExtensionAgencyIDType.schemeID, 
+	ExtensionAgencyIDType.schemeName, ExtensionAgencyIDType.schemeURI, 
+	ExtensionAgencyIDType.schemeVersionID, 
+	ExtensionAgencyNameType.languageID, 
+	ExtensionAgencyNameType.languageLocaleID, 
+	ExtensionAgencyURIType.schemeAgencyID, 
+	ExtensionAgencyURIType.schemeAgencyName, 
+	ExtensionAgencyURIType.schemeDataURI, ExtensionAgencyURIType.schemeID,
+	ExtensionAgencyURIType.schemeName, ExtensionAgencyURIType.schemeURI, 
+	ExtensionAgencyURIType.schemeVersionID, 
+	ExtensionReasonType.languageID, ExtensionReasonType.languageLocaleID, 
+	ExtensionReasonCodeType.languageID, 
+	ExtensionReasonCodeType.listAgencyID, 
+	ExtensionReasonCodeType.listAgencyName, 
+	ExtensionReasonCodeType.listID, ExtensionReasonCodeType.listName, 
+	ExtensionReasonCodeType.listSchemeURI, 
+	ExtensionReasonCodeType.listURI, 
+	ExtensionReasonCodeType.listVersionID, ExtensionReasonCodeType.name, 
+	ExtensionURIType.schemeAgencyID, ExtensionURIType.schemeAgencyName, 
+	ExtensionURIType.schemeDataURI, ExtensionURIType.schemeID, 
+	ExtensionURIType.schemeName, ExtensionURIType.schemeURI, 
+	ExtensionURIType.schemeVersionID, 
+	ExtensionVersionIDType.schemeAgencyID, 
+	ExtensionVersionIDType.schemeAgencyName, 
+	ExtensionVersionIDType.schemeDataURI, ExtensionVersionIDType.schemeID,
+	ExtensionVersionIDType.schemeName, ExtensionVersionIDType.schemeURI, 
+	ExtensionVersionIDType.schemeVersionID
+    NAME UBLExtensionsType.uBLExtension-list.uBLExtension, 
+	UBLExtensionType.iD, UBLExtensionType.name, 
+	UBLExtensionType.extensionAgencyID, 
+	UBLExtensionType.extensionAgencyName, 
+	UBLExtensionType.extensionVersionID, 
+	UBLExtensionType.extensionAgencyURI, UBLExtensionType.extensionURI, 
+	UBLExtensionType.extensionReasonCode, 
+	UBLExtensionType.extensionReason, UBLExtensionType.extensionContent
+	AS CAPITALIZED
+    ATTRIBUTE ALL IN ExtensionAgencyIDType, ALL IN ExtensionAgencyURIType, 
+	ALL IN ExtensionReasonCodeType, ALL IN ExtensionURIType, 
+	ALL IN ExtensionVersionIDType
+    ATTRIBUTE ExtensionAgencyNameType.languageID, 
+	ExtensionAgencyNameType.languageLocaleID, 
+	ExtensionReasonType.languageID, ExtensionReasonType.languageLocaleID
+    NOT ATTRIBUTE ExtensionAgencyIDType.base, ExtensionAgencyURIType.base, 
+	ExtensionReasonCodeType.base, ExtensionURIType.base, 
+	ExtensionVersionIDType.base
+    UNTAGGED UBLExtensionsType.uBLExtension-list
+    UNTAGGED base IN ALL
+    ANY-ELEMENT ExtensionContentType.elem EXCEPT ABSENT
+	 "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+END
+

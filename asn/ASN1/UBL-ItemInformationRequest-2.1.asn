@@ -1,0 +1,91 @@
+
+ItemInformationRequest-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note
+    FROM CommonBasicComponents-2
+    Period, DocumentReference, Signature-1, SenderParty, ReceiverParty, 
+    BuyerCustomerParty, SellerSupplierParty, ItemInformationRequestLine
+    FROM CommonAggregateComponents-2;
+
+ItemInformationRequest ::= ItemInformationRequestType
+
+ItemInformationRequestType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    period     Period,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty,
+    receiverParty ReceiverParty,
+    buyerCustomerParty BuyerCustomerParty OPTIONAL,
+    sellerSupplierParty SellerSupplierParty OPTIONAL,
+    itemInformationRequestLine-list SEQUENCE (SIZE(1..MAX)) OF 
+	itemInformationRequestLine ItemInformationRequestLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:ItemInformationRequest-2"
+	PREFIX "ns29"
+    NAMESPACE ItemInformationRequestType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ItemInformationRequestType.uBLVersionID, 
+	ItemInformationRequestType.customizationID, 
+	ItemInformationRequestType.profileID, 
+	ItemInformationRequestType.profileExecutionID, 
+	ItemInformationRequestType.iD, 
+	ItemInformationRequestType.copyIndicator, 
+	ItemInformationRequestType.uUID, ItemInformationRequestType.issueDate,
+	ItemInformationRequestType.issueTime, 
+	ItemInformationRequestType.note-list.note
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ItemInformationRequestType.period, 
+	ItemInformationRequestType.documentReference-list.documentReference, 
+	ItemInformationRequestType.signature-list.signature, 
+	ItemInformationRequestType.senderParty, 
+	ItemInformationRequestType.receiverParty, 
+	ItemInformationRequestType.buyerCustomerParty, 
+	ItemInformationRequestType.sellerSupplierParty, 
+	ItemInformationRequestType.itemInformationRequestLine-list.itemInformationRequestLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ItemInformationRequestType.uBLExtensions, 
+	ItemInformationRequestType.uBLVersionID, 
+	ItemInformationRequestType.customizationID, 
+	ItemInformationRequestType.profileID, 
+	ItemInformationRequestType.profileExecutionID, 
+	ItemInformationRequestType.iD, 
+	ItemInformationRequestType.copyIndicator, 
+	ItemInformationRequestType.uUID, ItemInformationRequestType.issueDate,
+	ItemInformationRequestType.issueTime, 
+	ItemInformationRequestType.note-list.note, 
+	ItemInformationRequestType.period, 
+	ItemInformationRequestType.documentReference-list.documentReference, 
+	ItemInformationRequestType.signature-list.signature, 
+	ItemInformationRequestType.senderParty, 
+	ItemInformationRequestType.receiverParty, 
+	ItemInformationRequestType.buyerCustomerParty, 
+	ItemInformationRequestType.sellerSupplierParty, 
+	ItemInformationRequestType.itemInformationRequestLine-list.itemInformationRequestLine
+	AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

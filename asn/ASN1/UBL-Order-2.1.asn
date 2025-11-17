@@ -1,0 +1,147 @@
+
+Order-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    SalesOrderID, CopyIndicator, UUID, IssueDate, IssueTime, OrderTypeCode, 
+    Note, RequestedInvoiceCurrencyCode, DocumentCurrencyCode, 
+    PricingCurrencyCode, TaxCurrencyCode, CustomerReference, 
+    AccountingCostCode, AccountingCost, LineCountNumeric
+    FROM CommonBasicComponents-2
+    ValidityPeriod, QuotationDocumentReference, OrderDocumentReference, 
+    OriginatorDocumentReference, CatalogueReference, 
+    AdditionalDocumentReference, Contract, Signature-1, BuyerCustomerParty, 
+    SellerSupplierParty, OriginatorCustomerParty, FreightForwarderParty, 
+    AccountingCustomerParty, Delivery, DeliveryTerms, PaymentMeans, 
+    PaymentTerms, TransactionConditions, AllowanceCharge, TaxExchangeRate, 
+    PricingExchangeRate, PaymentExchangeRate, DestinationCountry, TaxTotal, 
+    AnticipatedMonetaryTotal, OrderLine
+    FROM CommonAggregateComponents-2;
+
+Order ::= OrderType
+
+OrderType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    salesOrderID SalesOrderID OPTIONAL,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    orderTypeCode OrderTypeCode OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    requestedInvoiceCurrencyCode RequestedInvoiceCurrencyCode OPTIONAL,
+    documentCurrencyCode DocumentCurrencyCode OPTIONAL,
+    pricingCurrencyCode PricingCurrencyCode OPTIONAL,
+    taxCurrencyCode TaxCurrencyCode OPTIONAL,
+    customerReference CustomerReference OPTIONAL,
+    accountingCostCode AccountingCostCode OPTIONAL,
+    accountingCost AccountingCost OPTIONAL,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    validityPeriod-list SEQUENCE OF validityPeriod ValidityPeriod,
+    quotationDocumentReference QuotationDocumentReference OPTIONAL,
+    orderDocumentReference-list SEQUENCE OF orderDocumentReference 
+	OrderDocumentReference,
+    originatorDocumentReference OriginatorDocumentReference OPTIONAL,
+    catalogueReference CatalogueReference OPTIONAL,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    contract-list SEQUENCE OF contract Contract,
+    signature-list SEQUENCE OF signature Signature-1,
+    buyerCustomerParty BuyerCustomerParty,
+    sellerSupplierParty SellerSupplierParty,
+    originatorCustomerParty OriginatorCustomerParty OPTIONAL,
+    freightForwarderParty FreightForwarderParty OPTIONAL,
+    accountingCustomerParty AccountingCustomerParty OPTIONAL,
+    delivery-list SEQUENCE OF delivery Delivery,
+    deliveryTerms DeliveryTerms OPTIONAL,
+    paymentMeans-list SEQUENCE OF paymentMeans PaymentMeans,
+    paymentTerms-list SEQUENCE OF paymentTerms PaymentTerms,
+    transactionConditions TransactionConditions OPTIONAL,
+    allowanceCharge-list SEQUENCE OF allowanceCharge AllowanceCharge,
+    taxExchangeRate TaxExchangeRate OPTIONAL,
+    pricingExchangeRate PricingExchangeRate OPTIONAL,
+    paymentExchangeRate PaymentExchangeRate OPTIONAL,
+    destinationCountry DestinationCountry OPTIONAL,
+    taxTotal-list SEQUENCE OF taxTotal TaxTotal,
+    anticipatedMonetaryTotal AnticipatedMonetaryTotal OPTIONAL,
+    orderLine-list SEQUENCE (SIZE(1..MAX)) OF orderLine OrderLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:Order-2"
+	PREFIX "ns30"
+    NAMESPACE OrderType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE OrderType.uBLVersionID, OrderType.customizationID, 
+	OrderType.profileID, OrderType.profileExecutionID, OrderType.iD, 
+	OrderType.salesOrderID, OrderType.copyIndicator, OrderType.uUID, 
+	OrderType.issueDate, OrderType.issueTime, OrderType.orderTypeCode, 
+	OrderType.note-list.note, OrderType.requestedInvoiceCurrencyCode, 
+	OrderType.documentCurrencyCode, OrderType.pricingCurrencyCode, 
+	OrderType.taxCurrencyCode, OrderType.customerReference, 
+	OrderType.accountingCostCode, OrderType.accountingCost, 
+	OrderType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE OrderType.validityPeriod-list.validityPeriod, 
+	OrderType.quotationDocumentReference, 
+	OrderType.orderDocumentReference-list.orderDocumentReference, 
+	OrderType.originatorDocumentReference, OrderType.catalogueReference, 
+	OrderType.additionalDocumentReference-list.additionalDocumentReference,
+	OrderType.contract-list.contract, OrderType.signature-list.signature, 
+	OrderType.buyerCustomerParty, OrderType.sellerSupplierParty, 
+	OrderType.originatorCustomerParty, OrderType.freightForwarderParty, 
+	OrderType.accountingCustomerParty, OrderType.delivery-list.delivery, 
+	OrderType.deliveryTerms, OrderType.paymentMeans-list.paymentMeans, 
+	OrderType.paymentTerms-list.paymentTerms, 
+	OrderType.transactionConditions, 
+	OrderType.allowanceCharge-list.allowanceCharge, 
+	OrderType.taxExchangeRate, OrderType.pricingExchangeRate, 
+	OrderType.paymentExchangeRate, OrderType.destinationCountry, 
+	OrderType.taxTotal-list.taxTotal, OrderType.anticipatedMonetaryTotal, 
+	OrderType.orderLine-list.orderLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME OrderType.uBLExtensions, OrderType.uBLVersionID, 
+	OrderType.customizationID, OrderType.profileID, 
+	OrderType.profileExecutionID, OrderType.iD, OrderType.salesOrderID, 
+	OrderType.copyIndicator, OrderType.uUID, OrderType.issueDate, 
+	OrderType.issueTime, OrderType.orderTypeCode, 
+	OrderType.note-list.note, OrderType.requestedInvoiceCurrencyCode, 
+	OrderType.documentCurrencyCode, OrderType.pricingCurrencyCode, 
+	OrderType.taxCurrencyCode, OrderType.customerReference, 
+	OrderType.accountingCostCode, OrderType.accountingCost, 
+	OrderType.lineCountNumeric, 
+	OrderType.validityPeriod-list.validityPeriod, 
+	OrderType.quotationDocumentReference, 
+	OrderType.orderDocumentReference-list.orderDocumentReference, 
+	OrderType.originatorDocumentReference, OrderType.catalogueReference, 
+	OrderType.additionalDocumentReference-list.additionalDocumentReference,
+	OrderType.contract-list.contract, OrderType.signature-list.signature, 
+	OrderType.buyerCustomerParty, OrderType.sellerSupplierParty, 
+	OrderType.originatorCustomerParty, OrderType.freightForwarderParty, 
+	OrderType.accountingCustomerParty, OrderType.delivery-list.delivery, 
+	OrderType.deliveryTerms, OrderType.paymentMeans-list.paymentMeans, 
+	OrderType.paymentTerms-list.paymentTerms, 
+	OrderType.transactionConditions, 
+	OrderType.allowanceCharge-list.allowanceCharge, 
+	OrderType.taxExchangeRate, OrderType.pricingExchangeRate, 
+	OrderType.paymentExchangeRate, OrderType.destinationCountry, 
+	OrderType.taxTotal-list.taxTotal, OrderType.anticipatedMonetaryTotal, 
+	OrderType.orderLine-list.orderLine AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

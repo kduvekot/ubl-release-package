@@ -1,0 +1,110 @@
+
+ForwardingInstructions-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CarrierAssignedID, UUID, IssueDate, IssueTime, Name-1, Description, Note, 
+    DocumentStatusCode, ShippingOrderID, ToOrderIndicator, AdValoremIndicator,
+    DeclaredCarriageValueAmount, OtherInstruction
+    FROM CommonBasicComponents-2
+    ConsignorParty, CarrierParty, FreightForwarderParty, Shipment, 
+    DocumentReference, ExchangeRate, Signature-1
+    FROM CommonAggregateComponents-2;
+
+ForwardingInstructions ::= ForwardingInstructionsType
+
+ForwardingInstructionsType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    carrierAssignedID CarrierAssignedID OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    name       Name-1 OPTIONAL,
+    description-list SEQUENCE OF description Description,
+    note-list  SEQUENCE OF note Note,
+    documentStatusCode DocumentStatusCode OPTIONAL,
+    shippingOrderID ShippingOrderID OPTIONAL,
+    toOrderIndicator ToOrderIndicator OPTIONAL,
+    adValoremIndicator AdValoremIndicator OPTIONAL,
+    declaredCarriageValueAmount DeclaredCarriageValueAmount OPTIONAL,
+    otherInstruction-list SEQUENCE OF otherInstruction OtherInstruction,
+    consignorParty ConsignorParty OPTIONAL,
+    carrierParty CarrierParty OPTIONAL,
+    freightForwarderParty FreightForwarderParty OPTIONAL,
+    shipment   Shipment,
+    documentReference-list SEQUENCE OF documentReference DocumentReference,
+    exchangeRate-list SEQUENCE OF exchangeRate ExchangeRate,
+    signature-list SEQUENCE OF signature Signature-1
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:ForwardingInstructions-2"
+	PREFIX "ns22"
+    NAMESPACE ForwardingInstructionsType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ForwardingInstructionsType.uBLVersionID, 
+	ForwardingInstructionsType.customizationID, 
+	ForwardingInstructionsType.profileID, 
+	ForwardingInstructionsType.profileExecutionID, 
+	ForwardingInstructionsType.iD, 
+	ForwardingInstructionsType.carrierAssignedID, 
+	ForwardingInstructionsType.uUID, ForwardingInstructionsType.issueDate,
+	ForwardingInstructionsType.issueTime, ForwardingInstructionsType.name,
+	ForwardingInstructionsType.description-list.description, 
+	ForwardingInstructionsType.note-list.note, 
+	ForwardingInstructionsType.documentStatusCode, 
+	ForwardingInstructionsType.shippingOrderID, 
+	ForwardingInstructionsType.toOrderIndicator, 
+	ForwardingInstructionsType.adValoremIndicator, 
+	ForwardingInstructionsType.declaredCarriageValueAmount, 
+	ForwardingInstructionsType.otherInstruction-list.otherInstruction
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ForwardingInstructionsType.consignorParty, 
+	ForwardingInstructionsType.carrierParty, 
+	ForwardingInstructionsType.freightForwarderParty, 
+	ForwardingInstructionsType.shipment, 
+	ForwardingInstructionsType.documentReference-list.documentReference, 
+	ForwardingInstructionsType.exchangeRate-list.exchangeRate, 
+	ForwardingInstructionsType.signature-list.signature
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ForwardingInstructionsType.uBLExtensions, 
+	ForwardingInstructionsType.uBLVersionID, 
+	ForwardingInstructionsType.customizationID, 
+	ForwardingInstructionsType.profileID, 
+	ForwardingInstructionsType.profileExecutionID, 
+	ForwardingInstructionsType.iD, 
+	ForwardingInstructionsType.carrierAssignedID, 
+	ForwardingInstructionsType.uUID, ForwardingInstructionsType.issueDate,
+	ForwardingInstructionsType.issueTime, ForwardingInstructionsType.name,
+	ForwardingInstructionsType.description-list.description, 
+	ForwardingInstructionsType.note-list.note, 
+	ForwardingInstructionsType.documentStatusCode, 
+	ForwardingInstructionsType.shippingOrderID, 
+	ForwardingInstructionsType.toOrderIndicator, 
+	ForwardingInstructionsType.adValoremIndicator, 
+	ForwardingInstructionsType.declaredCarriageValueAmount, 
+	ForwardingInstructionsType.otherInstruction-list.otherInstruction, 
+	ForwardingInstructionsType.consignorParty, 
+	ForwardingInstructionsType.carrierParty, 
+	ForwardingInstructionsType.freightForwarderParty, 
+	ForwardingInstructionsType.shipment, 
+	ForwardingInstructionsType.documentReference-list.documentReference, 
+	ForwardingInstructionsType.exchangeRate-list.exchangeRate, 
+	ForwardingInstructionsType.signature-list.signature AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

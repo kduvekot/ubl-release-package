@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsdrt
   Module:            UBL-TransportExecutionStatus-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionStatus-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -32,15 +31,21 @@
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:CustomizationID"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ProfileID"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ProfileExecutionID"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ID"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:CopyIndicator"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:UUID"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:IssueDate"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:IssueTime"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ReferenceDate"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ReferenceTime"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cbc:Note"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cbc:Description"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:OperationStatusCode"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cac:TransportExecutionPlanDocumentReference"/>
+            <xsd:element maxOccurs="1" minOccurs="1" ref="cbc:TransportExecutionPlanReferenceID"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:Signature"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cac:SenderParty"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cac:ReceiverParty"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:Signature"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:TransportItemStatus"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:TransportStatus"/>
         </xsd:sequence>
     </xsd:complexType>
 </xsd:schema>
@@ -66,7 +71,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

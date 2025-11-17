@@ -2,9 +2,8 @@
 <!--
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Directory:         xsdrt
   Module:            UBL-Invoice-2.1.xsd
-  Generated on:      20100830-2010z
+  Generated on:      20110517-1540z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -37,7 +36,7 @@
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:UUID"/>
             <xsd:element maxOccurs="1" minOccurs="1" ref="cbc:IssueDate"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:IssueTime"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:InvoiceDueDate"/>
+            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:DueDate"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:InvoiceTypeCode"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cbc:Note"/>
             <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:TaxPointDate"/>
@@ -54,6 +53,7 @@
             <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:BillingReference"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:DespatchDocumentReference"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:ReceiptDocumentReference"/>
+            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:StatementDocumentReference"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:OriginatorDocumentReference"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:ContractDocumentReference"/>
             <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:AdditionalDocumentReference"/>
@@ -102,7 +102,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

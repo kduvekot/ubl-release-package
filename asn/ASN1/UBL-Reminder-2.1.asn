@@ -1,0 +1,138 @@
+
+Reminder-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, ReminderTypeCode, 
+    ReminderSequenceNumeric, Note, TaxPointDate, DocumentCurrencyCode, 
+    TaxCurrencyCode, PricingCurrencyCode, PaymentCurrencyCode, 
+    PaymentAlternativeCurrencyCode, AccountingCostCode, AccountingCost, 
+    LineCountNumeric
+    FROM CommonBasicComponents-2
+    ReminderPeriod, AdditionalDocumentReference, Signature-1, 
+    AccountingSupplierParty, AccountingCustomerParty, PayeeParty, 
+    TaxRepresentativeParty, PaymentMeans, PaymentTerms, PrepaidPayment, 
+    AllowanceCharge, TaxExchangeRate, PricingExchangeRate, 
+    PaymentExchangeRate, PaymentAlternativeExchangeRate, TaxTotal, 
+    LegalMonetaryTotal, ReminderLine
+    FROM CommonAggregateComponents-2;
+
+Reminder ::= ReminderType
+
+ReminderType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate,
+    issueTime  IssueTime OPTIONAL,
+    reminderTypeCode ReminderTypeCode OPTIONAL,
+    reminderSequenceNumeric ReminderSequenceNumeric OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    taxPointDate TaxPointDate OPTIONAL,
+    documentCurrencyCode DocumentCurrencyCode OPTIONAL,
+    taxCurrencyCode TaxCurrencyCode OPTIONAL,
+    pricingCurrencyCode PricingCurrencyCode OPTIONAL,
+    paymentCurrencyCode PaymentCurrencyCode OPTIONAL,
+    paymentAlternativeCurrencyCode PaymentAlternativeCurrencyCode OPTIONAL,
+    accountingCostCode AccountingCostCode OPTIONAL,
+    accountingCost AccountingCost OPTIONAL,
+    lineCountNumeric LineCountNumeric OPTIONAL,
+    reminderPeriod-list SEQUENCE OF reminderPeriod ReminderPeriod,
+    additionalDocumentReference-list SEQUENCE OF additionalDocumentReference 
+	AdditionalDocumentReference,
+    signature-list SEQUENCE OF signature Signature-1,
+    accountingSupplierParty AccountingSupplierParty,
+    accountingCustomerParty AccountingCustomerParty,
+    payeeParty PayeeParty OPTIONAL,
+    taxRepresentativeParty TaxRepresentativeParty OPTIONAL,
+    paymentMeans-list SEQUENCE OF paymentMeans PaymentMeans,
+    paymentTerms-list SEQUENCE OF paymentTerms PaymentTerms,
+    prepaidPayment-list SEQUENCE OF prepaidPayment PrepaidPayment,
+    allowanceCharge-list SEQUENCE OF allowanceCharge AllowanceCharge,
+    taxExchangeRate TaxExchangeRate OPTIONAL,
+    pricingExchangeRate PricingExchangeRate OPTIONAL,
+    paymentExchangeRate PaymentExchangeRate OPTIONAL,
+    paymentAlternativeExchangeRate PaymentAlternativeExchangeRate OPTIONAL,
+    taxTotal-list SEQUENCE OF taxTotal TaxTotal,
+    legalMonetaryTotal LegalMonetaryTotal,
+    reminderLine-list SEQUENCE (SIZE(1..MAX)) OF reminderLine ReminderLine
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL 
+	AS "urn:oasis:names:specification:ubl:schema:xsd:Reminder-2"
+	PREFIX "ns41"
+    NAMESPACE ReminderType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE ReminderType.uBLVersionID, ReminderType.customizationID, 
+	ReminderType.profileID, ReminderType.profileExecutionID, 
+	ReminderType.iD, ReminderType.copyIndicator, ReminderType.uUID, 
+	ReminderType.issueDate, ReminderType.issueTime, 
+	ReminderType.reminderTypeCode, ReminderType.reminderSequenceNumeric, 
+	ReminderType.note-list.note, ReminderType.taxPointDate, 
+	ReminderType.documentCurrencyCode, ReminderType.taxCurrencyCode, 
+	ReminderType.pricingCurrencyCode, ReminderType.paymentCurrencyCode, 
+	ReminderType.paymentAlternativeCurrencyCode, 
+	ReminderType.accountingCostCode, ReminderType.accountingCost, 
+	ReminderType.lineCountNumeric
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE ReminderType.reminderPeriod-list.reminderPeriod, 
+	ReminderType.additionalDocumentReference-list.additionalDocumentReference,
+	ReminderType.signature-list.signature, 
+	ReminderType.accountingSupplierParty, 
+	ReminderType.accountingCustomerParty, ReminderType.payeeParty, 
+	ReminderType.taxRepresentativeParty, 
+	ReminderType.paymentMeans-list.paymentMeans, 
+	ReminderType.paymentTerms-list.paymentTerms, 
+	ReminderType.prepaidPayment-list.prepaidPayment, 
+	ReminderType.allowanceCharge-list.allowanceCharge, 
+	ReminderType.taxExchangeRate, ReminderType.pricingExchangeRate, 
+	ReminderType.paymentExchangeRate, 
+	ReminderType.paymentAlternativeExchangeRate, 
+	ReminderType.taxTotal-list.taxTotal, ReminderType.legalMonetaryTotal, 
+	ReminderType.reminderLine-list.reminderLine
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME ReminderType.uBLExtensions, ReminderType.uBLVersionID, 
+	ReminderType.customizationID, ReminderType.profileID, 
+	ReminderType.profileExecutionID, ReminderType.iD, 
+	ReminderType.copyIndicator, ReminderType.uUID, ReminderType.issueDate,
+	ReminderType.issueTime, ReminderType.reminderTypeCode, 
+	ReminderType.reminderSequenceNumeric, ReminderType.note-list.note, 
+	ReminderType.taxPointDate, ReminderType.documentCurrencyCode, 
+	ReminderType.taxCurrencyCode, ReminderType.pricingCurrencyCode, 
+	ReminderType.paymentCurrencyCode, 
+	ReminderType.paymentAlternativeCurrencyCode, 
+	ReminderType.accountingCostCode, ReminderType.accountingCost, 
+	ReminderType.lineCountNumeric, 
+	ReminderType.reminderPeriod-list.reminderPeriod, 
+	ReminderType.additionalDocumentReference-list.additionalDocumentReference,
+	ReminderType.signature-list.signature, 
+	ReminderType.accountingSupplierParty, 
+	ReminderType.accountingCustomerParty, ReminderType.payeeParty, 
+	ReminderType.taxRepresentativeParty, 
+	ReminderType.paymentMeans-list.paymentMeans, 
+	ReminderType.paymentTerms-list.paymentTerms, 
+	ReminderType.prepaidPayment-list.prepaidPayment, 
+	ReminderType.allowanceCharge-list.allowanceCharge, 
+	ReminderType.taxExchangeRate, ReminderType.pricingExchangeRate, 
+	ReminderType.paymentExchangeRate, 
+	ReminderType.paymentAlternativeExchangeRate, 
+	ReminderType.taxTotal-list.taxTotal, ReminderType.legalMonetaryTotal, 
+	ReminderType.reminderLine-list.reminderLine AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+

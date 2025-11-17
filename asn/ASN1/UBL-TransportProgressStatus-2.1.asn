@@ -1,0 +1,88 @@
+
+TransportProgressStatus-2
+DEFINITIONS AUTOMATIC TAGS ::=
+BEGIN
+IMPORTS 
+    UBLExtensions
+    FROM CommonExtensionComponents-2
+    UBLVersionID, CustomizationID, ProfileID, ProfileExecutionID, ID-1, 
+    CopyIndicator, UUID, IssueDate, IssueTime, Note, StatusAvailableIndicator
+    FROM CommonBasicComponents-2
+    Signature-1, SenderParty, ReceiverParty, SourceIssuerParty, 
+    TransportSchedule, TransportMeans
+    FROM CommonAggregateComponents-2;
+
+TransportProgressStatus ::= TransportProgressStatusType
+
+TransportProgressStatusType ::= SEQUENCE {
+    uBLExtensions UBLExtensions OPTIONAL,
+    uBLVersionID UBLVersionID OPTIONAL,
+    customizationID CustomizationID OPTIONAL,
+    profileID  ProfileID OPTIONAL,
+    profileExecutionID ProfileExecutionID OPTIONAL,
+    iD         ID-1,
+    copyIndicator CopyIndicator OPTIONAL,
+    uUID       UUID OPTIONAL,
+    issueDate  IssueDate OPTIONAL,
+    issueTime  IssueTime OPTIONAL,
+    note-list  SEQUENCE OF note Note,
+    statusAvailableIndicator StatusAvailableIndicator OPTIONAL,
+    signature-list SEQUENCE OF signature Signature-1,
+    senderParty SenderParty OPTIONAL,
+    receiverParty ReceiverParty OPTIONAL,
+    sourceIssuerParty SourceIssuerParty OPTIONAL,
+    transportSchedule-list SEQUENCE OF transportSchedule TransportSchedule,
+    transportMeans TransportMeans
+}
+
+ENCODING-CONTROL XER
+    GLOBAL-DEFAULTS MODIFIED-ENCODINGS
+    GLOBAL-DEFAULTS CONTROL-NAMESPACE
+	"http://www.w3.org/2001/XMLSchema-instance" PREFIX "xsi"
+    NAMESPACE ALL, ALL IN ALL AS "urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2"
+	PREFIX "ns56"
+    NAMESPACE TransportProgressStatusType.uBLExtensions
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+	    PREFIX "ext"
+    NAMESPACE TransportProgressStatusType.uBLVersionID, 
+	TransportProgressStatusType.customizationID, 
+	TransportProgressStatusType.profileID, 
+	TransportProgressStatusType.profileExecutionID, 
+	TransportProgressStatusType.iD, 
+	TransportProgressStatusType.copyIndicator, 
+	TransportProgressStatusType.uUID, 
+	TransportProgressStatusType.issueDate, 
+	TransportProgressStatusType.issueTime, 
+	TransportProgressStatusType.note-list.note, 
+	TransportProgressStatusType.statusAvailableIndicator
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+	    PREFIX "cbc"
+    NAMESPACE TransportProgressStatusType.signature-list.signature, 
+	TransportProgressStatusType.senderParty, 
+	TransportProgressStatusType.receiverParty, 
+	TransportProgressStatusType.sourceIssuerParty, 
+	TransportProgressStatusType.transportSchedule-list.transportSchedule, 
+	TransportProgressStatusType.transportMeans
+	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+	    PREFIX "cac"
+    NAME TransportProgressStatusType.uBLExtensions, 
+	TransportProgressStatusType.uBLVersionID, 
+	TransportProgressStatusType.customizationID, 
+	TransportProgressStatusType.profileID, 
+	TransportProgressStatusType.profileExecutionID, 
+	TransportProgressStatusType.iD, 
+	TransportProgressStatusType.copyIndicator, 
+	TransportProgressStatusType.uUID, 
+	TransportProgressStatusType.issueDate, 
+	TransportProgressStatusType.issueTime, 
+	TransportProgressStatusType.note-list.note, 
+	TransportProgressStatusType.statusAvailableIndicator, 
+	TransportProgressStatusType.signature-list.signature, 
+	TransportProgressStatusType.senderParty, 
+	TransportProgressStatusType.receiverParty, 
+	TransportProgressStatusType.sourceIssuerParty, 
+	TransportProgressStatusType.transportSchedule-list.transportSchedule, 
+	TransportProgressStatusType.transportMeans AS CAPITALIZED
+    UNTAGGED SEQUENCE OF
+END
+
