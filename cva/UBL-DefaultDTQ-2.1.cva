@@ -3,7 +3,7 @@
                              xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                              xmlns:x="http://www.w3.org/1999/xhtml"
                              name="UBL-QualifiedDataTypes-2.0"
-                             version="2013-07-12 13:30:07(UTC)"
+                             version="2013-10-31 17:18:16(UTC)"
                              id="urn:oasis:names:specification:ubl:cva:UBL-Qualified-Data-Types:2">
    <Annotation>
       <Description>

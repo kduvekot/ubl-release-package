@@ -156,9 +156,6 @@ CommonSignatureComponents_AuctionConstraintIndicator =
 CommonSignatureComponents_BalanceAmount =
   notAllowed
   | element BalanceAmount { CommonSignatureComponents_anonymous4 }
-CommonSignatureComponents_ResponseTime =
-  notAllowed
-  | element ResponseTime { CommonSignatureComponents_anonymous14 }
 CommonSignatureComponents_MaximumMeasure =
   notAllowed
   | element MaximumMeasure { CommonSignatureComponents_anonymous9 }
@@ -14351,11 +14348,6 @@ CommonSignatureComponents_anyType =
      | CommonSignatureComponents_element5)*
   },
   empty
-CommonSignatureComponents_RetailEventStatusCode =
-  notAllowed
-  | element RetailEventStatusCode {
-      CommonSignatureComponents_anonymous6
-    }
 CommonSignatureComponents_LastRevisionDate =
   notAllowed
   | element LastRevisionDate { CommonSignatureComponents_anonymous8 }
@@ -18477,6 +18469,11 @@ CommonSignatureComponents_PaymentOrderReference =
   notAllowed
   | element PaymentOrderReference {
       CommonSignatureComponents_anonymous0
+    }
+CommonSignatureComponents_RetailEventStatusCode =
+  notAllowed
+  | element RetailEventStatusCode {
+      CommonSignatureComponents_anonymous6
     }
 CommonSignatureComponents_anonymous9 =
   attribute unitCode { xsd:normalizedString },
@@ -22733,9 +22730,6 @@ CommonSignatureComponents_BarcodeSymbologyID =
 CommonSignatureComponents_BrokerAssignedID =
   notAllowed
   | element BrokerAssignedID { CommonSignatureComponents_anonymous2 }
-CommonSignatureComponents_RetailEventName =
-  notAllowed
-  | element RetailEventName { CommonSignatureComponents_anonymous5 }
 CommonSignatureComponents_HandlingCode =
   notAllowed
   | element HandlingCode { CommonSignatureComponents_anonymous6 }
@@ -24946,6 +24940,9 @@ CommonSignatureComponents_FirstShipmentAvailibilityDate =
   | element FirstShipmentAvailibilityDate {
       CommonSignatureComponents_anonymous8
     }
+CommonSignatureComponents_RetailEventName =
+  notAllowed
+  | element RetailEventName { CommonSignatureComponents_anonymous5 }
 CommonSignatureComponents_AttributeID =
   notAllowed
   | element AttributeID { CommonSignatureComponents_anonymous2 }
@@ -25064,6 +25061,9 @@ CommonSignatureComponents_TimeStampValidationData =
       CommonSignatureComponents_CertificateValues?,
       CommonSignatureComponents_RevocationValues?
     }
+CommonSignatureComponents_ResponseTime =
+  notAllowed
+  | element ResponseTime { CommonSignatureComponents_anonymous14 }
 CommonSignatureComponents_ReferenceDate =
   notAllowed
   | element ReferenceDate { CommonSignatureComponents_anonymous8 }
@@ -25215,6 +25215,11 @@ CommonSignatureComponents_ReferencedConsignmentID =
   notAllowed
   | element ReferencedConsignmentID {
       CommonSignatureComponents_anonymous2
+    }
+CommonSignatureComponents_ReturnabilityIndicator =
+  notAllowed
+  | element ReturnabilityIndicator {
+      CommonSignatureComponents_anonymous3
     }
 CommonSignatureComponents_FreightForwarderAssignedID =
   notAllowed
@@ -27223,11 +27228,6 @@ CommonSignatureComponents_CustomerAssignedAccountID =
 CommonSignatureComponents_PaymentChannelCode =
   notAllowed
   | element PaymentChannelCode { CommonSignatureComponents_anonymous6 }
-CommonSignatureComponents_ReturnabilityIndicator =
-  notAllowed
-  | element ReturnabilityIndicator {
-      CommonSignatureComponents_anonymous3
-    }
 CommonSignatureComponents_DifferenceTemperatureReductionQuantity =
   notAllowed
   | element DifferenceTemperatureReductionQuantity {
@@ -27236,7 +27236,7 @@ CommonSignatureComponents_DifferenceTemperatureReductionQuantity =
 CommonSignatureComponents_CounterSignatureType =
   CommonSignatureComponents_Signature, empty
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-07-12 13:54:40z
+# RELAX-NG models synthesized from UBL document models on 2013-10-31 17:59:37z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

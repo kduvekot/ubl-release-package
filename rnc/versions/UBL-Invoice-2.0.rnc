@@ -5957,7 +5957,7 @@ LowerOrangeHazardPlacardID =
   notAllowed
   | element LowerOrangeHazardPlacardID { anonymous2 }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-07-12 13:57:10z
+# RELAX-NG models synthesized from UBL document models on 2013-10-31 18:02:05z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

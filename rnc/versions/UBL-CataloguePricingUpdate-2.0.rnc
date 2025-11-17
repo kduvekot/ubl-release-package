@@ -45,7 +45,7 @@ MaximumCopiesNumeric =
   | element MaximumCopiesNumeric { NumericType }
 DeclaredStatisticsValueAmount =
   notAllowed
-  | element DeclaredStatisticsValueAmount { anonymous8 }
+  | element DeclaredStatisticsValueAmount { anonymous7 }
 PreparationParty =
   notAllowed
   | element ns2:PreparationParty { PartyType }
@@ -54,7 +54,7 @@ OriginalJobID =
   | element OriginalJobID { anonymous2 }
 Amount =
   notAllowed
-  | element Amount { anonymous8 }
+  | element Amount { anonymous7 }
 TransportMeansTypeCode =
   notAllowed
   | element TransportMeansTypeCode { anonymous0 }
@@ -125,13 +125,13 @@ PackageLevelCode =
   | element PackageLevelCode { anonymous0 }
 PriceAmount =
   notAllowed
-  | element PriceAmount { anonymous8 }
+  | element PriceAmount { anonymous7 }
 TaxTypeCode =
   notAllowed
   | element TaxTypeCode { anonymous0 }
 ChargeTotalAmount =
   notAllowed
-  | element ChargeTotalAmount { anonymous8 }
+  | element ChargeTotalAmount { anonymous7 }
 JourneyID =
   notAllowed
   | element JourneyID { anonymous2 }
@@ -161,7 +161,7 @@ ShortQuantity =
   | element ShortQuantity { anonymous3 }
 ModelName =
   notAllowed
-  | element ModelName { anonymous6 }
+  | element ModelName { anonymous8 }
 LicensePlateID =
   notAllowed
   | element LicensePlateID { anonymous2 }
@@ -265,14 +265,14 @@ AttributeID =
   | element AttributeID { anonymous2 }
 TargetCurrencyCode =
   notAllowed
-  | element TargetCurrencyCode { anonymous7 }
+  | element TargetCurrencyCode { anonymous6 }
 SummaryDescription =
   notAllowed
   | element SummaryDescription { anonymous4 }
 RelatedItemType = (ID?, Quantity?, Description*), empty
 CitySubdivisionName =
   notAllowed
-  | element CitySubdivisionName { anonymous6 }
+  | element CitySubdivisionName { anonymous8 }
 ContainedPackage =
   notAllowed
   | element ns2:ContainedPackage { PackageType }
@@ -331,7 +331,7 @@ DocumentDistribution =
     }
 CurrencyCode =
   notAllowed
-  | element CurrencyCode { anonymous7 }
+  | element CurrencyCode { anonymous6 }
 AccountingCostCode =
   notAllowed
   | element AccountingCostCode { anonymous0 }
@@ -349,7 +349,7 @@ QuotationLineReference =
   | element ns2:QuotationLineReference { LineReferenceType }
 InsurancePremiumAmount =
   notAllowed
-  | element InsurancePremiumAmount { anonymous8 }
+  | element InsurancePremiumAmount { anonymous7 }
 AlternativeConditionPrice =
   notAllowed
   | element ns2:AlternativeConditionPrice { PriceType }
@@ -358,7 +358,7 @@ MaximumTemperature =
   | element ns2:MaximumTemperature { TemperatureType }
 AllowanceTotalAmount =
   notAllowed
-  | element AllowanceTotalAmount { anonymous8 }
+  | element AllowanceTotalAmount { anonymous7 }
 ReferencedContract =
   notAllowed
   | element ns2:ReferencedContract { ContractType2 }
@@ -411,7 +411,7 @@ FreeOfChargeIndicator =
   | element FreeOfChargeIndicator { IndicatorType }
 DebitLineAmount =
   notAllowed
-  | element DebitLineAmount { anonymous8 }
+  | element DebitLineAmount { anonymous7 }
 TaxSubtotal =
   notAllowed
   | element ns2:TaxSubtotal {
@@ -440,7 +440,7 @@ TotalPackageQuantity =
   | element TotalPackageQuantity { anonymous3 }
 StreetName =
   notAllowed
-  | element StreetName { anonymous6 }
+  | element StreetName { anonymous8 }
 ActualDeliveryTime =
   notAllowed
   | element ActualDeliveryTime { TimeType }
@@ -1619,7 +1619,7 @@ Contact =
   | element ns2:Contact { ContactType }
 BaseAmount =
   notAllowed
-  | element BaseAmount { anonymous8 }
+  | element BaseAmount { anonymous7 }
 CardTypeCode =
   notAllowed
   | element CardTypeCode { anonymous0 }
@@ -1654,7 +1654,7 @@ PricingReference =
     }
 TaxExclusiveAmount =
   notAllowed
-  | element TaxExclusiveAmount { anonymous8 }
+  | element TaxExclusiveAmount { anonymous7 }
 DamageRemarks =
   notAllowed
   | element DamageRemarks { anonymous4 }
@@ -1748,7 +1748,7 @@ BackOrderAllowedIndicator =
   | element BackOrderAllowedIndicator { IndicatorType }
 MiddleName =
   notAllowed
-  | element MiddleName { anonymous6 }
+  | element MiddleName { anonymous8 }
 ChannelCode =
   notAllowed
   | element ChannelCode {
@@ -1904,7 +1904,7 @@ RejectReason =
   | element RejectReason { anonymous4 }
 TaxInclusiveAmount =
   notAllowed
-  | element TaxInclusiveAmount { anonymous8 }
+  | element TaxInclusiveAmount { anonymous7 }
 ItemIdentificationType =
   (ID,
    ExtendedID?,
@@ -2055,7 +2055,7 @@ ProviderTypeCode =
   | element ProviderTypeCode { anonymous0 }
 FirstName =
   notAllowed
-  | element FirstName { anonymous6 }
+  | element FirstName { anonymous8 }
 DirectionCode =
   notAllowed
   | element DirectionCode { anonymous0 }
@@ -2224,7 +2224,7 @@ StartTime =
   | element StartTime { TimeType }
 VesselName =
   notAllowed
-  | element VesselName { anonymous6 }
+  | element VesselName { anonymous8 }
 AdditionalItemProperty =
   notAllowed
   | element ns2:AdditionalItemProperty { ItemPropertyType }
@@ -2280,7 +2280,7 @@ FreightForwarderParty =
   | element ns2:FreightForwarderParty { PartyType }
 Name =
   notAllowed
-  | element Name { anonymous6 }
+  | element Name { anonymous8 }
 CopyIndicator =
   notAllowed
   | element CopyIndicator { IndicatorType }
@@ -2306,19 +2306,19 @@ TransportEventTypeCode =
   | element TransportEventTypeCode { anonymous0 }
 TaxableAmount =
   notAllowed
-  | element TaxableAmount { anonymous8 }
+  | element TaxableAmount { anonymous7 }
 ContractTypeCode =
   notAllowed
   | element ContractTypeCode { anonymous0 }
 LineExtensionAmount =
   notAllowed
-  | element LineExtensionAmount { anonymous8 }
+  | element LineExtensionAmount { anonymous7 }
 ExemptionReason =
   notAllowed
   | element ExemptionReason { anonymous4 }
 RoundingAmount =
   notAllowed
-  | element RoundingAmount { anonymous8 }
+  | element RoundingAmount { anonymous7 }
 ApplicationStatusCode =
   notAllowed
   | element ApplicationStatusCode { anonymous0 }
@@ -2423,7 +2423,7 @@ PartialDeliveryIndicator =
   | element PartialDeliveryIndicator { IndicatorType }
 TransactionCurrencyTaxAmount =
   notAllowed
-  | element TransactionCurrencyTaxAmount { anonymous8 }
+  | element TransactionCurrencyTaxAmount { anonymous7 }
 GoodsItemType =
   (ID,
    SequenceNumberID?,
@@ -2506,7 +2506,7 @@ ConsigneeParty =
   | element ns2:ConsigneeParty { PartyType }
 BrandName =
   notAllowed
-  | element BrandName { anonymous6 }
+  | element BrandName { anonymous8 }
 InspectionMethodCode =
   notAllowed
   | element InspectionMethodCode { anonymous0 }
@@ -3713,7 +3713,7 @@ CustomerPartyType =
   empty
 TaxAmount =
   notAllowed
-  | element TaxAmount { anonymous8 }
+  | element TaxAmount { anonymous7 }
 WarrantyInformation =
   notAllowed
   | element WarrantyInformation { anonymous4 }
@@ -3729,10 +3729,10 @@ DeliveryTerms =
     }
 InsuranceValueAmount =
   notAllowed
-  | element InsuranceValueAmount { anonymous8 }
+  | element InsuranceValueAmount { anonymous7 }
 BlockName =
   notAllowed
-  | element BlockName { anonymous6 }
+  | element BlockName { anonymous8 }
 ExtensionURI =
   notAllowed
   | element ns3:ExtensionURI { anonymous2 }
@@ -3773,7 +3773,7 @@ PartyTaxScheme =
     }
 CategoryName =
   notAllowed
-  | element CategoryName { anonymous6 }
+  | element CategoryName { anonymous8 }
 InformationContentProviderParty =
   notAllowed
   | element ns2:InformationContentProviderParty { PartyType }
@@ -4464,7 +4464,7 @@ PaymentMeans =
     }
 PayableAmount =
   notAllowed
-  | element PayableAmount { anonymous8 }
+  | element PayableAmount { anonymous7 }
 Value =
   notAllowed
   | element Value { anonymous4 }
@@ -4499,7 +4499,7 @@ CustomizationID =
   | element CustomizationID { anonymous2 }
 BalanceAmount =
   notAllowed
-  | element BalanceAmount { anonymous8 }
+  | element BalanceAmount { anonymous7 }
 InstructionNote =
   notAllowed
   | element InstructionNote { anonymous4 }
@@ -4574,7 +4574,7 @@ SellersItemIdentification =
   | element ns2:SellersItemIdentification { ItemIdentificationType }
 PrepaidAmount =
   notAllowed
-  | element PrepaidAmount { anonymous8 }
+  | element PrepaidAmount { anonymous7 }
 MaximumMeasure =
   notAllowed
   | element MaximumMeasure { anonymous1 }
@@ -4583,7 +4583,7 @@ PrepaidIndicator =
   | element PrepaidIndicator { IndicatorType }
 DeclaredCustomsValueAmount =
   notAllowed
-  | element DeclaredCustomsValueAmount { anonymous8 }
+  | element DeclaredCustomsValueAmount { anonymous7 }
 BatchQuantity =
   notAllowed
   | element BatchQuantity { anonymous3 }
@@ -4606,7 +4606,7 @@ TransportEmergencyCardCode =
   | element TransportEmergencyCardCode { anonymous0 }
 TotalInvoiceAmount =
   notAllowed
-  | element TotalInvoiceAmount { anonymous8 }
+  | element TotalInvoiceAmount { anonymous7 }
 AdditionalDocumentReference =
   notAllowed
   | element ns2:AdditionalDocumentReference { DocumentReferenceType }
@@ -4672,7 +4672,7 @@ RegistrationNationalityID =
   | element RegistrationNationalityID { anonymous2 }
 PaidAmount =
   notAllowed
-  | element PaidAmount { anonymous8 }
+  | element PaidAmount { anonymous7 }
 CustomerReference =
   notAllowed
   | element CustomerReference { anonymous4 }
@@ -4718,13 +4718,13 @@ UpperOrangeHazardPlacardID =
   | element UpperOrangeHazardPlacardID { anonymous2 }
 RegistrationName =
   notAllowed
-  | element RegistrationName { anonymous6 }
+  | element RegistrationName { anonymous8 }
 ValidationDate =
   notAllowed
   | element ValidationDate { DateType }
 SourceCurrencyCode =
   notAllowed
-  | element SourceCurrencyCode { anonymous7 }
+  | element SourceCurrencyCode { anonymous6 }
 SequenceID =
   notAllowed
   | element SequenceID { anonymous2 }
@@ -4795,7 +4795,7 @@ RegistrationID =
   | element RegistrationID { anonymous2 }
 CreditLineAmount =
   notAllowed
-  | element CreditLineAmount { anonymous8 }
+  | element CreditLineAmount { anonymous7 }
 CountrySubentity =
   notAllowed
   | element CountrySubentity { anonymous4 }
@@ -4824,9 +4824,6 @@ AgencyName =
 OrderedShipment =
   notAllowed
   | element ns2:OrderedShipment { Shipment, Package* }
-anonymous6 =
-  attribute languageID { xsd:language }?,
-  xsd:string
 Line =
   notAllowed
   | element Line { anonymous4 }
@@ -4914,7 +4911,7 @@ Temperature =
   | element ns2:Temperature { TemperatureType }
 FreeOnBoardValueAmount =
   notAllowed
-  | element FreeOnBoardValueAmount { anonymous8 }
+  | element FreeOnBoardValueAmount { anonymous7 }
 Item =
   notAllowed
   | element ns2:Item {
@@ -4995,10 +4992,10 @@ DespatchLineType =
   empty
 PayableRoundingAmount =
   notAllowed
-  | element PayableRoundingAmount { anonymous8 }
+  | element PayableRoundingAmount { anonymous7 }
 TechnicalName =
   notAllowed
-  | element TechnicalName { anonymous6 }
+  | element TechnicalName { anonymous8 }
 EmergencyProceduresCode =
   notAllowed
   | element EmergencyProceduresCode { anonymous0 }
@@ -5039,7 +5036,7 @@ OccurrenceTime =
   | element OccurrenceTime { TimeType }
 PerUnitAmount =
   notAllowed
-  | element PerUnitAmount { anonymous8 }
+  | element PerUnitAmount { anonymous7 }
 ApprovalStatus =
   notAllowed
   | element ApprovalStatus { anonymous4 }
@@ -5103,8 +5100,8 @@ ManufacturersItemIdentification =
     }
 DeclaredForCarriageValueAmount =
   notAllowed
-  | element DeclaredForCarriageValueAmount { anonymous8 }
-anonymous7 =
+  | element DeclaredForCarriageValueAmount { anonymous7 }
+anonymous6 =
   attribute listID { xsd:normalizedString }?,
   attribute listAgencyID { xsd:normalizedString }?,
   attribute listAgencyName { xsd:string }?,
@@ -5141,7 +5138,7 @@ HandlingInstructions =
   | element HandlingInstructions { anonymous4 }
 FamilyName =
   notAllowed
-  | element FamilyName { anonymous6 }
+  | element FamilyName { anonymous8 }
 StatusType =
   (ConditionCode?,
    ReferenceDate?,
@@ -5163,7 +5160,7 @@ Keyword =
 InhouseMail =
   notAllowed
   | element InhouseMail { anonymous4 }
-anonymous8 =
+anonymous7 =
   attribute currencyID {
     xsd:token "JPY"
     | xsd:token "CNY"
@@ -5363,7 +5360,7 @@ LoadingLocation =
   | element ns2:LoadingLocation { LocationType }
 BuildingName =
   notAllowed
-  | element BuildingName { anonymous6 }
+  | element BuildingName { anonymous8 }
 GrossWeightMeasure =
   notAllowed
   | element GrossWeightMeasure { anonymous1 }
@@ -5401,7 +5398,7 @@ BalanceBroughtForwardIndicator =
   | element BalanceBroughtForwardIndicator { IndicatorType }
 ValueAmount =
   notAllowed
-  | element ValueAmount { anonymous8 }
+  | element ValueAmount { anonymous7 }
 Telephone =
   notAllowed
   | element Telephone { anonymous4 }
@@ -5552,6 +5549,9 @@ DimensionType =
 RoleCode =
   notAllowed
   | element RoleCode { anonymous0 }
+anonymous8 =
+  attribute languageID { xsd:language }?,
+  xsd:string
 ExchangeRate =
   notAllowed
   | element ns2:ExchangeRate { ExchangeRateType }
@@ -5783,7 +5783,7 @@ InstructionID =
   | element InstructionID { anonymous2 }
 AdditionalStreetName =
   notAllowed
-  | element AdditionalStreetName { anonymous6 }
+  | element AdditionalStreetName { anonymous8 }
 TierRange =
   notAllowed
   | element TierRange { anonymous4 }
@@ -5821,7 +5821,7 @@ BillingReference =
     }
 HolderName =
   notAllowed
-  | element HolderName { anonymous6 }
+  | element HolderName { anonymous8 }
 DefaultLanguage =
   notAllowed
   | element ns2:DefaultLanguage { LanguageType }
@@ -5855,7 +5855,7 @@ Percent =
   | element Percent { PercentType }
 TotalTaxAmount =
   notAllowed
-  | element TotalTaxAmount { anonymous8 }
+  | element TotalTaxAmount { anonymous7 }
 SelfBilledInvoiceDocumentReference =
   notAllowed
   | element ns2:SelfBilledInvoiceDocumentReference {
@@ -5887,7 +5887,7 @@ CatalogueReferenceType =
   empty
 CityName =
   notAllowed
-  | element CityName { anonymous6 }
+  | element CityName { anonymous8 }
 CoordinateSystemCode =
   notAllowed
   | element CoordinateSystemCode { anonymous0 }
@@ -5913,7 +5913,7 @@ LowerOrangeHazardPlacardID =
   notAllowed
   | element LowerOrangeHazardPlacardID { anonymous2 }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-07-12 13:55:47z
+# RELAX-NG models synthesized from UBL document models on 2013-10-31 18:01:00z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

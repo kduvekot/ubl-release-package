@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 COS1
-                     http://docs.oasis-open.org/ubl/cos1-UBL-2.1/
-  Release Date:      15 July 2013
+  Library:           OASIS Universal Business Language (UBL) 2.1 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Release Date:      04 November 2013
   Module:            xsd/maindoc/UBL-InventoryReport-2.1.xsd
-  Generated on:      2013-07-12 13:29z
+  Generated on:      2013-10-31 17:17z
   Copyright (c) OASIS Open 2013. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2"

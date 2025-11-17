@@ -1258,8 +1258,6 @@ AccountTypeCode =
 VersionID =
   notAllowed
   | element VersionID { anonymous2 }
-TenderRequirementType =
-  (Name, Description*, TemplateDocumentReference?), empty
 EvidenceIssuingParty =
   notAllowed
   | element ns3:EvidenceIssuingParty { PartyType2 }
@@ -3024,6 +3022,8 @@ ExpectedOperatorQuantity =
 LastExitPortLocation =
   notAllowed
   | element ns3:LastExitPortLocation { LocationType }
+TenderRequirementType =
+  (Name, Description*, TemplateDocumentReference?), empty
 ActivityTypeCode =
   notAllowed
   | element ActivityTypeCode { anonymous6 }
@@ -4120,6 +4120,19 @@ AuctionConstraintIndicator =
 TotalAmount =
   notAllowed
   | element TotalAmount { anonymous4 }
+TenderedProjectType =
+  (VariantID?,
+   FeeAmount?,
+   FeeDescription*,
+   TenderEnvelopeID?,
+   TenderEnvelopeTypeCode?,
+   ProcurementProjectLot?,
+   EvidenceDocumentReference*,
+   TaxTotal*,
+   LegalMonetaryTotal?,
+   TenderLine*,
+   AwardingCriterionResponse*),
+  empty
 AddressTypeCode =
   notAllowed
   | element AddressTypeCode { anonymous6 }
@@ -4169,9 +4182,6 @@ StandardItemIdentification =
 LatestMeterReadingMethodCode =
   notAllowed
   | element LatestMeterReadingMethodCode { anonymous6 }
-TaxEnergyOnAccountAmount =
-  notAllowed
-  | element TaxEnergyOnAccountAmount { anonymous4 }
 ItemInstance =
   notAllowed
   | element ns3:ItemInstance {
@@ -4433,6 +4443,9 @@ TaxSubtotal =
 StatusReason =
   notAllowed
   | element StatusReason { anonymous0 }
+TaxEnergyOnAccountAmount =
+  notAllowed
+  | element TaxEnergyOnAccountAmount { anonymous4 }
 LoadingPortLocation =
   notAllowed
   | element ns3:LoadingPortLocation { LocationType }
@@ -5493,19 +5506,6 @@ RequestedArrivalTransportEvent =
 HeatingType =
   notAllowed
   | element HeatingType { anonymous0 }
-TenderedProjectType =
-  (VariantID?,
-   FeeAmount?,
-   FeeDescription*,
-   TenderEnvelopeID?,
-   TenderEnvelopeTypeCode?,
-   ProcurementProjectLot?,
-   EvidenceDocumentReference*,
-   TaxTotal*,
-   LegalMonetaryTotal?,
-   TenderLine*,
-   AwardingCriterionResponse*),
-  empty
 IssueTime =
   notAllowed
   | element IssueTime { anonymous14 }
@@ -6078,7 +6078,7 @@ CurrentChargeType =
   notAllowed
   | element CurrentChargeType { anonymous0 }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-07-12 13:55:18z
+# RELAX-NG models synthesized from UBL document models on 2013-10-31 18:00:36z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

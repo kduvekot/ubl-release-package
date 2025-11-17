@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" 
                  href="db/spec-0.6/stylesheets/oasis-specification-html-offline.xsl"?>
 <!--
-  $Id: UBL-2.1.xml,v 1.60 2013/07/15 00:50:11 admin Exp $
+  $Id: UBL-2.1.xml,v 1.61 2013/10/31 22:30:09 admin Exp $
   Single quote: &#8217; Double quotes: &#8220;&#8221; 
 -->
 <!DOCTYPE article
@@ -13,12 +13,12 @@
 <!ENTITY name "UBL">
 <!ENTITY pversion "NONE">
 <!ENTITY version "2.1">
-<!ENTITY stage "cos1">
-<!ENTITY standard "Candidate OASIS Standard 1">
+<!ENTITY stage "os">
+<!ENTITY standard "OASIS Standard">
 <!ENTITY this-loc     "http://docs.oasis-open.org/ubl/&stage;-UBL-2.1">
 <!ENTITY previous-loc "http://docs.oasis-open.org/ubl/cs1-UBL-2.1">
 <!ENTITY latest-loc   "http://docs.oasis-open.org/ubl">
-<!ENTITY pubdate "15 July 2013"><!--remove time from pub date-->
+<!ENTITY pubdate "04 November 2013"><!--remove time from pub date-->
 ]>
 <article status="&standard;">
   <articleinfo>
@@ -302,8 +302,9 @@
     <legalnotice role="status" id="STATUS">
       <title>Status</title>
 
-      <para>This document was last revised or approved by the UBL TC on
-        the above date. The level of approval is also listed above.
+      <para>This document was last revised or approved by the
+        membership of OASIS
+        on the above date. The level of approval is also listed above.
         Check the current location noted above for possible later
         revisions of this document.</para> 
 
@@ -18852,35 +18853,22 @@ overall performance of the supply chain:</para>
     </section>
     <section id="S-STATUS-OF-THIS-RELEASE">
       <title>Status of this Release</title>
-      <para>Release of this package to the public marks the beginning of its
-        fourth public review. The UBL Technical Committee actively solicits
-        input from the user community regarding this release. See <xref
-          linkend="STATUS"/> at the beginning of this document for procedures
-        to be used in submitting comments to the Committee. Note that in
-        accordance with OASIS policies regarding intellectual property, the UBL
-        TC <emphasis role="italic">cannot</emphasis> accept input from persons
-        outside the UBL TC (including OASIS members) unless it is submitted via
-        the comment list.</para>
-      <para><emphasis role="bold"><emphasis role="italic">THIS RELEASE IS
-            SUBJECT TO CHANGE. IT IS PROVIDED FOR TESTING PURPOSES ONLY AND
-            SHOULD NOT BE USED FOR PRODUCTION
-        SYSTEMS.</emphasis></emphasis></para>
+      <para>This is the final release of UBL 2.1.</para>
     </section>
     <section id="S-PACKAGE-STRUCTURE">
       <title>Package Structure</title>
-      <para>The fourth public review draft of the UBL 2.1 specification is
-        published as a zip archive in the 
-        <ulink url="&this-loc;/">&this-loc;/</ulink>
-        directory. Unzipping this archive
-        creates a directory named &stage;-UBL-2.1 containing a master DocBook XML
-        file (UBL-2.1.xml), a generated hypertext version of this file
-        (UBL-2.1.html), a generated PDF version of this file (UBL-2.1.pdf), and
-        a number of subdirectories. The files in these subdirectories, linked
-        to from UBL-2.1.xml, UBL-2.1.html, and UBL-2.1.pdf, contain the various
-        normative and informational pieces of the 2.1 release. A description of
-        each subdirectory is given below. Note that while the UBL-2.1.xml file
-        is the &#8220;original&#8221; of this specification, it may not be
-        viewable in all currently available web browsers.</para>
+      <para>The UBL 2.1 specification is published as a zip archive in the
+          <ulink url="&this-loc;/">&this-loc;/</ulink> directory. Unzipping
+        this archive creates a directory named &stage;-UBL-2.1 containing a
+        master DocBook XML file (UBL-2.1.xml), a generated hypertext version of
+        this file (UBL-2.1.html), a generated PDF version of this file
+        (UBL-2.1.pdf), and a number of subdirectories. The files in these
+        subdirectories, linked to from UBL-2.1.xml, UBL-2.1.html, and
+        UBL-2.1.pdf, contain the various normative and informational pieces of
+        the 2.1 release. A description of each subdirectory is given below.
+        Note that while the UBL-2.1.xml file is the &#8220;original&#8221; of
+        this specification, it may not be viewable in all currently available
+        web browsers.</para>
       <blockquote>
         <para>
           <variablelist>

@@ -6043,7 +6043,7 @@ CurrentChargeType =
   notAllowed
   | element CurrentChargeType { anonymous0 }
 # 
-# RELAX-NG models synthesized from UBL document models on 2013-07-12 13:59:54z
+# RELAX-NG models synthesized from UBL document models on 2013-10-31 18:05:24z
 # 
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

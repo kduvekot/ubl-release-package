@@ -1,7 +1,7 @@
 DocumentStatusRequest-2.1 = external "versions/UBL-DocumentStatusRequest-2.1.rnc"
 start = DocumentStatusRequest-2.1
 
-# Synthesized from UBL document models 2013-07-12 13:54:36z
+# Synthesized from UBL document models 2013-10-31 17:59:30z
 #
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc
