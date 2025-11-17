@@ -1,10 +1,10 @@
-UBLversion=2.4
+UBLversion=2.5
 sh validate.sh ../xsdrt/maindoc/UBL-TransportationStatus-$UBLversion.xsd ../xml/MyTransportationStatus.xml
 sh validate.sh ../xsdrt/maindoc/UBL-BusinessCard-$UBLversion.xsd ../xml/UBL-BusinessCard-2.2-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-CommonTransportationReport-$UBLversion.xsd ../xml/UBL-CommonTransportationReport-2.3-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-CreditNote-$UBLversion.xsd ../xml/UBL-CreditNote-2.0-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-CreditNote-$UBLversion.xsd ../xml/UBL-CreditNote-2.1-Example.xml
-sh validate.sh ../xsdrt/maindoc/UBL-DebitNote-$UBLversion.xsd ../xml/UBL-DebitNote-2.1-Example.xml
+sh validate.sh ../xsdrt/maindoc/UBL-DebitNote-$UBLversion.xsd ../xml/UBL-DebitNote-2.5-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-DespatchAdvice-$UBLversion.xsd ../xml/UBL-DespatchAdvice-2.0-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-DigitalAgreement-$UBLversion.xsd ../xml/UBL-DigitalAgreement-2.2-Example-Multilateral.xml
 sh validate.sh ../xsdrt/maindoc/UBL-DigitalAgreement-$UBLversion.xsd ../xml/UBL-DigitalAgreement-2.2-Example.xml
@@ -16,7 +16,6 @@ sh validate.sh ../xsdrt/maindoc/UBL-ExpressionOfInterestRequest-$UBLversion.xsd 
 sh validate.sh ../xsdrt/maindoc/UBL-Forecast-$UBLversion.xsd ../xml/UBL-Forecast-2.1-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-ForecastRevision-$UBLversion.xsd ../xml/UBL-ForecastRevision-2.1-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-ForwardingInstructions-$UBLversion.xsd ../xml/UBL-ForwardingInstructions-2.0-Example-International.xml
-sh validate.sh ../xsdrt/maindoc/UBL-FreightInvoice-$UBLversion.xsd ../xml/UBL-FreightInvoice-2.1-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-FulfilmentCancellation-$UBLversion.xsd ../xml/UBL-FulfilmentCancellation-2.1-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-GoodsCertificate-$UBLversion.xsd ../xml/UBL-GoodsCertificate-2.3-Example.xml
 sh validate.sh ../xsdrt/maindoc/UBL-GoodsItemItinerary-$UBLversion.xsd ../xml/UBL-GoodsItemItinerary-2.1-Example.xml
