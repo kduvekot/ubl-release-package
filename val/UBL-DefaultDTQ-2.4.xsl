@@ -18,7 +18,7 @@
             <schxslt.compile.typed-variables xmlns="https://doi.org/10.5281/zenodo.1495494#">true</schxslt.compile.typed-variables>
          </dct:Agent>
       </dct:creator>
-      <dct:created>2023-10-24T19:56:51.472Z</dct:created>
+      <dct:created>2024-06-25T15:49:57.014Z</dct:created>
    </rdf:Description>
    <xsl:output indent="yes"/>
    <xsl:template match="root()">
@@ -45,7 +45,7 @@
                         <schxslt.compile.typed-variables xmlns="https://doi.org/10.5281/zenodo.1495494#">true</schxslt.compile.typed-variables>
                      </dct:Agent>
                   </dct:creator>
-                  <dct:created>2023-10-24T19:56:51.472Z</dct:created>
+                  <dct:created>2024-06-25T15:49:57.014Z</dct:created>
                </rdf:Description>
             </dct:source>
          </svrl:metadata>

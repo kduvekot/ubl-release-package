@@ -1,2 +1,2 @@
 Attempting well-formed, namespace-aware parse
-Fatal error:file:///home/runner/work/ubl/ubl/target/cs01-2.4/val/order-test-bad-syntax.xml:50:25:Element type "cbc:ChannelCodeLA" must be followed by either attribute specifications, ">" or "/>".
+Fatal error:file:///home/runner/work/ubl/ubl/target/os-2.4/val/order-test-bad-syntax.xml:50:25:Element type "cbc:ChannelCodeLA" must be followed by either attribute specifications, ">" or "/>".
