@@ -1,7 +1,7 @@
 ForecastRevision-2.1 = external "versions/UBL-ForecastRevision-2.1.rnc"
 start = ForecastRevision-2.1
 
-# Synthesized from UBL document models 2013-02-23 13:25:01z
+# Synthesized from UBL document models 2013-05-14 12:37:43z
 #
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

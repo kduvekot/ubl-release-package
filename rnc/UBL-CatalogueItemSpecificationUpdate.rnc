@@ -2,7 +2,7 @@ CatalogueItemSpecificationUpdate-2.0 = external "versions/UBL-CatalogueItemSpeci
 CatalogueItemSpecificationUpdate-2.1 = external "versions/UBL-CatalogueItemSpecificationUpdate-2.1.rnc"
 start = CatalogueItemSpecificationUpdate-2.0 | CatalogueItemSpecificationUpdate-2.1
 
-# Synthesized from UBL document models 2013-02-23 13:25:01z
+# Synthesized from UBL document models 2013-05-14 12:37:43z
 #
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

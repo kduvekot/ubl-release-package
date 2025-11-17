@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
-                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD4
+                     http://docs.oasis-open.org/ubl/prd4-UBL-2.1/
   Module:            xsd/maindoc/UBL-Tender-2.1.xsd
-  Generated on:      2013-02-23 13:10z
+  Generated on:      2013-05-14 04:28z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Tender-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -322,6 +322,25 @@
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:TendererQualificationDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Tender. Tenderer Qualification_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>A reference to the tenderer qualification document that has been used to qualify the tenderer.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Tender</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Tenderer Qualification</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>

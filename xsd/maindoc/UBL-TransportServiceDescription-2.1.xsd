@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
-                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD4
+                     http://docs.oasis-open.org/ubl/prd4-UBL-2.1/
   Module:            xsd/maindoc/UBL-TransportServiceDescription-2.1.xsd
-  Generated on:      2013-02-23 13:10z
+  Generated on:      2013-05-14 04:28z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

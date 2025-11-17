@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
-                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD4
+                     http://docs.oasis-open.org/ubl/prd4-UBL-2.1/
   Module:            xsdrt/common/UBL-CommonAggregateComponents-2.1.xsd
-  Generated on:      2013-02-23 13:10z
+  Generated on:      2013-05-14 04:28z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -234,6 +234,7 @@
    <xsd:element name="EventTactic" type="EventTacticType"/>
    <xsd:element name="EventTacticEnumeration" type="EventTacticEnumerationType"/>
    <xsd:element name="Evidence" type="EvidenceType"/>
+   <xsd:element name="EvidenceDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="EvidenceIssuingParty" type="PartyType"/>
    <xsd:element name="EvidenceSupplied" type="EvidenceSuppliedType"/>
    <xsd:element name="ExaminationTransportEvent" type="TransportEventType"/>
@@ -644,6 +645,8 @@
    <xsd:element name="TenderedProject" type="TenderedProjectType"/>
    <xsd:element name="TendererParty" type="PartyType"/>
    <xsd:element name="TendererPartyQualification" type="TendererPartyQualificationType"/>
+   <xsd:element name="TendererQualificationDocumentReference"
+                type="DocumentReferenceType"/>
    <xsd:element name="TendererQualificationRequest"
                 type="TendererQualificationRequestType"/>
    <xsd:element name="TendererRequirement" type="TendererRequirementType"/>
@@ -1119,7 +1122,7 @@
          <xsd:element ref="cbc:TotalTaskAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PartyCapacityAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cac:EvidenceSupplied" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:EvidenceSupplied" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Period" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:RecipientCustomerParty" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
@@ -3576,7 +3579,12 @@
          <xsd:element ref="cbc:VariantID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:FeeAmount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:FeeDescription" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:TenderEnvelopeID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:TenderEnvelopeTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ProcurementProjectLot" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:EvidenceDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
          <xsd:element ref="cac:TaxTotal" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:LegalMonetaryTotal" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:TenderLine" minOccurs="0" maxOccurs="unbounded"/>

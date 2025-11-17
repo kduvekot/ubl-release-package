@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
-                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD4
+                     http://docs.oasis-open.org/ubl/prd4-UBL-2.1/
   Module:            xsd/common/UBL-CommonAggregateComponents-2.1.xsd
-  Generated on:      2013-02-23 13:10z
+  Generated on:      2013-05-14 04:28z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -237,6 +237,7 @@
    <xsd:element name="EventTactic" type="EventTacticType"/>
    <xsd:element name="EventTacticEnumeration" type="EventTacticEnumerationType"/>
    <xsd:element name="Evidence" type="EvidenceType"/>
+   <xsd:element name="EvidenceDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="EvidenceIssuingParty" type="PartyType"/>
    <xsd:element name="EvidenceSupplied" type="EvidenceSuppliedType"/>
    <xsd:element name="ExaminationTransportEvent" type="TransportEventType"/>
@@ -647,6 +648,8 @@
    <xsd:element name="TenderedProject" type="TenderedProjectType"/>
    <xsd:element name="TendererParty" type="PartyType"/>
    <xsd:element name="TendererPartyQualification" type="TendererPartyQualificationType"/>
+   <xsd:element name="TendererQualificationDocumentReference"
+                type="DocumentReferenceType"/>
    <xsd:element name="TendererQualificationRequest"
                 type="TendererQualificationRequestType"/>
    <xsd:element name="TendererRequirement" type="TendererRequirementType"/>
@@ -5303,14 +5306,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:EvidenceSupplied" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:EvidenceSupplied" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Completed Task. Evidence Supplied</ccts:DictionaryEntryName>
                      <ccts:Definition>The evidence justifying a designation of "complete" for this task.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Completed Task</ccts:ObjectClass>
                      <ccts:PropertyTerm>Evidence Supplied</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Evidence Supplied</ccts:AssociatedObjectClass>
@@ -19367,7 +19370,6 @@ Thus, the column Preference Criterion will indicate either A, B, C,...</ccts:Exa
                      <ccts:PropertyTerm>Value</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
-                     <ccts:Examples>+44 1 2345 6789 president@whitehouse.com </ccts:Examples>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -19385,7 +19387,6 @@ Thus, the column Preference Criterion will indicate either A, B, C,...</ccts:Exa
                      <ccts:PropertyTerm>Value</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
-                     <ccts:Examples>+44 1 2345 6789 president@whitehouse.com </ccts:Examples>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -33710,12 +33711,11 @@ Thus, the column Preference Criterion will indicate either A, B, C,...</ccts:Exa
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Preparation. Tender_ Envelope Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Tender Preparation. Tender Envelope Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>An identifier for the tender envelope to be used with the tender.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Tender Preparation</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Tender</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Envelope Identifier</ccts:PropertyTerm>
+                     <ccts:PropertyTerm>Tender Envelope Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
                   </ccts:Component>
@@ -33727,12 +33727,11 @@ Thus, the column Preference Criterion will indicate either A, B, C,...</ccts:Exa
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Preparation. Tender_ Envelope Type Code. Code</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Tender Preparation. Tender Envelope Type Code. Code</ccts:DictionaryEntryName>
                      <ccts:Definition>A code signifying the type of tender envelope (economical or objective criteria versus technical or subjective criteria).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tender Preparation</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Tender</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Envelope Type Code</ccts:PropertyTerm>
+                     <ccts:PropertyTerm>Tender Envelope Type Code</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
                      <ccts:DataType>Code. Type</ccts:DataType>
                   </ccts:Component>
@@ -34213,6 +34212,38 @@ Thus, the column Preference Criterion will indicate either A, B, C,...</ccts:Exa
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:TenderEnvelopeID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Tendered Project. Tender Envelope Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>An identifier for the tender envelope this tendered project belongs to.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Tendered Project</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Tender Envelope Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:TenderEnvelopeTypeCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Tendered Project. Tender Envelope Type Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code signifying the type of tender envelope this tendered project belongs to.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Tendered Project</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Tender Envelope Type Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cac:ProcurementProjectLot" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -34225,6 +34256,25 @@ Thus, the column Preference Criterion will indicate either A, B, C,...</ccts:Exa
                      <ccts:PropertyTerm>Procurement Project Lot</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Procurement Project Lot</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Procurement Project Lot</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:EvidenceDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Tendered Project. Evidence_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>A reference to a non-structured evidentiary document supporting this tendered project.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Tendered Project</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Evidence</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>

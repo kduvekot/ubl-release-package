@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
-                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD4
+                     http://docs.oasis-open.org/ubl/prd4-UBL-2.1/
   Module:            xsd/maindoc/UBL-InventoryReport-2.1.xsd
-  Generated on:      2013-02-23 13:10z
+  Generated on:      2013-05-14 04:28z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -36,7 +36,7 @@
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Inventory Report. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A report on the quantities of each item that are, or will be, in stock.</ccts:Definition>
+               <ccts:Definition>A report on the quantities of each item that are, or will be, in stock. This document is sent by a Buyer (for example a retailer) to a Seller (for example a producer).</ccts:Definition>
                <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                <ccts:AlternativeBusinessTerms>Storage status report.</ccts:AlternativeBusinessTerms>
             </ccts:Component>

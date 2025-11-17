@@ -2,8 +2,8 @@
 <?xml-stylesheet type="text/xsl" 
                  href="db/spec-0.6/stylesheets/oasis-specification-html-offline.xsl"?>
 <!--
-  $Id: UBL-2.1.xml,v 1.48 2013/03/05 18:00:12 admin Exp $
-  Single quote: &#8217; Double quotes: &#8220;&#8221;
+  $Id: UBL-2.1.xml,v 1.56 2013/05/14 17:30:08 admin Exp $
+  Single quote: &#8217; Double quotes: &#8220;&#8221; 
 -->
 <!DOCTYPE article
   PUBLIC "-//OASIS//DTD DocBook XML V4.4//EN"
@@ -13,12 +13,13 @@
 <!ENTITY name "UBL">
 <!ENTITY pversion "NONE">
 <!ENTITY version "2.1">
-<!ENTITY stage "prd3">
-<!ENTITY standard "Committee Specification Draft 3 / Public Review Draft 3">
+<!ENTITY stage "prd4">
+<!ENTITY STAGE "PRD4">
+<!ENTITY standard "Committee Specification Draft 4 / Public Review Draft 4">
 <!ENTITY this-loc     "http://docs.oasis-open.org/ubl/&stage;-UBL-2.1">
-<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/prd2-UBL-2.1">
+<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/prd3-UBL-2.1">
 <!ENTITY latest-loc   "http://docs.oasis-open.org/ubl">
-<!ENTITY pubdate "23 February 2013"><!--remove time from pub date-->
+<!ENTITY pubdate "14 May 2013"><!--remove time from pub date-->
 ]>
 <article status="&standard;">
   <articleinfo>
@@ -37,7 +38,7 @@
       >&previous-loc;/UBL-2.1.html</releaseinfo>
     <releaseinfo role="OASIS-specification-previous"
       >&previous-loc;/UBL-2.1.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-previous"
+    <releaseinfo role="OASIS-specification-previous-authoritative"
       >&previous-loc;/UBL-2.1.xml</releaseinfo>
 
     <!-- generic form of above
@@ -45,15 +46,13 @@
          >&previous-loc;/&name;-&version;.html</releaseinfo>
       <releaseinfo role="OASIS-specification-previous"
          >&previous-loc;/&name;-&version;.pdf</releaseinfo>
-      <releaseinfo role="OASIS-specification-previous"
+      <releaseinfo role="OASIS-specification-previous-authoritative"
          >&previous-loc;/&name;-&version;.xml</releaseinfo> -->
 
     <releaseinfo role="OASIS-specification-latest"
       >&latest-loc;/&name;-2.1.html</releaseinfo>
     <releaseinfo role="OASIS-specification-latest"
       >&latest-loc;/&name;-2.1.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-latest-authoritative"
-      >&latest-loc;/&name;-2.1.xml</releaseinfo>
 
     <!-- generic form of above
       <releaseinfo role="OASIS-specification-latest"
@@ -113,13 +112,51 @@
     </authorgroup>
     <pubdate>&pubdate;</pubdate>
     <copyright><year>2013</year></copyright>
+
+    <legalnotice role="additional">
+      <title>Additional artefacts</title>
+
+      <para>The ZIP containing the complete files of this release
+       is found in the directory:</para>
+      <itemizedlist>
+        <listitem>
+          <para><ulink url="&this-loc;/"
+                           >&this-loc;/</ulink></para>
+        </listitem>
+      </itemizedlist>
+
+    </legalnotice>
+    
     <legalnotice role="related">
-      <title>Related Work</title>
+      <title>Related work</title>
 
       <para>This specification supersedes <ulink
         url="http://docs.oasis-open.org/ubl/os-UBL-2.0-update/UBL-2.0.html"
         >UBL 2.0</ulink>. </para>
+      
+      <para>This specification has alternative representations
+            in the following directories:</para>
 
+      <itemizedlist>
+        <listitem>
+       <para>
+          <emphasis>Universal Business Language Version 2.1 Abstract Syntax Notation 1 (ASN.1) Alternative Representation Committee Note 01.</emphasis>
+          Latest version. 
+          <ulink
+          url="http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1.html</ulink>.
+       </para>
+        </listitem>
+        <listitem>
+       <para>
+          <emphasis>Universal Business Language Version 2.1 Unified Modeling Language (UML) Alternative Representation Committee Note 01.</emphasis>
+          Latest version. 
+          <ulink
+          url="http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML.html</ulink>.
+      </para>
+        </listitem>
+      </itemizedlist>
     </legalnotice>
 
     <legalnotice role="namespaces">
@@ -237,9 +274,9 @@
         <member>
           urn:oasis:names:specification:ubl:schema:xsd:TransportationStatusRequest-2 </member>
         <member>
-          urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanStatus-2 </member>
+          urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2 </member>
         <member>
-          urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequestStatus-2 </member>
+          urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2 </member>
         <member>
           urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2 </member>
         <member>
@@ -965,6 +1002,7 @@
           url="http://standards.iso.org/ittf/PubliclyAvailableStandards/c040833_ISO_IEC_19757-3_2006(E).zip"
           >Document Schema Definition Languages (DSDL) &#8212; Part 3:
           Rule-based validation (Schematron)</ulink></citetitle></bibliomixed>
+
         <bibliomixed id="uml"><abbrev>UML</abbrev><citetitle><ulink
           url="http://www.oasis-open.org/committees/download.php/6240/03-03-01.zip"
           >Unified Modeling Language Version 1.5
@@ -1077,18 +1115,38 @@
           X.509 Public Key Infrastructure Time-Stamp Protocol (TSP),
           August 2001</ulink>. </citetitle></bibliomixed>
 
-        <bibliomixed id="b_c14n"><abbrev>XML
-          C14N</abbrev><?nospell-start?>John Boyer,
-          <?nospell-end?><citetitle><ulink
-          url="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
-          >Canonical XML Version 1.0, 15 March 2001</ulink>.
-          </citetitle></bibliomixed>
+        <bibliomixed id="UBL-ASN-directory"><abbrev>UBL-2.1-ASN.1</abbrev>
+          <citetitle>OASIS Universal Business Language Version 2.1 Abstract Syntax Notation 1 (ASN.1) Alternative Representation Committee Note 01.</citetitle>
+          <releaseinfo>Latest version.</releaseinfo> 
+          <bibliomisc>
+          <ulink
+          url="http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1.html</ulink>.
+          </bibliomisc>
+          </bibliomixed>
+
+        <bibliomixed id="UBL-UML-directory"><abbrev>UBL-2.1-UML</abbrev>
+          <citetitle>OASIS Universal Business Language Version 2.1 Unified Modeling Language (UML) Alternative Representation Committee Note 01.</citetitle>
+          <releaseinfo>Latest version.</releaseinfo> 
+          <bibliomisc>
+          <ulink
+          url="http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML.html</ulink>.
+          </bibliomisc>
+          </bibliomixed>
 
         <bibliomixed id="b_rec37"><abbrev>UN/CEFACT Rec.
           37</abbrev><citetitle><ulink
           url="http://www.unece.org/cefact/cf_plenary/plenary10/ECE_TRADE_C_CEFACT_2010_14E.pdf"
           >Signed Digital Evidence Interoperability Recommendation, 27
           September 2010</ulink>.</citetitle></bibliomixed>
+
+        <bibliomixed id="b_c14n"><abbrev>XML
+          C14N</abbrev><?nospell-start?>John Boyer,
+          <?nospell-end?><citetitle><ulink
+          url="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"
+          >Canonical XML Version 1.0, 15 March 2001</ulink>.
+          </citetitle></bibliomixed>
 
         <bibliomixed id="b_xpath20"><abbrev>XPath
           2.0</abbrev><?nospell-start?>Anders Berglund, et al.,
@@ -5444,7 +5502,7 @@ overall performance of the supply chain:</para>
             </entry>
 
             <entry>
-              <para>Any</para>
+              <para>Any collaboration</para>
             </entry>
 
           </row>
@@ -5606,7 +5664,7 @@ overall performance of the supply chain:</para>
             </entry>
 
             <entry>
-              <para>Any</para>
+              <para>Any collaboration</para>
             </entry>
 
           </row>
@@ -10227,8 +10285,7 @@ overall performance of the supply chain:</para>
   <section id="T-INVENTORY-REPORT">
     <title>Inventory Report</title>
 
-    <para>Description: A report on the quantities of each item that are, or
-      will be, in stock.</para>
+    <para>Description: A report on the quantities of each item that are, or will be, in stock. This document is sent by a Buyer (for example a retailer) to a Seller (for example a producer).</para>
 
     <informaltable>
       <tgroup cols="2">
@@ -13874,8 +13931,7 @@ overall performance of the supply chain:</para>
   <section id="T-STOCK-AVAILABILITY-REPORT">
     <title>Stock Availability Report</title>
 
-    <para>Description: A report of the quantities of each item that are or will
-      be in stock.</para>
+    <para>Description: A report on the quantities of each item that are, or will be, in stock. This document is sent by a Seller (for example a producer) to a Buyer (for example a retailer).</para>
 
     <informaltable>
       <tgroup cols="2">
@@ -14218,6 +14274,169 @@ overall performance of the supply chain:</para>
     </informaltable>
   </section>
 
+  <section id="T-TENDER-RECEIPT">
+    <title>Tender Receipt</title>
+
+    <para>Description: A document sent by a contracting party to an economic
+      operator acknowledging receipt of a Tender.</para>
+
+    <informaltable>
+      <tgroup cols="2">
+        <colspec colwidth="30*"/>
+        <colspec colwidth="70*"/>
+        <tbody>
+          <row>
+
+            <entry>
+              <para>Processes involved</para>
+            </entry>
+
+            <entry>
+              <para>
+                <link linkend="S-TENDERING">Tendering</link>
+              </para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>Submitter role</para>
+            </entry>
+
+            <entry>
+              <para>Contracting Authority</para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>Receiver role</para>
+            </entry>
+
+            <entry>
+              <para>Tenderer</para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>Normative schema</para>
+            </entry>
+
+            <entry>
+              <para>
+                <literal>
+                  <ulink url="xsd/maindoc/UBL-TenderReceipt-2.1.xsd"
+                    >xsd/maindoc/UBL-TenderReceipt-2.1.xsd</ulink>
+                </literal>
+              </para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>Runtime schema</para>
+            </entry>
+
+            <entry>
+              <para>
+                <literal>
+                  <ulink url="xsdrt/maindoc/UBL-TenderReceipt-2.1.xsd"
+                    >xsdrt/maindoc/UBL-TenderReceipt-2.1.xsd</ulink>
+                </literal>
+              </para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>RELAX NG schema</para>
+            </entry>
+
+            <entry>
+              <para>
+                <literal>
+                  <ulink url="rnc/versions/UBL-TenderReceipt-2.1.rnc"
+                    >rnc/versions/UBL-TenderReceipt-2.1.rnc</ulink>
+                </literal>
+              </para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>Document model (ODF)</para>
+            </entry>
+
+            <entry>
+              <para>
+                <literal>
+                  <ulink url="mod/maindoc/UBL-TenderReceipt-2.1.ods"
+                    >mod/maindoc/UBL-TenderReceipt-2.1.ods</ulink>
+                </literal>
+              </para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>Document model (Excel)</para>
+            </entry>
+
+            <entry>
+              <para>
+                <literal>
+                  <ulink url="mod/maindoc/UBL-TenderReceipt-2.1.xls"
+                    >mod/maindoc/UBL-TenderReceipt-2.1.xls</ulink>
+                </literal>
+              </para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>Document model (UML)</para>
+            </entry>
+
+            <entry>
+              <para>
+                <literal>
+                  <ulink url="uml/UBL-TenderReceipt-2.1.html"
+                    >uml/UBL-TenderReceipt-2.1.html</ulink>
+                </literal>
+              </para>
+            </entry>
+
+          </row>
+          <row>
+
+            <entry>
+              <para>Summary report</para>
+            </entry>
+
+            <entry>
+              <para>
+                <literal>
+                  <ulink url="mod/summary/reports/UBL-TenderReceipt-2.1.html"
+                    >mod/summary/reports/UBL-TenderReceipt-2.1.html</ulink>
+                </literal>
+              </para>
+            </entry>
+
+          </row>
+        </tbody>
+      </tgroup>
+    </informaltable>
+  </section>
+
   <section id="T-TENDERER-QUALIFICATION">
     <title>Tenderer Qualification</title>
 
@@ -14542,169 +14761,6 @@ overall performance of the supply chain:</para>
                   <ulink
                     url="mod/summary/reports/UBL-TendererQualificationResponse-2.1.html"
                     >mod/summary/reports/UBL-TendererQualificationResponse-2.1.html</ulink>
-                </literal>
-              </para>
-            </entry>
-
-          </row>
-        </tbody>
-      </tgroup>
-    </informaltable>
-  </section>
-
-  <section id="T-TENDER-RECEIPT">
-    <title>Tender Receipt</title>
-
-    <para>Description: A document sent by a contracting party to an economic
-      operator acknowledging receipt of a Tender.</para>
-
-    <informaltable>
-      <tgroup cols="2">
-        <colspec colwidth="30*"/>
-        <colspec colwidth="70*"/>
-        <tbody>
-          <row>
-
-            <entry>
-              <para>Processes involved</para>
-            </entry>
-
-            <entry>
-              <para>
-                <link linkend="S-TENDERING">Tendering</link>
-              </para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>Submitter role</para>
-            </entry>
-
-            <entry>
-              <para>Contracting Authority</para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>Receiver role</para>
-            </entry>
-
-            <entry>
-              <para>Tenderer</para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>Normative schema</para>
-            </entry>
-
-            <entry>
-              <para>
-                <literal>
-                  <ulink url="xsd/maindoc/UBL-TenderReceipt-2.1.xsd"
-                    >xsd/maindoc/UBL-TenderReceipt-2.1.xsd</ulink>
-                </literal>
-              </para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>Runtime schema</para>
-            </entry>
-
-            <entry>
-              <para>
-                <literal>
-                  <ulink url="xsdrt/maindoc/UBL-TenderReceipt-2.1.xsd"
-                    >xsdrt/maindoc/UBL-TenderReceipt-2.1.xsd</ulink>
-                </literal>
-              </para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>RELAX NG schema</para>
-            </entry>
-
-            <entry>
-              <para>
-                <literal>
-                  <ulink url="rnc/versions/UBL-TenderReceipt-2.1.rnc"
-                    >rnc/versions/UBL-TenderReceipt-2.1.rnc</ulink>
-                </literal>
-              </para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>Document model (ODF)</para>
-            </entry>
-
-            <entry>
-              <para>
-                <literal>
-                  <ulink url="mod/maindoc/UBL-TenderReceipt-2.1.ods"
-                    >mod/maindoc/UBL-TenderReceipt-2.1.ods</ulink>
-                </literal>
-              </para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>Document model (Excel)</para>
-            </entry>
-
-            <entry>
-              <para>
-                <literal>
-                  <ulink url="mod/maindoc/UBL-TenderReceipt-2.1.xls"
-                    >mod/maindoc/UBL-TenderReceipt-2.1.xls</ulink>
-                </literal>
-              </para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>Document model (UML)</para>
-            </entry>
-
-            <entry>
-              <para>
-                <literal>
-                  <ulink url="uml/UBL-TenderReceipt-2.1.html"
-                    >uml/UBL-TenderReceipt-2.1.html</ulink>
-                </literal>
-              </para>
-            </entry>
-
-          </row>
-          <row>
-
-            <entry>
-              <para>Summary report</para>
-            </entry>
-
-            <entry>
-              <para>
-                <literal>
-                  <ulink url="mod/summary/reports/UBL-TenderReceipt-2.1.html"
-                    >mod/summary/reports/UBL-TenderReceipt-2.1.html</ulink>
                 </literal>
               </para>
             </entry>
@@ -18787,7 +18843,7 @@ overall performance of the supply chain:</para>
     <section id="S-STATUS-OF-THIS-RELEASE">
       <title>Status of this Release</title>
       <para>Release of this package to the public marks the beginning of its
-        third public review. The UBL Technical Committee actively solicits
+        fourth public review. The UBL Technical Committee actively solicits
         input from the user community regarding this release. See <xref
           linkend="STATUS"/> at the beginning of this document for procedures
         to be used in submitting comments to the Committee. Note that in
@@ -18802,18 +18858,19 @@ overall performance of the supply chain:</para>
     </section>
     <section id="S-PACKAGE-STRUCTURE">
       <title>Package Structure</title>
-      <para>The third public review draft of the UBL 2.1 specification is
-        published as a zip archive named prd3-UBL-2.1.zip. Unzipping this
-        archive creates a directory named prd3-UBL-2.1 containing a master
-        DocBook XML file (UBL-2.1.xml), a generated hypertext version of this
-        file (UBL-2.1.html), a generated PDF version of this file
-        (UBL-2.1.pdf), and a number of subdirectories. The files in these
-        subdirectories, linked to from UBL-2.1.xml, UBL-2.1.html, and
-        UBL-2.1.pdf, contain the various normative and informational pieces of
-        the 2.1 release. A description of each subdirectory is given below.
-        Note that while the UBL-2.1.xml file is the &#8220;original&#8221; of
-        this specification, it may not be viewable in all currently available
-        web browsers.</para>
+      <para>The fourth public review draft of the UBL 2.1 specification is
+        published as a zip archive in the 
+        <ulink url="&this-loc;/">&this-loc;/</ulink>
+        directory. Unzipping this archive
+        creates a directory named &stage;-UBL-2.1 containing a master DocBook XML
+        file (UBL-2.1.xml), a generated hypertext version of this file
+        (UBL-2.1.html), a generated PDF version of this file (UBL-2.1.pdf), and
+        a number of subdirectories. The files in these subdirectories, linked
+        to from UBL-2.1.xml, UBL-2.1.html, and UBL-2.1.pdf, contain the various
+        normative and informational pieces of the 2.1 release. A description of
+        each subdirectory is given below. Note that while the UBL-2.1.xml file
+        is the &#8220;original&#8221; of this specification, it may not be
+        viewable in all currently available web browsers.</para>
       <blockquote>
         <para>
           <variablelist>
@@ -18823,14 +18880,6 @@ overall performance of the supply chain:</para>
               <listitem>
                 <para>Diagrams and illustrations used in this
                   specification</para>
-              </listitem>
-            </varlistentry>
-            <varlistentry>
-              <term><emphasis role="bold"><literal>asn</literal>
-                </emphasis></term>
-              <listitem>
-                <para>ASN.1 UBL 2.1 schema; see <xref
-                    linkend="S-ASN.1-UBL-2.1-SPECIFICATION"/></para>
               </listitem>
             </varlistentry>
             <varlistentry>
@@ -19117,8 +19166,8 @@ overall performance of the supply chain:</para>
         <title>New Document Types in UBL 2.1</title>
         <para>Because it preserves backward compatibility with UBL 2.0, UBL 2.1
           is technically a minor release, not a major one. However, it does add
-          36 new document types, bringing the total number of UBL business
-          documents to 67.</para>
+          34 new document types, bringing the total number of UBL business
+          documents to 65.</para>
         <blockquote>
           <para><emphasis role="bold">Added UBL 2.1 document types for
               eTendering:</emphasis>
@@ -19322,8 +19371,9 @@ overall performance of the supply chain:</para>
           <table>
             <title>Changes to Library Elements, UBL 2.0 to UBL 2.1</title>
             <!--####start of common library differences from UBL 2.0 ####-->
+                    <!--Library (UBL 2.0 to UBL 2.1 xxx)-->
 
-   <tgroup cols="3"><!--Library (UBL 2.0 to UBL 2.1 PRD3D5)-->
+   <tgroup cols="3"><!--Library (UBL 2.0 to UBL 2.1 PRD4D1)-->
 <colspec colwidth="35*"/>
       <colspec colwidth="35*"/>
       <colspec colwidth="30*"/>
@@ -22222,8 +22272,9 @@ overall performance of the supply chain:</para>
           <table>
             <title>Changes to Document Elements, UBL 2.0 to UBL 2.1</title>
             <!--####start of document differences from UBL 2.0 ####-->
+                    <!--Document (UBL 2.0 to UBL 2.1 xxx)-->
             
-   <tgroup cols="3"><!--Document (UBL 2.0 to UBL 2.1 PRD3D5)-->
+   <tgroup cols="3"><!--Document (UBL 2.0 to UBL 2.1 PRD4D1)-->
 <colspec colwidth="35*"/>
       <colspec colwidth="35*"/>
       <colspec colwidth="30*"/>
@@ -23261,36 +23312,26 @@ overall performance of the supply chain:</para>
           </table>
         </section>
       </section>
-      <section id="S-CHANGES-FROM-UBL-2.1-PRD2">
-        <title>Changes from UBL 2.1 PRD2 XML to Final UBL 2.1 XML</title>
+      <section id="S-CHANGES-FROM-UBL-2.1-PRD3">
+        <title>Changes from UBL 2.1 PRD3 XML to Final UBL 2.1 XML</title>
         <para>This section documents changes made in the final round of UBL 2.1
           development prior to release, that is, changes made following the
-          Second Public Review Draft (PRD2) of this specification. The material
-          herein is of relevance only to test implementers of the former draft,
-          who should <emphasis role="bold">note that changes to the cardinality
-            of certain attributes make UBL 2.1 as released technically
-              <emphasis role="italic">backward incompatible with
-              PRD2,</emphasis> though it remains fully backward-compatible with
-            UBL 2.0.</emphasis> See <xref
-            linkend="S-CHANGES-TO-ATTRIBUTES-FOLLOWING-PRD2"/>. This section is
-          otherwise of merely historical interest.</para>
-        <section>
-          <title>Changes to Document Availability Following PRD2</title>
-          <para>The PerformanceHistory document and schema found in PRD2 have
-            been removed in PRD3.</para>
-        </section>
-        <section id="S-CHANGES-TO-LIBRARY-ELEMENTS-FOLLOWING-PRD2">
-          <title>Changes to Library Elements Following PRD2</title>
+          Third Public Review Draft (PRD3) of this specification. The material
+          herein is of relevance only to test implementers of the former draft.
+          This section is otherwise of merely historical interest.</para>
+        <section id="S-CHANGES-TO-LIBRARY-ELEMENTS-FOLLOWING-PRD3">
+          <title>Changes to Library Elements Following PRD3</title>
           <para>The following table sums up the differences between the XML
-            elements in the Common Library of the Second Review Draft and the
+            elements in the Common Library of the Third Review Draft and the
             XML elements in the UBL 2.1 Common Library of this
             distribution.</para>
           <!--old2new-->
           <table>
-            <title>Changes to Library Elements Following PRD2</title>
-            <!--#### start of common library differences from PRD2 ####-->
+            <title>Changes to Library Elements Following PRD3</title>
+            <!--#### start of common library differences from PRD3 ####-->
+                    <!--Library (UBL 2.1 yyy to UBL 2.1 xxx)-->
 
-   <tgroup cols="3"><!--Library (UBL 2.1 PRD2 to UBL 2.1 PRD3D5)-->
+   <tgroup cols="3"><!--Library (UBL 2.1 PRD3 to UBL 2.1 PRD4D1)-->
 <colspec colwidth="35*"/>
       <colspec colwidth="35*"/>
       <colspec colwidth="30*"/>
@@ -23302,107 +23343,6 @@ overall performance of the supply chain:</para>
          </row>
       </thead>
       <tbody>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>AllowanceCharge</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>AllowanceChargeReason</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>AwardingCriterion</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>AwardingCriterionResponse</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>AwardingTerms</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PrizeIndicator</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PrizeDescription</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PaymentDescription</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>FollowupContractIndicator</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>BindingOnBuyerIndicator</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>AwardingCriterion</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Capability</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EvidenceSupplied</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>CatalogueLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReplacedRelatedItem</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CallForTendersLineReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CallForTendersDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Certificate</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Remarks</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>CertificateOfOriginApplication</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Remarks</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Clause</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
          <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>CompletedTask</entry>
             <entry> </entry>
             <entry> </entry>
@@ -23410,216 +23350,10 @@ overall performance of the supply chain:</para>
          <row>
             <entry> </entry>
             <entry>EvidenceSupplied</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Condition</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Consignment</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CarrierServiceInstructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CustomsClearanceServiceInstructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ForwarderServiceInstructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SpecialServiceInstructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>HandlingInstructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Information</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ChildConsignmentQuantity</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TotalPackagesQuantity</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CustomsDeclaration</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RequestedPickupTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RequestedDeliveryTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PlannedPickupTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PlannedDeliveryTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Status</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ChildConsignment</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MainCarriageShipmentStage</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ConsumptionAverage</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ConsumptionCorrection</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ConsumptionPoint</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SubscriberType</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ContractingActivity</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ContractingParty</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ContractingPartyType</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ContractingActivity</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ContractingPartyType</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>CreditNoteLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ItemPriceExtension</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>CustomsDeclaration</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Declaration</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EvidenceSupplied</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>DeliveryTerms</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SpecialTerms</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>LossRisk</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Despatch</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Instructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>DespatchLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>BackorderReason</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>OutstandingReason</entry>
             <entry>Changed cardinality from 0..1 to 0..n</entry>
          </row>
          <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Duty</entry>
             <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Duty</entry>
             <entry>Changed dictionary entry name from “Duty. Details Duty. Duty. Text” to “Duty. Details”</entry>
          </row>
          <row>
@@ -23627,1253 +23361,23 @@ overall performance of the supply chain:</para>
             <entry>Duty</entry>
             <entry>Changed dictionary entry name from “Duty. Details Duty. Duty. Text” to “Duty. Duty. Text”</entry>
          </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>EconomicOperatorRole</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>EmissionCalculationMethod</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>EnergyWaterSupply</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EnergyWaterConsumptionCorrection</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>EnvironmentalEmission</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EmissionCalculationMethod</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>EvaluationCriterion</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Evidence</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CandidateStatement</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Language</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>EvidenceSupplied</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ExceptionCriteriaLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ExceptionResolutionCode</entry>
-            <entry>Changed cardinality from 0..n to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ForecastExceptionCriterionLine</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ExceptionNotificationLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ExternalReference</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>HashAlgorithmMethod</entry>
-            <entry>Changed cardinality from 0..n to 0..1</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ForecastExceptionCriterionLine</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ForecastRevisionLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>GoodsItem</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TraceID</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MinimumTemperature</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MaximumTemperature</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>HazardousItem</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>AdditionalInformation</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>InventoryReportLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>InventoryLocation</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>InvoiceLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>WithholdingTaxTotal</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ItemPriceExtension</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Item</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>AdditionalInformation</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ItemIdentification</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>BarcodeSymbologyID</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ItemManagementProfile</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReplenishmentOwnerDescription</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>LineItem</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TaxTotal</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ItemPriceExtension</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>LineReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Location</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Conditions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Name</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>MaritimeTransport</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RadioCallSignID</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ShipsRequirements</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>GrossTonnageMeasure</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>NetTonnageMeasure</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RegistryCertificateDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RegistryPortLocation</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>MeterProperty</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Value</entry>
-            <entry>Changed cardinality from 0..n to 0..1</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>MeterReading</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ID</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PreviousMeterReadingMethod</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PreviousMeterReadingMethodCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>LatestMeterReadingMethod</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>LatestMeterReadingMethodCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>NotificationRequirement</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PostEventNotificationDurationMeasure</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PreEventNotificationDurationMeasure</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>NotificationPeriod</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>NotificationLocation</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>OnAccountPayment</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Note</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>OrderLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>OrderLineReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>PartyLegalEntity</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CompanyLegalForm</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>HeadOfficeParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>PartyTaxScheme</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ExemptionReason</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>PaymentMandate</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Clause</entry>
-            <entry>Changed dictionary entry name from “Payment Mandate. Clause. Text” to “Payment Mandate. Clause”</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Person</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>OtherName</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>BirthplaceName</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>IdentityDocumentReference</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ResidenceAddress</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>PowerOfAttorney</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>NotaryParty</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>WitnessParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>PriceExtension</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ProcurementProject</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Note</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RequestedTenderTotal</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MainCommodityClassification</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>AdditionalCommodityClassification</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ProcurementProjectLot</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ProcurementProject</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ProjectReference</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>QualificationResolution</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ProcurementProjectLot</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>QualifyingParty</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TendererRoleCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EconomicOperatorRole</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ReceiptLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RejectReason</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Regulation</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Name</entry>
-            <entry>Changed cardinality from 1..n to 1</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>RequestForTenderLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TaxIncludedIndicator</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MinimumAmount</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MaximumAmount</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EstimatedAmount</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>RequestedTenderTotal</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Response</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Status</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>SecondaryHazard</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Extension</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ServiceFrequency</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Shipment</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>HandlingInstructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Information</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Consignment</entry>
-            <entry>Changed cardinality from 1..n to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ShipmentStage</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PreCarriageIndicator</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>OnCarriageIndicator</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Instructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DemurrageInstructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CrewQuantity</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PassengerQuantity</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EstimatedTransitPeriod</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>FreightAllowanceCharge</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>FreightChargeLocation</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DetentionTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RequestedDepartureTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RequestedArrivalTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RequestedWaypointTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PlannedDepartureTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PlannedArrivalTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PlannedWaypointTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ActualDepartureTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ActualWaypointTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ActualArrivalTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EstimatedDepartureTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EstimatedArrivalTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PassengerPerson</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DriverPerson</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReportingPerson</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CrewMemberPerson</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SecurityOfficerPerson</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MasterPerson</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ShipsSurgeonPerson</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>StatementLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CollectedPayment</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Status</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Condition</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>SubcontractTerms</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SubcontractingConditionsCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MaximumPercent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MinimumPercent</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>SupplierConsumption</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Contract</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TaxCategory</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TaxExemptionReason</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TelecommunicationsService</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RoamingPartnerName</entry>
-            <entry>Changed cardinality from 0..n to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RoamingPartnerName</entry>
-            <entry>Changed dictionary entry name from “Telecommunications Service. Roaming Partner Name. Text” to “Telecommunications Service. Roaming Partner Name. Name”</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TelecommunicationsSupply</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TelecommunicationsSupplyLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TenderLine</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>OrderableUnit</entry>
-            <entry>Changed cardinality from 0..n to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CallForTendersLineReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CallForTendersDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TenderPreparation</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ProcurementProjectLot</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TenderRequirement</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Name</entry>
-            <entry>Changed cardinality from 0..n to 1</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TenderResult</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReceivedElectronicTenderQuantity</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReceivedForeignTenderQuantity</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>WinningParty</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>WinningParty</entry>
-            <entry>Changed dictionary entry name from “Tender Result. Winning_ Party. Party” to “Tender Result. Winning Party”</entry>
-         </row>
          <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TenderedProject</entry>
             <entry> </entry>
             <entry> </entry>
          </row>
          <row>
             <entry> </entry>
-            <entry>ProcurementProjectLot</entry>
+            <entry>TenderEnvelopeID</entry>
             <entry>Added</entry>
          </row>
          <row>
             <entry> </entry>
-            <entry>AwardingCriterionResponse</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TendererPartyQualification</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>InterestedProcurementProjectLot</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TendererQualificationRequest</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CompanyLegalFormCode</entry>
+            <entry>TenderEnvelopeTypeCode</entry>
             <entry>Added</entry>
          </row>
          <row>
             <entry> </entry>
-            <entry>CompanyLegalForm</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TechnicalEvaluationCriterion</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>FinancialEvaluationCriterion</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EconomicOperatorRole</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TendererRequirement</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>LegalReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TenderingTerms</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>OtherConditionsIndicator</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>AdditionalConditions</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>LatestSecurityClearanceDate</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DocumentationFeeAmount</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PenaltyClause</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CallForTendersDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TendererQualificationRequest</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReplacedNoticeDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TradeFinancing</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Clause</entry>
-            <entry>Changed dictionary entry name from “Trade Financing. Clause. Text” to “Trade Financing. Clause”</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportEquipment</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReferencedConsignmentID</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Information</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DamageRemarks</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SpecialTransportRequirements</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ShipmentDocumentReference</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Package</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportEvent</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CurrentStatus</entry>
-            <entry>Changed cardinality from 1..n to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Signature</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Period</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportExecutionTerms</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PaymentTerms</entry>
-            <entry>Changed cardinality from 1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ServiceChargePaymentTerms</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportHandlingUnit</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>HandlingInstructions</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TraceID</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CustomsDeclaration</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReferencedShipment</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Package</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportMeans</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>MeasurementDimension</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportSchedule</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SequenceNumeric</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReferenceDate</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReferenceTime</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EstimatedDepartureTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EstimatedArrivalTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PlannedDepartureTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PlannedArrivalTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportationSegment</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SequenceNumeric</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportExecutionPlanReferenceID</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReferencedConsignment</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ShipmentStage</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportationService</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportationServiceDescription</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Name</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SequenceNumeric</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportEquipment</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SupportedTransportEquipment</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>UnsupportedTransportEquipment</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CommodityClassification</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SupportedCommodityClassification</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>UnsupportedCommodityClassification</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TotalCapacityDimension</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ShipmentStage</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ResponsibleTransportServiceProviderParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EnvironmentalEmission</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EstimatedDurationPeriod</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ScheduledServiceFrequency</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>UtilityItem</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SubscriberType</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SubscriberTypeCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>WinningParty</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>WorkPhaseReference</entry>
-            <entry> </entry>
+            <entry>EvidenceDocumentReference</entry>
             <entry>Added</entry>
          </row>
       </tbody>
@@ -24882,17 +23386,18 @@ overall performance of the supply chain:</para>
             <!--### end of common library differences ####-->
             </table>
         </section>
-        <section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-FOLLOWING-PRD2">
-          <title>Changes to Document Elements Following PRD2</title>
+        <section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-FOLLOWING-PRD3">
+          <title>Changes to Document Elements Following PRD3</title>
           <para>The following table sums up the differences between the XML
             elements in the UBL 2.1 document schemas of this distribution and
-            the XML elements in the document schemas of the Second Review
+            the XML elements in the document schemas of the Third Review
             Draft.</para>
           <table>
-            <title>Changes to Document Elements Following PRD2</title>
-            <!--#### start of document differences from PRD2 ####-->
+            <title>Changes to Document Elements Following PRD3</title>
+            <!--#### start of document differences from PRD3 ####-->
+                    <!--Document (UBL 2.1 yyy to UBL 2.1 xxx)-->
             
-   <tgroup cols="3"><!--Document (UBL 2.1 PRD2 to UBL 2.1 PRD3D5)-->
+   <tgroup cols="3"><!--Document (UBL 2.1 PRD3 to UBL 2.1 PRD4D1)-->
 <colspec colwidth="35*"/>
       <colspec colwidth="35*"/>
       <colspec colwidth="30*"/>
@@ -24904,491 +23409,20 @@ overall performance of the supply chain:</para>
          </row>
       </thead>
       <tbody>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>AwardedNotification</entry>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Tender</entry>
             <entry> </entry>
             <entry> </entry>
          </row>
          <row>
             <entry> </entry>
-            <entry>ContractName</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>CallForTenders</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>VersionID</entry>
+            <entry>TendererQualificationDocumentReference</entry>
             <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PreviousVersionID</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ContractAwardNotice</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RegulatoryDomain</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PublishAwardIndicator</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ContractNotice</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RegulatoryDomain</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>CreditNote</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CreditNoteTypeCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>BuyerReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>DocumentStatus</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DocumentResponse</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>FreightInvoice</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Shipment</entry>
-            <entry>Changed cardinality from 1 to 1..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>FulfilmentCancellation</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>GoodsItemItinerary</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ID</entry>
-            <entry>Changed cardinality from 0..1 to 1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>IssueDate</entry>
-            <entry>Changed cardinality from 0..1 to 1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>IssueTime</entry>
-            <entry>Changed cardinality from 0..1 to 1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReferencedConsignment</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Invoice</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>BuyerReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ProjectReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>WithholdingTaxTotal</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Order</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ProjectReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DeliveryTerms</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>OrderCancellation</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>CancellationNote</entry>
-            <entry>Changed cardinality from 1 to 1..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>OrderResponse</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>OrderLine</entry>
-            <entry>Changed cardinality from 1..n to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>OrderResponseSimple</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>RejectionNote</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>PackingList</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Quotation</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>BuyerCustomerParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>ReceiptAdvice</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReceiptAdviceTypeCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>RetailEvent</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Description</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TendererQualification</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ID</entry>
-            <entry>Changed cardinality from 0..1 to 1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>VersionID</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>PreviousVersionID</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportExecutionPlan</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>VersionID</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DocumentStatusCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DocumentStatusReasonCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>DocumentStatusReasonDescription</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SenderParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReceiverParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>BillToParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportExecutionPlanRequestDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportExecutionPlanDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportServiceProviderResponseRequiredPeriod</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportUserResponseRequiredPeriod</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Consignment</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportExecutionPlanRequest</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportProgressStatus</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>IssueDate</entry>
-            <entry>Changed cardinality from 0..1 to 1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>IssueTime</entry>
-            <entry>Changed cardinality from 0..1 to 1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportProgressStatusRequestDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportProgressStatusRequest</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportServiceDescription</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ID</entry>
-            <entry>Changed cardinality from 0..1 to 1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ResponseCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportServiceDescriptionRequestDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportServiceProviderParty</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ServiceChargePaymentTerms</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ValidityPeriod</entry>
-            <entry>Changed cardinality from 1 to 0..1</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportationService</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportServiceDescriptionRequest</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportationStatus</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportationStatusTypeCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportExecutionStatusCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Consignment</entry>
-            <entry>Changed cardinality from 1 to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportEvent</entry>
-            <entry>Changed cardinality from 1..n to 0..n</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>SenderParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ReceiverParty</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportationStatusRequestDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TransportExecutionPlanDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>UpdatedPickupTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>UpdatedDeliveryTransportEvent</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>StatusLocation</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>StatusPeriod</entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TransportationStatusRequest</entry>
-            <entry> </entry>
-            <entry>Added</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>UnawardedNotification</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>ContractName</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
          </row>
       </tbody>
    </tgroup>
 
             <!--#### end of document differences ####-->
           </table>
-        </section>
-        <section id="S-CHANGES-TO-ATTRIBUTES-FOLLOWING-PRD2">
-          <title>Changes to Attributes Following PRD2</title>
-          <para>The following attributes, which were optional in UBL 2.1 PRD2,
-            have been changed from optional to mandatory in the this
-            release.</para>
-          <simplelist>
-            <member>The <literal>currencyID</literal> attribute on
-                <literal>AmountType</literal></member>
-            <member>The <literal>mimeCode</literal> attribute on
-                <literal>BinaryObjectType</literal></member>
-            <member>The <literal>unitCode</literal> attribute on
-                <literal>MeasureType</literal></member>
-          </simplelist>
-          <para>These changes bring UBL 2.1 back into alignment with UBL 2.0,
-            in which these attributes were also mandatory. <emphasis
-              role="bold">As a consequence, however, UBL 2.1 is not
-              backward-compatible with UBL 2.1 PRD2 in this
-            respect.</emphasis></para>
-        </section>
-        <section id="S-OTHER-CHANGES-FOLLOWING-PRD2">
-          <title>Other Changes Following PRD2</title>
-          <para>Compared to the version contained in PRD2, the context/value
-            association file <literal><ulink url="cva/UBL-DefaultDTQ-2.1.cva"
-                >cva/UBL-DefaultDTQ-2.1.cva</ulink></literal> in this
-            distribution:</para>
-          <itemizedlist>
-            <listitem>
-              <para>adds the checking of new data type qualifications for
-                ReceiptAdviceType and WeekDay;</para>
-            </listitem>
-            <listitem>
-              <para>reflects the latest document model contexts for each code
-                list;</para>
-            </listitem>
-            <listitem>
-              <para>repairs an absent check for the schemeID attribute for
-                identifiers;</para>
-            </listitem>
-            <listitem>
-              <para>repairs the incorrect checking of the list identifier for
-                quantity; and</para>
-            </listitem>
-            <listitem>
-              <para>updates the list of code lists to latest suite found in the
-                  <literal>cl</literal> directory.</para>
-            </listitem>
-          </itemizedlist>
         </section>
       </section>
     </section>
@@ -25675,7 +23709,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         therefore has this structure, too. From this one could conclude that
         instantiations of the <literal>Period</literal> structure (there are
         more than 50 of them in UBL 2.1) need not contain any of the seven
-        optional BBIE elements specified at lines 1407&#8211;1413, and indeed
+        optional BBIE elements specified at lines 1419&#8211;1425, and indeed
         the corresponding declaration of the complex type
           <literal>PeriodType</literal> in the CAC schema (<literal><ulink
             url="xsd/common/UBL-CommonAggregateComponents-2.1.xsd"
@@ -25698,29 +23732,31 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
     <cbc:EndDate>2011-08-31</cbc:EndDate>
   </cac:InvoicePeriod>
 ]]></programlisting>
-      <para>Next in order in the Invoice come two required pieces, the ASBIEs
-          <literal>AccountingSupplierParty</literal> and
-          <literal>AccountingCustomerParty</literal>. As shown in Column M of
-        the Invoice spreadsheet, <literal>AccountingSupplierParty</literal>
-        (line 36) derives from the <literal>SupplierParty</literal> ABIE and
-          <literal>AccountingCustomerParty</literal> (line 37) derives from the
-          <literal>CustomerParty</literal> ABIE. Checking in the Common
-        Library, it is seen that both <literal>SupplierParty</literal> (line
-        1899 of the Common Library spreadsheet) and
-          <literal>CustomerParty</literal> (line 552 of the Common Library
-        spreadsheet) can contain an ASBIE named <literal>Party</literal> (as
-        shown in lines 1891 and 546, respectively) and that each
-          <literal>Party</literal> ASBIE is an instantiation of the
-          <literal>Party</literal> ABIE (line 1312). Therefore both parties
-        have the same structure (lines 1247 through 1265). Thus
-          <literal>AccountingSupplierParty</literal> and
-          <literal>AccountingCustomerParty</literal> share the information
-        components common to parties in general and differ in the information
-        specific to suppliers and customers. Parties commonly have a
-          <literal>PartyName</literal> (line 1320) that derives (Column M) from
-        the ABIE <literal>PartyName</literal> (line 1349), which is a wrapper
-        for the BBIE <literal>Name</literal> (line 1350). A conforming piece of
-        the document instance might therefore look like this:</para>
+   <para>
+   Next in order in the Invoice come two required pieces, the
+   ASBIEs <literal>AccountingSupplierParty</literal> and
+   <literal>AccountingCustomerParty</literal>. As shown in Column M of
+   the Invoice spreadsheet, <literal>AccountingSupplierParty</literal>
+   (line 36) derives from the <literal>SupplierParty</literal> ABIE and
+   <literal>AccountingCustomerParty</literal> (line 37) derives from the
+   <literal>CustomerParty</literal> ABIE. Checking in the Common
+   Library, it is seen that both <literal>SupplierParty</literal> (line
+   1899 of the Common Library spreadsheet) and
+   <literal>CustomerParty</literal> (line 552 of the Common Library
+   spreadsheet) can contain an ASBIE named <literal>Party</literal> (as
+   shown in lines 1903 and 556, respectively) and that each
+   <literal>Party</literal> ASBIE is an instantiation of the
+   <literal>Party</literal> ABIE (line 1312). Therefore both parties
+   have the same structure (lines 1313 through 1331). Thus
+   <literal>AccountingSupplierParty</literal> and
+   <literal>AccountingCustomerParty</literal> share the information
+   components common to parties in general and differ in the information
+   specific to suppliers and customers. Parties commonly have a
+   <literal>PartyName</literal> (line 1320) that derives (Column M) from
+   the ABIE <literal>PartyName</literal> (line 1349), which is a wrapper
+   for the BBIE <literal>Name</literal> (line 1350). A conforming piece
+   of the document instance might therefore look like this:
+</para>
       <programlisting role="font-size-92%"><![CDATA[  <cac:AccountingSupplierParty>
     <cac:Party>
       <cac:PartyName>
@@ -25873,18 +23909,22 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
          <title>UML-Based View of the UBL Data Model</title>
 
          <para>For users familiar with the Unified Modeling Language,
-           a graphical view of the
-            UBL 2.1 data model as a set of UML classes is provided
-            in this package.</para>
+           a graphical view of the data model of the
+            UBL 2.1 document ABIEs as a set of UML classes is provided
+            in this package. </para>
 
          <blockquote>
 
             <para>
-               <literal><ulink url="uml/UBL-2.1-uml.html"
-                  >uml/UBL-2.1-uml.html</ulink></literal>
+               <literal><ulink url="uml/index.htm"
+                  >uml/index.htm</ulink></literal>
             </para>
 
          </blockquote>
+        <para>See <xref
+                    linkend="S-UBL-2.1-UML-DIAGRAMS"/> for 
+        information regarding UML diagrams for other UBL 2.1 BIEs.
+        </para>
       </section>
 
   </appendix>
@@ -27074,7 +25114,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
               value. It is typical that users would have their own choice of
               values, or in fact perhaps many lists of values, for commodity
               identification codes. The United Nations Standard Products and
-              Services Code (UNSPSC), maintained by GS1, is a commonly used
+              Services Code (UNSPSC), maintained by GS1 US, is a commonly used
               source of values for this list.</para>
           </note>
           <note>
@@ -27372,62 +25412,35 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
     <title>Alternative Representations of the UBL 2.1 Schemas</title>
     <para>UBL 2.1 continues the practice, adopted at the beginning of the UBL
       effort, of creating its normative XML specifications using W3C Schema
-      (XSD) syntax. In addition, this release includes two additional
-      alternative specifications of the same content: a set of UBL 2.1 ASN.1
-      modules and a set of UBL 2.1 RELAX NG (compact syntax) schemas. These
-      alternative representations are technically non-normative, but both are
-      generated directly from the XSD and, with the exception of the UBL 2.1
-      digital signature extension (see <xref
-        linkend="S-UBL-EXTENSION-FOR-XML-DIGITAL-SIGNATURES"/>), both are
-      intended to implement the same document instance constraints.</para>
+      (XSD) syntax. Alternative representations of the same content are
+      technically non-normative, but are generated directly from the XSD and,
+      with the exception of the UBL 2.1 digital signature extension (see <xref
+        linkend="S-UBL-EXTENSION-FOR-XML-DIGITAL-SIGNATURES"/>), are intended
+      to implement the same document instance constraints.</para>
     <section id="S-ASN.1-UBL-2.1-SPECIFICATION">
       <title>ASN.1 UBL 2.1 Specification</title>
-      <para>The UBL ASN.1 specification linked below provides an alternative
-        schema definition for UBL documents in accordance with ITU-T
-        X.680-X.693 <xref linkend="asn.1"/>. The UBL ASN.1 specification
+      <para>The UBL ASN.1 specification <xref linkend="UBL-ASN-directory"/> provides
+        an alternative schema definition for UBL documents in accordance with
+        ITU-T X.680-X.693 <xref linkend="asn.1"/>. The UBL ASN.1 specification
         defines the same UBL documents as the UBL XSD schemas that constitute
         the normative definitions of valid UBL documents. The UBL ASN.1 XML
         specification enables ASN.1 tools to be used for UBL transfers, and in
         conjunction with the ASN.1 Packed Encoding Rules, it provides a
         specification for an efficient binary encoding of UBL messages.</para>
-      <para>The zip archive below contains the ASN.1 modules corresponding to
-        the UBL 2.1 document schemas as individual text files. The ASN.1
-        modules were created using a tool from <ulink url="http://www.oss.com/"
-          >OSS Nokalva</ulink> that conforms to ITU-T Recommendation X.694 |
-        ISO/IEC 8825-5 for converting XSD Schema to ASN.1.</para>
-      <blockquote>
-        <para>
-          <variablelist>
-            <varlistentry>
-              <term><emphasis role="bold">UBL 2.1 ASN.1
-                Modules</emphasis></term>
-              <listitem>
-                <para><literal><ulink url="asn/ASN.1-UBL-2.1-modules.zip"
-                      >asn/ASN.1-UBL-2.1-modules.zip</ulink></literal></para>
-              </listitem>
-            </varlistentry>
-          </variablelist>
+      <para>The ASN.1 modules were created using a tool from <ulink
+          url="http://www.oss.com/">OSS Nokalva</ulink> that conforms to ITU-T
+        Recommendation X.694 | ISO/IEC 8825-5 for converting XSD Schema to
+        ASN.1.</para>
+    </section>
+    <section id="S-UBL-2.1-UML-DIAGRAMS">
+      <title>UBL 2.1 UML Diagrams</title>
+      <para>The UBL 2.1 UML diagrams <xref linkend="UBL-UML-directory"/>
+        provide a graphical view of the UBL document models using
+        <xref linkend="uml"/>.
         </para>
-      </blockquote>
       <para>
-        After conversion from XSD, the generated ASN.1 was formatted 
-        to produce the following HTML documentation file for the
-        user's convenience.
-      </para>
-      <blockquote>
-        <para>
-          <variablelist>
-            <varlistentry>
-              <term><emphasis role="bold">UBL 2.1 ASN.1
-                  Specification</emphasis></term>
-              <listitem>
-                <para><literal><ulink url="asn/ASN.1-UBL-2.1.html"
-                      >asn/ASN.1-UBL-2.1.html</ulink></literal></para>
-              </listitem>
-            </varlistentry>
-          </variablelist>
-        </para>
-      </blockquote>
+        The UML diagrams were created using a tool from <ulink
+          url="http://www.sparxsystems.com/">Sparx Systems</ulink>.</para>
     </section>
     <section id="S-UBL-2.1-RELAX-NG-SCHEMAS">
       <title>UBL 2.1 RELAX NG Schemas</title>
