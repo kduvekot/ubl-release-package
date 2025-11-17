@@ -11604,7 +11604,7 @@ ENCODING-CONTROL XER
     <FONT COLOR=#0000FF><B>FROM</B></FONT> CommonBasicComponents-2
   OrderReference, DespatchDocumentReference, AdditionalDocumentReference,
     Signature, DeliveryCustomerParty, DespatchSupplierParty,
-    BuyerCustomerParty, SellerSupplierParty, ReceiptLine, Shipment
+    BuyerCustomerParty, SellerSupplierParty, Shipment, ReceiptLine
     <FONT COLOR=#0000FF><B>FROM</B></FONT> CommonAggregateComponents-2;
 
 <A NAME="ReceiptAdvice-2.ReceiptAdvice"></A>ReceiptAdvice ::= <A HREF="#ReceiptAdvice-2.ReceiptAdviceType">ReceiptAdviceType</A>
@@ -11632,9 +11632,9 @@ ENCODING-CONTROL XER
   despatchSupplierParty             <A HREF="#CommonAggregateComponents-2.DespatchSupplierParty">DespatchSupplierParty</A>,
   buyerCustomerParty                <A HREF="#CommonAggregateComponents-2.BuyerCustomerParty">BuyerCustomerParty</A> <FONT COLOR=#666666><B>OPTIONAL</B></FONT>,
   sellerSupplierParty               <A HREF="#CommonAggregateComponents-2.SellerSupplierParty">SellerSupplierParty</A> <FONT COLOR=#666666><B>OPTIONAL</B></FONT>,
+  shipment                          <A HREF="#CommonAggregateComponents-2.Shipment">Shipment</A> <FONT COLOR=#666666><B>OPTIONAL</B></FONT>,
   receiptLine-list
-    <FONT COLOR=#B8860B><B>SEQUENCE</B></FONT> <FONT COLOR=#228B22><FONT COLOR=#228B22>(<FONT COLOR=#228B22><B>SIZE</B></FONT> <FONT COLOR=#228B22>(1..<FONT COLOR=#228B22><B>MAX</B></FONT>)</FONT>)</FONT></FONT> <FONT COLOR=#B8860B><B>OF</B></FONT> receiptLine <A HREF="#CommonAggregateComponents-2.ReceiptLine">ReceiptLine</A>,
-  shipment                          <A HREF="#CommonAggregateComponents-2.Shipment">Shipment</A> <FONT COLOR=#666666><B>OPTIONAL</B></FONT>}
+    <FONT COLOR=#B8860B><B>SEQUENCE</B></FONT> <FONT COLOR=#228B22><FONT COLOR=#228B22>(<FONT COLOR=#228B22><B>SIZE</B></FONT> <FONT COLOR=#228B22>(1..<FONT COLOR=#228B22><B>MAX</B></FONT>)</FONT>)</FONT></FONT> <FONT COLOR=#B8860B><B>OF</B></FONT> receiptLine <A HREF="#CommonAggregateComponents-2.ReceiptLine">ReceiptLine</A>}
 
 <FONT COLOR=#B22222><I>
 ENCODING-CONTROL XER
@@ -11662,9 +11662,8 @@ ENCODING-CONTROL XER
 	ReceiptAdviceType.deliveryCustomerParty, 
 	ReceiptAdviceType.despatchSupplierParty, 
 	ReceiptAdviceType.buyerCustomerParty, 
-	ReceiptAdviceType.sellerSupplierParty, 
-	ReceiptAdviceType.receiptLine-list.receiptLine, 
-	ReceiptAdviceType.shipment
+	ReceiptAdviceType.sellerSupplierParty, ReceiptAdviceType.shipment, 
+	ReceiptAdviceType.receiptLine-list.receiptLine
 	AS "urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
 	    PREFIX "ns4"
     NAME ALL IN ReceiptAdviceType,
@@ -11673,8 +11672,7 @@ ENCODING-CONTROL XER
 	ReceiptAdviceType.despatchDocumentReference-list.despatchDocumentReference,
 	ReceiptAdviceType.additionalDocumentReference-list.additionalDocumentReference,
 	ReceiptAdviceType.signature-list.signature, 
-	ReceiptAdviceType.receiptLine-list.receiptLine
-	AS CAPITALIZED
+	ReceiptAdviceType.receiptLine-list.receiptLine AS CAPITALIZED
     UNTAGGED SEQUENCE OF
 
 </I></FONT><FONT COLOR=#0000FF><B>END</B></FONT>

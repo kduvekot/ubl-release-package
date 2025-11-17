@@ -29,4 +29,7 @@
   </xsl:choose>
 </xsl:template>
 
+<xsl:template match="section" mode="object.title.template">%n. %t</xsl:template>
+<xsl:template match="*" mode="object.title.template">%t</xsl:template>
+
 </xsl:stylesheet>

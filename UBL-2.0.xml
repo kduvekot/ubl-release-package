@@ -77,13 +77,14 @@
 </othercredit>
 </authorgroup>
 
-<pubdate>5 October 2006</pubdate>
+<pubdate>12 October 2006</pubdate>
 
 <legalnotice role="related"><title>Related Work</title>
   <para>This specification supersedes UBL 1.0.</para>
 </legalnotice>
 
 <abstract>
+  <title>Abstract</title>
   <para>This specification defines the Universal Business Language, version 2.0.</para>
 </abstract>
 
@@ -125,7 +126,7 @@ rights in OASIS specifications can be found at the OASIS
 website. Copies of claims of rights made available for publication
 and any assurances of licenses to be made available, or the result
 of an attempt made to obtain a general license or permission for
-the use of such proprietary rights by implementors or users of
+the use of such proprietary rights by implementers or users of
 this specification, can be obtained from the OASIS Executive
 Director. </para>
       <para>OASIS invites any interested party to bring to its attention
@@ -7221,12 +7222,12 @@ codes in another place in the instance.</para>
 this context-specific functionality is described in a separate
 specification called the UBL Code List Value Validation Methodology, a copy of
 which can be obtained from the UBL TC web site at OASIS.  A set of
-support files to aid implementors in creating custom XSLT code
+support files to aid implementers in creating custom XSLT code
 list files will be included in the UBL 2.0 Support Package from
 the same site.</para>
       </section>
       <section>
-         <title>Default validation setup</title>
+         <title>Default Validation Setup</title>
          <para>To facilitate the processing of UBL 2.0 instances using the
 two-phase method, an &#8220;out-of-the-box&#8221; collection of
 open-source software that can be used to perform default
@@ -7328,7 +7329,7 @@ the <code>xml</code> directory.</para>
          </orderedlist>
       </section>
       <section>
-         <title>Discussion of the default validation test</title>
+         <title>Discussion of the Default Validation Test</title>
          <para>The test output displayed above in E.2 demonstrates the default
 validation process with three test files: a valid UBL Order
 (<code>order-test-good.xml</code>); a UBL Order containing a bad
@@ -7400,7 +7401,7 @@ it will not give reliable results if run in the absence of the
 first (schema) validation phase.</para>
       </section>
       <section>
-         <title>Customizing the default XSLT file</title>
+         <title>Customizing the Default XSLT file</title>
          <para>The validation framework provided in the
 <code>val</code> directory can be used to implement code list
 changes, define variant code lists to fit specific trading partner
@@ -7422,7 +7423,7 @@ processes and to perform even more sophisticated front-end
 processing.</para>
       </section>
       <section>
-         <title>Sources for the default validation framework</title>
+         <title>Sources for the Default Validation Framework</title>
          <para>Components of several freely available software distributions
 were used to create the <code>val</code> directory.  Sources
 are given below so that these components can be updated as later
@@ -7460,7 +7461,7 @@ distribution at</para>
          </itemizedlist>
       </section>
       <section>
-         <title>Code list documentation</title>
+         <title>Code List Documentation</title>
          <para>While the <code>defaultCodeList.xsl</code> file is what
 actually drives the second validation phase where the code list
 values get checked, it doesn&#8217;t function well as documentation of
