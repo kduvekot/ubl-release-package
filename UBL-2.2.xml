@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" 
   href="db/spec-0.7/stylesheets/oasis-specification-html-offline.xsl"?>
 <!--
-  $Id: UBL-2.2.xml,v 1.136 2018/04/16 15:40:36 admin Exp $
+  $Id: UBL-2.2.xml,v 1.138 2018/07/08 19:50:31 admin Exp $
   Single quote: &#8217; Double quotes: &#8220;&#8221; 
   Search strings: "gentext" "reviewtext"
   role="namespaces"
@@ -16,14 +16,14 @@
 <!ENTITY name "UBL">
 <!ENTITY pversion "NONE">
 <!ENTITY version  "2.2">
-<!ENTITY stage    "cos01">
-<!ENTITY isostage "cos01">
-<!ENTITY stagetext "Candidate OASIS Standard 01">
-<!ENTITY standard  "Candidate OASIS Standard 01">
+<!ENTITY stage    "os">
+<!ENTITY isostage "IS">
+<!ENTITY stagetext "OASIS Standard">
+<!ENTITY standard  "OASIS Standard">
 <!ENTITY this-loc     "http://docs.oasis-open.org/ubl/&stage;-UBL-2.2">
 <!ENTITY previous-loc "http://docs.oasis-open.org/ubl/cs01-UBL-2.2">
 <!ENTITY latest-loc   "http://docs.oasis-open.org/ubl">
-<!ENTITY pubdate     "22 April 2018"><!--remove time from pub date-->
+<!ENTITY pubdate     "09 July 2018"><!--remove time from pub date-->
 <!ENTITY pubyear     "2018">
 <!ENTITY pubdate-iso "ccyy-mm-dd">
 <!ENTITY reldate-iso "ccyy-mm">
@@ -277,7 +277,9 @@
         Draft. A TC may approve a Working Draft, revise it, and re-approve it any number of times as
         a Committee Draft.</para>
       -->
-      <para>This document was last revised or approved by the OASIS Universal Business Language TC
+      <para>This document was last revised or approved by the 
+        <!--OASIS Universal Business Language TC-->
+        OASIS Members
         on the above date. The level of approval is also listed above. Check the &#x201c;Latest
         version&#x201d; location noted above for possible later revisions of this document. Any
         other numbered Versions and other technical work produced by the Technical Committee (TC)
@@ -313,7 +315,7 @@
           <citetitle>Universal Business Language Version 2.2.</citetitle>
           <bibliomisc>Edited by G. Ken Holman.</bibliomisc>
           <date>&pubdate;. </date>
-          <releaseinfo>OASIS &standard;. </releaseinfo>
+          <releaseinfo>&standard;. </releaseinfo>
           <bibliomisc>
             <ulink url="http://docs.oasis-open.org/ubl/&stage;-UBL-2.2/UBL-2.2.html"
               >http://docs.oasis-open.org/ubl/&stage;-UBL-2.2/UBL-2.2.html</ulink>. Latest version:

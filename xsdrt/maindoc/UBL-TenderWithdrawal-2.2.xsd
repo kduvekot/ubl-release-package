@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.2 COS01
-                     http://docs.oasis-open.org/ubl/cos01-UBL-2.2/
-  Release Date:      22 April 2018
+  Library:           OASIS Universal Business Language (UBL) 2.2 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.2/
+  Release Date:      09 July 2018
   Module:            xsdrt/maindoc/UBL-TenderWithdrawal-2.2.xsd
-  Generated on:      2018-04-16 16:03z
+  Generated on:      2018-07-08 20:04z
   Copyright (c) OASIS Open 2018. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TenderWithdrawal-2"
