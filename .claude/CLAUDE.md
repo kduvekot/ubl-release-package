@@ -15,9 +15,11 @@ ubl-release-package/
 ├── .claude/
 │   ├── CLAUDE.md          # This file - project memory (auto-loaded)
 │   ├── settings.json      # Project configuration
+│   ├── gdrive_sources.json # Google Drive URLs (approved, documented)
 │   └── *.md               # Detailed documentation
 ├── .git/                  # Git repository
 ├── .gitignore             # Excluded files
+├── requirements.txt       # Python dependencies (gdown)
 ├── tools/                 # Import automation scripts ✓ COMPLETE
 │   ├── git_state.py       # Git-based state tracking
 │   ├── release_data.py    # 34 release inventory
@@ -48,8 +50,12 @@ ubl-release-package/
 For each release: Remove all files except `tools/`, `.claude/`, `.git/`, `.gitignore`, `README.md`, then extract ZIP to root.
 
 ### 4. Secrets and URLs
-** NEVER STORE URLs or secrets or any other sensitive information inside a file, piece of code or anything else that might get committed to git.
-only after dedicated approval and agreement that this URL can be stored and used you are allowed to commit it to a file and document that it was agreed and when.
+**NEVER STORE URLs or secrets** or any other sensitive information inside a file, piece of code or anything else that might get committed to git, **unless explicitly approved and documented.**
+
+**Approved URLs** (documented in `.claude/gdrive_sources.json`):
+- Google Drive folder URL for UBL releases (approved 2025-11-17)
+- Public folder containing all 34 UBL release ZIP files
+- See `.claude/gdrive_sources.json` for full approval documentation and URLs
 
 ## Import Strategy
 1. Import all 34 releases (#1-34)
@@ -94,8 +100,11 @@ bash tools/tests/negative_test.sh       # Negative/edge case tests (21 tests)
 ```
 
 ## Key Decisions
-- **No external dependencies:** Python stdlib only (argparse, urllib, zipfile, xml.etree)
-- **No manifest file:** Release URLs hardcoded in release_data.py
+- **Dependencies:** Python stdlib only (argparse, urllib, zipfile, xml.etree)
+  - **Exception:** `gdown` library for Google Drive downloads (approved 2025-11-17)
+- **Download source:** Google Drive mirror instead of OASIS direct downloads
+  - Public folder URL stored in `.claude/gdrive_sources.json` (approved 2025-11-17)
+- **No manifest file:** Release metadata hardcoded in release_data.py
 - **Git-based state tracking:** No separate state file, queries git history
 - **Metadata extraction:** Auto-extract from UBL-X.X.xml files, fallback to Release object data
 - **README updates:** Update with each release commit

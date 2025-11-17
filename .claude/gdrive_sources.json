@@ -1,0 +1,15 @@
+{
+  "_comment": "Google Drive Source Configuration for UBL Release Downloads",
+  "_approval": {
+    "approved_by": "user",
+    "approved_date": "2025-11-17",
+    "reason": "Using Google Drive mirror instead of OASIS direct downloads for all 34 UBL release packages",
+    "documentation": "See .claude/CLAUDE.md section 'Secrets and URLs' for URL storage policy"
+  },
+  "gdrive_folder": {
+    "url": "https://drive.google.com/drive/folders/1yq-RWOhaFIYW5byso8lZqpPUahtmaNvm?usp=sharing",
+    "folder_id": "1yq-RWOhaFIYW5byso8lZqpPUahtmaNvm",
+    "description": "Public Google Drive folder containing all 34 UBL release ZIP files",
+    "file_naming": "Numbered files (e.g., 01_prd-UBL-2.0.zip, 02_prd2-UBL-2.0.zip, etc.)"
+  }
+}
