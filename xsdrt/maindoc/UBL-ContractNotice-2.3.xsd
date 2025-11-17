@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
-                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
-  Release Date:      30 January 2020
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
+                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
+  Release Date:      07 August 2019
   Module:            xsdrt/maindoc/UBL-ContractNotice-2.3.xsd
-  Generated on:      2020-01-28 20:53z
-  Copyright (c) OASIS Open 2020. All Rights Reserved.
+  Generated on:      2019-08-15 00:22z
+  Copyright (c) OASIS Open 2019. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -37,15 +37,10 @@
          <xsd:element ref="cbc:IssueDate" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cbc:VersionID" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:PreviousVersionID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:RequestedPublicationDate" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:RegulatoryDomain" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:NoticeTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:NoticeLanguageCode" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cac:AdditionalNoticeLanguage"
-                      minOccurs="0"
-                      maxOccurs="unbounded"/>
          <xsd:element ref="cac:FrequencyPeriod" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:ContractingParty" minOccurs="1" maxOccurs="unbounded"/>

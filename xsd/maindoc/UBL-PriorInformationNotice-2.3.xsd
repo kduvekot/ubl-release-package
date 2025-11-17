@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
-                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
-  Release Date:      30 January 2020
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
+                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
+  Release Date:      07 August 2019
   Module:            xsd/maindoc/UBL-PriorInformationNotice-2.3.xsd
-  Generated on:      2020-01-28 20:53z
-  Copyright (c) OASIS Open 2020. All Rights Reserved.
+  Generated on:      2019-08-15 00:22z
+  Copyright (c) OASIS Open 2019. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -226,39 +226,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:VersionID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Prior Information Notice. Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier of the current version of the Prior Information Notice.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Prior Information Notice</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Version Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:PreviousVersionID" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Prior Information Notice. Previous_ Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier of the previous version of the Prior Information Notice which is superceded by this version.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Prior Information Notice</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Previous</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Version Identifier</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
          <xsd:element ref="cbc:RequestedPublicationDate" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -288,22 +255,6 @@
                      <ccts:PropertyTerm>Planned Date</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
                      <ccts:DataType>Date. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:RegulatoryDomain" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Prior Information Notice. Regulatory Domain. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about the law that defines the regulatory domain.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Prior Information Notice</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Regulatory Domain</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -338,25 +289,6 @@
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
                      <ccts:DataTypeQualifier>Language</ccts:DataTypeQualifier>
                      <ccts:DataType>Language_ Code. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:AdditionalNoticeLanguage"
-                      minOccurs="0"
-                      maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Prior Information Notice. Additional Notice_ Language. Language</ccts:DictionaryEntryName>
-                     <ccts:Definition>An additional official language used for this prior information notice.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Prior Information Notice</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Additional Notice</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Language</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Language</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Language</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>

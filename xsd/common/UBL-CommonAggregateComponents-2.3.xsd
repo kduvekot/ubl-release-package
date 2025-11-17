@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
-                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
-  Release Date:      30 January 2020
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
+                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
+  Release Date:      07 August 2019
   Module:            xsd/common/UBL-CommonAggregateComponents-2.3.xsd
-  Generated on:      2020-01-28 20:53z
-  Copyright (c) OASIS Open 2020. All Rights Reserved.
+  Generated on:      2019-08-15 00:22z
+  Copyright (c) OASIS Open 2019. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -25,6 +25,7 @@
    <!-- ===== Element Declarations ===== -->
    <xsd:element name="AcceptanceTransportEvent" type="TransportEventType"/>
    <xsd:element name="AccessoryRelatedItem" type="RelatedItemType"/>
+   <xsd:element name="AccompanyingParty" type="PartyType"/>
    <xsd:element name="AccountingContact" type="ContactType"/>
    <xsd:element name="AccountingCustomerParty" type="CustomerPartyType"/>
    <xsd:element name="AccountingSupplierParty" type="SupplierPartyType"/>
@@ -43,12 +44,10 @@
                 type="CommodityClassificationType"/>
    <xsd:element name="AdditionalDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="AdditionalDocumentResponse" type="DocumentResponseType"/>
-   <xsd:element name="AdditionalFee" type="FeeType"/>
    <xsd:element name="AdditionalInformationParty" type="PartyType"/>
    <xsd:element name="AdditionalInformationRequestPeriod" type="PeriodType"/>
    <xsd:element name="AdditionalItemIdentification" type="ItemIdentificationType"/>
    <xsd:element name="AdditionalItemProperty" type="ItemPropertyType"/>
-   <xsd:element name="AdditionalNoticeLanguage" type="LanguageType"/>
    <xsd:element name="AdditionalQualifyingParty" type="QualifyingPartyType"/>
    <xsd:element name="AdditionalTemperature" type="TemperatureType"/>
    <xsd:element name="AdditionalTransportationService" type="TransportationServiceType"/>
@@ -303,7 +302,6 @@
                 type="DocumentReferenceType"/>
    <xsd:element name="ExternalReference" type="ExternalReferenceType"/>
    <xsd:element name="ExtraAllowanceCharge" type="AllowanceChargeType"/>
-   <xsd:element name="Fee" type="FeeType"/>
    <xsd:element name="FinalDeliveryParty" type="PartyType"/>
    <xsd:element name="FinalDeliveryTransportationService"
                 type="TransportationServiceType"/>
@@ -410,7 +408,6 @@
    <xsd:element name="LogisticsOperatorParty" type="PartyType"/>
    <xsd:element name="LotDistribution" type="LotDistributionType"/>
    <xsd:element name="LotIdentification" type="LotIdentificationType"/>
-   <xsd:element name="LotsGroup" type="LotsGroupType"/>
    <xsd:element name="MainCarriageShipmentStage" type="ShipmentStageType"/>
    <xsd:element name="MainCommodityClassification" type="CommodityClassificationType"/>
    <xsd:element name="MainOnAccountPayment" type="OnAccountPaymentType"/>
@@ -479,7 +476,6 @@
    <xsd:element name="ParentDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="ParticipantParty" type="ParticipantPartyType"/>
    <xsd:element name="ParticipatingLocationsLocation" type="LocationType"/>
-   <xsd:element name="ParticipationInvitationPeriod" type="PeriodType"/>
    <xsd:element name="ParticipationRequestReceptionPeriod" type="PeriodType"/>
    <xsd:element name="Party" type="PartyType"/>
    <xsd:element name="PartyAuthorization" type="AuthorizationType"/>
@@ -536,10 +532,8 @@
    <xsd:element name="PriceList" type="PriceListType"/>
    <xsd:element name="PricingExchangeRate" type="ExchangeRateType"/>
    <xsd:element name="PricingReference" type="PricingReferenceType"/>
-   <xsd:element name="Prize" type="PrizeType"/>
    <xsd:element name="ProcessJustification" type="ProcessJustificationType"/>
    <xsd:element name="ProcessingParty" type="PartyType"/>
-   <xsd:element name="ProcurementAdditionalType" type="ProcurementAdditionalTypeType"/>
    <xsd:element name="ProcurementLegislationDocumentReference"
                 type="DocumentReferenceType"/>
    <xsd:element name="ProcurementProject" type="ProcurementProjectType"/>
@@ -554,7 +548,6 @@
    <xsd:element name="PropertyIdentification" type="PropertyIdentificationType"/>
    <xsd:element name="ProvidedDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="ProviderParty" type="PartyType"/>
-   <xsd:element name="QualificationRequestRecipientParty" type="PartyType"/>
    <xsd:element name="QualificationResolution" type="QualificationResolutionType"/>
    <xsd:element name="QualifyingParty" type="QualifyingPartyType"/>
    <xsd:element name="QuarantineTransportEvent" type="TransportEventType"/>
@@ -600,7 +593,6 @@
    <xsd:element name="ReplacementRelatedItem" type="RelatedItemType"/>
    <xsd:element name="ReportedShipment" type="ShipmentType"/>
    <xsd:element name="ReportingPerson" type="PersonType"/>
-   <xsd:element name="RepresentativeParty" type="PartyType"/>
    <xsd:element name="RequestForQuotationDocumentReference"
                 type="DocumentReferenceType"/>
    <xsd:element name="RequestForQuotationLine" type="RequestForQuotationLineType"/>
@@ -647,7 +639,6 @@
    <xsd:element name="SalesItem" type="SalesItemType"/>
    <xsd:element name="ScheduledServiceFrequency" type="ServiceFrequencyType"/>
    <xsd:element name="SecondaryHazard" type="SecondaryHazardType"/>
-   <xsd:element name="SecurityClearanceTerm" type="SecurityClearanceTermType"/>
    <xsd:element name="SecurityOfficerPerson" type="PersonType"/>
    <xsd:element name="SelfBilledCreditNoteDocumentReference"
                 type="DocumentReferenceType"/>
@@ -1257,22 +1248,6 @@
                      <ccts:DataType>Text. Type</ccts:DataType>
                      <ccts:AlternativeBusinessTerms>PremiseNumber</ccts:AlternativeBusinessTerms>
                      <ccts:Examples>388 </ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Address. Description. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Text describing this address for clarification or specificity</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Address</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Description</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -2553,22 +2528,6 @@
                      <ccts:PropertyTerm>Awarding Criterion Type Code</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
                      <ccts:DataType>Code. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Awarding Criterion. Name</ccts:DictionaryEntryName>
-                     <ccts:Definition>The name of this awarding criterion.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Awarding Criterion</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Name</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
-                     <ccts:DataType>Name. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -14074,29 +14033,10 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Document Reference. XPath. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>An unambiguous location within the bounding document or the document referenced by the parent DocumentReference, expressed as an XPath</ccts:Definition>
+                     <ccts:Definition>A reference to another place in the same XML document instance in which DocumentReference appears.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Document Reference</ccts:ObjectClass>
                      <ccts:PropertyTerm>XPath</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:ReferencedDocumentInternalAddress"
-                      minOccurs="0"
-                      maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Document Reference. Referenced_ Document Internal Address. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>A pointer to a location within the document being referenced</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Document Reference</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Referenced</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Document Internal Address</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
                   </ccts:Component>
@@ -17074,75 +17014,6 @@
          </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
-   <xsd:complexType name="FeeType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Fee. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A class to describe a revenue.</ccts:Definition>
-               <ccts:ObjectClass>Fee</ccts:ObjectClass>
-               <ccts:Examples>In the case of concession, the revenue coming from the users of the concession (e.g. fees and fines) .</ccts:Examples>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-        <xsd:element ref="cbc:FeeTypeCode" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Fee. Fee Type Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying the type of this fee.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Fee</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Fee Type Code</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-                     <ccts:DataType>Code. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:FeeAmount" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Fee. Fee_ Amount. Amount</ccts:DictionaryEntryName>
-                     <ccts:Definition>The amount of a fee.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Fee</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Fee</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Amount</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
-                     <ccts:DataType>Amount. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:FeeDescription" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Fee. Fee Description. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Text describing this fee.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Fee</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Fee Description</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-      </xsd:sequence>
-   </xsd:complexType>
    <xsd:complexType name="FinancialAccountType">
       <xsd:annotation>
          <xsd:documentation>
@@ -18090,40 +17961,6 @@
                      <ccts:PropertyTerm>Frequency</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:EstimatedMaximumValueAmount" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Framework Agreement. Estimated Maximum_ Value. Amount</ccts:DictionaryEntryName>
-                     <ccts:Definition>The estimated value which will be spent within a framework agreement over its whole duration, including options and renewals.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Framework Agreement</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Estimated Maximum</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Value</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
-                     <ccts:DataType>Amount. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:MaximumValueAmount" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Framework Agreement. Maximum_ Value. Amount</ccts:DictionaryEntryName>
-                     <ccts:Definition>The maximum Value which can be spent within a framework agreement over its whole duration, including options and renewals.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Framework Agreement</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Value</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
-                     <ccts:DataType>Amount. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -23869,22 +23706,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:LotsGroup" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Lot Distribution. Lots Group</ccts:DictionaryEntryName>
-                     <ccts:Definition>A combination of lots used when evaluating a tender.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Lot Distribution</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Lots Group</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Lots Group</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Lots Group</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="LotIdentificationType">
@@ -23951,57 +23772,6 @@
                      <ccts:PropertyTerm>Item Property</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Item Property</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Item Property</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-      </xsd:sequence>
-   </xsd:complexType>
-   <xsd:complexType name="LotsGroupType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Lots Group. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A class for defining set of lots.</ccts:Definition>
-               <ccts:ObjectClass>Lots Group</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-        <xsd:element ref="cbc:LotLotsGroupID" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Lots Group. Lot Lots Group. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for the lotsgroup.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Lots Group</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Lot Lots Group</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
-                     <ccts:DataType>Identifier. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ProcurementProjectLot" minOccurs="1" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Lots Group. Procurement Project Lot</ccts:DictionaryEntryName>
-                     <ccts:Definition>A Procurement project lot that is included in this LotsGroup.</ccts:Definition>
-                     <ccts:Cardinality>1..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Lots Group</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Procurement Project Lot</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Procurement Project Lot</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Procurement Project Lot</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -29286,80 +29056,6 @@
          </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
-   <xsd:complexType name="PrizeType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Prize. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A class to describe something valuable offered or striven for in competition.</ccts:Definition>
-               <ccts:ObjectClass>Prize</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-        <xsd:element ref="cbc:PreviousRankNumberNumeric" minOccurs="1" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Prize. Previous_ Rank Number. Numeric</ccts:DictionaryEntryName>
-                     <ccts:Definition>The relative position in the competition associated with a prize.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Prize</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Previous</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Rank Number</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
-                     <ccts:DataType>Numeric. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:PreviousCancellationReasonValueAmount"
-                      minOccurs="1"
-                      maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Prize. Previous_ Cancellation Reason Value. Amount</ccts:DictionaryEntryName>
-                     <ccts:Definition>The monetary value amount of a prize.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Prize</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Previous</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Cancellation Reason Value</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
-                     <ccts:DataType>Amount. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:PreviousCancellationReasonDescription"
-                      minOccurs="0"
-                      maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Prize. Previous_ Cancellation Reason Description. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Text providing more information about this prize.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Prize</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Previous</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Cancellation Reason Description</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-      </xsd:sequence>
-   </xsd:complexType>
    <xsd:complexType name="ProcessJustificationType">
       <xsd:annotation>
          <xsd:documentation>
@@ -29442,42 +29138,6 @@
                      <ccts:PropertyTerm>Description</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-      </xsd:sequence>
-   </xsd:complexType>
-   <xsd:complexType name="ProcurementAdditionalTypeType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Procurement Additional Type. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A class to describe additional types for a procurement project</ccts:Definition>
-               <ccts:ObjectClass>Procurement Additional Type</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-        <xsd:element ref="cbc:ProcurementTypeCode" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Procurement Additional Type. Procurement_ Type Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying the type of procurement project (e.g., goods, works, services).</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Procurement Additional Type</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Procurement</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Type Code</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-                     <ccts:DataType>Code. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -29755,24 +29415,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:ProcurementAdditionalType"
-                      minOccurs="0"
-                      maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Procurement Project. Procurement Additional Type</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to additional procurement type.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Procurement Project</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Procurement Additional Type</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Procurement Additional Type</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Procurement Additional Type</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
          <xsd:element ref="cac:RealizedLocation" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -29874,16 +29516,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:LegalDocumentReference"
-                      minOccurs="0"
-                      maxOccurs="unbounded">
+         <xsd:element ref="cac:LegalDocumentReference" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Procurement Project Lot. Legal_ Document Reference. Document Reference</ccts:DictionaryEntryName>
                      <ccts:Definition>A reference to a legal document.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Procurement Project Lot</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Legal</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
@@ -29893,16 +29533,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:TechnicalDocumentReference"
-                      minOccurs="0"
-                      maxOccurs="unbounded">
+         <xsd:element ref="cac:TechnicalDocumentReference" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Procurement Project Lot. Technical_ Document Reference. Document Reference</ccts:DictionaryEntryName>
                      <ccts:Definition>A reference to a technical document.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Procurement Project Lot</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Technical</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
@@ -29981,22 +29619,6 @@
                      <ccts:PropertyTerm>Tendering Terms</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Tendering Terms</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Tendering Terms</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:TenderingProcess" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Procurement Project Lot. Tendering Process</ccts:DictionaryEntryName>
-                     <ccts:Definition>Tendering process for this procurement project lot.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Procurement Project Lot</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Tendering Process</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Tendering Process</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Tendering Process</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -32639,25 +32261,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:EstimatedOverallFrameworkContractsAmount"
-                      minOccurs="0"
-                      maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Requested Tender Total. Estimated_ Overall Framework Contracts. Amount</ccts:DictionaryEntryName>
-                     <ccts:Definition>The estimated overall monetary amount of subsequent framework contracts.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Requested Tender Total</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Estimated</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Overall Framework Contracts</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
-                     <ccts:DataType>Amount. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
          <xsd:element ref="cbc:TotalAmount" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -33608,57 +33211,6 @@
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
                      <ccts:Examples>N.O.S. or a Waste Characteristics Code in conjunction with an EPA Waste Stream code </ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-      </xsd:sequence>
-   </xsd:complexType>
-   <xsd:complexType name="SecurityClearanceTermType">
-      <xsd:annotation>
-         <xsd:documentation>
-            <ccts:Component>
-               <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Security Clearance Term. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A class to specify security clearance terms.</ccts:Definition>
-               <ccts:ObjectClass>Security Clearance Term</ccts:ObjectClass>
-            </ccts:Component>
-         </xsd:documentation>
-      </xsd:annotation>
-      <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-        <xsd:element ref="cbc:Code" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Security Clearance Term. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying the security clearance requirement.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Security Clearance Term</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Code</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-                     <ccts:DataType>Code. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Security Clearance Term. Description. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>A description of the security clearance requirement.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Security Clearance Term</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Description</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -39829,14 +39381,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:ProcurementProjectLot" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cac:ProcurementProjectLot" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendered Project. Procurement Project Lot</ccts:DictionaryEntryName>
                      <ccts:Definition>The procurement project lot to which this Tender Line refers to. If there are no lots, this should not be defined.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendered Project</ccts:ObjectClass>
                      <ccts:PropertyTerm>Procurement Project Lot</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Procurement Project Lot</ccts:AssociatedObjectClass>
@@ -39927,23 +39479,6 @@
                      <ccts:PropertyTerm>Awarding Criterion Response</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Awarding Criterion Response</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Awarding Criterion Response</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:AdditionalFee" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendered Project. Additional_ Fee. Fee</ccts:DictionaryEntryName>
-                     <ccts:Definition>An additional fee for this tendered project.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendered Project</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Fee</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Fee</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Fee</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -40383,14 +39918,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cbc:Name" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Criterion. Name</ccts:DictionaryEntryName>
                      <ccts:Definition>The name of the criterion.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Criterion</ccts:ObjectClass>
                      <ccts:PropertyTerm>Name</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
@@ -40570,7 +40105,7 @@
             </xsd:annotation>
          </xsd:element>
          <xsd:element ref="cac:TenderingCriterionPropertyGroup"
-                      minOccurs="0"
+                      minOccurs="1"
                       maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -40578,7 +40113,7 @@
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Criterion. Tendering Criterion Property Group</ccts:DictionaryEntryName>
                      <ccts:Definition>The sets of properties that can be used to fulfil the tendering criterion.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:Cardinality>1..n</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Criterion</ccts:ObjectClass>
                      <ccts:PropertyTerm>Tendering Criterion Property Group</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Tendering Criterion Property Group</ccts:AssociatedObjectClass>
@@ -41605,23 +41140,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:TerminatedIndicator" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendering Process. Terminated. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>An indicator that the competition launched is terminated.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendering Process</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Terminated</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
-                     <ccts:DataType>Indicator. Type</ccts:DataType>
-                     <ccts:Examples>PIN call for competition is terminated.</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
          <xsd:element ref="cac:DocumentAvailabilityPeriod" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -41668,23 +41186,6 @@
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Process</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Invitation Submission</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Period</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Period</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ParticipationInvitationPeriod" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendering Process. Participation Invitation_ Period. Period</ccts:DictionaryEntryName>
-                     <ccts:Definition>The period during which the invitation to participate must be sent.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendering Process</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Participation Invitation</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Period</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Period</ccts:RepresentationTerm>
@@ -42109,22 +41610,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:RequiredCurriculaCode" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendering Terms. Required Curricula. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying the conditions applying for tenderers to provide a curriculum vitae.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Required Curricula</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-                     <ccts:DataType>Code. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
          <xsd:element ref="cbc:OtherConditionsIndicator" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -42161,14 +41646,14 @@
          </xsd:element>
          <xsd:element ref="cbc:RecurringProcurementDescription"
                       minOccurs="0"
-                      maxOccurs="unbounded">
+                      maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Terms. Recurring_ Procurement Description. Text</ccts:DictionaryEntryName>
                      <ccts:Definition>Any additional information about recurrence (e.g. estimated timing).</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Recurring</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Procurement Description</ccts:PropertyTerm>
@@ -42243,38 +41728,6 @@
                      <ccts:PropertyTerm>Documentation Fee Amount</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Amount</ccts:RepresentationTerm>
                      <ccts:DataType>Amount. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:MultipleTendersCode" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendering Terms. Multiple Tenders. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying whether a tenderer is allowed to submit multiple tenders.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Multiple Tenders</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-                     <ccts:DataType>Code. Type</ccts:DataType>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:VariantConstraintCode" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendering Terms. Variant Constraint. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying the modalities for a tenderer to submit variants of tenders.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Variant Constraint</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
-                     <ccts:DataType>Code. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -42635,25 +42088,6 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:QualificationRequestRecipientParty"
-                      minOccurs="0"
-                      maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendering Terms. Qualification Request Recipient_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party in the contracting authority responsible for receiving qualification requests.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Qualification Request Recipient</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
          <xsd:element ref="cac:TenderValidityPeriod" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -42799,39 +42233,6 @@
                      <ccts:PropertyTerm>Economic Operator Short List</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Economic Operator Short List</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Economic Operator Short List</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:Prize" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendering Terms. Prize</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about the value amount that will be offered to the winner depending on his rank.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Prize</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Prize</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Prize</ccts:RepresentationTerm>
-                     <ccts:Examples>In a design context , 1st place EUR 10 000 , 2nd place EUR 5000</ccts:Examples>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:SecurityClearanceTerm" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tendering Terms. Security Clearance Term</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about the terms to present for a security clearance.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Security Clearance Term</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Security Clearance Term</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Security Clearance Term</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>

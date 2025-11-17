@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD02
-                     http://docs.oasis-open.org/ubl/csprd02-UBL-2.3/
-  Release Date:      30 January 2020
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
+                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
+  Release Date:      07 August 2019
   Module:            xsd/common/UBL-CommonBasicComponents-2.3.xsd
-  Generated on:      2020-01-28 20:53z
-  Copyright (c) OASIS Open 2020. All Rights Reserved.
+  Generated on:      2019-08-15 00:22z
+  Copyright (c) OASIS Open 2019. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             xmlns:qdt="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"
@@ -159,7 +159,6 @@
    <xsd:element name="ChipApplicationID" type="ChipApplicationIDType"/>
    <xsd:element name="CityName" type="CityNameType"/>
    <xsd:element name="CitySubdivisionName" type="CitySubdivisionNameType"/>
-   <xsd:element name="Code" type="CodeType"/>
    <xsd:element name="CodeValue" type="CodeValueType"/>
    <xsd:element name="CollaborationPriorityCode" type="CollaborationPriorityCodeType"/>
    <xsd:element name="Comment" type="CommentType"/>
@@ -323,14 +322,10 @@
    <xsd:element name="EstimatedDeliveryTime" type="EstimatedDeliveryTimeType"/>
    <xsd:element name="EstimatedDespatchDate" type="EstimatedDespatchDateType"/>
    <xsd:element name="EstimatedDespatchTime" type="EstimatedDespatchTimeType"/>
-   <xsd:element name="EstimatedMaximumValueAmount"
-                type="EstimatedMaximumValueAmountType"/>
    <xsd:element name="EstimatedOverallContractAmount"
                 type="EstimatedOverallContractAmountType"/>
    <xsd:element name="EstimatedOverallContractQuantity"
                 type="EstimatedOverallContractQuantityType"/>
-   <xsd:element name="EstimatedOverallFrameworkContractsAmount"
-                type="EstimatedOverallFrameworkContractsAmountType"/>
    <xsd:element name="EstimatedTimingFurtherPublication"
                 type="EstimatedTimingFurtherPublicationType"/>
    <xsd:element name="EvaluationCriterionTypeCode"
@@ -368,7 +363,6 @@
    <xsd:element name="FeatureTacticTypeCode" type="FeatureTacticTypeCodeType"/>
    <xsd:element name="FeeAmount" type="FeeAmountType"/>
    <xsd:element name="FeeDescription" type="FeeDescriptionType"/>
-   <xsd:element name="FeeTypeCode" type="FeeTypeCodeType"/>
    <xsd:element name="FileName" type="FileNameType"/>
    <xsd:element name="FinalReexportationDate" type="FinalReexportationDateType"/>
    <xsd:element name="FinancingInstrumentCode" type="FinancingInstrumentCodeType"/>
@@ -516,7 +510,6 @@
    <xsd:element name="LongitudeMinutesMeasure" type="LongitudeMinutesMeasureType"/>
    <xsd:element name="LossRisk" type="LossRiskType"/>
    <xsd:element name="LossRiskResponsibilityCode" type="LossRiskResponsibilityCodeType"/>
-   <xsd:element name="LotLotsGroupID" type="LotLotsGroupIDType"/>
    <xsd:element name="LotNumberID" type="LotNumberIDType"/>
    <xsd:element name="LowTendersDescription" type="LowTendersDescriptionType"/>
    <xsd:element name="LowerOrangeHazardPlacardID" type="LowerOrangeHazardPlacardIDType"/>
@@ -553,7 +546,6 @@
    <xsd:element name="MaximumPercent" type="MaximumPercentType"/>
    <xsd:element name="MaximumQuantity" type="MaximumQuantityType"/>
    <xsd:element name="MaximumValue" type="MaximumValueType"/>
-   <xsd:element name="MaximumValueAmount" type="MaximumValueAmountType"/>
    <xsd:element name="MaximumValueNumeric" type="MaximumValueNumericType"/>
    <xsd:element name="MaximumVariantQuantity" type="MaximumVariantQuantityType"/>
    <xsd:element name="MeanTimeToRecoverDurationMeasure"
@@ -595,7 +587,6 @@
    <xsd:element name="MonetaryScope" type="MonetaryScopeType"/>
    <xsd:element name="MovieTitle" type="MovieTitleType"/>
    <xsd:element name="MultipleOrderQuantity" type="MultipleOrderQuantityType"/>
-   <xsd:element name="MultipleTendersCode" type="MultipleTendersCodeType"/>
    <xsd:element name="MultiplierFactorNumeric" type="MultiplierFactorNumericType"/>
    <xsd:element name="Name" type="NameType"/>
    <xsd:element name="NameCode" type="NameCodeType"/>
@@ -724,17 +715,12 @@
    <xsd:element name="PrepaidPaymentReferenceID" type="PrepaidPaymentReferenceIDType"/>
    <xsd:element name="PreviousCancellationReasonCode"
                 type="PreviousCancellationReasonCodeType"/>
-   <xsd:element name="PreviousCancellationReasonDescription"
-                type="PreviousCancellationReasonDescriptionType"/>
-   <xsd:element name="PreviousCancellationReasonValueAmount"
-                type="PreviousCancellationReasonValueAmountType"/>
    <xsd:element name="PreviousJobID" type="PreviousJobIDType"/>
    <xsd:element name="PreviousMeterQuantity" type="PreviousMeterQuantityType"/>
    <xsd:element name="PreviousMeterReadingDate" type="PreviousMeterReadingDateType"/>
    <xsd:element name="PreviousMeterReadingMethod" type="PreviousMeterReadingMethodType"/>
    <xsd:element name="PreviousMeterReadingMethodCode"
                 type="PreviousMeterReadingMethodCodeType"/>
-   <xsd:element name="PreviousRankNumberNumeric" type="PreviousRankNumberNumericType"/>
    <xsd:element name="PreviousVersionID" type="PreviousVersionIDType"/>
    <xsd:element name="PriceAmount" type="PriceAmountType"/>
    <xsd:element name="PriceChangeReason" type="PriceChangeReasonType"/>
@@ -800,8 +786,6 @@
    <xsd:element name="ReferenceID" type="ReferenceIDType"/>
    <xsd:element name="ReferenceTime" type="ReferenceTimeType"/>
    <xsd:element name="ReferencedConsignmentID" type="ReferencedConsignmentIDType"/>
-   <xsd:element name="ReferencedDocumentInternalAddress"
-                type="ReferencedDocumentInternalAddressType"/>
    <xsd:element name="RefrigeratedIndicator" type="RefrigeratedIndicatorType"/>
    <xsd:element name="RefrigerationOnIndicator" type="RefrigerationOnIndicatorType"/>
    <xsd:element name="Region" type="RegionType"/>
@@ -836,7 +820,6 @@
    <xsd:element name="RequestedInvoiceCurrencyCode"
                 type="RequestedInvoiceCurrencyCodeType"/>
    <xsd:element name="RequestedPublicationDate" type="RequestedPublicationDateType"/>
-   <xsd:element name="RequiredCurriculaCode" type="RequiredCurriculaCodeType"/>
    <xsd:element name="RequiredCurriculaIndicator" type="RequiredCurriculaIndicatorType"/>
    <xsd:element name="RequiredCustomsID" type="RequiredCustomsIDType"/>
    <xsd:element name="RequiredDeliveryDate" type="RequiredDeliveryDateType"/>
@@ -1006,7 +989,6 @@
    <xsd:element name="TendererRequirementTypeCode"
                 type="TendererRequirementTypeCodeType"/>
    <xsd:element name="TendererRoleCode" type="TendererRoleCodeType"/>
-   <xsd:element name="TerminatedIndicator" type="TerminatedIndicatorType"/>
    <xsd:element name="TestIndicator" type="TestIndicatorType"/>
    <xsd:element name="TestMethod" type="TestMethodType"/>
    <xsd:element name="Text" type="TextType"/>
@@ -1110,7 +1092,6 @@
    <xsd:element name="ValueQuantity" type="ValueQuantityType"/>
    <xsd:element name="ValueUnitCode" type="ValueUnitCodeType"/>
    <xsd:element name="VarianceQuantity" type="VarianceQuantityType"/>
-   <xsd:element name="VariantConstraintCode" type="VariantConstraintCodeType"/>
    <xsd:element name="VariantConstraintIndicator" type="VariantConstraintIndicatorType"/>
    <xsd:element name="VariantID" type="VariantIDType"/>
    <xsd:element name="VersionID" type="VersionIDType"/>
@@ -1786,11 +1767,6 @@
    <xsd:complexType name="CitySubdivisionNameType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:NameType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="CodeType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="CodeValueType">
@@ -2498,11 +2474,6 @@
          <xsd:restriction base="udt:TimeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="EstimatedMaximumValueAmountType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:AmountType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="EstimatedOverallContractAmountType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:AmountType"/>
@@ -2511,11 +2482,6 @@
    <xsd:complexType name="EstimatedOverallContractQuantityType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:QuantityType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="EstimatedOverallFrameworkContractsAmountType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:AmountType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="EstimatedTimingFurtherPublicationType">
@@ -2691,11 +2657,6 @@
    <xsd:complexType name="FeeDescriptionType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="FeeTypeCodeType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="FileNameType">
@@ -3383,11 +3344,6 @@
          <xsd:restriction base="udt:TextType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="LotLotsGroupIDType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:IdentifierType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="LotNumberIDType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IdentifierType"/>
@@ -3541,11 +3497,6 @@
    <xsd:complexType name="MaximumQuantityType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:QuantityType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="MaximumValueAmountType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:AmountType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="MaximumValueNumericType">
@@ -3731,11 +3682,6 @@
    <xsd:complexType name="MultipleOrderQuantityType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:QuantityType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="MultipleTendersCodeType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="MultiplierFactorNumericType">
@@ -4323,16 +4269,6 @@
          <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="PreviousCancellationReasonDescriptionType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="PreviousCancellationReasonValueAmountType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:AmountType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="PreviousJobIDType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IdentifierType"/>
@@ -4356,11 +4292,6 @@
    <xsd:complexType name="PreviousMeterReadingMethodType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="PreviousRankNumberNumericType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:NumericType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="PreviousVersionIDType">
@@ -4653,11 +4584,6 @@
          <xsd:restriction base="udt:IdentifierType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="ReferencedDocumentInternalAddressType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:TextType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="RefrigeratedIndicatorType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IndicatorType"/>
@@ -4816,11 +4742,6 @@
    <xsd:complexType name="RequestedPublicationDateType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:DateType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="RequiredCurriculaCodeType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="RequiredCurriculaIndicatorType">
@@ -5573,11 +5494,6 @@
          <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
-   <xsd:complexType name="TerminatedIndicatorType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:IndicatorType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
    <xsd:complexType name="TestIndicatorType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:IndicatorType"/>
@@ -6016,11 +5932,6 @@
    <xsd:complexType name="VarianceQuantityType">
       <xsd:simpleContent>
          <xsd:restriction base="udt:QuantityType"/>
-      </xsd:simpleContent>
-   </xsd:complexType>
-   <xsd:complexType name="VariantConstraintCodeType">
-      <xsd:simpleContent>
-         <xsd:restriction base="udt:CodeType"/>
       </xsd:simpleContent>
    </xsd:complexType>
    <xsd:complexType name="VariantConstraintIndicatorType">
