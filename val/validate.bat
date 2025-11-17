@@ -14,7 +14,7 @@ if %errorlevel% neq 0 goto :error
 echo No schema validation errors.
 
 echo ============ Phase 2: XSLT code list validation ============
-call xslt %2 UBL-DefaultDTQ-2.1.xsl nul 2>output.txt
+call xslt %2 UBL-DefaultDTQ-2.2.xsl nul 2>output.txt
 
 if %errorlevel% neq 0 goto :error
 echo No code list validation errors.
