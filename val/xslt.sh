@@ -1,1 +1,4 @@
-java -jar ./saxon.jar -o $3 $1 $2 $4 $5 $6 $7 $8 $9
+DP0=$( cd "$(dirname "$0")" ; pwd -P )
+java -jar "$DP0/saxon.jar" -o "$3" "$1" "$2"
+errorRet=$?
+exit $errorRet

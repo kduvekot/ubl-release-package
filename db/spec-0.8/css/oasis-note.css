@@ -15,7 +15,7 @@
      Navy:   446CAA
      Gray:   7F7F7F
 
-  $Id: oasis-note.css,v 1.4 2018/12/02 17:24:01 admin Exp $
+  $Id: oasis-note.css,v 1.5 2019/01/04 19:29:22 admin Exp $
 */
 
 body     {
@@ -183,6 +183,9 @@ thead    { border-color: #AFAFAF;
          }
 
 tfoot    { border-color: #AFAFAF;
+         }
+
+img      { max-width: 100%;
          }
 
 @media screen {  /* hide from IE3 */

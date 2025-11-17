@@ -3,7 +3,7 @@
 [
   <!ENTITY upper 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'>
   <!ENTITY lower 'abcdefghijklmnopqrstuvwxyz'>
-  <!ENTITY oasis-spec 'http://docs.oasis-open.org/templates/DocBook/spec-0.8/'>
+  <!ENTITY oasis-spec 'https://docs.oasis-open.org/templates/DocBook/spec-0.8/'>
   <!ENTITY separator " ">
 ]>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -13,13 +13,14 @@
                 xmlns:exsl="http://exslt.org/common"
                 extension-element-prefixes="saxon xalanredirect lxslt exsl"
                 version="1.0">
-<!-- $Id: oasis-note-html.xsl,v 1.10 2018/12/02 23:20:26 admin Exp $ -->
+<!-- $Id: oasis-note-html.xsl,v 1.14 2020/03/28 15:11:10 admin Exp $ -->
 
 <!-- This stylesheet is a customization of the DocBook XSL Stylesheets -->
 <!-- from http://docs.oasis-open.org/templates/ -->
 <!-- See http://sourceforge.net/projects/docbook/ -->
 <xsl:import href="../docbook/xsl/html/docbook.xsl"/>
 <xsl:include href="titlepage-notes-html.xsl"/>
+<xsl:include href="oasis-mathml-html.xsl"/>
 
 <!-- ============================================================ -->
 <!-- Parameters -->
@@ -148,6 +149,7 @@
   </xsl:if>
   <xsl:apply-templates select="/*/articleinfo/releaseinfo[@role='cvs']"
                        mode="head.meta.content"/>
+  <xsl:call-template name="oasis.head.mathml"/>
 </xsl:template>
 
 <xsl:template match="releaseinfo" mode="head.meta.content">
@@ -165,7 +167,9 @@
   <div style="font-size:200%;font-weight:bold;color:#7f7f7f;margin-top:0pt"
     >OASIS Committee Note</div>
   <hr style="margin-bottom:0pt"/>
-  <xsl:apply-imports/>
+  <h1>
+    <xsl:apply-templates/>
+  </h1>
 </xsl:template>
 
 <xsl:template match="pubdate" mode="titlepage.mode">
@@ -263,25 +267,18 @@
     <xsl:variable name="locations" 
                   select="../releaseinfo[starts-with(@role,
                                          'OASIS-specification-')]"/>
-    <dl>
-      <dt>
-        <span class="uri-heading">
-          Specification URIs
-        </span>
-      </dt>
-    </dl>
     <xsl:call-template name="spec-uri-group">
-      <xsl:with-param name="header">This version:</xsl:with-param>
+      <xsl:with-param name="header">This stage:</xsl:with-param>
       <xsl:with-param name="uris" 
            select="$locations[starts-with(@role,'OASIS-specification-this')]"/>
     </xsl:call-template>
     <xsl:call-template name="spec-uri-group">
-      <xsl:with-param name="header">Previous version:</xsl:with-param>
+      <xsl:with-param name="header">Previous stage:</xsl:with-param>
       <xsl:with-param name="uris" 
        select="$locations[starts-with(@role,'OASIS-specification-previous')]"/>
     </xsl:call-template>
     <xsl:call-template name="spec-uri-group">
-      <xsl:with-param name="header">Latest version:</xsl:with-param>
+      <xsl:with-param name="header">Latest stage:</xsl:with-param>
       <xsl:with-param name="uris" 
          select="$locations[starts-with(@role,'OASIS-specification-latest')]"/>
     </xsl:call-template>

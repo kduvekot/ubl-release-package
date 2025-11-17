@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.3 CSPRD01
-                     http://docs.oasis-open.org/ubl/csprd01-UBL-2.3/
-  Release Date:      07 August 2019
+  Library:           OASIS Universal Business Language (UBL) 2.3 CSD03
+                     http://docs.oasis-open.org/ubl/csd03-UBL-2.3/
+  Release Date:      10 April 2020
   Module:            xsd/maindoc/UBL-GoodsItemPassport-2.3.xsd
-  Generated on:      2019-08-15 00:22z
-  Copyright (c) OASIS Open 2019. All Rights Reserved.
+  Generated on:      2020-07-29 19:49z
+  Copyright (c) OASIS Open 2020. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:GoodsItemPassport-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -180,6 +180,38 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:StatusCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Goods Item Passport. Status. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>The reason for importing the goods, expressed as a code.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Status</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:Status" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Goods Item Passport. Status. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>The reason for importing the goods, expressed as text in one or more languages.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Status</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -297,16 +329,16 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:AccompanyingParty" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:RepresentativeParty" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Goods Item Passport. Accompanying_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Goods Item Passport. Representative_ Party. Party</ccts:DictionaryEntryName>
                      <ccts:Definition>The party accompanying the goods while temporarily exported</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Accompanying</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTermQualifier>Representative</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
@@ -314,33 +346,16 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:ImportingCustomsParty" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:ExportingGuarantorParty" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Goods Item Passport. Importing Customs_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The competent Customs party of the importing country</ccts:Definition>
+                     <ccts:DictionaryEntryName>Goods Item Passport. Exporting Guarantor_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>A party (often a chamber of commerce) which provides a guarantee goods while temporarily exported</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Importing Customs</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ExportingCustomsParty" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Goods Item Passport. Exporting Customs_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The competent Customs party of the exporting country</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Exporting Customs</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTermQualifier>Exporting Guarantor</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
@@ -365,16 +380,33 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:ExportingGuarantorParty" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:ExportingCustomsParty" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Goods Item Passport. Exporting Guarantor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party (often a chamber of commerce) which provides a guarantee goods while temporarily exported</ccts:Definition>
+                     <ccts:DictionaryEntryName>Goods Item Passport. Exporting Customs_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The competent Customs party of the exporting country</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Exporting Guarantor</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTermQualifier>Exporting Customs</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:ImportingCustomsParty" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Goods Item Passport. Importing Customs_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The competent Customs party of the importing country</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Importing Customs</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
@@ -423,7 +455,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Item Passport. Issuer_ Endorsement. Endorsement</ccts:DictionaryEntryName>
-                     <ccts:Definition>A reference to yhe issuer's endorsment of this Goods Item Passport</ccts:Definition>
+                     <ccts:Definition>A reference to the issuer's endorsement of this Goods Item Passport</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
