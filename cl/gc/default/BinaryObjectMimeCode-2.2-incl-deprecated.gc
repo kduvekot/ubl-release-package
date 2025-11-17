@@ -4,7 +4,7 @@
       <ShortName>BinaryObjectMimeCode</ShortName>
       <LongName xml:lang="en">Binary Object Mime Code</LongName>
       <LongName Identifier="listID">IANA Media Types</LongName>
-      <Version>2017-10-24</Version>
+      <Version>2018-02-12</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:BinaryObjectMimeCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:BinaryObjectMimeCode:2.2</CanonicalVersionUri>
       <LocationUri>http://www.iana.org/assignments/media-types/media-types.xml</LocationUri>
@@ -1565,6 +1565,20 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>image/aces</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>SMPTE</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Howard_Lukk</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>image/aces</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/activemessage</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -2991,6 +3005,20 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/fhir+xml</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>HL7</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Grahame_Grieve</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/fhir+xml</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/fits</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -3211,6 +3239,20 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>model/gltf+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>model/gltf-binary</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Khronos</SimpleValue>
+         </Value>
+         <Value ColumnRef="person2">
+            <SimpleValue>Saurabh_Bhatia</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>model/gltf-binary</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -3719,8 +3761,8 @@
          <Value ColumnRef="code">
             <SimpleValue>application/json</SimpleValue>
          </Value>
-         <Value ColumnRef="draft1">
-            <SimpleValue>RFC-ietf-jsonbis-rfc7159bis-04</SimpleValue>
+         <Value ColumnRef="rfc1">
+            <SimpleValue>rfc8259</SimpleValue>
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/json</SimpleValue>
@@ -3808,10 +3850,10 @@
             <SimpleValue>image/ktx</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
-            <SimpleValue>Mark_Callow</SimpleValue>
+            <SimpleValue>Khronos</SimpleValue>
          </Value>
          <Value ColumnRef="person2">
-            <SimpleValue>Khronos</SimpleValue>
+            <SimpleValue>Mark_Callow</SimpleValue>
          </Value>
          <Value ColumnRef="uri1">
             <SimpleValue>http://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/#mimeregistration</SimpleValue>
@@ -4688,6 +4730,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/node</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Node.js_TSC</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/node</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/nss</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -5061,6 +5114,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/pkcs8</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/pkcs8-encrypted</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-seantek-pkcs8-encrypted-03</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/pkcs8-encrypted</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -6745,6 +6809,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/tnauthlist</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-stir-certificates-17</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/tnauthlist</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>audio/tone</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -7762,6 +7837,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.amadeus+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Patrick_Brosse</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.amadeus+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.amazon.mobi8-ebook</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -8055,6 +8141,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.bbf.usp.msg</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.bbf.usp.msg+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>William_Lupton</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.bbf.usp.msg+json</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -8433,6 +8530,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.collabio.xodocuments.document-template</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Alexey_Meandrov</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.collabio.xodocuments.document-template</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.collabio.xodocuments.presentation</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -8444,6 +8552,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.collabio.xodocuments.presentation-template</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Alexey_Meandrov</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.collabio.xodocuments.presentation-template</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vnd.collabio.xodocuments.spreadsheet</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -8451,6 +8570,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.collabio.xodocuments.spreadsheet</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.collabio.xodocuments.spreadsheet-template</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Alexey_Meandrov</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.collabio.xodocuments.spreadsheet-template</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -8506,6 +8636,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.comicbook+zip</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.comicbook-rar</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Kim_Scarborough</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.comicbook-rar</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -16493,6 +16634,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.restful+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Stephen_Mizell</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.restful+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>audio/vnd.rhetorex.32kadpcm</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -17059,6 +17211,17 @@
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/vnd.spotfire.sfs</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
+            <SimpleValue>application/vnd.sqlite3</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Clemens_Ladisch</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.sqlite3</SimpleValue>
          </Value>
       </Row>
       <Row>
@@ -18409,6 +18572,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/vnd.youtube.yt</SimpleValue>
+         </Value>
+         <Value ColumnRef="person1">
+            <SimpleValue>Laura_Wood</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/vnd.youtube.yt</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>image/vnd.zbrush.pcx</SimpleValue>
          </Value>
          <Value ColumnRef="person1">
@@ -18486,6 +18660,17 @@
       </Row>
       <Row>
          <Value ColumnRef="code">
+            <SimpleValue>application/voucher-cms+json</SimpleValue>
+         </Value>
+         <Value ColumnRef="draft1">
+            <SimpleValue>RFC-ietf-anima-voucher-07</SimpleValue>
+         </Value>
+         <Value ColumnRef="template">
+            <SimpleValue>application/voucher-cms+json</SimpleValue>
+         </Value>
+      </Row>
+      <Row>
+         <Value ColumnRef="code">
             <SimpleValue>application/vq-rtcpxr</SimpleValue>
          </Value>
          <Value ColumnRef="rfc1">
@@ -18518,8 +18703,8 @@
          <Value ColumnRef="code">
             <SimpleValue>application/webpush-options+json</SimpleValue>
          </Value>
-         <Value ColumnRef="draft1">
-            <SimpleValue>RFC-ietf-webpush-vapid-04</SimpleValue>
+         <Value ColumnRef="rfc1">
+            <SimpleValue>rfc8292</SimpleValue>
          </Value>
          <Value ColumnRef="template">
             <SimpleValue>application/webpush-options+json</SimpleValue>

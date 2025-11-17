@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" 
   href="db/spec-0.7/stylesheets/oasis-specification-html-offline.xsl"?>
 <!--
-  $Id: UBL-2.2.xml,v 1.123 2017/10/30 22:10:24 admin Exp $
+  $Id: UBL-2.2.xml,v 1.130 2018/02/19 19:30:24 admin Exp $
   Single quote: &#8217; Double quotes: &#8220;&#8221; 
   Search strings: "gentext" "reviewtext"
   role="namespaces"
@@ -16,14 +16,15 @@
 <!ENTITY name "UBL">
 <!ENTITY pversion "NONE">
 <!ENTITY version  "2.2">
-<!ENTITY stage    "csprd02">
-<!ENTITY isostage "CSPRD02">
-<!ENTITY stagetext "Committee Specification Public Review Draft">
-<!ENTITY standard "Committee Specification Public Review Draft 02">
+<!ENTITY stage    "csprd03">
+<!ENTITY isostage "csprd03">
+<!ENTITY stagetext "Committee Specification Public Review Draft 03">
+<!ENTITY standard "Committee Specification Public Review Draft 03">
 <!ENTITY this-loc     "http://docs.oasis-open.org/ubl/&stage;-UBL-2.2">
-<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/csprd01-UBL-2.2">
+<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/csprd02-UBL-2.2">
 <!ENTITY latest-loc   "http://docs.oasis-open.org/ubl">
-<!ENTITY pubdate     "01 November 2017"><!--remove time from pub date-->
+<!ENTITY pubdate     "21 February 2018"><!--remove time from pub date-->
+<!ENTITY pubyear     "2018">
 <!ENTITY pubdate-iso "ccyy-mm-dd">
 <!ENTITY reldate-iso "ccyy-mm">
 ]>
@@ -35,9 +36,9 @@
     <releaseinfo role="OASIS-specification-this">&this-loc;/&name;-&version;.html</releaseinfo>
     <releaseinfo role="OASIS-specification-this" lang="none">&this-loc;/&name;-&version;.pdf</releaseinfo>
     <releaseinfo role="OASIS-specification-this-authoritative" lang="none">&this-loc;/&name;-&version;.xml</releaseinfo>
-    <releaseinfo role="OASIS-specification-previous">&previous-loc;/UBL-2.2.html</releaseinfo>
-    <releaseinfo role="OASIS-specification-previous">&previous-loc;/UBL-2.2.pdf</releaseinfo>
-    <releaseinfo role="OASIS-specification-previous-authoritative">&previous-loc;/UBL-2.2.xml</releaseinfo>
+    <releaseinfo role="OASIS-specification-previous">&previous-loc;/UBL-&version;.html</releaseinfo>
+    <releaseinfo role="OASIS-specification-previous">&previous-loc;/UBL-&version;.pdf</releaseinfo>
+    <releaseinfo role="OASIS-specification-previous-authoritative">&previous-loc;/UBL-&version;.xml</releaseinfo>
     <!-- generic form of above
       <releaseinfo role="OASIS-specification-previous"
          >&previous-loc;/&name;-&version;.html</releaseinfo>
@@ -283,8 +284,7 @@
         are listed at <ulink
           url="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl#technical"
           >https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ubl#technical</ulink>. </para>
-      
-      <!--only one of the two above paragraphs applies; comment out the other one--> 
+      <!--only one of the two above paragraphs applies; comment out the other one-->
       <para>Technical Committee members should send comments on this specification to the TC’s email
         list. Others should send comments to the TC’s public comment list, after subscribing to it
         by following the instructions at the “<ulink conformance="skip"
@@ -324,7 +324,7 @@
     </legalnotice>
     <legalnotice role="notices">
       <title>Notices</title>
-      <para>Copyright &#169; OASIS Open 2001-2017. All Rights Reserved. </para>
+      <para>Copyright &#169; OASIS Open 2001-2018. All Rights Reserved. </para>
       <para>All capitalized terms in the following text have the meanings assigned to them in the
         OASIS Intellectual Property Rights Policy (the &#8220;OASIS IPR Policy&#8221;). The full
           <ulink url="https://www.oasis-open.org/policies-guidelines/ipr" conformance="skip"
@@ -409,7 +409,7 @@
     <releaseinfo role="secretariat">JTC 1</releaseinfo>
     <releaseinfo role="page-count">x</releaseinfo>
     <copyright condition="isosts">
-      <year>2017</year>
+      <year>&pubyear;</year>
       <holder>ISO/IEC</holder>
       <holder role="copyright-statement">All rights reserved.</holder>
     </copyright>
@@ -1086,34 +1086,13 @@
         define a context for the use of UBL 2.2 business documents. They are normative insofar as
         they provide semantics for the UBL document schemas, but they should not be construed as
         limiting the application of those schemas.</para>
-      <para>UBL 2.2 extends the generalized supply chain processes of UBL 2.0 (including the
-        commercial collaborations of international trade) to include support for collaborative
-        planning, forecasting, and replenishment; vendor managed inventory; utility billing;
-        tendering; and intermodal freight management. </para>
-      <para>The following diagrams illustrate the business context use case covered by UBL
-        2.2.</para>
-      <figure id="F-UBL-2.2-USE-CASE-OVERALL-VIEW">
-        <title>UBL 2.2 Use Case Overall View</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="art/UBL-2.2-UseCaseOverview.png" contentwidth="750px"/>
-          </imageobject>
-          <textobject>
-            <phrase>[Use Case Overview Diagram]</phrase>
-          </textobject>
-        </mediaobject>
-      </figure>
-      <figure id="F-UBL-2.2-USE-CASE-DETAIL">
-        <title>UBL 2.2 Use Case Detail</title>
-        <mediaobject>
-          <imageobject>
-            <imagedata fileref="art/UBL-2.2-UseCase.png" contentwidth="750px"/>
-          </imageobject>
-          <textobject>
-            <phrase>[Use Case Detail Diagram]</phrase>
-          </textobject>
-        </mediaobject>
-      </figure>
+      <para>UBL 2.2 extends the pre-award tendering processes, adds a new transportation document
+        for the weight statement, and adds new documents for a business directory and agreements.
+        UBL 2.1 extended the generalized supply chain processes of UBL 2.0 (including the commercial
+        collaborations of international trade) to include support for collaborative planning,
+        forecasting, and replenishment; vendor managed inventory; utility billing; tendering; and
+        intermodal freight management. </para>
+      <!--<para>The following diagrams illustrate the business context use case covered by UBL 2.2.</para><figure id="F-UBL-2.2-USE-CASE-OVERALL-VIEW"><title>UBL 2.2 Use Case Overall View</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.2-UseCaseOverview.png"/></imageobject><textobject><phrase>[Use Case Overview Diagram]</phrase></textobject></mediaobject></figure><figure id="F-UBL-2.2-USE-CASE-DETAIL"><title>UBL 2.2 Use Case Detail</title><mediaobject><imageobject><imagedata fileref="art/UBL-2.2-UseCase.png"/></imageobject><textobject><phrase>[Use Case Detail Diagram]</phrase></textobject></mediaobject></figure>-->
       <para>The document types included in UBL 2.2 are listed in <xref linkend="S-UBL-2.2-SCHEMAS"
         />. It is important to note that, as with previous UBL releases, the UBL 2.2 library is
         designed to support the construction of a wide variety of document types beyond those
@@ -1323,7 +1302,7 @@
           <title>Simple Fulfilment</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="art/UBL-2.2-Fulfilment-1simple.png" contentwidth="750px"/>
+              <imagedata fileref="art/UBL-2.2-Fulfilment-1simple.png"/>
             </imageobject>
             <textobject>
               <phrase>[Simple Fulfilment Diagram]</phrase>
@@ -1341,7 +1320,7 @@
           <title>Split Fulfilment</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="art/UBL-2.2-Fulfilment-2split.png" contentwidth="750px"/>
+              <imagedata fileref="art/UBL-2.2-Fulfilment-2split.png"/>
             </imageobject>
             <textobject>
               <phrase>[Split Fulfilment Diagram]</phrase>
@@ -1358,7 +1337,7 @@
           <title>Intermediary Fulfilment</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="art/UBL-2.2-Fulfilment-3intermediary.png" contentwidth="750px"/>
+              <imagedata fileref="art/UBL-2.2-Fulfilment-3intermediary.png"/>
             </imageobject>
             <textobject>
               <phrase>[Intermediary Fulfilment Diagram]</phrase>
@@ -1383,7 +1362,7 @@
           <title>Consolidated Fulfilment</title>
           <mediaobject>
             <imageobject>
-              <imagedata fileref="art/UBL-2.2-Fulfilment-4consolidated.png" contentwidth="750px"/>
+              <imagedata fileref="art/UBL-2.2-Fulfilment-4consolidated.png"/>
             </imageobject>
             <textobject>
               <phrase>[Consolidated Fulfilment Diagram]</phrase>
@@ -1999,7 +1978,7 @@
               <title>CPFR Steps 1 and 2</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-Steps1-2.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-Steps1-2.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[CPFR Steps 1 &amp; 2 Diagram]</phrase>
@@ -2016,8 +1995,7 @@
               <title>Establish Collaborative Relationships</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-EstablishingCollaborativeRelationships.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-EstablishingCollaborativeRelationships.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Establish Collaborative Relationships Diagram]</phrase>
@@ -2033,8 +2011,7 @@
               <title>Create Joint Business Plan</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-CreateJointBusinessPlan.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-CreateJointBusinessPlan.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Create Joint Business Plan Diagram]</phrase>
@@ -2065,7 +2042,7 @@
               <title>CPFR Steps 3, 4, and 5</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-Steps3-4-5.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-Steps3-4-5.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[CPFR Steps 3, 4, and 5 Diagram]</phrase>
@@ -2084,8 +2061,7 @@
               <title>Create Sales Forecast</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-CreatingSalesForecast.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-CreatingSalesForecast.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Create Sales Forecast Diagram]</phrase>
@@ -2111,7 +2087,7 @@
               <title>Exception Handling</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-ExceptionHandling.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-ExceptionHandling.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Exception Handling Diagram]</phrase>
@@ -2137,7 +2113,7 @@
               <title>CPFR Steps 6, 7, 8 and 9</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-Steps6-9.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-Steps6-9.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[CPFR Steps 6, 7, 8 and 9 Diagram]</phrase>
@@ -2157,8 +2133,7 @@
               <title>Create Order Forecast</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-CreateOrderForecast.png" contentwidth="750px"
-                  />
+                  <imagedata fileref="art/UBL-2.2-CPFR-CreateOrderForecast.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Create Order Forecast Diagram]</phrase>
@@ -2177,7 +2152,7 @@
               <title>Identifying and Resolving Exceptions for Order Forecast</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-IdentifyResolve.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-IdentifyResolve.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Identifying and Resolving Exceptions for Order Forecast Diagram]</phrase>
@@ -2188,7 +2163,7 @@
               <title>Exception Monitor During Execution</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-CPFR-ExceptionMonitor.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-CPFR-ExceptionMonitor.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Exception Monitor During Execution Diagram]</phrase>
@@ -2222,8 +2197,7 @@
               <title>The Tendering Process</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-TenderingProcess.png" contentwidth="750px"
-                  />
+                  <imagedata fileref="art/UBL-2.2-Tender-TenderingProcess.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Tendering Process Diagram]</phrase>
@@ -2246,8 +2220,7 @@
               <title>Contract Information Preparation</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-ContractInfoPrep.png" contentwidth="750px"
-                  />
+                  <imagedata fileref="art/UBL-2.2-Tender-ContractInfoPrep.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Tendering Process Diagram]</phrase>
@@ -2267,8 +2240,7 @@
               <title>Contract Information Notification</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-ContractInfoNotify.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-ContractInfoNotify.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Contract Information Notification Diagram]</phrase>
@@ -2288,7 +2260,7 @@
               <title>Invitation to Tender</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-Invitation.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-Invitation.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Invitation to Tender Diagram]</phrase>
@@ -2306,8 +2278,7 @@
               <title>Expression of Interest</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-ExpressionOfInterest.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-ExpressionOfInterest.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Expression of Interest Diagram]</phrase>
@@ -2326,8 +2297,7 @@
               <title>Unsubscribe from Procedure</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-UnsubscribeFromProcedure.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-UnsubscribeFromProcedure.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Unsubscribe From Procedure Diagram]</phrase>
@@ -2348,8 +2318,7 @@
               <title>Submission of Qualification Information</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-QualificationInfo.png" contentwidth="750px"
-                  />
+                  <imagedata fileref="art/UBL-2.2-Tender-QualificationInfo.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Submission of Qualification Information Diagram]</phrase>
@@ -2368,8 +2337,7 @@
               <title>Qualification of Interest</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-QualificationApplication.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-QualificationApplication.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Qualification Application Diagram]</phrase>
@@ -2385,7 +2353,7 @@
               <title>Enquiry</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Enquiry.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Enquiry.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Enquiry Diagram]</phrase>
@@ -2405,8 +2373,7 @@
               <title>Submission of Tenders</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-SubmissionOfTenders.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-SubmissionOfTenders.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Submission of Tenders Diagram]</phrase>
@@ -2423,7 +2390,7 @@
               <title>Tender Status</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-Status.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-Status.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Tender Status Diagram]</phrase>
@@ -2440,7 +2407,7 @@
               <title>Tender Withdrawal</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-Withdrawal.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-Withdrawal.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Tender Withdrawal Diagram]</phrase>
@@ -2461,8 +2428,7 @@
               <title>Award Notification</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-AwardNotification.png" contentwidth="750px"
-                  />
+                  <imagedata fileref="art/UBL-2.2-Tender-AwardNotification.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Award Notification Diagram]</phrase>
@@ -2476,8 +2442,7 @@
               <title>Award Publication</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-AwardPublication.png" contentwidth="750px"
-                  />
+                  <imagedata fileref="art/UBL-2.2-Tender-AwardPublication.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Award Publication Diagram]</phrase>
@@ -2491,8 +2456,7 @@
               <title>Guarantee Deposit</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-GuaranteeDeposit.png" contentwidth="750px"
-                  />
+                  <imagedata fileref="art/UBL-2.2-Tender-GuaranteeDeposit.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Guarantee Deposit Diagram]</phrase>
@@ -2509,7 +2473,7 @@
               <title>Tender Contract</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-Tender-Contract.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-Tender-Contract.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Tender Contract Diagram]</phrase>
@@ -2631,8 +2595,7 @@
                 <title>Create Catalogue Process</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.0-CreateCatalogueProcess.png" contentwidth="750px"
-                    />
+                    <imagedata fileref="art/UBL-2.0-CreateCatalogueProcess.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Create Catalogue Diagram]</phrase>
@@ -2652,8 +2615,7 @@
                 <title>Update Item Specification Process</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.0-UpdateCatalogueItemSpecificationProcess.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.0-UpdateCatalogueItemSpecificationProcess.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Update Item Specification Diagram]</phrase>
@@ -2673,8 +2635,7 @@
                 <title>Update Catalogue Pricing Process</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.0-UpdateCataloguePricingProcess.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.0-UpdateCataloguePricingProcess.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Update Catalogue Pricing Diagram]</phrase>
@@ -2691,8 +2652,7 @@
                 <title>Delete Catalogue Process</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.0-DeleteCatalogueProcess.png" contentwidth="750px"
-                    />
+                    <imagedata fileref="art/UBL-2.0-DeleteCatalogueProcess.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Delete Catalogue Diagram]</phrase>
@@ -2709,8 +2669,7 @@
                 <title>Punch-out Sourcing Process</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.0-SourcingPunchoutProcess.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.0-SourcingPunchoutProcess.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Punch-out Sourcing Diagram]</phrase>
@@ -2741,8 +2700,7 @@
             <title>Quotation Process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.0-SourcingBuyerInitiatedProcess.png"
-                  contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.0-SourcingBuyerInitiatedProcess.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Quotation Diagram]</phrase>
@@ -2765,7 +2723,7 @@
               <title>Ordering Process</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-OrderingProcess.png" contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-OrderingProcess.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Ordering Diagram]</phrase>
@@ -2921,7 +2879,7 @@
                 <title>Initial Stocking of the Area by Producer</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-VMI-InitialStocking.png" contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-VMI-InitialStocking.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Initial Stocking of the Area by Producer Diagram]</phrase>
@@ -2938,8 +2896,7 @@
                 <title>Report of Sales and Inventory Movement</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-VMI-SalesAndInventoryMovement.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-VMI-SalesAndInventoryMovement.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Report of Sales and Inventory Movement Diagram]</phrase>
@@ -2960,8 +2917,7 @@
                 <title>Permanent Replenishment</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-VMI-PermanentReplenishment.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-VMI-PermanentReplenishment.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Permanent Replenishment Diagram]</phrase>
@@ -2979,7 +2935,7 @@
                 <title>Invoicing for Vendor Managed Inventory</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-VMI-Invoicing.png" contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-VMI-Invoicing.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Invoicing for Vendor Managed Inventory Diagram]</phrase>
@@ -2999,8 +2955,7 @@
                 <title>Returns Initiated by the Producer</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-VMI-ReturnsByProducer.png" contentwidth="750px"
-                    />
+                    <imagedata fileref="art/UBL-2.2-VMI-ReturnsByProducer.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Returns Initiated by the Producer Diagram]</phrase>
@@ -3017,7 +2972,7 @@
                 <title>Price Adjustments</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-VMI-PriceAdjustment.png" contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-VMI-PriceAdjustment.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Price Adjustments Diagram]</phrase>
@@ -3047,8 +3002,7 @@
                 <title>Transfer of Base Item Catalogue</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-CRP-BaseArticleCatalogue.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-CRP-BaseArticleCatalogue.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Transfer of Base Item Catalogue Diagram]</phrase>
@@ -3067,8 +3021,7 @@
                 <title>Initial Stocking of the Area by Retailer</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-CRP-InitialStockingByRetailer.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-CRP-InitialStockingByRetailer.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Initial Stocking of the Area by Retailer Diagram]</phrase>
@@ -3096,8 +3049,7 @@
                 <title>Report of Sales and Inventory Movements</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-CRP-SalesAndInventoryMovement.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-CRP-SalesAndInventoryMovement.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Report of Sales and Inventory Movements Diagram]</phrase>
@@ -3113,7 +3065,7 @@
                 <title>Invoicing for Cyclic Replenishment Program</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-CRP-Invoicing.png" contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-CRP-Invoicing.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Invoicing for Cyclic Replenishment Program Diagram]</phrase>
@@ -3133,7 +3085,7 @@
                 <title>Synchronizing Stock Information</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-CRP-Synchronizing.png" contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-CRP-Synchronizing.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Synchronizing of Stock Information Diagram]</phrase>
@@ -3152,8 +3104,7 @@
                 <title>Changes to the Item Catalogue</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-CRP-ChangeArticleCatalogue.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-CRP-ChangeArticleCatalogue.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Changes to the Item Catalogue Diagram]</phrase>
@@ -3192,8 +3143,7 @@
                 <title>Transfer of Base Article Catalogue</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-ROCD-BaseArticleCatalogue.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-ROCD-BaseArticleCatalogue.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Transfer of Base Article Catalogue Diagram]</phrase>
@@ -3211,8 +3161,7 @@
                 <title>Periodic Transfer of Article Availability Information</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-ROCD-ArticleAvailability.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-ROCD-ArticleAvailability.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Transfer of Article Availability Diagram]</phrase>
@@ -3235,7 +3184,7 @@
                 <title>Initial Stocking of the Area by Producer and Retailer</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.2-ROCD-InitialStocking.png" contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.2-ROCD-InitialStocking.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Initial Stocking of the Area Diagram]</phrase>
@@ -3329,8 +3278,7 @@
               <title>Fulfilment with Despatch Advice</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-FulfilmentDespatchAdviceProcess.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-FulfilmentDespatchAdviceProcess.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Fulfilment with Despatch Advice Diagram]</phrase>
@@ -3384,8 +3332,7 @@
               <title>Fulfilment with Receipt Advice</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-FulfilmentReceiptAdviceProcess.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-FulfilmentReceiptAdviceProcess.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Fulfilment with Receipt Advice Diagram]</phrase>
@@ -3466,8 +3413,7 @@
               <title>Initiate Freight Management Process</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-InitiateFreightMgmtProcess.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-InitiateFreightMgmtProcess.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Initiate Freight Management Process Diagram]</phrase>
@@ -3592,7 +3538,7 @@
             <title>Freight Status Reporting Process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.2-FreightStatusReporting.png" contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.2-FreightStatusReporting.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Freight Status Reporting Diagram]</phrase>
@@ -3620,8 +3566,7 @@
             <title>Certification of Origin of Goods Process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.0-CertificationOfOriginOfGoodsProcess.png"
-                  contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.0-CertificationOfOriginOfGoodsProcess.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Certification of Origin of Goods Diagram]</phrase>
@@ -3756,8 +3701,7 @@
               <title>The Generic Freight Management Process</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-IMFM-GenericIntermodalFreightProcess.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-IMFM-GenericIntermodalFreightProcess.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[The Generic Freight Management Process Diagram]</phrase>
@@ -3782,8 +3726,7 @@
               <title>The Intermodal Freight Management Process</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-IMFM-IntermodalFreightManagementProcess.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-IMFM-IntermodalFreightManagementProcess.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[The Intermodal Freight Management Process Diagram]</phrase>
@@ -3804,8 +3747,7 @@
               <title>Transport Service Description</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-IMFM-TransportServiceDescription.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-IMFM-TransportServiceDescription.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Transport Service Description Diagram]</phrase>
@@ -3876,8 +3818,7 @@
               <title>Transport Execution Plan</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-IMFM-BasicTransportExecutionPlan.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-IMFM-BasicTransportExecutionPlan.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[TEP Diagram]</phrase>
@@ -3907,8 +3848,7 @@
               <title>Goods Item Itinerary</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-IMFM-GoodsItemItinerary.png" contentwidth="750px"
-                  />
+                  <imagedata fileref="art/UBL-2.2-IMFM-GoodsItemItinerary.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[GII Diagram]</phrase>
@@ -3938,8 +3878,7 @@
               <title>Transport Progress Status</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.2-IMFM-TransportProgressStatus.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.2-IMFM-TransportProgressStatus.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[TPS Diagram]</phrase>
@@ -4077,8 +4016,7 @@
                 <title>Billing with Credit Note Process</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.0-BillingwithCreditNoteProcess.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.0-BillingwithCreditNoteProcess.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Billing with Credit Note Diagram]</phrase>
@@ -4096,8 +4034,7 @@
                 <title>Billing with Debit Note Process</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.0-BillingwithDebitNoteProcess.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.0-BillingwithDebitNoteProcess.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Billing with Debit Note Diagram]</phrase>
@@ -4125,8 +4062,7 @@
                 <title>Self Billing with Credit Note Process</title>
                 <mediaobject>
                   <imageobject>
-                    <imagedata fileref="art/UBL-2.0-SelfBillingwithCreditNoteProcess.png"
-                      contentwidth="750px"/>
+                    <imagedata fileref="art/UBL-2.0-SelfBillingwithCreditNoteProcess.png"/>
                   </imageobject>
                   <textobject>
                     <phrase>[Self Billing with Credit Note Diagram]</phrase>
@@ -4151,7 +4087,7 @@
                 <mediaobject>
                   <imageobject>
                     <imagedata fileref="art/UBL-2.0-SelfBillingwithSelfBilledCreditNoteProcess.png"
-                      contentwidth="750px"/>
+                    />
                   </imageobject>
                   <textobject>
                     <phrase>[Self Billing with Self Billed Credit Note Diagram]</phrase>
@@ -4172,8 +4108,7 @@
               <title>Reminder for Payment Process</title>
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="art/UBL-2.0-ReminderForPaymentProcess.png"
-                    contentwidth="750px"/>
+                  <imagedata fileref="art/UBL-2.0-ReminderForPaymentProcess.png"/>
                 </imageobject>
                 <textobject>
                   <phrase>[Reminder for Payment Diagram]</phrase>
@@ -4196,7 +4131,7 @@
             <title>Freight Billing Process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.0-FreightBillingProcess.png" contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.0-FreightBillingProcess.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Freight Billing Diagram]</phrase>
@@ -4217,7 +4152,7 @@
             <title>Utility Billing Process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.2-UtilityBillingProcess.png" contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.2-UtilityBillingProcess.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Utility Billing Diagram]</phrase>
@@ -4235,8 +4170,7 @@
             <title>Payment Notification Process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.0-PaymentNotificationProcess.png" contentwidth="750px"
-                />
+                <imagedata fileref="art/UBL-2.0-PaymentNotificationProcess.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Payment Diagram]</phrase>
@@ -4252,8 +4186,7 @@
             <title>Statement Process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.0-ReportStateofAccountsProcess.png"
-                  contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.0-ReportStateofAccountsProcess.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Statement Diagram]</phrase>
@@ -4282,7 +4215,7 @@
             <title>Business card process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.2-BusinessCard.png" contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.2-BusinessCard.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Business Card Diagram]</phrase>
@@ -4300,7 +4233,7 @@
             <title>Digital capability process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.2-DigitalCapability.png" contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.2-DigitalCapability.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Digital Capability Diagram]</phrase>
@@ -4320,7 +4253,7 @@
             <title>Bi-lateral TPA process</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.2-DigitalAgreement.png" contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.2-DigitalAgreement.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Digital Agreement Diagram]</phrase>
@@ -12356,7 +12289,7 @@
         <title>UBL Schema Dependencies</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="art/UBL-2.2-SchemaDependencies.png" contentwidth="750px"/>
+            <imagedata fileref="art/UBL-2.2-SchemaDependencies.png"/>
           </imageobject>
           <textobject>
             <phrase>[schema dependency diagram]</phrase>
@@ -13884,7 +13817,7 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
         <title>UBL 1.0 Order-to-Invoice Business Process</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="art/UBL-1.0-ProcurementProcess.png" contentwidth="750px"/>
+            <imagedata fileref="art/UBL-1.0-ProcurementProcess.png"/>
           </imageobject>
           <textobject>
             <phrase>[UBL 1.0 order-to-invoice diagram]</phrase>
@@ -14069,8 +14002,9 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
           <para>All changes in 2.2 schemas are backward-compatible with valid UBL 2.1 and UBL 2.0
             instances. Changes include the addition of new elements and attributes; changes in
             cardinality from 1 to 0..1 (i.e., making a formerly required element optional); changes
-            in cardinality from 0..1 to 0..n (i.e., allowing an unlimited number of occurrences
-            instead of just one); and corrections to Dictionary Entry Names (DENs).</para>
+            in cardinality from 1 to 1..n or from 0..1 to 0..n (i.e., allowing an unlimited number
+            of occurrences instead of just one); and corrections to Dictionary Entry Names
+            (DENs).</para>
         </section>
         <section id="S-CHANGES-TO-LIBRARY-ELEMENTS-UBL-2.1-TO-UBL-2.2">
           <title>Changes to Library Elements, UBL 2.1 to UBL 2.2</title>
@@ -14079,540 +14013,660 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
           <table id="T-CHANGES-TO-LIBRARY-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
             <title>Changes to Library Elements Universal Business Language (UBL)</title>
             <!--old2new Library UBL current to 2.1 -->
-            <tgroup cols="3">
-              <!--Library Universal Business Language (UBL) 2.2 csd02wd02 to 2.1-->
-              <colspec colwidth="35*"/>
-              <colspec colwidth="35*"/>
-              <colspec colwidth="30*"/>
-              <thead>
-                <row>
-                  <entry>Aggregate BIE</entry>
-                  <entry>Basic or Association BIE</entry>
-                  <entry>Changes for UBL</entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>Attachment</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Attachment. Embedded_ Document. Text">EmbeddedDocument</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>AwardingTerms</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Awarding Terms. No Further Negotiation Indicator. Indicator"
-                    >NoFurtherNegotiationIndicator</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>Capability</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Capability. Web Site">WebSite</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>ClassificationScheme</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Classification Scheme. Agency Name. Name">AgencyName</entry>
-                  <entry>Changed dictionary entry name from “Classification Scheme. Agency Name.
-                    Text” to “Classification Scheme. Agency Name. Name”</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>Consignment</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Consignment. Actual Pickup_ Transport Event. Transport Event"
-                    >ActualPickupTransportEvent</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Consignment. Actual Delivery_ Transport Event. Transport Event"
-                    >ActualDeliveryTransportEvent</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>ContractExtension</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Contract Extension. Renewals. Indicator">RenewalsIndicator</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Contracting System. Details">ContractingSystem</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Delivery Channel. Details">DeliveryChannel</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Digital Agreement Terms. Details">DigitalAgreementTerms</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Digital Collaboration. Details">DigitalCollaboration</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Digital Process. Details">DigitalProcess</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Digital Service. Details">DigitalService</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>DocumentDistribution</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Document Distribution. Document Type Code. Code"
-                    >DocumentTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Document Distribution. Maximum_ Copies. Numeric"
-                    >MaximumCopiesNumeric</entry>
-                  <entry>Changed cardinality from 1 to 0..1</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Document Distribution. Maximum_ Originals. Numeric"
-                    >MaximumOriginalsNumeric</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Document Metadata. Details">DocumentMetadata</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Economic Operator Party. Details">EconomicOperatorParty</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Encryption Certificate Path Chain. Details"
-                    >EncryptionCertificatePathChain</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Encryption Data. Details">EncryptionData</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Encryption Symmetric Algorithm. Details"
-                    >EncryptionSymmetricAlgorithm</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>Evidence</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Evidence. Name">Name</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Evidence. Confidentiality Level Code. Code"
-                    >ConfidentialityLevelCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Evidence. Document Reference">DocumentReference</entry>
-                  <entry>Changed cardinality from 0..1 to 0..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Legislation. Details">Legislation</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Lot Distribution. Details">LotDistribution</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Message Delivery. Details">MessageDelivery</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>Meter</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Meter. Meter Name. Name">MeterName</entry>
-                  <entry>Changed dictionary entry name from “Meter. Meter Name. Text” to “Meter.
-                    Meter Name. Name”</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>MonetaryTotal</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Monetary Total. Withholding Tax_ Total Amount. Amount"
-                    >WithholdingTaxTotalAmount</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Participant Party. Details">ParticipantParty</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>Party</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Party. Additional_ Web Site. Web Site">AdditionalWebSite</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Party. Social Media Profile">SocialMediaProfile</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>Person</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Person. Birthplace Name. Name">BirthplaceName</entry>
-                  <entry>Changed dictionary entry name from “Person. Birthplace Name. Text” to
-                    “Person. Birthplace Name. Name”</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Person. Role Code. Code">RoleCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Person. Citizenship_ Country. Country">CitizenshipCountry</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Post Award Process. Details">PostAwardProcess</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>ProcurementProject</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Procurement Project. Name">Name</entry>
-                  <entry>Changed cardinality from 1..n to 0..n</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry
-                    remap="Procurement Project. Main_ Commodity Classification. Commodity Classification"
-                    >MainCommodityClassification</entry>
-                  <entry>Changed cardinality from 0..1 to 0..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Procurement Project Lot Reference. Details"
-                    >ProcurementProjectLotReference</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Response Value. Details">ResponseValue</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Service Level Agreement. Details">ServiceLevelAgreement</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Social Media Profile. Details">SocialMediaProfile</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>TenderPreparation</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender Preparation. Tender_ Encryption Data. Encryption Data"
-                    >TenderEncryptionData</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>TenderResult</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender Result. Award Identifier. Identifier">AwardID</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender Result. Received_ Tender Quantity. Quantity"
-                    >ReceivedTenderQuantity</entry>
-                  <entry>Changed dictionary entry name from “Tender Result. Received_ Tender.
-                    Quantity” to “Tender Result. Received_ Tender Quantity. Quantity”</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender Result. Lower_ Tender Amount. Amount"
-                    >LowerTenderAmount</entry>
-                  <entry>Changed dictionary entry name from “Tender Result. Lower_ Tender. Amount”
-                    to “Tender Result. Lower_ Tender Amount. Amount”</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender Result. Higher_ Tender Amount. Amount"
-                    >HigherTenderAmount</entry>
-                  <entry>Changed dictionary entry name from “Tender Result. Higher_ Tender. Amount”
-                    to “Tender Result. Higher_ Tender Amount. Amount”</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tendering Criterion. Details">TenderingCriterion</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tendering Criterion Property. Details"
-                    >TenderingCriterionProperty</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tendering Criterion Property Group. Details"
-                    >TenderingCriterionPropertyGroup</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tendering Criterion Response. Details"
-                    >TenderingCriterionResponse</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>TenderingProcess</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tendering Process. Access Tools_ URI. Identifier"
-                    >AccessToolsURI</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tendering Process. Economic Operator Short List"
-                    >EconomicOperatorShortList</entry>
-                  <entry>Changed cardinality from 0..1 to 0..n</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tendering Process. Contracting System">ContractingSystem</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>TenderingTerms</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tendering Terms. Recurring_ Procurement. Indicator"
-                    >RecurringProcurementIndicator</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tendering Terms. Estimated Timing_ Further Publication. Text"
-                    >EstimatedTimingFurtherPublication</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tendering Terms. Lot Distribution">LotDistribution</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tendering Terms. Post Award Process">PostAwardProcess</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tendering Terms. Economic Operator Short List"
-                    >EconomicOperatorShortList</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>TransportEquipment</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Transport Equipment. Verified Gross Mass">VerifiedGrossMass</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Verified Gross Mass. Details">VerifiedGrossMass</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Web Site. Details">WebSite</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-              </tbody>
-            </tgroup>
+   <tgroup cols="3"><!--Library Universal Business Language (UBL) 2.2 csprd03 to 2.1-->
+      <colspec colwidth="35*"/>
+      <colspec colwidth="35*"/>
+      <colspec colwidth="30*"/>
+      <thead>
+         <row>
+            <entry>Aggregate BIE</entry>
+            <entry>Basic or Association BIE</entry>
+            <entry>Changes for UBL</entry>
+         </row>
+      </thead>
+      <tbody>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Attachment.Details">Attachment</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Attachment.Embedded_Document.Text">EmbeddedDocument</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-AwardingTerms.Details">AwardingTerms</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-AwardingTerms.NoFurtherNegotiationIndicator.Indicator">NoFurtherNegotiationIndicator</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Capability.Details">Capability</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Capability.WebSite">WebSite</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ClassificationScheme.Details">ClassificationScheme</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ClassificationScheme.AgencyName.Name">AgencyName</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Classification Scheme. Agency Name. Text” to “Classification Scheme. Agency Name. Name”</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Consignment.Details">Consignment</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Consignment.ActualPickup_TransportEvent.TransportEvent">ActualPickupTransportEvent</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Consignment.ActualDelivery_TransportEvent.TransportEvent">ActualDeliveryTransportEvent</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractExtension.Details">ContractExtension</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractExtension.Renewals.Indicator">RenewalsIndicator</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractingSystem.Details">ContractingSystem</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DeliveryChannel.Details">DeliveryChannel</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DigitalAgreementTerms.Details">DigitalAgreementTerms</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DigitalCollaboration.Details">DigitalCollaboration</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DigitalProcess.Details">DigitalProcess</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DigitalService.Details">DigitalService</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DocumentDistribution.Details">DocumentDistribution</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DocumentDistribution.DocumentTypeCode.Code">DocumentTypeCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DocumentDistribution.Maximum_Copies.Numeric">MaximumCopiesNumeric</ulink>
+            </entry>
+            <entry>Changed cardinality from 1 to 0..1</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DocumentDistribution.Maximum_Originals.Numeric">MaximumOriginalsNumeric</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DocumentMetadata.Details">DocumentMetadata</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-EconomicOperatorParty.Details">EconomicOperatorParty</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-EncryptionCertificatePathChain.Details">EncryptionCertificatePathChain</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-EncryptionData.Details">EncryptionData</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-EncryptionSymmetricAlgorithm.Details">EncryptionSymmetricAlgorithm</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Evidence.Details">Evidence</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Evidence.Name">Name</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Evidence.ConfidentialityLevelCode.Code">ConfidentialityLevelCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Evidence.DocumentReference">DocumentReference</ulink>
+            </entry>
+            <entry>Changed cardinality from 0..1 to 0..n</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Legislation.Details">Legislation</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-LotDistribution.Details">LotDistribution</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-MessageDelivery.Details">MessageDelivery</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Meter.Details">Meter</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Meter.MeterName.Name">MeterName</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Meter. Meter Name. Text” to “Meter. Meter Name. Name”</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-MonetaryTotal.Details">MonetaryTotal</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-MonetaryTotal.WithholdingTax_TotalAmount.Amount">WithholdingTaxTotalAmount</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ParticipantParty.Details">ParticipantParty</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Party.Details">Party</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Party.Additional_WebSite.WebSite">AdditionalWebSite</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Party.SocialMediaProfile">SocialMediaProfile</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Person.Details">Person</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Person.BirthplaceName.Name">BirthplaceName</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Person. Birthplace Name. Text” to “Person. Birthplace Name. Name”</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Person.RoleCode.Code">RoleCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Person.Citizenship_Country.Country">CitizenshipCountry</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-PostAwardProcess.Details">PostAwardProcess</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ProcurementProject.Details">ProcurementProject</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ProcurementProject.Name">Name</ulink>
+            </entry>
+            <entry>Changed cardinality from 1..n to 0..n</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ProcurementProject.Main_CommodityClassification.CommodityClassification">MainCommodityClassification</ulink>
+            </entry>
+            <entry>Changed cardinality from 0..1 to 0..n</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ProcurementProjectLotReference.Details">ProcurementProjectLotReference</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ResponseValue.Details">ResponseValue</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ServiceLevelAgreement.Details">ServiceLevelAgreement</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SocialMediaProfile.Details">SocialMediaProfile</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderPreparation.Details">TenderPreparation</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderPreparation.Tender_EncryptionData.EncryptionData">TenderEncryptionData</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderResult.Details">TenderResult</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderResult.AwardIdentifier.Identifier">AwardID</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderResult.Received_TenderQuantity.Quantity">ReceivedTenderQuantity</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Tender Result. Received_ Tender. Quantity” to “Tender Result. Received_ Tender Quantity. Quantity”</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderResult.Lower_TenderAmount.Amount">LowerTenderAmount</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Tender Result. Lower_ Tender. Amount” to “Tender Result. Lower_ Tender Amount. Amount”</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderResult.Higher_TenderAmount.Amount">HigherTenderAmount</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Tender Result. Higher_ Tender. Amount” to “Tender Result. Higher_ Tender Amount. Amount”</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingCriterion.Details">TenderingCriterion</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingCriterionProperty.Details">TenderingCriterionProperty</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingCriterionPropertyGroup.Details">TenderingCriterionPropertyGroup</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingCriterionResponse.Details">TenderingCriterionResponse</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingProcess.Details">TenderingProcess</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingProcess.AccessTools_URI.Identifier">AccessToolsURI</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingProcess.EconomicOperatorShortList">EconomicOperatorShortList</ulink>
+            </entry>
+            <entry>Changed cardinality from 0..1 to 0..n</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingProcess.ContractingSystem">ContractingSystem</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingTerms.Details">TenderingTerms</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingTerms.Recurring_Procurement.Indicator">RecurringProcurementIndicator</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingTerms.EstimatedTiming_FurtherPublication.Text">EstimatedTimingFurtherPublication</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingTerms.LotDistribution">LotDistribution</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingTerms.PostAwardProcess">PostAwardProcess</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderingTerms.EconomicOperatorShortList">EconomicOperatorShortList</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TransportEquipment.Details">TransportEquipment</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TransportEquipment.VerifiedGrossMass">VerifiedGrossMass</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-VerifiedGrossMass.Details">VerifiedGrossMass</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-WebSite.Details">WebSite</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+      </tbody>
+   </tgroup>
           </table>
         </section>
         <section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-UBL-2.1-TO-UBL-2.2">
@@ -14622,469 +14676,604 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
           <table id="T-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
             <title>Changes to Document Elements Universal Business Language (UBL)</title>
             <!--old2new Document UBL current to 2.1-->
-            <tgroup cols="3">
-              <!--Document Universal Business Language (UBL) 2.2 csd02wd02 to 2.1-->
-              <colspec colwidth="35*"/>
-              <colspec colwidth="35*"/>
-              <colspec colwidth="30*"/>
-              <thead>
-                <row>
-                  <entry>Aggregate BIE</entry>
-                  <entry>Basic or Association BIE</entry>
-                  <entry>Changes for UBL</entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>AwardedNotification</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Awarded Notification. Contract Name. Name">ContractName</entry>
-                  <entry>Changed dictionary entry name from “Awarded Notification. Contract Name.
-                    Text” to “Awarded Notification. Contract Name. Name”</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Business Card. Details">BusinessCard</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>CallForTenders</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Call For Tenders. Contracting Party">ContractingParty</entry>
-                  <entry>Changed cardinality from 1 to 1..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>ContractAwardNotice</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Contract Award Notice. Notice_ Language Code. Code"
-                    >NoticeLanguageCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Contract Award Notice. Contracting Party">ContractingParty</entry>
-                  <entry>Changed cardinality from 1 to 1..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>ContractNotice</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Contract Notice. Notice Type Code. Code">NoticeTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Contract Notice. Notice_ Language Code. Code"
-                    >NoticeLanguageCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Contract Notice. Contracting Party">ContractingParty</entry>
-                  <entry>Changed cardinality from 1 to 1..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>CreditNote</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Credit Note. Due Date. Date">DueDate</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Credit Note. Project Reference">ProjectReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Credit Note. Withholding_ Tax Total. Tax Total"
-                    >WithholdingTaxTotal</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>DebitNote</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Debit Note. Withholding_ Tax Total. Tax Total"
-                    >WithholdingTaxTotal</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Digital Agreement. Details">DigitalAgreement</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Digital Capability. Details">DigitalCapability</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Enquiry. Details">Enquiry</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Enquiry Response. Details">EnquiryResponse</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Expression Of Interest Request. Details"
-                    >ExpressionOfInterestRequest</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Expression Of Interest Response. Details"
-                    >ExpressionOfInterestResponse</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>ForwardingInstructions</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Forwarding Instructions. Document Distribution"
-                    >DocumentDistribution</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>FreightInvoice</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Freight Invoice. Due Date. Date">DueDate</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Freight Invoice. Project Reference">ProjectReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Freight Invoice. Withholding_ Tax Total. Tax Total"
-                    >WithholdingTaxTotal</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>GuaranteeCertificate</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Guarantee Certificate. Signature">Signature</entry>
-                  <entry>Changed cardinality from 1..n to 0..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>OrderResponse</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry
-                    remap="Order Response. Order Change_ Document Reference. Document Reference"
-                    >OrderChangeDocumentReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>OrderResponseSimple</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry
-                    remap="Order Response Simple. Order Change_ Document Reference. Document Reference"
-                    >OrderChangeDocumentReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>PriorInformationNotice</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Prior Information Notice. Notice Type Code. Code"
-                    >NoticeTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Prior Information Notice. Notice_ Language Code. Code"
-                    >NoticeLanguageCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Prior Information Notice. Contracting Party"
-                    >ContractingParty</entry>
-                  <entry>Changed cardinality from 1 to 1..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Qualification Application Request. Details"
-                    >QualificationApplicationRequest</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Qualification Application Response. Details"
-                    >QualificationApplicationResponse</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>SelfBilledCreditNote</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Due Date. Date">DueDate</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Credit Note Type Code. Code"
-                    >CreditNoteTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Buyer_ Reference. Text"
-                    >BuyerReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Project Reference">ProjectReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Withholding_ Tax Total. Tax Total"
-                    >WithholdingTaxTotal</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>SelfBilledInvoice</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Invoice. Due Date. Date">DueDate</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Invoice. Buyer_ Reference. Text">BuyerReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Invoice. Project Reference">ProjectReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Invoice. Withholding_ Tax Total. Tax Total"
-                    >WithholdingTaxTotal</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>Tender</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender. Contract Name. Name">ContractName</entry>
-                  <entry>Changed dictionary entry name from “Tender. Contract Name. Text” to
-                    “Tender. Contract Name. Name”</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender. Tenderer_ Party. Party">TendererParty</entry>
-                  <entry>Changed cardinality from 1 to 1..n</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender. Contracting Party">ContractingParty</entry>
-                  <entry>Changed cardinality from 0..1 to 0..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tender Contract. Details">TenderContract</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>TenderReceipt</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tender Receipt. Contract Name. Name">ContractName</entry>
-                  <entry>Changed dictionary entry name from “Tender Receipt. Contract Name. Text” to
-                    “Tender Receipt. Contract Name. Name”</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tender Status. Details">TenderStatus</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tender Status Request. Details">TenderStatusRequest</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Tender Withdrawal. Details">TenderWithdrawal</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>TendererQualificationResponse</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Tenderer Qualification Response. Contract Name. Name"
-                    >ContractName</entry>
-                  <entry>Changed dictionary entry name from “Tenderer Qualification Response.
-                    Contract Name. Text” to “Tenderer Qualification Response. Contract Name.
-                    Name”</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>UnawardedNotification</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Unawarded Notification. Contract Name. Name">ContractName</entry>
-                  <entry>Changed dictionary entry name from “Unawarded Notification. Contract Name.
-                    Text” to “Unawarded Notification. Contract Name. Name”</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Unsubscribe From Procedure Request. Details"
-                    >UnsubscribeFromProcedureRequest</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Unsubscribe From Procedure Response. Details"
-                    >UnsubscribeFromProcedureResponse</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry remap="Weight Statement. Details">WeightStatement</entry>
-                  <entry> </entry>
-                  <entry>Added</entry>
-                </row>
-              </tbody>
-            </tgroup>
+   <tgroup cols="3"><!--Document Universal Business Language (UBL) 2.2 csprd03 to 2.1-->
+      <colspec colwidth="35*"/>
+      <colspec colwidth="35*"/>
+      <colspec colwidth="30*"/>
+      <thead>
+         <row>
+            <entry>Aggregate BIE</entry>
+            <entry>Basic or Association BIE</entry>
+            <entry>Changes for UBL</entry>
+         </row>
+      </thead>
+      <tbody>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-AwardedNotification.Details">AwardedNotification</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-AwardedNotification.ContractName.Name">ContractName</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Awarded Notification. Contract Name. Text” to “Awarded Notification. Contract Name. Name”</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-BusinessCard.Details">BusinessCard</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CallForTenders.Details">CallForTenders</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CallForTenders.Required_DocumentReference.DocumentReference">RequiredDocumentReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CallForTenders.Provided_DocumentReference.DocumentReference">ProvidedDocumentReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CallForTenders.ContractingParty">ContractingParty</ulink>
+            </entry>
+            <entry>Changed cardinality from 1 to 1..n</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractAwardNotice.Details">ContractAwardNotice</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractAwardNotice.Notice_LanguageCode.Code">NoticeLanguageCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractAwardNotice.ContractingParty">ContractingParty</ulink>
+            </entry>
+            <entry>Changed cardinality from 1 to 1..n</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractNotice.Details">ContractNotice</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractNotice.NoticeTypeCode.Code">NoticeTypeCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractNotice.Notice_LanguageCode.Code">NoticeLanguageCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ContractNotice.ContractingParty">ContractingParty</ulink>
+            </entry>
+            <entry>Changed cardinality from 1 to 1..n</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CreditNote.Details">CreditNote</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CreditNote.DueDate.Date">DueDate</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CreditNote.ProjectReference">ProjectReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CreditNote.Withholding_TaxTotal.TaxTotal">WithholdingTaxTotal</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DebitNote.Details">DebitNote</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DebitNote.Withholding_TaxTotal.TaxTotal">WithholdingTaxTotal</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DigitalAgreement.Details">DigitalAgreement</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-DigitalCapability.Details">DigitalCapability</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Enquiry.Details">Enquiry</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-EnquiryResponse.Details">EnquiryResponse</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ExpressionOfInterestRequest.Details">ExpressionOfInterestRequest</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ExpressionOfInterestResponse.Details">ExpressionOfInterestResponse</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ForwardingInstructions.Details">ForwardingInstructions</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-ForwardingInstructions.DocumentDistribution">DocumentDistribution</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-FreightInvoice.Details">FreightInvoice</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-FreightInvoice.DueDate.Date">DueDate</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-FreightInvoice.ProjectReference">ProjectReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-FreightInvoice.Withholding_TaxTotal.TaxTotal">WithholdingTaxTotal</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-GuaranteeCertificate.Details">GuaranteeCertificate</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-GuaranteeCertificate.Signature">Signature</ulink>
+            </entry>
+            <entry>Changed cardinality from 1..n to 0..n</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-OrderResponse.Details">OrderResponse</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-OrderResponse.OrderChange_DocumentReference.DocumentReference">OrderChangeDocumentReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-OrderResponseSimple.Details">OrderResponseSimple</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-OrderResponseSimple.OrderChange_DocumentReference.DocumentReference">OrderChangeDocumentReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-PriorInformationNotice.Details">PriorInformationNotice</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-PriorInformationNotice.NoticeTypeCode.Code">NoticeTypeCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-PriorInformationNotice.Notice_LanguageCode.Code">NoticeLanguageCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-PriorInformationNotice.ContractingParty">ContractingParty</ulink>
+            </entry>
+            <entry>Changed cardinality from 1 to 1..n</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-QualificationApplicationRequest.Details">QualificationApplicationRequest</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-QualificationApplicationResponse.Details">QualificationApplicationResponse</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledCreditNote.Details">SelfBilledCreditNote</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledCreditNote.DueDate.Date">DueDate</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledCreditNote.CreditNoteTypeCode.Code">CreditNoteTypeCode</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledCreditNote.Buyer_Reference.Text">BuyerReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledCreditNote.ProjectReference">ProjectReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledCreditNote.Withholding_TaxTotal.TaxTotal">WithholdingTaxTotal</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledInvoice.Details">SelfBilledInvoice</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledInvoice.DueDate.Date">DueDate</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledInvoice.Buyer_Reference.Text">BuyerReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledInvoice.ProjectReference">ProjectReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-SelfBilledInvoice.Withholding_TaxTotal.TaxTotal">WithholdingTaxTotal</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Tender.Details">Tender</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Tender.ContractName.Name">ContractName</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Tender. Contract Name. Text” to “Tender. Contract Name. Name”</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Tender.CallForTender_DocumentReference.DocumentReference">CallForTenderDocumentReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Tender.Tenderer_Party.Party">TendererParty</ulink>
+            </entry>
+            <entry>Changed cardinality from 1 to 1..n</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Tender.ContractingParty">ContractingParty</ulink>
+            </entry>
+            <entry>Changed cardinality from 0..1 to 0..n</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderContract.Details">TenderContract</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderReceipt.Details">TenderReceipt</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderReceipt.ContractName.Name">ContractName</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Tender Receipt. Contract Name. Text” to “Tender Receipt. Contract Name. Name”</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderStatus.Details">TenderStatus</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderStatusRequest.Details">TenderStatusRequest</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TenderWithdrawal.Details">TenderWithdrawal</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TendererQualificationResponse.Details">TendererQualificationResponse</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-TendererQualificationResponse.ContractName.Name">ContractName</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Tenderer Qualification Response. Contract Name. Text” to “Tenderer Qualification Response. Contract Name. Name”</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-UnawardedNotification.Details">UnawardedNotification</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-UnawardedNotification.ContractName.Name">ContractName</ulink>
+            </entry>
+            <entry>Changed dictionary entry name from “Unawarded Notification. Contract Name. Text” to “Unawarded Notification. Contract Name. Name”</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-UnsubscribeFromProcedureRequest.Details">UnsubscribeFromProcedureRequest</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-UnsubscribeFromProcedureResponse.Details">UnsubscribeFromProcedureResponse</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-WeightStatement.Details">WeightStatement</ulink>
+            </entry>
+            <entry> </entry>
+            <entry>Added</entry>
+         </row>
+      </tbody>
+   </tgroup>
           </table>
         </section>
       </section>
@@ -15138,28 +15327,24 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
           alternative representations of the UBL normative schemas that are found in earlier
           releases.</para>
       </section>
-      <section id="S-TEMPORARY-ANNEX-SCHEMA-CHANGES-FROM-UBL-2.2-CSPRD01-TO-UBL-2.2-&isostage;">
-        <title>Temporary Annex: Schema changes from UBL 2.2 csprd01 to UBL 2.2 &stage;</title>
-        <section id="S-UBL-2.2-CSPRD01-SCHEMA-CHANGES-INTRODUCTION">
-          <title>UBL 2.2 csprd01 Schema Changes Introduction</title>
-          <para>The following two tables show the differences between the XML elements in UBL 2.1
-            and those in UBL 2.2.</para>
-          <para>All changes in 2.2 schemas are backward-compatible with valid UBL 2.1 and UBL 2.0
-            instances. Changes include the addition of new elements and attributes; changes in
-            cardinality from 1 to 0..1 (i.e., making a formerly required element optional); changes
-            in cardinality from 0..1 to 0..n (i.e., allowing an unlimited number of occurrences
-            instead of just one); and corrections to Dictionary Entry Names (DENs).</para>
+      <section id="S-TEMPORARY-ANNEX-SCHEMA-CHANGES-FROM-UBL-2.2-CSPRD02-TO-UBL-2.2-CSPRD03">
+        <title>Temporary Annex: Schema changes from UBL 2.2 csprd02 to UBL 2.2 &stage;</title>
+        <section id="S-UBL-2.2-CSPRD03-SCHEMA-CHANGES-INTRODUCTION">
+          <title>UBL 2.2 csprd03 Schema Changes Introduction</title>
+          <para>The following two tables show the differences between the XML elements in UBL 2.2
+            csprd02 and those in UBL 2.2 &stage;.</para>
         </section>
-        <section id="S-CHANGES-TO-LIBRARY-ELEMENTS-UBL-2.2-CSPRD01-TO-UBL-2.2-&isostage;">
-          <title>Changes to Library Elements, UBL 2.2 csprd01 to UBL 2.2 &stage;</title>
-          <para>The following table sums up the differences between the XML elements in the UBL 2.2
-            csprd01 Common Library and those in the current UBL 2.2 &stage; Common Library.</para>
+        <section id="S-CHANGES-TO-LIBRARY-ELEMENTS-UBL-2.2-CSPRD02-TO-UBL-2.2-CSPRD03">
+          <title>Changes to Library Elements, UBL 2.2 csprd02 to UBL 2.2 &stage;</title>
+          <para>There are no changes to library elements.</para>
+          <!--          <para>The following table sums up the differences between the XML elements in the UBL 2.2
+            csprd02 Common Library and those in the current UBL 2.2 &stage; Common Library.</para>
           <table id="T-UBL-2.2-CSPRD01-CHANGES-TO-LIBRARY-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
             <title>UBL 2.2 csprd01 Changes to Library Elements Universal Business Language
               (UBL)</title>
-            <!--old2new Library UBL current to 2.2 csd01-->
+            <!-\-old2new Library UBL current to previous 2.2 - check table title!-\->
             <tgroup cols="3">
-              <!--Library Universal Business Language (UBL) 2.2 csd02wd02 to 2.2 csd01-->
+              <!-\-Library Universal Business Language (UBL) 2.2 csd02wd02 to 2.2 csd01-\->
               <colspec colwidth="35*"/>
               <colspec colwidth="35*"/>
               <colspec colwidth="30*"/>
@@ -15316,256 +15501,71 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
                 </row>
               </tbody>
             </tgroup>
-          </table>
+          </table>-->
         </section>
-        <section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-UBL-2.2-CSPRD01-TO-UBL-2.2-&isostage;">
-          <title>Changes to Document Elements, UBL 2.2 csprd01 to UBL 2.2 &stage;</title>
+        <section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-UBL-2.2-CSPRD02-TO-UBL-2.2-CSPRD03">
+          <title>Changes to Document Elements, UBL 2.2 csprd02 to UBL 2.2 &stage;</title>
           <para>The following table sums up the differences between the XML elements in the UBL 2.2
-            csprd01 document schemas and those in the current UBL 2.2 &stage; document
+            csprd02 document schemas and those in the current UBL 2.2 &stage; document
             schemas.</para>
-          <table id="T-UBL-2.2-CSPRD01-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
-            <title>UBL 2.2 csprd01 Changes to Document Elements Universal Business Language
+          <table id="T-UBL-2.2-CSPRD03-CHANGES-TO-DOCUMENT-ELEMENTS-UNIVERSAL-BUSINESS-LANGUAGE-UBL">
+            <title>UBL 2.2 csprd03 Changes to Document Elements Universal Business Language
               (UBL)</title>
-            <!--old2new Document UBL current to 2.2 csd01-->
-            <tgroup cols="3">
-              <!--Document Universal Business Language (UBL) 2.2 csd02wd02 to 2.2 csd01-->
-              <colspec colwidth="35*"/>
-              <colspec colwidth="35*"/>
-              <colspec colwidth="30*"/>
-              <thead>
-                <row>
-                  <entry>Aggregate BIE</entry>
-                  <entry>Basic or Association BIE</entry>
-                  <entry>Changes for UBL</entry>
-                </row>
-              </thead>
-              <tbody>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>BusinessCard</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Business Card. Sender_ Party. Party">SenderParty</entry>
-                  <entry>Changed cardinality from 1 to 0..1</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Business Card. Receiver_ Party. Party">ReceiverParty</entry>
-                  <entry>Changed cardinality from 1 to 0..1</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Business Card. Business_ Party. Party">BusinessParty</entry>
-                  <entry>Changed cardinality from 0..1 to 1</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>CreditNote</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Credit Note. Due Date. Date">DueDate</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Credit Note. Project Reference">ProjectReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>DigitalCapability</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Digital Capability. Sender_ Party. Party">SenderParty</entry>
-                  <entry>Changed cardinality from 1 to 0..1</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Digital Capability. Receiver_ Party. Party">ReceiverParty</entry>
-                  <entry>Changed cardinality from 1 to 0..1</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Digital Capability. Business_ Party. Party">BusinessParty</entry>
-                  <entry>Changed cardinality from 0..1 to 1</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>FreightInvoice</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Freight Invoice. Due Date. Date">DueDate</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Freight Invoice. Project Reference">ProjectReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>QualificationApplicationRequest</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Request. Procedure Code. Code"
-                    >ProcedureCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry
-                    remap="Qualification Application Request. Qualification Application Type Code. Code"
-                    >QualificationApplicationTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry
-                    remap="Qualification Application Request. Weight Scoring Methodology Note. Text"
-                    >WeightScoringMethodologyNote</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Request. Weighting Type Code. Code"
-                    >WeightingTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Request. Economic Operator Party"
-                    >EconomicOperatorParty</entry>
-                  <entry>Changed cardinality from 0..1 to 0..n</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>QualificationApplicationResponse</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Response. Tenderer Role Code. Code"
-                    >TendererRoleCode</entry>
-                  <entry>Deleted</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Response. Procedure Code. Code"
-                    >ProcedureCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry
-                    remap="Qualification Application Response. Qualification Application Type Code. Code"
-                    >QualificationApplicationTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry
-                    remap="Qualification Application Response. Weight Scoring Methodology Note. Text"
-                    >WeightScoringMethodologyNote</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Response. Weighting Type Code. Code"
-                    >WeightingTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Response. Economic Operator Party"
-                    >EconomicOperatorParty</entry>
-                  <entry>Changed cardinality from 1 to 1..n</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Response. Tendering Criterion Response"
-                    >TenderingCriterionResponse</entry>
-                  <entry>Changed cardinality from 0..n to 1..n</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Qualification Application Response. Evidence">Evidence</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>SelfBilledCreditNote</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Due Date. Date">DueDate</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Credit Note Type Code. Code"
-                    >CreditNoteTypeCode</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Buyer_ Reference. Text"
-                    >BuyerReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Credit Note. Project Reference">ProjectReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <?dbhtml bgcolor="#DDDDDD"?>
-                  <?dbfo bgcolor="#DDDDDD"?>
-                  <entry>SelfBilledInvoice</entry>
-                  <entry> </entry>
-                  <entry> </entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Invoice. Due Date. Date">DueDate</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Invoice. Buyer_ Reference. Text">BuyerReference</entry>
-                  <entry>Added</entry>
-                </row>
-                <row>
-                  <entry> </entry>
-                  <entry remap="Self Billed Invoice. Project Reference">ProjectReference</entry>
-                  <entry>Added</entry>
-                </row>
-              </tbody>
-            </tgroup>
+            <!--old2new Document UBL current to previous 2.2 - check table title!-->
+   <tgroup cols="3"><!--Document Universal Business Language (UBL) 2.2 csprd03 to 2.2 csprd02-->
+      <colspec colwidth="35*"/>
+      <colspec colwidth="35*"/>
+      <colspec colwidth="30*"/>
+      <thead>
+         <row>
+            <entry>Aggregate BIE</entry>
+            <entry>Basic or Association BIE</entry>
+            <entry>Changes for UBL</entry>
+         </row>
+      </thead>
+      <tbody>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CallForTenders.Details">CallForTenders</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CallForTenders.Required_DocumentReference.DocumentReference">RequiredDocumentReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-CallForTenders.Provided_DocumentReference.DocumentReference">ProvidedDocumentReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Tender.Details">Tender</ulink>
+            </entry>
+            <entry> </entry>
+            <entry> </entry>
+         </row>
+         <row>
+            <entry> </entry>
+            <entry>
+               <ulink conformance="skip"
+                      url="mod/summary/reports/All-UBL-2.2-Documents.html#Table-Tender.CallForTender_DocumentReference.DocumentReference">CallForTenderDocumentReference</ulink>
+            </entry>
+            <entry>Added</entry>
+         </row>
+      </tbody>
+   </tgroup>
           </table>
         </section>
       </section>
@@ -15656,7 +15656,7 @@ xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatus-2">
         <title>UBL Data Model Realization</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="art/UBL-2.2-ModelRealization.png" contentwidth="750px"/>
+            <imagedata fileref="art/UBL-2.2-ModelRealization.png"/>
           </imageobject>
           <textobject>
             <phrase>[model realization diagram]</phrase>
@@ -16277,6 +16277,9 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             >mod/summary/reports/All-UBL-2.2-Documents.html#UDT</ulink></literal></para>
     </blockquote>
     <table id="T-UBL-UNQUALIFIED-DATA-TYPES">
+      <!--the following PI is required because without it the table is
+          kept together in the column and overflows the page in AHF-->
+      <?dbfo keep-together="auto"?>
       <title>UBL Unqualified Data Types</title>
       <tgroup cols="3">
         <colspec colwidth="20*"/>
@@ -16633,7 +16636,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       <title>Data Type Qualification in UBL</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="art/UBL-2.2-UDT-QDT.png" contentwidth="750px"/>
+          <imagedata fileref="art/UBL-2.2-UDT-QDT.png"/>
         </imageobject>
         <textobject>
           <phrase>[Data type qualification]</phrase>
@@ -16770,7 +16773,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             <title>Validation test output</title>
             <mediaobject>
               <imageobject>
-                <imagedata fileref="art/UBL-2.2-ValidationOutput.png" contentwidth="750px"/>
+                <imagedata fileref="art/UBL-2.2-ValidationOutput.png"/>
               </imageobject>
               <textobject>
                 <phrase>[Output of validation test]</phrase>
@@ -16850,7 +16853,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
         <title>Two-phase Default UBL 2.2 Validation</title>
         <mediaobject>
           <imageobject>
-            <imagedata fileref="art/UBL-2.2-DefaultValidation.png" contentwidth="750px"/>
+            <imagedata fileref="art/UBL-2.2-DefaultValidation.png"/>
           </imageobject>
           <textobject>
             <phrase>[two-phase validation]</phrase>
@@ -17523,7 +17526,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       <title>Open-edi Overview</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="art/UBL-2.2-Open-edi-Overview.png" contentwidth="750px"/>
+          <imagedata fileref="art/UBL-2.2-Open-edi-Overview.png"/>
         </imageobject>
         <textobject>
           <phrase>[Open-edi Overview]</phrase>
@@ -17551,7 +17554,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       <title>Open-edi Application</title>
       <mediaobject>
         <imageobject>
-          <imagedata fileref="art/UBL-2.2-Open-edi-Application.png" contentwidth="750px"/>
+          <imagedata fileref="art/UBL-2.2-Open-edi-Application.png"/>
         </imageobject>
         <textobject>
           <phrase>[Open-edi Application]</phrase>
@@ -17589,7 +17592,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       its contribution of XEP licenses used in generating PDF documents from DocBook originals; and
       Crane Softwrights for the generation of the summary reports.</para>
     <para>The following persons and companies participated as members of the OASIS UBL Technical
-      Committee during the four years of its development (2013–2017).</para>
+      Committee during the years of its development (2013–&pubyear;).</para>
     <simplelist lang="none">
       <member>Todd Albers, Federal Reserve Bank of Minneapolis</member>
       <member>Oriol Bausà Peris, Individual</member>
@@ -17602,9 +17605,11 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
       <member>Robin Cover, OASIS</member>
       <member>Kees Duvekot, RFS Holland Holding B.V.</member>
       <member>Martin Forsberg, Swedish Association of Local Authorities &amp; Regions</member>
+      <member>Cécile Guasch, Individual</member>
       <member>G. Ken Holman, Crane Softwrights Ltd.</member>
       <member>Ole Ellerbæk Madsen, DIGST Denmark</member>
       <member>Tim McGrath, Document Engineering Services Limited</member>
+      <member>Levine Naidoo, Individual</member>
       <member>Andrew Schoka, Individual</member>
       <member>Enric Staromiejski Torregrosa, everis, S.L.U.</member>
       <member>Audun Vennesland, SINTEF</member>
@@ -17619,8 +17624,8 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
     <para>During the review process of UBL 2.2, the distribution includes the parallel production of
       the specification PDF for publishing as ISO/IEC 19845 using the page layout prescribed by
       “ISO/IEC Directives, Part 2”.</para>
-    <para>This rendering is found at <literal><ulink url="ISO-IEC-19845.pdf"
-          >ISO-IEC-19845.pdf</ulink></literal>. This rendering is not included in the final
+    <para>This rendering is found at <literal><ulink url="iso-iec-19845-draft.pdf"
+          >iso-iec-19845-draft.pdf</ulink></literal>. This rendering is not included in the final
       distribution but its content is submitted directly to ITTF for publishing.</para>
   </appendix>
   <appendix id="A-TEMPORARY-ANNEX---CHANGE-LOG" role="non-normative">
@@ -17644,6 +17649,30 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
           </row>
         </thead>
         <tbody>
+          <row>
+            <entry>csprd03</entry>
+            <entry>19 February 2018</entry>
+            <entry>GKH</entry>
+            <entry>Removed figures from introduction; hyperlinked changes to HTML reports</entry>
+          </row>
+          <row>
+            <entry>csprd03</entry>
+            <entry>14 February 2018</entry>
+            <entry>GKH</entry>
+            <entry>Package prepared for voting at the February 21 meeting</entry>
+          </row>
+          <row>
+            <entry>csd03wd01</entry>
+            <entry>10 December 2017</entry>
+            <entry>GKH</entry>
+            <entry>Internal repairs of graphic constraints and UDT table constraints</entry>
+          </row>
+          <row>
+            <entry>csprd02</entry>
+            <entry>01 November 2017</entry>
+            <entry>GKH</entry>
+            <entry>Public review</entry>
+          </row>
           <row>
             <entry>csd02wd02</entry>
             <entry>04 October 2017</entry>
