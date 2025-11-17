@@ -1,7 +1,7 @@
 <html>
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <title>UBL 2.2 cs01 - UBL-SignatureLibrary-2.2</title><style type="text/css">
+      <title>UBL 2.2 cos01 - UBL-CommonSignatureComponents-2.2</title><style type="text/css">
 .iT, .iR, .iC
 {
   font-size:small;border:1px solid black; border-collapse:collapse;
@@ -17,16 +17,16 @@
 }
         </style></head>
    <body>
-      <h2>UBL 2.2 cs01 - UBL-SignatureLibrary-2.2</h2>
+      <h2>UBL 2.2 cos01 - UBL-CommonSignatureComponents-2.2</h2>
       <!--Copyright © OASIS Open 
-   Rendering: 20180317-1840z Legends:Summary Legend:Name (Model line Object)
+   Rendering: 20180416-1540z Legends:Summary Legend:Name (Model line Object)
    TYPE DescriptionTable Legend:^ = up-link to the containing ABIE of the BBIE 
 or the ASBIE (hover to see ABIE name)< = back-link to the ASBIE using the ABIE, or 
 to the BBIE using the data type (hover to see destination) Line number links: alternate between summary view and table view -->
-      <p>Index for all items: <a href="#Index_ID">ID</a> <a href="#Index_REF">REF</a> <a href="#Index_SIG">SIG</a> <a href="#Table-UBL-SignatureLibrary-2.2">UBL-SignatureLibrary-2.2</a> <a href="#Table-UBL-CommonSignatureComponents-2.2">UBL-CommonSignatureComponents-2.2</a> <a href="#UDT">Unqualified Data Types</a> <a href="#Summary">Summary</a></p>
+      <p>Index for all items: <a href="#Index_ID">ID</a> <a href="#Index_REF">REF</a> <a href="#Index_SIG">SIG</a> <a href="#Index_UBL">UBL</a> <a href="#Table-UBL-CommonSignatureComponents-2.2">UBL-CommonSignatureComponents-2.2</a> <a href="#Table-UBL-SignatureLibrary-2.2">UBL-SignatureLibrary-2.2</a> <a href="#UDT">Unqualified Data Types</a> <a href="#Summary">Summary</a></p>
       <p><small>Copyright © OASIS Open</small></p>
       <p>
-         Rendering: 20180317-1840z
+         Rendering: 20180416-1540z
       </p>
       <table summary="Legends">
          <tr>
@@ -49,10 +49,57 @@ to the BBIE using the data type (hover to see destination) Line number links: al
             <td valign="top"><span>alternate between summary view and table view</span></td>
          </tr>
       </table><br><hr>
+      <h3><a name="Table-UBL-CommonSignatureComponents-2.2">UBL-CommonSignatureComponents-2.2</a></h3>
+      <table class="iT" summary="Module summary">
+         <tr class="iR">
+            <th class="iC"></th>
+            <th class="iC">Name</th>
+            <th class="iC">Card.</th>
+            <th class="iC">Rep. Term</th>
+            <th class="iC">Dictionary&nbsp;Entry&nbsp;Name</th>
+            <th class="iC">Ver.</th>
+            <th class="iC">Comp.<br>Type
+            </th>
+            <th class="iC">Class</th>
+            <th class="iC">Prop. Term</th>
+            <th class="iC">Assoc.<br>Class
+            </th>
+         </tr>
+         <tr style="background-color:#f898c8;" class="iR">
+            <td class="iC" rowspan="2"><a name="Table-UBLDocumentSignatures.Details" href="#Summary-UBLDocumentSignatures.Details">2</a></td>
+            <td class="iC" rowspan="2">UBLDocumentSignatures<br></td>
+            <td class="iC" colspan="8">This class collects all signature information for a document.</td>
+         </tr>
+         <tr style="background-color:#f898c8;" class="iR">
+            <td class="iC"></td>
+            <td class="iC"></td>
+            <td class="iC">UBL Document Signatures. Details</td>
+            <td class="iC"></td>
+            <td class="iC">ABIE</td>
+            <td class="iC">UBL Document Signatures</td>
+            <td class="iC"></td>
+            <td class="iC"></td>
+         </tr>
+         <tr style="background-color:#cbfbcb;" class="iR">
+            <td class="iC" rowspan="2"><a name="Table-UBLDocumentSignatures.SignatureInformation" href="#Summary-UBLDocumentSignatures.SignatureInformation">3</a><br><a href="#Table-UBLDocumentSignatures.Details">^</a></td>
+            <td class="iC" rowspan="2" style="font-weight:bold">SignatureInformation</td>
+            <td class="iC" colspan="8">Each of these is scaffolding for a single digital signature.</td>
+         </tr>
+         <tr style="background-color:#cbfbcb;" class="iR">
+            <td class="iC">1..n</td>
+            <td class="iC"><a href="#Table-SignatureInformation.Details">Signature Information</a></td>
+            <td class="iC">UBL Document Signatures. Signature Information</td>
+            <td class="iC">2.1</td>
+            <td class="iC">ASBIE</td>
+            <td class="iC"><a href="#Table-UBLDocumentSignatures.Details">UBL Document Signatures</a></td>
+            <td class="iC">Signature Information</td>
+            <td class="iC"><a href="#Table-SignatureInformation.Details">Signature Information</a></td>
+         </tr>
+      </table>
       <h3><a name="Table-UBL-SignatureLibrary-2.2">UBL-SignatureLibrary-2.2</a></h3><small>
          This summary of elements only includes those members of the common
          library that are referenced directly or indirectly by
-         UBL-SignatureLibrary-2.2.</small><table class="iT" summary="Module summary">
+         UBL-CommonSignatureComponents-2.2.</small><table class="iT" summary="Module summary">
          <tr class="iR">
             <th class="iC"></th>
             <th class="iC">Name</th>
@@ -72,7 +119,8 @@ to the BBIE using the data type (hover to see destination) Line number links: al
          </tr>
          <tr style="background-color:#f898c8;" class="iR">
             <td class="iC" rowspan="2"><a name="Table-SignatureInformation.Details" href="#Summary-SignatureInformation.Details">2</a></td>
-            <td class="iC" rowspan="2">SignatureInformation<br></td>
+            <td class="iC" rowspan="2">SignatureInformation<br><a href="#Table-UBLDocumentSignatures.SignatureInformation" title="UBL Document Signatures. Signature Information">&lt;</a> 
+            </td>
             <td class="iC" colspan="10">This class captures a single signature and optionally associates to a signature in
                the document with the corresponding identifier.
             </td>
@@ -716,7 +764,7 @@ to the BBIE using the data type (hover to see destination) Line number links: al
       <h3><a name="Summary">Summary</a></h3>
       <p><small>Copyright © OASIS Open</small></p>
       <p>
-         Rendering: 20180317-1840z
+         Rendering: 20180416-1540z
       </p>
       <table summary="Legends">
          <tr>
@@ -753,12 +801,40 @@ to the BBIE using the data type (hover to see destination) Line number links: al
                   in the document.</small></td>
          </tr>
       </table>
-      <h4>SIG</h4><a name="Index_SIG"></a><table summary="SignatureInformation - single model">
+      <h4>SIG</h4><a name="Index_SIG"></a><table summary="SignatureInformation - multiple models">
          <tr>
-            <td class="sC" nowrap><a name="Summary-SignatureInformation.Details"></a>SignatureInformation<span class="uT"> (<a href="#Table-SignatureInformation.Details">2</a>)</span></td>
+            <td class="sC" nowrap>SignatureInformation</td>
+         </tr>
+      </table>
+      <table summary="indentation">
+         <tr>
+            <td>
+               <p>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            </td>
+            <td valign="top">
+               <table summary="UBL-CommonSignatureComponents-2.2 - single use in given model">
+                  <tr>
+                     <td class="sC" nowrap><i>UBL-CommonSignatureComponents-2.2</i><span class="ut"> (<a name="Summary-UBLDocumentSignatures.SignatureInformation" href="#Table-UBLDocumentSignatures.SignatureInformation">3</a> <a href="#Summary-UBLDocumentSignatures.Details">UBLDocumentSignatures</a>)</span></td>
+                     <td style="vertical-align:baseline"><small>ASBIE</small></td>
+                     <td style="vertical-align:baseline"><small>Each of these is scaffolding for a single digital signature.</small></td>
+                  </tr>
+               </table>
+               <table summary="UBL-SignatureLibrary-2.2 - single use in given model">
+                  <tr>
+                     <td class="sC" nowrap><i>UBL-SignatureLibrary-2.2</i><span class="ut"> (<a name="Summary-SignatureInformation.Details" href="#Table-SignatureInformation.Details">2</a>)</span></td>
+                     <td style="vertical-align:baseline"><small>ABIE</small></td>
+                     <td style="vertical-align:baseline"><small>This class captures a single signature and optionally associates to a signature in
+                           the document with the corresponding identifier.</small></td>
+                  </tr>
+               </table>
+            </td>
+         </tr>
+      </table>
+      <h4>UBL</h4><a name="Index_UBL"></a><table summary="UBLDocumentSignatures - single model">
+         <tr>
+            <td class="sC" nowrap><a name="Summary-UBLDocumentSignatures.Details"></a>UBLDocumentSignatures<span class="uT"> (<a href="#Table-UBLDocumentSignatures.Details">2</a>)</span></td>
             <td style="vertical-align:baseline"><small>ABIE</small></td>
-            <td style="vertical-align:baseline"><small>This class captures a single signature and optionally associates to a signature in
-                  the document with the corresponding identifier.</small></td>
+            <td style="vertical-align:baseline"><small>This class collects all signature information for a document.</small></td>
          </tr>
       </table><pre>
 
