@@ -2,7 +2,8 @@
 <?xml-stylesheet type="text/xsl" 
                  href="db/spec-0.6/stylesheets/oasis-specification-html-offline.xsl"?>
 <!--
-  $Id: UBL-2.1.xml,v 1.55 2013/05/14 16:40:08 admin Exp $
+  $Id: UBL-2.1.xml,v 1.59 2013/06/17 19:50:04 admin Exp $
+  (modified for cover page information 2013-07-18 13:30z)
   Single quote: &#8217; Double quotes: &#8220;&#8221; 
 -->
 <!DOCTYPE article
@@ -13,13 +14,12 @@
 <!ENTITY name "UBL">
 <!ENTITY pversion "NONE">
 <!ENTITY version "2.1">
-<!ENTITY stage "csd4">
-<!ENTITY STAGE "CSD4">
-<!ENTITY standard "Committee Specification Draft 4">
+<!ENTITY stage "cs1">
+<!ENTITY standard "Committee Specification 1">
 <!ENTITY this-loc     "http://docs.oasis-open.org/ubl/&stage;-UBL-2.1">
-<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/prd3-UBL-2.1">
+<!ENTITY previous-loc "http://docs.oasis-open.org/ubl/prd4-UBL-2.1">
 <!ENTITY latest-loc   "http://docs.oasis-open.org/ubl">
-<!ENTITY pubdate "14 May 2013"><!--remove time from pub date-->
+<!ENTITY pubdate "29 June 2013"><!--remove time from pub date-->
 ]>
 <article status="&standard;">
   <articleinfo>
@@ -140,20 +140,20 @@
       <itemizedlist>
         <listitem>
        <para>
-          <emphasis>Universal Business Language Version 2.1 Abstract Syntax Notation 1 (ASN.1) Alternative Representation Committee Note 01.</emphasis>
+          <emphasis>UBL 2.1 Abstract Syntax Notation 1 (ASN.1) Alternative Representation Version 1.0.</emphasis>
           Latest version. 
           <ulink
-          url="http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1.html"
-              >http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1.html</ulink>.
+          url="http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1-v1.0.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1-v1.0.html</ulink>.
        </para>
         </listitem>
         <listitem>
        <para>
-          <emphasis>Universal Business Language Version 2.1 Unified Modeling Language (UML) Alternative Representation Committee Note 01.</emphasis>
+          <emphasis>UBL 2.1 Unified Modeling Language (UML) Alternative Representation Version 1.0.</emphasis>
           Latest version. 
           <ulink
-          url="http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML.html"
-              >http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML.html</ulink>.
+          url="http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML-v1.0.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML-v1.0.html</ulink>.
       </para>
         </listitem>
       </itemizedlist>
@@ -339,7 +339,7 @@
         <bibliomixed id="UBL"><abbrev>UBL-2.1</abbrev>
           <citetitle>Universal Business Language Version 2.1.</citetitle>
           <date>&pubdate;. </date>
-          <releaseinfo>&standard;. </releaseinfo> 
+          <releaseinfo>OASIS &standard;. </releaseinfo> 
           <bibliomisc>
           <ulink
           url="http://docs.oasis-open.org/ubl/&stage;-UBL-2.1/UBL-2.1.html"
@@ -1116,22 +1116,22 @@
           August 2001</ulink>. </citetitle></bibliomixed>
 
         <bibliomixed id="UBL-ASN-directory"><abbrev>UBL-2.1-ASN.1</abbrev>
-          <citetitle>OASIS Universal Business Language Version 2.1 Abstract Syntax Notation 1 (ASN.1) Alternative Representation Committee Note 01.</citetitle>
+          <citetitle>UBL 2.1 Abstract Syntax Notation 1 (ASN.1) Alternative Representation Version 1.0.</citetitle>
           <releaseinfo>Latest version.</releaseinfo> 
           <bibliomisc>
           <ulink
-          url="http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1.html"
-              >http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1.html</ulink>.
+          url="http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1-v1.0.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.1-ASN.1/v1.0/UBL-2.1-ASN.1-v1.0.html</ulink>.
           </bibliomisc>
           </bibliomixed>
 
         <bibliomixed id="UBL-UML-directory"><abbrev>UBL-2.1-UML</abbrev>
-          <citetitle>OASIS Universal Business Language Version 2.1 Unified Modeling Language (UML) Alternative Representation Committee Note 01.</citetitle>
+          <citetitle>UBL 2.1 Unified Modeling Language (UML) Alternative Representation Version 1.0.</citetitle>
           <releaseinfo>Latest version.</releaseinfo> 
           <bibliomisc>
           <ulink
-          url="http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML.html"
-              >http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML.html</ulink>.
+          url="http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML-v1.0.html"
+              >http://docs.oasis-open.org/ubl/UBL-2.1-UML/v1.0/UBL-2.1-UML-v1.0.html</ulink>.
           </bibliomisc>
           </bibliomixed>
 
@@ -1141,6 +1141,17 @@
           >Signed Digital Evidence Interoperability Recommendation, 27
           September 2010</ulink>.</citetitle></bibliomixed>
 
+        <bibliomixed id="b_XAdES-ISO">
+          <abbrev>XAdES (ISO)</abbrev><citetitle>
+          <ulink
+            url="http://www.iso.org/iso/catalogue_detail?csnumber=56025"
+            >ISO 14533-2:2012
+Processes, data elements and documents in commerce, industry and administration -- 
+Long term signature profiles -- 
+Part 2: Long term signature profiles for XML Advanced Electronic Signatures (XAdES)
+          </ulink></citetitle>
+        </bibliomixed>
+        
         <bibliomixed id="b_c14n"><abbrev>XML
           C14N</abbrev><?nospell-start?>John Boyer,
           <?nospell-end?><citetitle><ulink
@@ -17632,7 +17643,7 @@ overall performance of the supply chain:</para>
         Electronic Signature is not limited to Europe, as it is being adopted
         by many countries outside the EU, and, at the time of publication of
         this specification, it is undergoing international standardization in
-        ISO as ISO/CD 14533-2.</para>
+        ISO as ISO 14533-2:2012 <xref linkend="b_XAdES-ISO"/>.</para>
 
       <para>One important benefit of XAdES is that it allows the addition of
         information and timestamps that extend the validity of a signature
@@ -19373,7 +19384,7 @@ overall performance of the supply chain:</para>
             <!--####start of common library differences from UBL 2.0 ####-->
                     <!--Library (UBL 2.0 to UBL 2.1 xxx)-->
 
-   <tgroup cols="3"><!--Library (UBL 2.0 to UBL 2.1 PRD4D1)-->
+   <tgroup cols="3"><!--Library (UBL 2.0 to UBL 2.1 CS1)-->
 <colspec colwidth="35*"/>
       <colspec colwidth="35*"/>
       <colspec colwidth="30*"/>
@@ -22274,7 +22285,7 @@ overall performance of the supply chain:</para>
             <!--####start of document differences from UBL 2.0 ####-->
                     <!--Document (UBL 2.0 to UBL 2.1 xxx)-->
             
-   <tgroup cols="3"><!--Document (UBL 2.0 to UBL 2.1 PRD4D1)-->
+   <tgroup cols="3"><!--Document (UBL 2.0 to UBL 2.1 CS1)-->
 <colspec colwidth="35*"/>
       <colspec colwidth="35*"/>
       <colspec colwidth="30*"/>
@@ -23309,119 +23320,6 @@ overall performance of the supply chain:</para>
    </tgroup>
 
             <!--#### end of attribute differences from UBL 2.0 ####-->
-          </table>
-        </section>
-      </section>
-      <section id="S-CHANGES-FROM-UBL-2.1-PRD3">
-        <title>Changes from UBL 2.1 PRD3 XML to Final UBL 2.1 XML</title>
-        <para>This section documents changes made in the final round of UBL 2.1
-          development prior to release, that is, changes made following the
-          Third Public Review Draft (PRD3) of this specification. The material
-          herein is of relevance only to test implementers of the former draft.
-          This section is otherwise of merely historical interest.</para>
-        <section id="S-CHANGES-TO-LIBRARY-ELEMENTS-FOLLOWING-PRD3">
-          <title>Changes to Library Elements Following PRD3</title>
-          <para>The following table sums up the differences between the XML
-            elements in the Common Library of the Third Review Draft and the
-            XML elements in the UBL 2.1 Common Library of this
-            distribution.</para>
-          <!--old2new-->
-          <table>
-            <title>Changes to Library Elements Following PRD3</title>
-            <!--#### start of common library differences from PRD3 ####-->
-                    <!--Library (UBL 2.1 yyy to UBL 2.1 xxx)-->
-
-   <tgroup cols="3"><!--Library (UBL 2.1 PRD3 to UBL 2.1 PRD4D1)-->
-<colspec colwidth="35*"/>
-      <colspec colwidth="35*"/>
-      <colspec colwidth="30*"/>
-      <thead>
-         <row>
-            <entry>Aggregate BIE</entry>
-            <entry>Basic or Association BIE</entry>
-            <entry>Changes for UBL 2.1</entry>
-         </row>
-      </thead>
-      <tbody>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>CompletedTask</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EvidenceSupplied</entry>
-            <entry>Changed cardinality from 0..1 to 0..n</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Duty</entry>
-            <entry> </entry>
-            <entry>Changed dictionary entry name from “Duty. Details Duty. Duty. Text” to “Duty. Details”</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>Duty</entry>
-            <entry>Changed dictionary entry name from “Duty. Details Duty. Duty. Text” to “Duty. Duty. Text”</entry>
-         </row>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>TenderedProject</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TenderEnvelopeID</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TenderEnvelopeTypeCode</entry>
-            <entry>Added</entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>EvidenceDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-      </tbody>
-   </tgroup>
-
-            <!--### end of common library differences ####-->
-            </table>
-        </section>
-        <section id="S-CHANGES-TO-DOCUMENT-ELEMENTS-FOLLOWING-PRD3">
-          <title>Changes to Document Elements Following PRD3</title>
-          <para>The following table sums up the differences between the XML
-            elements in the UBL 2.1 document schemas of this distribution and
-            the XML elements in the document schemas of the Third Review
-            Draft.</para>
-          <table>
-            <title>Changes to Document Elements Following PRD3</title>
-            <!--#### start of document differences from PRD3 ####-->
-                    <!--Document (UBL 2.1 yyy to UBL 2.1 xxx)-->
-            
-   <tgroup cols="3"><!--Document (UBL 2.1 PRD3 to UBL 2.1 PRD4D1)-->
-<colspec colwidth="35*"/>
-      <colspec colwidth="35*"/>
-      <colspec colwidth="30*"/>
-      <thead>
-         <row>
-            <entry>Aggregate BIE</entry>
-            <entry>Basic or Association BIE</entry>
-            <entry>Changes for UBL 2.1</entry>
-         </row>
-      </thead>
-      <tbody>
-         <row><?dbhtml bgcolor="#DDDDDD"?><?dbfo bgcolor="#DDDDDD"?><entry>Tender</entry>
-            <entry> </entry>
-            <entry> </entry>
-         </row>
-         <row>
-            <entry> </entry>
-            <entry>TendererQualificationDocumentReference</entry>
-            <entry>Added</entry>
-         </row>
-      </tbody>
-   </tgroup>
-
-            <!--#### end of document differences ####-->
           </table>
         </section>
       </section>

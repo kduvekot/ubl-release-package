@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+	Universal Business Language Version 2.1
+	Committee Specification 1
+	29 June 2013
+	Copyright (c) OASIS Open 2013. All rights reserved.
+	Source: http://docs.oasis-open.org/ubl/cs1-UBL-2.1/rnc/
+
+     -->
+
 <locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
    <namespace uri="UBL-CommonSignatureComponents.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"/>

@@ -1,3 +1,10 @@
+#
+#	Universal Business Language Version 2.1
+#	Committee Specification 1
+#	29 June 2013
+#	Copyright (c) OASIS Open 2013. All rights reserved.
+#	Source: http://docs.oasis-open.org/ubl/cs1-UBL-2.1/rnc/
+
 # Common definition of extensions for all document models
 #
 # $Id: extensions.rnc,v 1.1 2011/05/30 02:38:57 admin Exp $

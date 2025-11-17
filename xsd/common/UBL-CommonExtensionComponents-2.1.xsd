@@ -4,7 +4,8 @@
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
   Module:            UBL-CommonExtensionComponents-2.1.xsd
   Generated on:      2013-04-20 18:40(UTC)
--->
+     Copyright (c) OASIS Open 2013. All rights reserved.
+     -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" 
 xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"

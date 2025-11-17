@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1 CSD4
-                     http://docs.oasis-open.org/ubl/csd4-UBL-2.1/
+  Library:           OASIS Universal Business Language (UBL) 2.1 CS1
+                     http://docs.oasis-open.org/ubl/cs1-UBL-2.1/
   Module:            xsdrt/maindoc/UBL-TransportExecutionPlanRequest-2.1.xsd
-  Generated on:      2013-05-13 16:12z
+  Generated on:      2013-06-16 16:39z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"

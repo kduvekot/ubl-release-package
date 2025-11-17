@@ -3,7 +3,8 @@
   Library:           OASIS Universal Business Language (UBL) 2.1
                      http://docs.oasis-open.org/ubl/os-UBL-2.1/
   Module:            UBL-QualifiedDataTypes-2.1.xsd
-  Generated on:      2013-04-20 18:40(UTC)
+     Generated on:      2013-04-20 18:40(UTC)
+     Copyright (c) OASIS Open 2013. All rights reserved.
 -->
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:QualifiedDataTypes-2"
