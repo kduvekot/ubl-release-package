@@ -17,6 +17,8 @@ try:
 except ImportError:
     gdown = None
 
+from .gdrive_file_ids import get_file_id
+
 
 class GoogleDriveDownloader:
     """Downloads files from Google Drive folder."""
@@ -56,79 +58,10 @@ class GoogleDriveDownloader:
 
         return f"{release_num:02d}_{stage}-UBL-{version}.zip"
 
-    def _get_file_list_cache(self) -> dict:
-        """
-        Get or build a cache of all files in the Google Drive folder.
-
-        Returns:
-            Dictionary mapping filename -> file_id
-        """
-        cache_file = Path(tempfile.gettempdir()) / 'ubl_gdrive_file_cache.json'
-
-        # Check if cache exists and is recent (less than 1 hour old)
-        if cache_file.exists():
-            import time
-            age_seconds = time.time() - cache_file.stat().st_mtime
-            if age_seconds < 3600:  # 1 hour
-                with open(cache_file, 'r') as f:
-                    return json.load(f)
-
-        # Build cache by listing folder contents
-        print("  Building file list cache (this may take a moment)...")
-        file_list = self._list_folder_contents()
-
-        # Save cache
-        with open(cache_file, 'w') as f:
-            json.dump(file_list, f, indent=2)
-
-        return file_list
-
-    def _list_folder_contents(self) -> dict:
-        """
-        List all files in the Google Drive folder.
-
-        Returns:
-            Dictionary mapping filename -> file_id
-        """
-        if gdown is None:
-            raise ImportError("gdown library required")
-
-        # Use gdown to list folder contents
-        # We'll download the folder metadata only
-        import tempfile
-        temp_dir = Path(tempfile.mkdtemp(prefix='ubl-gdrive-list-'))
-
-        try:
-            # Download folder structure (files will be listed but not fully downloaded)
-            # Actually, gdown doesn't have a list-only mode, so we need to download
-            # Let's use a different approach - hardcode the file IDs from exploration
-            # This is more efficient than downloading the whole folder every time
-
-            # Fallback: download entire folder once to build cache
-            gdown.download_folder(
-                id=self.folder_id,
-                output=str(temp_dir),
-                quiet=True,
-                use_cookies=False
-            )
-
-            # Extract file mappings
-            file_map = {}
-            for zip_file in temp_dir.rglob('*.zip'):
-                # Extract file ID from the download (not available in gdown API)
-                # We'll rely on filename matching instead
-                file_map[zip_file.name] = None  # Placeholder
-
-            return file_map
-
-        finally:
-            import shutil
-            shutil.rmtree(temp_dir, ignore_errors=True)
-
     def download_release(self, release_num: int, stage: str, version: str,
                         dest_path: Optional[Path] = None) -> Path:
         """
-        Download a release from Google Drive.
+        Download a release from Google Drive by file ID.
 
         Args:
             release_num: Release number (1-34)
@@ -148,7 +81,13 @@ class GoogleDriveDownloader:
                 "gdown library not installed. Install with: pip install gdown>=5.0.0"
             )
 
-        # Generate expected filename
+        # Get file ID for this release
+        try:
+            file_id = get_file_id(release_num)
+        except KeyError as e:
+            raise RuntimeError(f"No file ID mapping for release #{release_num}: {e}")
+
+        # Generate expected filename for verification
         filename = self.get_file_naming_pattern(release_num, stage, version)
 
         # Create destination directory
@@ -159,43 +98,16 @@ class GoogleDriveDownloader:
             dest_path = Path(dest_path)
             dest_path.parent.mkdir(parents=True, exist_ok=True)
 
-        print(f"  Looking for: {filename}")
+        print(f"  Downloading: {filename}")
+        print(f"  File ID: {file_id}")
 
         try:
-            # Download the entire folder (gdown doesn't support downloading single files from folder)
-            # Files will be cached locally after first download
-            download_dir = Path(tempfile.mkdtemp(prefix='ubl-gdrive-folder-'))
+            # Download individual file by ID
+            file_url = f"https://drive.google.com/uc?id={file_id}"
+            gdown.download(file_url, str(dest_path), quiet=False, fuzzy=True)
 
-            # Download folder with file we need
-            print(f"  Downloading from Google Drive (folder: {self.folder_id})...")
-            gdown.download_folder(
-                id=self.folder_id,
-                output=str(download_dir),
-                quiet=True,
-                use_cookies=False
-            )
-
-            # Find the specific file we need
-            found_file = None
-            for file in download_dir.rglob('*.zip'):
-                if file.name == filename:
-                    found_file = file
-                    break
-
-            if not found_file:
-                # List available files for debugging
-                available = [f.name for f in download_dir.rglob('*.zip')]
-                raise RuntimeError(
-                    f"File not found in Google Drive folder: {filename}\n"
-                    f"Available files: {', '.join(sorted(available[:5]))}..."
-                )
-
-            # Move the file to destination
-            import shutil
-            shutil.move(str(found_file), str(dest_path))
-
-            # Clean up temp folder
-            shutil.rmtree(download_dir, ignore_errors=True)
+            if not dest_path.exists():
+                raise RuntimeError(f"Download completed but file not found at {dest_path}")
 
             file_size_mb = dest_path.stat().st_size / 1024 / 1024
             print(f"  Downloaded {file_size_mb:.1f} MB")

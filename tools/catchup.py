@@ -7,6 +7,7 @@ git history from UBL 2.0 through 2.5.
 """
 
 import argparse
+import subprocess
 import sys
 from typing import List
 
@@ -124,6 +125,29 @@ Examples:
 
         if success:
             success_count += 1
+
+            # Push to remote after each successful import
+            if not args.dry_run:
+                print(f"\nPushing to remote...")
+                try:
+                    # Get current branch name
+                    branch_result = subprocess.run(
+                        ['git', 'rev-parse', '--abbrev-ref', 'HEAD'],
+                        capture_output=True,
+                        text=True,
+                        check=True
+                    )
+                    branch_name = branch_result.stdout.strip()
+
+                    # Push to origin
+                    subprocess.run(
+                        ['git', 'push', '-u', 'origin', branch_name],
+                        check=True
+                    )
+                    print(f"  ✓ Pushed to origin/{branch_name}")
+                except subprocess.CalledProcessError as e:
+                    print(f"  ✗ Warning: Push failed: {e}")
+                    print(f"  You may need to push manually later")
         else:
             failure_count += 1
             print(f"\n✗ Failed to import release #{release.num}")
