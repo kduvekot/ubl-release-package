@@ -1,321 +1,366 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GoodsItemItinerary xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" 
-	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-	xmlns="urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2">
+<GoodsItemItinerary
+ xmlns="urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2"
+ xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
 	<cbc:UBLVersionID>2.1</cbc:UBLVersionID>
-	<cbc:ProfileID>eFreight Profile</cbc:ProfileID>
-	<cbc:ID>GIIID_1</cbc:ID>
-	<cbc:IssueDate>2011-03-12</cbc:IssueDate>
-	<cbc:IssueTime>14:01:00.0Z</cbc:IssueTime>
+	<cbc:ID>1</cbc:ID>
+	<cbc:IssueDate>2011-09-13</cbc:IssueDate>
+	<cbc:IssueTime>10:05:20+01:00</cbc:IssueTime>
 	<cbc:VersionID>1</cbc:VersionID>
-	<cbc:TransportExecutionPlanReferenceID>TEPID_1</cbc:TransportExecutionPlanReferenceID>
+	<cbc:TransportExecutionPlanReferenceID>TEP_1</cbc:TransportExecutionPlanReferenceID>
 	<cac:SenderParty>
 		<cac:PartyIdentification>
-			<cbc:ID>987654321</cbc:ID>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827641</cbc:ID>
 		</cac:PartyIdentification>
 		<cac:PartyName>
-			<cbc:Name>FORWARDER</cbc:Name>
+			<cbc:Name>NECOSS</cbc:Name>
 		</cac:PartyName>
-		<cac:PostalAddress>
-			<cbc:StreetName>Schonestrasse 1</cbc:StreetName>
-			<cbc:CityName>Munich</cbc:CityName>
-			<cbc:PostalZone>80331</cbc:PostalZone>
-			<cac:Country>
-				<cbc:IdentificationCode>DE</cbc:IdentificationCode>
-			</cac:Country>
-		</cac:PostalAddress>
 		<cac:Contact>
-			<cbc:Name>Hans Weisser</cbc:Name>
-			<cbc:Telephone>+4992894481</cbc:Telephone>
-			<cbc:ElectronicMail>hans.weisser@FORWARDER.de</cbc:ElectronicMail>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+49450557000</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@necoss.de</cbc:ElectronicMail>
 		</cac:Contact>
 	</cac:SenderParty>
 	<cac:ReceiverParty>
 		<cac:PartyIdentification>
-			<cbc:ID>123456789</cbc:ID>
+			<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827000</cbc:ID>
 		</cac:PartyIdentification>
 		<cac:PartyName>
-			<cbc:Name>CONSIGNEE</cbc:Name>
+			<cbc:Name>Consignor</cbc:Name>
 		</cac:PartyName>
-		<cac:PostalAddress>
-			<cbc:Postbox>456</cbc:Postbox>
-			<cbc:StreetName>Jordbærstien 2</cbc:StreetName>
-			<cbc:CityName>Hamar</cbc:CityName>
-			<cbc:PostalZone>2321</cbc:PostalZone>
-			<cac:Country>
-				<cbc:IdentificationCode>NO</cbc:IdentificationCode>
-			</cac:Country>
-		</cac:PostalAddress>
 		<cac:Contact>
-			<cbc:Name>Jon Persen</cbc:Name>
-			<cbc:Telephone>+4793656656</cbc:Telephone>
-			<cbc:ElectronicMail>jonp@CONSIGNEE.no</cbc:ElectronicMail>
+			<cbc:Name>SomeName</cbc:Name>
+			<cbc:Telephone>+8687878763</cbc:Telephone>
+			<cbc:ElectronicMail>SomeName@consignor.cn</cbc:ElectronicMail>
 		</cac:Contact>
 	</cac:ReceiverParty>
 	<cac:ReferencedTransportEquipment>
-		<cbc:ID>GRAI 12345698-1</cbc:ID>
+		<cbc:ID>1</cbc:ID>
+		<cac:TransportEquipmentSeal>
+			<cbc:ID>1_1</cbc:ID>
+			<cbc:Condition>IN_RIGHT_CONDITION</cbc:Condition>
+		</cac:TransportEquipmentSeal>
+		<cac:Package>
+			<cbc:Quantity>10</cbc:Quantity>
+			<cbc:PackagingTypeCode>PX</cbc:PackagingTypeCode>     
+			<cac:GoodsItem>
+				<cac:Item>
+					<cac:CommodityClassification>
+						<cbc:CargoTypeCode>12</cbc:CargoTypeCode>
+					</cac:CommodityClassification>
+				</cac:Item>
+			</cac:GoodsItem>
+		</cac:Package>    
 	</cac:ReferencedTransportEquipment>
 	<cac:ReferencedTransportEquipment>
-		<cbc:ID>GRAI 12345698-2</cbc:ID>
+		<cbc:ID>2</cbc:ID>
+		<cac:TransportEquipmentSeal>
+			<cbc:ID>2_1</cbc:ID>
+			<cbc:Condition>IN_RIGHT_CONDITION</cbc:Condition>
+		</cac:TransportEquipmentSeal>
+				<cac:Package>
+			<cbc:Quantity>10</cbc:Quantity>
+			<cbc:PackagingTypeCode>PX</cbc:PackagingTypeCode>     
+			<cac:GoodsItem>
+				<cac:Item>
+					<cac:CommodityClassification>
+						<cbc:CargoTypeCode>12</cbc:CargoTypeCode>
+					</cac:CommodityClassification>
+				</cac:Item>
+			</cac:GoodsItem>
+		</cac:Package>    
 	</cac:ReferencedTransportEquipment>
-	<cac:ReferencedTransportEquipment>
-		<cbc:ID>GRAI 12345698-2</cbc:ID>
-	</cac:ReferencedTransportEquipment>
 	<cac:TransportationSegment>
-		<cbc:SequenceNumberID>1</cbc:SequenceNumberID>
-		<cbc:TransportExecutionPlanReferenceID>TEPID_1_1</cbc:TransportExecutionPlanReferenceID>
-		<cbc:TransportModeCode>3</cbc:TransportModeCode>
-		<cbc:TransportMeansTypeCode>Truck</cbc:TransportMeansTypeCode>
+		<cbc:SequenceNumeric>1</cbc:SequenceNumeric>
+		<cbc:TransportExecutionPlanReferenceID>TEP_2</cbc:TransportExecutionPlanReferenceID>
 		<cac:TransportationService>
 			<cbc:TransportServiceCode>3</cbc:TransportServiceCode>
+			<cbc:TransportationServiceDescription>Rail transport service from Hamburg to Bremen</cbc:TransportationServiceDescription>
 		</cac:TransportationService>
 		<cac:TransportServiceProviderParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827100</cbc:ID>
+			</cac:PartyIdentification>
 			<cac:PartyName>
-				<cbc:Name>ROAD CARRIER</cbc:Name>
+				<cbc:Name>NTT</cbc:Name>
 			</cac:PartyName>
 			<cac:Contact>
-				<cbc:Name>Peter Janssen</cbc:Name>
-				<cbc:Telephone>+4987675432</cbc:Telephone>
-				<cbc:ElectronicMail>peter@ROADCARRIER.de</cbc:ElectronicMail>
+				<cbc:Name>SomeName</cbc:Name>
+				<cbc:Telephone>+49450557777</cbc:Telephone>
+				<cbc:ElectronicMail>SomeName@ntt.de</cbc:ElectronicMail>
 			</cac:Contact>
 		</cac:TransportServiceProviderParty>
-		<cac:CarryingTransportMeans>
-			<cbc:TransportMeansTypeCode>31</cbc:TransportMeansTypeCode>
-			<cac:RoadTransport>
-				<cbc:LicensePlateID>KA04401</cbc:LicensePlateID>
-			</cac:RoadTransport>
-		</cac:CarryingTransportMeans>
-		<cac:DepartureTransportLocation>
-			<cac:PlannedDeparturePeriod>
-				<cbc:StartDate>2011-03-13</cbc:StartDate>
-				<cbc:StartTime>13:30:00.0Z</cbc:StartTime>
-				<cbc:EndDate>2011-03-13</cbc:EndDate>
-				<cbc:EndTime>14:00:00.0Z</cbc:EndTime>
-			</cac:PlannedDeparturePeriod>
-			<cac:Location>
-				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">123465</cbc:ID>
-				<cbc:LocationTypeCode>Place of despatch</cbc:LocationTypeCode>
-				<cac:Address>
-					<cbc:StreetName>Heissestrasse 45</cbc:StreetName>
-					<cbc:CityName>Munich</cbc:CityName>
-					<cbc:PostalZone>80334</cbc:PostalZone>
-					<cac:Country>
-						<cbc:IdentificationCode>DE</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:Location>
-		</cac:DepartureTransportLocation>
-		<cac:ArrivalTransportLocation>
-			<cac:PlannedArrivalPeriod>
-				<cbc:StartDate>2011-03-13</cbc:StartDate>
-				<cbc:StartTime>16:30:00.0Z</cbc:StartTime>
-				<cbc:EndDate>2011-03-13</cbc:EndDate>
-				<cbc:EndTime>17:00:00.0Z</cbc:EndTime>
-			</cac:PlannedArrivalPeriod>
-			<cac:Location>
-				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">987456123</cbc:ID>
-				<cbc:Description>FORWARDER distribution centre in Munich</cbc:Description>
-				<cbc:LocationTypeCode>Place of transhipment</cbc:LocationTypeCode>
-				<cac:Address>
-					<cbc:StreetName>Volkerstrasse 6</cbc:StreetName>
-					<cbc:CityName>Munich</cbc:CityName>
-					<cac:Country>
-						<cbc:IdentificationCode>DE</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:Location>
-		</cac:ArrivalTransportLocation>
+		<cac:ReferencedConsignment>
+			<cbc:ID>NTT_1</cbc:ID>
+			<cac:TransportHandlingUnit>
+				<cbc:ID>NTT_THU_1</cbc:ID>
+				<cac:TransportEquipment>
+					<cbc:ID>NTT_THU_1</cbc:ID>
+					<cac:ContainedInTransportEquipment>
+						<cbc:ID>NTT_TE_1</cbc:ID>
+						<cbc:TransportEquipmentTypeCode>RR</cbc:TransportEquipmentTypeCode>
+						<cbc:TraceID>12345678914564</cbc:TraceID>
+					</cac:ContainedInTransportEquipment>
+					<cac:Package>
+						<cbc:ID>CON_1</cbc:ID>
+						<cbc:Quantity>10</cbc:Quantity>
+					</cac:Package>
+				</cac:TransportEquipment>
+			</cac:TransportHandlingUnit>
+			<cac:TransportHandlingUnit>
+				<cbc:ID>NTT_THU_2</cbc:ID>
+				<cac:TransportEquipment>
+					<cbc:ID>CON_2</cbc:ID>
+					<cac:ContainedInTransportEquipment>
+						<cbc:ID>NTT_TE_2</cbc:ID>
+						<cbc:TransportEquipmentTypeCode>RR</cbc:TransportEquipmentTypeCode>
+						<cbc:TraceID>12345678914565</cbc:TraceID>
+					</cac:ContainedInTransportEquipment>	
+					<cac:Package>
+						<cbc:ID>CON_2</cbc:ID>
+						<cbc:Quantity>10</cbc:Quantity>
+					</cac:Package>
+				</cac:TransportEquipment>
+			</cac:TransportHandlingUnit>
+		</cac:ReferencedConsignment>
+		<cac:ShipmentStage>
+			<cbc:ID>1</cbc:ID>
+			<cbc:TransportModeCode>2</cbc:TransportModeCode>
+			<cbc:TransportMeansTypeCode>230</cbc:TransportMeansTypeCode>
+			<cac:PlannedDepartureTransportEvent>
+				<cac:Location>
+					<cac:Address>
+						<cbc:ID schemeAgencyName="UN" schemeName="UN/LOCODE">DEHAM</cbc:ID>
+						<cbc:StreetName>Neuer Wandrahm 4</cbc:StreetName>
+						<cbc:CityName>Hamburg</cbc:CityName>
+						<cac:Country>
+							<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:Location>
+				<cac:Period>
+					<cbc:StartDate>2011-10-03</cbc:StartDate>
+					<cbc:StartTime>09:30:10+01:00</cbc:StartTime>
+					<cbc:EndDate>2011-10-03</cbc:EndDate>
+					<cbc:EndTime>12:30:10+01:00</cbc:EndTime>
+				</cac:Period>
+			</cac:PlannedDepartureTransportEvent>
+			<cac:PlannedArrivalTransportEvent>
+				<cac:Location>
+					<cbc:LocationTypeCode>13</cbc:LocationTypeCode>
+					<cac:Address>
+						<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4568763527610</cbc:ID>
+						<cbc:StreetName>Ludwig-Erhard-Str. 15</cbc:StreetName>
+						<cbc:CityName>Bremen</cbc:CityName>
+						<cac:Country>
+							<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:Location>
+				<cac:Period>
+					<cbc:StartDate>2011-10-03</cbc:StartDate>
+					<cbc:StartTime>18:30:10+01:00</cbc:StartTime>
+					<cbc:EndDate>2011-10-03</cbc:EndDate>
+					<cbc:EndTime>21:30:10+01:00</cbc:EndTime>
+				</cac:Period>
+			</cac:PlannedArrivalTransportEvent>
+		</cac:ShipmentStage>
 	</cac:TransportationSegment>
 	<cac:TransportationSegment>
-		<cbc:SequenceNumberID>2</cbc:SequenceNumberID>
-		<cbc:TransportExecutionPlanReferenceID>TEPID_1_2</cbc:TransportExecutionPlanReferenceID>
-		<cbc:TransportModeCode>2</cbc:TransportModeCode>
-		<cbc:TransportMeansTypeCode>Train, with more than 20 wagons</cbc:TransportMeansTypeCode>
+		<cbc:SequenceNumeric>2</cbc:SequenceNumeric>
+		<cbc:TransportExecutionPlanReferenceID>TEP_1</cbc:TransportExecutionPlanReferenceID>
 		<cac:TransportationService>
 			<cbc:TransportServiceCode>3</cbc:TransportServiceCode>
+			<cbc:TransportationServiceDescription>Rail transport service from Bremen to Nurnberg</cbc:TransportationServiceDescription>
 		</cac:TransportationService>
 		<cac:TransportServiceProviderParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827641</cbc:ID>
+			</cac:PartyIdentification>
 			<cac:PartyName>
-				<cbc:Name>RAIL CARRIER</cbc:Name>
+				<cbc:Name>NECOSS</cbc:Name>
 			</cac:PartyName>
 			<cac:Contact>
-				<cbc:Name>Anders Stock</cbc:Name>
-				<cbc:Telephone>+4987676234</cbc:Telephone>
-				<cbc:ElectronicMail>anders@RAILCARRIER.de</cbc:ElectronicMail>
+				<cbc:Name>SomeName</cbc:Name>
+				<cbc:Telephone>+49450557000</cbc:Telephone>
+				<cbc:ElectronicMail>SomeName@necoss.de</cbc:ElectronicMail>
 			</cac:Contact>
 		</cac:TransportServiceProviderParty>
-		<cac:CarryingTransportMeans>
-			<cbc:TransportMeansTypeCode>2305</cbc:TransportMeansTypeCode>
-			<cac:RailTransport><cbc:TrainID>101</cbc:TrainID><cbc:RailCarID>101-21</cbc:RailCarID></cac:RailTransport>
-		</cac:CarryingTransportMeans>
-		<cac:DepartureTransportLocation>
-			<cac:PlannedDeparturePeriod>
-				<cbc:StartDate>2011-03-13</cbc:StartDate>
-				<cbc:StartTime>13:30:00.0Z</cbc:StartTime>
-				<cbc:EndDate>2011-03-13</cbc:EndDate>
-				<cbc:EndTime>14:00:00.0Z</cbc:EndTime>
-			</cac:PlannedDeparturePeriod>
-			<cac:Location>
-				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">987456123</cbc:ID>
-				<cbc:LocationTypeCode>Place of transhipment</cbc:LocationTypeCode>
-				<cac:Address>
-					<cbc:StreetName>Volkerstrasse 6</cbc:StreetName>
-					<cbc:CityName>Munich</cbc:CityName>
-					<cbc:PostalZone>80334</cbc:PostalZone>
-					<cac:Country>
-						<cbc:IdentificationCode>DE</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:Location>
-		</cac:DepartureTransportLocation>
-		<cac:ArrivalTransportLocation>
-			<cac:PlannedArrivalPeriod>
-				<cbc:StartDate>2011-03-13</cbc:StartDate>
-				<cbc:StartTime>20:00:00.0Z</cbc:StartTime>
-				<cbc:EndDate>2011-03-13</cbc:EndDate>
-				<cbc:EndTime>20:30:00.0Z</cbc:EndTime>
-			</cac:PlannedArrivalPeriod>
-			<cac:Location>
-				<cbc:ID schemeAgencyName="UN" schemeName="UN/LOCODE">DEBREV</cbc:ID>
-				<cbc:Description>Port of Bremerhaven</cbc:Description>
-				<cbc:LocationTypeCode listAgencyName="UN" listName="UN/EDIFACT 3227">34</cbc:LocationTypeCode>
-				<cac:Address>
-					<cbc:StreetName>Hansestadt Bremisches</cbc:StreetName>
-					<cbc:CityName>Bremen</cbc:CityName>
-					<cac:Country>
-						<cbc:IdentificationCode>DE</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:Location>
-		</cac:ArrivalTransportLocation>
+		<cac:ReferencedConsignment>
+			<cbc:ID>CON_1</cbc:ID>
+			<cac:TransportHandlingUnit>
+				<cbc:ID>CON_THU_1</cbc:ID>
+				<cac:TransportEquipment>
+					<cbc:ID>CON_1</cbc:ID>
+					<cac:ContainedInTransportEquipment>
+						<cbc:ID>NEC_TE_1</cbc:ID>
+						<cbc:TransportEquipmentTypeCode>RR</cbc:TransportEquipmentTypeCode>
+						<cbc:TraceID>12345678914542</cbc:TraceID>
+					</cac:ContainedInTransportEquipment>
+					<cac:Package>
+						<cbc:ID>CON_1</cbc:ID>
+						<cbc:Quantity>10</cbc:Quantity>
+					</cac:Package>
+				</cac:TransportEquipment>
+			</cac:TransportHandlingUnit>
+			<cac:TransportHandlingUnit>
+				<cbc:ID>CON_THU_2</cbc:ID>
+				<cac:TransportEquipment>
+					<cbc:ID>CON_2</cbc:ID>
+					<cac:ContainedInTransportEquipment>
+						<cbc:ID>NEC_TE_2</cbc:ID>
+						<cbc:TransportEquipmentTypeCode>RR</cbc:TransportEquipmentTypeCode>
+						<cbc:TraceID>12345678914543</cbc:TraceID>
+					</cac:ContainedInTransportEquipment>	
+					<cac:Package>
+						<cbc:ID>CON_2</cbc:ID>
+						<cbc:Quantity>10</cbc:Quantity>
+					</cac:Package>
+				</cac:TransportEquipment>
+			</cac:TransportHandlingUnit>
+		</cac:ReferencedConsignment>
+		<cac:ShipmentStage>
+			<cbc:ID>2</cbc:ID>
+			<cac:PlannedDepartureTransportEvent>
+				<cac:Location>
+					<cbc:LocationTypeCode>13</cbc:LocationTypeCode>
+					<cac:Address>
+						<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4568763527610</cbc:ID>
+						<cbc:StreetName>Ludwig-Erhard-Str. 15</cbc:StreetName>
+						<cbc:CityName>Bremen</cbc:CityName>
+						<cac:Country>
+							<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:Location>
+				<cac:Period>
+					<cbc:StartDate>2011-10-04</cbc:StartDate>
+					<cbc:StartTime>09:30:10+01:00</cbc:StartTime>
+					<cbc:EndDate>2011-10-04</cbc:EndDate>
+					<cbc:EndTime>09:30:10+01:00</cbc:EndTime>
+				</cac:Period>
+			</cac:PlannedDepartureTransportEvent>
+			<cac:PlannedArrivalTransportEvent>
+				<cac:Location>
+					<cbc:LocationTypeCode>13</cbc:LocationTypeCode>
+					<cac:Address>
+						<cbc:StreetName>Sandstr. 38-40</cbc:StreetName>
+						<cbc:CityName>Nurnberg</cbc:CityName>
+						<cac:Country>
+							<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:Location>
+				<cac:Period>
+					<cbc:StartDate>2011-10-04</cbc:StartDate>
+					<cbc:StartTime>15:30:10+01:00</cbc:StartTime>
+					<cbc:EndDate>2011-10-04</cbc:EndDate>
+					<cbc:EndTime>18:30:10+01:00</cbc:EndTime>
+				</cac:Period>
+			</cac:PlannedArrivalTransportEvent>
+		</cac:ShipmentStage>
 	</cac:TransportationSegment>
 	<cac:TransportationSegment>
-		<cbc:SequenceNumberID>3</cbc:SequenceNumberID>
-		<cbc:TransportExecutionPlanReferenceID>TEPID_1_3</cbc:TransportExecutionPlanReferenceID>
-		<cbc:TransportModeCode>1</cbc:TransportModeCode>
-		<cbc:TransportMeansTypeCode>Container vessel</cbc:TransportMeansTypeCode>
+		<cbc:SequenceNumeric>3</cbc:SequenceNumeric>
+		<cbc:TransportExecutionPlanReferenceID>TEP_3</cbc:TransportExecutionPlanReferenceID>
 		<cac:TransportationService>
 			<cbc:TransportServiceCode>3</cbc:TransportServiceCode>
+			<cbc:TransportationServiceDescription>Road transport service from Hamburg to Bremen</cbc:TransportationServiceDescription>
 		</cac:TransportationService>
 		<cac:TransportServiceProviderParty>
+			<cac:PartyIdentification>
+				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">4058673827112</cbc:ID>
+			</cac:PartyIdentification>
 			<cac:PartyName>
-				<cbc:Name>SEA CARRIER</cbc:Name>
+				<cbc:Name>EXT-HAL</cbc:Name>
 			</cac:PartyName>
 			<cac:Contact>
-				<cbc:Name>Horst Tappert</cbc:Name>
-				<cbc:Telephone>+4987675652</cbc:Telephone>
-				<cbc:ElectronicMail>horst@SEACARRIER.de</cbc:ElectronicMail>
+				<cbc:Name>SomeName</cbc:Name>
+				<cbc:Telephone>+49450557234</cbc:Telephone>
+				<cbc:ElectronicMail>SomeName@ext-hal.de</cbc:ElectronicMail>
 			</cac:Contact>
 		</cac:TransportServiceProviderParty>
-		<cac:CarryingTransportMeans>
-			<cbc:TransportMeansTypeCode>83</cbc:TransportMeansTypeCode>
-			<cac:MaritimeTransport>
-				<cbc:VesselID>IMO1234567</cbc:VesselID>
-				<cbc:VesselName>MS Enova</cbc:VesselName>
-			</cac:MaritimeTransport>
-		</cac:CarryingTransportMeans>
-		<cac:DepartureTransportLocation>
-			<cac:PlannedDeparturePeriod>
-				<cbc:StartDate>2011-03-13</cbc:StartDate>
-				<cbc:StartTime>22:00:00.0Z</cbc:StartTime>
-				<cbc:EndDate>2011-03-13</cbc:EndDate>
-				<cbc:EndTime>22:30:00.0Z</cbc:EndTime>
-			</cac:PlannedDeparturePeriod>
-			<cac:Location>
-				<cbc:ID schemeAgencyName="UN" schemeName="UN/LOCODE">DEBREV</cbc:ID>
-				<cbc:LocationTypeCode>Baseport of loading</cbc:LocationTypeCode>
-				<cac:Address>
-					<cbc:StreetName>Heissestrasse 45</cbc:StreetName>
-					<cbc:CityName>Munich</cbc:CityName>
-					<cbc:PostalZone>80334</cbc:PostalZone>
-					<cac:Country>
-						<cbc:IdentificationCode>DE</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:Location>
-		</cac:DepartureTransportLocation>
-		<cac:ArrivalTransportLocation>
-			<cac:PlannedArrivalPeriod>
-				<cbc:StartDate>2011-03-14</cbc:StartDate>
-				<cbc:StartTime>10:30:00.0Z</cbc:StartTime>
-				<cbc:EndDate>2011-03-14</cbc:EndDate>
-				<cbc:EndTime>11:00:00.0Z</cbc:EndTime>
-			</cac:PlannedArrivalPeriod>
-			<cac:Location>
-				<cbc:ID schemeAgencyName="UN" schemeName="UN/LOCODE">NOOSL</cbc:ID>
-				<cbc:Description>Port of Oslo</cbc:Description>
-				<cbc:LocationTypeCode>Baseport of discharge</cbc:LocationTypeCode>
-				<cac:Address>
-					<cbc:StreetName>Akershusstranda 19</cbc:StreetName>
-					<cbc:CityName>Oslo</cbc:CityName>
-					<cac:Country>
-						<cbc:IdentificationCode>NO</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:Location>
-		</cac:ArrivalTransportLocation>
-	</cac:TransportationSegment>
-	<cac:TransportationSegment>
-		<cbc:SequenceNumberID>4</cbc:SequenceNumberID>
-		<cbc:TransportExecutionPlanReferenceID>TEPID_1_4</cbc:TransportExecutionPlanReferenceID>
-		<cbc:TransportModeCode>3</cbc:TransportModeCode>
-		<cbc:TransportMeansTypeCode>Truck</cbc:TransportMeansTypeCode>
-		<cac:TransportationService>
-			<cbc:TransportServiceCode>3</cbc:TransportServiceCode>
-		</cac:TransportationService>
-		<cac:TransportServiceProviderParty>
-			<cac:PartyName>
-				<cbc:Name>ROAD CARRIER 2</cbc:Name>
-			</cac:PartyName>
-			<cac:Contact>
-				<cbc:Name>Jan Peter Clausen</cbc:Name>
-				<cbc:Telephone>+4793774465</cbc:Telephone>
-				<cbc:ElectronicMail>janpc@ROADCARRIER2.no</cbc:ElectronicMail>
-			</cac:Contact>
-		</cac:TransportServiceProviderParty>
-		<cac:CarryingTransportMeans>
-			<cbc:TransportMeansTypeCode>31</cbc:TransportMeansTypeCode>
-			<cac:RoadTransport>
-				<cbc:LicensePlateID>VE80044</cbc:LicensePlateID>
-			</cac:RoadTransport>
-		</cac:CarryingTransportMeans>
-		<cac:DepartureTransportLocation>
-			<cac:PlannedDeparturePeriod>
-				<cbc:StartDate>2011-03-14</cbc:StartDate>
-				<cbc:StartTime>13:30:00.0Z</cbc:StartTime>
-				<cbc:EndDate>2011-03-14</cbc:EndDate>
-				<cbc:EndTime>14:00:00.0Z</cbc:EndTime>
-			</cac:PlannedDeparturePeriod>
-			<cac:Location>
-				<cbc:ID schemeAgencyName="UN" schemeName="UN/LOCODE">NOOSL</cbc:ID>
-				<cbc:LocationTypeCode>Baseport of discharge</cbc:LocationTypeCode>
-				<cac:Address>
-					<cbc:StreetName>Akershusstranda 19</cbc:StreetName>
-					<cbc:CityName>Oslo</cbc:CityName>
-					<cac:Country>
-						<cbc:IdentificationCode>NO</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:Location>
-		</cac:DepartureTransportLocation>
-		<cac:ArrivalTransportLocation>
-			<cac:PlannedArrivalPeriod>
-				<cbc:StartDate>2011-03-14</cbc:StartDate>
-				<cbc:StartTime>15:30:00.0Z</cbc:StartTime>
-				<cbc:EndDate>2011-03-14</cbc:EndDate>
-				<cbc:EndTime>16:00:00.0Z</cbc:EndTime>
-			</cac:PlannedArrivalPeriod>
-			<cac:Location>
-				<cbc:ID schemeAgencyName="GS1" schemeName="GLN">43125678</cbc:ID>
-				<cbc:LocationTypeCode>Place of delivery</cbc:LocationTypeCode>
-				<cac:Address>
-					<cbc:StreetName>Jordbærstien 2</cbc:StreetName>
-					<cbc:CityName>Hamar</cbc:CityName>
-					<cac:Country>
-						<cbc:IdentificationCode>NO</cbc:IdentificationCode>
-					</cac:Country>
-				</cac:Address>
-			</cac:Location>
-		</cac:ArrivalTransportLocation>
+		<cac:ReferencedConsignment>
+			<cbc:ID>EXT_1</cbc:ID>
+			<cac:TransportHandlingUnit>
+				<cbc:ID>EXT_THU_1</cbc:ID>
+				<cac:TransportEquipment>
+					<cbc:ID>CON_1</cbc:ID>
+					<cac:ContainedInTransportEquipment>
+						<cbc:ID>EXT_TE_1</cbc:ID>
+						<cbc:TransportEquipmentTypeCode>TE</cbc:TransportEquipmentTypeCode>
+						<cbc:TraceID>12345678914111</cbc:TraceID>
+					</cac:ContainedInTransportEquipment>
+				<cac:Package>
+						<cbc:ID>CON_1</cbc:ID>
+						<cbc:Quantity>10</cbc:Quantity>
+					</cac:Package>
+				</cac:TransportEquipment>
+				<cac:TransportMeans>
+					<cac:RoadTransport>
+						<cbc:LicensePlateID>WFN667</cbc:LicensePlateID>
+					</cac:RoadTransport>
+				</cac:TransportMeans>
+			</cac:TransportHandlingUnit>
+			<cac:TransportHandlingUnit>
+				<cbc:ID>EXT_THU_2</cbc:ID>
+				<cac:TransportEquipment>
+					<cbc:ID>CON_2</cbc:ID>
+					<cac:ContainedInTransportEquipment>
+						<cbc:ID>EXT_TE_2</cbc:ID>
+						<cbc:TransportEquipmentTypeCode>TE</cbc:TransportEquipmentTypeCode>
+						<cbc:TraceID>12345678914112</cbc:TraceID>
+					</cac:ContainedInTransportEquipment>
+					<cac:Package>
+						<cbc:ID>CON_2</cbc:ID>
+						<cbc:Quantity>10</cbc:Quantity>
+					</cac:Package>
+				</cac:TransportEquipment>
+				<cac:TransportMeans>
+					<cac:RoadTransport>
+						<cbc:LicensePlateID>WFN667</cbc:LicensePlateID>
+					</cac:RoadTransport>
+				</cac:TransportMeans>
+			</cac:TransportHandlingUnit>
+		</cac:ReferencedConsignment>
+		<cac:ShipmentStage>
+			<cbc:ID>3</cbc:ID>
+			<cac:PlannedDepartureTransportEvent>
+				<cac:Location>
+					<cbc:LocationTypeCode>13</cbc:LocationTypeCode>
+					<cac:Address>
+						<cbc:StreetName>Sandstr. 38-40</cbc:StreetName>
+						<cbc:CityName>Nurnberg</cbc:CityName>
+						<cac:Country>
+							<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:Location>
+				<cac:Period>
+					<cbc:StartDate>2011-10-06</cbc:StartDate>
+					<cbc:StartTime>09:30:10+01:00</cbc:StartTime>
+					<cbc:EndDate>2011-10-06</cbc:EndDate>
+					<cbc:EndTime>12:30:10+01:00</cbc:EndTime>
+				</cac:Period>
+			</cac:PlannedDepartureTransportEvent>
+			<cac:PlannedArrivalTransportEvent>
+				<cac:Location>
+					<cac:Address>
+						<cbc:StreetName>Grosse strasse 34</cbc:StreetName>
+						<cbc:CityName>Nurnberg</cbc:CityName>
+						<cac:Country>
+							<cbc:IdentificationCode>DE</cbc:IdentificationCode>
+						</cac:Country>
+					</cac:Address>
+				</cac:Location>
+				<cac:Period>
+					<cbc:StartDate>2011-10-06</cbc:StartDate>
+					<cbc:StartTime>12:30:10+01:00</cbc:StartTime>
+					<cbc:EndDate>2011-10-06</cbc:EndDate>
+					<cbc:EndTime>15:30:10+01:00</cbc:EndTime>
+				</cac:Period>
+			</cac:PlannedArrivalTransportEvent>
+		</cac:ShipmentStage>
 	</cac:TransportationSegment>
 </GoodsItemItinerary>

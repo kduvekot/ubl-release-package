@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-AwardedNotification-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsd/maindoc/UBL-AwardedNotification-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="urn:oasis:names:specification:ubl:schema:xsd:AwardedNotification-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:AwardedNotification-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:AwardedNotification-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
@@ -22,38 +22,38 @@
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-   <!-- ===== Element Declaration ===== -->
+   <!-- ===== Element Declarations ===== -->
    <xsd:element name="AwardedNotification" type="AwardedNotificationType">
       <xsd:annotation>
          <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
       </xsd:annotation>
-  </xsd:element>
-   <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
+   </xsd:element>
+   <!-- ===== Type Definitions ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="AwardedNotificationType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Awarded Notification. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>The document used to communicate the contract award to the winner</ccts:Definition>
+               <ccts:Definition>The document used to communicate a contract award to the winner.</ccts:Definition>
                <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+           <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+              <xsd:annotation>
+                 <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+              </xsd:annotation>
+           </xsd:element>
+          <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -70,7 +70,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Customization Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+                     <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
@@ -87,7 +87,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+                     <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -121,7 +121,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for the Notification assigned by the sender.</ccts:Definition>
+                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -137,7 +137,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether the notification is a copy (true) or not (false)</ccts:Definition>
+                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -154,7 +154,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A computer-generated universally unique identifier (UUID)</ccts:Definition>
+                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -170,7 +170,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Contract Folder Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for the process file (i.e. record) to which belongs the notification assigned by the sender.</ccts:Definition>
+                     <ccts:Definition>An identifier, assigned by the sender, for the process file (i.e., record) to which this document belongs.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Contract Folder Identifier</ccts:PropertyTerm>
@@ -186,7 +186,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date assigned by the sender s application at which the Notification was created.</ccts:Definition>
+                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -202,7 +202,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>The time assigned by the sender s application at which the Notification was created.</ccts:Definition>
+                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -212,14 +212,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:ContractName" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cbc:ContractName" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Contract Name. Text</ccts:DictionaryEntryName>
                      <ccts:Definition>The name, expressed as text, of this procurement project.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Contract Name</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
@@ -234,7 +234,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>A text specific for this notification.</ccts:Definition>
+                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -250,12 +250,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to the Party sending this document.</ccts:Definition>
+                     <ccts:Definition>The party sending this document.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -266,12 +267,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to the Party receiving this document.</ccts:Definition>
+                     <ccts:Definition>The party receiving this document.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -282,28 +284,32 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Minutes_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to minutes Document Reference</ccts:Definition>
+                     <ccts:Definition>A reference to a set of minutes associated with this award.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Minutes</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:AdditionalDocumentReference" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cac:AdditionalDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about a document referred to in another document. It can be used to include annex documents such as the minutes of the awarding process meetings.</ccts:Definition>
+                     <ccts:Definition>A reference to an additional document associated with this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -314,27 +320,31 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Tender Result</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to the Tender Result being notified</ccts:Definition>
+                     <ccts:Definition>The result of the tendering process reported in this notification.</ccts:Definition>
                      <ccts:Cardinality>1..n</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Tender Result</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Tender Result</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Tender Result</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:FinalFinancialGuarantee" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cac:FinalFinancialGuarantee"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Final_ Financial Guarantee. Financial Guarantee</ccts:DictionaryEntryName>
-                     <ccts:Definition>The Information about the bond guarantee of a tender or bid submitter required to the tender winner</ccts:Definition>
+                     <ccts:Definition>A bond guarantee by the submitter of a tender or bid, required of the tender winner.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Final</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Financial Guarantee</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Financial Guarantee</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Financial Guarantee</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -345,20 +355,20 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Awarded Notification. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>One or more signatures applied to the Notification</ccts:Definition>
+                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Awarded Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
       </xsd:sequence>
-  </xsd:complexType>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -379,7 +389,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

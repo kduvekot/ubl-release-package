@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-TransportServiceDescription-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsd/maindoc/UBL-TransportServiceDescription-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
@@ -22,38 +22,39 @@
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-   <!-- ===== Element Declaration ===== -->
-   <xsd:element name="TransportServiceDescription" type="TransportServiceDescriptionType">
+   <!-- ===== Element Declarations ===== -->
+   <xsd:element name="TransportServiceDescription"
+                type="TransportServiceDescriptionType">
       <xsd:annotation>
          <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
       </xsd:annotation>
-  </xsd:element>
-   <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
+   </xsd:element>
+   <!-- ===== Type Definitions ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="TransportServiceDescriptionType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Transport Service Description. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A document being sent from Transportation Network Manager to Transport Service Provider giving a status on the transport operation</ccts:Definition>
+               <ccts:Definition>A document sent by a transport service provider to announce the availability of a transport service.</ccts:Definition>
                <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+           <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+              <xsd:annotation>
+                 <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+              </xsd:annotation>
+           </xsd:element>
+          <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -111,14 +112,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for a Goods Item Identifier.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
@@ -133,7 +134,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether the Transport Service Description is a copy (true) or not (false).</ccts:Definition>
+                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -150,7 +151,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
+                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -166,7 +167,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>Date on which the Transport Service Description  was issued.</ccts:Definition>
+                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -182,7 +183,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>Time at which the Transport Service Description was issued.</ccts:Definition>
+                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -198,7 +199,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Free-form text applying to the Transport Service Description. This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -214,12 +215,28 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Service Name. Name</ccts:DictionaryEntryName>
-                     <ccts:Definition>The name of the transport service announced in the Transport Service Description</ccts:Definition>
+                     <ccts:Definition>A name, assigned by the Transport Service Provider, for the service being announced.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTerm>Service Name</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
                      <ccts:DataType>Name. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:ResponseCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Service Description. Response Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code signifying a response related to the Transport Service Description.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Response Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -230,11 +247,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Signature.</ccts:Definition>
+                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -245,12 +263,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about the sender of the Transport Service Description</ccts:Definition>
+                     <ccts:Definition>The party sending the Transport Service Description.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -261,115 +280,107 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about the receiver of the Transport Service Description</ccts:Definition>
+                     <ccts:Definition>The party receiving the Transport Service Description.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:TransportServiceProviderParty" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:TransportServiceDescriptionRequestDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Service Description. Transport Service Description Request_ Document Reference. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>A Transport Service Description Request to which this Transport Service Description is a response.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Transport Service Description Request</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:TransportServiceProviderParty" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Transport Service Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about the provider of the Transport Service Description</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:Definition>The transport service provider.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Transport Service Provider</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:MainTransportationService" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:ServiceChargePaymentTerms" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Transport Service Description. Main_ Transportation Service. Transportation Service</ccts:DictionaryEntryName>
-                     <ccts:Definition>The main transportation service included in the Transport Service Description. This is typically a carrier service, but may also be another type of transport related service</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:DictionaryEntryName>Transport Service Description. Service Charge_ Payment Terms. Payment Terms</ccts:DictionaryEntryName>
+                     <ccts:Definition>The terms of payment under which the transport service would be provided.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Main</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Transportation Service</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Transportation Service</ccts:AssociatedObjectClass>
+                     <ccts:PropertyTermQualifier>Service Charge</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Payment Terms</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Payment Terms</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Payment Terms</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:AdditionalTransportationService" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Transport Service Description. Additional_ Transportation Service. Transportation Service</ccts:DictionaryEntryName>
-                     <ccts:Definition>Any additional transport related service announced in this Transport Service Description. For example a loading or unloading service, transport document related services, etc.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Transportation Service</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Transportation Service</ccts:AssociatedObjectClass>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ValidityPeriod" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:ValidityPeriod" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description. Validity_ Period. Period</ccts:DictionaryEntryName>
-                     <ccts:Definition>The validity period for the Transport Service Description</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:Definition>A period during which this Transport Service Description is valid.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Validity</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Period</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Period</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:PaymentTerms" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:TransportationService" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Transport Service Description. Payment Terms</ccts:DictionaryEntryName>
-                     <ccts:Definition>Payment Terms associated with the Transport Service Description</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Payment Terms</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Payment Terms</ccts:AssociatedObjectClass>
-                  </ccts:Component>
-               </xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cac:ServicePoint" minOccurs="0" maxOccurs="unbounded">
-            <xsd:annotation>
-               <xsd:documentation>
-                  <ccts:Component>
-                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Transport Service Description. Service Point</ccts:DictionaryEntryName>
-                     <ccts:Definition>A service point or stage in a transportation service.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Transport Service Description. Transportation Service</ccts:DictionaryEntryName>
+                     <ccts:Definition>A transportation service announced in this Transport Service Description.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Service Point</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Service Point</ccts:AssociatedObjectClass>
+                     <ccts:PropertyTerm>Transportation Service</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Transportation Service</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Transportation Service</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
       </xsd:sequence>
-  </xsd:complexType>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -390,7 +401,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

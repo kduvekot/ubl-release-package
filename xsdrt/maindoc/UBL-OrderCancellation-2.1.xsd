@@ -1,56 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-OrderCancellation-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsdrt/maindoc/UBL-OrderCancellation-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2"
-            version="2.0">
-    
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
+            version="2.1">
+   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                schemaLocation="../common/UBL-CommonAggregateComponents-2.1.xsd"/>
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-    
-    <xsd:element name="OrderCancellation" type="OrderCancellationType"/>
-    <xsd:complexType name="OrderCancellationType">
-        <xsd:sequence>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="ext:UBLExtensions"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:UBLVersionID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:CustomizationID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ProfileID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ProfileExecutionID"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cbc:ID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:CopyIndicator"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:UUID"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cbc:IssueDate"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:IssueTime"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cbc:Note"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cbc:CancellationNote"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="1" ref="cac:OrderReference"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:OriginatorDocumentReference"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:AdditionalDocumentReference"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:Contract"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:Signature"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cac:BuyerCustomerParty"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cac:SellerSupplierParty"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:OriginatorCustomerParty"/>
-        </xsd:sequence>
-    </xsd:complexType>
+   <xsd:element name="OrderCancellation" type="OrderCancellationType"/>
+   <xsd:complexType name="OrderCancellationType">
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:CancellationNote" minOccurs="1" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:OrderReference" minOccurs="1" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:OriginatorDocumentReference" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:AdditionalDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:Contract" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:BuyerCustomerParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:SellerSupplierParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:OriginatorCustomerParty" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -71,7 +69,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

@@ -37,7 +37,7 @@
 				</Country>
 			</PostalAddress>
 			<PartyTaxScheme>
-				<Harry:RegistrationName>Farthing Purchasing Consortia</Harry:RegistrationName>
+				<Harry:RegistrationName>Farthing Purchasing Consortium</Harry:RegistrationName>
 				<Harry:CompanyID>175 269 2355</Harry:CompanyID>
 				<Harry:ExemptionReason>N/A</Harry:ExemptionReason>
 				<TaxScheme>
@@ -114,7 +114,7 @@
 		<Harry:PaymentDueDate>2005-07-21</Harry:PaymentDueDate>
 		<PayeeFinancialAccount>
 			<Harry:ID>12345678</Harry:ID>
-			<Harry:Name>Farthing Purchasing Consortia</Harry:Name>
+			<Harry:Name>Farthing Purchasing Consortium</Harry:Name>
 			<Harry:AccountTypeCode>Current</Harry:AccountTypeCode>
 			<Harry:CurrencyCode>GBP</Harry:CurrencyCode>
 			<FinancialInstitutionBranch>

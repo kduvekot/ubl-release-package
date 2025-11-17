@@ -1,24 +1,25 @@
-<gc:CodeList xmlns:gc="http://genericode.org/2006/ns/CodeList/0.4/">
+<?xml version="1.0" encoding="UTF-8"?>
+<gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
    <Identification>
       <ShortName>ForecastPurposeCode</ShortName>
       <LongName>Forecast Purpose Code</LongName>
       <Version>2.1</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:codelist:gc:ForecastPurposeCode</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:codelist:gc:ForecastPurposeCode-2.1</CanonicalVersionUri>
-      <LocationUri>http://docs.oasis-open.org/ubl/os-ubl-2.0/cl/gc/default/ForecastPurposeCode-2.1.gc</LocationUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/os-UBL-2.1/cl/gc/special-purpose/ForecastPurposeCode-2.1.gc</LocationUri>
       <Agency>
          <LongName xml:lang="en">OASIS Universal Business Language</LongName>
          <Identifier>UBL</Identifier>
       </Agency>
    </Identification>
-    <ColumnSet>
+   <ColumnSet>
       <Column Id="code" Use="required">
          <ShortName>Code</ShortName>
-         <Data Type="normalizedString" xml:lang="en"/>
+         <Data Type="normalizedString" Lang="en"/>
       </Column>
       <Column Id="name" Use="optional">
          <ShortName>Name</ShortName>
-         <Data Type="string" xml:lang="en"/>
+         <Data Type="string" Lang="en"/>
       </Column>
       <Key Id="codeKey">
          <ShortName>CodeKey</ShortName>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-InventoryReport-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsd/maindoc/UBL-InventoryReport-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
@@ -22,39 +22,39 @@
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-   <!-- ===== Element Declaration ===== -->
+   <!-- ===== Element Declarations ===== -->
    <xsd:element name="InventoryReport" type="InventoryReportType">
       <xsd:annotation>
          <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
       </xsd:annotation>
-  </xsd:element>
-   <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
+   </xsd:element>
+   <!-- ===== Type Definitions ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="InventoryReportType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Inventory Report. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>Report about the quantities of each item which are or will be on stock.</ccts:Definition>
+               <ccts:Definition>A report on the quantities of each item that are, or will be, in stock.</ccts:Definition>
                <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                <ccts:AlternativeBusinessTerms>Storage status report.</ccts:AlternativeBusinessTerms>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+           <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+              <xsd:annotation>
+                 <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+              </xsd:annotation>
+           </xsd:element>
+          <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -122,7 +122,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for the Inventory Report assigned by the Issuer.</ccts:Definition>
+                     <ccts:Definition>An identifier for the Inventory Report, assigned by the Issuer.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -139,7 +139,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether the Inventory Report is a copy (true) or not (false).</ccts:Definition>
+                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -156,7 +156,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
+                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -172,7 +172,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date on which the Inventory Report was issued.</ccts:Definition>
+                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -188,7 +188,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>The time on which the Inventory Report was issued.</ccts:Definition>
+                     <ccts:Definition>The time at which the Inventory Report was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -204,7 +204,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Free-form text applying to the Inventory Report.  This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -220,12 +220,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Document_ Currency Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>The currency in which the Document is presented. This may be the same currency as the pricing or as the tax.</ccts:Definition>
+                     <ccts:Definition>A code signifying the currency in which the Document is presented. This may be the same currency as the pricing or as the tax.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Document</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataTypeQualifier>Currency</ccts:DataTypeQualifier>
                      <ccts:DataType>Currency_ Code. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
@@ -237,12 +238,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Inventory_ Period. Period</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Period the report is referred to.</ccts:Definition>
+                     <ccts:Definition>The period covered by this report.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Inventory</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Period</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Period</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -253,11 +255,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>Identification of a document to which the message makes reference.</ccts:Definition>
+                     <ccts:Definition>A reference to another document associated with this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -268,11 +271,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Signature.</ccts:Definition>
+                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -283,12 +287,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Retailer_ Customer Party. Customer Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to the Retailer. He is the sender.</ccts:Definition>
+                     <ccts:Definition>The retailer, who sends this message.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Retailer</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Customer Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Customer Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Customer Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -298,13 +303,14 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Inventory Report. InventoryReporting_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to the Party that will really use the Inventory report (normally the branch for which the stock is reported). He is the receiver.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Inventory Report. Inventory Reporting_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>An association to the Party that will really use the Inventory report (normally the branch for which the stock is reported).</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>InventoryReporting</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTermQualifier>Inventory Reporting</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -315,12 +321,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Seller_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to the Supplier.</ccts:Definition>
+                     <ccts:Definition>The seller.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Supplier Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Supplier Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Supplier Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -331,20 +338,20 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Inventory Report. Inventory Report Line</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to one or more Inventory Report Lines.</ccts:Definition>
+                     <ccts:Definition>A line representing a particular item of sale and associated with a line in the Catalogue.</ccts:Definition>
                      <ccts:Cardinality>1..n</ccts:Cardinality>
                      <ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
                      <ccts:PropertyTerm>Inventory Report Line</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Inventory Report Line</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Inventory Report Line</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
       </xsd:sequence>
-  </xsd:complexType>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -365,7 +372,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

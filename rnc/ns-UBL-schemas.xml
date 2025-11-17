@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locatingRules xmlns="http://thaiopensource.com/ns/locating-rules/1.0">
+   <namespace uri="UBL-CommonSignatureComponents.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"/>
    <namespace uri="UBL-ApplicationResponse.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2"/>
    <namespace uri="UBL-AttachedDocument.rnc"
@@ -30,7 +32,8 @@
               ns="urn:oasis:names:specification:ubl:schema:xsd:FreightInvoice-2"/>
    <namespace uri="UBL-Invoice.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"/>
-   <namespace uri="UBL-Order.rnc" ns="urn:oasis:names:specification:ubl:schema:xsd:Order-2"/>
+   <namespace uri="UBL-Order.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:Order-2"/>
    <namespace uri="UBL-OrderCancellation.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:OrderCancellation-2"/>
    <namespace uri="UBL-OrderChange.rnc"
@@ -81,6 +84,8 @@
               ns="urn:oasis:names:specification:ubl:schema:xsd:Forecast-2"/>
    <namespace uri="UBL-ForecastRevision.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:ForecastRevision-2"/>
+   <namespace uri="UBL-FulfilmentCancellation.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:FulfilmentCancellation-2"/>
    <namespace uri="UBL-GoodsItemItinerary.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:GoodsItemItinerary-2"/>
    <namespace uri="UBL-GuaranteeCertificate.rnc"
@@ -91,8 +96,6 @@
               ns="urn:oasis:names:specification:ubl:schema:xsd:InventoryReport-2"/>
    <namespace uri="UBL-ItemInformationRequest.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:ItemInformationRequest-2"/>
-   <namespace uri="UBL-PerformanceHistory.rnc"
-              ns="urn:oasis:names:specification:ubl:schema:xsd:PerformanceHistory-2"/>
    <namespace uri="UBL-PriorInformationNotice.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"/>
    <namespace uri="UBL-ProductActivity.rnc"
@@ -101,7 +104,8 @@
               ns="urn:oasis:names:specification:ubl:schema:xsd:RetailEvent-2"/>
    <namespace uri="UBL-StockAvailabilityReport.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:StockAvailabilityReport-2"/>
-   <namespace uri="UBL-Tender.rnc" ns="urn:oasis:names:specification:ubl:schema:xsd:Tender-2"/>
+   <namespace uri="UBL-Tender.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:Tender-2"/>
    <namespace uri="UBL-TendererQualification.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:TendererQualification-2"/>
    <namespace uri="UBL-TendererQualificationResponse.rnc"
@@ -110,14 +114,20 @@
               ns="urn:oasis:names:specification:ubl:schema:xsd:TenderReceipt-2"/>
    <namespace uri="UBL-TradeItemLocationProfile.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:TradeItemLocationProfile-2"/>
+   <namespace uri="UBL-TransportationStatusRequest.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:TransportationStatusRequest-2"/>
    <namespace uri="UBL-TransportExecutionPlan.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2"/>
-   <namespace uri="UBL-TransportExecutionStatus.rnc"
-              ns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionStatus-2"/>
+   <namespace uri="UBL-TransportExecutionPlanRequest.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2"/>
    <namespace uri="UBL-TransportProgressStatus.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2"/>
+   <namespace uri="UBL-TransportProgressStatusRequest.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatusRequest-2"/>
    <namespace uri="UBL-TransportServiceDescription.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescription-2"/>
+   <namespace uri="UBL-TransportServiceDescriptionRequest.rnc"
+              ns="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescriptionRequest-2"/>
    <namespace uri="UBL-UnawardedNotification.rnc"
               ns="urn:oasis:names:specification:ubl:schema:xsd:UnawardedNotification-2"/>
    <namespace uri="UBL-UtilityStatement.rnc"

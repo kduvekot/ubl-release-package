@@ -42,7 +42,7 @@
 			</cac:Country>
 		</cac:PostalAddress>
 		<cac:PartyTaxScheme>
-			<cbc:RegistrationName>Farthing Purchasing Consortia</cbc:RegistrationName>
+			<cbc:RegistrationName>Farthing Purchasing Consortium</cbc:RegistrationName>
 			<cbc:CompanyID>175 269 2355</cbc:CompanyID>
 			<cbc:ExemptionReason>N/A</cbc:ExemptionReason>
 			<cac:TaxScheme>
@@ -115,14 +115,14 @@
 		<cac:PromotionalSpecification>
 			<cbc:SpecificationID>ACME_STROP_0023823</cbc:SpecificationID>
 			<cac:PromotionalEventLineItem>
-				<cbc:Amount>100.0</cbc:Amount>
+				<cbc:Amount currencyID="GBP">100.0</cbc:Amount>
 				<cac:EventLineItem>
 					<cbc:LineNumberNumeric>1</cbc:LineNumberNumeric>
 					<cac:ParticipatingLocationsLocation>
 						<cbc:ID>ACME_BR_BE_0023</cbc:ID>
 					</cac:ParticipatingLocationsLocation>
 					<cac:RetailPlannedImpact>
-						<cbc:Amount>0.0</cbc:Amount>
+						<cbc:Amount currencyID="GBP">0.0</cbc:Amount>
 						<cbc:ForecastPurposeCode>SALES_FORECAST</cbc:ForecastPurposeCode>
 						<cbc:ForecastTypeCode>PROMOTIONAL</cbc:ForecastTypeCode>
 						<cac:Period>

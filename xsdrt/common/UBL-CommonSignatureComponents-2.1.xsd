@@ -1,58 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-CommonSignatureComponents-2.1.xsd
-  Generated on:      2010-11-10 21:40(UTC)
-
-  This schema fragment defines the signature constructs used in the
-  standardized extension.
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsdrt/common/UBL-CommonSignatureComponents-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-            targetNamespace=
-     "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
-            xmlns=
-     "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
-            xmlns:sig=
-     "urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
-            xmlns:sac=
-  "urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-            elementFormDefault="qualified" 
-            attributeFormDefault="unqualified" 
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
+            xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
             version="2.1">
-
-   <!-- ===== Import ===== -->
-   <xsd:import schemaLocation="UBL-SignatureAggregateComponents-2.1.xsd" 
-               namespace=
-"urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"/>
-
-   <!-- ===== Element Declarations ===== -->
-   <xsd:element name="UBLDocumentSignatures" 
-                type="UBLDocumentSignaturesType"/>
-
-   <!-- ===== Type Definitions ===== -->
+   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
+               schemaLocation="UBL-SignatureAggregateComponents-2.1.xsd"/>
+   <xsd:element name="UBLDocumentSignatures" type="UBLDocumentSignaturesType"/>
    <xsd:complexType name="UBLDocumentSignaturesType">
-     <xsd:annotation>
-       <xsd:documentation>
-         <ccts:Definition>This class collects all signature information for a document.</ccts:Definition>
-       </xsd:documentation>
-     </xsd:annotation>
-     <xsd:sequence>
-       <xsd:element ref="sac:SignatureInformation" 
-                    minOccurs="1" maxOccurs="unbounded">
-         <xsd:annotation>
-           <xsd:documentation>
-             <ccts:Definition>Each of these is scaffolding for a single digital signature.</ccts:Definition>
-           </xsd:documentation>
-         </xsd:annotation>
-       </xsd:element>
-     </xsd:sequence>
+      <xsd:sequence>
+         <xsd:element ref="sac:SignatureInformation" minOccurs="1" maxOccurs="unbounded"/>
+      </xsd:sequence>
    </xsd:complexType>
-   
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -73,7 +42,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
@@ -98,5 +67,5 @@
   WARRANTY THAT THE USE OF THE INFORMATION HEREIN 
   WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
   WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
-  PARTICULAR PURPOSE.
+  PARTICULAR PURPOSE.    
 -->

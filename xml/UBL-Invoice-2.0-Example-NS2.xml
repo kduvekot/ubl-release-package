@@ -37,7 +37,7 @@
 				</Sally:Country>
 			</Sally:PostalAddress>
 			<Sally:PartyTaxScheme>
-				<RegistrationName>Farthing Purchasing Consortia</RegistrationName>
+				<RegistrationName>Farthing Purchasing Consortium</RegistrationName>
 				<CompanyID>175 269 2355</CompanyID>
 				<ExemptionReason>N/A</ExemptionReason>
 				<Sally:TaxScheme>
@@ -114,7 +114,7 @@
 		<PaymentDueDate>2005-07-21</PaymentDueDate>
 		<Sally:PayeeFinancialAccount>
 			<ID>12345678</ID>
-			<Name>Farthing Purchasing Consortia</Name>
+			<Name>Farthing Purchasing Consortium</Name>
 			<AccountTypeCode>Current</AccountTypeCode>
 			<CurrencyCode>GBP</CurrencyCode>
 			<Sally:FinancialInstitutionBranch>

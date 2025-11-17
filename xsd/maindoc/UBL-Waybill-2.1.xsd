@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-Waybill-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsd/maindoc/UBL-Waybill-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
-            version="2.0">
+            version="2.1">
    <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                schemaLocation="../common/UBL-CommonAggregateComponents-2.1.xsd"/>
@@ -22,39 +22,39 @@
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-   <!-- ===== Element Declaration ===== -->
+   <!-- ===== Element Declarations ===== -->
    <xsd:element name="Waybill" type="WaybillType">
       <xsd:annotation>
          <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
       </xsd:annotation>
-  </xsd:element>
-   <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
+   </xsd:element>
+   <!-- ===== Type Definitions ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="WaybillType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Waybill. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>The Waybill is issued by the party who acts as an agent for the carrier or other agents, to the party who gives instructions for the transportation services (shipper, consignor, etc.) stating the details of the transportation, charges, and terms and conditions under which the transportation service is provided. The party issuing this document could be a party other than that providing the physical transportation. It corresponds to the information on the Forwarding Instruction. It is used for all modes of transport. It can serve as a contractual document between the parties for the transportation service. The document made out by the carrier or on behalf of the carrier evidencing the contract for the transport of cargo.</ccts:Definition>
+               <ccts:Definition>A transport document describing a shipment It is issued by the party who undertakes to provide transportation services, or undertakes to arrange for their provision, to the party who gives instructions for the transportation services (shipper, consignor, etc.). It states the instructions for the beneficiary and may contain the details of the transportation, charges, and terms and conditions under which the transportation service is provided.</ccts:Definition>
                <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                <ccts:AlternativeBusinessTerms>Consignment Note</ccts:AlternativeBusinessTerms>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+           <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+              <xsd:annotation>
+                 <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+              </xsd:annotation>
+           </xsd:element>
+          <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -122,7 +122,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Unique identifier of the Waybill. Reference number to identify a document evidencing a transport contract.</ccts:Definition>
+                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -139,7 +139,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Carrier Assigned_ Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Reference number assigned by a carrier or its agent to identify a specific shipment.</ccts:Definition>
+                     <ccts:Definition>An identifier (in the form of a reference number) assigned by a carrier or its agent to identify a specific shipment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Carrier Assigned</ccts:PropertyTermQualifier>
@@ -156,7 +156,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
+                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -172,7 +172,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>Date on which the Waybill was issued.</ccts:Definition>
+                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -188,7 +188,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>Time at which the Waybill was issued.</ccts:Definition>
+                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -204,13 +204,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Name</ccts:DictionaryEntryName>
-                     <ccts:Definition>Name of a Waybill.</ccts:Definition>
+                     <ccts:Definition>Text, assigned by the sender, that identifies this document to business users.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Name</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
                      <ccts:DataType>Name. Type</ccts:DataType>
-                     <ccts:Examples>Air Waybill ,  House Waybill</ccts:Examples>
+                     <ccts:Examples>Air Waybill , House Waybill </ccts:Examples>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -221,7 +221,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Description. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Textual description of the document instance.</ccts:Definition>
+                     <ccts:Definition>Text describing the contents of the Waybill.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Description</ccts:PropertyTerm>
@@ -237,7 +237,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Textual note associated with a Waybill.</ccts:Definition>
+                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -253,7 +253,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Shipping Order Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Reference number to identify a Shipping Order or Forwarding Instruction.</ccts:Definition>
+                     <ccts:Definition>An identifier (in the form of a reference number) of the Shipping Order or Forwarding Instruction associated with this shipment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Shipping Order Identifier</ccts:PropertyTerm>
@@ -286,7 +286,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Declared Carriage_ Value. Amount</ccts:DictionaryEntryName>
-                     <ccts:Definition>Value, declared by the shipper or his agent solely for the purpose of varying the carrier s level of liability from that provided in the contract of carriage, in case of loss or damage to goods or delayed delivery.</ccts:Definition>
+                     <ccts:Definition>Value declared by the shipper or his agent solely for the purpose of varying the carrier's level of liability from that provided in the contract of carriage in case of loss or damage to goods or delayed delivery.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Declared Carriage</ccts:PropertyTermQualifier>
@@ -303,7 +303,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Other_ Instruction. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Contains other free-text based instructions related to the shipment to the forwarders or carriers. This should only be used where such information cannot be represented in other structured information entities within the document.</ccts:Definition>
+                     <ccts:Definition>Other free-text instructions related to the shipment to the forwarders or carriers. This should only be used where such information cannot be represented in other structured information entities within the document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Other</ccts:PropertyTermQualifier>
@@ -320,12 +320,14 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Consignor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party consigning goods as stipulated in the transport contract by the party ordering transport.</ccts:Definition>
+                     <ccts:Definition>The party consigning goods, as stipulated in the transport contract by the party ordering transport.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignor</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                     <ccts:AlternativeBusinessTerms>Consignor (WCO ID 71 and 72)</ccts:AlternativeBusinessTerms>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -342,6 +344,8 @@
                      <ccts:PropertyTermQualifier>Carrier</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                     <ccts:AlternativeBusinessTerms>Transport Company, Shipping Line, NVOCC, Airline, Haulier, Courier, Carrier (WCO ID 49 and 50)</ccts:AlternativeBusinessTerms>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -352,12 +356,14 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Freight Forwarder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party combining individual smaller consignments into a single larger shipment (so-called consolidated consignment ) that is sent to a counterpart who mirrors the consolidator s activity by dividing the consolidated consignment into its original components.</ccts:Definition>
+                     <ccts:Definition>A party combining individual smaller consignments into a single larger shipment (a so-called consolidated consignment or shipment) that is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Freight Forwarder</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                     <ccts:AlternativeBusinessTerms>Consolidator (WCO ID 192 AND 193)</ccts:AlternativeBusinessTerms>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -368,11 +374,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Shipment</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Shipment.</ccts:Definition>
+                     <ccts:Definition>A description of the shipment.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Shipment</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Shipment</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Shipment</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -383,11 +390,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Document Reference.</ccts:Definition>
+                     <ccts:Definition>A reference to another document associated with this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -398,11 +406,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Exchange Rate</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information that directly relates to the rate of exchange (conversion) between two currencies.</ccts:Definition>
+                     <ccts:Definition>Information about the rate of exchange (conversion) between two currencies.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Exchange Rate</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Exchange Rate</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Exchange Rate</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -413,11 +422,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Document Distribution</ccts:DictionaryEntryName>
-                     <ccts:Definition>The distribution of the Waybill to interested parties.</ccts:Definition>
+                     <ccts:Definition>A list of interested parties to whom this document is distributed.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Document Distribution</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Distribution</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Distribution</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -428,20 +438,20 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Waybill. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Signature.</ccts:Definition>
+                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Waybill</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
       </xsd:sequence>
-  </xsd:complexType>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -462,7 +472,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

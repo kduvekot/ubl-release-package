@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-CertificateOfOrigin-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsd/maindoc/UBL-CertificateOfOrigin-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CertificateOfOrigin-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
-            version="2.0">
+            version="2.1">
    <!-- ===== Imports ===== -->
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                schemaLocation="../common/UBL-CommonAggregateComponents-2.1.xsd"/>
@@ -22,14 +22,14 @@
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-   <!-- ===== Element Declaration ===== -->
+   <!-- ===== Element Declarations ===== -->
    <xsd:element name="CertificateOfOrigin" type="CertificateOfOriginType">
       <xsd:annotation>
          <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
       </xsd:annotation>
-  </xsd:element>
-   <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
+   </xsd:element>
+   <!-- ===== Type Definitions ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="CertificateOfOriginType">
       <xsd:annotation>
          <xsd:documentation>
@@ -42,18 +42,18 @@
          </xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+           <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+              <xsd:annotation>
+                 <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+              </xsd:annotation>
+           </xsd:element>
+          <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -121,7 +121,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Unique Identifier of the Certificate Of Origin.</ccts:Definition>
+                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -137,7 +137,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
+                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -153,7 +153,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>Date on which the Certificate Of Origin was issued.</ccts:Definition>
+                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -169,7 +169,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>Time at which the Certificate Of Origin was issued.</ccts:Definition>
+                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -201,7 +201,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Textual note associated with a Certificate Of Origin.</ccts:Definition>
+                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -217,7 +217,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Version. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>Version identifier of a Certificate Of Origin.</ccts:Definition>
+                     <ccts:Definition>Identifies the version of this Certificate of Origin.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>Version</ccts:PropertyTerm>
@@ -233,11 +233,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about signature. A placeholder for signature.</ccts:Definition>
+                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -248,12 +249,14 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Exporter_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who makes the export declaration, or on whose behalf the export declaration is made, and who is the owner of the goods or has similar right of disposal over them at the time when the declaration is accepted.</ccts:Definition>
+                     <ccts:Definition>The Party who makes the export declaration, or on whose behalf the export declaration is made, and who is the owner of the goods or has similar right of disposal over them at the time when the declaration is accepted.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Exporter</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                     <ccts:AlternativeBusinessTerms>Exporter (WCO ID 41 and 42)</ccts:AlternativeBusinessTerms>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -264,12 +267,14 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Importer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who makes an import declaration, or on whose behalf a Customs clearing agent or other authorized person makes an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.</ccts:Definition>
+                     <ccts:Definition>The Party who makes an import declaration, or on whose behalf a Customs clearing agent or other authorized person makes an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Importer</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                     <ccts:AlternativeBusinessTerms>Importer (WCO ID 39 and 40)</ccts:AlternativeBusinessTerms>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -280,26 +285,30 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Endorser Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing the endorsement.</ccts:Definition>
+                     <ccts:Definition>The Party providing the endorsement.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>Endorser Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Endorser Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Endorser Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:CertificateOfOriginApplication" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:CertificateOfOriginApplication"
+                      minOccurs="1"
+                      maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin. Certificate Of Origin Application</ccts:DictionaryEntryName>
-                     <ccts:Definition>Details of the application of a Certificate of Origin.</ccts:Definition>
+                     <ccts:Definition>Details of the application for a Certificate of Origin.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin</ccts:ObjectClass>
                      <ccts:PropertyTerm>Certificate Of Origin Application</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Certificate Of Origin Application</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Certificate Of Origin Application</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -316,6 +325,7 @@
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Endorsement</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Endorsement</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Endorsement</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -332,6 +342,7 @@
                      <ccts:PropertyTermQualifier>Embassy</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Endorsement</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Endorsement</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Endorsement</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -348,15 +359,15 @@
                      <ccts:PropertyTermQualifier>Insurance</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Endorsement</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Endorsement</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Endorsement</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
       </xsd:sequence>
-  </xsd:complexType>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -377,7 +388,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

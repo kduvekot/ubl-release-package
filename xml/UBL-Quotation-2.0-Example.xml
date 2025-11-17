@@ -38,7 +38,7 @@
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
-				<cbc:RegistrationName>Farthing Purchasing Consortia</cbc:RegistrationName>
+				<cbc:RegistrationName>Farthing Purchasing Consortium</cbc:RegistrationName>
 				<cbc:CompanyID>175 269 2355</cbc:CompanyID>
 				<cbc:ExemptionReason>N/A</cbc:ExemptionReason>
 				<cac:TaxScheme>
@@ -119,7 +119,7 @@
 		<cbc:PaymentMeansCode>20</cbc:PaymentMeansCode>
 		<cac:PayeeFinancialAccount>
 			<cbc:ID>12345678</cbc:ID>
-			<cbc:Name>Farthing Purchasing Consortia</cbc:Name>
+			<cbc:Name>Farthing Purchasing Consortium</cbc:Name>
 			<cbc:AccountTypeCode>Current</cbc:AccountTypeCode>
 			<cbc:CurrencyCode>GBP</cbc:CurrencyCode>
 			<cac:FinancialInstitutionBranch>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-CallForTenders-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsd/maindoc/UBL-CallForTenders-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:CallForTenders-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
@@ -22,38 +22,38 @@
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-   <!-- ===== Element Declaration ===== -->
+   <!-- ===== Element Declarations ===== -->
    <xsd:element name="CallForTenders" type="CallForTendersType">
       <xsd:annotation>
          <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
       </xsd:annotation>
-  </xsd:element>
-   <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
+   </xsd:element>
+   <!-- ===== Type Definitions ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="CallForTendersType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Call For Tenders. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>The document used for a Contracting Party to define the procurement project to buy goods, services or works during an specified period.</ccts:Definition>
+               <ccts:Definition>A document used by a Contracting Party to define a procurement project to buy goods, services, or works during a specified period.</ccts:Definition>
                <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+           <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+              <xsd:annotation>
+                 <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+              </xsd:annotation>
+           </xsd:element>
+          <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The version of the UBL schema being used.</ccts:Definition>
+                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -69,7 +69,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Customization Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The identifier for a user defined subset of UBL.</ccts:Definition>
+                     <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
@@ -85,7 +85,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Profile Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The identifier for a user defined profile of the subset of UBL being used.</ccts:Definition>
+                     <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
@@ -117,7 +117,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for the Call For Tenders assigned by the Contracting Party</ccts:Definition>
+                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -133,7 +133,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether a document is a copy (true) or not (false)</ccts:Definition>
+                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -150,7 +150,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A computer-generated universally unique identifier (UUID) for the Call for Tender instance</ccts:Definition>
+                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -166,7 +166,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Contract Folder Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for the process file (i.e. record) to which belongs the notification assigned by the sender.</ccts:Definition>
+                     <ccts:Definition>An identifier, assigned by the sender, for the process file (i.e., record) to which this document belongs.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Contract Folder Identifier</ccts:PropertyTerm>
@@ -182,7 +182,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Approval Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date assigned by the Contracting Party on which the Call For Tenders were approved.</ccts:Definition>
+                     <ccts:Definition>The date, assigned by the contracting party, on which the Call For Tenders was approved.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Approval Date</ccts:PropertyTerm>
@@ -198,7 +198,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date assigned by the Contracting Party on which the Call For Tenders were issued</ccts:Definition>
+                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -214,7 +214,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>The time assigned by the Contracting Party on which the Call For Tenders were issued</ccts:Definition>
+                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -230,12 +230,47 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>General notes</ccts:Definition>
+                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Note</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:VersionID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Call For Tenders. Version. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Indicates the current version of the Call for Tenders.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Version</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                     <ccts:Examples>1.1 </ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:PreviousVersionID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Call For Tenders. Previous_ Version. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>Identifies the previous version of the Call for Tenders which is superceded by this version.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Previous</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Version</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                     <ccts:Examples>1.0 </ccts:Examples>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -246,12 +281,13 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Legal_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to a Legal Document Reference</ccts:Definition>
+                     <ccts:Definition>A reference to a legal document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Legal</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -262,28 +298,32 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Technical_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to a Technical Document Reference</ccts:Definition>
+                     <ccts:Definition>A reference to a technical document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Technical</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:AdditionalDocumentReference" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cac:AdditionalDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to additional document references</ccts:Definition>
+                     <ccts:Definition>A reference to an additional document associated with this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -294,11 +334,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>Information about signature. A placeholder for signature.</ccts:Definition>
+                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -309,16 +350,19 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Contracting Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to a Contracting Party.</ccts:Definition>
+                     <ccts:Definition>The contracting party.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Contracting Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Contracting Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Contracting Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:OriginatorCustomerParty" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cac:OriginatorCustomerParty"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
@@ -330,6 +374,7 @@
                      <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Customer Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Customer Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Customer Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -346,6 +391,7 @@
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -356,11 +402,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Tendering Terms</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to a tendering terms.</ccts:Definition>
+                     <ccts:Definition>The tendering terms associated with this tendering process.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Tendering Terms</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Tendering Terms</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Tendering Terms</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -371,11 +418,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Tendering Process</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to a tendering process.</ccts:Definition>
+                     <ccts:Definition>A description of the tendering process itself.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Tendering Process</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Tendering Process</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Tendering Process</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -386,11 +434,12 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Procurement Project</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to a procurement project, the overall definition of the procurement project.</ccts:Definition>
+                     <ccts:Definition>An overall definition of this procurement project.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Procurement Project</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Procurement Project</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Procurement Project</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -401,20 +450,20 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Call For Tenders. Procurement Project Lot</ccts:DictionaryEntryName>
-                     <ccts:Definition>The procurement project lots a contract can be split on.</ccts:Definition>
+                     <ccts:Definition>One of the procurement project lots into which this contract can be split.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Call For Tenders</ccts:ObjectClass>
                      <ccts:PropertyTerm>Procurement Project Lot</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Procurement Project Lot</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Procurement Project Lot</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
       </xsd:sequence>
-  </xsd:complexType>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -435,7 +484,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

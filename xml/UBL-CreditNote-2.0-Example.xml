@@ -32,7 +32,7 @@ xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
 				</cac:Country>
 			</cac:PostalAddress>
 			<cac:PartyTaxScheme>
-				<cbc:RegistrationName>Farthing Purchasing Consortia</cbc:RegistrationName>
+				<cbc:RegistrationName>Farthing Purchasing Consortium</cbc:RegistrationName>
 				<cbc:CompanyID>175 269 2355</cbc:CompanyID>
 				<cbc:ExemptionReason>N/A</cbc:ExemptionReason>
 				<cac:TaxScheme>

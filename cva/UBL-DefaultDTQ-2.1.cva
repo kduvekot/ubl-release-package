@@ -3,7 +3,7 @@
                              xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                              xmlns:x="http://www.w3.org/1999/xhtml"
                              name="UBL-QualifiedDataTypes-2.0"
-                             version="2011-05-17 15:53:00(UTC)"
+                             version="2013-02-23 13:10:52(UTC)"
                              id="urn:oasis:names:specification:ubl:cva:UBL-Qualified-Data-Types:2">
    <Annotation>
       <Description>
@@ -67,12 +67,16 @@
                  uri="../../os-UBL-2.0/cl/gc/default/ChipCode-2.0.gc"/>
       <ValueList xml:id="CountryIdentification-2.0"
                  uri="../../os-UBL-2.0/cl/gc/default/CountryIdentificationCode-2.0.gc"/>
+      <ValueList xml:id="CountryIdentification-2.1"
+                 uri="../cl/gc/default/CountryIdentificationCode-2.1.gc"/>
       <ValueList xml:id="Currency-2.0"
                  uri="../../os-UBL-2.0/cl/gc/cefact/CurrencyCode-2.0.gc"/>
       <ValueList xml:id="Currency-2.1"
                  uri="../cl/gc/default/CurrencyCode-2.1.gc"/>
       <ValueList xml:id="DocumentStatus-2.0"
                  uri="../../os-UBL-2.0/cl/gc/default/DocumentStatusCode-2.0.gc"/>
+      <ValueList xml:id="DocumentStatus-2.1"
+                 uri="../cl/gc/default/DocumentStatusCode-2.1.gc"/>
       <ValueList xml:id="LatitudeDirection-2.0"
                  uri="../../os-UBL-2.0/cl/gc/default/LatitudeDirectionCode-2.0.gc"/>
       <ValueList xml:id="LineStatus-2.0"
@@ -89,6 +93,8 @@
                  uri="../../os-UBL-2.0/cl/gc/default/PaymentMeansCode-2.0.gc"/>
       <ValueList xml:id="PaymentMeans-2.1"
                  uri="../cl/gc/default/PaymentMeansCode-2.1.gc"/>
+      <ValueList xml:id="ReceiptAdviceType-2.1"
+                 uri="../cl/gc/default/ReceiptAdviceTypeCode-2.1.gc"/>
       <ValueList xml:id="SubstitutionStatus-2.0"
                  uri="../../os-UBL-2.0/cl/gc/default/SubstitutionStatusCode-2.0.gc"/>
       <ValueList xml:id="TransportEquipmentType-2.0"
@@ -103,6 +109,8 @@
                  uri="../../os-UBL-2.0/cl/gc/cefact/UnitOfMeasureCode-2.0.gc"/>
       <ValueList xml:id="UnitOfMeasure-2.1"
                  uri="../cl/gc/default/UnitOfMeasureCode-2.1.gc"/>
+      <ValueList xml:id="WeekDay-2.1"
+                 uri="../cl/gc/default/WeekDayCode-2.1.gc"/>
    </ValueLists>
    <InstanceMetadataSets>
       <Annotation>
@@ -198,7 +206,9 @@
             </Description>
          </Annotation>
          <InstanceMetadata address="@schemeName"
-                           identification="LongName"/>
+                           identification="LongName[not(@Identifier='listID')]"/>
+         <InstanceMetadata address="@schemeID"
+                           identification="LongName[@Identifier='listID']"/>
          <InstanceMetadata address="@schemeVersionID"
                            identification="Version"/>
          <InstanceMetadata address="@schemeURI"
@@ -230,7 +240,7 @@
             </Description>
          </Annotation>
          <InstanceMetadata address="../@unitCodeListID"
-                           identification="Version"/>
+                           identification="LongName[@Identifier='listID']"/>
          <InstanceMetadata address="../@unitCodeListAgencyName"
                            identification="Agency/LongName"/>
          <InstanceMetadata address="../@unitCodeListAgencyID"
@@ -275,11 +285,11 @@
                         cbc:NetNetWeightMeasure/@unitCode | 
                         cbc:GrossVolumeMeasure/@unitCode | 
                         cbc:NetVolumeMeasure/@unitCode | 
-                        cbc:ChargeableWeightMeasure/@unitCode | 
-                        cbc:LoadingLengthMeasure/@unitCode | 
                         cbc:Measure/@unitCode | 
                         cbc:MinimumMeasure/@unitCode | 
                         cbc:MaximumMeasure/@unitCode | 
+                        cbc:ChargeableWeightMeasure/@unitCode | 
+                        cbc:LoadingLengthMeasure/@unitCode | 
                         cbc:ValueMeasure/@unitCode | 
                         cbc:ComparedValueMeasure/@unitCode | 
                         cbc:SourceValueMeasure/@unitCode | 
@@ -289,8 +299,11 @@
                         cbc:LongitudeDegreesMeasure/@unitCode | 
                         cbc:LongitudeMinutesMeasure/@unitCode | 
                         cbc:AltitudeMeasure/@unitCode | 
+                        cbc:GrossTonnageMeasure/@unitCode | 
+                        cbc:NetTonnageMeasure/@unitCode | 
+                        cbc:PostEventNotificationDurationMeasure/@unitCode | 
+                        cbc:PreEventNotificationDurationMeasure/@unitCode | 
                         cbc:DurationMeasure/@unitCode | 
-                        cbc:ConditionValueMeasure/@unitCode | 
                         cbc:BaseUnitMeasure/@unitCode | 
                         cbc:TareWeightMeasure/@unitCode"/>
       <Context values="UnitOfMeasure-2.0 UnitOfMeasure-2.1"
@@ -306,16 +319,17 @@
                         cbc:TotalGoodsItemQuantity/@unitCode | 
                         cbc:TotalTransportHandlingUnitQuantity/@unitCode | 
                         cbc:ConsignmentQuantity/@unitCode | 
-                        cbc:InvoicedQuantity/@unitCode | 
-                        cbc:TotalDeliveredQuantity/@unitCode | 
-                        cbc:TotalConsumedQuantity/@unitCode | 
-                        cbc:BasicConsumedQuantity/@unitCode | 
+                        cbc:ChildConsignmentQuantity/@unitCode | 
                         cbc:GasPressureQuantity/@unitCode | 
                         cbc:ActualTemperatureReductionQuantity/@unitCode | 
                         cbc:NormalTemperatureReductionQuantity/@unitCode | 
                         cbc:DifferenceTemperatureReductionQuantity/@unitCode | 
                         cbc:ConsumptionEnergyQuantity/@unitCode | 
                         cbc:ConsumptionWaterQuantity/@unitCode | 
+                        cbc:InvoicedQuantity/@unitCode | 
+                        cbc:TotalDeliveredQuantity/@unitCode | 
+                        cbc:TotalConsumedQuantity/@unitCode | 
+                        cbc:BasicConsumedQuantity/@unitCode | 
                         cbc:CreditedQuantity/@unitCode | 
                         cbc:DebitedQuantity/@unitCode | 
                         cbc:BatchQuantity/@unitCode | 
@@ -351,8 +365,12 @@
                         cbc:ReceivedQuantity/@unitCode | 
                         cbc:ShortQuantity/@unitCode | 
                         cbc:RejectedQuantity/@unitCode | 
+                        cbc:CrewQuantity/@unitCode | 
+                        cbc:PassengerQuantity/@unitCode | 
                         cbc:TotalMeteredQuantity/@unitCode | 
                         cbc:ReceivedTenderQuantity/@unitCode | 
+                        cbc:ReceivedElectronicTenderQuantity/@unitCode | 
+                        cbc:ReceivedForeignTenderQuantity/@unitCode | 
                         cbc:MaximumVariantQuantity/@unitCode | 
                         cbc:TotalPackageQuantity/@unitCode"/>
       <Context values="AllowanceChargeReason-2.0 AllowanceChargeReason-2.1"
@@ -364,7 +382,7 @@
       <Context values="Chip-2.0"
                metadata="cctsV2.01-code"
                address="cbc:CardChipCode"/>
-      <Context values="CountryIdentification-2.0"
+      <Context values="CountryIdentification-2.0 CountryIdentification-2.1"
                metadata="cctsV2.01-code"
                address="cbc:IdentificationCode"/>
       <Context values="Currency-2.0 Currency-2.1"
@@ -378,7 +396,7 @@
                         cbc:SourceCurrencyCode | 
                         cbc:TargetCurrencyCode | 
                         cbc:CurrencyCode"/>
-      <Context values="DocumentStatus-2.0"
+      <Context values="DocumentStatus-2.0 DocumentStatus-2.1"
                metadata="cctsV2.01-code"
                address="cbc:DocumentStatusCode"/>
       <Context values="LatitudeDirection-2.0"
@@ -399,6 +417,9 @@
       <Context values="PaymentMeans-2.0 PaymentMeans-2.1"
                metadata="cctsV2.01-code"
                address="cbc:PaymentMeansCode"/>
+      <Context values="ReceiptAdviceType-2.1"
+               metadata="cctsV2.01-code"
+               address="cbc:ReceiptAdviceTypeCode"/>
       <Context values="SubstitutionStatus-2.0"
                metadata="cctsV2.01-code"
                address="cbc:SubstitutionStatusCode"/>
@@ -408,5 +429,8 @@
       <Context values="TransportMode-2.0 TransportMode-2.1"
                metadata="cctsV2.01-code"
                address="cbc:TransportModeCode"/>
+      <Context values="WeekDay-2.1"
+               metadata="cctsV2.01-code"
+               address="cbc:WeekDayCode"/>
    </Contexts>
 </cva:ContextValueAssociation>

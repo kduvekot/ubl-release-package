@@ -1,87 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-TransportExecutionPlan-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsdrt/maindoc/UBL-TransportExecutionPlan-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlan-2"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified"
             version="2.1">
-    
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
                schemaLocation="../common/UBL-CommonAggregateComponents-2.1.xsd"/>
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
-    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+   <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-    
-    <xsd:element name="TransportExecutionPlan" type="TransportExecutionPlanType"/>
-    <xsd:complexType name="TransportExecutionPlanType">
-        <xsd:sequence>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="ext:UBLExtensions"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:UBLVersionID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:CustomizationID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ProfileID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:ProfileExecutionID"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cbc:ID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:CopyIndicator"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:UUID"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:IssueDate"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:IssueTime"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cbc:Note"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cbc:TransportUserRemarks"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cbc:TransportServiceProviderRemarks"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:SequenceNumberID"/>
-            <xsd:element maxOccurs="1" minOccurs="0"
-                      ref="cbc:TransportServiceProviderReadyForExecutionIndicator"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:TransportUserReadyForExecutionIndicator"/>
-            <xsd:element maxOccurs="1" minOccurs="0"
-                      ref="cbc:TransportServiceProviderCompletionIndicator"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:TransportUserCompletionIndicator"/>
-            <xsd:element maxOccurs="1" minOccurs="0"
-                      ref="cbc:TransportServiceProviderCancellationIndicator"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cbc:TransportUserCancellationIndicator"/>
-            <xsd:element maxOccurs="1" minOccurs="0"
-                      ref="cac:TransportServiceDescriptionDocumentReference"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:AdditionalDocumentReference"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:ShipmentDocumentReference"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:Signature"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cac:TransportServiceProviderParty"/>
-            <xsd:element maxOccurs="1" minOccurs="1" ref="cac:TransportUserParty"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:NotifyParty"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:TransportUserReferenceParty"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:MainTransportationService"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:AdditionalTransportationService"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:TransportHandlingUnit"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0" ref="cac:ValidityPeriod"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0"
-                      ref="cac:TransportUserResponseDeadlinePeriod"/>
-            <xsd:element maxOccurs="unbounded" minOccurs="0"
-                      ref="cac:TransportServiceProviderResponseDeadlinePeriod"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:ServiceStartTimePeriod"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:ServiceEndTimePeriod"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:ToLocation"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:FromLocation"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:AtLocation"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:TransportExecutionTerms"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:PriceMonetaryTotal"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:PenaltyMonetaryTotal"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:CommissionMonetaryTotal"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:BonusMonetaryTotal"/>
-            <xsd:element maxOccurs="1" minOccurs="0" ref="cac:TransportContract"/>
-        </xsd:sequence>
-    </xsd:complexType>
+   <xsd:element name="TransportExecutionPlan" type="TransportExecutionPlanType"/>
+   <xsd:complexType name="TransportExecutionPlanType">
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProfileExecutionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:VersionID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:CopyIndicator" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:UUID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueDate" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:IssueTime" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:DocumentStatusCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:DocumentStatusReasonCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:DocumentStatusReasonDescription"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:Note" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:TransportUserRemarks" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:TransportServiceProviderRemarks"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:SenderParty" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:ReceiverParty" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:TransportUserParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:TransportServiceProviderParty" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:BillToParty" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:TransportExecutionPlanRequestDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="1"/>
+         <xsd:element ref="cac:TransportExecutionPlanDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="1"/>
+         <xsd:element ref="cac:TransportServiceDescriptionDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="1"/>
+         <xsd:element ref="cac:AdditionalDocumentReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:TransportContract" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:TransportServiceProviderResponseRequiredPeriod"
+                      minOccurs="0"
+                      maxOccurs="1"/>
+         <xsd:element ref="cac:TransportUserResponseRequiredPeriod"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:ValidityPeriod" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:MainTransportationService" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:AdditionalTransportationService"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:ServiceStartTimePeriod" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:ServiceEndTimePeriod" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:FromLocation" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:ToLocation" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:AtLocation" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:TransportExecutionTerms" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:Consignment" minOccurs="1" maxOccurs="unbounded"/>
+      </xsd:sequence>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -102,7 +105,7 @@
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 

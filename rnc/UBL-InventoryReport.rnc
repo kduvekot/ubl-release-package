@@ -1,7 +1,7 @@
 InventoryReport-2.1 = external "versions/UBL-InventoryReport-2.1.rnc"
 start = InventoryReport-2.1
 
-# Synthesized from UBL document models 2011-05-17 17:30:04z
+# Synthesized from UBL document models 2013-02-23 13:25:01z
 #
 # Copyright (C) - Crane Softwrights Ltd.
 #               - http://www.CraneSoftwrights.com/resources/ubl/#ublrnc

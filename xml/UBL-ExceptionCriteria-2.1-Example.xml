@@ -36,7 +36,7 @@
 			</cac:Country>
 		</cac:PostalAddress>
 		<cac:PartyTaxScheme>
-			<cbc:RegistrationName>Farthing Purchasing Consortia</cbc:RegistrationName>
+			<cbc:RegistrationName>Farthing Purchasing Consortium</cbc:RegistrationName>
 			<cbc:CompanyID>175 269 2355</cbc:CompanyID>
 			<cbc:ExemptionReason>N/A</cbc:ExemptionReason>
 			<cac:TaxScheme>
@@ -159,13 +159,13 @@
 				<cbc:ID>00123450000582</cbc:ID>
 			</cac:StandardItemIdentification>
 		</cac:SupplyItem>
-		<cac:ForecastExceptionCriteriaLine>
+		<cac:ForecastExceptionCriterionLine>
 			<cbc:ForecastPurposeCode>SALES_FORECAST</cbc:ForecastPurposeCode>
 			<cbc:ForecastTypeCode>BASE</cbc:ForecastTypeCode>
 			<cbc:ComparisonDataSourceCode>SELLER</cbc:ComparisonDataSourceCode>
 			<cbc:DataSourceCode>BUYER</cbc:DataSourceCode>
 			<cbc:TimeDeltaDaysQuantity>20</cbc:TimeDeltaDaysQuantity>
-		</cac:ForecastExceptionCriteriaLine>
+		</cac:ForecastExceptionCriterionLine>
 	</cac:ExceptionCriteriaLine>
 	<cac:ExceptionCriteriaLine>
 		<cbc:ID>exceptionCriteriaLineID</cbc:ID>
@@ -182,11 +182,11 @@
 				<cbc:ID>00123450000580</cbc:ID>
 			</cac:StandardItemIdentification>
 		</cac:SupplyItem>
-		<cac:ForecastExceptionCriteriaLine>
+		<cac:ForecastExceptionCriterionLine>
 			<cbc:ForecastPurposeCode>SALES_FORECAST</cbc:ForecastPurposeCode>
 			<cbc:ForecastTypeCode>BASE</cbc:ForecastTypeCode>
 			<cbc:DataSourceCode>BUYER</cbc:DataSourceCode>
 			<cbc:TimeDeltaDaysQuantity>20</cbc:TimeDeltaDaysQuantity>
-		</cac:ForecastExceptionCriteriaLine>
+		</cac:ForecastExceptionCriterionLine>
 	</cac:ExceptionCriteriaLine>
 </ExceptionCriteria>

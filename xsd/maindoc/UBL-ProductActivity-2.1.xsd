@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.1
-                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
-  Module:            UBL-ProductActivity-2.1.xsd
-  Generated on:      20110517-1540z
+  Library:           OASIS Universal Business Language (UBL) 2.1 PRD3
+                     http://docs.oasis-open.org/ubl/prd3-UBL-2.1/
+  Module:            xsd/maindoc/UBL-ProductActivity-2.1.xsd
+  Generated on:      2013-02-23 13:10z
 -->
-<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-            xmlns="urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ccts="urn:un:unece:uncefact:documentation:2"
             targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
@@ -22,39 +22,38 @@
                schemaLocation="../common/UBL-CommonBasicComponents-2.1.xsd"/>
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.1.xsd"/>
-   <!-- ===== Element Declaration ===== -->
+   <!-- ===== Element Declarations ===== -->
    <xsd:element name="ProductActivity" type="ProductActivityType">
       <xsd:annotation>
          <xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
       </xsd:annotation>
-  </xsd:element>
-   <!-- ===== Type Definition ===== -->
-   <!-- ===== Aggregate Business Information Entity Type Definition ===== -->
+   </xsd:element>
+   <!-- ===== Type Definitions ===== -->
+   <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
    <xsd:complexType name="ProductActivityType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Product Activity. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>Product activity represents movement of a product through a location in terms of the
-base unit of measure for the item.</ccts:Definition>
+               <ccts:Definition>A document reporting the movement of goods at specified retail locations for inventory tracking purposes.</ccts:Definition>
                <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
       <xsd:sequence>
-         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
-            </xsd:annotation>
-         </xsd:element>
-         <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+           <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+              <xsd:annotation>
+                 <xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+              </xsd:annotation>
+           </xsd:element>
+          <xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+                     <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
@@ -122,7 +121,7 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for the Product Activity assigned by the Buyer.</ccts:Definition>
+                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -139,7 +138,7 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether a document is a copy (true) or not (false).</ccts:Definition>
+                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
@@ -156,7 +155,7 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. UUID. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>A universally unique identifier for an instance of this ABIE.</ccts:Definition>
+                     <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
@@ -172,7 +171,7 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date assigned by the Buyer on which the Product Activity was issued.</ccts:Definition>
+                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
@@ -189,7 +188,7 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>The time assigned by the Buyer on which the Product Activity was issued.</ccts:Definition>
+                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
@@ -205,7 +204,7 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Note. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Free-form text applying to the Product Activity.  This element may contain notes or any other similar information that is not contained explicitly in another structure.</ccts:Definition>
+                     <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTerm>Note</ccts:PropertyTerm>
@@ -221,12 +220,13 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Document_ Currency Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>The currency in which the Document is presented. This may be the same currency as the pricing or as the tax.</ccts:Definition>
+                     <ccts:Definition>A code signifying the default currency for this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Document</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataTypeQualifier>Currency</ccts:DataTypeQualifier>
                      <ccts:DataType>Currency_ Code. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
@@ -238,12 +238,13 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Activity_ Period. Period</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Period.</ccts:Definition>
+                     <ccts:Definition>The period covered by this Product Activity report.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Activity</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Period</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Period</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Period</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -254,11 +255,12 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>An associative reference to the one or more documents.</ccts:Definition>
+                     <ccts:Definition>A reference to another document associated with this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -269,11 +271,12 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Signature</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to Signature.</ccts:Definition>
+                     <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -284,12 +287,13 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to the Sender Party.</ccts:Definition>
+                     <ccts:Definition>The sender of the Product Activity.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -300,37 +304,40 @@ base unit of measure for the item.</ccts:Definition>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to one or more Receiver Party.</ccts:Definition>
+                     <ccts:Definition>The receiver of the Product Activity.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:SupplyChainActivityDataLine" minOccurs="1" maxOccurs="unbounded">
+         <xsd:element ref="cac:SupplyChainActivityDataLine"
+                      minOccurs="1"
+                      maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Product Activity. Supply Chain_ Activity Data Line. Activity Data Line</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to one or more Activity Data Line</ccts:Definition>
+                     <ccts:Definition>A line describing the movement of goods to a specific location.</ccts:Definition>
                      <ccts:Cardinality>1..n</ccts:Cardinality>
                      <ccts:ObjectClass>Product Activity</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Supply Chain</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Activity Data Line</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Activity Data Line</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Activity Data Line</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
       </xsd:sequence>
-  </xsd:complexType>
+   </xsd:complexType>
 </xsd:schema>
-<!-- ===== Copyright Notice ===== -->
-<!--
+<!-- ===== Copyright Notice ===== --><!--
   OASIS takes no position regarding the validity or scope of any 
   intellectual property or other rights that might be claimed to pertain 
   to the implementation or use of the technology described in this 
@@ -351,7 +358,7 @@ base unit of measure for the item.</ccts:Definition>
   implement this specification. Please address the information to the 
   OASIS Executive Director.
   
-  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+  Copyright (C) OASIS Open 2001-2013. All Rights Reserved.
 
   This document and translations of it may be copied and furnished to 
   others, and derivative works that comment on or otherwise explain 
