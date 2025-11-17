@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  
+  Document Type:     CoreComponentParameters
+  Generated On:      Tue Mar 29 14:17:18 2005
+  Copyright updated:	Thu Jan 19 10:02:42 2006
+  Annotations stripped:	Thu Jan 19 10:07:12 2006
+-->
+
+<!-- ===== xsd:schema Element With Namespaces Declarations ===== -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="urn:oasis:names:draft:ubl:schema:xsd:CoreComponentParameters-2" 
+    xmlns="urn:oasis:names:draft:ubl:schema:xsd:CoreComponentParameters-2" 
+    xmlns:ccts="urn:oasis:names:draft:ubl:schema:xsd:CoreComponentParameters-2" 
+    elementFormDefault="qualified" 
+    attributeFormDefault="unqualified" 
+    version="2">
+    
+<!-- ===== Element Declarations ===== -->
+    <xsd:element name="Component" type="ComponentType"/>
+    <xsd:element name="Context" type="ContextType"/>
+    <xsd:element name="Contextualization" type="ContextualizationType"/>
+    <xsd:element name="Instance" type="InstanceType"/>
+
+    <xsd:element name="DictionaryEntryName" type="xsd:normalizedString"/>
+    <xsd:element name="Version" type="xsd:normalizedString"/>
+    <xsd:element name="ObjectClassQualifier" type="xsd:normalizedString"/>
+    <xsd:element name="ObjectClass" type="xsd:normalizedString"/>
+    <xsd:element name="PropertyTermQualifier" type="xsd:normalizedString"/>
+    <xsd:element name="PropertyTermPossessiveNoun" type="xsd:normalizedString"/>
+    <xsd:element name="PropertyTermPrimaryNoun" type="xsd:normalizedString"/>
+    <xsd:element name="PropertyTerm" type="xsd:normalizedString"/>
+    <xsd:element name="RepresentationTerm" type="xsd:normalizedString"/>
+    <xsd:element name="DataTypeQualifier" type="xsd:normalizedString"/>
+    <xsd:element name="DataType" type="xsd:normalizedString"/>
+    <xsd:element name="AssociatedObjectClassQualifier" type="xsd:normalizedString"/>
+    <xsd:element name="AssociatedObjectClass" type="xsd:normalizedString"/>
+    <xsd:element name="AlternativeBusinessTerms" type="xsd:normalizedString"/>
+    <xsd:element name="ComponentType" type="xsd:normalizedString"/>
+    <xsd:element name="Cardinality" type="xsd:normalizedString"/>
+    <xsd:element name="Definition" type="xsd:string"/>
+    <xsd:element name="Examples" type="xsd:string"/>
+    <xsd:element name="PrimitiveType" type="xsd:string"/>
+    <xsd:element name="PossibleValue" type="xsd:string"/>
+
+    <xsd:element name="Name" type="xsd:string"/>
+    <xsd:element name="CodeListID" type="xsd:normalizedString"/>
+    <xsd:element name="CodeListAgencyID" type="xsd:normalizedString"/>
+    <xsd:element name="CodeListAgencyName" type="xsd:string"/>
+    <xsd:element name="CodeListName" type="xsd:string"/>
+    <xsd:element name="CodeListVersionID" type="xsd:normalizedString"/>
+    <xsd:element name="CodeListURI" type="xsd:anyURI"/>
+    <xsd:element name="CodeListSchemeURI" type="xsd:anyURI"/>
+    <xsd:element name="LanguageID" type="xsd:language"/>
+
+    <xsd:element name="IndustryClassification" type="xsd:string"/>
+    <xsd:element name="Geopolitical" type="xsd:string"/>
+    <xsd:element name="BusinessProcess" type="xsd:string"/>
+    <xsd:element name="OfficialConstraint" type="xsd:string"/>
+    <xsd:element name="ProductClassification" type="xsd:string"/>
+    <xsd:element name="BusinessProcessRole" type="xsd:string"/>
+    <xsd:element name="SupportingRole" type="xsd:string"/>
+    <xsd:element name="SystemCapability" type="xsd:string"/>
+
+    <xsd:element name="ContentComponentRestriction" type="ContentComponentRestrictionType"/>
+    <xsd:element name="RestrictionType" type="xsd:string"/>
+    <xsd:element name="RestrictionValue" type="xsd:string"/>
+    <xsd:element name="ExpressionType" type="xsd:string"/>
+
+<!-- ===== Type Definitions ===== -->
+    <xsd:complexType name="ComponentType">
+        <xsd:sequence>
+            <xsd:element ref="ComponentType" minOccurs="1" maxOccurs="1"/>
+            <xsd:element ref="DictionaryEntryName" minOccurs="1" maxOccurs="1"/>
+            <xsd:element ref="Version" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="Definition" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="Cardinality" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="ObjectClassQualifier" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="ObjectClass" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="PropertyTermQualifier" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="PropertyTermPossessiveNoun" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="PropertyTermPrimaryNoun" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="PropertyTerm" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="RepresentationTerm" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="DataTypeQualifier" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="DataType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="AssociatedObjectClassQualifier" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="AssociatedObjectClass" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="AlternativeBusinessTerms" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="Examples" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="PrimitiveType" minOccurs="0" maxOccurs="1"/>
+            <xsd:element ref="PossibleValue" minOccurs="0" maxOccurs="1"/>
+      			<xsd:element ref="ContentComponentRestriction" minOccurs="0" maxOccurs="unbounded"/>
+      			<xsd:element ref="RestrictionValue" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ContextType">
+        <xsd:sequence>
+            <xsd:element ref="IndustryClassification" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="Geopolitical" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="BusinessProcess" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="OfficialConstraint" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="ProductClassification" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="BusinessProcessRole" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="SupportingRole" minOccurs="0" maxOccurs="unbounded"/>
+            <xsd:element ref="SystemCapability" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ContextualizationType">
+        <xsd:sequence>
+            <xsd:element ref="Context" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="InstanceType">
+        <xsd:sequence>
+        <xsd:element ref="Name" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="CodeListID" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="CodeListAgencyID" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="CodeListAgencyName" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="CodeListName" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="CodeListVersionID" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="CodeListURI" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="CodeListSchemeURI" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="LanguageID" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:complexType name="ContentComponentRestrictionType">
+	    <xsd:sequence>
+		    <xsd:element ref="RestrictionType"/>
+		    <xsd:element ref="RestrictionValue" maxOccurs="unbounded"/>
+		    <xsd:element ref="ExpressionType" minOccurs="0"/>
+	    </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>
+
+<!-- ===== Copyright Notice ===== -->
+<!--
+  OASIS takes no position regarding the validity or scope of any 
+  intellectual property or other rights that might be claimed to pertain 
+  to the implementation or use of the technology described in this 
+  document or the extent to which any license under such rights 
+  might or might not be available; neither does it represent that it has 
+  made any effort to identify any such rights. Information on OASIS's 
+  procedures with respect to rights in OASIS specifications can be 
+  found at the OASIS website. Copies of claims of rights made 
+  available for publication and any assurances of licenses to be made 
+  available, or the result of an attempt made to obtain a general 
+  license or permission for the use of such proprietary rights by 
+  implementors or users of this specification, can be obtained from 
+  the OASIS Executive Director.
+
+  OASIS invites any interested party to bring to its attention any 
+  copyrights, patents or patent applications, or other proprietary 
+  rights which may cover technology that may be required to 
+  implement this specification. Please address the information to the 
+  OASIS Executive Director.
+  
+  Copyright (C) OASIS Open 2001-2006. All Rights Reserved.
+
+  This document and translations of it may be copied and furnished to 
+  others, and derivative works that comment on or otherwise explain 
+  it or assist in its implementation may be prepared, copied, 
+  published and distributed, in whole or in part, without restriction of 
+  any kind, provided that the above copyright notice and this 
+  paragraph are included on all such copies and derivative works. 
+  However, this document itself may not be modified in any way, 
+  such as by removing the copyright notice or references to OASIS, 
+  except as needed for the purpose of developing OASIS 
+  specifications, in which case the procedures for copyrights defined 
+  in the OASIS Intellectual Property Rights document must be 
+  followed, or as required to translate it into languages other than 
+  English. 
+
+  The limited permissions granted above are perpetual and will not be 
+  revoked by OASIS or its successors or assigns. 
+
+  This document and the information contained herein is provided on 
+  an "AS IS" basis and OASIS DISCLAIMS ALL WARRANTIES, 
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY 
+  WARRANTY THAT THE USE OF THE INFORMATION HEREIN 
+  WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
+  WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
+  PARTICULAR PURPOSE.
+-->
