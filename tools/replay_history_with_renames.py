@@ -414,46 +414,25 @@ def setup_branch(repo_root: Path, branch_name: str) -> bool:
     """Create and checkout the new branch for replay."""
     print(f"\nSetting up branch: {branch_name}")
 
-    # Find the earliest commit (before any UBL content)
-    # We want to start from infrastructure-only state
-    result = subprocess.run(
-        ['git', 'rev-list', '--max-parents=0', 'HEAD'],
-        capture_output=True,
-        text=True,
-        cwd=repo_root
-    )
-    root_commits = result.stdout.strip().split('\n')
+    # Save current infrastructure files to temp location
+    # These will be copied back after branch setup
+    temp_backup = Path(tempfile.mkdtemp(prefix='ubl-infra-backup-'))
+    print("  Backing up infrastructure files...")
 
-    if not root_commits or not root_commits[0]:
-        print("  Error: Could not find root commit")
-        return False
+    for preserve_dir in ['tools', '.claude']:
+        src = repo_root / preserve_dir
+        if src.exists():
+            shutil.copytree(src, temp_backup / preserve_dir)
 
-    # Find the commit just before UBL imports started
-    # Look for commits that have tools/ but no UBL content
-    result = subprocess.run(
-        ['git', 'log', '--oneline', '--all'],
-        capture_output=True,
-        text=True,
-        cwd=repo_root
-    )
-    commits = result.stdout.strip().split('\n')
+    # Also preserve .gitignore and README.md
+    for preserve_file in ['.gitignore', 'README.md']:
+        src = repo_root / preserve_file
+        if src.exists():
+            shutil.copy2(src, temp_backup / preserve_file)
 
-    # Find infrastructure commit (one that has tools but no Release: commits before it)
-    infra_commit = None
-    for commit in reversed(commits):
-        if 'Release:' not in commit and commit.strip():
-            parts = commit.split(' ', 1)
-            if len(parts) >= 1:
-                infra_commit = parts[0]
-                break
+    print(f"  Backed up to {temp_backup}")
 
-    if not infra_commit:
-        # Fall back to root commit
-        infra_commit = root_commits[0]
-
-    print(f"  Starting from commit: {infra_commit}")
-
-    # Create orphan branch
+    # Create orphan branch with infrastructure
     try:
         # First, check if branch exists
         result = subprocess.run(
@@ -466,41 +445,58 @@ def setup_branch(repo_root: Path, branch_name: str) -> bool:
             print(f"  Branch {branch_name} already exists, deleting...")
             subprocess.run(['git', 'branch', '-D', branch_name], check=True, cwd=repo_root)
 
-        # Create new branch from infrastructure commit
+        # Create orphan branch (no parent commits)
         subprocess.run(
-            ['git', 'checkout', '-b', branch_name, infra_commit],
+            ['git', 'checkout', '--orphan', branch_name],
             check=True,
             cwd=repo_root,
             capture_output=True
         )
-        print(f"  ✓ Created branch {branch_name}")
 
-        # Clear any UBL content that might be there
+        # Remove all files from staging and working directory
+        subprocess.run(['git', 'rm', '-rf', '.'], check=True, cwd=repo_root,
+                      capture_output=True)
+
+        # Clear any remaining untracked files (except our backup reference)
         for item in repo_root.iterdir():
-            if item.name not in PRESERVED_PATHS:
+            if item.name == '.git':
+                continue
+            try:
                 if item.is_dir():
                     shutil.rmtree(item)
                 else:
                     item.unlink()
+            except Exception:
+                pass
 
-        # Commit clean state if there are changes
+        # Restore infrastructure from backup
+        print("  Restoring infrastructure files...")
+        for item in temp_backup.iterdir():
+            dest = repo_root / item.name
+            if item.is_dir():
+                shutil.copytree(item, dest)
+            else:
+                shutil.copy2(item, dest)
+
+        # Commit infrastructure
         subprocess.run(['git', 'add', '-A'], check=True, cwd=repo_root)
-        result = subprocess.run(
-            ['git', 'diff', '--cached', '--quiet'],
-            cwd=repo_root
+        subprocess.run(
+            ['git', 'commit', '-m', 'Infrastructure for UBL release imports'],
+            check=True,
+            cwd=repo_root,
+            capture_output=True
         )
-        if result.returncode != 0:
-            subprocess.run(
-                ['git', 'commit', '-m', 'Clean state before UBL imports'],
-                check=True,
-                cwd=repo_root,
-                capture_output=True
-            )
+        print(f"  ✓ Created orphan branch {branch_name} with infrastructure")
+
+        # Cleanup backup
+        shutil.rmtree(temp_backup, ignore_errors=True)
 
         return True
 
     except subprocess.CalledProcessError as e:
         print(f"  Error setting up branch: {e}")
+        # Try to restore to previous state
+        shutil.rmtree(temp_backup, ignore_errors=True)
         return False
 
 
