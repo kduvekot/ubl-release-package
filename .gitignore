@@ -1,29 +1,28 @@
-# Python
+# Python (using /prefix to only match top-level, not UBL content)
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+/build/
+/develop-eggs/
+/dist/
+/eggs/
+/.eggs/
+/lib/
+/lib64/
+/parts/
+/sdist/
+/var/
+/wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 
 # Virtual environments
-venv/
-ENV/
-env/
+/venv/
+/ENV/
+/env/
 
 # IDE
 .vscode/
@@ -36,16 +35,12 @@ env/
 .DS_Store
 Thumbs.db
 
-# Temporary files
-*.tmp
-*.bak
-*.log
-temp/
-tmp/
+# Development temporary files (not UBL content)
+/temp/
+/tmp/
+/downloads/
 
 # Claude Code local settings (personal preferences, not shared)
 .claude/settings.local.json
 
-# Downloaded packages during development
-*.zip
-downloads/
+# Note: UBL content in subdirectories (mod/lib/, asn/*.zip, etc.) is NOT ignored
