@@ -70,11 +70,13 @@ def get_completed_releases(repo_root: Path) -> Set[int]:
 
     Looks for commit messages matching "Release: UBL X.X" pattern.
     Returns set of release numbers that are complete.
+
+    Note: Only checks current branch (HEAD), not all branches.
     """
     completed = set()
     try:
         result = subprocess.run(
-            ['git', 'log', '--oneline', '--all'],
+            ['git', 'log', '--oneline'],  # Current branch only (no --all)
             capture_output=True,
             text=True,
             cwd=repo_root
@@ -255,7 +257,7 @@ def clear_ubl_content(repo_root: Path, dry_run: bool = False):
 
 def copy_new_content(extract_dir: Path, repo_root: Path, exclude_renamed: Set[Path] = None,
                      dry_run: bool = False):
-    """Copy new content from extract directory to repo."""
+    """Copy all files from extract directory to repo, creating directories as needed."""
     if dry_run:
         print("  (DRY RUN: would copy new content)")
         return
@@ -264,36 +266,37 @@ def copy_new_content(extract_dir: Path, repo_root: Path, exclude_renamed: Set[Pa
         exclude_renamed = set()
 
     copied = 0
-    for item in extract_dir.iterdir():
-        if item.name.startswith('__') or item.name.startswith('.'):
+    errors = 0
+
+    # Walk through ALL files in extract_dir and copy each one
+    for src_file in extract_dir.rglob('*'):
+        if not src_file.is_file():
             continue
 
-        dest = repo_root / item.name
-        try:
-            if item.is_dir():
-                if dest.exists():
-                    # Merge directory contents
-                    for sub_item in item.rglob('*'):
-                        if sub_item.is_file():
-                            rel = sub_item.relative_to(extract_dir)
-                            if rel in exclude_renamed:
-                                continue
-                            sub_dest = repo_root / rel
-                            sub_dest.parent.mkdir(parents=True, exist_ok=True)
-                            shutil.copy2(sub_item, sub_dest)
-                            copied += 1
-                else:
-                    shutil.copytree(item, dest)
-                    copied += 1
-            else:
-                rel = item.relative_to(extract_dir)
-                if rel not in exclude_renamed:
-                    shutil.copy2(item, dest)
-                    copied += 1
-        except Exception as e:
-            print(f"    Warning: Failed to copy {item}: {e}")
+        # Skip junk files
+        if src_file.name.startswith('.') or src_file.name.startswith('__'):
+            continue
+        if '__MACOSX' in src_file.parts:
+            continue
 
-    print(f"  Copied {copied} items")
+        # Get relative path
+        rel_path = src_file.relative_to(extract_dir)
+
+        # Skip files that were already renamed
+        if rel_path in exclude_renamed:
+            continue
+
+        # Create destination
+        dest_file = repo_root / rel_path
+        try:
+            dest_file.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src_file, dest_file)
+            copied += 1
+        except Exception as e:
+            print(f"    Warning: Failed to copy {rel_path}: {e}")
+            errors += 1
+
+    print(f"  Copied {copied} files" + (f" ({errors} errors)" if errors else ""))
 
 
 def update_readme(repo_root: Path, release: Release, dry_run: bool = False):
