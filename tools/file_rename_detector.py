@@ -94,7 +94,7 @@ class RenameDetector:
 
         return renames
 
-    def apply_renames(self, renames: Dict[Path, Path], extract_dir: Path) -> bool:
+    def apply_renames(self, renames: Dict[Path, Path], extract_dir: Path) -> Set[Path]:
         """
         Apply renames using git mv, then update content from extract.
 
@@ -103,10 +103,10 @@ class RenameDetector:
             extract_dir: Directory containing extracted new release content
 
         Returns:
-            True if successful, False otherwise
+            Set of new_paths that were successfully renamed (for exclusion from copy)
         """
         if not renames:
-            return True
+            return set()
 
         if self.dry_run:
             print(f"\n  DRY RUN: Would execute {len(renames)} git mv operations")
@@ -114,11 +114,11 @@ class RenameDetector:
                 print(f"    git mv {old_path} → {new_path}")
             if len(renames) > 5:
                 print(f"    ... and {len(renames) - 5} more")
-            return True
+            return set(renames.values())
 
         print(f"\n  Applying {len(renames)} file renames...")
 
-        success_count = 0
+        successfully_renamed = set()  # Track successful new paths
         failed = []
 
         for old_path, new_path in renames.items():
@@ -137,7 +137,7 @@ class RenameDetector:
                     capture_output=True,
                     text=True
                 )
-                success_count += 1
+                successfully_renamed.add(new_path)
             except subprocess.CalledProcessError as e:
                 failed.append((old_path, new_path, str(e)))
                 continue
@@ -149,8 +149,8 @@ class RenameDetector:
             if len(failed) > 3:
                 print(f"      ... and {len(failed) - 3} more")
 
-        print(f"    ✓ {success_count} renames applied via git mv")
-        return len(failed) == 0
+        print(f"    ✓ {len(successfully_renamed)} renames applied via git mv")
+        return successfully_renamed
 
     def update_renamed_files_content(self, renames: Dict[Path, Path], extract_dir: Path) -> int:
         """

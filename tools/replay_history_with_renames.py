@@ -105,6 +105,7 @@ def get_completed_releases(repo_root: Path) -> Set[int]:
 def validate_repo_matches_zip(repo_root: Path, extract_dir: Path) -> Tuple[bool, List[str]]:
     """
     Validate that repository UBL content matches ZIP contents exactly.
+    For FULL releases - repo should exactly match ZIP.
 
     Returns:
         (is_valid, list of differences)
@@ -129,6 +130,40 @@ def validate_repo_matches_zip(repo_root: Path, extract_dir: Path) -> Tuple[bool,
 
     # Check for content differences
     common = repo_files & zip_files
+    for f in sorted(common):
+        repo_file = repo_root / f
+        zip_file = extract_dir / f
+        if repo_file.exists() and zip_file.exists():
+            if file_hash(repo_file) != file_hash(zip_file):
+                differences.append(f"DIFFERS: {f}")
+
+    return len(differences) == 0, differences
+
+
+def validate_patch_applied(repo_root: Path, extract_dir: Path) -> Tuple[bool, List[str]]:
+    """
+    Validate that patch files are correctly applied to the repository.
+    For PATCH releases - only check that patch files exist and match.
+    (Patches overlay, so extra files from base release are expected.)
+
+    Returns:
+        (is_valid, list of differences)
+    """
+    differences = []
+
+    # Get files from repo (UBL content only)
+    repo_files = filter_ubl_content_files(get_tracked_files(repo_root))
+
+    # Get files from patch ZIP
+    patch_files = get_extracted_files(extract_dir)
+
+    # Check for missing patch files (in patch but not in repo)
+    missing = patch_files - repo_files
+    for f in sorted(missing):
+        differences.append(f"MISSING: {f}")
+
+    # Check for content differences (patch files should match exactly)
+    common = repo_files & patch_files
     for f in sorted(common):
         repo_file = repo_root / f
         zip_file = extract_dir / f
@@ -233,24 +268,61 @@ def download_and_extract(release: Release, temp_dir: Path) -> Path:
     return temp_dir
 
 
-def clear_ubl_content(repo_root: Path, dry_run: bool = False):
-    """Remove all UBL content files (preserve infrastructure)."""
+def clear_ubl_content(repo_root: Path, preserve_files: Set[Path] = None,
+                       dry_run: bool = False):
+    """Remove all UBL content files (preserve infrastructure and renamed files).
+
+    Uses git rm to remove files, preserving the renamed files that are still needed.
+    """
     if dry_run:
         print("  (DRY RUN: would clear UBL content)")
         return
 
+    if preserve_files is None:
+        preserve_files = set()
+
+    # Get all tracked UBL content files
+    tracked = filter_ubl_content_files(get_tracked_files(repo_root))
+
+    # Files to delete = tracked UBL files - preserved renamed files
+    to_delete = tracked - preserve_files
+
+    if not to_delete:
+        print("  Cleared 0 items")
+        return
+
     removed = 0
-    for item in repo_root.iterdir():
+    # Delete files using git rm for proper tracking
+    for f in to_delete:
+        file_path = repo_root / f
+        if file_path.exists():
+            try:
+                subprocess.run(
+                    ['git', 'rm', '-f', '--quiet', str(f)],
+                    check=True,
+                    cwd=repo_root,
+                    capture_output=True
+                )
+                removed += 1
+            except subprocess.CalledProcessError:
+                # Try direct removal if git rm fails
+                try:
+                    file_path.unlink()
+                    removed += 1
+                except Exception as e:
+                    print(f"    Warning: Could not remove {f}: {e}")
+
+    # Remove empty directories
+    for item in list(repo_root.iterdir()):
         if item.name in PRESERVED_PATHS:
             continue
-        try:
-            if item.is_dir():
-                shutil.rmtree(item)
-            else:
-                item.unlink()
-            removed += 1
-        except Exception as e:
-            print(f"    Warning: Could not remove {item}: {e}")
+        if item.is_dir():
+            try:
+                # Remove directory if empty
+                if not any(item.iterdir()):
+                    item.rmdir()
+            except Exception:
+                pass
 
     print(f"  Cleared {removed} items")
 
@@ -469,6 +541,7 @@ def import_release_with_renames(release: Release, repo_root: Path,
         prev_version = get_previous_version(RELEASES, release)
 
         renamed_files = {}
+        successfully_renamed = set()  # Track which files were actually renamed
         if prev_version and prev_version != release.version:
             # Detect renames from previous version
             detector = RenameDetector(
@@ -480,20 +553,23 @@ def import_release_with_renames(release: Release, repo_root: Path,
             renamed_files = detector.detect_renames(current_files, new_files)
 
             if renamed_files:
-                # Apply renames via git mv
-                detector.apply_renames(renamed_files, extract_dir)
-                # Update renamed files with new content
-                detector.update_renamed_files_content(renamed_files, extract_dir)
+                # Apply renames via git mv - returns set of successfully renamed new paths
+                successfully_renamed = detector.apply_renames(renamed_files, extract_dir)
+                # Update renamed files with new content (only for successful renames)
+                successful_renames = {old: new for old, new in renamed_files.items()
+                                      if new in successfully_renamed}
+                detector.update_renamed_files_content(successful_renames, extract_dir)
 
         # For full releases: clear remaining content and copy new
         if not release.is_patch:
-            # Get files that were renamed (don't delete these, they're already moved)
-            already_handled = set(renamed_files.values())
+            # Only exclude files that were SUCCESSFULLY renamed (not failed ones)
+            # Failed renames will be copied as new files
+            already_handled = successfully_renamed
 
-            # Clear old content (except renamed files which are now at new locations)
-            clear_ubl_content(repo_root, dry_run)
+            # Clear old content (preserve renamed files which are now at new locations)
+            clear_ubl_content(repo_root, preserve_files=successfully_renamed, dry_run=dry_run)
 
-            # Copy new content
+            # Copy new content - files with failed renames will now be copied
             copy_new_content(extract_dir, repo_root, already_handled, dry_run)
         else:
             # Patch: overlay changed files
@@ -515,18 +591,28 @@ def import_release_with_renames(release: Release, repo_root: Path,
         # Create tags
         create_tags(repo_root, release, dry_run)
 
-        # Validate the import matches the ZIP
+        # Validate the import
         if not dry_run:
             print("  Validating import...")
-            is_valid, differences = validate_repo_matches_zip(repo_root, extract_dir)
-            if is_valid:
-                print("  ✓ Validation passed - repo matches ZIP")
+            if release.is_patch:
+                # For patches: only validate that patch files are correctly applied
+                is_valid, differences = validate_patch_applied(repo_root, extract_dir)
+                validation_msg = "patch files applied correctly"
             else:
-                print(f"  ⚠ Validation found {len(differences)} differences:")
-                for diff in differences[:10]:  # Show first 10
+                # For full releases: repo should exactly match ZIP
+                is_valid, differences = validate_repo_matches_zip(repo_root, extract_dir)
+                validation_msg = "repo matches ZIP exactly"
+
+            if is_valid:
+                print(f"  ✓ Validation passed - {validation_msg}")
+            else:
+                print(f"  ✗ Validation FAILED - {len(differences)} differences:")
+                for diff in differences[:10]:
                     print(f"    {diff}")
                 if len(differences) > 10:
                     print(f"    ... and {len(differences) - 10} more")
+                # Return False to stop on validation failure
+                return False
 
         print(f"✓ Successfully imported {release.tag_name}")
         return True
