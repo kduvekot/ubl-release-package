@@ -6,7 +6,7 @@ This guide documents how to recreate the entire UBL release history (34 releases
 
 ## Current Status
 
-- **Branch with tools**: `claude/rename-detection-implementation-01SHHSrmLe6T6zSHpwC6etku`
+- **Branch with tools**: merged into main
 - **Tools tested**: Releases 1-10 validated successfully
 - **Ready for**: Full 34-release replay
 
