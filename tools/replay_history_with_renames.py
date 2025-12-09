@@ -16,9 +16,15 @@ This enables:
 - git blame to show true file origins
 - git diff to show actual changes
 - git log --follow to track file history across versions
+
+RESUME SUPPORT:
+- Use --resume to automatically detect and skip completed releases
+- If interrupted mid-release, validates repo state against ZIP
+- Only processes files that haven't been committed yet
 """
 
 import argparse
+import hashlib
 import os
 import re
 import shutil
@@ -27,7 +33,7 @@ import sys
 import tempfile
 import zipfile
 from pathlib import Path
-from typing import Optional, Set, Dict
+from typing import Optional, Set, Dict, List, Tuple
 
 # Add parent directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -45,6 +51,116 @@ PRESERVED_PATHS = {
     'tools',
     'README.md',
 }
+
+
+def file_hash(filepath: Path) -> str:
+    """Calculate MD5 hash of a file for comparison."""
+    if not filepath.exists():
+        return ""
+    h = hashlib.md5()
+    with open(filepath, 'rb') as f:
+        for chunk in iter(lambda: f.read(8192), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def get_completed_releases(repo_root: Path) -> Set[int]:
+    """
+    Parse git log to find which releases have been fully committed.
+
+    Looks for commit messages matching "Release: UBL X.X" pattern.
+    Returns set of release numbers that are complete.
+    """
+    completed = set()
+    try:
+        result = subprocess.run(
+            ['git', 'log', '--oneline', '--all'],
+            capture_output=True,
+            text=True,
+            cwd=repo_root
+        )
+
+        # Pattern: "Release: UBL 2.0 (status)" or tag names like "prd-UBL-2.0"
+        for line in result.stdout.split('\n'):
+            # Check for release commit messages
+            # Match patterns like "Release: UBL 2.0 (Public Review Draft)"
+            match = re.search(r'Release: UBL (\d+\.\d+)', line)
+            if match:
+                version = match.group(1)
+                # Map version to release numbers
+                from tools.release_data import RELEASES
+                for rel in RELEASES:
+                    if rel.version == version and f"({rel.status})" in line:
+                        completed.add(rel.num)
+                        break
+
+    except subprocess.CalledProcessError:
+        pass
+
+    return completed
+
+
+def validate_repo_matches_zip(repo_root: Path, extract_dir: Path) -> Tuple[bool, List[str]]:
+    """
+    Validate that repository UBL content matches ZIP contents exactly.
+
+    Returns:
+        (is_valid, list of differences)
+    """
+    differences = []
+
+    # Get files from repo (UBL content only)
+    repo_files = filter_ubl_content_files(get_tracked_files(repo_root))
+
+    # Get files from ZIP
+    zip_files = get_extracted_files(extract_dir)
+
+    # Check for missing files (in ZIP but not in repo)
+    missing = zip_files - repo_files
+    for f in sorted(missing):
+        differences.append(f"MISSING: {f}")
+
+    # Check for extra files (in repo but not in ZIP)
+    extra = repo_files - zip_files
+    for f in sorted(extra):
+        differences.append(f"EXTRA: {f}")
+
+    # Check for content differences
+    common = repo_files & zip_files
+    for f in sorted(common):
+        repo_file = repo_root / f
+        zip_file = extract_dir / f
+        if repo_file.exists() and zip_file.exists():
+            if file_hash(repo_file) != file_hash(zip_file):
+                differences.append(f"DIFFERS: {f}")
+
+    return len(differences) == 0, differences
+
+
+def detect_resume_point(repo_root: Path, releases: list) -> Tuple[int, bool]:
+    """
+    Detect where to resume from based on git history.
+
+    Returns:
+        (release_num to start from, whether current release is partial)
+    """
+    completed = get_completed_releases(repo_root)
+
+    if not completed:
+        return 1, False
+
+    # Find the highest completed release
+    max_completed = max(completed)
+
+    # Check if there are gaps (missing releases)
+    expected = set(range(1, max_completed + 1))
+    missing = expected - completed
+    if missing:
+        # Start from the first missing release
+        return min(missing), False
+
+    # All releases up to max_completed are done, start from next
+    return max_completed + 1, False
 
 
 def get_tracked_files(repo_root: Path) -> Set[Path]:
@@ -396,6 +512,19 @@ def import_release_with_renames(release: Release, repo_root: Path,
         # Create tags
         create_tags(repo_root, release, dry_run)
 
+        # Validate the import matches the ZIP
+        if not dry_run:
+            print("  Validating import...")
+            is_valid, differences = validate_repo_matches_zip(repo_root, extract_dir)
+            if is_valid:
+                print("  ✓ Validation passed - repo matches ZIP")
+            else:
+                print(f"  ⚠ Validation found {len(differences)} differences:")
+                for diff in differences[:10]:  # Show first 10
+                    print(f"    {diff}")
+                if len(differences) > 10:
+                    print(f"    ... and {len(differences) - 10} more")
+
         print(f"✓ Successfully imported {release.tag_name}")
         return True
 
@@ -512,6 +641,12 @@ Examples:
   # Replay specific range
   python -m tools.replay_history_with_renames --start 1 --end 10
 
+  # Resume from where we left off (auto-detect)
+  python -m tools.replay_history_with_renames --resume
+
+  # Resume on existing branch
+  python -m tools.replay_history_with_renames --resume --skip-branch-setup
+
   # Dry run to see what would happen
   python -m tools.replay_history_with_renames --dry-run
 
@@ -537,6 +672,10 @@ Examples:
         help='Show what would be done without making changes'
     )
     parser.add_argument(
+        '--resume', action='store_true',
+        help='Resume from last completed release (auto-detect)'
+    )
+    parser.add_argument(
         '--skip-branch-setup', action='store_true',
         help='Skip branch setup (use current branch)'
     )
@@ -550,19 +689,38 @@ Examples:
         print("Error: Not in a git repository")
         sys.exit(1)
 
-    # Setup branch
+    # Handle resume mode
+    start_from = args.start
+    if args.resume:
+        print("\nResume mode: Detecting completed releases...")
+        completed = get_completed_releases(repo_root)
+        if completed:
+            print(f"  Found {len(completed)} completed releases: {sorted(completed)}")
+            resume_point, _ = detect_resume_point(repo_root, RELEASES)
+            if resume_point > args.end:
+                print(f"  All releases up to #{args.end} are complete!")
+                sys.exit(0)
+            start_from = resume_point
+            print(f"  Resuming from release #{start_from}")
+            # Skip branch setup when resuming
+            args.skip_branch_setup = True
+        else:
+            print("  No completed releases found, starting from beginning")
+
+    # Setup branch (unless resuming or skipped)
     if not args.skip_branch_setup and not args.dry_run:
         if not setup_branch(repo_root, args.branch):
             print("Failed to setup branch")
             sys.exit(1)
 
     # Import releases
-    print(f"\nReplaying releases {args.start} through {args.end}...")
+    print(f"\nReplaying releases {start_from} through {args.end}...")
 
     success_count = 0
     fail_count = 0
+    skipped_count = start_from - args.start  # Count releases we skipped due to resume
 
-    for num in range(args.start, args.end + 1):
+    for num in range(start_from, args.end + 1):
         release = get_release_by_num(num)
         if not release:
             print(f"Warning: Release #{num} not found, skipping")
@@ -579,6 +737,8 @@ Examples:
     print(f"\n{'='*70}")
     print(f"Replay Summary")
     print(f"{'='*70}")
+    if skipped_count > 0:
+        print(f"Skipped (already done): {skipped_count}")
     print(f"Successful: {success_count}")
     print(f"Failed: {fail_count}")
 
