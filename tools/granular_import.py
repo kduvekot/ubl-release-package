@@ -252,7 +252,7 @@ def compute_changeset(
     # Step 3: Find deletions (in repo but not in new release)
     # IMPORTANT: For PATCH releases, only files in the patch are processed.
     # Files not in the patch are preserved (not deleted).
-    if not release.is_patch():
+    if not release.is_patch:
         for old_path in repo_files:
             if old_path not in matched_old:
                 changeset.changes.append(FileChange(
