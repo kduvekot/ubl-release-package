@@ -250,12 +250,15 @@ def compute_changeset(
         matched_new.add(path)
 
     # Step 3: Find deletions (in repo but not in new release)
-    for old_path in repo_files:
-        if old_path not in matched_old:
-            changeset.changes.append(FileChange(
-                change_type=ChangeType.DELETED,
-                old_path=old_path
-            ))
+    # IMPORTANT: For PATCH releases, only files in the patch are processed.
+    # Files not in the patch are preserved (not deleted).
+    if not release.is_patch():
+        for old_path in repo_files:
+            if old_path not in matched_old:
+                changeset.changes.append(FileChange(
+                    change_type=ChangeType.DELETED,
+                    old_path=old_path
+                ))
 
     # Step 4: Find additions (in new release but not matched)
     for new_path in zip_files:
