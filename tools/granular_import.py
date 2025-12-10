@@ -375,10 +375,14 @@ def validate_file(
 
 def validate_repo_matches_release(
     repo_root: Path,
-    extract_dir: Path
+    extract_dir: Path,
+    release: Release
 ) -> Tuple[bool, List[str]]:
     """
-    Validate that the entire repository matches the release package.
+    Validate that the repository matches the release package.
+
+    For FULL releases: repo should match package exactly
+    For PATCH releases: repo should contain all patch files (may have extras from base)
 
     Returns:
         (is_valid, list of error messages)
@@ -393,10 +397,12 @@ def validate_repo_matches_release(
     for f in sorted(missing):
         errors.append(f"MISSING: {f}")
 
-    # Check for extra files
-    extra = set(repo_files.keys()) - set(zip_files.keys())
-    for f in sorted(extra):
-        errors.append(f"EXTRA: {f}")
+    # Check for extra files (only for FULL releases)
+    # PATCH releases are overlays, so extra files are expected
+    if not release.is_patch:
+        extra = set(repo_files.keys()) - set(zip_files.keys())
+        for f in sorted(extra):
+            errors.append(f"EXTRA: {f}")
 
     # Check content mismatches
     common = set(repo_files.keys()) & set(zip_files.keys())
@@ -591,7 +597,7 @@ def import_release_granular(
         # Final validation
         if not dry_run:
             print("\n  Validating final state...")
-            valid, errors = validate_repo_matches_release(repo_root, extract_dir)
+            valid, errors = validate_repo_matches_release(repo_root, extract_dir, release)
 
             if valid:
                 print(f"  ✓ Validation passed - repo matches release exactly")
