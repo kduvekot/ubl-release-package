@@ -614,9 +614,15 @@ def import_release_granular(
 
 
 def setup_test_repo(test_repo_path: Path) -> bool:
-    """Create a fresh test repository for local testing."""
+    """Create a fresh test repository for local testing, or use existing one."""
     print(f"Setting up test repository at: {test_repo_path}")
 
+    # Check if repo already exists and is valid
+    if test_repo_path.exists() and (test_repo_path / '.git').exists():
+        print(f"  ✓ Using existing test repo")
+        return True
+
+    # Remove any partial/invalid repo
     if test_repo_path.exists():
         shutil.rmtree(test_repo_path)
 
