@@ -12,10 +12,14 @@ Key features:
 - Processes releases in correct order (1 to 34)
 - Tracks each file change individually
 - Validates repo state after processing each file
-- Supports testing with local git repos
+- Supports testing with local git repos (preserves existing repos)
 - Multiple commit strategies (per-file, per-type, per-release)
 
 Usage:
+    # Production mode: run from within existing repo
+    cd /path/to/repo && python3 /path/to/tools/granular_import.py --release 9
+
+    # Test mode: creates/reuses test repo (preserves if .git exists)
     python -m tools.granular_import --release 1 --test-repo /tmp/test-repo
     python -m tools.granular_import --range 1 5 --commit-strategy per_type
 """
@@ -250,12 +254,15 @@ def compute_changeset(
         matched_new.add(path)
 
     # Step 3: Find deletions (in repo but not in new release)
-    for old_path in repo_files:
-        if old_path not in matched_old:
-            changeset.changes.append(FileChange(
-                change_type=ChangeType.DELETED,
-                old_path=old_path
-            ))
+    # IMPORTANT: For PATCH releases, only files in the patch are processed.
+    # Files not in the patch are preserved (not deleted).
+    if not release.is_patch:
+        for old_path in repo_files:
+            if old_path not in matched_old:
+                changeset.changes.append(FileChange(
+                    change_type=ChangeType.DELETED,
+                    old_path=old_path
+                ))
 
     # Step 4: Find additions (in new release but not matched)
     for new_path in zip_files:
@@ -372,10 +379,14 @@ def validate_file(
 
 def validate_repo_matches_release(
     repo_root: Path,
-    extract_dir: Path
+    extract_dir: Path,
+    release: Release
 ) -> Tuple[bool, List[str]]:
     """
-    Validate that the entire repository matches the release package.
+    Validate that the repository matches the release package.
+
+    For FULL releases: repo should match package exactly
+    For PATCH releases: repo should contain all patch files (may have extras from base)
 
     Returns:
         (is_valid, list of error messages)
@@ -390,10 +401,12 @@ def validate_repo_matches_release(
     for f in sorted(missing):
         errors.append(f"MISSING: {f}")
 
-    # Check for extra files
-    extra = set(repo_files.keys()) - set(zip_files.keys())
-    for f in sorted(extra):
-        errors.append(f"EXTRA: {f}")
+    # Check for extra files (only for FULL releases)
+    # PATCH releases are overlays, so extra files are expected
+    if not release.is_patch:
+        extra = set(repo_files.keys()) - set(zip_files.keys())
+        for f in sorted(extra):
+            errors.append(f"EXTRA: {f}")
 
     # Check content mismatches
     common = set(repo_files.keys()) & set(zip_files.keys())
@@ -588,7 +601,7 @@ def import_release_granular(
         # Final validation
         if not dry_run:
             print("\n  Validating final state...")
-            valid, errors = validate_repo_matches_release(repo_root, extract_dir)
+            valid, errors = validate_repo_matches_release(repo_root, extract_dir, release)
 
             if valid:
                 print(f"  ✓ Validation passed - repo matches release exactly")
@@ -614,10 +627,25 @@ def import_release_granular(
 
 
 def setup_test_repo(test_repo_path: Path) -> bool:
-    """Create a fresh test repository for local testing."""
+    """
+    Create a fresh test repository for local testing, or use existing one.
+
+    If a valid git repository already exists at test_repo_path, it will be
+    preserved and reused. This enables incremental testing where releases
+    are imported one at a time for validation.
+
+    Only invalid/partial repos (no .git directory) are removed.
+    """
     print(f"Setting up test repository at: {test_repo_path}")
 
+    # Check if repo already exists and is valid
+    if test_repo_path.exists() and (test_repo_path / '.git').exists():
+        print(f"  ✓ Using existing test repo")
+        return True
+
+    # Remove any partial/invalid repo
     if test_repo_path.exists():
+        print(f"  ⚠ Removing incomplete repo (no .git directory)")
         shutil.rmtree(test_repo_path)
 
     test_repo_path.mkdir(parents=True)
