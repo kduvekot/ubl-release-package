@@ -12,10 +12,14 @@ Key features:
 - Processes releases in correct order (1 to 34)
 - Tracks each file change individually
 - Validates repo state after processing each file
-- Supports testing with local git repos
+- Supports testing with local git repos (preserves existing repos)
 - Multiple commit strategies (per-file, per-type, per-release)
 
 Usage:
+    # Production mode: run from within existing repo
+    cd /path/to/repo && python3 /path/to/tools/granular_import.py --release 9
+
+    # Test mode: creates/reuses test repo (preserves if .git exists)
     python -m tools.granular_import --release 1 --test-repo /tmp/test-repo
     python -m tools.granular_import --range 1 5 --commit-strategy per_type
 """
@@ -623,7 +627,15 @@ def import_release_granular(
 
 
 def setup_test_repo(test_repo_path: Path) -> bool:
-    """Create a fresh test repository for local testing, or use existing one."""
+    """
+    Create a fresh test repository for local testing, or use existing one.
+
+    If a valid git repository already exists at test_repo_path, it will be
+    preserved and reused. This enables incremental testing where releases
+    are imported one at a time for validation.
+
+    Only invalid/partial repos (no .git directory) are removed.
+    """
     print(f"Setting up test repository at: {test_repo_path}")
 
     # Check if repo already exists and is valid
@@ -633,6 +645,7 @@ def setup_test_repo(test_repo_path: Path) -> bool:
 
     # Remove any partial/invalid repo
     if test_repo_path.exists():
+        print(f"  ⚠ Removing incomplete repo (no .git directory)")
         shutil.rmtree(test_repo_path)
 
     test_repo_path.mkdir(parents=True)
