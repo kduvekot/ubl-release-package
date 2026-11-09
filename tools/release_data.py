@@ -2,7 +2,7 @@
 """
 Complete UBL release inventory data.
 
-This module contains hardcoded information about all 37 UBL releases to be imported,
+This module contains hardcoded information about all UBL releases to be imported,
 based on the official OASIS documentation.
 """
 
@@ -93,7 +93,7 @@ class Release:
         return f"Release({self.num}, {self.version}, {self.stage}, {self.date})"
 
 
-# Complete inventory of all 37 UBL releases
+# Complete inventory of all UBL 2.x releases
 # Note: We're importing from UBL 2.0 onwards (skipping 1.0 series per project scope)
 RELEASES: List[Release] = [
     # UBL 2.0 Series (2006-2008)
@@ -174,14 +174,23 @@ RELEASES: List[Release] = [
     Release(33, "2.4", "os", "2024-06-20",
             "https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.zip"),
 
-    # UBL 2.5 Series (Draft - 2025)
+    # UBL 2.5 Series (2025-2026)
+    # Dates are the <pubdate> of each release's UBL-2.5.xml specification
     Release(34, "2.5", "csd01", "2025-08-28",
             "https://docs.oasis-open.org/ubl/csd01-UBL-2.5/UBL-2.5.zip"),
+    Release(35, "2.5", "csd02", "2025-12-03",
+            "https://docs.oasis-open.org/ubl/csd02-UBL-2.5/UBL-2.5.zip"),
+    Release(36, "2.5", "csd03", "2026-02-11",
+            "https://docs.oasis-open.org/ubl/csd03-UBL-2.5/UBL-2.5.zip"),
+    Release(37, "2.5", "cs01", "2026-04-15",
+            "https://docs.oasis-open.org/ubl/cs01-UBL-2.5/UBL-2.5.zip"),
+    Release(38, "2.5", "os", "2026-08-12",
+            "https://docs.oasis-open.org/ubl/os-UBL-2.5/UBL-2.5.zip"),
 ]
 
 
 def get_release_by_num(num: int) -> Optional[Release]:
-    """Get release by its sequence number (1-34)."""
+    """Get release by its sequence number (1-get_total_count())."""
     for release in RELEASES:
         if release.num == num:
             return release

@@ -131,20 +131,20 @@ fi
 #
 run_test "Release data inventory"
 
-# Check that we have 34 releases
+# Check that we have 38 releases
 TOTAL_RELEASES=$(python3 -c "from tools.release_data import get_total_count; print(get_total_count())")
-if [ "$TOTAL_RELEASES" = "34" ]; then
-    pass "Release inventory has correct count (34)"
+if [ "$TOTAL_RELEASES" = "38" ]; then
+    pass "Release inventory has correct count (38)"
 else
-    fail "Expected 34 releases, got $TOTAL_RELEASES"
+    fail "Expected 38 releases, got $TOTAL_RELEASES"
 fi
 
 # Check OASIS Standards count
 OS_COUNT=$(python3 -c "from tools.release_data import get_oasis_standards; print(len(get_oasis_standards()))")
-if [ "$OS_COUNT" = "5" ]; then
-    pass "Correctly identifies 5 OASIS Standards"
+if [ "$OS_COUNT" = "6" ]; then
+    pass "Correctly identifies 6 OASIS Standards"
 else
-    fail "Expected 5 OASIS Standards, got $OS_COUNT"
+    fail "Expected 6 OASIS Standards, got $OS_COUNT"
 fi
 
 # Check patch releases count

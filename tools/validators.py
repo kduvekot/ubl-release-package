@@ -73,7 +73,7 @@ class Validators:
         Ensure release is being imported in sequential order.
 
         Args:
-            release_num: The release number to import (1-34)
+            release_num: The release number to import (1-N, see release_data.py)
             force: If True, skip sequential check
 
         Raises:

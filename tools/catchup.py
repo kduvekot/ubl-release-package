@@ -22,7 +22,7 @@ def main():
         description='Import all UBL releases in chronological order',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
-This tool will import all 34 UBL releases from version 2.0 through 2.5,
+This tool will import all UBL releases from version 2.0 through 2.5,
 creating a complete git history.
 
 Examples:

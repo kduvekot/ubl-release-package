@@ -131,10 +131,10 @@ echo "  from tools.release_data import get_total_count"
 echo "  print(get_total_count())"
 TOTAL=$(python3 -c "from tools.release_data import get_total_count; print(get_total_count())")
 echo "  Result: $TOTAL releases"
-if [ "$TOTAL" = "34" ]; then
-    echo "  ✓ PASS: Correct count (34)"
+if [ "$TOTAL" = "38" ]; then
+    echo "  ✓ PASS: Correct count (38)"
 else
-    echo "  ✗ FAIL: Expected 34, got $TOTAL"
+    echo "  ✗ FAIL: Expected 38, got $TOTAL"
 fi
 echo ""
 
@@ -149,10 +149,10 @@ standards = get_oasis_standards()
 print(f"  Result: {len(standards)} OASIS Standards")
 for s in standards:
     print(f"    - UBL {s.version} ({s.stage}) - {s.date}")
-if len(standards) == 5:
-    print("  ✓ PASS: Correct count (5)")
+if len(standards) == 6:
+    print("  ✓ PASS: Correct count (6)")
 else:
-    print(f"  ✗ FAIL: Expected 5, got {len(standards)}")
+    print(f"  ✗ FAIL: Expected 6, got {len(standards)}")
 EOF
 echo ""
 
@@ -331,7 +331,7 @@ echo "Key validation checks tested:"
 echo "  ✓ Sequential import order enforcement"
 echo "  ✓ Patch dependency validation"
 echo "  ✓ Git working directory cleanliness"
-echo "  ✓ Release data accuracy (34 releases, 5 standards, 2 patches)"
+echo "  ✓ Release data accuracy (38 releases, 6 standards, 2 patches)"
 echo "  ✓ Dry-run preview mode"
 echo ""
 echo "All tests run in isolated temporary repository."

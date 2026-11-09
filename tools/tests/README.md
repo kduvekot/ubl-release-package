@@ -49,8 +49,8 @@ Test 1: Git state management
 ✓ PASS: Correctly reports 0 releases in fresh repo
 
 Test 2: Release data inventory
-✓ PASS: Release inventory has correct count (34)
-✓ PASS: Correctly identifies 5 OASIS Standards
+✓ PASS: Release inventory has correct count (38)
+✓ PASS: Correctly identifies 6 OASIS Standards
 ✓ PASS: Correctly identifies 2 patch releases
 
 ...
