@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-SelfBilledCreditNote-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:16z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SelfBilledCreditNote-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -636,18 +636,20 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:BuyerReference" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cac:BuyerAssignedReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Self Billed Credit Note. Buyer Reference</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Self Billed Credit Note. Buyer Assigned Reference</ccts:DictionaryEntryName>
                      <ccts:Definition>A reference provided by the buyer used for internal routing of the document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Buyer Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Buyer Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Buyer Reference</ccts:RepresentationTerm>
+                     <ccts:PropertyTerm>Buyer Assigned Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Buyer Assigned Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Buyer Assigned Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -740,7 +742,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Self Billed Credit Note. Payee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The payee.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Payment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Payee</ccts:PropertyTermQualifier>
@@ -791,7 +793,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Self Billed Credit Note. Tax Representative_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The tax representative.</ccts:Definition>
+                     <ccts:Definition>The Party authorized to act as the Tax Representative for this Self Billed Credit Note.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Self Billed Credit Note</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Tax Representative</ccts:PropertyTermQualifier>

@@ -1,6 +1,8 @@
 # UBL Complete Release Inventory
 
-This document contains the complete chronological inventory of all UBL releases from the OASIS UBL Technical Committee, starting from UBL 1.0 (2004) through UBL 2.5 (draft).
+This document contains the complete chronological inventory of all UBL releases from the OASIS UBL Technical Committee, starting from UBL 1.0 (2004) through UBL 2.5 (2026).
+
+**Numbering:** the `#` column here includes the 3 UBL 1.0 packages, which are not imported. The release number used by the tools (`tools/release_data.py`) is this number minus 3 (e.g. #41 here = release #38 in the tools).
 
 ## Release Types Legend
 
@@ -80,21 +82,27 @@ This document contains the complete chronological inventory of all UBL releases 
 | 35 | cs01-UBL-2.4 | 17-Oct-2023 | Committee Spec 01 | https://docs.oasis-open.org/ubl/cs01-UBL-2.4/UBL-2.4.zip | 76.5 MB |
 | 36 | os-UBL-2.4 | 20-Jun-2024 | **OASIS Standard** | https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.zip | 76.5 MB |
 
-### UBL 2.5 Series (Draft - 2025)
+### UBL 2.5 Series (2025-2026)
 
 | # | Directory | Date | Type | Package URL | Size |
 |---|-----------|------|------|-------------|------|
 | 37 | csd01-UBL-2.5 | 28-Aug-2025 | CS Draft 01 | https://docs.oasis-open.org/ubl/csd01-UBL-2.5/UBL-2.5.zip | 107.8 MB |
+| 38 | csd02-UBL-2.5 | 03-Dec-2025 | CS Draft 02 | https://docs.oasis-open.org/ubl/csd02-UBL-2.5/UBL-2.5.zip | 107.3 MB |
+| 39 | csd03-UBL-2.5 | 11-Feb-2026 | CS Draft 03 | https://docs.oasis-open.org/ubl/csd03-UBL-2.5/UBL-2.5.zip | 106.1 MB |
+| 40 | cs01-UBL-2.5 | 15-Apr-2026 | Committee Spec 01 | https://docs.oasis-open.org/ubl/cs01-UBL-2.5/UBL-2.5.zip | 106.1 MB |
+| 41 | os-UBL-2.5 | 12-Aug-2026 | **OASIS Standard** | https://docs.oasis-open.org/ubl/os-UBL-2.5/UBL-2.5.zip | 106.1 MB |
 
-**Note:** UBL 2.5 date appears to be in the future - likely a placeholder or typo on OASIS site.
+**Notes:**
+- Dates for csd02 and later are the `<pubdate>` in each release's `UBL-2.5.xml`.
+- The csd03 ZIP has no top-level folder (files are at the ZIP root); all other 2.5 packages extract into a `<stage>-UBL-2.5/` folder.
 
 ## Summary Statistics
 
-- **Total Releases:** 37 packages (all will be imported)
-- **Official OASIS Standards:** 5 (os-UBL-2.0, 2.1, 2.2, 2.3, 2.4)
+- **Total Releases:** 41 packages (38 imported: all UBL 2.x; the 3 UBL 1.0 packages are out of scope)
+- **Official OASIS Standards:** 6 (os-UBL-2.0, 2.1, 2.2, 2.3, 2.4, 2.5)
 - **Patch/Errata Packages:** 2 (#10 draft, #11 final - both applied sequentially)
-- **Time Span:** April 2004 - June 2024 (20 years)
-- **Package Size Growth:** 7.8 MB (1.0) → 76.5 MB (2.4) ≈ 10x increase
+- **Time Span:** April 2004 - August 2026 (22 years)
+- **Package Size Growth:** 7.8 MB (1.0) → 106.1 MB (2.5) ≈ 14x increase
 
 ## Non-UBL Release Packages
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-TransportServiceDescriptionRequest-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:15z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportServiceDescriptionRequest-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -136,10 +136,10 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description Request. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
+                     <ccts:Definition>(Deprecated) Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Transport Service Description Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
@@ -253,7 +253,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description Request. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending the Transport Service Description Request.</ccts:Definition>
+                     <ccts:Definition>The Party who sends the Transport Service Description Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -270,7 +270,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description Request. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving the Transport Service Description Request.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Transport Service Description Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -287,7 +287,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Service Description Request. Transport Service Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The transport service provider.</ccts:Definition>
+                     <ccts:Definition>The Transport Service Provider.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Service Description Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Transport Service Provider</ccts:PropertyTermQualifier>

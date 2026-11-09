@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-WeightStatement-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:16z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:WeightStatement-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -221,7 +221,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Weight Statement. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending this weight statement (e.g. Weighing Station, Shipper, Freight Forwarder, Carrier, ...).</ccts:Definition>
+                     <ccts:Definition>The Party who sends this Weight Statement (e.g. Weighing Station, Shipper, Freight Forwarder, Carrier, ...).</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Weight Statement</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -238,7 +238,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Weight Statement. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving this weight statement (e.g. Carrier, Terminal Operator, ...).</ccts:Definition>
+                     <ccts:Definition>The Party who receives this Weight Statement (e.g. carrier, terminal operator, ...).</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Weight Statement</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -255,7 +255,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Weight Statement. Weighing_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party executing the weight measure (e.g. Weighing Station).</ccts:Definition>
+                     <ccts:Definition>The Party who executes the weight measure (e.g. weighing station).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Weight Statement</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Weighing</ccts:PropertyTermQualifier>
@@ -272,7 +272,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Weight Statement. Shipper_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party playing the role of the Shipper (BCO, FF or NVOCC) who is responsible for the VGM (e.g. according the SOLAS Convention).</ccts:Definition>
+                     <ccts:Definition>The Party who plays the role of the Shipper (BCO, FF or NVOCC) who is responsible for the VGM (e.g. according the SOLAS Convention).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Weight Statement</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Shipper</ccts:PropertyTermQualifier>
@@ -289,7 +289,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Weight Statement. Responsible_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for signing the VGM on behalf of the Shipper.</ccts:Definition>
+                     <ccts:Definition>The Party who signs the Verified Gross Mass (VGM) on behalf of the Shipper.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Weight Statement</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Responsible</ccts:PropertyTermQualifier>

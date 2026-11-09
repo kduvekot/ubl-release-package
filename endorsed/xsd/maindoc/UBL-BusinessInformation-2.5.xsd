@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-BusinessInformation-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:16z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:BusinessInformation-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -358,7 +358,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Information. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending this Business Registration Information. This party could be the owner of this Business Registration Information or a third-party acting on behalf of the owner (e.g. business network).</ccts:Definition>
+                     <ccts:Definition>The Party who sends this Business Registration Information. This Party may be the owner of this Business Registration Information or a third-Party who acts on behalf of the owner (e.g. business network).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Information</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -375,7 +375,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Information. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving this Business Registration Information.</ccts:Definition>
+                     <ccts:Definition>The Party who receives this Business Registration Information.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Information</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -392,7 +392,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Information. Business_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party owning this Business Registration Information.</ccts:Definition>
+                     <ccts:Definition>The Party who owns this Business Registration Information.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Information</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Business</ccts:PropertyTermQualifier>

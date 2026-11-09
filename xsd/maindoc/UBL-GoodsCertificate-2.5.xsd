@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-GoodsCertificate-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:15z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:GoodsCertificate-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -283,7 +283,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Exporter_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who exports the goods or has similar right of disposal over them at the time of export</ccts:Definition>
+                     <ccts:Definition>The Party who exports the goods or has similar right of disposal over them at the time of export.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Exporter</ccts:PropertyTermQualifier>
@@ -301,7 +301,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Importer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who imports the goods, or on whose behalf the goods are being import</ccts:Definition>
+                     <ccts:Definition>The Party who imports the goods, or on whose behalf the goods are being imported.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Importer</ccts:PropertyTermQualifier>
@@ -319,7 +319,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Warehouse_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who is responsible for storing the goods</ccts:Definition>
+                     <ccts:Definition>The Party who is responsible for storing the Goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Warehouse</ccts:PropertyTermQualifier>
@@ -336,7 +336,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Consignor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party, usually the seller, who is responsible for the consignment</ccts:Definition>
+                     <ccts:Definition>The Party who is reponsible for sending the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignor</ccts:PropertyTermQualifier>
@@ -353,7 +353,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Consignee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party, usually the buyer, who will receive the goods</ccts:Definition>
+                     <ccts:Definition>The Party who receives the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignee</ccts:PropertyTermQualifier>
@@ -370,7 +370,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Freight Forwarder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The freight forwarder or the forwarding agent responsible for the transportation of the goods</ccts:Definition>
+                     <ccts:Definition>The Party who combines individual smaller consignments into a single larger shipment (a so-called consolidated consignment or shipment) which is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Freight Forwarder</ccts:PropertyTermQualifier>
@@ -387,7 +387,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party issuing this goods certificate</ccts:Definition>
+                     <ccts:Definition>The Party who issues this Goods Certificate.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -404,7 +404,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Legal Authority_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The legal authority, when different from the issuer, who sanctions this goods certificate</ccts:Definition>
+                     <ccts:Definition>The legal Authority, when different from the issuer, who sanctions this Goods Certificate.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Legal Authority</ccts:PropertyTermQualifier>
@@ -421,7 +421,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Certificate. Applicant_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party applying for this goods certificate</ccts:Definition>
+                     <ccts:Definition>The Party who applies for this Goods Certificate.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Applicant</ccts:PropertyTermQualifier>

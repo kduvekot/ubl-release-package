@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-BusinessCard-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:15z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:BusinessCard-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -254,7 +254,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Card. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending this business card. This party could be the owner of this business card or a third-party acting on behalf of the owner (e.g. business network).</ccts:Definition>
+                     <ccts:Definition>The Party who sends this Business Card. This Party may be the owner of this Business Card or a third-Party who acts on behalf of the owner (e.g. business network).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Card</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -271,7 +271,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Card. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving this business card.</ccts:Definition>
+                     <ccts:Definition>The Party who receives this Business Card.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Card</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -288,7 +288,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Business Card. Business_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party owning this business card.</ccts:Definition>
+                     <ccts:Definition>The Party who owns this Business Card.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Business Card</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Business</ccts:PropertyTermQualifier>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-TransportExecutionPlanRequest-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:15z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -153,10 +153,10 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Copy_ Indicator. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
+                     <ccts:Definition>(Deprecated) Indicates whether this document is a copy (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
@@ -306,7 +306,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending the Transport Execution Plan Request.</ccts:Definition>
+                     <ccts:Definition>The Party who sends the Transport Execution Plan Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -323,7 +323,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving the Transport Execution Plan Request.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Transport Execution Plan Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -340,7 +340,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Transport User_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party requesting the transport services referenced in the Transport Execution Plan Request.</ccts:Definition>
+                     <ccts:Definition>The Party who requests the transport services referenced in the Transport Execution Plan Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Transport User</ccts:PropertyTermQualifier>
@@ -357,7 +357,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Transport Service Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing the transport services referenced in the Transport Execution Plan Request.</ccts:Definition>
+                     <ccts:Definition>The Party who provides the transport services referenced in the Transport Execution Plan Request.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Transport Service Provider</ccts:PropertyTermQualifier>
@@ -374,10 +374,29 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Payee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that will pay for the transport service(s) referred to in a Transport Execution Plan.</ccts:Definition>
+                     <ccts:Definition>(Deprecated) The party that will pay for the transport service(s) referred to in a Transport Execution Plan.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. Use BillToParty instead.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Payee</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:BillToParty" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Execution Plan Request. Bill To_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Party that will receive the invoice for the transport service(s) referred to in the Transport Execution Plan.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Bill To</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>

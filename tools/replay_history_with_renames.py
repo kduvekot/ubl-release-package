@@ -39,7 +39,7 @@ from typing import Optional, Set, Dict, List, Tuple
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from tools.release_data import RELEASES, Release, get_release_by_num
-from tools.gdrive_downloader import download_release_from_gdrive
+from tools.oasis_downloader import download_release
 from tools.file_rename_detector import RenameDetector, get_previous_version
 
 
@@ -246,26 +246,25 @@ def download_and_extract(release: Release, temp_dir: Path) -> Path:
     """Download and extract a release, return the content directory."""
     print(f"  Downloading release #{release.num}...")
 
+    # Keep the ZIP outside the extraction directory so it can never be
+    # mistaken for package content (some packages have no top-level folder).
     zip_path = temp_dir / "release.zip"
-    download_release_from_gdrive(
-        release.num,
-        release.stage,
-        release.version,
-        zip_path
-    )
+    extract_root = temp_dir / "extract"
+    extract_root.mkdir(exist_ok=True)
+    download_release(release, zip_path)
 
     print(f"  Extracting...")
     with zipfile.ZipFile(zip_path, 'r') as zf:
-        zf.extractall(temp_dir)
+        zf.extractall(extract_root)
 
     # Find content directory (might be nested)
-    subdirs = [d for d in temp_dir.iterdir() if d.is_dir() and d.name != '__MACOSX']
+    subdirs = [d for d in extract_root.iterdir() if d.is_dir() and d.name != '__MACOSX']
     if len(subdirs) == 1:
         subdir = subdirs[0]
         if any((subdir / name).exists() for name in ['xsd', 'xsdrt', 'doc', 'cl', 'mod']):
             return subdir
 
-    return temp_dir
+    return extract_root
 
 
 def clear_ubl_content(repo_root: Path, preserve_files: Set[Path] = None,
@@ -724,7 +723,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  # Full replay of all 34 releases
+  # Full replay of all releases
   python -m tools.replay_history_with_renames
 
   # Replay specific range
@@ -749,8 +748,8 @@ Examples:
         help='First release to import (default: 1)'
     )
     parser.add_argument(
-        '--end', type=int, default=34,
-        help='Last release to import (default: 34)'
+        '--end', type=int, default=len(RELEASES),
+        help=f'Last release to import (default: {len(RELEASES)})'
     )
     parser.add_argument(
         '--branch', type=str, default='history-with-renames',

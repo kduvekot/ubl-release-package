@@ -23,9 +23,9 @@ from typing import Optional, Dict
 
 # Import our modules
 from .git_state import GitStateManager
-from .release_data import Release, get_release_by_num
+from .release_data import Release, get_release_by_num, get_total_count
 from .validators import Validators, ValidationError
-from .gdrive_downloader import download_release_from_gdrive
+from .oasis_downloader import download_release
 
 
 class ImportError(Exception):
@@ -108,40 +108,36 @@ class ReleaseImporter:
             self.cleanup()
 
     def download_and_extract(self) -> Path:
-        """Download ZIP from Google Drive and extract to temp directory."""
-        print(f"Downloading release #{self.release.num} from Google Drive...")
-        print(f"  (OASIS URL for reference: {self.release.url})")
+        """Download ZIP from OASIS and extract to a temp directory."""
+        print(f"Downloading release #{self.release.num} from OASIS...")
 
         if self.dry_run:
-            print("  (DRY RUN: skipping download)")
+            print(f"  (DRY RUN: skipping download of {self.release.url})")
             return Path("/tmp/dry-run")
 
-        # Create temp directory
+        # Create temp directory. The ZIP is kept outside the extraction
+        # directory so it can never be mistaken for package content.
         self.temp_dir = Path(tempfile.mkdtemp(prefix='ubl-import-'))
-
-        # Download from Google Drive
         zip_path = self.temp_dir / "release.zip"
+        extract_root = self.temp_dir / "extract"
+        extract_root.mkdir()
+
         try:
-            download_release_from_gdrive(
-                self.release.num,
-                self.release.stage,
-                self.release.version,
-                zip_path
-            )
+            download_release(self.release, zip_path)
         except Exception as e:
-            raise ImportError(f"Google Drive download failed: {e}")
+            raise ImportError(f"Download failed: {e}")
 
         # Extract
-        print(f"Extracting to {self.temp_dir}...")
+        print(f"Extracting to {extract_root}...")
         try:
             with zipfile.ZipFile(zip_path, 'r') as zip_ref:
-                zip_ref.extractall(self.temp_dir)
-            print(f"  Extracted {len(list(self.temp_dir.rglob('*')))} files")
+                zip_ref.extractall(extract_root)
+            print(f"  Extracted {len(list(extract_root.rglob('*')))} files")
         except Exception as e:
             raise ImportError(f"Extraction failed: {e}")
 
         # Find the content directory (might be nested in a subdirectory)
-        extract_dir = self.find_content_directory(self.temp_dir)
+        extract_dir = self.find_content_directory(extract_root)
         return extract_dir
 
     def find_content_directory(self, temp_dir: Path) -> Path:
@@ -425,7 +421,7 @@ Examples:
     parser.add_argument(
         'release_num',
         type=int,
-        help='Release number to import (1-34)'
+        help='Release number to import (see: python3 -m tools.release_data)'
     )
     parser.add_argument(
         '--dry-run',
@@ -444,7 +440,7 @@ Examples:
     release = get_release_by_num(args.release_num)
     if not release:
         print(f"ERROR: Invalid release number: {args.release_num}", file=sys.stderr)
-        print(f"       Valid range: 1-34", file=sys.stderr)
+        print(f"       Valid range: 1-{get_total_count()}", file=sys.stderr)
         sys.exit(1)
 
     # Run import

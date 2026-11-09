@@ -10,7 +10,7 @@ This toolset provides:
 - **Patch handling** - Automatically applies errata/update packages as overlays
 - **Safety guardrails** - Prevents out-of-order imports, duplicate imports, and broken dependencies
 - **Dry-run mode** - Validate before making changes
-- **Batch import** - Import all 34 releases with a single command
+- **Batch import** - Import all releases with a single command
 
 ## Quick Start
 
@@ -30,7 +30,7 @@ python3 -m tools.import_release 10 --force
 ### Import All Releases (Catchup)
 
 ```bash
-# Import all 34 releases in chronological order
+# Import all releases in chronological order
 python3 -m tools.catchup
 
 # Dry-run to validate all releases
@@ -58,7 +58,8 @@ python3 -m tools.release_data
 ### Modules
 
 - **`git_state.py`** - Queries git history to determine what releases have been imported
-- **`release_data.py`** - Hardcoded inventory of all 34 UBL releases with metadata
+- **`release_data.py`** - Hardcoded inventory of all UBL releases with metadata
+- **`oasis_downloader.py`** - Downloads release packages directly from OASIS (stdlib `urllib`)
 - **`validators.py`** - Validation logic and safety checks
 - **`import_release.py`** - Core import logic for a single release
 - **`catchup.py`** - Batch import tool for importing multiple releases
@@ -109,7 +110,7 @@ python3 -m tools.import_release 1
 
 ## Release Types
 
-### Full Releases (32 total)
+### Full Releases (36 total)
 Standard UBL releases - extract and replace all repository content:
 - All `prd`, `cs`, `os`, etc. releases
 - Content is completely replaced (except protected paths)
@@ -154,7 +155,7 @@ These paths are never modified during import:
 
 ## Release Inventory
 
-Total: **34 releases** from UBL 2.0 (2006) through UBL 2.5 draft (2025)
+Total: **38 releases** from UBL 2.0 (2006) through UBL 2.5 (2026)
 
 ### By Version
 - **UBL 2.0**: 8 releases (including 2 patches)
@@ -162,15 +163,16 @@ Total: **34 releases** from UBL 2.0 (2006) through UBL 2.5 draft (2025)
 - **UBL 2.2**: 6 releases
 - **UBL 2.3**: 7 releases
 - **UBL 2.4**: 4 releases
-- **UBL 2.5**: 1 release (draft)
+- **UBL 2.5**: 5 releases
 
-### OASIS Standards (5 total)
+### OASIS Standards (6 total)
 Official approved standards:
 1. UBL 2.0 (2006-12-18) - #6
 2. UBL 2.1 (2013-11-04) - #16
 3. UBL 2.2 (2018-07-09) - #22
 4. UBL 2.3 (2021-06-15) - #29
 5. UBL 2.4 (2024-06-20) - #33
+6. UBL 2.5 (2026-08-12) - #38
 
 ## Testing
 
@@ -274,19 +276,42 @@ UBL 2.0: 5 release(s)
 
 ### Adding a New Release
 
-1. Edit `release_data.py`:
+When OASIS publishes a new UBL package (check https://docs.oasis-open.org/ubl/):
+
+1. **Find the package details** in the new release directory on OASIS:
+   - the package ZIP URL (e.g. `https://docs.oasis-open.org/ubl/csd01-UBL-2.6/UBL-2.6.zip`)
+   - the publication date: the `<pubdate>` in the release's `UBL-X.Y.xml`
+     (`unzip -p UBL-2.6.zip '*UBL-2.6.xml' | grep -o '<pubdate>[^<]*'`)
+
+2. **Add the release to `release_data.py`** with the next sequence number, in
+   chronological order:
    ```python
-   Release(35, "2.6", "csd01", "2026-01-15",
+   Release(39, "2.6", "csd01", "2027-01-15",
            "https://docs.oasis-open.org/ubl/csd01-UBL-2.6/UBL-2.6.zip"),
    ```
+   If the stage is new (not yet in `STAGE_DESCRIPTIONS`), add its description too.
 
-2. Update `get_total_count()` if needed
-
-3. Test:
+3. **Test the tooling and commit it** (tooling commit, separate from the release):
    ```bash
-   python3 -m tools.release_data  # Should show new release
-   bash tools/tests/run_tests.sh   # Should pass
+   python3 -m tools.release_data             # Should show new release
+   python3 -m tools.import_release 39 --dry-run
+   bash tools/tests/run_tests.sh             # Should pass
    ```
+
+4. **Import the release** (creates the release commit and tags):
+   ```bash
+   python3 -m tools.import_release 39
+   ```
+
+5. **Push the commit and the new tags**:
+   ```bash
+   git push -u origin <branch>
+   git push origin csd01-UBL-2.6             # plus vX.Y for an OASIS Standard
+   ```
+
+6. **Update the docs** (separate commit): `.claude/CLAUDE.md`,
+   `.claude/ubl-releases-complete-inventory.md`, `.claude/session-history.md`
+   and the inventory section of this README.
 
 ### Running Tests During Development
 ```bash

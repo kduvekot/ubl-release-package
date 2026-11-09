@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-CatalogueItemSpecificationUpdate-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:15z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CatalogueItemSpecificationUpdate-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -369,7 +369,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Catalogue Item Specification Update. Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending the Catalogue Item Specification Update.</ccts:Definition>
+                     <ccts:Definition>The Party who sends the Catalogue Item Specification Update.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Catalogue Item Specification Update</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Provider</ccts:PropertyTermQualifier>
@@ -386,7 +386,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Catalogue Item Specification Update. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving the Catalogue Item Specification Update.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Catalogue Item Specification Update.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Catalogue Item Specification Update</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -431,14 +431,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:TradingTerms" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:TradingTerms" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Catalogue Item Specification Update. Trading Terms</ccts:DictionaryEntryName>
                      <ccts:Definition>The trading terms associated with the Catalogue.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Catalogue Item Specification Update</ccts:ObjectClass>
                      <ccts:PropertyTerm>Trading Terms</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Trading Terms</ccts:AssociatedObjectClass>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-ProofOfReexportationRequest-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:15z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportationRequest-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -254,7 +254,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Proof Of Reexportation Request. Importing Guarantor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party (often chambers of commerce) who issues this document on behalf of their customs authority.</ccts:Definition>
+                     <ccts:Definition>The Party who on behalf of their Customs Authority issues the Proof of Reexportation. This Party is normally a chamber of commerce.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Proof Of Reexportation Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Importing Guarantor</ccts:PropertyTermQualifier>
@@ -271,7 +271,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Proof Of Reexportation Request. Exporting Guarantor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party (often chambers of commerce) who are fiscally responsible for the Goods Item Passort counterfoils associated with this document.</ccts:Definition>
+                     <ccts:Definition>The Party who is fiscally responsible for the Goods Item Passport counterfoils which the Customs Party is requesting. This Party is normally a chamber of commerce.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Proof Of Reexportation Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Exporting Guarantor</ccts:PropertyTermQualifier>
@@ -288,7 +288,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Proof Of Reexportation Request. Importing Customs_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The original requester of the proof of reexportation.</ccts:Definition>
+                     <ccts:Definition>The Party who originally requests the Proof of Reexportation.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Proof Of Reexportation Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Importing Customs</ccts:PropertyTermQualifier>

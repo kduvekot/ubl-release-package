@@ -2,7 +2,7 @@
 """
 Complete UBL release inventory data.
 
-This module contains hardcoded information about all 37 UBL releases to be imported,
+This module contains hardcoded information about all UBL releases to be imported,
 based on the official OASIS documentation.
 """
 
@@ -93,33 +93,38 @@ class Release:
         return f"Release({self.num}, {self.version}, {self.stage}, {self.date})"
 
 
-# Complete inventory of all 37 UBL releases
+# Complete inventory of all UBL 2.x releases
 # Note: We're importing from UBL 2.0 onwards (skipping 1.0 series per project scope)
+#
+# Dates are the official publication dates printed in each package's own
+# specification: the DocBook <pubdate> (or &pubdate; entity) of UBL-2.x.xml,
+# the cover date of the HTML/PDF for the oldest packages, and the cover date
+# of the errata PDF for #7 and #8.
 RELEASES: List[Release] = [
     # UBL 2.0 Series (2006-2008)
-    Release(1, "2.0", "prd", "2006-01-20",
+    Release(1, "2.0", "prd", "2006-01-19",
             "https://docs.oasis-open.org/ubl/prd-UBL-2.0.zip"),
-    Release(2, "2.0", "prd2", "2006-07-28",
+    Release(2, "2.0", "prd2", "2006-07-20",
             "https://docs.oasis-open.org/ubl/prd2-UBL-2.0.zip"),
-    Release(3, "2.0", "prd3", "2006-09-21",
+    Release(3, "2.0", "prd3", "2006-09-20",
             "https://docs.oasis-open.org/ubl/prd3-UBL-2.0.zip"),
     Release(4, "2.0", "prd3r1", "2006-10-05",
             "https://docs.oasis-open.org/ubl/prd3r1-UBL-2.0.zip"),
     Release(5, "2.0", "cs", "2006-10-12",
             "https://docs.oasis-open.org/ubl/cs-UBL-2.0.zip"),
-    Release(6, "2.0", "os", "2006-12-18",
+    Release(6, "2.0", "os", "2006-12-12",
             "https://docs.oasis-open.org/ubl/os-UBL-2.0.zip"),
-    Release(7, "2.0", "errata", "2008-04-23",
+    Release(7, "2.0", "errata", "2008-04-11",
             "https://docs.oasis-open.org/ubl/errata-UBL-2.0.zip",
             TYPE_PATCH, 6),  # Patch on #6 (os-UBL-2.0)
-    Release(8, "2.0", "os-update", "2008-05-29",
+    Release(8, "2.0", "os-update", "2008-05-10",
             "https://docs.oasis-open.org/ubl/os-UBL-2.0-update-delta.zip",
             TYPE_PATCH, 7),  # Patch on #7 (errata-UBL-2.0)
 
     # UBL 2.1 Series (2010-2013)
-    Release(9, "2.1", "prd1", "2010-10-26",
+    Release(9, "2.1", "prd1", "2010-09-25",
             "https://docs.oasis-open.org/ubl/prd1-UBL-2.1/UBL-2.1-PRD1-20100925.zip"),
-    Release(10, "2.1", "prd2", "2011-08-25",
+    Release(10, "2.1", "prd2", "2011-05-30",
             "https://docs.oasis-open.org/ubl/prd2-UBL-2.1/UBL-2.1-PRD2-2011-05-30.zip"),
     Release(11, "2.1", "prd3", "2013-02-23",
             "https://docs.oasis-open.org/ubl/prd3-UBL-2.1/UBL-2.1-PRD3-2013-02-23.zip"),
@@ -149,10 +154,10 @@ RELEASES: List[Release] = [
             "https://docs.oasis-open.org/ubl/os-UBL-2.2/UBL-2.2.zip"),
 
     # UBL 2.3 Series (2020-2021)
-    Release(23, "2.3", "csprd02", "2020-01-29",
-            "https://docs.oasis-open.org/ubl/csprd02-UBL-2.3/UBL-2.3.zip"),
-    Release(24, "2.3", "csprd01", "2020-01-30",
+    Release(23, "2.3", "csprd01", "2019-08-07",
             "https://docs.oasis-open.org/ubl/csprd01-UBL-2.3/UBL-2.3.zip"),
+    Release(24, "2.3", "csprd02", "2020-01-29",
+            "https://docs.oasis-open.org/ubl/csprd02-UBL-2.3/UBL-2.3.zip"),
     Release(25, "2.3", "csd03", "2020-07-29",
             "https://docs.oasis-open.org/ubl/csd03-UBL-2.3/UBL-2.3.zip"),
     Release(26, "2.3", "csd04", "2020-11-25",
@@ -174,14 +179,22 @@ RELEASES: List[Release] = [
     Release(33, "2.4", "os", "2024-06-20",
             "https://docs.oasis-open.org/ubl/os-UBL-2.4/UBL-2.4.zip"),
 
-    # UBL 2.5 Series (Draft - 2025)
-    Release(34, "2.5", "csd01", "2025-08-28",
+    # UBL 2.5 Series (2025-2026)
+    Release(34, "2.5", "csd01", "2025-08-20",
             "https://docs.oasis-open.org/ubl/csd01-UBL-2.5/UBL-2.5.zip"),
+    Release(35, "2.5", "csd02", "2025-12-03",
+            "https://docs.oasis-open.org/ubl/csd02-UBL-2.5/UBL-2.5.zip"),
+    Release(36, "2.5", "csd03", "2026-02-11",
+            "https://docs.oasis-open.org/ubl/csd03-UBL-2.5/UBL-2.5.zip"),
+    Release(37, "2.5", "cs01", "2026-04-15",
+            "https://docs.oasis-open.org/ubl/cs01-UBL-2.5/UBL-2.5.zip"),
+    Release(38, "2.5", "os", "2026-08-12",
+            "https://docs.oasis-open.org/ubl/os-UBL-2.5/UBL-2.5.zip"),
 ]
 
 
 def get_release_by_num(num: int) -> Optional[Release]:
-    """Get release by its sequence number (1-34)."""
+    """Get release by its sequence number (1-get_total_count())."""
     for release in RELEASES:
         if release.num == num:
             return release

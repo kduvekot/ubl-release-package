@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsd/maindoc/UBL-CommonTransportationReport-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:15z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonTransportationReport-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -281,7 +281,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Common Transportation Report. Reporter_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing this common transportation report.</ccts:Definition>
+                     <ccts:Definition>The Party who provides this Common Transportation Report.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Common Transportation Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Reporter</ccts:PropertyTermQualifier>
@@ -298,7 +298,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Common Transportation Report. Authority_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The authority or regulator receiving this common transportation report.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Common Transportation Report. This Party is normally an Authority or regulator.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Common Transportation Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Authority</ccts:PropertyTermQualifier>
@@ -316,7 +316,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Common Transportation Report. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending this report.</ccts:Definition>
+                     <ccts:Definition>The Party who sends this Report.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Common Transportation Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -333,7 +333,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Common Transportation Report. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving this report.</ccts:Definition>
+                     <ccts:Definition>The Party who receives this Report.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Common Transportation Report</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>

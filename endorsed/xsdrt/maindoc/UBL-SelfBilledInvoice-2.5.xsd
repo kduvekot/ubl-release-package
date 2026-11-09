@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 OS
+                     http://docs.oasis-open.org/ubl/os-UBL-2.5/
+  Release Date:      12 August 2026
   Module:            xsdrt/maindoc/UBL-SelfBilledInvoice-2.5.xsd
-  Generated on:      2025-08-13 23:06z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-08-15 15:16z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SelfBilledInvoice-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -77,7 +77,9 @@
                       minOccurs="0"
                       maxOccurs="unbounded"/>
          <xsd:element ref="cac:ProjectReference" minOccurs="0" maxOccurs="unbounded"/>
-         <xsd:element ref="cac:BuyerReference" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:BuyerAssignedReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
          <xsd:element ref="cac:PurchaseReference" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Annotation" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Signature" minOccurs="0" maxOccurs="unbounded"/>
