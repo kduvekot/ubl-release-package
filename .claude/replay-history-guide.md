@@ -2,17 +2,17 @@
 
 ## Overview
 
-This guide documents how to recreate the entire UBL release history (34 releases from UBL 2.0 to 2.5) on a clean git branch with proper rename detection and granular file tracking.
+This guide documents how to recreate the entire UBL release history (38 releases from UBL 2.0 to 2.5) on a clean git branch with proper rename detection and granular file tracking.
 
 ## Current Status
 
 - **Branch with tools**: merged into main
 - **Tools tested**: Unit tests (10) + Integration tests (4) passing
-- **Ready for**: Full 34-release replay
+- **Ready for**: Full 38-release replay (never run yet; `main` holds the history made by `import_release`)
 
 ## Release Processing Order
 
-34 releases total, processed in order:
+38 releases total, processed in order:
 
 | # | Version | Name | Type |
 |---|---------|------|------|
@@ -29,16 +29,13 @@ This guide documents how to recreate the entire UBL release history (34 releases
 | 17-22 | 2.2 | (various stages) | FULL |
 | 23-29 | 2.3 | (various stages) | FULL |
 | 30-33 | 2.4 | (various stages) | FULL |
-| 34 | 2.5 | Committee Specification Draft 01 | FULL |
+| 34-38 | 2.5 | csd01, csd02, csd03, cs01, os | FULL |
 
 Run `python3 -c "from tools.release_data import RELEASES; [print(f'#{r.num} {r.version} {r.status}') for r in RELEASES]"` for full list.
 
 ## Prerequisites
 
-1. **Python 3.x** with `gdown` package:
-   ```bash
-   pip install gdown
-   ```
+1. **Python 3.x** (standard library only; packages are downloaded directly from OASIS)
 
 2. **Git repository** with the tools checked out
 
@@ -51,8 +48,8 @@ All tools are in `/tools/`:
 | `granular_import.py` | **NEW** - Granular file-level import with change classification |
 | `replay_history_with_renames.py` | Original replay script (one commit per release) |
 | `file_rename_detector.py` | Rename detection logic |
-| `release_data.py` | Release inventory (34 releases) |
-| `gdrive_downloader.py` | Google Drive download helper |
+| `release_data.py` | Release inventory (38 releases) |
+| `oasis_downloader.py` | OASIS download helper |
 
 ## File Classification Logic
 
@@ -106,7 +103,7 @@ The new `granular_import.py` provides fine-grained control:
 python3 -m tools.granular_import --release 1
 
 # Import range with per-type commits (recommended)
-python3 -m tools.granular_import --range 1 34 --commit-strategy per_type
+python3 -m tools.granular_import --range 1 38 --commit-strategy per_type
 
 # Test with local repo (creates fresh repo)
 python3 -m tools.granular_import --release 1 --test-repo /tmp/ubl-test
@@ -133,7 +130,7 @@ python3 -m tools.granular_import --release 1 --validate-each-file
 
 ```
 For each release:
-1. Download ZIP from Google Drive
+1. Download ZIP from OASIS
 2. Extract contents
 3. Compare repo state with package: {path: content_hash}
 4. Classify each file: UNCHANGED, MODIFIED, RENAMED, NEW, DELETED
@@ -178,7 +175,7 @@ The original `replay_history_with_renames.py` is still available for one-commit-
 ```bash
 python3 -m tools.replay_history_with_renames \
   --branch history-with-renames \
-  --start 1 --end 34
+  --start 1 --end 38
 ```
 
 ## Validation
@@ -203,8 +200,8 @@ python3 tools/tests/test_granular_integration.py
 
 ## Troubleshooting
 
-### Google Drive Rate Limiting
-If download fails with "Cannot retrieve the public link", wait 1-2 minutes and retry.
+### Download Failures
+Downloads are retried automatically (4 retries with exponential backoff). If OASIS is unreachable, wait and rerun.
 
 ### Validation Failures
 If validation fails, check the differences listed. Common issues:

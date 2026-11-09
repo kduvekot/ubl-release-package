@@ -296,6 +296,34 @@ Phase 3: Full Import - READY TO START
 
 ---
 
+## Session 4 - 2026-11-09
+
+### Goal
+Bring the repository up to date with the UBL 2.5 releases published after csd01.
+
+### Completed
+- Found that `main` stopped at csd01-UBL-2.5 (release #34), while OASIS had since
+  published csd02, csd03, cs01 and the UBL 2.5 OASIS Standard (12 Aug 2026)
+- Tested OASIS download speed again: ~20 MB/s (the earlier slowness is gone)
+- Replaced the temporary Google Drive mirror with direct OASIS downloads
+  (`tools/oasis_downloader.py`, stdlib `urllib`); removed `gdown`,
+  `gdrive_downloader.py`, `gdrive_file_ids.py`, `.claude/gdrive_sources.json`
+- Fixed a bug: the downloaded ZIP was stored inside the extraction directory, so a
+  package without a top-level folder (csd03-UBL-2.5) would have had the ZIP itself
+  copied into the repository
+- Added releases #35-#38 to `release_data.py`; imported them as separate release
+  commits, each verified file-by-file (MD5) against its ZIP
+- Recreated the 34 tags of the earlier imports (they were never pushed) and pushed
+  all 44 tags (38 release tags + v2.0 … v2.5)
+- Rewrote "Adding a New Release" in `tools/README.md`
+
+### Decisions Made
+1. **Download source:** OASIS directly; Google Drive support removed completely
+2. **Release dates:** `<pubdate>` from each release's `UBL-2.5.xml`
+3. **Tags:** pushed to GitHub this time, including the older ones
+
+---
+
 ## Session Template for Future Use
 
 ### Session N - [Date]

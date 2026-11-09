@@ -7,7 +7,7 @@ Import all official UBL (Universal Business Language) releases from OASIS into t
 ## Scope
 
 ### Included
-- UBL 2.0 through UBL 2.5 releases (34 total)
+- UBL 2.0 through UBL 2.5 releases (38 total)
 - All intermediate releases: prd, csprd, csd, cs, cos, os stages
 - Draft releases (e.g., csd01-UBL-2.5)
 
