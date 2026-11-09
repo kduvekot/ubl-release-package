@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
-                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
-  Release Date:      03 December 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD03
+                     http://docs.oasis-open.org/ubl/csd03-UBL-2.5/
+  Release Date:      11 February 2026
   Module:            xsdrt/common/UBL-CommonAggregateComponents-2.5.xsd
-  Generated on:      2025-12-03 12:42z
+  Generated on:      2026-02-09 15:15z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -115,10 +115,10 @@
    <xsd:element name="BusinessClassificationScheme" type="ClassificationSchemeType"/>
    <xsd:element name="BusinessParty" type="PartyType"/>
    <xsd:element name="BusinessPartyGroup" type="PartyGroupType"/>
+   <xsd:element name="BuyerAssignedReference" type="BuyerAssignedReferenceType"/>
    <xsd:element name="BuyerContact" type="ContactType"/>
    <xsd:element name="BuyerCustomerParty" type="CustomerPartyType"/>
    <xsd:element name="BuyerProposedSubstituteLineItem" type="LineItemType"/>
-   <xsd:element name="BuyerReference" type="BuyerReferenceType"/>
    <xsd:element name="BuyersItemIdentification" type="ItemIdentificationType"/>
    <xsd:element name="CallDuty" type="DutyType"/>
    <xsd:element name="CallForTenderDocumentReference" type="DocumentReferenceType"/>
@@ -1315,7 +1315,7 @@
          <xsd:element ref="cac:BudgetAccount" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
-   <xsd:complexType name="BuyerReferenceType">
+   <xsd:complexType name="BuyerAssignedReferenceType">
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:BuyerReferenceCode" minOccurs="0" maxOccurs="1"/>
@@ -1732,7 +1732,9 @@
          <xsd:element ref="cac:OfficeOfDestinationLocation" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:OfficeOfImportLocation" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:OfficeOfExportLocation" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cac:OfficeOfTransitLocation" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:OfficeOfTransitLocation"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
          <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:EnvironmentalEmission" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:InsurancePolicy" minOccurs="0" maxOccurs="unbounded"/>

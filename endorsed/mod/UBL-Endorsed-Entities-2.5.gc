@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gc:CodeList xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/">
    <Identification>
-      <ShortName>UBL-2.5-CSD02-Endorsed</ShortName>
-      <LongName>UBL 2.5 CSD02 Endorsed Business Entity Summary</LongName>
+      <ShortName>UBL-2.5-CSD03-Endorsed</ShortName>
+      <LongName>UBL 2.5 CSD03 Endorsed Business Entity Summary</LongName>
       <Version>2.5</Version>
       <CanonicalUri>urn:oasis:names:specification:ubl:BIE:ENDORSED</CanonicalUri>
       <CanonicalVersionUri>urn:oasis:names:specification:ubl:BIE:ENDORSED:2.5</CanonicalVersionUri>
-      <LocationUri>http://docs.oasis-open.org/ubl/csd02-UBL-2.5/mod/UBL-Entities-2.5-Endorsed.gc</LocationUri>
+      <LocationUri>http://docs.oasis-open.org/ubl/csd03-UBL-2.5/mod/UBL-Entities-2.5-Endorsed.gc</LocationUri>
       <Agency>
          <LongName xml:lang="en">OASIS Universal Business Language</LongName>
          <Identifier>UBL</Identifier>
@@ -7618,16 +7618,16 @@
             <SimpleValue>UBL-CommonLibrary-2.5</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentName">
-            <SimpleValue>BuyerReference</SimpleValue>
+            <SimpleValue>BuyerAssignedReference</SimpleValue>
          </Value>
          <Value ColumnRef="Definition">
             <SimpleValue>A class to define a reference provided by the buyer for internal routing or classification.</SimpleValue>
          </Value>
          <Value ColumnRef="DictionaryEntryName">
-            <SimpleValue>Buyer Reference. Details</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference. Details</SimpleValue>
          </Value>
          <Value ColumnRef="ObjectClass">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentType">
             <SimpleValue>ABIE</SimpleValue>
@@ -7653,10 +7653,10 @@
             <SimpleValue>A code identifying the buyer reference, such as a department or internal unit.</SimpleValue>
          </Value>
          <Value ColumnRef="DictionaryEntryName">
-            <SimpleValue>Buyer Reference. Buyer Reference Code. Code</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference. Buyer Reference Code. Code</SimpleValue>
          </Value>
          <Value ColumnRef="ObjectClass">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="PropertyTermPossessiveNoun">
             <SimpleValue>Buyer Reference</SimpleValue>
@@ -7694,10 +7694,10 @@
             <SimpleValue>A textual description of the buyer reference.</SimpleValue>
          </Value>
          <Value ColumnRef="DictionaryEntryName">
-            <SimpleValue>Buyer Reference. Buyer Reference Text. Text</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference. Buyer Reference Text. Text</SimpleValue>
          </Value>
          <Value ColumnRef="ObjectClass">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="PropertyTermPossessiveNoun">
             <SimpleValue>Buyer Reference</SimpleValue>
@@ -18888,7 +18888,7 @@
             <SimpleValue>OfficeOfTransitLocation</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
-            <SimpleValue>0..1</SimpleValue>
+            <SimpleValue>0..n</SimpleValue>
          </Value>
          <Value ColumnRef="Definition">
             <SimpleValue>A location that finds the reference numbers for the departure, transit and destination offices.</SimpleValue>
@@ -134715,7 +134715,7 @@
             <SimpleValue>UBL-CreditNote-2.5</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentName">
-            <SimpleValue>BuyerReference</SimpleValue>
+            <SimpleValue>BuyerAssignedReference</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
             <SimpleValue>0..n</SimpleValue>
@@ -134724,19 +134724,19 @@
             <SimpleValue>A reference provided by the buyer used for internal routing of the document.</SimpleValue>
          </Value>
          <Value ColumnRef="DictionaryEntryName">
-            <SimpleValue>Credit Note. Buyer Reference</SimpleValue>
+            <SimpleValue>Credit Note. Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ObjectClass">
             <SimpleValue>Credit Note</SimpleValue>
          </Value>
          <Value ColumnRef="PropertyTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="RepresentationTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="AssociatedObjectClass">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentType">
             <SimpleValue>ASBIE</SimpleValue>
@@ -138619,7 +138619,7 @@
             <SimpleValue>TradingTerms</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
-            <SimpleValue>0..1</SimpleValue>
+            <SimpleValue>0..n</SimpleValue>
          </Value>
          <Value ColumnRef="Definition">
             <SimpleValue>The trading terms associated with the Catalogue.</SimpleValue>
@@ -139666,7 +139666,7 @@
             <SimpleValue>TradingTerms</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
-            <SimpleValue>0..1</SimpleValue>
+            <SimpleValue>0..n</SimpleValue>
          </Value>
          <Value ColumnRef="Definition">
             <SimpleValue>The trading terms associated with the Catalogue.</SimpleValue>
@@ -140678,7 +140678,7 @@
             <SimpleValue>TradingTerms</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
-            <SimpleValue>0..1</SimpleValue>
+            <SimpleValue>0..n</SimpleValue>
          </Value>
          <Value ColumnRef="Definition">
             <SimpleValue>The trading terms associated with the requested Catalogue.</SimpleValue>
@@ -142321,7 +142321,7 @@
             <SimpleValue>UBL-DebitNote-2.5</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentName">
-            <SimpleValue>BuyerReference</SimpleValue>
+            <SimpleValue>BuyerAssignedReference</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
             <SimpleValue>0..n</SimpleValue>
@@ -142330,19 +142330,19 @@
             <SimpleValue>A reference provided by the buyer used for internal routing of the document.</SimpleValue>
          </Value>
          <Value ColumnRef="DictionaryEntryName">
-            <SimpleValue>Debit Note. Buyer Reference</SimpleValue>
+            <SimpleValue>Debit Note. Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ObjectClass">
             <SimpleValue>Debit Note</SimpleValue>
          </Value>
          <Value ColumnRef="PropertyTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="RepresentationTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="AssociatedObjectClass">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentType">
             <SimpleValue>ASBIE</SimpleValue>
@@ -162869,7 +162869,7 @@
             <SimpleValue>UBL-Invoice-2.5</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentName">
-            <SimpleValue>BuyerReference</SimpleValue>
+            <SimpleValue>BuyerAssignedReference</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
             <SimpleValue>0..n</SimpleValue>
@@ -162878,19 +162878,19 @@
             <SimpleValue>A reference provided by the buyer used for internal routing of the document.</SimpleValue>
          </Value>
          <Value ColumnRef="DictionaryEntryName">
-            <SimpleValue>Invoice. Buyer Reference</SimpleValue>
+            <SimpleValue>Invoice. Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ObjectClass">
             <SimpleValue>Invoice</SimpleValue>
          </Value>
          <Value ColumnRef="PropertyTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="RepresentationTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="AssociatedObjectClass">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentType">
             <SimpleValue>ASBIE</SimpleValue>
@@ -191680,7 +191680,7 @@
             <SimpleValue>UBL-SelfBilledCreditNote-2.5</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentName">
-            <SimpleValue>BuyerReference</SimpleValue>
+            <SimpleValue>BuyerAssignedReference</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
             <SimpleValue>0..n</SimpleValue>
@@ -191689,19 +191689,19 @@
             <SimpleValue>A reference provided by the buyer used for internal routing of the document.</SimpleValue>
          </Value>
          <Value ColumnRef="DictionaryEntryName">
-            <SimpleValue>Self Billed Credit Note. Buyer Reference</SimpleValue>
+            <SimpleValue>Self Billed Credit Note. Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ObjectClass">
             <SimpleValue>Self Billed Credit Note</SimpleValue>
          </Value>
          <Value ColumnRef="PropertyTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="RepresentationTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="AssociatedObjectClass">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentType">
             <SimpleValue>ASBIE</SimpleValue>
@@ -193946,7 +193946,7 @@
             <SimpleValue>UBL-SelfBilledInvoice-2.5</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentName">
-            <SimpleValue>BuyerReference</SimpleValue>
+            <SimpleValue>BuyerAssignedReference</SimpleValue>
          </Value>
          <Value ColumnRef="Cardinality">
             <SimpleValue>0..n</SimpleValue>
@@ -193955,19 +193955,19 @@
             <SimpleValue>A reference provided by the buyer used for internal routing of the document.</SimpleValue>
          </Value>
          <Value ColumnRef="DictionaryEntryName">
-            <SimpleValue>Self Billed Invoice. Buyer Reference</SimpleValue>
+            <SimpleValue>Self Billed Invoice. Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ObjectClass">
             <SimpleValue>Self Billed Invoice</SimpleValue>
          </Value>
          <Value ColumnRef="PropertyTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="RepresentationTerm">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="AssociatedObjectClass">
-            <SimpleValue>Buyer Reference</SimpleValue>
+            <SimpleValue>Buyer Assigned Reference</SimpleValue>
          </Value>
          <Value ColumnRef="ComponentType">
             <SimpleValue>ASBIE</SimpleValue>

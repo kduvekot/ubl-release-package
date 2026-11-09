@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
-                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
-  Release Date:      03 December 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD03
+                     http://docs.oasis-open.org/ubl/csd03-UBL-2.5/
+  Release Date:      11 February 2026
   Module:            xsdrt/common/UBL-SignatureAggregateComponents-2.5.xsd
-  Generated on:      2025-12-03 12:42z
-  Copyright (c) OASIS Open 2025. All Rights Reserved.
+  Generated on:      2026-02-09 15:16z
+  Copyright (c) OASIS Open 2026. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"
             xmlns:sac="urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2"

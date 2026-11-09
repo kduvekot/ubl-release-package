@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
-                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
-  Release Date:      03 December 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD03
+                     http://docs.oasis-open.org/ubl/csd03-UBL-2.5/
+  Release Date:      11 February 2026
   Module:            xsd/maindoc/UBL-Invoice-2.5.xsd
-  Generated on:      2025-12-03 12:42z
+  Generated on:      2026-02-09 15:15z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
@@ -415,7 +415,7 @@
                      <ccts:Definition>(Deprecated) A reference provided by the buyer used for internal routing of the document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. Use the BuyerReference ASBIE instead.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. Use the BuyerAssignedReference ASBIE instead.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Invoice</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Buyer</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Reference</ccts:PropertyTerm>
@@ -659,18 +659,20 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:BuyerReference" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cac:BuyerAssignedReference"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Invoice. Buyer Reference</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Invoice. Buyer Assigned Reference</ccts:DictionaryEntryName>
                      <ccts:Definition>A reference provided by the buyer used for internal routing of the document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Invoice</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Buyer Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Buyer Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Buyer Reference</ccts:RepresentationTerm>
+                     <ccts:PropertyTerm>Buyer Assigned Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Buyer Assigned Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Buyer Assigned Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
-                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
-  Release Date:      03 December 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD03
+                     http://docs.oasis-open.org/ubl/csd03-UBL-2.5/
+  Release Date:      11 February 2026
   Module:            xsd/common/UBL-CommonAggregateComponents-2.5.xsd
-  Generated on:      2025-12-03 12:42z
+  Generated on:      2026-02-09 15:15z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -118,10 +118,10 @@
    <xsd:element name="BusinessClassificationScheme" type="ClassificationSchemeType"/>
    <xsd:element name="BusinessParty" type="PartyType"/>
    <xsd:element name="BusinessPartyGroup" type="PartyGroupType"/>
+   <xsd:element name="BuyerAssignedReference" type="BuyerAssignedReferenceType"/>
    <xsd:element name="BuyerContact" type="ContactType"/>
    <xsd:element name="BuyerCustomerParty" type="CustomerPartyType"/>
    <xsd:element name="BuyerProposedSubstituteLineItem" type="LineItemType"/>
-   <xsd:element name="BuyerReference" type="BuyerReferenceType"/>
    <xsd:element name="BuyersItemIdentification" type="ItemIdentificationType"/>
    <xsd:element name="CallDuty" type="DutyType"/>
    <xsd:element name="CallForTenderDocumentReference" type="DocumentReferenceType"/>
@@ -4343,14 +4343,14 @@
          </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
-   <xsd:complexType name="BuyerReferenceType">
+   <xsd:complexType name="BuyerAssignedReferenceType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Buyer Reference. Details</ccts:DictionaryEntryName>
+               <ccts:DictionaryEntryName>Buyer Assigned Reference. Details</ccts:DictionaryEntryName>
                <ccts:Definition>A class to define a reference provided by the buyer for internal routing or classification.</ccts:Definition>
-               <ccts:ObjectClass>Buyer Reference</ccts:ObjectClass>
+               <ccts:ObjectClass>Buyer Assigned Reference</ccts:ObjectClass>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
@@ -4365,10 +4365,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Buyer Reference. Buyer Reference Code. Code</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Buyer Assigned Reference. Buyer Reference Code. Code</ccts:DictionaryEntryName>
                      <ccts:Definition>A code identifying the buyer reference, such as a department or internal unit.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Buyer Reference</ccts:ObjectClass>
+                     <ccts:ObjectClass>Buyer Assigned Reference</ccts:ObjectClass>
                      <ccts:PropertyTerm>Buyer Reference Code</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
                      <ccts:DataType>Code. Type</ccts:DataType>
@@ -4381,10 +4381,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Buyer Reference. Buyer Reference Text. Text</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Buyer Assigned Reference. Buyer Reference Text. Text</ccts:DictionaryEntryName>
                      <ccts:Definition>A textual description of the buyer reference.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Buyer Reference</ccts:ObjectClass>
+                     <ccts:ObjectClass>Buyer Assigned Reference</ccts:ObjectClass>
                      <ccts:PropertyTerm>Buyer Reference Text</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
@@ -9283,14 +9283,16 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:OfficeOfTransitLocation" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:OfficeOfTransitLocation"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Office Of Transit_ Location. Location</ccts:DictionaryEntryName>
                      <ccts:Definition>A location that finds the reference numbers for the departure, transit and destination offices.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Office Of Transit</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Location</ccts:PropertyTerm>
