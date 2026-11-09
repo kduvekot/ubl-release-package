@@ -125,6 +125,10 @@ the schema expressions.
            uri="maindoc/UBL-PackingList-2.5.xsd"/>
    <system systemId="urn:oasis:names:specification:ubl:schema:xsd:PriorInformationNotice-2"
            uri="maindoc/UBL-PriorInformationNotice-2.5.xsd"/>
+   <system systemId="urn:oasis:names:specification:ubl:schema:xsd:ProcurementStatus-2"
+           uri="maindoc/UBL-ProcurementStatus-2.5.xsd"/>
+   <system systemId="urn:oasis:names:specification:ubl:schema:xsd:ProcurementStatusRequest-2"
+           uri="maindoc/UBL-ProcurementStatusRequest-2.5.xsd"/>
    <system systemId="urn:oasis:names:specification:ubl:schema:xsd:ProductActivity-2"
            uri="maindoc/UBL-ProductActivity-2.5.xsd"/>
    <system systemId="urn:oasis:names:specification:ubl:schema:xsd:ProofOfReexportation-2"
@@ -203,6 +207,10 @@ the schema expressions.
            uri="maindoc/UBL-UnsubscribeFromProcedureResponse-2.5.xsd"/>
    <system systemId="urn:oasis:names:specification:ubl:schema:xsd:UtilityStatement-2"
            uri="maindoc/UBL-UtilityStatement-2.5.xsd"/>
+   <system systemId="urn:oasis:names:specification:ubl:schema:xsd:WasteMovement-2"
+           uri="maindoc/UBL-WasteMovement-2.5.xsd"/>
+   <system systemId="urn:oasis:names:specification:ubl:schema:xsd:WasteNotification-2"
+           uri="maindoc/UBL-WasteNotification-2.5.xsd"/>
    <system systemId="urn:oasis:names:specification:ubl:schema:xsd:Waybill-2"
            uri="maindoc/UBL-Waybill-2.5.xsd"/>
    <system systemId="urn:oasis:names:specification:ubl:schema:xsd:WeightStatement-2"

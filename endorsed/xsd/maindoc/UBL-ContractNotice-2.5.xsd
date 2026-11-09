@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsd/maindoc/UBL-ContractNotice-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
@@ -419,7 +419,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Contract Notice. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving this document.</ccts:Definition>
+                     <ccts:Definition>The Party who receives this Document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Contract Notice</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
-  Module:            xsd/maindoc/UBL-TenderStatusRequest-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
+  Module:            xsd/maindoc/UBL-ProcurementStatusRequest-2.5.xsd
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
-<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TenderStatusRequest-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ProcurementStatusRequest-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-            targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:TenderStatusRequest-2"
+            targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:ProcurementStatusRequest-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.5">
@@ -25,21 +25,21 @@
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.5.xsd"/>
    <!-- ===== Element Declarations ===== -->
-   <xsd:element name="TenderStatusRequest" type="TenderStatusRequestType">
+   <xsd:element name="ProcurementStatusRequest" type="ProcurementStatusRequestType">
       <xsd:annotation>
-         <xsd:documentation>A document sent by an Economic Operator asking about the details and status of a tendering procedure.</xsd:documentation>
+         <xsd:documentation>A document sent by an Economic Operator to a Contracting Party asking about the details and status of a procurement procedure, Project, or Lot.</xsd:documentation>
       </xsd:annotation>
    </xsd:element>
    <!-- ===== Type Definitions ===== -->
    <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
-   <xsd:complexType name="TenderStatusRequestType">
+   <xsd:complexType name="ProcurementStatusRequestType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Tender Status Request. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A document sent by an Economic Operator asking about the details and status of a tendering procedure.</ccts:Definition>
-               <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+               <ccts:DictionaryEntryName>Procurement Status Request. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>A document sent by an Economic Operator to a Contracting Party asking about the details and status of a procurement procedure, Project, or Lot.</ccts:Definition>
+               <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
@@ -54,10 +54,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -71,10 +71,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Customization Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -88,10 +88,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Profile Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Profile Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -105,10 +105,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Identifies an instance of executing a profile, to associate all transactions in a collaboration.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Profile Execution Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -122,10 +122,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -138,10 +138,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. UUID. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. UUID. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -154,10 +154,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Contract Folder Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Contract Folder Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>An identifier, assigned by the sender, for the process file (i.e., record) to which this document belongs.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Contract Folder Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -170,10 +170,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Issue Date. Date</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Issue Date. Date</ccts:DictionaryEntryName>
                      <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
                      <ccts:DataType>Date. Type</ccts:DataType>
@@ -186,10 +186,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Issue Time. Time</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Issue Time. Time</ccts:DictionaryEntryName>
                      <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
                      <ccts:DataType>Time. Type</ccts:DataType>
@@ -202,10 +202,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Contract Name. Name</ccts:DictionaryEntryName>
-                     <ccts:Definition>Short title of a contract associated with this Tender.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Contract Name. Name</ccts:DictionaryEntryName>
+                     <ccts:Definition>Short title of a contract associated with this Procedure.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Contract Name</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
                      <ccts:DataType>Name. Type</ccts:DataType>
@@ -218,10 +218,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Note. Text</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Note. Text</ccts:DictionaryEntryName>
                      <ccts:Definition>Free-form text pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Note</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
                      <ccts:DataType>Text. Type</ccts:DataType>
@@ -234,10 +234,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Signature</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Signature</ccts:DictionaryEntryName>
                      <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
@@ -250,10 +250,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Contracting Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The Contracting Party eceiving the tender status inquiry.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Contracting Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Contracting Party receiving the tender status inquiry.</ccts:Definition>
                      <ccts:Cardinality>1..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Contracting Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Contracting Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Contracting Party</ccts:RepresentationTerm>
@@ -266,13 +266,29 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Economic Operator Party</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Economic Operator Party</ccts:DictionaryEntryName>
                      <ccts:Definition>The Economic Operator issuing the inquiry on the status of a tendering process.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Economic Operator Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Economic Operator Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Economic Operator Party</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:TenderingProcess" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Tendering Process</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Tendering Process of this Procedure Status Request.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Tendering Process</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Tendering Process</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Tendering Process</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -282,10 +298,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Procurement Project</ccts:DictionaryEntryName>
-                     <ccts:Definition>An overall definition of this procurement project.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Procurement Project</ccts:DictionaryEntryName>
+                     <ccts:Definition>An overall definition of this Procurement Project.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Procurement Project</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Procurement Project</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Procurement Project</ccts:RepresentationTerm>
@@ -298,10 +314,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Tender Status Request. Procurement Project Lot</ccts:DictionaryEntryName>
-                     <ccts:Definition>One of the procurement project lots into which this contract can be split.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Procurement Status Request. Procurement Project Lot</ccts:DictionaryEntryName>
+                     <ccts:Definition>One of the Procurement Project Lots into which this contract can be split.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Tender Status Request</ccts:ObjectClass>
+                     <ccts:ObjectClass>Procurement Status Request</ccts:ObjectClass>
                      <ccts:PropertyTerm>Procurement Project Lot</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Procurement Project Lot</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Procurement Project Lot</ccts:RepresentationTerm>

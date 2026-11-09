@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsd/maindoc/UBL-ImportCustomsDeclaration-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:ImportCustomsDeclaration-2"
@@ -335,7 +335,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Import Customs Declaration. Consignor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The Party responsible for the consignment</ccts:Definition>
+                     <ccts:Definition>The Party who is reponsible for sending the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Import Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignor</ccts:PropertyTermQualifier>
@@ -352,7 +352,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Import Customs Declaration. Consignee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The Party responsible for receiving the goods.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Import Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignee</ccts:PropertyTermQualifier>
@@ -369,7 +369,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Import Customs Declaration. Freight Forwarder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The Party responsibe for the freight forwarding.</ccts:Definition>
+                     <ccts:Definition>The Party who combines individual smaller consignments into a single larger shipment (a so-called consolidated consignment or shipment) which is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Import Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Freight Forwarder</ccts:PropertyTermQualifier>
@@ -386,7 +386,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Import Customs Declaration. Customs_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The authority who is legally responsible for processing the declaration.</ccts:Definition>
+                     <ccts:Definition>The Authority who is legally responsible for processing the Declaration.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Import Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Customs</ccts:PropertyTermQualifier>
@@ -403,7 +403,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Import Customs Declaration. Notifier_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for contact on master level.</ccts:Definition>
+                     <ccts:Definition>The Party who is responsible for contact on master level.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Import Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Notifier</ccts:PropertyTermQualifier>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsd/maindoc/UBL-TransportProgressStatus-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportProgressStatus-2"
@@ -232,7 +232,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Progress Status. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending the Transport Progress Status.</ccts:Definition>
+                     <ccts:Definition>The Party who sends the Transport Progress Status.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Progress Status</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -249,7 +249,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Progress Status. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving the Transport Progress Status.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Transport Progress Status.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Progress Status</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -266,7 +266,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Progress Status. Source Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that is the source of the Transport Progress Status.</ccts:Definition>
+                     <ccts:Definition>The Party who issues the Transport Progress Status.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Progress Status</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Source Issuer</ccts:PropertyTermQualifier>

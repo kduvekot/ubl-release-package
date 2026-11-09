@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsdrt/common/UBL-CommonAggregateComponents-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -74,6 +74,7 @@
    <xsd:element name="ApplicableAddress" type="AddressType"/>
    <xsd:element name="ApplicableDeliveryPeriod" type="PeriodType"/>
    <xsd:element name="ApplicablePeriod" type="PeriodType"/>
+   <xsd:element name="ApplicableRadioactiveIsotope" type="RadioactiveIsotopeType"/>
    <xsd:element name="ApplicableRegulation" type="RegulationType"/>
    <xsd:element name="ApplicableTaxCategory" type="TaxCategoryType"/>
    <xsd:element name="ApplicableTerritoryAddress" type="AddressType"/>
@@ -99,6 +100,7 @@
    <xsd:element name="BallastWaterTransaction" type="BallastWaterTransactionType"/>
    <xsd:element name="BeneficiaryParty" type="PartyType"/>
    <xsd:element name="BillOfLadingHolderParty" type="PartyType"/>
+   <xsd:element name="BillToParty" type="PartyType"/>
    <xsd:element name="BillingReference" type="BillingReferenceType"/>
    <xsd:element name="BillingReferenceLine" type="BillingReferenceLineType"/>
    <xsd:element name="BirthplaceLocation" type="LocationType"/>
@@ -267,6 +269,7 @@
                 type="BallastWaterTransactionType"/>
    <xsd:element name="DischargeTransportEvent" type="TransportEventType"/>
    <xsd:element name="DiscrepancyResponse" type="ResponseType"/>
+   <xsd:element name="DisposalFacilityParty" type="PartyType"/>
    <xsd:element name="DocumentAvailabilityPeriod" type="PeriodType"/>
    <xsd:element name="DocumentDistribution" type="DocumentDistributionType"/>
    <xsd:element name="DocumentMetadata" type="DocumentMetadataType"/>
@@ -283,6 +286,7 @@
    <xsd:element name="EconomicOperatorRole" type="EconomicOperatorRoleType"/>
    <xsd:element name="EconomicOperatorShortList" type="EconomicOperatorShortListType"/>
    <xsd:element name="EffectivePeriod" type="PeriodType"/>
+   <xsd:element name="ElectronicAddress" type="ElectronicAddressType"/>
    <xsd:element name="EmbassyEndorsement" type="EndorsementType"/>
    <xsd:element name="EmergencyTemperature" type="TemperatureType"/>
    <xsd:element name="EmissionCalculationLocation" type="LocationType"/>
@@ -299,6 +303,8 @@
    <xsd:element name="EndOfLifeTreatment" type="EndOfLifeTreatmentType"/>
    <xsd:element name="Endorsement" type="EndorsementType"/>
    <xsd:element name="EndorserParty" type="EndorserPartyType"/>
+   <xsd:element name="EnergyConsumptionAllocation"
+                type="EnergyConsumptionAllocationType"/>
    <xsd:element name="EnergyTaxReport" type="EnergyTaxReportType"/>
    <xsd:element name="EnergyWaterConsumptionCorrection"
                 type="ConsumptionCorrectionType"/>
@@ -448,6 +454,7 @@
    <xsd:element name="LineReference" type="LineReferenceType"/>
    <xsd:element name="LineResponse" type="LineResponseType"/>
    <xsd:element name="LineValidityPeriod" type="PeriodType"/>
+   <xsd:element name="LoadedHazardousItem" type="HazardousItemType"/>
    <xsd:element name="LoadingLocation" type="LocationType"/>
    <xsd:element name="LoadingPortLocation" type="LocationType"/>
    <xsd:element name="LoadingProofParty" type="PartyType"/>
@@ -508,6 +515,7 @@
    <xsd:element name="OfficeOfExportLocation" type="LocationType"/>
    <xsd:element name="OfficeOfImportLocation" type="LocationType"/>
    <xsd:element name="OfficeOfSubSequentiallyEntryLocation" type="LocationType"/>
+   <xsd:element name="OfficeOfTransitLocation" type="LocationType"/>
    <xsd:element name="OnAccountPayment" type="OnAccountPaymentType"/>
    <xsd:element name="OnCarriageShipmentStage" type="ShipmentStageType"/>
    <xsd:element name="OpenTenderEvent" type="EventType"/>
@@ -614,6 +622,8 @@
    <xsd:element name="PricingReference" type="PricingReferenceType"/>
    <xsd:element name="PrimaryPortCallPurpose" type="PortCallPurposeType"/>
    <xsd:element name="Prize" type="PrizeType"/>
+   <xsd:element name="ProcedureStatusRequestDocumentReference"
+                type="DocumentReferenceType"/>
    <xsd:element name="ProcessJustification" type="ProcessJustificationType"/>
    <xsd:element name="ProcessingParty" type="PartyType"/>
    <xsd:element name="ProcurementAdditionalType" type="ProcurementAdditionalTypeType"/>
@@ -646,6 +656,8 @@
    <xsd:element name="QuotationLine" type="QuotationLineType"/>
    <xsd:element name="QuotationLineReference" type="LineReferenceType"/>
    <xsd:element name="QuotedMonetaryTotal" type="MonetaryTotalType"/>
+   <xsd:element name="RadioactiveIsotope" type="RadioactiveIsotopeType"/>
+   <xsd:element name="RadioactiveMaterial" type="RadioactiveMaterialType"/>
    <xsd:element name="RailTransport" type="RailTransportType"/>
    <xsd:element name="RangeDimension" type="DimensionType"/>
    <xsd:element name="RealizedLocation" type="LocationType"/>
@@ -658,6 +670,7 @@
    <xsd:element name="ReceivingDigitalService" type="DigitalServiceType"/>
    <xsd:element name="RecipientCustomerParty" type="CustomerPartyType"/>
    <xsd:element name="RecipientParty" type="PartyType"/>
+   <xsd:element name="RecoveryFacilityParty" type="PartyType"/>
    <xsd:element name="ReexportationDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="ReexportationEvidence" type="EvidenceType"/>
    <xsd:element name="ReferencedConsignment" type="ConsignmentType"/>
@@ -714,7 +727,6 @@
    <xsd:element name="RequestedTenderTotal" type="RequestedTenderTotalType"/>
    <xsd:element name="RequestedValidityPeriod" type="PeriodType"/>
    <xsd:element name="RequestedWaypointTransportEvent" type="TransportEventType"/>
-   <xsd:element name="RequestorParty" type="PartyType"/>
    <xsd:element name="RequiredBusinessClassificationScheme"
                 type="ClassificationSchemeType"/>
    <xsd:element name="RequiredCertificationDocumentReference"
@@ -727,7 +739,6 @@
    <xsd:element name="ResidenceAddress" type="AddressType"/>
    <xsd:element name="ResolutionDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="ResourceConsumption" type="ResourceConsumptionType"/>
-   <xsd:element name="ResponderParty" type="PartyType"/>
    <xsd:element name="Response" type="ResponseType"/>
    <xsd:element name="ResponseValue" type="ResponseValueType"/>
    <xsd:element name="ResponsibleOfficerPerson" type="PersonType"/>
@@ -870,8 +881,6 @@
    <xsd:element name="TenderRecipientParty" type="PartyType"/>
    <xsd:element name="TenderRequirement" type="TenderRequirementType"/>
    <xsd:element name="TenderResult" type="TenderResultType"/>
-   <xsd:element name="TenderStatusInquiryDocumentReference"
-                type="DocumentReferenceType"/>
    <xsd:element name="TenderSubmissionDeadlinePeriod" type="PeriodType"/>
    <xsd:element name="TenderValidityPeriod" type="PeriodType"/>
    <xsd:element name="TenderedProject" type="TenderedProjectType"/>
@@ -959,9 +968,12 @@
    <xsd:element name="WarrantyParty" type="PartyType"/>
    <xsd:element name="WarrantyValidityPeriod" type="PeriodType"/>
    <xsd:element name="WasteGenerated" type="WasteGeneratedType"/>
+   <xsd:element name="WasteNotificationDocumentReference" type="DocumentReferenceType"/>
+   <xsd:element name="WasteProducerParty" type="PartyType"/>
    <xsd:element name="WebSite" type="WebSiteType"/>
    <xsd:element name="WebSiteAccess" type="WebSiteAccessType"/>
    <xsd:element name="WeighingParty" type="PartyType"/>
+   <xsd:element name="WeightStatementDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="WinningParty" type="WinningPartyType"/>
    <xsd:element name="WithholdingTaxTotal" type="TaxTotalType"/>
    <xsd:element name="WitnessParty" type="PartyType"/>
@@ -1319,7 +1331,7 @@
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PrimaryAccountNumberID" minOccurs="1" maxOccurs="1"/>
-         <xsd:element ref="cbc:NetworkID" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:NetworkID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:CardTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ValidityStartDate" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:ExpiryDate" minOccurs="0" maxOccurs="1"/>
@@ -1710,6 +1722,7 @@
          <xsd:element ref="cac:OfficeOfDestinationLocation" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:OfficeOfImportLocation" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:OfficeOfExportLocation" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:OfficeOfTransitLocation" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:EnvironmentalEmission" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:InsurancePolicy" minOccurs="0" maxOccurs="unbounded"/>
@@ -2366,6 +2379,13 @@
          <xsd:element ref="cac:PreSelectedParty" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
+   <xsd:complexType name="ElectronicAddressType">
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ExchangeNetworkID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ElectronicAddressID" minOccurs="1" maxOccurs="1"/>
+      </xsd:sequence>
+   </xsd:complexType>
    <xsd:complexType name="EmissionCalculationMethodType">
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
@@ -2437,6 +2457,14 @@
          <xsd:element ref="cbc:SequenceNumeric" minOccurs="1" maxOccurs="1"/>
          <xsd:element ref="cac:Party" minOccurs="1" maxOccurs="1"/>
          <xsd:element ref="cac:SignatoryContact" minOccurs="1" maxOccurs="1"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="EnergyConsumptionAllocationType">
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:EnergySourceTypeCode" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:AllocatedEnergyMeasure" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cac:EnvironmentalEmission" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="EnergyTaxReportType">
@@ -2646,6 +2674,7 @@
          <xsd:element ref="cbc:AccountTypeCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:AccountFormatCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:CurrencyCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:BlockchainID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PaymentNote" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:FinancialInstitutionBranch" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:Country" minOccurs="0" maxOccurs="1"/>
@@ -2819,6 +2848,9 @@
          <xsd:element ref="cac:MinimumTemperature" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:MaximumTemperature" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:InsurancePolicy" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:EnergyConsumptionAllocation"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="GoodsItemContainerType">
@@ -2897,11 +2929,15 @@
          <xsd:element ref="cbc:MaritimePollutantCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TechnicalName" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:CategoryName" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:ProperShippingName" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:HazardousCategoryCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:UpperOrangeHazardPlacardID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:LowerOrangeHazardPlacardID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:MarkingID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:HazardClassID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:HazardousTypeCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:PackagingDangerLevelCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:GrossWeightMeasure" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:NetWeightMeasure" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:NetVolumeMeasure" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:Quantity" minOccurs="0" maxOccurs="1"/>
@@ -2912,6 +2948,8 @@
          <xsd:element ref="cac:FlashpointTemperature" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:AdditionalTemperature" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:PositionOnBoardStowage" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:RadioactiveMaterial" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:Package" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="ISPSRequirementsType">
@@ -3653,7 +3691,6 @@
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:WebsiteURI" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:LogoReferenceID" minOccurs="0" maxOccurs="1"/>
-         <xsd:element ref="cbc:EndpointID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:IndustryClassificationCode"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
@@ -3677,6 +3714,7 @@
          <xsd:element ref="cac:FinancialAccount" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:AdditionalWebSite" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:SocialMediaProfile" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:ElectronicAddress" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="PartyGroupType">
@@ -3780,6 +3818,8 @@
                       maxOccurs="unbounded"/>
          <xsd:element ref="cbc:PaymentDueDate" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PaymentChannelCode" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:PaymentRailID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:PaymentPlatformID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:InstructionID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:InstructionNote" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cbc:PaymentID" minOccurs="0" maxOccurs="unbounded"/>
@@ -4253,6 +4293,27 @@
          <xsd:element ref="cac:RequestLineReference" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
+   <xsd:complexType name="RadioactiveIsotopeType">
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Name" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:ActivityLevelMeasure" minOccurs="1" maxOccurs="1"/>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="RadioactiveMaterialType">
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:Name" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:SpecialFormDescription"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cbc:TransportIndexNumeric" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:FissileCriticalitySafetyIndexNumeric"
+                      minOccurs="0"
+                      maxOccurs="1"/>
+         <xsd:element ref="cac:ApplicableRadioactiveIsotope" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+   </xsd:complexType>
    <xsd:complexType name="RailTransportType">
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
@@ -4479,6 +4540,7 @@
       <xsd:sequence>
          <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:LicensePlateID" minOccurs="1" maxOccurs="1"/>
+         <xsd:element ref="cbc:TrailerLicensePlateID" minOccurs="0" maxOccurs="1"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="SalesItemType">
@@ -5354,7 +5416,7 @@
          <xsd:element ref="cac:EconomicOperatorShortList"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
-         <xsd:element ref="cac:OpenTenderEvent" minOccurs="0" maxOccurs="unbounded"/>
+         <xsd:element ref="cac:OpenTenderEvent" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:AuctionTerms" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:FrameworkAgreement" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:ContractingSystem" minOccurs="0" maxOccurs="unbounded"/>
@@ -5517,6 +5579,7 @@
          <xsd:element ref="cbc:TrackingDeviceCode" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:PowerIndicator" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cbc:TraceID" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cbc:StowagePositionID" minOccurs="0" maxOccurs="1"/>
          <xsd:element ref="cac:MeasurementDimension" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:TransportEquipmentSeal"
                       minOccurs="0"
@@ -5573,6 +5636,7 @@
          <xsd:element ref="cac:Package" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:GoodsItem" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:VerifiedGrossMass" minOccurs="0" maxOccurs="1"/>
+         <xsd:element ref="cac:LoadedHazardousItem" minOccurs="0" maxOccurs="unbounded"/>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="TransportEquipmentSealType">
@@ -5666,6 +5730,9 @@
          <xsd:element ref="cac:ReferencedShipment" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:Package" minOccurs="0" maxOccurs="unbounded"/>
          <xsd:element ref="cac:DamageDocumentationAttachment"
+                      minOccurs="0"
+                      maxOccurs="unbounded"/>
+         <xsd:element ref="cac:EnergyConsumptionAllocation"
                       minOccurs="0"
                       maxOccurs="unbounded"/>
       </xsd:sequence>

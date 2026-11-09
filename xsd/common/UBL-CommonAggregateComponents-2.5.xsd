@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsd/common/UBL-CommonAggregateComponents-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
@@ -77,6 +77,7 @@
    <xsd:element name="ApplicableAddress" type="AddressType"/>
    <xsd:element name="ApplicableDeliveryPeriod" type="PeriodType"/>
    <xsd:element name="ApplicablePeriod" type="PeriodType"/>
+   <xsd:element name="ApplicableRadioactiveIsotope" type="RadioactiveIsotopeType"/>
    <xsd:element name="ApplicableRegulation" type="RegulationType"/>
    <xsd:element name="ApplicableTaxCategory" type="TaxCategoryType"/>
    <xsd:element name="ApplicableTerritoryAddress" type="AddressType"/>
@@ -271,6 +272,7 @@
                 type="BallastWaterTransactionType"/>
    <xsd:element name="DischargeTransportEvent" type="TransportEventType"/>
    <xsd:element name="DiscrepancyResponse" type="ResponseType"/>
+   <xsd:element name="DisposalFacilityParty" type="PartyType"/>
    <xsd:element name="DocumentAvailabilityPeriod" type="PeriodType"/>
    <xsd:element name="DocumentDistribution" type="DocumentDistributionType"/>
    <xsd:element name="DocumentMetadata" type="DocumentMetadataType"/>
@@ -287,6 +289,7 @@
    <xsd:element name="EconomicOperatorRole" type="EconomicOperatorRoleType"/>
    <xsd:element name="EconomicOperatorShortList" type="EconomicOperatorShortListType"/>
    <xsd:element name="EffectivePeriod" type="PeriodType"/>
+   <xsd:element name="ElectronicAddress" type="ElectronicAddressType"/>
    <xsd:element name="EmbassyEndorsement" type="EndorsementType"/>
    <xsd:element name="EmergencyTemperature" type="TemperatureType"/>
    <xsd:element name="EmissionCalculationLocation" type="LocationType"/>
@@ -303,6 +306,8 @@
    <xsd:element name="EndOfLifeTreatment" type="EndOfLifeTreatmentType"/>
    <xsd:element name="Endorsement" type="EndorsementType"/>
    <xsd:element name="EndorserParty" type="EndorserPartyType"/>
+   <xsd:element name="EnergyConsumptionAllocation"
+                type="EnergyConsumptionAllocationType"/>
    <xsd:element name="EnergyTaxReport" type="EnergyTaxReportType"/>
    <xsd:element name="EnergyWaterConsumptionCorrection"
                 type="ConsumptionCorrectionType"/>
@@ -453,6 +458,7 @@
    <xsd:element name="LineReference" type="LineReferenceType"/>
    <xsd:element name="LineResponse" type="LineResponseType"/>
    <xsd:element name="LineValidityPeriod" type="PeriodType"/>
+   <xsd:element name="LoadedHazardousItem" type="HazardousItemType"/>
    <xsd:element name="LoadingLocation" type="LocationType"/>
    <xsd:element name="LoadingPortLocation" type="LocationType"/>
    <xsd:element name="LoadingProofParty" type="PartyType"/>
@@ -514,6 +520,7 @@
    <xsd:element name="OfficeOfExportLocation" type="LocationType"/>
    <xsd:element name="OfficeOfImportLocation" type="LocationType"/>
    <xsd:element name="OfficeOfSubSequentiallyEntryLocation" type="LocationType"/>
+   <xsd:element name="OfficeOfTransitLocation" type="LocationType"/>
    <xsd:element name="OnAccountPayment" type="OnAccountPaymentType"/>
    <xsd:element name="OnCarriageShipmentStage" type="ShipmentStageType"/>
    <xsd:element name="OpenTenderEvent" type="EventType"/>
@@ -621,6 +628,8 @@
    <xsd:element name="PricingReference" type="PricingReferenceType"/>
    <xsd:element name="PrimaryPortCallPurpose" type="PortCallPurposeType"/>
    <xsd:element name="Prize" type="PrizeType"/>
+   <xsd:element name="ProcedureStatusRequestDocumentReference"
+                type="DocumentReferenceType"/>
    <xsd:element name="ProcessJustification" type="ProcessJustificationType"/>
    <xsd:element name="ProcessingParty" type="PartyType"/>
    <xsd:element name="ProcurementAdditionalType" type="ProcurementAdditionalTypeType"/>
@@ -653,6 +662,8 @@
    <xsd:element name="QuotationLine" type="QuotationLineType"/>
    <xsd:element name="QuotationLineReference" type="LineReferenceType"/>
    <xsd:element name="QuotedMonetaryTotal" type="MonetaryTotalType"/>
+   <xsd:element name="RadioactiveIsotope" type="RadioactiveIsotopeType"/>
+   <xsd:element name="RadioactiveMaterial" type="RadioactiveMaterialType"/>
    <xsd:element name="RailTransport" type="RailTransportType"/>
    <xsd:element name="RangeDimension" type="DimensionType"/>
    <xsd:element name="RealizedLocation" type="LocationType"/>
@@ -665,6 +676,7 @@
    <xsd:element name="ReceivingDigitalService" type="DigitalServiceType"/>
    <xsd:element name="RecipientCustomerParty" type="CustomerPartyType"/>
    <xsd:element name="RecipientParty" type="PartyType"/>
+   <xsd:element name="RecoveryFacilityParty" type="PartyType"/>
    <xsd:element name="ReexportationDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="ReexportationEvidence" type="EvidenceType"/>
    <xsd:element name="ReferencedConsignment" type="ConsignmentType"/>
@@ -967,9 +979,12 @@
    <xsd:element name="WarrantyParty" type="PartyType"/>
    <xsd:element name="WarrantyValidityPeriod" type="PeriodType"/>
    <xsd:element name="WasteGenerated" type="WasteGeneratedType"/>
+   <xsd:element name="WasteNotificationDocumentReference" type="DocumentReferenceType"/>
+   <xsd:element name="WasteProducerParty" type="PartyType"/>
    <xsd:element name="WebSite" type="WebSiteType"/>
    <xsd:element name="WebSiteAccess" type="WebSiteAccessType"/>
    <xsd:element name="WeighingParty" type="PartyType"/>
+   <xsd:element name="WeightStatementDocumentReference" type="DocumentReferenceType"/>
    <xsd:element name="WinningParty" type="WinningPartyType"/>
    <xsd:element name="WithholdingTaxTotal" type="TaxTotalType"/>
    <xsd:element name="WitnessParty" type="PartyType"/>
@@ -2165,7 +2180,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Appeal Terms. Appeal Information_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party presenting the information for an appeal.</ccts:Definition>
+                     <ccts:Definition>The Party who presents the information for the appeal.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Appeal Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Appeal Information</ccts:PropertyTermQualifier>
@@ -2182,7 +2197,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Appeal Terms. Appeal Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party to whom an appeal will be presented.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the appeal.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Appeal Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Appeal Receiver</ccts:PropertyTermQualifier>
@@ -2199,7 +2214,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Appeal Terms. Mediation_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that has been appointed to mediate any appeal.</ccts:Definition>
+                     <ccts:Definition>The Party who mediates any appeal.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Appeal Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Mediation</ccts:PropertyTermQualifier>
@@ -2417,7 +2432,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Attestation. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party issuing this attestation</ccts:Definition>
+                     <ccts:Definition>The Party who issues this Attestation</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Attestation</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -4582,14 +4597,14 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:NetworkID" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cbc:NetworkID" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Card Account. Network. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>An identifier for the financial service network provider of the card.</ccts:Definition>
-                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Card Account</ccts:ObjectClass>
                      <ccts:PropertyTerm>Network</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
@@ -5182,7 +5197,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Catalogue Line. Warranty_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for any warranty associated with the item described in this catalogue line.</ccts:Definition>
+                     <ccts:Definition>The Party who is responsible for any warranty associated with the item described in this Catalogue Line.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Catalogue Line</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Warranty</ccts:PropertyTermQualifier>
@@ -6002,7 +6017,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The authorized organization that issued this certificate, the provider of the certificate.</ccts:Definition>
+                     <ccts:Definition>The authorised Organisation who issues this Certificate.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -6217,7 +6232,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin Application. Preparation_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party (individual, group, or body) that prepared this CoO application.</ccts:Definition>
+                     <ccts:Definition>The Party who prepares this Certificate of Origin Application. This Party is normally an individual, a group or a body.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin Application</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Preparation</ccts:PropertyTermQualifier>
@@ -6234,7 +6249,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin Application. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The organization authorized to issue the CoO requested by this application.</ccts:Definition>
+                     <ccts:Definition>The authorised Organisation who issues the Certificate of Origin requested by this application.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin Application</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -6251,7 +6266,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin Application. Exporter_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party making an export declaration, or on behalf of which the export declaration is made, and that is the owner of the goods or has similar right of disposal over them at the time when the declaration is accepted.</ccts:Definition>
+                     <ccts:Definition>The Party who exports the goods or has similar right of disposal over them at the time of export.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin Application</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Exporter</ccts:PropertyTermQualifier>
@@ -6269,7 +6284,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Certificate Of Origin Application. Importer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party making an import declaration, or on behalf of which a customs clearing agent or other authorized person makes an import declaration. This may include a person who has possession of the goods or to whom the goods are consigned.</ccts:Definition>
+                     <ccts:Definition>The Party who imports the goods, or on whose behalf the goods are being imported.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Certificate Of Origin Application</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Importer</ccts:PropertyTermQualifier>
@@ -8500,7 +8515,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Consignee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party to which goods are consigned.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignee</ccts:PropertyTermQualifier>
@@ -8518,7 +8533,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Exporter_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that makes the export declaration, or on behalf of which the export declaration is made, and that is the owner of the goods in this consignment or has similar right of disposal over them at the time when the declaration is accepted.</ccts:Definition>
+                     <ccts:Definition>The Party who exports the goods or has similar right of disposal over them at the time of export.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Exporter</ccts:PropertyTermQualifier>
@@ -8536,7 +8551,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Consignor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party consigning goods, as stipulated in the transport contract by the party ordering transport.</ccts:Definition>
+                     <ccts:Definition>The Party who is reponsible for sending the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignor</ccts:PropertyTermQualifier>
@@ -8554,7 +8569,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Importer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that makes an import declaration regarding this consignment, or on behalf of which a customs clearing agent or other authorized person makes an import declaration regarding this consignment. This may include a person who has possession of the goods or to whom the goods are consigned.</ccts:Definition>
+                     <ccts:Definition>The Party who imports the goods, or on whose behalf the goods are being imported.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Importer</ccts:PropertyTermQualifier>
@@ -8572,7 +8587,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Carrier_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing the transport of goods in this consignment between named points.</ccts:Definition>
+                     <ccts:Definition>The Party who provides the transport of goods between named points.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Carrier</ccts:PropertyTermQualifier>
@@ -8590,7 +8605,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Freight Forwarder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party combining individual smaller consignments into a single larger shipment (the consolidated shipment), which is sent to a counterpart that mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
+                     <ccts:Definition>The Party who combines individual smaller consignments into a single larger shipment (a so-called consolidated consignment or shipment) which is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Freight Forwarder</ccts:PropertyTermQualifier>
@@ -8608,7 +8623,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Notify_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party to be notified upon arrival of goods and when special occurrences (usually pre-defined) take place during a transportation service.</ccts:Definition>
+                     <ccts:Definition>The Party who is notified upon arrival of Goods and when special occurrences (usually pre-defined) take place during a transportation service.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Notify</ccts:PropertyTermQualifier>
@@ -8626,7 +8641,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Original Despatch_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The original despatch (sender) party for this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who originally sends this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Original Despatch</ccts:PropertyTermQualifier>
@@ -8660,7 +8675,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Performing Carrier_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party performing the carriage of this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who performs the carriage of this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Performing Carrier</ccts:PropertyTermQualifier>
@@ -8677,7 +8692,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Substitute Carrier_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A substitute party performing the carriage of this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who subtitutes the carrier of this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Substitute Carrier</ccts:PropertyTermQualifier>
@@ -8694,7 +8709,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Logistics Operator_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The logistics operator party for this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who operates the logistics for this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Logistics Operator</ccts:PropertyTermQualifier>
@@ -8711,7 +8726,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Transport Advisor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing transport advice this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who provides transport advice in this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Transport Advisor</ccts:PropertyTermQualifier>
@@ -8730,7 +8745,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Hazardous Item Notification_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that would be notified of a hazardous item in this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who is notified of a Hazardous Item in this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Hazardous Item Notification</ccts:PropertyTermQualifier>
@@ -8747,7 +8762,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Insurance_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party holding the insurance for this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who holds the insurance for this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Insurance</ccts:PropertyTermQualifier>
@@ -8764,7 +8779,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Mortgage Holder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party holding the mortgage for this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who holds the mortgage for this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Mortgage Holder</ccts:PropertyTermQualifier>
@@ -8781,7 +8796,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Bill Of Lading Holder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party holding the bill of lading for this consignment.</ccts:Definition>
+                     <ccts:Definition>The Party who holds the Bill of Lading for this Consignment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Bill Of Lading Holder</ccts:PropertyTermQualifier>
@@ -9153,7 +9168,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Office Of Entry_ Location. Location</ccts:DictionaryEntryName>
-                     <ccts:Definition>The location of the office of entry of this consignment.</ccts:Definition>
+                     <ccts:Definition>The customs office or offices indicated in the authorisation as empowered to accept declarations entering goods for the arrangements.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Office Of Entry</ccts:PropertyTermQualifier>
@@ -9172,7 +9187,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Office Of Sub Sequentially Entry_ Location. Location</ccts:DictionaryEntryName>
-                     <ccts:Definition>The location of the office of the subsequentially entry of this consignment.</ccts:Definition>
+                     <ccts:Definition>A location that is involved in the subsequent entry of goods in a consignment. This could mean a customs office or facility where goods are processed after their initial entry point, possibly for further clearance, inspection, or transit.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Office Of Sub Sequentially Entry</ccts:PropertyTermQualifier>
@@ -9189,7 +9204,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Office Of Exit_ Location. Location</ccts:DictionaryEntryName>
-                     <ccts:Definition>The location of the office of exit of this consignment.</ccts:Definition>
+                     <ccts:Definition>The customs office of the actual exit of the goods at which the goods are placed in the export procedure and released for exit.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Office Of Exit</ccts:PropertyTermQualifier>
@@ -9206,7 +9221,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Office Of Departure_ Location. Location</ccts:DictionaryEntryName>
-                     <ccts:Definition>The location of the office of departure of this consignment.</ccts:Definition>
+                     <ccts:Definition>A Customs Office where the customs declaration placing goods under transit is accepted.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Office Of Departure</ccts:PropertyTermQualifier>
@@ -9223,7 +9238,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Office Of Destination_ Location. Location</ccts:DictionaryEntryName>
-                     <ccts:Definition>The location of the office of destination of this consignment.</ccts:Definition>
+                     <ccts:Definition>Any customs office at which a customs transit operation is terminated.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Office Of Destination</ccts:PropertyTermQualifier>
@@ -9240,7 +9255,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Office Of Import_ Location. Location</ccts:DictionaryEntryName>
-                     <ccts:Definition>The location of the office of import of this consignment.</ccts:Definition>
+                     <ccts:Definition>The customs office where the formalities for assigning goods brought into the customs territory of the Community to a customs-approved treatment or use are to be carried out.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Office Of Import</ccts:PropertyTermQualifier>
@@ -9257,10 +9272,27 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Consignment. Office Of Export_ Location. Location</ccts:DictionaryEntryName>
-                     <ccts:Definition>The location of the office of export of this consignment.</ccts:Definition>
+                     <ccts:Definition>The customs office at which an export declaration or a re-export declaration is made.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Consignment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Office Of Export</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Location</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Location</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:OfficeOfTransitLocation" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Consignment. Office Of Transit_ Location. Location</ccts:DictionaryEntryName>
+                     <ccts:Definition>A location that finds the reference numbers for the departure, transit and destination offices.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Consignment</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Office Of Transit</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Location</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Location</ccts:RepresentationTerm>
@@ -11473,7 +11505,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Contracting Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The contracting party itself.</ccts:Definition>
+                     <ccts:Definition>The Party who is reponsible for the Contract.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Contracting Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -12206,7 +12238,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Credit Note Line. Originator_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who originated the Order to which the Credit Note is related.</ccts:Definition>
+                     <ccts:Definition>The Party who originates the Order to which the Credit Note is related.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Credit Note Line</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -12627,7 +12659,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Customer Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The customer party itself.</ccts:Definition>
+                     <ccts:Definition>The Customer Party itself.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Customer Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -12815,7 +12847,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Customs Declaration. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>Describes the party issuing the customs declaration.</ccts:Definition>
+                     <ccts:Definition>The Party who issues this Customs Declaration.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -12832,7 +12864,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Customs Declaration. Consignor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party, usually the seller, who is responsible for the consignment</ccts:Definition>
+                     <ccts:Definition>The Party who is reponsible for sending the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignor</ccts:PropertyTermQualifier>
@@ -12849,7 +12881,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Customs Declaration. Consignee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party, usually the buyer, who will receive the goods</ccts:Definition>
+                     <ccts:Definition>The Party who receives the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignee</ccts:PropertyTermQualifier>
@@ -12866,7 +12898,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Customs Declaration. Freight Forwarder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The freight forwarder or the forwarding agent responsible for the transportation of the goods</ccts:Definition>
+                     <ccts:Definition>The Party who combines individual smaller consignments into a single larger shipment (a so-called consolidated consignment or shipment) which is sent to a counterpart who mirrors the consolidator's activity by dividing the consolidated consignment into its original components.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Freight Forwarder</ccts:PropertyTermQualifier>
@@ -12883,7 +12915,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Customs Declaration. Customs_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The authority responsible for processing this customs declaration</ccts:Definition>
+                     <ccts:Definition>The Authority who processes this Customs Declaration.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Customs Declaration</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Customs</ccts:PropertyTermQualifier>
@@ -13907,7 +13939,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Delivery. Carrier_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for delivering the goods.</ccts:Definition>
+                     <ccts:Definition>The Party who provides the transport of goods between named points.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Delivery</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Carrier</ccts:PropertyTermQualifier>
@@ -13924,7 +13956,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Delivery. Delivery_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party to whom the goods are delivered.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Delivery</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Delivery</ccts:PropertyTermQualifier>
@@ -13941,7 +13973,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Delivery. Notify_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party to be notified of this delivery.</ccts:Definition>
+                     <ccts:Definition>The Party who is notified of this Delivery.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Delivery</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Notify</ccts:PropertyTermQualifier>
@@ -14710,7 +14742,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Despatch. Despatch_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party despatching the goods.</ccts:Definition>
+                     <ccts:Definition>The Party who despatches the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Despatch</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
@@ -14727,7 +14759,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Despatch. Carrier_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party carrying the goods.</ccts:Definition>
+                     <ccts:Definition>The Party who provides the transport of goods between named points.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Despatch</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Carrier</ccts:PropertyTermQualifier>
@@ -14744,7 +14776,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Despatch. Notify_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party to be notified of this despatch (pickup).</ccts:Definition>
+                     <ccts:Definition>The Party who is notified of this Despatch.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Despatch</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Notify</ccts:PropertyTermQualifier>
@@ -14761,7 +14793,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Despatch. Responsible_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for this despatch (pickup).</ccts:Definition>
+                     <ccts:Definition>The party who picks up the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Despatch</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Responsible</ccts:PropertyTermQualifier>
@@ -15687,7 +15719,7 @@
                      <ccts:Definition>(Deprecated) Text describing the interested party’s rights and limitations for distributing originals and copies of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Document Distribution</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Print</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Qualifier</ccts:PropertyTerm>
@@ -15706,7 +15738,7 @@
                      <ccts:Definition>(Deprecated) An indicator that the document in this ditribution is a copy (true) or the original (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Document Distribution</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
@@ -15725,7 +15757,7 @@
                      <ccts:Definition>(Deprecated) The maximum number of printed copies of the document that the interested party is allowed to make.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Document Distribution</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Copies</ccts:PropertyTerm>
@@ -15744,7 +15776,7 @@
                      <ccts:Definition>(Deprecated) The maximum number of printed originals of the document that the interested party is allowed to make.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Document Distribution</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Maximum</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Originals</ccts:PropertyTerm>
@@ -15776,7 +15808,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Document Distribution. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The interested party to which the document will be distributed.</ccts:Definition>
+                     <ccts:Definition>The interested Party who receives this Document.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Document Distribution</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -15933,7 +15965,7 @@
                      <ccts:Definition>(Deprecated) An indicator that the referenced document is a copy (true) or the original (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Document Reference</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
@@ -16182,7 +16214,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Document Reference. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who issued the referenced document.</ccts:Definition>
+                     <ccts:Definition>The Party who issues the Referenced Document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Document Reference</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -16266,7 +16298,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Document Response. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that issued the document.</ccts:Definition>
+                     <ccts:Definition>The Party who issues this Document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Document Response</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -16283,7 +16315,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Document Response. Recipient_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party for which the document is intended.</ccts:Definition>
+                     <ccts:Definition>The Party who is the intended recipient of this Document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Document Response</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Recipient</ccts:PropertyTermQualifier>
@@ -16607,13 +16639,66 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Economic Operator Short List. Pre Selected_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The parties pre-selected allowed to submit tenders in a negotiated procedure. Negotiated procedure is a type of procedure where the contracting authorities can set the parties to be invited in the procurement project</ccts:Definition>
+                     <ccts:Definition>The Party who is preselected to submit a Tender in a negotiated procedure. Negotiated procedure is a type of procedure where the Buyer can set the Parties to be invited in the procurement project.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Economic Operator Short List</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Pre Selected</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="ElectronicAddressType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>ABIE</ccts:ComponentType>
+               <ccts:DictionaryEntryName>Electronic Address. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>A class to describe an Electronic Address where a Party is registered on a given exchange network.</ccts:Definition>
+               <ccts:ObjectClass>Electronic Address</ccts:ObjectClass>
+            </ccts:Component>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+        <xsd:element ref="cbc:ExchangeNetworkID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Electronic Address. Exchange Network_ Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>An identifier for the exchange network where the Party is registered.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Electronic Address</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Exchange Network</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:ElectronicAddressID" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Electronic Address. Electronic Address_ Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>An identifier for the Electronic Address of the Party on the given exchange network.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Electronic Address</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Electronic Address</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -17195,7 +17280,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Endorser Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party endorsing the application.</ccts:Definition>
+                     <ccts:Definition>The Party who endorses the application.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Endorser Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -17218,6 +17303,75 @@
                      <ccts:PropertyTerm>Contact</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Contact</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Contact</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="EnergyConsumptionAllocationType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>ABIE</ccts:ComponentType>
+               <ccts:DictionaryEntryName>Energy Consumption Allocation. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>A class to describe an allocation of energy consumption and its associated environmental emissions</ccts:Definition>
+               <ccts:ObjectClass>Energy Consumption Allocation</ccts:ObjectClass>
+            </ccts:Component>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+        <xsd:element ref="cbc:EnergySourceTypeCode" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Energy Consumption Allocation. Energy Source Type. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code indicating the type of energy used (e.g., diesel, electricity, etc.).</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Energy Consumption Allocation</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Energy Source Type</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                     <ccts:Examples>3087.90</ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:AllocatedEnergyMeasure" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Energy Consumption Allocation. Allocated Energy Measure. Measure</ccts:DictionaryEntryName>
+                     <ccts:Definition>The amount of energy allocated.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Energy Consumption Allocation</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Allocated Energy Measure</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Measure</ccts:RepresentationTerm>
+                     <ccts:DataType>Measure. Type</ccts:DataType>
+                     <ccts:Examples>3087.90</ccts:Examples>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:EnvironmentalEmission" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Energy Consumption Allocation. Environmental Emission</ccts:DictionaryEntryName>
+                     <ccts:Definition>The corresponding Environmental Emissions associated with this allocation.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Energy Consumption Allocation</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Environmental Emission</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Environmental Emission</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Environmental Emission</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -17897,7 +18051,7 @@
                      <ccts:Definition>(Deprecated) The location of this event.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>Misspelled element name. Use OccurrenceLocation instead.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. Misspelled element name. Use OccurrenceLocation instead.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Event</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Occurence</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Location</ccts:PropertyTerm>
@@ -18370,7 +18524,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Evidence. Evidence Issuing_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A class to describe a party issuing an evidentiary document.</ccts:Definition>
+                     <ccts:Definition>The Party who issues the evidentiary Document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Evidence</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Evidence Issuing</ccts:PropertyTermQualifier>
@@ -19391,7 +19545,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Financial Account. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>The identifier for this financial account; the bank account number.</ccts:Definition>
+                     <ccts:Definition>The identifier for this financial account; the bank account number or wallet identifer.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Financial Account</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -19474,13 +19628,29 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Financial Account. Currency Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying the currency in which this financial account is held.</ccts:Definition>
+                     <ccts:Definition>A code signifying the fiat or crypto currency in which this financial account is held.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Financial Account</ccts:ObjectClass>
                      <ccts:PropertyTerm>Currency Code</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
                      <ccts:DataTypeQualifier>Currency</ccts:DataTypeQualifier>
                      <ccts:DataType>Currency_ Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:BlockchainID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Financial Account. Blockchain Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>An identifier of the Blockchain on which the crypto or stablecoin is being held.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Financial Account</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Blockchain Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -20530,7 +20700,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Fuel Consumption. Fuel Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing the fuel.</ccts:Definition>
+                     <ccts:Definition>The Party who provides the fuel.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Fuel Consumption</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Fuel Provider</ccts:PropertyTermQualifier>
@@ -21467,6 +21637,24 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:EnergyConsumptionAllocation"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Goods Item. Energy Consumption Allocation</ccts:DictionaryEntryName>
+                     <ccts:Definition>An allocation of energy consumption and associated emissions attributable to the transport of this goods item.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Goods Item</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Energy Consumption Allocation</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Energy Consumption Allocation</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Energy Consumption Allocation</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="GoodsItemContainerType">
@@ -21854,7 +22042,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Processing. Processing_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party processing the goods</ccts:Definition>
+                     <ccts:Definition>The Party who processes the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Processing</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Processing</ccts:PropertyTermQualifier>
@@ -22292,6 +22480,23 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:ProperShippingName" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Hazardous Item. Proper_ Shipping Name. Name</ccts:DictionaryEntryName>
+                     <ccts:Definition>The proper shipping name supplemented.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Hazardous Item</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Proper</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Shipping Name</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+                     <ccts:DataType>Name. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:HazardousCategoryCode" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -22379,6 +22584,56 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:HazardousTypeCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Hazardous Item. Hazardous Type Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>The code specifying the type of hazard for this hazardous item.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Hazardous Item</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Hazardous Type Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:PackagingDangerLevelCode" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Hazardous Item. Packaging_ Danger Level Code. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>The code specifying the level of danger that the packaging of these dangerous goods must cover for transport purposes.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Hazardous Item</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Packaging</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Danger Level Code</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:GrossWeightMeasure" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Hazardous Item. Gross_ Weight. Measure</ccts:DictionaryEntryName>
+                     <ccts:Definition>The measure of the gross weight (mass) of these transported hazardous items including packaging but excluding the transport equipment.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Hazardous Item</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Gross</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Weight</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Measure</ccts:RepresentationTerm>
+                     <ccts:DataType>Measure. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cbc:NetWeightMeasure" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
@@ -22435,7 +22690,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Hazardous Item. Contact_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The individual, group, or body to be contacted in case of a hazardous incident associated with this item.</ccts:Definition>
+                     <ccts:Definition>The individual, group, or body who is contacted in case of a hazardous incident associated with this item.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Hazardous Item</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Contact</ccts:PropertyTermQualifier>
@@ -22542,6 +22797,38 @@
                      <ccts:PropertyTerm>Stowage</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Stowage</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Stowage</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:RadioactiveMaterial" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Hazardous Item. Radioactive Material</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Radioactive Material (Class 7) of this Hazadous Item.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Hazardous Item</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Radioactive Material</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Radioactive Material</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Radioactive Material</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:Package" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Hazardous Item. Package</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Package details for this Hazardous Item.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Hazardous Item</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Package</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Package</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Package</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -22782,7 +23069,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>ISPS Requirements. ISSC Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party issuing the International Ship Security Cetificate (ISSC).</ccts:Definition>
+                     <ccts:Definition>The Party who issues the International Ship Security Certificate (ISSC).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>ISPS Requirements</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>ISSC Issuer</ccts:PropertyTermQualifier>
@@ -22932,7 +23219,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Immobilized Security. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party issuing the immobilized security certificate.</ccts:Definition>
+                     <ccts:Definition>The Party who issues the Immobilized Security Certificate.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Immobilized Security</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -23016,7 +23303,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Instruction For Returns Line. Manufacturer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The manufacturer of the goods being returned.</ccts:Definition>
+                     <ccts:Definition>The Party who manufactures the Goods being returned.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Instruction For Returns Line</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Manufacturer</ccts:PropertyTermQualifier>
@@ -23833,7 +24120,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Invoice Line. Originator_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who originated the Order to which the Invoice is related.</ccts:Definition>
+                     <ccts:Definition>The Party who originates the Order to which the Invoice is related.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Invoice Line</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -24547,7 +24834,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Item. Manufacturer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The manufacturer of this item.</ccts:Definition>
+                     <ccts:Definition>The Party who manufacters this Item.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Item</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Manufacturer</ccts:PropertyTermQualifier>
@@ -24566,7 +24853,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Item. Information Content Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for specification of this item.</ccts:Definition>
+                     <ccts:Definition>The Party who specifies this Item.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Item</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Information Content Provider</ccts:PropertyTermQualifier>
@@ -24871,7 +25158,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Item Identification. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that issued this item identification.</ccts:Definition>
+                     <ccts:Definition>The Party who issues this Item Identification.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Item Identification</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -26557,7 +26844,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Line Item. Originator_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who originated the Order associated with this line item.</ccts:Definition>
+                     <ccts:Definition>The Party who originates the Order to which this Line Item is related.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Line Item</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Originator</ccts:PropertyTermQualifier>
@@ -26705,7 +26992,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Line Item. Warranty_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for any warranty associated with this line item.</ccts:Definition>
+                     <ccts:Definition>The Party who is responsible for any warranty associated with this Line Item.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Line Item</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Warranty</ccts:PropertyTermQualifier>
@@ -29267,7 +29554,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Notification Requirement. Notify_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party to be notified.</ccts:Definition>
+                     <ccts:Definition>The Party who is notified.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Notification Requirement</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Notify</ccts:PropertyTermQualifier>
@@ -29786,7 +30073,7 @@
                      <ccts:Definition>(Deprecated) Indicates whether the referenced Order is a copy (true) or the original (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Order Reference</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Copy</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
@@ -30335,7 +30622,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Participant Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The participant party itself.</ccts:Definition>
+                     <ccts:Definition>The Party who participates.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Participant Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -30441,7 +30728,7 @@
                      <ccts:Definition>(Deprecated) An indicator that this party is "care of" (c/o) (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Party</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Mark Care</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
@@ -30460,7 +30747,7 @@
                      <ccts:Definition>(Deprecated) An indicator that this party is "for the attention of" (FAO) (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. No consensus of real use cases for this.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Party</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Mark Attention</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Indicator</ccts:PropertyTerm>
@@ -30510,8 +30797,10 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Party. Endpoint Identifier. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for the end point of the routing service (e.g., EAN Location Number, GLN).</ccts:Definition>
+                     <ccts:Definition>(Deprecated) An identifier for the end point of the routing service (e.g., EAN Location Number, GLN).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. Use ElectronicAddress instead.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Endpoint Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
@@ -30549,7 +30838,7 @@
                      <ccts:Definition>(Endorsed cardinality: 0..1) A preferred identifier for this Party.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0..1</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>A Party should have a single preferred identifier at most. Use AdditionalPartyIdentification for any additional party identifiers.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>New endorsed cardinality since UBL 2.5. A Party should have a single preferred identifier at most. Use AdditionalPartyIdentification for any additional party identifiers.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party Identification</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party Identification</ccts:AssociatedObjectClass>
@@ -30586,7 +30875,7 @@
                      <ccts:Definition>(Endorsed cardinality: 0..1) A name for this party.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0..1</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>For additional trade names, Doing Business As, etc., use TradePartyName.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>New endorsed cardinality since UBL 2.5. For additional trade names, Doing Business As, etc., use TradePartyName.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party Name</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party Name</ccts:AssociatedObjectClass>
@@ -30733,7 +31022,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Party. Agent_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party who acts as an agent for this party.</ccts:Definition>
+                     <ccts:Definition>The Party who acts as an Agent for this Party.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Party</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Agent</ccts:PropertyTermQualifier>
@@ -30843,6 +31132,22 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:ElectronicAddress" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Party. Electronic Address</ccts:DictionaryEntryName>
+                     <ccts:Definition>An Electronic Address where this Party is registered.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Party</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Electronic Address</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Electronic Address</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Electronic Address</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="PartyGroupType">
@@ -30868,7 +31173,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Party Group. Group Type Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code to specify the type of grouping (e.g. EEIG)</ccts:Definition>
+                     <ccts:Definition>A code to specify the type of grouping (e.g. EEIG).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Party Group</ccts:ObjectClass>
                      <ccts:PropertyTerm>Group Type Code</ccts:PropertyTerm>
@@ -30884,7 +31189,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Party Group. Group_ Type. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Type of Grouping as text</ccts:Definition>
+                     <ccts:Definition>Type of grouping as text.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Party Group</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Group</ccts:PropertyTermQualifier>
@@ -30901,7 +31206,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Party Group. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party within the group</ccts:Definition>
+                     <ccts:Definition>A member of this Group of Parties.</ccts:Definition>
                      <ccts:Cardinality>1..n</ccts:Cardinality>
                      <ccts:ObjectClass>Party Group</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -31189,7 +31494,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Party Legal Entity. Head Office_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The head office of the legal entity</ccts:Definition>
+                     <ccts:Definition>The head office of this Legal Entity.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Party Legal Entity</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Head Office</ccts:PropertyTermQualifier>
@@ -31206,7 +31511,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Party Legal Entity. Shareholder Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party owning shares in this legal entity.</ccts:Definition>
+                     <ccts:Definition>A Party that owns shares or equity in this Legal Entity.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Party Legal Entity</ccts:ObjectClass>
                      <ccts:PropertyTerm>Shareholder Party</ccts:PropertyTerm>
@@ -31795,7 +32100,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Payment Mandate. Payer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The payer party (if different from the debtor).</ccts:Definition>
+                     <ccts:Definition>The Party, if different from the debtor, that makes the Payment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Payment Mandate</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Payer</ccts:PropertyTermQualifier>
@@ -31965,12 +32270,46 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Payment Means. Payment Channel Code. Code</ccts:DictionaryEntryName>
-                     <ccts:Definition>A code signifying the payment channel for this means of payment.</ccts:Definition>
+                     <ccts:Definition>A code signifying the Payment Channel for this Payment Means.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Payment Means</ccts:ObjectClass>
                      <ccts:PropertyTerm>Payment Channel Code</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
                      <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:PaymentRailID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payment Means. Payment Rail_ Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>An identifier of the Payment Rail or network through which the Payment is executed.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payment Means</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Payment Rail</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:PaymentPlatformID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Payment Means. Payment Platform_ Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>An identifier of the Payment Platform on which the Payment is executed or received.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Payment Means</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Payment Platform</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -32763,7 +33102,7 @@
                      <ccts:Definition>(Endorsed cardinality: 0..1) A description of this period, expressed as a code.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0..1</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>A Period should at most be associated with a single Code.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>New endorsed cardinality since UBL 2.5. A Period should at most be associated with a single Code.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Period</ccts:ObjectClass>
                      <ccts:PropertyTerm>Description Code</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
@@ -33652,7 +33991,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Pickup. Pickup_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for picking up a delivery.</ccts:Definition>
+                     <ccts:Definition>The Party who picks up the Delivery.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Pickup</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Pickup</ccts:PropertyTermQualifier>
@@ -34127,7 +34466,7 @@
                      <ccts:Definition>(Endorsed cardinality: 0..1) An indicator on whether electronic payment will be used in the post award process.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0..1</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>There cannot be more than one ElectronicPaymentUsageIndicator.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>New endorsed cardinality since UBL 2.5. There cannot be more than one ElectronicPaymentUsageIndicator.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Post Award Process</ccts:ObjectClass>
                      <ccts:PropertyTerm>Electronic Payment Usage</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Indicator</ccts:RepresentationTerm>
@@ -34225,7 +34564,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Power Of Attorney. Notary_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party notarizing this power of attorney.</ccts:Definition>
+                     <ccts:Definition>The Party who notarises this Power of Attorney.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Power Of Attorney</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Notary</ccts:PropertyTermQualifier>
@@ -34242,7 +34581,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Power Of Attorney. Agent_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party who acts as an agent or fiduciary for the principal and who holds this power of attorney on behalf of the principal.</ccts:Definition>
+                     <ccts:Definition>The Party acting as an agent or fiduciary for the principal and holding this Power of Attorney on behalf of the principal.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Power Of Attorney</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Agent</ccts:PropertyTermQualifier>
@@ -34259,7 +34598,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Power Of Attorney. Witness_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>An association to a WitnessParty.</ccts:Definition>
+                     <ccts:Definition>A Witness to this Power of Attorney.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Power Of Attorney</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Witness</ccts:PropertyTermQualifier>
@@ -35643,7 +35982,7 @@
                      <ccts:Definition>(Deprecated) The first day that products will be available to ship from buyer to seller if the proposal for this promotional event is accepted.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>Misspelled element. Use FirstShipmentAvailabilityDate instead.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. Misspelled element. Use FirstShipmentAvailabilityDate instead.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Promotional Event</ccts:ObjectClass>
                      <ccts:PropertyTerm>First Shipment Availibility Date</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
@@ -36495,7 +36834,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Qualifying Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The qualifying party itself.</ccts:Definition>
+                     <ccts:Definition>The Party who qualifies to participate in the Tender.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Qualifying Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -36737,6 +37076,164 @@
                      <ccts:PropertyTerm>Line Reference</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Line Reference</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Line Reference</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="RadioactiveIsotopeType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>ABIE</ccts:ComponentType>
+               <ccts:DictionaryEntryName>Radioactive Isotope. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>A class defining the maximum activity of the radioactive contents capable of sustaining a nuclear fission chain reaction during carriage.</ccts:Definition>
+               <ccts:ObjectClass>Radioactive Isotope</ccts:ObjectClass>
+            </ccts:Component>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+        <xsd:element ref="cbc:Name" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Radioactive Isotope. Name</ccts:DictionaryEntryName>
+                     <ccts:Definition>The name of this Iradioactive Isotope.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Radioactive Isotope</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Name</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+                     <ccts:DataType>Name. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:ActivityLevelMeasure" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Radioactive Isotope. Activity Level Measure. Measure</ccts:DictionaryEntryName>
+                     <ccts:Definition>The measure of the radioactive contents during carriage.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Radioactive Isotope</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Activity Level Measure</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Measure</ccts:RepresentationTerm>
+                     <ccts:DataType>Measure. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+      </xsd:sequence>
+   </xsd:complexType>
+   <xsd:complexType name="RadioactiveMaterialType">
+      <xsd:annotation>
+         <xsd:documentation>
+            <ccts:Component>
+               <ccts:ComponentType>ABIE</ccts:ComponentType>
+               <ccts:DictionaryEntryName>Radioactive Material. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>A class defining a radioactive material.</ccts:Definition>
+               <ccts:ObjectClass>Radioactive Material</ccts:ObjectClass>
+            </ccts:Component>
+         </xsd:documentation>
+      </xsd:annotation>
+      <xsd:sequence>
+         <xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>A container for extensions foreign to the document.</xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+        <xsd:element ref="cbc:Name" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Radioactive Material. Name</ccts:DictionaryEntryName>
+                     <ccts:Definition>The name of this Iradioactive Material.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Radioactive Material</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Name</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Name</ccts:RepresentationTerm>
+                     <ccts:DataType>Name. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:SpecialFormDescription"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Radioactive Material. Special Form_ Description. Text</ccts:DictionaryEntryName>
+                     <ccts:Definition>The description of the physical and chemical form of the material, including any notation that the material is a special form radioactive material or a low dispersible radioactive material.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Radioactive Material</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Special Form</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Description</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
+                     <ccts:DataType>Text. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:TransportIndexNumeric" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Radioactive Material. Transport Index_ Numeric. Numeric</ccts:DictionaryEntryName>
+                     <ccts:Definition>A number specifying the Transport Index for this Radioactive Material.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Radioactive Material</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Transport Index</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Numeric</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
+                     <ccts:DataType>Numeric. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:FissileCriticalitySafetyIndexNumeric"
+                      minOccurs="0"
+                      maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Radioactive Material. Fissile Criticality_ Safety Index Numeric. Numeric</ccts:DictionaryEntryName>
+                     <ccts:Definition>The number assigned to and placed on the label of a fissile radioactive material package to designate the degree of control of accumulation of packages, overpacks or freight containers containing fissile material during transportation.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Radioactive Material</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Fissile Criticality</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Safety Index Numeric</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
+                     <ccts:DataType>Numeric. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:ApplicableRadioactiveIsotope" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Radioactive Material. Applicable_ Radioactive Isotope. Radioactive Isotope</ccts:DictionaryEntryName>
+                     <ccts:Definition>The maximum activity of the radioactive contents capable of sustaining a nuclear fission chain reaction during carriage</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Radioactive Material</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Applicable</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Radioactive Isotope</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Radioactive Isotope</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Radioactive Isotope</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -37803,7 +38300,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Remittance Advice Line. Payee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The payee.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Payment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Remittance Advice Line</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Payee</ccts:PropertyTermQualifier>
@@ -39260,6 +39757,23 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:TrailerLicensePlateID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Road Transport. Trailer_ License Plate Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>The license plate identifier of a trailer pulled by this vehicle.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Road Transport</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Trailer</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>License Plate Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="SalesItemType">
@@ -40165,7 +40679,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Service Provider Party. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for this service provider.</ccts:Definition>
+                     <ccts:Definition>An identifier for this Service Provider.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Service Provider Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
@@ -40213,7 +40727,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Service Provider Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing the service.</ccts:Definition>
+                     <ccts:Definition>The Party who provides this service.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Service Provider Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -40229,7 +40743,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Service Provider Party. Seller_ Contact. Contact</ccts:DictionaryEntryName>
-                     <ccts:Definition>The contact for the service provider.</ccts:Definition>
+                     <ccts:Definition>The contact for the Service Provider.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Service Provider Party</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
@@ -40248,7 +40762,7 @@
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
                <ccts:DictionaryEntryName>Shareholder Party. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A class to describe a shareholder party.</ccts:Definition>
+               <ccts:Definition>A class to describe a Party that owns shares or equity.</ccts:Definition>
                <ccts:ObjectClass>Shareholder Party</ccts:ObjectClass>
             </ccts:Component>
          </xsd:documentation>
@@ -40268,7 +40782,7 @@
                      <ccts:Definition>(Deprecated) The shareholder participation, expressed as a percentage.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:EndorsedCardinality>0</ccts:EndorsedCardinality>
-                     <ccts:EndorsedCardinalityRationale>The element is wrongly spelled. Use ParticipationPercent instead.</ccts:EndorsedCardinalityRationale>
+                     <ccts:EndorsedCardinalityRationale>Deprecated since UBL 2.5. The element is wrongly spelled. Use ParticipationPercent instead.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Shareholder Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Partecipation</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Percent</ccts:RepresentationTerm>
@@ -40283,7 +40797,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Shareholder Party. Participation. Percent</ccts:DictionaryEntryName>
-                     <ccts:Definition>The shareholder participation, expressed as a percentage.</ccts:Definition>
+                     <ccts:Definition>The percentage of shares or equity owned by this Party.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Shareholder Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Participation</ccts:PropertyTerm>
@@ -40299,7 +40813,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Shareholder Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The shareholder party.</ccts:Definition>
+                     <ccts:Definition>The Party that owns shares or equity.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Shareholder Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -41528,7 +42042,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Shipment Stage. Carrier_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A carrier party responsible for this shipment stage.</ccts:Definition>
+                     <ccts:Definition>The Party who provides the transport of goods between named points.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Shipment Stage</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Carrier</ccts:PropertyTermQualifier>
@@ -41869,7 +42383,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Shipment Stage. Customs Agent_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A customs agent associated with this shipment stage.</ccts:Definition>
+                     <ccts:Definition>The Customs Agent who is associated with this Shipment Stage.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Shipment Stage</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Customs Agent</ccts:PropertyTermQualifier>
@@ -42570,7 +43084,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Signature. Signatory_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The signing party.</ccts:Definition>
+                     <ccts:Definition>The Party that provides the signature.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Signature</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Signatory</ccts:PropertyTermQualifier>
@@ -42994,7 +43508,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Statement Line. Payee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The payee.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Payment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Statement Line</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Payee</ccts:PropertyTermQualifier>
@@ -43829,7 +44343,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Subcontract Terms. Unknown_ Price. Indicator</ccts:DictionaryEntryName>
-                     <ccts:Definition>(Deprecated definition) An indicator that the subcontract price is unknown (true) or not (false).</ccts:Definition>
+                     <ccts:Definition>(Updated definition) An indicator that the subcontract price is unknown (true) or not (false).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Subcontract Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Unknown</ccts:PropertyTermQualifier>
@@ -44013,7 +44527,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Subscriber Consumption. Subscriber_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party subscribing to the utility.</ccts:Definition>
+                     <ccts:Definition>The Party who is subscribed to the utility.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Subscriber Consumption</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Subscriber</ccts:PropertyTermQualifier>
@@ -44131,7 +44645,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Supplier Consumption. Utility Supplier_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party supplying the utility.</ccts:Definition>
+                     <ccts:Definition>The Party who supplies the utility.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Supplier Consumption</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Utility Supplier</ccts:PropertyTermQualifier>
@@ -44148,7 +44662,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Supplier Consumption. Utility Customer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The utility customer.</ccts:Definition>
+                     <ccts:Definition>The Customer Party for this utility.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Supplier Consumption</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Utility Customer</ccts:PropertyTermQualifier>
@@ -44282,7 +44796,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Supplier Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The supplier party itself.</ccts:Definition>
+                     <ccts:Definition>The Supplier Party itself.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Supplier Party</ccts:ObjectClass>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
@@ -46052,7 +46566,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tender Line. Warranty_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for any warranty described in this tender line.</ccts:Definition>
+                     <ccts:Definition>The Party who is responsible for any warranty described with this Tender Line.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tender Line</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Warranty</ccts:PropertyTermQualifier>
@@ -48736,8 +49250,10 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Process. Open Tender_ Event. Event</ccts:DictionaryEntryName>
-                     <ccts:Definition>Textual description of the legal form required for potential tenderers.</ccts:Definition>
+                     <ccts:Definition>An Event specifying the location and time of the public opening of tenders.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:EndorsedCardinality>0..1</ccts:EndorsedCardinality>
+                     <ccts:EndorsedCardinalityRationale>Cardinality deprecated since UBL 2.5. A Tendering Process should not have more than one Open Tender Event.</ccts:EndorsedCardinalityRationale>
                      <ccts:ObjectClass>Tendering Process</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Open Tender</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Event</ccts:PropertyTerm>
@@ -49484,7 +50000,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Terms. Additional Information_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party that has additional information about the tendering process.</ccts:Definition>
+                     <ccts:Definition>The Party who has additional information about the tendering process.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Additional Information</ccts:PropertyTermQualifier>
@@ -49501,7 +50017,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Terms. Document Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that has the contract documents for the tendering process.</ccts:Definition>
+                     <ccts:Definition>The Party who has the Contract Documents for the tendering process.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Document Provider</ccts:PropertyTermQualifier>
@@ -49518,7 +50034,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Terms. Tender Recipient_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party to which tenders will be presented.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Tenders.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Tender Recipient</ccts:PropertyTermQualifier>
@@ -49535,7 +50051,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Terms. Contract Responsible_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for the execution of the contract.</ccts:Definition>
+                     <ccts:Definition>The Party who executes the Contract.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Contract Responsible</ccts:PropertyTermQualifier>
@@ -49552,7 +50068,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Terms. Tender Evaluation_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party in the contracting authority responsible for evaluating tenders received.</ccts:Definition>
+                     <ccts:Definition>The Buyer Party who evaluates the Tenders received.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Tender Evaluation</ccts:PropertyTermQualifier>
@@ -49571,7 +50087,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Tendering Terms. Qualification Request Recipient_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party in the contracting authority responsible for receiving qualification requests.</ccts:Definition>
+                     <ccts:Definition>The Buyer Party who receives the Qualification Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Tendering Terms</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Qualification Request Recipient</ccts:PropertyTermQualifier>
@@ -49839,7 +50355,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Trade Financing. Financing_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The financing party (bank or other enabled party).</ccts:Definition>
+                     <ccts:Definition>A Party that provides funds or credit to support the trade transaction described in this Trade Financing instrument.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Trade Financing</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Financing</ccts:PropertyTermQualifier>
@@ -50528,6 +51044,23 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cbc:StowagePositionID" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Equipment. Stowage Position_ Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Stowage Position identifier for this piece of carried logistics Transport Equipment.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Stowage Position</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+                     <ccts:DataType>Identifier. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
          <xsd:element ref="cac:MeasurementDimension" minOccurs="0" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
@@ -50603,7 +51136,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Equipment. Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing this piece of transport equipment.</ccts:Definition>
+                     <ccts:Definition>The Party who provides this piece of Transport Equipment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Provider</ccts:PropertyTermQualifier>
@@ -50620,7 +51153,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Equipment. Loading Proof_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The authorized party responsible for certifying that the goods were loaded into this piece of transport equipment.</ccts:Definition>
+                     <ccts:Definition>The authorised Party who certifies the load of the Goods into this piece of Transport Equipment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Loading Proof</ccts:PropertyTermQualifier>
@@ -50655,7 +51188,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Equipment. Owner_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that owns this piece of transport equipment.</ccts:Definition>
+                     <ccts:Definition>The Party who owns this Piece of Transport Equipment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Owner</ccts:PropertyTermQualifier>
@@ -50673,7 +51206,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Equipment. Operating_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that operates this piece of transport equipment.</ccts:Definition>
+                     <ccts:Definition>The Party who operates this piece of Transport Equipment.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Operating</ccts:PropertyTermQualifier>
@@ -51124,6 +51657,23 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:LoadedHazardousItem" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Equipment. Loaded_ Hazardous Item. Hazardous Item</ccts:DictionaryEntryName>
+                     <ccts:Definition>Hazardous items loaded into this transport equipment</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Equipment</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Loaded</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Hazardous Item</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Hazardous Item</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Hazardous Item</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="TransportEquipmentSealType">
@@ -51382,7 +51932,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Event. Responsible_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for this transport event.</ccts:Definition>
+                     <ccts:Definition>The Party reponsible for this Transport Event.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Event</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Responsible</ccts:PropertyTermQualifier>
@@ -52166,6 +52716,24 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
+         <xsd:element ref="cac:EnergyConsumptionAllocation"
+                      minOccurs="0"
+                      maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Transport Handling Unit. Energy Consumption Allocation</ccts:DictionaryEntryName>
+                     <ccts:Definition>An allocation of energy consumption and associated emissions attributable to the handling or transport of this unit.</ccts:Definition>
+                     <ccts:Cardinality>0..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Transport Handling Unit</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Energy Consumption Allocation</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Energy Consumption Allocation</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Energy Consumption Allocation</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:complexType name="TransportMeansType">
@@ -52379,7 +52947,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Means. Owner_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that owns this means of transport.</ccts:Definition>
+                     <ccts:Definition>The Party who owns these Means of Transport.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Means</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Owner</ccts:PropertyTermQualifier>
@@ -52707,7 +53275,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transportation Segment. Transport Service Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The transport service provider responsible for carrying out transportation services in this transportation segment.</ccts:Definition>
+                     <ccts:Definition>The Transport Service Provider who is reponsible for the Transportation Service in this Transportation Segment.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Transportation Segment</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Transport Service Provider</ccts:PropertyTermQualifier>
@@ -53103,7 +53671,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transportation Service. Responsible Transport Service Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The transport service provider responsible for this transportation service.</ccts:Definition>
+                     <ccts:Definition>The Transport Service Provider who is reponsible for this Transportation Service.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transportation Service</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Responsible Transport Service Provider</ccts:PropertyTermQualifier>
@@ -53647,7 +54215,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Verified Gross Mass. Weighing_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party executing the weight measure.</ccts:Definition>
+                     <ccts:Definition>The Party who executes the weight measure.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Verified Gross Mass</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Weighing</ccts:PropertyTermQualifier>
@@ -53664,7 +54232,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Verified Gross Mass. Shipper_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party playing the role of the Shipper (BCO, FF or NVOCC) who is responsible for the VGM (e.g. according the SOLAS Convention).</ccts:Definition>
+                     <ccts:Definition>The Party who is reponsible of the Verified Gross Mass (VGM) according to the SOLAS Convention. This Party plays the role of the Shipper (BCO, FF or NVOCC).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Verified Gross Mass</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Shipper</ccts:PropertyTermQualifier>
@@ -53681,7 +54249,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Verified Gross Mass. Responsible_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for signing the VGM on behalf of the Shipper.</ccts:Definition>
+                     <ccts:Definition>The Party who signs the Verified Gross Mass (VGM) on behalf of the Shipper.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Verified Gross Mass</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Responsible</ccts:PropertyTermQualifier>

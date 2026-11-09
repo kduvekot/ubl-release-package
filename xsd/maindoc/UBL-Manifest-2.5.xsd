@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsd/maindoc/UBL-Manifest-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:Manifest-2"
@@ -299,7 +299,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Manifest. Sending Logistics Operator_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The logistics operator party issuing this manifest</ccts:Definition>
+                     <ccts:Definition>The Party who issues this Manifest.This Party is normally the Logistics Operator.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Manifest</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sending Logistics Operator</ccts:PropertyTermQualifier>
@@ -316,7 +316,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Manifest. Authority_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The authority or regulator receiving this manifest.</ccts:Definition>
+                     <ccts:Definition>The Authority or regulator who receives this Manifest.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Manifest</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Authority</ccts:PropertyTermQualifier>
@@ -333,7 +333,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Manifest. Consignor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party responsible for sending the goods mentioned in this manifest.</ccts:Definition>
+                     <ccts:Definition>The Party who is reponsible for sending the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Manifest</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignor</ccts:PropertyTermQualifier>
@@ -350,7 +350,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Manifest. Consignee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving the goods mentioned in this manifest.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the goods.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Manifest</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Consignee</ccts:PropertyTermQualifier>

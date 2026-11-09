@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
-  Module:            xsd/maindoc/UBL-EnquiryResponse-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
+  Module:            xsd/maindoc/UBL-WasteNotification-2.5.xsd
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
-<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:EnquiryResponse-2"
+<xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:WasteNotification-2"
             xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
             xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
             xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
             xmlns:ccts="urn:un:unece:uncefact:documentation:2"
-            targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:EnquiryResponse-2"
+            targetNamespace="urn:oasis:names:specification:ubl:schema:xsd:WasteNotification-2"
             elementFormDefault="qualified"
             attributeFormDefault="unqualified"
             version="2.5">
@@ -25,21 +25,21 @@
    <xsd:import namespace="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
                schemaLocation="../common/UBL-CommonExtensionComponents-2.5.xsd"/>
    <!-- ===== Element Declarations ===== -->
-   <xsd:element name="EnquiryResponse" type="EnquiryResponseType">
+   <xsd:element name="WasteNotification" type="WasteNotificationType">
       <xsd:annotation>
-         <xsd:documentation>A document sent by a responder to a requester answering a particular enqury.</xsd:documentation>
+         <xsd:documentation>A document used to notify the competent authorities of planned movements of waste.</xsd:documentation>
       </xsd:annotation>
    </xsd:element>
    <!-- ===== Type Definitions ===== -->
    <!-- ===== Aggregate Business Information Entity Type Definitions ===== -->
-   <xsd:complexType name="EnquiryResponseType">
+   <xsd:complexType name="WasteNotificationType">
       <xsd:annotation>
          <xsd:documentation>
             <ccts:Component>
                <ccts:ComponentType>ABIE</ccts:ComponentType>
-               <ccts:DictionaryEntryName>Enquiry Response. Details</ccts:DictionaryEntryName>
-               <ccts:Definition>A document sent by a responder to a requester answering a particular enqury.</ccts:Definition>
-               <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+               <ccts:DictionaryEntryName>Waste Notification. Details</ccts:DictionaryEntryName>
+               <ccts:Definition>A document used to notify the competent authorities of planned movements of waste.</ccts:Definition>
+               <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
             </ccts:Component>
          </xsd:documentation>
       </xsd:annotation>
@@ -54,14 +54,13 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Waste Notification. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Identifies the earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>2.0.5</ccts:Examples>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -71,14 +70,13 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Waste Notification. Customization Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>NES</ccts:Examples>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -88,14 +86,13 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Profile Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Waste Notification. Profile Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>BasicProcurementProcess</ccts:Examples>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -105,27 +102,26 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Waste Notification. Profile Execution Identifier. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>Identifies an instance of executing a profile, to associate all transactions in a collaboration.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Profile Execution Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
-                     <ccts:Examples>BPP-1001</ccts:Examples>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:ID" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Identifier</ccts:DictionaryEntryName>
-                     <ccts:Definition>An identifier for this document, assigned by the responder.</ccts:Definition>
-                     <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:DictionaryEntryName>Waste Notification. Identifier</ccts:DictionaryEntryName>
+                     <ccts:Definition>An identifier for this document, assigned by the sender.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -138,10 +134,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. UUID. Identifier</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Waste Notification. UUID. Identifier</ccts:DictionaryEntryName>
                      <ccts:Definition>A universally unique identifier for an instance of this document.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>UUID</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
                      <ccts:DataType>Identifier. Type</ccts:DataType>
@@ -154,10 +150,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Issue Date. Date</ccts:DictionaryEntryName>
-                     <ccts:Definition>The date, assigned by the responder, at which this enquiry response was issued.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Waste Notification. Issue Date. Date</ccts:DictionaryEntryName>
+                     <ccts:Definition>The date, assigned by the sender, on which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
                      <ccts:DataType>Date. Type</ccts:DataType>
@@ -170,10 +166,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Issue Time. Time</ccts:DictionaryEntryName>
-                     <ccts:Definition>The time, assigned by the responder, at which this enquiry response was issued.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Waste Notification. Issue Time. Time</ccts:DictionaryEntryName>
+                     <ccts:Definition>The time, assigned by the sender, at which this document was issued.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
                      <ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
                      <ccts:DataType>Time. Type</ccts:DataType>
@@ -181,18 +177,34 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cbc:Description" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cbc:WasteNotificationTypeCode" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>BBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Description. Text</ccts:DictionaryEntryName>
-                     <ccts:Definition>Free-form text-only enquiry response description pertinent to this document, conveying information that is not contained explicitly in other structures.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Description</ccts:PropertyTerm>
-                     <ccts:RepresentationTerm>Text</ccts:RepresentationTerm>
-                     <ccts:DataType>Text. Type</ccts:DataType>
+                     <ccts:DictionaryEntryName>Waste Notification. Waste Notification Type. Code</ccts:DictionaryEntryName>
+                     <ccts:Definition>A code signifying the type of this Waste Notification.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Waste Notification Type</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Code</ccts:RepresentationTerm>
+                     <ccts:DataType>Code. Type</ccts:DataType>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cbc:ConsignmentQuantity" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>BBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Waste Notification. Consignment Quantity. Quantity</ccts:DictionaryEntryName>
+                     <ccts:Definition>Estimated total number of shipments for this Notification Document.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Consignment Quantity</ccts:PropertyTerm>
+                     <ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm>
+                     <ccts:DataType>Quantity. Type</ccts:DataType>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
@@ -202,10 +214,10 @@
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Signature</ccts:DictionaryEntryName>
+                     <ccts:DictionaryEntryName>Waste Notification. Signature</ccts:DictionaryEntryName>
                      <ccts:Definition>A signature applied to this document.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
                      <ccts:PropertyTerm>Signature</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Signature</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Signature</ccts:RepresentationTerm>
@@ -213,16 +225,16 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:RequestorParty" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:SenderParty" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Requestor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party issuing the enquiry.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Waste Notification. Sender_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Party sending this document.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Requestor</ccts:PropertyTermQualifier>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
@@ -230,16 +242,16 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:ResponderParty" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:ReceiverParty" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Responder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that has to respond to the enquiry.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Waste Notification. Receiver_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Party receiving this document.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Responder</ccts:PropertyTermQualifier>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
@@ -247,54 +259,119 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:ParentDocumentReference" minOccurs="1" maxOccurs="1">
+         <xsd:element ref="cac:NotifierParty" minOccurs="1" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Parent_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>Reference to the enquiry that this response refers to.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Waste Notification. Notifier_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Party responsible for providing the Waste Notification information and acting in the role of notifier in the waste movement process.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Parent</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Notifier</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:AdditionalDocumentReference"
-                      minOccurs="0"
-                      maxOccurs="unbounded">
+         <xsd:element ref="cac:CustomsParty" minOccurs="1" maxOccurs="unbounded">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Additional_ Document Reference. Document Reference</ccts:DictionaryEntryName>
-                     <ccts:Definition>References to relevant documents for the response such as the Contract folder or the lot in the eTendering.</ccts:Definition>
-                     <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Additional</ccts:PropertyTermQualifier>
-                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
+                     <ccts:DictionaryEntryName>Waste Notification. Customs_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The competent authority granting a permit to export or import the waste.</ccts:Definition>
+                     <ccts:Cardinality>1..n</ccts:Cardinality>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Customs</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:Attachment" minOccurs="0" maxOccurs="unbounded">
+         <xsd:element ref="cac:DisposalFacilityParty" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Enquiry Response. Attachment</ccts:DictionaryEntryName>
-                     <ccts:Definition>Attachment that includes file-based response.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Waste Notification. Disposal Facility_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Party disposing of the waste material.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Disposal Facility</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:RecoveryFacilityParty" minOccurs="0" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Waste Notification. Recovery Facility_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Party recovering the waste material.</ccts:Definition>
+                     <ccts:Cardinality>0..1</ccts:Cardinality>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Recovery Facility</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:WasteProducerParty" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Waste Notification. Waste Producer_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Party producing the waste material.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTermQualifier>Waste Producer</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTerm>Party</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:Shipment" minOccurs="1" maxOccurs="1">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Waste Notification. Shipment</ccts:DictionaryEntryName>
+                     <ccts:Definition>The relevant shipment information describing the planned transport and the waste material.</ccts:Definition>
+                     <ccts:Cardinality>1</ccts:Cardinality>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Shipment</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Shipment</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Shipment</ccts:RepresentationTerm>
+                  </ccts:Component>
+               </xsd:documentation>
+            </xsd:annotation>
+         </xsd:element>
+         <xsd:element ref="cac:DocumentReference" minOccurs="0" maxOccurs="unbounded">
+            <xsd:annotation>
+               <xsd:documentation>
+                  <ccts:Component>
+                     <ccts:ComponentType>ASBIE</ccts:ComponentType>
+                     <ccts:DictionaryEntryName>Waste Notification. Document Reference</ccts:DictionaryEntryName>
+                     <ccts:Definition>A reference to a relevant document associated with this Waste Movement.</ccts:Definition>
                      <ccts:Cardinality>0..n</ccts:Cardinality>
-                     <ccts:ObjectClass>Enquiry Response</ccts:ObjectClass>
-                     <ccts:PropertyTerm>Attachment</ccts:PropertyTerm>
-                     <ccts:AssociatedObjectClass>Attachment</ccts:AssociatedObjectClass>
-                     <ccts:RepresentationTerm>Attachment</ccts:RepresentationTerm>
+                     <ccts:ObjectClass>Waste Notification</ccts:ObjectClass>
+                     <ccts:PropertyTerm>Document Reference</ccts:PropertyTerm>
+                     <ccts:AssociatedObjectClass>Document Reference</ccts:AssociatedObjectClass>
+                     <ccts:RepresentationTerm>Document Reference</ccts:RepresentationTerm>
                   </ccts:Component>
                </xsd:documentation>
             </xsd:annotation>

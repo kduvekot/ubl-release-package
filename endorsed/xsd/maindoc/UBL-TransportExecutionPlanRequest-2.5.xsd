@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsd/maindoc/UBL-TransportExecutionPlanRequest-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:TransportExecutionPlanRequest-2"
@@ -287,7 +287,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending the Transport Execution Plan Request.</ccts:Definition>
+                     <ccts:Definition>The Party who sends the Transport Execution Plan Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -304,7 +304,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving the Transport Execution Plan Request.</ccts:Definition>
+                     <ccts:Definition>The Party who receives the Transport Execution Plan Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -321,7 +321,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Transport User_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party requesting the transport services referenced in the Transport Execution Plan Request.</ccts:Definition>
+                     <ccts:Definition>The Party who requests the transport services referenced in the Transport Execution Plan Request.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Transport User</ccts:PropertyTermQualifier>
@@ -338,7 +338,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Transport Execution Plan Request. Transport Service Provider_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party providing the transport services referenced in the Transport Execution Plan Request.</ccts:Definition>
+                     <ccts:Definition>The Party who provides the transport services referenced in the Transport Execution Plan Request.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Transport Service Provider</ccts:PropertyTermQualifier>
@@ -349,16 +349,16 @@
                </xsd:documentation>
             </xsd:annotation>
          </xsd:element>
-         <xsd:element ref="cac:PayeeParty" minOccurs="0" maxOccurs="1">
+         <xsd:element ref="cac:BillToParty" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
                <xsd:documentation>
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
-                     <ccts:DictionaryEntryName>Transport Execution Plan Request. Payee_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party that will pay for the transport service(s) referred to in a Transport Execution Plan.</ccts:Definition>
+                     <ccts:DictionaryEntryName>Transport Execution Plan Request. Bill To_ Party. Party</ccts:DictionaryEntryName>
+                     <ccts:Definition>The Party that will receive the invoice for the transport service(s) referred to in the Transport Execution Plan.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Transport Execution Plan Request</ccts:ObjectClass>
-                     <ccts:PropertyTermQualifier>Payee</ccts:PropertyTermQualifier>
+                     <ccts:PropertyTermQualifier>Bill To</ccts:PropertyTermQualifier>
                      <ccts:PropertyTerm>Party</ccts:PropertyTerm>
                      <ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
                      <ccts:RepresentationTerm>Party</ccts:RepresentationTerm>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsd/maindoc/UBL-DigitalCapability-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:DigitalCapability-2"
@@ -237,7 +237,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Digital Capability. Sender_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party sending these digital capabilities. This party could be the owner of these digital capabilities or a third-party acting on behalf of the owner (e.g. service provider).</ccts:Definition>
+                     <ccts:Definition>The Party who sends these Digital Capabilities. This Party may be the owner of these Digital Capabilities or a third-Party who acts on behalf of the owner (e.g. service provider).</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Digital Capability</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Sender</ccts:PropertyTermQualifier>
@@ -254,7 +254,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Digital Capability. Receiver_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party receiving these digital capabilities.</ccts:Definition>
+                     <ccts:Definition>The Party who receives these Digital Capabilities.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Digital Capability</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Receiver</ccts:PropertyTermQualifier>
@@ -271,7 +271,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Digital Capability. Business_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party owning these digital capabilities.</ccts:Definition>
+                     <ccts:Definition>The Party who owns these Digital Capabilities.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Digital Capability</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Business</ccts:PropertyTermQualifier>

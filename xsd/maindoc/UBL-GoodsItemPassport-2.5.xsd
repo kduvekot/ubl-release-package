@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Library:           OASIS Universal Business Language (UBL) 2.5 CSD01
-                     http://docs.oasis-open.org/ubl/csd01-UBL-2.5/
-  Release Date:      20 August 2025
+  Library:           OASIS Universal Business Language (UBL) 2.5 CSD02
+                     http://docs.oasis-open.org/ubl/csd02-UBL-2.5/
+  Release Date:      03 December 2025
   Module:            xsd/maindoc/UBL-GoodsItemPassport-2.5.xsd
-  Generated on:      2025-08-13 23:06z
+  Generated on:      2025-12-03 12:42z
   Copyright (c) OASIS Open 2025. All Rights Reserved.
 -->
 <xsd:schema xmlns="urn:oasis:names:specification:ubl:schema:xsd:GoodsItemPassport-2"
@@ -301,7 +301,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Item Passport. Issuer_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party issuing this Goods Item Passport</ccts:Definition>
+                     <ccts:Definition>The Party who issues this Goods Item Passport.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Issuer</ccts:PropertyTermQualifier>
@@ -318,7 +318,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Item Passport. Holder_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The holder of the Goods Item Passport, often the temporary exporter of the goods</ccts:Definition>
+                     <ccts:Definition>The Party who holds the Goods Item Passport. This Party is normally the temporary exporter of the Goods.</ccts:Definition>
                      <ccts:Cardinality>1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Holder</ccts:PropertyTermQualifier>
@@ -335,7 +335,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Item Passport. Representative_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The party accompanying the goods while temporarily exported</ccts:Definition>
+                     <ccts:Definition>The Party who accompanies the Goods while temporarily exported.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Representative</ccts:PropertyTermQualifier>
@@ -352,7 +352,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Item Passport. Exporting Guarantor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party (often a chamber of commerce) which provides a guarantee goods while temporarily exported</ccts:Definition>
+                     <ccts:Definition>The Party who provides a guarantee for the Goods while being temporarily exported. This Party is normally a chamber of commerce.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Exporting Guarantor</ccts:PropertyTermQualifier>
@@ -369,7 +369,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Item Passport. Importing Guarantor_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>A party (often a chamber of commerce) which provides a guarantee goods while temporarily imported</ccts:Definition>
+                     <ccts:Definition>The Party who provides a guarantee for the Goods while being temporarily imported. This Party is normally a chamber of commerce.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Importing Guarantor</ccts:PropertyTermQualifier>
@@ -386,7 +386,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Item Passport. Exporting Customs_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The competent Customs party of the exporting country</ccts:Definition>
+                     <ccts:Definition>The Party who is competent of Customs in the exporting country.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Exporting Customs</ccts:PropertyTermQualifier>
@@ -403,7 +403,7 @@
                   <ccts:Component>
                      <ccts:ComponentType>ASBIE</ccts:ComponentType>
                      <ccts:DictionaryEntryName>Goods Item Passport. Importing Customs_ Party. Party</ccts:DictionaryEntryName>
-                     <ccts:Definition>The competent Customs party of the importing country</ccts:Definition>
+                     <ccts:Definition>The Party who is competent of Customs in the importing country.</ccts:Definition>
                      <ccts:Cardinality>0..1</ccts:Cardinality>
                      <ccts:ObjectClass>Goods Item Passport</ccts:ObjectClass>
                      <ccts:PropertyTermQualifier>Importing Customs</ccts:PropertyTermQualifier>
